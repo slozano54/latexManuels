@@ -31,7 +31,11 @@
   <h3 align="center">MANUELS</h3>
 
   <p align="center">
-    project_description
+    Des essais avec la classe <a href="https://www.ctan.org/pkg/sesamanuel">sesamanuel</a>, avec le paquet <a href="https://www.ctan.org/pkg/profcollege">profcollege</a> 
+    <br />
+    Une trame vide pour démarrer
+    <br />
+    Proposition d'un partage de mes cours dans un format "manuels" pour le collège.
     <br />
     <a href="https://github.com/slozano54/latexManuels"><strong>Explore the docs »</strong></a>
     <br />
