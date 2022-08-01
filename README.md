@@ -46,6 +46,11 @@
   </p>
 </p>
 
+<!-- DOSSIER sandBox -->
+## sandBox
+Errances et autres essais ...
+<a href="https://github.com/slozano54/latexManuels/blob/master/sandBox/README.md">README.md du dossier ./sandBox/</a>
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
