@@ -2805,6 +2805,7 @@
       \colorlet{ChapterNumSquare4Color}{#7}%
       \colorlet{ChapterNumSquare5Color}{#6}%
       \colorlet{FirstChapterFootColor}{#7}%
+      \setcounter{chapter}{0}% AjoutSeb -> Initialiser la numérotation des themes perso ajoutés avec \newThema
     }%
   \fi
 }
