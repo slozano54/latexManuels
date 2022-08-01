@@ -72,6 +72,8 @@
 \newcommand*\smc@string@utfviii{utf8}
 \ExecuteOptions{utf8}
 \ProcessOptions
+\RequirePackage{verbatim}   % AjoutSeb -> pour écrire tout ce qu'on veut
+\begin{comment}             % AjoutSeb -> du paquet verbatim pour commenter qqchose
 \newif\ifxetex
 \begingroup\expandafter\expandafter\expandafter\endgroup
 \expandafter\ifx\csname XeTeXrevision\endcsname\relax
@@ -122,6 +124,7 @@
   \RequirePackage[T1]{fontenc}
   \RequirePackage[\smc@encoding]{inputenc}
 \fi
+\end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose
 \RequirePackage[scaled=0.87]{helvet}
 \RequirePackage{mathpazo}
 \renewcommand{\ttdefault}{lmtt}
@@ -2026,7 +2029,8 @@
 \definecolor{Gris2}             {cmyk}{0.00, 0.00, 0.00, 0.40}
 \definecolor{Gris3}             {cmyk}{0.00, 0.00, 0.00, 0.50}
 \definecolor{Noir}              {cmyk}{0.00, 0.00, 0.00, 1.00}
-\AtBeginDocument{\def\default@color{cmyk 0 0 0 1}\normalcolor}
+%\AtBeginDocument{\def\default@color{cmyk 0 0 0 1}\normalcolor}
+\AtBeginDocument{\colorlet{defaultcolor}{black}}% AjoutSeb -> pour le problème de blanc sur blanc ?
 \colorlet{AlgoLineColor}{F3}
 \colorlet{AlgoBkgColor}{F1}
 \colorlet{AlgoTextColor}{Blanc}
