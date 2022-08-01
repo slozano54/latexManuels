@@ -1,0 +1,66 @@
+\documentclass[nocrop]{sesamanuel}
+% ============================================================================================
+% ======= Générer les correction dans un dossier spécifique
+% ============================================================================================
+
+\renewcommand\PrefixeCorrection{corrections/}
+
+% ============================================================================================
+\usepackage{sesamanuelTIKZ}
+
+\begin{document}
+% ============================================================================================
+% ======= Thèmes personnalisés
+%
+% \NewThema{N}{n}{titre}{Titre}{TITRE}{couleur entete et ...}{couleur pied de page et ...}
+%
+% ============================================================================================
+\NewThema{N}{n}{nombres \&\\calculs}{Nombres \&\\calculsManuel}{NOMBRES \&\\CALCULS}{B1}{B1!50}
+
+% Pour la géométrie on garde le théme d'origine
+
+\NewThema{D}{d}{organisation et \\et gestion de données}{Organisation et \\et gestion de données}{ORGANISATION ET\\GESTION DE DONNÉES}{PartieStatistique}{PartieStatistique!50}
+
+\NewThema{M}{m}{grandeurs\\et mesures}{Grandeurs\\et mesures}{GRANDEURS\\ET MESURES}{G1}{G1!50}
+
+\NewThema{A}{a}{algorithmique et programmation}{Algorithmique et programmation}{ALGORITHMIQUE ET PROGRAMMATION}{J1}{J1!50}
+% ============================================================================================
+% ======= Tests
+% ============================================================================================
+
+\themaN
+\chapter{themaN1}
+\chapter{themaN2}
+
+\themaD
+\chapter{themaD}
+\chapter{themaD1}
+
+\themaG
+\chapter{themaG}
+\chapter{themaG1}
+\chapter{themaG2}
+
+\themaM
+\chapter{themaM}
+\chapter{themaM1}
+
+\themaA
+\chapter{themaA}
+\chapter{themaA1}
+\chapter{themaA2}
+
+% ============================================================================================
+% ======= Thèmes de base
+% ============================================================================================
+
+%\themaG
+%\chapter{themaG}
+%
+%\themaF
+%\chapter{themaF}
+%
+%\themaS
+%\chapter{themaS}
+
+\end{document}
