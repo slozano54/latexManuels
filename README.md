@@ -40,8 +40,6 @@
     <a href="https://github.com/slozano54/latexManuels"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/slozano54/latexManuels">View Demo</a>
-    ·
     <a href="https://github.com/slozano54/latexManuels/issues">Report Bug</a>
     ·
     <a href="https://github.com/slozano54/latexManuels/issues">Request Feature</a>
