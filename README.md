@@ -62,13 +62,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/slozano54/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/slozano54/latexManuels.svg?style=for-the-badge
 [contributors-url]: https://github.com/slozano54/latexManuels/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/slozano54/repo.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/slozano54/latexManuels.svg?style=for-the-badge
 [forks-url]: https://github.com/slozano54/latexManuels/network/members
-[stars-shield]: https://img.shields.io/github/stars/slozano54/repo.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/slozano54/latexManuels.svg?style=for-the-badge
 [stars-url]: https://github.com/slozano54/latexManuels/stargazers
-[issues-shield]: https://img.shields.io/github/issues/slozano54/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/slozano54/latexManuels.svg?style=for-the-badge
 [issues-url]: https://github.com/slozano54/latexManuels/issues
-[license-shield]: https://img.shields.io/github/license/slozano54/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/slozano54/latexManuels?style=for-the-badge
 [license-url]: https://github.com/slozano54/latexManuels/blob/master/LICENSE.txt
