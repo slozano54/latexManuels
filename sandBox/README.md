@@ -37,5 +37,3 @@ sudo cp ProfCollegeNewCAN.sty /usr/local/texlive/texmf-local/tex/latex/ProfColle
 ```bash
 sudo mktexlsr
 ```
-
-
