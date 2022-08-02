@@ -293,11 +293,156 @@
 \begin{preuve}
   Ceci est une preuve\par Deuxième ligne de la preuve
 \end{preuve}
-\subsection{Sous-section 1.2}
-\section{Section 2}
-\subsection{Sous-section 2.1}
-\subsection{Sous-section 2.2}
+\begin{exemple}
+  Texte de l’exemple
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
 
+\begin{exemple*1}
+  Texte de l’exemple
+  \correction
+  Texte de la correction, le tout verticalement affiché
+\end{exemple*1}
+
+\begin{exemple}[0.6]
+  Texte de l’exemple très long sur une ligne, très très très long.
+  On peut modifier la répartition horizontale  à l'aide d'un argument optionnel valant par défaut 0,4, valant ici 0,6.
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
+
+\subsection{Sous-section 1.2}
+Quatre affichages prévus pour les méthodes.
+
+\begin{methode}[Titre de la méthode]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode}
+
+\begin{methode*1}[Titre de la méthode*1]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode*1}
+
+\begin{methode*2}[Titre de la méthode*2]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode*2}
+
+\begin{methode*2*2}[Dernière méthode\MethodeRefExercice{exo-exemple}]
+  \exercice
+  \label{methode-exemple}
+  Texte du premier exercice
+  \correction
+  Correction du premier exercice
+  \exercice
+  Texte du deuxième exercice
+  \correction
+  Texte de la correction du deuxième exercice sur un minimum de trois
+  lignes pour faire la différence entre vis-à-vis et double
+  colonne. C’est l’endroit de la coupure qui va différer.
+\end{methode*2*2}
+
+\section{Section 2}
+Texte Section 2
+\subsection{Sous-section 2.1}
+Texte Sous-section 2.1
+\subsection{Sous-section 2.2}
+Texte Sous-section 2.1
+
+\exercicesbase
+\begin{colonne*exercice}
+  \serie{titre de série1}
+  \begin{exercice}[Exercice sans correction][\tice]
+  Prouver que $1=1$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+  \begin{exercice}[Lien avec une méthode \ExerciceRefMethode{methode-exemple}]
+  \label{exo-exemple}
+  Test pour avoir un lien avec une méthode.
+  \end{exercice}
+  \begin{exercice}[Exercice sans correction][\algo]
+    Prouver que $7=7$
+  \end{exercice}
+
+  \serie{titre de série2}
+  \begin{exercice}[Exercice sans correction][\tice]
+    \partie
+    Prouver que $1=1$
+    \partie
+    En déduire que $2=2$
+    \partie 
+    Puis que $3=3$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+\end{colonne*exercice}
+
+\exercicesappr
+\begin{colonne*exercice}
+  \serie{titre de série1}
+  \begin{exercice}[Exercice sans correction][\tice]
+  Prouver que $1=1$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+  \begin{exercice}[Lien avec une méthode \ExerciceRefMethode{methode-exemple}]
+  \label{exo-exemple}
+  Test pour avoir un lien avec une méthode.
+  \end{exercice}
+  \begin{exercice}[Exercice sans correction][\algo]
+    Prouver que $7=7$
+  \end{exercice}
+
+  \serie{titre de série2}
+  \begin{exercice}[Exercice sans correction][\tice]
+    \partie
+    Prouver que $1=1$
+    \partie
+    En déduire que $2=2$
+    \partie 
+    Puis que $3=3$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+\end{colonne*exercice}
 
 %\chapter{themaG2}
 %\chapter{themaG3}
