@@ -14,8 +14,10 @@
 % ============================================================================================
 \usepackage{sesamanuelTIKZ}
 \usepackage{ProfCollegeNewCAN}
-
-\usepackage{scratch3}
+% Pour la gestion des fontes.
+\usepackage{unicode-math}
+% Par exemple, une fonte sans serif pour les briques Scratch.
+\newfontfamily\myfontScratch[]{FreeSans}
 
 \begin{document}
 % ============================================================================================
@@ -470,13 +472,16 @@ Texte Sous-section 2.1
 \item Dernier point devant être su.
 \end{itemize}
 \end{acquis}
+
 \QCMautoevaluation{texte introductif}
+
 \begin{QCM}
-\begin{EnonceCommunQCM}
-Pour les questions \RefQCM{premier-qcm} à
-\RefQCM{deuxieme-qcm}, $f$ désigne une
-fonction affine.
-\end{EnonceCommunQCM}
+  \begin{EnonceCommunQCM}
+    Pour les questions \RefQCM{premier-qcm} à
+    \RefQCM{deuxieme-qcm}, $f$ désigne une
+    fonction affine.
+    \end{EnonceCommunQCM}
+
 \begin{GroupeQCM}
 \begin{exercice}\label{premier-qcm}
 La courbe de $f$ est
@@ -523,29 +528,18 @@ $f(3)$
   \begin{enigme}[Titre optionnel]
     Enigme/Recreation
 
-    Programme avec le package scratch3
+    Scratch avec profcollege
 
-    \begin{scratch}
-      \blockmove{bloc de mouvement}
-      \blocklook{bloc d’apparence}
-      \blocksound{bloc de son}
-      \blockpen{bloc de stylo}
-      \blockvariable{bloc de variable}
-      \blocklist{bloc de liste}
-      \blockevent{bloc d’événement}
-      \blockcontrol{bloc de contrôle}
-      \blocksensing{bloc de capteur}
-      \end{scratch}
-
-      Tableur avec profcollege
-
-\begin{Tableur}[Bandeau=false]
-  2.5&3&3.5&\\
-  6&6.5&7&\\
-  \end{Tableur}
+      \begin{Scratch}
+        Place Drapeau;
+        Place Avancer("50");
+        Place Repeter("10");
+        Place Tournerg("36");
+        Place Avancer("50");
+        Place FinBlocRepeter;
+        \end{Scratch}
 
     \end{enigme}
-
 
 %\chapter{themaG2}
 %\chapter{themaG3}

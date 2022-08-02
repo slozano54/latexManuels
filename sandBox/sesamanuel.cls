@@ -4273,13 +4273,13 @@
   \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
   \divide\smc@nbline \smc@nbcolumn
   \multido{\n=1+1}{\smc@nbline}{%
-    \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-      \unless\ifnum\ni>\smc@nbitem
-        \makebox[\QCMLabelWidth]{\QCMLabel{\ni}\hss}%
+    \multido{\i =\n+\the\smc@nbline}{\smc@nbcolumn}{%
+      \unless\ifnum\i>\smc@nbitem
+        \makebox[\QCMLabelWidth]{\QCMLabel{\i}\hss}%
         \begin{minipage}[t]{\dimexpr
             (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
               /\smc@nbcolumn-\QCMLabelWidth}
-          \strut\@nameuse{smc@item\ni}\strut
+          \strut\@nameuse{smc@item\i}\strut
         \end{minipage}%
         \hspace{\ListHSep}%
       \fi
