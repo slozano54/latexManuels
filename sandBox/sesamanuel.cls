@@ -72,7 +72,7 @@
 \newcommand*\smc@string@utfviii{utf8}
 \ExecuteOptions{utf8}
 \ProcessOptions
-\RequirePackage{verbatim}   % AjoutSeb -> pour écrire tout ce qu'on veut
+\RequirePackage{verbatim}     % AjoutSeb -> pour écrire tout ce qu'on veut
 \begin{comment}             % AjoutSeb -> du paquet verbatim pour commenter qqchose
 \newif\ifxetex
 \begingroup\expandafter\expandafter\expandafter\endgroup
@@ -125,6 +125,10 @@
   \RequirePackage[\smc@encoding]{inputenc}
 \fi
 \end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose
+
+\RequirePackage[T1]{fontenc}              % AjoutSeb -> pour la gestion des fontes même en lualatex
+\RequirePackage[\smc@encoding]{inputenc}  % AjoutSeb -> pour la gestion des fontes même en lualatex
+
 \RequirePackage[scaled=0.87]{helvet}
 \RequirePackage{mathpazo}
 \renewcommand{\ttdefault}{lmtt}
