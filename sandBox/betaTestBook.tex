@@ -10,16 +10,6 @@
 % ============================================================================================
 
 \renewcommand\PrefixeCorrection{corrections/}
-
-% ============================================================================================
-\usepackage{sesamanuelTIKZ}
-\usepackage{ProfCollegeNewCAN}
-% Pour la gestion des fontes.
-\usepackage{unicode-math}
-% Par exemple, une fonte sans serif pour les briques Scratch.
-\newfontfamily\myfontScratch[]{FreeSans}
-
-\begin{document}
 % ============================================================================================
 % ======= Thèmes personnalisés
 %
@@ -37,8 +27,36 @@
 \NewThema{A}{a}{algorithmique et programmation}{Algorithmique et programmation}{ALGORITHMIQUE ET PROGRAMMATION}{J1}{J1!50}
 
 % ============================================================================================
+% ======= Comme il y a des thèmes personnalisés
+% ======= Il faut redefinir la commande \ListeMethodesThemes{}
+% ============================================================================================
+
+\renewcommand\ListeMethodesThemes{{n}{N},{d}{D},{g}{G},{m}{M},{a}{A}}
+% ============================================================================================
+\usepackage{sesamanuelTIKZ}
+\usepackage{ProfCollegeNewCAN}
+% Pour la gestion des fontes.
+\usepackage{unicode-math}
+% Par exemple, une fonte sans serif pour les briques Scratch.
+\newfontfamily\myfontScratch[]{FreeSans}
+
+\begin{document}
+
+% ============================================================================================
 % ======= Tests
 % ============================================================================================
+\themaF
+\chapter{themaF1}
+\cours  
+\begin{methode}[Titre de la méthode chapF1]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode}
 
 \themaN
 \chapter{themaN1}
@@ -90,6 +108,50 @@
       \end{corrige}
     \end{multicols}
   \end{autoeval}
+
+  \cours  
+  \begin{methode}[Titre de la méthode chapN1]
+    Texte introductif
+    \exercice
+    Texte de l’exercice
+    \correction
+    Texte de la correction sur un minimum de trois lignes pour faire la
+    différence entre vis-à-vis et double colonne. C’est l’endroit de la
+    coupure qui va différer.
+  \end{methode}
+  
+  \begin{methode*1}[Titre de la méthode*1  chapN1]
+    Texte introductif
+    \exercice
+    Texte de l’exercice
+    \correction
+    Texte de la correction sur un minimum de trois lignes pour faire la
+    différence entre vis-à-vis et double colonne. C’est l’endroit de la
+    coupure qui va différer.
+  \end{methode*1}
+  
+  \begin{methode*2}[Titre de la méthode*2  chapN1]
+    Texte introductif
+    \exercice
+    Texte de l’exercice
+    \correction
+    Texte de la correction sur un minimum de trois lignes pour faire la
+    différence entre vis-à-vis et double colonne. C’est l’endroit de la
+    coupure qui va différer.
+  \end{methode*2}
+  
+  \begin{methode*2*2}[Dernière méthode  chapN1]
+    \exercice    
+    Texte du premier exercice
+    \correction
+    Correction du premier exercice
+    \exercice
+    Texte du deuxième exercice
+    \correction
+    Texte de la correction du deuxième exercice sur un minimum de trois
+    lignes pour faire la différence entre vis-à-vis et double
+    colonne. C’est l’endroit de la coupure qui va différer.
+  \end{methode*2*2}
 
 % ============================================================================================
 % ======= Rappels de connaissances et série de petits exercices avec ProfCollege
@@ -156,6 +218,17 @@
       \end{corrige}
   \end{autoeval}
 
+  \cours  
+  \begin{methode}[Titre de la méthode chapN2]
+    Texte introductif
+    \exercice
+    Texte de l’exercice
+    \correction
+    Texte de la correction sur un minimum de trois lignes pour faire la
+    différence entre vis-à-vis et double colonne. C’est l’endroit de la
+    coupure qui va différer.
+  \end{methode}
+
 \themaD
 
 % ============================================================================================
@@ -220,6 +293,19 @@
 
   Fonctionnement identique.
   \end{nouveau}
+
+
+  \cours  
+  \begin{methode}[Titre de la méthode chapD1]
+    Texte introductif
+    \exercice
+    Texte de l’exercice
+    \correction
+    Texte de la correction sur un minimum de trois lignes pour faire la
+    différence entre vis-à-vis et double colonne. C’est l’endroit de la
+    coupure qui va différer.
+  \end{methode}
+
 %\chapter{themaD2}
 
 \themaG
@@ -322,7 +408,7 @@
 \subsection{Sous-section 1.2}
 Quatre affichages prévus pour les méthodes.
 
-\begin{methode}[Titre de la méthode]
+\begin{methode}[Titre de la méthode chapG1]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -332,7 +418,7 @@ Quatre affichages prévus pour les méthodes.
   coupure qui va différer.
 \end{methode}
 
-\begin{methode*1}[Titre de la méthode*1]
+\begin{methode*1}[Titre de la méthode*1 chapG1]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -342,7 +428,7 @@ Quatre affichages prévus pour les méthodes.
   coupure qui va différer.
 \end{methode*1}
 
-\begin{methode*2}[Titre de la méthode*2]
+\begin{methode*2}[Titre de la méthode*2 chapG1]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -352,7 +438,7 @@ Quatre affichages prévus pour les méthodes.
   coupure qui va différer.
 \end{methode*2}
 
-\begin{methode*2*2}[Dernière méthode\MethodeRefExercice{exo-exemple1} \MethodeRefExercice{exo-exemple2}]
+\begin{methode*2*2}[Dernière méthode  chapG1\MethodeRefExercice{exo-exemple1} \MethodeRefExercice{exo-exemple2}]
   \exercice
   \label{methode-exemple}
   Texte du premier exercice
@@ -635,7 +721,7 @@ $f(3)$
   Texte de la correction en vis à vis
 \end{exemple}
 
-\begin{methode}[Titre de la méthode]
+\begin{methode}[Titre de la méthode AnnexeI]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -645,7 +731,7 @@ $f(3)$
   coupure qui va différer.
 \end{methode}
 
-\begin{methode*1}[Titre de la méthode*1]
+\begin{methode*1}[Titre de la méthode*1 AnnexeI]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -655,7 +741,7 @@ $f(3)$
   coupure qui va différer.
 \end{methode*1}
 
-\begin{methode*2}[Titre de la méthode*2]
+\begin{methode*2}[Titre de la méthode*2 AnnexeI]
   Texte introductif
   \exercice
   Texte de l’exercice
@@ -665,7 +751,7 @@ $f(3)$
   coupure qui va différer.
 \end{methode*2}
 
-\begin{methode*2*2}[Dernière méthode\MethodeRefExercice{exo-exemple1} \MethodeRefExercice{exo-exemple2}]
+\begin{methode*2*2}[Dernière méthode AnnexeI\MethodeRefExercice{exo-exemple1} \MethodeRefExercice{exo-exemple2}]
   \exercice
   \label{methode-exemple2}
   Texte du premier exercice
@@ -901,12 +987,39 @@ $f(3)$
 
 \themaM
 \chapter{themaM1}
+\cours  
+\begin{methode}[Titre de la méthode chapM1]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode}
+
 %\chapter{themaM2}
 
 \themaA
 \chapter{themaA1}
+\cours  
+\begin{methode}[Titre de la méthode chapA1]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode}
+
 %\chapter{themaA2}
 %\chapter{themaA3}
+
+% ============================================================================================
+% ======= Liste des méthodes
+% ============================================================================================
+\AfficheListeMethodes[1]
 
 % ============================================================================================
 % ======= Thèmes de base
