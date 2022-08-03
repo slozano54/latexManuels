@@ -1,6 +1,7 @@
 *.aux
 *.dvi
 *.log
+*.lomg
 *.ps
 *.fdb_latexmk
 *.fls

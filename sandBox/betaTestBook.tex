@@ -541,6 +541,361 @@ $f(3)$
 
     \end{enigme}
 
+% ============================================================================================
+% ======= Annexes
+% ======= Interdictions a priori
+% ==========> L'environnement "corrige" --> Il semble que non
+% ==========> La commande \partie en dehors d'un exercice
+%
+% ======= On peut changer les couleurs des annexes avec \ChangeAnnexe{}{}{}{}
+% ======= Attention il faut mettre cette commande avant le premier appel à \annexe{}
+% ======= sinon ça change toutes les annexes sauf la première !
+% ======= L'appel par défaut est \ChangeAnnexe{G3}{A1}{G1}{Blanc}
+% ============================================================================================
+\ChangeAnnexe{J3}{H1}{J1}{Blanc}
+\annexe{Titre annexe I}
+
+\begin{prerequis}[Prérequis - G1]
+  Chapitre avec Rappels, petits exercices  
+  \begin{itemize}
+  \item Rappels
+  \item Petits exercices
+  \end{itemize}
+\end{prerequis}
+
+\begin{autoeval}  
+    \begin{exercice}
+      Ex1
+    \end{exercice}
+    \begin{corrige}
+      Cor Ex1
+    \end{corrige}
+\end{autoeval}
+
+\activites
+\begin{activite}[Titre de l’activité][\tice]
+  Texte de l’activité... Avec titre et logo
+\end{activite}
+\begin{debat}[Titre du débat][\algo]
+  Texte du débat... Avec titre et logo
+\end{debat}
+
+\cours
+\section{Section 1}
+\subsection{Sous-section 1.1}
+\begin{definition}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition (comme ici par exemple).
+\end{definition}
+\begin{remarque}
+  Ceci est une remarque.
+\end{remarque}
+\begin{propriete}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour une propriete.
+\end{propriete}
+\begin{remarques}
+  \begin{itemize}
+    \item remarque.
+    \item remarque.
+  \end{itemize}
+\end{remarques}
+\begin{theoreme}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour un théorème.
+\end{theoreme}
+\begin{notation}
+  notation
+\end{notation}
+\begin{notations}
+  \begin{itemize}
+    \item notation.
+    \item notation.
+  \end{itemize}
+\end{notations}
+\begin{preuve}
+  Ceci est une preuve\par Deuxième ligne de la preuve
+\end{preuve}
+\begin{exemple}
+  Texte de l’exemple
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
+
+\begin{exemple*1}
+  Texte de l’exemple
+  \correction
+  Texte de la correction, le tout verticalement affiché
+\end{exemple*1}
+
+\begin{exemple}[0.6]
+  Texte de l’exemple très long sur une ligne, très très très long.
+  On peut modifier la répartition horizontale  à l'aide d'un argument optionnel valant par défaut 0,4, valant ici 0,6.
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
+
+\begin{methode}[Titre de la méthode]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode}
+
+\begin{methode*1}[Titre de la méthode*1]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode*1}
+
+\begin{methode*2}[Titre de la méthode*2]
+  Texte introductif
+  \exercice
+  Texte de l’exercice
+  \correction
+  Texte de la correction sur un minimum de trois lignes pour faire la
+  différence entre vis-à-vis et double colonne. C’est l’endroit de la
+  coupure qui va différer.
+\end{methode*2}
+
+\begin{methode*2*2}[Dernière méthode\MethodeRefExercice{exo-exemple1} \MethodeRefExercice{exo-exemple2}]
+  \exercice
+  \label{methode-exemple2}
+  Texte du premier exercice
+  \correction
+  Correction du premier exercice
+  \exercice
+  Texte du deuxième exercice
+  \correction
+  Texte de la correction du deuxième exercice sur un minimum de trois
+  lignes pour faire la différence entre vis-à-vis et double
+  colonne. C’est l’endroit de la coupure qui va différer.
+\end{methode*2*2}
+
+\exercicesbase
+\begin{colonne*exercice}
+  \serie{titre de série1}
+  \begin{exercice}[Exercice sans correction][\tice]
+  Prouver que $1=1$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+  \begin{exercice}[Lien avec une méthode \ExerciceRefMethode{methode-exemple2}]
+  \label{exo-exemple3}
+  Test pour avoir un lien avec une méthode.
+  \end{exercice}
+  \begin{exercice}[Exercice sans correction][\algo]
+    Prouver que $7=7$
+  \end{exercice}
+
+  \serie{titre de série2}
+  \begin{exercice}[Exercice sans correction][\tice]
+    \partie
+    Prouver que $1=1$
+    \partie
+    En déduire que $2=2$
+    \partie 
+    Puis que $3=3$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+\end{colonne*exercice}
+
+\exercicesappr
+\begin{colonne*exercice}
+  \serie{titre de série1}
+  \begin{exercice}[Exercice sans correction][\tice]
+  Prouver que $1=1$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+  \begin{exercice}[Lien avec une méthode \ExerciceRefMethode{methode-exemple2}]
+  \label{exo-exemple4}
+  Test pour avoir un lien avec une méthode.
+  \end{exercice}
+  \begin{exercice}[Exercice sans correction][\algo]
+    Prouver que $7=7$
+  \end{exercice}
+
+  \serie{titre de série2}
+  \begin{exercice}[Exercice sans correction][\tice]
+    \partie
+    Prouver que $1=1$
+    \partie
+    En déduire que $2=2$
+    \partie 
+    Puis que $3=3$
+  \end{exercice}
+  \begin{exercice*}[Exercice* avec correction]
+  Prouver que $2=2$
+  \end{exercice*}
+  \begin{corrige}
+  On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
+  c’est-à-dire $2=2$.
+  \end{corrige}
+\end{colonne*exercice}
+
+% La commande \Recreation permet d'inclure un saut de page
+
+\recreation
+\begin{enigme}
+  Trouveras-tu un chemin de multiples entre les cases colorées ?
+  \par
+  \LabyNombre[Multiple=7,Longueur=12,Largeur=8,XDepart=2,YDepart=2,XArrivee=11,YArrivee=6,Murs]
+\end{enigme}
+
+% ============================================================================================
+% ======= Je teste mes connaissances
+% ============================================================================================
+
+\connaissances
+\begin{acquis}
+\begin{itemize}
+\item Premier point à connaître.
+\item Autre point à savoir faire.
+\item Dernier point devant être su.
+\end{itemize}
+\end{acquis}
+
+\QCMautoevaluation{texte introductif}
+
+\begin{QCM}
+  \begin{EnonceCommunQCM}
+    Pour les questions \RefQCM{premier-qcm} à
+    \RefQCM{deuxieme-qcm}, $f$ désigne une
+    fonction affine.
+    \end{EnonceCommunQCM}
+
+\begin{GroupeQCM}
+\begin{exercice}\label{premier-qcm2}
+La courbe de $f$ est
+\begin{ChoixQCM}{3}
+\item une droite
+\item une parabole
+\item autre
+\end{ChoixQCM}
+\end{exercice}
+\begin{corrige}
+\reponseQCM{a}
+\end{corrige}
+\begin{exercice}\label{deuxieme-qcm2}
+$f(3)$
+\begin{ChoixQCM}{3}
+\item vaut la moitié de $f(6)$
+\item vaut le double de $f(6)$
+\item on ne peut pas savoir
+\end{ChoixQCM}
+\end{exercice}
+\begin{corrige}
+\reponseQCM{c}
+\end{corrige}
+\end{GroupeQCM}
+\end{QCM}
+
+\TravauxPratiques
+\begin{TP}[Titre Optionnel][\tice]
+  Contenu TP
+  \partie{Titre partie 1}
+  
+  TP partie 1
+  
+  \partie{Titre partie 2}
+  
+  TP partie 2
+  
+  \partie{Titre partie 3}
+  
+  TP partie 3 
+\end{TP}
+
+\recreation
+  \begin{enigme}[Titre optionnel]
+    Enigme/Recreation
+
+    Scratch avec profcollege
+
+      \begin{Scratch}
+        Place Drapeau;
+        Place Avancer("50");
+        Place Repeter("10");
+        Place Tournerg("36");
+        Place Avancer("50");
+        Place FinBlocRepeter;
+        \end{Scratch}
+
+    \end{enigme}
+
+\annexe{Titre annexe II}
+\begin{prerequis}[Prérequis - G1]
+  Chapitre avec Rappels, petits exercices  
+  \begin{itemize}
+  \item Rappels
+  \item Petits exercices
+  \end{itemize}
+\end{prerequis}
+
+\begin{autoeval}  
+    \begin{exercice}
+      Ex1
+    \end{exercice}
+    \begin{corrige}
+      Cor Ex1
+    \end{corrige}
+    \begin{exercice}
+      Ex2
+    \end{exercice}
+    \begin{corrige}
+      Cor Ex2
+    \end{corrige}
+\end{autoeval}
+
+\annexe{Titre annexe III}
+
+\begin{prerequis}[Prérequis - G1]
+  Chapitre avec Rappels, petits exercices  
+  \begin{itemize}
+  \item Rappels
+  \item Petits exercices
+  \end{itemize}
+\end{prerequis}
+
+\begin{autoeval}  
+    \begin{exercice}
+      Ex1
+    \end{exercice}
+    \begin{corrige}
+      Cor Ex1
+    \end{corrige}
+    \begin{exercice}
+      Ex2
+    \end{exercice}
+    \begin{corrige}
+      Cor Ex2
+    \end{corrige}
+\end{autoeval}
+
 %\chapter{themaG2}
 %\chapter{themaG3}
 
