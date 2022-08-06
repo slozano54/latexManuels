@@ -72,8 +72,8 @@
 \newcommand*\smc@string@utfviii{utf8}
 \ExecuteOptions{utf8}
 \ProcessOptions
-\RequirePackage{verbatim}     % AjoutSeb -> pour écrire tout ce qu'on veut
-\begin{comment}             % AjoutSeb -> du paquet verbatim pour commenter qqchose
+\RequirePackage{verbatim}     % AjoutSeb -> pour écrire tout ce qu'on veut (Christophe POULAIN)
+\begin{comment}             % AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
 \newif\ifxetex
 \begingroup\expandafter\expandafter\expandafter\endgroup
 \expandafter\ifx\csname XeTeXrevision\endcsname\relax
@@ -124,7 +124,7 @@
   \RequirePackage[T1]{fontenc}
   \RequirePackage[\smc@encoding]{inputenc}
 \fi
-\end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose
+\end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
 
 \RequirePackage[T1]{fontenc}              % AjoutSeb -> pour la gestion des fontes même en lualatex
 \RequirePackage[\smc@encoding]{inputenc}  % AjoutSeb -> pour la gestion des fontes même en lualatex
@@ -2034,7 +2034,7 @@
 \definecolor{Gris3}             {cmyk}{0.00, 0.00, 0.00, 0.50}
 \definecolor{Noir}              {cmyk}{0.00, 0.00, 0.00, 1.00}
 %\AtBeginDocument{\def\default@color{cmyk 0 0 0 1}\normalcolor}
-\AtBeginDocument{\colorlet{defaultcolor}{black}}% AjoutSeb -> pour le problème de blanc sur blanc ?
+\AtBeginDocument{\colorlet{defaultcolor}{black}}% AjoutSeb -> pour le problème de blanc sur blanc ? (Christophe POULAIN)
 \colorlet{AlgoLineColor}{F3}
 \colorlet{AlgoBkgColor}{F1}
 \colorlet{AlgoTextColor}{Blanc}
@@ -2232,6 +2232,7 @@
 \colorlet{CorrigeExercicesApprTitleColor}{C2}
 \colorlet{CorrigeConnaissancesTitleColor}{G1}
 \colorlet{CorrigeQCMItemNumColor}{G1}
+\colorlet{CorrigeEnigmeTitleColor}{B1} % AjoutSeb
 \colorlet{ListeMethodeHeadFrameColor}{G3}
 \colorlet{ListeMethodeColumnRuleColor}{A1}
 \colorlet{ListeMethodeTitleColor}{B2}
@@ -4051,8 +4052,8 @@
 \let\endsmc@librecorrige\endsmc@exobasecorrige
 \newenvironment{smc@enigmecorrige}
 {%
-  \addtocontents{cor}{%
-    \protect\inputcor{\smc@currpart}{\smc@thema@initcap\thechapter}{}%
+  \addtocontents{cor}{%    
+    \protect\inputcor{\smc@currpart}{\smc@thema@initcap\thechapter}{\the\c@exercice}% AjoutSeb
   }%
   \killienc
   \VerbatimEnvironment
@@ -4397,6 +4398,7 @@
               {TPTitleColor}
 \newenvironment{enigme}[1][]{%
   \addtocontents{cor}{\protect\smc@corrigeenigme}%
+  \refstepcounter{exercice} % AjoutSeb
   \let\itemize\smc@recreationitemize
   \let\enditemize\endsmc@recreationitemize
   \let\colitemize\smc@recreationcolitemize
@@ -4416,7 +4418,7 @@
   \@ifmtarg{#1}{}{%
     {\RecreationTitleFont \textcolor{RecreationTitleColor}{#1}\par}%
   }
-  \setcounter{partie}{0}
+  \setcounter{partie}{0}  
 }
 {\par}
 \newcommand*\smc@nopartie{%
