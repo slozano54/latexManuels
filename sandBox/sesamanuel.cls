@@ -2852,8 +2852,8 @@
   }%
   \ignorespaces
 }
-\renewcommand*\@makechapterhead[1]{%
-  \def\smc@chaptertitle{#1}%
+%%% Test Seb
+\newcommand*\AfficheBandeauxCorriges{%
     \addtocontents{cor}{%
       \protect\smc@corrigechapter{%
         \StringChapitre{}
@@ -2862,6 +2862,21 @@
       {\CorrigeChapterFrameColor}%
       {\CorrigeChapterTextColor}%
     }%
+}
+%%% Fin Test Seb
+\renewcommand*\@makechapterhead[1]{%
+  \def\smc@chaptertitle{#1}%
+%%% Test Seb  
+    \AfficheBandeauxCorriges    
+%%% Fin Test Seb    
+    % \addtocontents{cor}{%
+    %   \protect\smc@corrigechapter{%
+    %     \StringChapitre{}
+    %     \smc@thema@initcap\the\c@chapter}
+    %   {\smc@chaptertitle}%
+    %   {\CorrigeChapterFrameColor}%
+    %   {\CorrigeChapterTextColor}%
+    % }%
   \begin{pspicture}(0,0)(\linewidth,\ChapterBottomPicture)
     \psset{linewidth=0pt,linestyle=none,fillstyle=solid}
     \psframe[fillcolor=ChapterTopFrameColor]
@@ -2936,6 +2951,17 @@
 }
 \newenvironment{autoeval}
 {%
+  %%% Test Seb
+  % \ifnum \value{exercice} = 0
+  %   \addtocontents{cor}{
+  %     {Ajout bandeau aa\smc@chaptertitle}
+  %   }
+  % \else
+  %   \addtocontents{cor}{
+  %     {Ajout bandeau bb\smc@chaptertitle}
+  %   }
+  % \fi
+  %%% Fin Test Seb
   \addtocontents{cor}{\protect\smc@corrigeautoeval}%
   \par\vspace{\stretch{1}}
   \begingroup
