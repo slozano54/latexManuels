@@ -606,13 +606,13 @@
     \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
     \divide\smc@nbline \smc@nbcolumn
     \multido{\n=1+1}{\smc@nbline}{%
-      \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-        \unless\ifnum\ni>\smc@nbitem
+      \multido{\i=\n+\the\smc@nbline}{\smc@nbcolumn}{%
+        \unless\ifnum\i>\smc@nbitem
           \makebox[\ListLabelWidth]{\textcolor{#2}{#3}\hss}%
           \begin{minipage}[t]{\dimexpr
               (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
                 /\smc@nbcolumn-\ListLabelWidth}
-            \strut\@nameuse{smc@item\ni}\strut
+            \strut\@nameuse{smc@item\i}\strut
           \end{minipage}%
           \hspace{\ListHSep}%
         \fi
@@ -731,13 +731,13 @@
     \smc@nbline \numexpr \smc@nbitem+\smc@nbcolumn-1
     \divide\smc@nbline \smc@nbcolumn
     \multido{\n=1+1}{\smc@nbline}{%
-      \multido{\ni=\n+\the\smc@nbline}{\smc@nbcolumn}{%
-        \unless\ifnum\ni>\smc@nbitem
+      \multido{\i=\n+\the\smc@nbline}{\smc@nbcolumn}{%
+        \unless\ifnum\i>\smc@nbitem
           \makebox[\ListLabelWidth]{\@enumlabel\hss}%
           \begin{minipage}[t]{\dimexpr
               (\linewidth-\ListHSep*(\smc@nbcolumn-1))%
                 /\smc@nbcolumn-\ListLabelWidth}
-            \strut\@nameuse{smc@item\ni}\strut
+            \strut\@nameuse{smc@item\i}\strut
           \end{minipage}%
           \hspace{\ListHSep}%
         \fi
