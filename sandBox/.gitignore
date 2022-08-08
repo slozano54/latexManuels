@@ -1,6 +1,7 @@
 *.aux
 *.cor
 *.dvi
+*.lex
 *.log
 *.loma
 *.lomd

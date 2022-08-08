@@ -5063,7 +5063,8 @@
 }
 \newcommand*\smc@fusionrec{%
   \advance\smc@writetable \@ne
-  \ifnum \pdfstrcmp{%
+  % \ifnum \pdfstrcmp{%
+  \ifnum \pdf@strcmp{% AjoutSeb -> fix lexique avec compilation lualatex 
     \csname tri\csname index\the\smc@firsttable\endcsname\endcsname
   }{%
     \csname tri\csname index\the\smc@secondtable\endcsname\endcsname

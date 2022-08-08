@@ -835,4 +835,26 @@ Glossaire
    % compas.eps: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
   \end{center}
   \vfill
+
+% ============================================================================================
+% ======= Lexique
+% ============================================================================================
+Dans cette section, on parle de \MotDefinition{lexique}{} et de glossaire.
+
+\MotDefinition{glossaire}{Liste de mots utilisés dans le texte avec leurs définitions}
+
+% Classement forcé
+% Impose le symbile int directement après le mot intégrale
+\MotDefinition{$\int$}[integrale]{symbole}
+\MotDefinition{intégrale}{mot int}
+\MotDefinition{intégration}{autre mot int}
+
+% Utilisation d’un mot au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
+% Par exemple, on utilise le code :
+\MotDefinition[mot]{mots}{Exemple mot lexique distinct du texte}
+
+% Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
+% remplacée par l'utilisation de deux colonnes
+\AfficheLexique 
+
 \end{document}
