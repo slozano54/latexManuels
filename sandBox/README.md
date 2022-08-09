@@ -18,6 +18,8 @@
 
 - Fix Problème de compilation lualatex avec la commande \pdfstrcmp cf [commit ff60cd8](https://github.com/slozano54/latexManuels/commit/ff60cd8d1fe36199fd1cc87f5afa0108279f4674)
 
+- Compilation LuaTeX obligatoire cf [commit 5215698](https://github.com/slozano54/latexManuels/commit/5215698bf9c59378ff75c69f7b2fef8462818dfc)
+
 # Découverte du paquet profcollege
 
 - Mise à jour du paquet le 3 aout 2022 donc mise à jour locale avec :
