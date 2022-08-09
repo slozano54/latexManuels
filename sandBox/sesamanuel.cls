@@ -126,6 +126,18 @@
 \fi
 \end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
 
+% AjoutSeb -> Il est indispensable de compiler avec lualatex pour utiliser ProfCollege
+\newif\ifluatex
+\ifx\luatexversion\undefined
+  \luatexfalse
+\else
+  \luatextrue
+\fi
+\unless\ifluatex
+  \ClassError{sesamanuel}{Mode de compilation incorrect}{Il faut compiler en mode LuaLaTex.}%
+\fi
+% Fin AjoutSeb -> Il est indispensable de compiler avec lualatex
+
 \RequirePackage[T1]{fontenc}              % AjoutSeb -> pour la gestion des fontes même en lualatex
 \RequirePackage[\smc@encoding]{inputenc}  % AjoutSeb -> pour la gestion des fontes même en lualatex
 
