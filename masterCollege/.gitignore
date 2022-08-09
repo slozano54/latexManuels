@@ -1,0 +1,15 @@
+*.aux
+*.cor
+*.dvi
+*.lex
+*.log
+*.loma
+*.lomd
+*.lomf
+*.lomg
+*.lomm
+*.lomn
+*.ps
+*.fdb_latexmk
+*.fls
+*.synctex.gz
