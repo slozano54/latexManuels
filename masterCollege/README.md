@@ -4,8 +4,8 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 
 # Objectifs
 
-- Parametrages de la classe dans le fichier **0_persoConfigClasseSesamanuel.tex**
-- Commandes personnelles et paquets supplémentaires dans le fichier **0_persoCommandes.tex**
-- Un document global compilable avec tous les chapitres
-- Chaque chapitre doit être compilable séparément
-- Code source commenté
+- Parametrages de la classe dans le fichier **0_persoConfigClasseSesamanuel.tex**.
+- Commandes personnelles et paquets supplémentaires dans le fichier **0_persoCommandes.tex**.
+- Un document global compilable avec tous les chapitres.
+- Chaque chapitre doit être compilable séparément.
+- Code source commenté.
