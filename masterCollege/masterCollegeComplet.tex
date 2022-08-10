@@ -3,9 +3,23 @@
 % ============================================================================================
 % ======= Configurations 
 % ============================================================================================
-\input{./0_persoConfigClasseSesamanuel.tex}
-\input{./0_persoCommandes.tex}
+\input{./0persoConfigClasseSesamanuel.tex}
+\input{./0persoCommandes.tex}
 
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
 \begin{document}
+    \frontmatter                                % Formatage des pages préliminaires
+    \pagenumbering{gobble}                      % On supprime la numérotation
+    \def\currentpath{./couverture}              % On définit le repertoire courant
+    \include{\currentpath/incFirstCover.tex}    % On inclut la 1ere de couverture
+
+    \mainmatter                                 % Contenu principal
+    \fancyhf{}
     Master College Complet - Trame vide
+
+    \backmatter                                 % Formatage des pages postliminaires
+    \def\currentpath{./couverture}              % On définit le repertoire courant
+    \include{\currentpath/incBackCover.tex}     % On inclut la 4e de couverture
 \end{document}

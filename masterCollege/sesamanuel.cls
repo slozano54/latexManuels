@@ -124,7 +124,8 @@
   \RequirePackage[T1]{fontenc}
   \RequirePackage[\smc@encoding]{inputenc}
 \fi
-\end{comment}% AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
+\end{comment}
+% Fin AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
 
 % AjoutSeb -> Il est indispensable de compiler avec lualatex pour utiliser ProfCollege
 \newif\ifluatex
