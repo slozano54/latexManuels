@@ -26,12 +26,19 @@
     \def\currentpath{./dedicaces}                       % On définit le repertoire courant
     \addcontentsline{toc}{chapter}{Dédicaces}           % On ajoute une entrée au sommaire au même rang que les chapitres
     \include{\currentpath/incDedicaces.tex}             % On inclut les remerciements
-    
+        
+    \shorttableofcontents{Sommaire}{0}                  % Sommaire avec uniquement les chapitres
+    \addcontentsline{toc}{chapter}{Sommaire}            % On ajoute le sommaire dans le sommaire!    
+
     \mainmatter                                         % Contenu principal
     \fancyhf{}
-    Master College Complet - Trame vide
+    Master College Complet - Trame videe
 
     \backmatter                                         % Formatage des pages postliminaires
+    
+    \dominitoc                                          % On génère les mini tables des matières
+    \faketableofcontents                                % On génère la table des matières factice
+
     \def\currentpath{./couverture}                      % On définit le repertoire courant
     \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}
