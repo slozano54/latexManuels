@@ -10,20 +10,24 @@
 % ======= Début du document
 % ============================================================================================
 \begin{document}
-    \frontmatter                                % Formatage des pages préliminaires
-    \pagenumbering{gobble}                      % On supprime la numérotation
-    \def\currentpath{./couverture}              % On définit le repertoire courant
-    \include{\currentpath/incFirstCover.tex}    % On inclut la 1ere de couverture
+    \frontmatter                                        % Formatage des pages préliminaires
+    \pagenumbering{gobble}                              % On supprime la numérotation
+    \def\currentpath{./couverture}                      % On définit le repertoire courant
+    \include{\currentpath/incFirstCover.tex}            % On inclut la 1ere de couverture
 
-    \def\currentpath{./resume}                  % On définit le repertoire courant
-    \addcontentsline{toc}{chapter}{Résumé}      % On ajoute une entrée au sommaire au même rang que les chapitres
-    \include{\currentpath/resume.tex}           % On inclut le résumé
+    \def\currentpath{./resume}                          % On définit le repertoire courant
+    \addcontentsline{toc}{chapter}{Résumé}              % On ajoute une entrée au sommaire au même rang que les chapitres
+    \include{\currentpath/resume.tex}                   % On inclut le résumé
 
-    \mainmatter                                 % Contenu principal
+    \def\currentpath{./remerciements}                   % On définit le repertoire courant
+    \addcontentsline{toc}{chapter}{Remerciements}       % On ajoute une entrée au sommaire au même rang que les chapitres
+    \include{\currentpath/remerciements.tex}            % On inclut le résumé
+
+    \mainmatter                                         % Contenu principal
     \fancyhf{}
     Master College Complet - Trame vide
 
-    \backmatter                                 % Formatage des pages postliminaires
-    \def\currentpath{./couverture}              % On définit le repertoire courant
-    \include{\currentpath/incBackCover.tex}     % On inclut la 4e de couverture
+    \backmatter                                         % Formatage des pages postliminaires
+    \def\currentpath{./couverture}                      % On définit le repertoire courant
+    \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}
