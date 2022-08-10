@@ -7,11 +7,19 @@
 \input{./0persoCommandes.tex}
 
 % ============================================================================================
+% ======= Remarques 
+% ============================================================================================
+
+% ===> Compilation obligatoire en mode luaLaTeX
+% ===> Lorsque le manuel est complet, dans chaque chapitre incChapitre*.tex
+% mettre à jour le numéro de page ad hoc.
+
+% ============================================================================================
 % ======= Début du document
 % ============================================================================================
 \begin{document}
     \frontmatter                                        % Formatage des pages préliminaires
-    \pagenumbering{gobble}                              % On supprime la numérotation
+    %\pagenumbering{gobble}                              % On supprime la numérotation
     \def\currentpath{./couverture}                      % On définit le repertoire courant
     \include{\currentpath/incFirstCover.tex}            % On inclut la 1ere de couverture
 
@@ -31,8 +39,9 @@
     \addcontentsline{toc}{chapter}{Sommaire}            % On ajoute le sommaire dans le sommaire!    
 
     \mainmatter                                         % Contenu principal
-    \fancyhf{}
-    Master College Complet - Trame videe
+    \themaI
+    \def\currentpath{./introduction/introduction}       % On définit le repertoire courant    
+    \include{\currentpath/incChapitreIntroduction.tex}  % On inclut le chapitre d'introduction
 
     \backmatter                                         % Formatage des pages postliminaires
     
