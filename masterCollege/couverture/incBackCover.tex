@@ -9,10 +9,8 @@ Classe sesamanuel modifiée\hspace*{\stretch{1}} Paquet ProfCollege
 \end{center}
 \vspace*{\stretch{1}}
 \hrulefill
-\begin{center}\bfseries\Huge
-    Résumé
-\end{center}
-Ici, mon résumé ou autre chose \ldots
+\def\currentpath{./resume}          % On définit le chemin relatif au répertoire contenant le document maître
+\input{\currentpath/resume.tex}     % On ne peut pas utiliser \include ici car ce fichier est lui même inclus avec \include
 
 \hrulefill
 \vspace*{1cm}

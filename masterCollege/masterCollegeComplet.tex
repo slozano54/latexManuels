@@ -15,6 +15,10 @@
     \def\currentpath{./couverture}              % On définit le repertoire courant
     \include{\currentpath/incFirstCover.tex}    % On inclut la 1ere de couverture
 
+    \def\currentpath{./resume}                  % On définit le repertoire courant
+    \addcontentsline{toc}{chapter}{Résumé}      % On ajoute une entrée au sommaire au même rang que les chapitres
+    \include{\currentpath/resume.tex}           % On inclut le résumé
+
     \mainmatter                                 % Contenu principal
     \fancyhf{}
     Master College Complet - Trame vide
