@@ -17,12 +17,16 @@
 
     \def\currentpath{./resume}                          % On définit le repertoire courant
     \addcontentsline{toc}{chapter}{Résumé}              % On ajoute une entrée au sommaire au même rang que les chapitres
-    \include{\currentpath/resume.tex}                   % On inclut le résumé
+    \include{\currentpath/incResume.tex}                % On inclut le résumé
 
     \def\currentpath{./remerciements}                   % On définit le repertoire courant
     \addcontentsline{toc}{chapter}{Remerciements}       % On ajoute une entrée au sommaire au même rang que les chapitres
-    \include{\currentpath/remerciements.tex}            % On inclut le résumé
+    \include{\currentpath/incRemerciements.tex}         % On inclut les remerciements
 
+    \def\currentpath{./dedicaces}                       % On définit le repertoire courant
+    \addcontentsline{toc}{chapter}{Dédicaces}           % On ajoute une entrée au sommaire au même rang que les chapitres
+    \include{\currentpath/incDedicaces.tex}             % On inclut les remerciements
+    
     \mainmatter                                         % Contenu principal
     \fancyhf{}
     Master College Complet - Trame vide
