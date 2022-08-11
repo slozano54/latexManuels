@@ -16,3 +16,14 @@
 \usepackage{hyperref}
 
 \newcommand\myAuthorName{Sébastien LOZANO \par Nom de l'auteur à modifier dans le fichier 0persoCommandes.tex}
+
+\newcommand{\myTocFrame}[2]{%couleur, texte
+    \addtocontents{toc}{
+        \vspace{1cm}
+        \begin{cadre}[#1][#1!50]
+            \begin{center}
+                #2
+            \end{center}
+        \end{cadre}
+    }
+}

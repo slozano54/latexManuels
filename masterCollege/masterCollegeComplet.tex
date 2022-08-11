@@ -15,6 +15,9 @@
     \def\currentpath{./couverture}                      % On définit le repertoire courant
     \include{\currentpath/incFirstCover.tex}            % On inclut la 1ere de couverture
 
+    \def\currentpath{./tocs}                            % On définit le repertoire courant    
+    \include{\currentpath/incPreface.tex}               % On inclut un bandeau au sommaire
+
     \def\currentpath{./resume}                          % On définit le repertoire courant    
     \include{\currentpath/incResume.tex}                % On inclut le résumé
 
@@ -32,6 +35,9 @@
     % ======= Chapitre d'introduction
     % ============================================================================================    
     \themaI    
+    \def\currentpath{./tocs}                            % On définit le repertoire courant    
+    \include{\currentpath/incIntroduction.tex}          % On inclut un bandeau au sommaire
+
     \def\currentpath{./introduction/introduction}       % On définit le repertoire courant    
     \include{\currentpath/incChapitreIntroduction.tex}  % On inclut le chapitre d'introduction
 
@@ -39,6 +45,9 @@
     % ======= Chapitres de la partie Numerique
     % ============================================================================================    
     \themaN    
+    \def\currentpath{./tocs}                            % On définit le repertoire courant    
+    \include{\currentpath/incNumerique.tex}             % On inclut un bandeau au sommaire
+
     \def\currentpath{./N1/N1}                           % On définit le repertoire courant    
     \include{\currentpath/incChapitreN1.tex}            % On inclut le chapitre N1
 
