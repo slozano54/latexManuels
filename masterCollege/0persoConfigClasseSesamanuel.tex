@@ -59,3 +59,15 @@
   le chapitre sur
   \href{https://mathslozano.fr}{\textcolor{U4}{\LogoURLManuelFont mathslozano.fr}}}
 
+  % Ajout d'un logo
+\newcommand*\AlgoNewLogo{\fontsize{9.5}{9.5}\sffamily\bfseries}  
+\newcommand*\StringNEWLOGO{NEWLOGO}
+\newcommand*\newLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=TiceLineColor, fillstyle=solid,
+              fillcolor=TiceBkgColor, framearc=0.6]{%
+    \TiceFont
+    \textcolor{TiceTextColor}{\StringNEWLOGO}%
+  }
+}
+
