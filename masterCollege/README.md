@@ -14,7 +14,7 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 
 - Compilation obligatoire en mode luaLaTeX
 - Après modification des contenus et avant compilation, il faudra vider les dossiers corrections/
-- Lorsque le manuel est complet, dans chaque chapitre incChapitre*.tex mettre à jour le numéro de page ad hoc 
-en modifiant la valeur de n dans la commande \setcounter{page}{n}.
+- ~~Lorsque le manuel est complet, dans chaque chapitre incChapitre*.tex mettre à jour le numéro de page ad hoc 
+en modifiant la valeur de n dans la commande \setcounter{page}{n}.~~
 - Dans chaque grand thème, il y a un chapitre témoin à copier/coller pour ajouter d'autres chapitres.
     - Penser à modifier la commande \def\currentpath{./N1} de façon ad hoc
