@@ -25,9 +25,9 @@
     \include{\currentpath/incRemerciements.tex}         % On inclut les remerciements
 
     \def\currentpath{./dedicaces}                       % On définit le repertoire courant    
-    \include{\currentpath/incDedicaces.tex}             % On inclut les remerciements
-        
-    % \shorttableofcontents{Sommaire}{0}                  % Sommaire avec uniquement les chapitres
+    \include{\currentpath/incDedicaces.tex}             % On inclut les remerciements    
+    
+    \renewcommand{\contentsname}{Sommaire}              % Changer le nom de la table des matières
     \tableofcontents
     \addcontentsline{toc}{chapter}{Sommaire}            % On ajoute le sommaire dans le sommaire!    
 
@@ -60,9 +60,6 @@
 
     \backmatter                                         % Formatage des pages postliminaires
     
-    \dominitoc                                          % On génère les mini-tables des matières
-    \faketableofcontents                                % On génère la table des matières factice
-
     \def\currentpath{./couverture}                      % On définit le repertoire courant
     \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}

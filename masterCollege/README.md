@@ -18,3 +18,5 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 - Dans chaque grand thème, il y a un chapitre témoin à copier/coller pour ajouter d'autres chapitres. Penser à :
     - Modifier la commande \def\currentpath{./N1} de façon ad hoc
     - ~~Supprimer l'ajout à la table des matière du bandeau qui ne doit être présent que dans le premier chapitre d'un thème. (fix interaction include et toc)~~
+- Pour un chapitre, le contenu de chaque sous-partie, prerequis, activités, cours, exercices, TP ... est découpé dans des fichiers distincts. Par exemple pour le cours, on inclut les fichiers cours001.tex, cours002.tex , ... On peut rendre les noms plus explicites !
+- Chaque chapitre est compilable séparément dans son dossier via le fichier **MasterCollegeChapitreComplet.tex**. Une fois finalisé, il suffit de l'ajouter au fichier du manuel complet.
