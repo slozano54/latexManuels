@@ -2718,7 +2718,7 @@
   \def\smc@thema@init{f}%
   \def\smc@thema@initcap{F}%
   \smc@themaFColor
-  \setcounter{chapter}{0}%
+  \setcounter{chapter}{0}
 }
 \newcommand*\smc@themaFColor{%
   \def\CorrigeChapterFrameColor{PartieFonction}%
@@ -2737,7 +2737,7 @@
   \def\smc@thema@init{g}%
   \def\smc@thema@initcap{G}%
   \smc@themaGColor
-  \setcounter{chapter}{0}%
+  \setcounter{chapter}{0}
 }
 \newcommand*\smc@themaGColor{%
   \def\CorrigeChapterFrameColor{PartieGeometrie}%
@@ -2756,7 +2756,7 @@
   \def\smc@thema@init{sp}%
   \def\smc@thema@initcap{SP}%
   \smc@themaSColor
-  \setcounter{chapter}{0}%
+  \setcounter{chapter}{0}
 }
 \newcommand*\smc@themaSColor{%
   \def\CorrigeChapterFrameColor{PartieStatistique}%
@@ -2774,7 +2774,7 @@
   \def\smc@thema@init{l}%
   \def\smc@thema@initcap{L}%
   \smc@themaLColor
-  \setcounter{chapter}{0}%
+  \setcounter{chapter}{0}
 }
 \newcommand*\smc@themaLColor{%
   \def\CorrigeChapterFrameColor{Blanc}%
