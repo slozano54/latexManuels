@@ -12,6 +12,9 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 
 # Remarques 
 
+- J'ai essayé d'utiliser un maximum de commandes mais il est toujours judicieux de consulter les documentations :
+    - De la classe [sesamuel](https://texlive.mycozy.space/macros/latex/contrib/sesamanuel/sesamath-doc-fr.pdf)
+    - Du paquet [ProfCollege](https://ctan.mines-albi.fr/macros/latex/contrib/profcollege/doc/ProfCollege-doc.pdf)
 - Compilation obligatoire en mode luaLaTeX
 - Après modification des contenus et avant compilation, il faudra vider les dossiers corrections/
 - ~~Lorsque le manuel est complet, dans chaque chapitre incChapitre*.tex mettre à jour le numéro de page ad hoc en modifiant la valeur de n dans la commande \setcounter{page}{n}.~~
