@@ -1,0 +1,45 @@
+\usepackage{sesamanuelTIKZ}
+\usepackage{ProfCollege}
+% Pour la gestion des fontes maths notamment en mode LuaLaTeX.
+\usepackage{unicode-math}
+% Par exemple, une fonte sans serif pour les briques Scratch.
+\newfontfamily\myfontScratch[]{FreeSans}
+
+% Pour générer du faux texte
+\usepackage{lipsum}
+
+% % Pour les hyperliens, notamment des sommaires cliquables
+\usepackage{hyperref}
+
+\newcommand\myAuthorName{Sébastien LOZANO \par Nom de l'auteur à modifier dans le fichier 0persoCommandes.tex}
+
+% En prévision de l'application d'un style particulier
+% pour les parties dans le sommaire
+\newcommand{\myTocFrame}[2]{%couleur, texte
+    \addtocontents{toc}{
+        \vspace{1cm}
+        \begin{cadre}[#1][#1!50]
+            \begin{center}
+                #2
+            \end{center}
+        \end{cadre}
+    }
+}
+
+% Pour pouvoir séparer la numérotation des chapitres en fonction des parties
+% Important pour que les liens cliquables du sommaire renvoient au bon endroit
+\counterwithin*{chapter}{part}
+
+% Pour pouvoir numéroter les énigmes quand on en met plusieurs
+% dans la section \recreation
+\newcommand{\numeroteEnigme}{
+    \begin{pspicture}(0,0)(\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+        \psframe*[linewidth=0pt,
+                  linecolor=LibreExerciceNumFrameColor]
+                 (0,-\ExerciceNumFrameDepth)
+                 (\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+      \rput[B](\dimexpr\ExerciceNumFrameWidth/2,0){%
+        \textcolor{LibreExerciceNumColor}{\ExerciceNumFont \theexercice}%
+      }
+  \end{pspicture}  
+}
