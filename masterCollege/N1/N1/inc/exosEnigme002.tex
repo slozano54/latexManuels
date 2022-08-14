@@ -1,0 +1,20 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}
+    Trouveras-tu un chemin de multiples entre les cases colorées ?
+
+    % \LabyNombre[Multiple=10,Longueur=12,Largeur=8,XDepart=2,YDepart=2,XArrivee=10,YArrivee=6]
+    \Tableau[Carre,Are,FlechesH]{}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    N1 - Correction enigme de la fin de la partie cours.  
+
+    Problème d'inclusion de corrigé de LabyNombre ici
+    % \LabyNombre[Multiple=10,Longueur=12,Largeur=8,XDepart=2,YDepart=2,XArrivee=10,YArrivee=6,Solution]
+    \Tableau[Carre,Are,FlechesH]{200/6}
+\end{corrige}

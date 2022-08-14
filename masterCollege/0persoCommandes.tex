@@ -29,3 +29,17 @@
 % Pour pouvoir séparer la numérotation des chapitres en fonction des parties
 % Important pour que les liens cliquables du sommaire renvoient au bon endroit
 \counterwithin*{chapter}{part}
+
+% Pour pouvoir numéroter les énigmes quand on en met plusieurs
+% dans la section \recreation
+\newcommand{\numeroteEnigme}{
+    \begin{pspicture}(0,0)(\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+        \psframe*[linewidth=0pt,
+                  linecolor=LibreExerciceNumFrameColor]
+                 (0,-\ExerciceNumFrameDepth)
+                 (\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+      \rput[B](\dimexpr\ExerciceNumFrameWidth/2,0){%
+        \textcolor{LibreExerciceNumColor}{\ExerciceNumFont \theexercice}%
+      }
+  \end{pspicture}  
+}

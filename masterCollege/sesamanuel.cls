@@ -4126,6 +4126,7 @@
     \smc@putsquare(46,1){H4}
   \end{pspicture}
   \par\addvspace{\AfterRecreationVSpace}
+  \def\smc@currpart{recreation}% AjoutSeb
 }
 \def\smc@putsquare(#1,#2)#3{%
   \rput(\dimexpr \SquareWidth*#1,\dimexpr \SquareWidth*#2)
@@ -4135,6 +4136,7 @@
 \newcommand*\Recreation{%
   \clearpage
   \pagestyle{recreation}
+  \def\smc@currpart{Recreation}% AjoutSeb
 }
 \newcommand*\connaissances{%
   \clearpage
