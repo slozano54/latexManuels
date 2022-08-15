@@ -4550,6 +4550,7 @@
 \newcommand*\PrefixeCorrection{}
 \newcommand*\AfficheCorriges[1][\NombreColonnesCorriges]{%
   \clearpage
+  \phantomsection %AjoutSeb - Pour corredctement lier \ref \pageref et \label  
   \label{toutes-solutions}
   \pagestyle{corrige}
   \thispagestyle{firstcorrige}
