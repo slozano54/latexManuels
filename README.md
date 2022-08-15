@@ -47,9 +47,14 @@
 </p>
 
 <!-- DOSSIER sandBox -->
-## sandBox
+## Dossier ./sandBox
 Errances et autres essais ...
-<a href="https://github.com/slozano54/latexManuels/blob/master/sandBox/README.md">README.md du dossier ./sandBox/</a>
+<a href="https://github.com/slozano54/latexManuels/blob/master/sandBox/README.md">README.md du dossier ./sandBox</a>
+
+<!-- DOSSIER masterCollege -->
+## Dossier ./masterCollege
+Proposition de maquette vide pour un manuel de college
+<a href="https://github.com/slozano54/latexManuels/blob/master/masterCollege/README.md">README.md du dossier ./masterCollege</a>
 
 <!-- CONTRIBUTING -->
 ## Contributing
