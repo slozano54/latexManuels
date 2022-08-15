@@ -52,14 +52,14 @@
 }
 
 % ============================================================================================
-% ======= Quelques redéfinitions et ajouts de commandes
+% ======= Quelques redéfinitions et ajouts de commandes sesamanuel
 % ============================================================================================
 
 \renewcommand*\StringManuel{Des ressources num\'eriques pour pr\'eparer
   le chapitre sur
   \href{https://mathslozano.fr}{\textcolor{U4}{\LogoURLManuelFont https://mathslozano.fr}}}
 
-  % Ajout d'un logo
+% Ajout d'un logo
 \newcommand*\AlgoNewLogo{\fontsize{9.5}{9.5}\sffamily\bfseries}  
 \newcommand*\StringNEWLOGO{NEWLOGO}
 \newcommand*\newLogo{%
@@ -69,5 +69,10 @@
     \TiceFont
     \textcolor{TiceTextColor}{\StringNEWLOGO}%
   }
+}
+
+% Pour uniformiser les titres de l'environnement acquis
+\newcommand{\titreConnaissancesAcquis}[1]{%
+  \textcolor{G1}{\textbf{#1}} :
 }
 
