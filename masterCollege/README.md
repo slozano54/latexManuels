@@ -8,6 +8,7 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 - Commandes personnelles et paquets supplémentaires dans le fichier **0persoCommandes.tex**.
 - Un document global compilable avec tous les chapitres.
 - Chaque chapitre doit être compilable séparément.
+- Un chapitre témoin pour chaque thème reprenant toutes les possibilités de la classe
 - Code source commenté.
 
 # Remarques 
