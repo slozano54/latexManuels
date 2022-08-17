@@ -56,18 +56,25 @@
     % ============================================================================================
     % ======= Génère la liste des méthodes
     % ============================================================================================
-    
+
     \AfficheListeMethodes[1]
-    
+
     % ============================================================================================
     % ======= Génère les solutions des exercices
     % ============================================================================================
-    
+
     \AfficheCorriges[1]
   
-
     \backmatter                                         % Formatage des pages postliminaires
-    
+    % ============================================================================================
+    % ======= Glossaire de propriétés
+    % ============================================================================================
+    \def\currentpath{./tocs}                                    % On définit le répertoire courant    
+    \include{\currentpath/incGlossaireProprietes.tex}           % On inclut un bandeau au sommaire    
+
+    \def\currentpath{./glossaireProprietes/glossaireProprietes}   % On définit le répertoire courant    
+    \include{\currentpath/incGlossaireProprietes.tex}             % On inclut le glossiare
+     
     \def\currentpath{./couverture}                      % On définit le répertoire courant
     \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}

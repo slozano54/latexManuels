@@ -1,0 +1,62 @@
+\makeatletter\@openrightfalse                           % Pour éviter les pages blanches superflues introduite par la classe
+\chapter*{Glossaire\addcontentsline{toc}{chapter}{Glossaire}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
+Texte de présentation.
+\@openrighttrue\makeatother                             % Retour à la normale !
+
+\annexe{Titre Glossaire de propriétés}
+%cadreIntroductif
+\input{\currentpath/inc/cadreIntroduction.tex}
+
+%sections
+%001
+\newcommand{\mySection}[3]{
+    \section{#1 \textcolor{#2}{#3}}
+}
+\newcommand{\titreSectionUn}{
+    \mySection{Section 1}{A1}{texte en couleur différente}
+}
+\newcommand{\titreSectionDeux}{
+    \mySection{Section 2}{A1}{texte en couleur différente}
+}
+
+\input{\currentpath/inc/menuSection001.tex}
+%002
+\input{\currentpath/inc/menuSection002.tex}
+
+\clearpage
+
+\titreSectionUn
+\begin{tableau}[pr]{\linewidth}
+    \hline %%%%%%%%%%%%%%%%%%%%%%P1 
+    \input{\currentpath/inc/section1Propriete001.tex}
+    \\\hline
+    \hline %%%%%%%%%%%%%%%%%%%%%%P2 
+    \input{\currentpath/inc/section1Propriete002.tex}
+    \\\hline
+    \hline %%%%%%%%%%%%%%%%%%%%%%P3 
+    \input{\currentpath/inc/section1Propriete003.tex}
+    \\\hline
+\end{tableau}
+
+\titreSectionDeux
+\begin{tableau}[pr]{\linewidth}
+    \hline %%%%%%%%%%%%%%%%%%%%%%P4 
+    \input{\currentpath/inc/section2Propriete004.tex}
+    \\\hline
+    \hline %%%%%%%%%%%%%%%%%%%%%%P5 
+    \input{\currentpath/inc/section2Propriete005.tex}
+    \\\hline
+    \hline %%%%%%%%%%%%%%%%%%%%%%P6 
+    \input{\currentpath/inc/section2Propriete006.tex}
+    \\\hline
+    \hline %%%%%%%%%%%%%%%%%%%%%%P7 
+    \input{\currentpath/inc/section2Propriete007.tex}
+    \\\hline
+\end{tableau}
+
+\vfill
+\begin{center}
+\includegraphics[height=5cm]{\currentpath/images/compas.eps}
+% compas.eps: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
+\vfill
