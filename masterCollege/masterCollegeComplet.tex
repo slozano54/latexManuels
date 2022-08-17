@@ -73,8 +73,21 @@
     \include{\currentpath/incGlossaireProprietes.tex}           % On inclut un bandeau au sommaire    
 
     \def\currentpath{./glossaireProprietes/glossaireProprietes}   % On définit le répertoire courant    
-    \include{\currentpath/incGlossaireProprietes.tex}             % On inclut le glossiare
+    \include{\currentpath/incGlossaireProprietes.tex}             % On inclut le glossaire
      
+    % ============================================================================================
+    % ======= Lexique
+    % ============================================================================================
+    \def\currentpath{./tocs}                                    % On définit le répertoire courant    
+    \include{\currentpath/incLexique.tex}                       % On inclut un bandeau au sommaire    
+
+    \def\currentpath{./lexique/lexique}                         % On définit le répertoire courant    
+    \include{\currentpath/incLexique.tex}                       % On inclut le lexique
+    
+    % Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
+    % remplacée par l'utilisation de deux colonnes
+    \AfficheLexique 
+    
     \def\currentpath{./couverture}                      % On définit le répertoire courant
     \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}

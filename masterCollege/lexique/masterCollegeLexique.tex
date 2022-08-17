@@ -1,0 +1,23 @@
+% On définit le répertoire courant
+\def\currentpath{./lexique}  
+      
+\documentclass[nocrop]{../sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+\input{../0persoConfigClasseSesamanuel.tex}
+\input{../0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+\include{\currentpath/incLexique.tex}
+
+% Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
+% remplacée par l'utilisation de deux colonnes
+\AfficheLexique 
+
+\end{document}
