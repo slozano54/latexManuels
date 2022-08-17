@@ -24,3 +24,11 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
     - ~~Supprimer l'ajout à la table des matière du bandeau qui ne doit être présent que dans le premier chapitre d'un thème. (fix interaction include et toc)~~
 - Pour un chapitre, le contenu de chaque sous-partie, prerequis, activités, cours, exercices, TP ... est découpé dans des fichiers distincts. Par exemple pour le cours, on inclut les fichiers coursSection001.tex, coursSection002.tex , ... On peut rendre les noms plus explicites !
 - Chaque chapitre est compilable séparément dans son dossier via le fichier **MasterCollegeChapitreComplet.tex**. Une fois finalisé, il suffit de l'ajouter au fichier du manuel complet.
+
+- Annexes
+    - Interdictions a priori :
+        - L'environnement "corrige" --> en déhors de certains envirronnements
+        - La commande \partie en dehors d'un exercice
+    - On peut changer les couleurs des annexes avec \ChangeAnnexe{}{}{}{} :
+        - Attention il faut mettre cette commande avant le premier appel à \annexe{} sinon ça change toutes les annexes sauf la première !
+        - L'appel par défaut est \ChangeAnnexe{G3}{A1}{G1}{Blanc}
