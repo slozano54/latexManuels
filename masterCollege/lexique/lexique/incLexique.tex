@@ -1,5 +1,8 @@
+% On factorise le titre du lexique
+\newcommand{\titreLexique}{Titre Du Lexique}
+
 \makeatletter\@openrightfalse                             % Pour éviter les pages blanches superflues introduite par la classe
-\chapter*{Lexique\addcontentsline{toc}{chapter}{Lexique}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
+\chapter*{\titreLexique\addcontentsline{toc}{chapter}{\titreLexique}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
 Dans cette section, on parle de \MotDefinition{lexique}{Dictionnaire succint.} et de glossaire.
 
 Elle n'est pas destinée à être conservée en l'état.

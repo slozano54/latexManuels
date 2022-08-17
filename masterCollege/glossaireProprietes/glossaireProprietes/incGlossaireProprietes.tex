@@ -1,14 +1,16 @@
+% On factorise le titre du glossaire de propriétés
+\newcommand{\titreGlossaireProprietes}{Titre Glossaire de propriétés}
+
 \makeatletter\@openrightfalse                           % Pour éviter les pages blanches superflues introduite par la classe
-\chapter*{Glossaire\addcontentsline{toc}{chapter}{Glossaire}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
+\chapter*{\titreGlossaireProprietes\addcontentsline{toc}{chapter}{\titreGlossaireProprietes}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
 Texte de présentation.
 \@openrighttrue\makeatother                             % Retour à la normale !
 
-\annexe{Titre Glossaire de propriétés}
+\annexe{\titreGlossaireProprietes}
 %cadreIntroductif
 \input{\currentpath/inc/cadreIntroduction.tex}
 
-%sections
-%001
+% On factorise les titres des sections
 \newcommand{\mySection}[3]{
     \section{#1 \textcolor{#2}{#3}}
 }
@@ -19,6 +21,8 @@ Texte de présentation.
     \mySection{Section 2}{A1}{texte en couleur différente}
 }
 
+%sections
+%001
 \input{\currentpath/inc/menuSection001.tex}
 %002
 \input{\currentpath/inc/menuSection002.tex}
