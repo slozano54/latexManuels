@@ -1,25 +1,6 @@
-% On factorise le titre du glossaire de propriétés
-\newcommand{\titreGlossaireProprietes}{Titre Glossaire de propriétés}
-
-\makeatletter\@openrightfalse                           % Pour éviter les pages blanches superflues introduite par la classe
-\chapter*{\titreGlossaireProprietes\addcontentsline{toc}{chapter}{\titreGlossaireProprietes}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
-Texte de présentation.
-\@openrighttrue\makeatother                             % Retour à la normale !
-
-\annexe{\titreGlossaireProprietes}
+\annexeToc{\StringGlossaireProprietes}
 %cadreIntroductif
 \input{\currentpath/inc/cadreIntroduction.tex}
-
-% On factorise les titres des sections
-\newcommand{\mySection}[3]{
-    \section{#1 \textcolor{#2}{#3}}
-}
-\newcommand{\titreSectionUn}{
-    \mySection{Section 1}{A1}{texte en couleur différente}
-}
-\newcommand{\titreSectionDeux}{
-    \mySection{Section 2}{A1}{texte en couleur différente}
-}
 
 %sections
 %001
@@ -29,7 +10,7 @@ Texte de présentation.
 
 \clearpage
 
-\titreSectionUn
+\titreSectionGlossairePropUn
 \begin{tableau}[pr]{\linewidth}
     \hline %%%%%%%%%%%%%%%%%%%%%%P1 
     \input{\currentpath/inc/section1Propriete001.tex}
@@ -42,7 +23,7 @@ Texte de présentation.
     \\\hline
 \end{tableau}
 
-\titreSectionDeux
+\titreSectionGlossairePropDeux
 \begin{tableau}[pr]{\linewidth}
     \hline %%%%%%%%%%%%%%%%%%%%%%P4 
     \input{\currentpath/inc/section2Propriete004.tex}

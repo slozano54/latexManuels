@@ -43,3 +43,14 @@
       }
   \end{pspicture}  
 }
+
+% On factorise les titres des sections pour le glossaire de propriété
+\newcommand{\sectionsGlossaireProprietes}[3]{
+    \section{#1 \textcolor{#2}{#3}}
+}
+\newcommand{\titreSectionGlossairePropUn}{
+    \sectionsGlossaireProprietes{Section 1}{A1}{texte en couleur différente}
+}
+\newcommand{\titreSectionGlossairePropDeux}{
+    \sectionsGlossaireProprietes{Section 2}{A1}{texte en couleur différente}
+}

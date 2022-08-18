@@ -54,6 +54,12 @@
     \include{\currentpath/incChapitreN1.tex}            % On inclut le chapitre N1
 
     % ============================================================================================
+    % ======= Ajout d'un bandeau au sommaire
+    % ============================================================================================    
+
+    \myTocFrame{gray}{\MakeUppercase{\StringCorriges~et \StringMethodes}}
+    
+    % ============================================================================================
     % ======= Génère la liste des méthodes
     % ============================================================================================
 
@@ -62,7 +68,7 @@
     % ============================================================================================
     % ======= Génère les solutions des exercices
     % ============================================================================================
-
+    
     \AfficheCorriges[1]
   
     \backmatter                                         % Formatage des pages postliminaires
@@ -81,13 +87,15 @@
     % ======= Lexique
     % ============================================================================================
 
-    \def\currentpath{./lexique/lexique}                         % On définit le répertoire courant    
-    \include{\currentpath/incLexique.tex}                       % On inclut le lexique
+    \def\currentpath{./lexique/lexique}    % On définit le répertoire courant    
+    \input{\currentpath/incLexique.tex}    % On inclut le lexique via \input cf doc sesamanuel p45
     
     % Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
     % remplacée par l'utilisation de deux colonnes
     \AfficheLexique 
     
+    % \addcontentsline{toc}{chapter}{\StringCorriges \pageref{toutes-solutions}}
+
     \def\currentpath{./couverture}                      % On définit le répertoire courant
     \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
 \end{document}

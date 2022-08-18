@@ -2566,6 +2566,7 @@
 \newcommand*\StringMETHODE{M\'ETHODE}
 \newcommand*\StringPREUVE{PREUVE}
 \newcommand*\StringMethode{M\'ethode}
+\newcommand*\StringMethodes{M\'ethodes}% AjoutSeb
 \newcommand*\StringExApp{Exercice d'application}
 \newcommand*\StringPartie{Partie}
 \newcommand*\StringListeMethode{Liste des m\'ethodes}
@@ -4550,7 +4551,10 @@
 \newcommand*\PrefixeCorrection{}
 \newcommand*\AfficheCorriges[1][\NombreColonnesCorriges]{%
   \clearpage
-  \phantomsection %AjoutSeb - Pour corredctement lier \ref \pageref et \label  
+  \phantomsection %AjoutSeb - Pour correctement lier \ref \pageref et \label  
+  % AjoutSeb test
+  \addcontentsline{toc}{chapter}{\StringCorriges}
+  % AjoutSeb test fin
   \label{toutes-solutions}
   \pagestyle{corrige}
   \thispagestyle{firstcorrige}
@@ -4836,6 +4840,38 @@
   \addvspace{\AfterAnnexeTitleVSpace}
   \def\smc@TitleAnnexe{#1}%
 }
+%AjoutSeb
+\newcommand*\annexeToc[1]{%
+  \let\itemize\smc@annexeitemize
+  \let\enditemize\endsmc@annexeitemize
+  \let\colitemize\smc@annexecolitemize
+  \let\endcolitemize\endsmc@annexecolitemize
+  \let\enumerate\smc@annexeenumerate
+  \let\endenumerate\endsmc@annexeenumerate
+  \let\colenumerate\smc@annexecolenumerate
+  \let\endcolenumerate\endsmc@annexecolenumerate
+  \let\partie\smc@nopartie
+  \let\exercice\smc@annexeexercice
+  \let\endexercice\endsmc@annexeexercice
+  \let\corrige\smc@nocorrige
+  \let\endcorrige\endsmc@nocorrige
+  \let\section\smc@annexesection
+  \def\smc@currpart{Annexe}%
+  \setcounter{propriete}{0}%
+  \setcounter{exercice}{0}%
+  \clearpage
+  \phantomsection %AjoutSeb - Pour correctement lier \ref \pageref et \label  
+  % AjoutSeb test
+  \addcontentsline{toc}{chapter}{#1}
+  % AjoutSeb test fin
+  \pagestyle{annexe}
+  \thispagestyle{firstannexe}
+  \vspace*{\BeforeAnnexeTitleVSpace}
+  {\raggedright \AnnexeTitleFont \MakeUppercase{#1}\par}
+  \addvspace{\AfterAnnexeTitleVSpace}
+  \def\smc@TitleAnnexe{#1}%
+}
+% AjoutSeb fin
 \newcommand*\ListeProprietes[1]{%
   \psframebox*[fillcolor=TablePropertyTitleBkgColor]{%
     \ProprieteFont
@@ -4979,6 +5015,10 @@
 \newcommand*\NombreColonnesLexique{2}
 \newcommand*\AfficheLexique[1][\NombreColonnesLexique]{%
   \clearpage
+  \phantomsection %AjoutSeb - Pour correctement lier \ref \pageref et \label  
+  % AjoutSeb test
+  \addcontentsline{toc}{chapter}{\StringLexique}
+  % AjoutSeb test fin
   \pagestyle{lexique}
   \thispagestyle{firstlexique}
   \let\itemize\smc@lexiqueitemize
@@ -5541,6 +5581,10 @@
 \newcommand*\NombreColonnesListeMethodes{2}
 \newcommand*\AfficheListeMethodes[1][\NombreColonnesListeMethodes]{%
   \clearpage
+  \phantomsection %AjoutSeb - Pour correctement lier \ref \pageref et \label  
+  % AjoutSeb test
+  \addcontentsline{toc}{chapter}{\StringMethodes}
+  % AjoutSeb test fin
   \pagestyle{affichemethode}
   \thispagestyle{firstaffichemethode}
   \rput[Bl](0,9mm){\ListeMethodeChapterFont \MakeUppercase{\StringListeMethode}}

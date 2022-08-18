@@ -1,32 +1,10 @@
-% On factorise le titre du lexique
-\newcommand{\titreLexique}{Titre Du Lexique}
-
-\makeatletter\@openrightfalse                             % Pour éviter les pages blanches superflues introduite par la classe
-\chapter*{\titreLexique\addcontentsline{toc}{chapter}{\titreLexique}} % On ajoute une entrée au sommaire au même rang que les chapitres manuellement
-Dans cette section, on parle de \MotDefinition{lexique}{Dictionnaire succint.} et de glossaire.
-
-Elle n'est pas destinée à être conservée en l'état.
-
-Le lexique est construit de proche en proche en fonction de l'utilisation de la commande \textbf{MotDefinition}
-
-Le mieux est peut-être de centraliser son utilisation dans le fichier \textbf{./lexique/lexique/incLexique.tex} plutôt que de la disséminer 
-dans les différents fichiers des chapitres.
-
-\@openrighttrue\makeatother                               % Retour à la normale !
-
 % ============================================================================================
 % ======= Lexique
-% =======
-% ======= RIEN À AJOUTER DANS CE FICHIER
-% ======= LE LEXIQUE EST CONSTRUIT VIA L'UTILISATION DE LA COMMANDE MotDefinition
-% ======= DANS LES DIFFÉRENTS FICHIERS
 % ============================================================================================
 
 % ============================================================================================
 % LES LIGNES SUIVANTES SERVENT ÉVENTUELLEMENT DE DOCUMENTATION
 % ============================================================================================
-
-% \MotDefinition{glossaire}{Liste de mots utilisés dans le texte avec leurs définitions}
 
 % % Classement forcé
 % % Impose le symbile int directement après le mot intégrale
@@ -35,11 +13,13 @@ dans les différents fichiers des chapitres.
 % \MotDefinition{intégration}{autre mot intégrale}
 
 % % Utilisation d’un mot au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
-% % Par exemple, on utilise le code :
+% % Par exemple, on utilise le code pour ajouter l'entrée au lexique :
 % \MotDefinition[mot]{mots}{Exemple mot lexique distinct du texte}
+% % Et comme ceci dans un texte
+% Utilisation de \MotDefinition[mot]{mots}{} au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
 
 % ============================================================================================
-% On peut centrailiser les entrées du lexique ici
+% On centralise les entrées du lexique ici
 % Quelques définitions pour la maquette ...
 % ============================================================================================
 
