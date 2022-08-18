@@ -4,24 +4,15 @@
     Dans le cours, on utilise assez souvent des cadres du type
     définition (comme ici par exemple).
 
-    Une dizaine c'est dix unités.
-
-    Un \MotDefinition[rationnel (nombre)]{nombre rationnel}{} est \dots
-
-    \RepresenterEntier{10}
+    Ajout d'une référence au lexique via l'utilisation de la commande \textbf{\textbackslash MotDefinition\{\}\{\}}.
+    Les trois \MotDefinition[médiane (d'un triangle)]{médianes d'un triangle}{}  sont coucourantes.
+    
 \end{definition}
 \begin{remarque}
-    Ceci est une remarque permettant de tirer sur la corde nostalgie.
+    Ceci est une remarque utilisant une commande du paquet profcollege.
 
     \begin{center}
-        \multido{\i=1+1}{10}{%
-        \fbox{%
-        \tiny%
-        \setlength{\arraycolsep}{0.25\arraycolsep}%
-        \Tables[Seul]{\i}%
-        \setlength{\arraycolsep}{4\arraycolsep}%
-        }%
-        }
+      \Pythagore[Figure]{ILC}{5}{6}{}
     \end{center}
 
 
@@ -57,13 +48,15 @@
 \begin{exemple}
   Texte de l’exemple
   \correction
-  Texte de la correction en vis à vis
+  
 \end{exemple}
 
 \begin{exemple*1}
-  Texte de l’exemple
+  \phantom{rrr}
+  
+  \SommeAngles[FigureSeule,Angle=10]{RST}{50}{70}
   \correction
-  Texte de la correction, le tout verticalement affiché
+  \SommeAngles[Figure,Angle=10]{RST}{50}{70}
 \end{exemple*1}
 
 \begin{exemple}[0.6]
