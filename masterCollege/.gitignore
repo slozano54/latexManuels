@@ -19,4 +19,4 @@
 *.out
 *.pdf
 
-A1/corrections/*.*
+/A1/corrections/corr*
