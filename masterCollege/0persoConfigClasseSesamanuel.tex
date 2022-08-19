@@ -10,6 +10,17 @@
 \renewcommand\PrefixeCorrection{corrections/}
 
 % ============================================================================================
+% Factorisation des titres et couleurs de thèmes
+% ============================================================================================
+\colorlet{IColor}{gray}
+\colorlet{NColor}{J1}
+\colorlet{GColor}{PartieGeometrie}
+\colorlet{DColor}{PartieStatistique}%H1
+\colorlet{MColor}{A1}
+\colorlet{AColor}{G1}
+\colorlet{preAndPostFace}{C1}
+
+% ============================================================================================
 % ======= Thèmes de base prédéfinis
 % \themaG ; \themaF ; \themaS
 %
@@ -18,17 +29,20 @@
 % \NewThema{N}{n}{titre}{Titre}{TITRE}{couleur entete et ...}{couleur pied de page et ...}
 %
 % ============================================================================================
-\NewThema{I}{i}{introduction}{Introduction}{INTRODUCTION}{gray}{gray!50}
+% Modifier incIntroduction.tex en conséquence si on change introduction pour autre chose ici
+\NewThema{I}{i}{introduction}{Introduction}{INTRODUCTION}{IColor}{IColor!50}
 
-\NewThema{N}{n}{nombres \&\\~calculs}{Nombres \&\\~calculs}{NOMBRES \&\\~CALCULS}{B1}{B1!50}
+% Modifier incNumerique.tex en conséquence si on change nombres \&\\~calculs
+% pour autre chose ici
+\NewThema{N}{n}{nombres \&\\~calculs}{Nombres \&\\~calculs}{NOMBRES \&\\~CALCULS}{NColor}{NColor!50}
 
 % Pour la géométrie on garde le théme d'origine
 
-\NewThema{D}{d}{organisation \&\\~gestion de données}{Organisation \&\\~gestion de données}{ORGANISATION \&\\~GESTION DE DONNÉES}{PartieStatistique}{PartieStatistique!50}
+\NewThema{D}{d}{organisation \&\\~gestion de données}{Organisation \&\\~gestion de données}{ORGANISATION \&\\~GESTION DE DONNÉES}{DColor}{DColor!50}
 
-\NewThema{M}{m}{grandeurs \&\\~mesures}{Grandeurs \&\\~mesures}{GRANDEURS \&\\~MESURES}{G1}{G1!50}
+\NewThema{M}{m}{grandeurs \&\\~mesures}{Grandeurs \&\\~mesures}{GRANDEURS \&\\~MESURES}{MColor}{MColor!50}
 
-\NewThema{A}{a}{algorithmique \&\\~programmation}{Algorithmique \&\\~programmation}{ALGORITHMIQUE \&\\~PROGRAMMATION}{J1}{J1!50}
+\NewThema{A}{a}{algorithmique \&\\~programmation}{Algorithmique \&\\~programmation}{ALGORITHMIQUE \&\\~PROGRAMMATION}{AColor}{AColor!50}
 
 % ============================================================================================
 % ======= Comme il y a des thèmes personnalisés
