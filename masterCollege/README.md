@@ -35,7 +35,7 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 
 # Ajouter un nouveau chapitre avant inclusion au manuel complet
 
-Consulter [cette vidéo](https://github.com/slozano54/latexManuels/blob/master/documentations/masterCollegeAjouterUnChapitre.mp4)
+Consulter la vidéo `./documentations/masterCollegeAjouterUnChapitre.mp4`.
 
 Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapitre :
 - Copier/Coller un dossier du même thème.
@@ -49,7 +49,7 @@ Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapit
 
 # Ajouter un nouveau chapitre au manuel complet
 
-Consulter [cette vidéo](https://github.com/slozano54/latexManuels/blob/master/documentations/masterCollegeAjouterUnChapitreAuManuelComplet.mp4)
+Consulter la vidéo `./documentations/masterCollegeAjouterUnChapitreAuManuelComplet.mp4`.
 
 Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapitre  :
 - Ouvrir le fichier `./masterCollegeComplet.tex`
