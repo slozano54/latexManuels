@@ -32,3 +32,31 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
     - On peut changer les couleurs des annexes avec \ChangeAnnexe{}{}{}{} :
         - Attention il faut mettre cette commande avant le premier appel à \annexe{} sinon ça change toutes les annexes sauf la première !
         - L'appel par défaut est \ChangeAnnexe{G3}{A1}{G1}{Blanc}
+
+# Ajouter un nouveau chapitre avant inclusion au manuel complet
+
+Consulter [cette vidéo](https://github.com/slozano54/latexManuels/blob/master/documentations/masterCollegeAjouterUnChapitre.mp4)
+
+Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapitre :
+- Copier/Coller un dossier du même thème.
+- Renommer les dossiers en fonction. 
+- Renommer les inclusions faisant référence au chapitre dans :
+    - `./nouveauChapitre/nouveauChapitre/incChapitre.tex`
+    - `./nouveauChapitre/masterCollegeNouveauChapitreComplet.tex`
+- Supprimer le contenu du dossier `./nouveauChapitre/corrections` sauf `emptyFile.txt`
+- Compiler le fichier `./nouveauChapitre/masterCollegeNouveauChapitreComplet.tex` en mode lualatex
+- Modifier le contenu du nouveau chapitre !
+
+# Ajouter un nouveau chapitre au manuel complet
+
+Consulter [cette vidéo](https://github.com/slozano54/latexManuels/blob/master/documentations/masterCollegeAjouterUnChapitreAuManuelComplet.mp4)
+
+Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapitre  :
+- Ouvrir le fichier `./masterCollegeComplet.tex`
+- Dans la zone du thème du nouveau chapitre ajouter ces deux lignes :
+
+```tex
+    \def\currentpath{./nouveauChapitre/nouveauChapitre}   % On définit le répertoire courant    
+    \include{\currentpath/incChapitre.tex}                % On inclut le chapitre nouveauChapitre
+```
+- Compiler le fichier `./masterCollegeComplet.tex` en mode lualatex.
