@@ -1,0 +1,27 @@
+% On définit le répertoire courant
+\def\currentpath{.}  
+      
+\documentclass[nocrop]{../sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+\input{../0persoConfigClasseSesamanuel.tex}
+\input{../0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+\frontmatter                                        % Formatage des pages préliminaires
+\include{\currentpath/incFirstCover.tex}            % On inclut la 1ere de couverture
+
+\mainmatter                                         % Contenu principal
+
+NADA
+
+\backmatter                                         % Formatage des pages postliminaires
+\include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
+
+\end{document}

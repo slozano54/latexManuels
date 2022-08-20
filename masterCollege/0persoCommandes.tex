@@ -14,8 +14,16 @@
 % Pour fixer les Warnings : "Underfull \hbox (badness 10000)"
 \usepackage{parskip} 
 
-\newcommand\myAuthorName{Sébastien LOZANO \par Nom de l'auteur à modifier dans le fichier 0persoCommandes.tex}
+\newcommand\myAuthorName{Sébastien LOZANO}
+\newcommand\myAuthorSchoolName{Collège Jean Lurçat 54390 FROUARD}
+\newcounter{postCurrentSchoolYear}
+\setcounter{postCurrentSchoolYear}{\the\year}
+\addtocounter{postCurrentSchoolYear}{1}
+\newcommand\currentSchoolYear{Année  \the\year ~- \thepostCurrentSchoolYear}
 
+\newcommand{\myMessage}{Nom, Lieu de travail et Année courante, sont à modifier dans le fichier 0persoCommandes.tex \par
+Ce message est à supprimer en supprimant l'appel à la commande \textbackslash myMessage !
+}
 % En prévision de l'application d'un style particulier
 % pour les parties dans le sommaire
 \newcommand{\myTocFrame}[2]{%couleur, texte
