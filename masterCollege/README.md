@@ -39,11 +39,12 @@ Consulter la vidéo `./documentations/masterCollegeAjouterUnChapitre.mp4`.
 
 Ou suivre ces instructions, on note **nouveauChapitre** le nom du nouveau chapitre :
 - Copier/Coller un dossier du même thème.
-- Renommer les dossiers en fonction. 
+- Renommer les dossiers en fonction, **ancienChapitre** devient **nouveauChapitre**. 
 - Renommer les inclusions faisant référence au chapitre dans :
     - `./nouveauChapitre/nouveauChapitre/incChapitre.tex`
     - `./nouveauChapitre/masterCollegeNouveauChapitreComplet.tex`
 - Supprimer le contenu du dossier `./nouveauChapitre/corrections` sauf `emptyFile.txt`
+- Supprimer tous les fichiers de compilation y compris le pdf.
 - Compiler le fichier `./nouveauChapitre/masterCollegeNouveauChapitreComplet.tex` en mode lualatex
 - Modifier le contenu du nouveau chapitre !
 
