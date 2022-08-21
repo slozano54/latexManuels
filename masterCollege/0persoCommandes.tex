@@ -1,18 +1,6 @@
-\usepackage{sesamanuelTIKZ}
-\usepackage{ProfCollege}
-% Pour la gestion des fontes maths notamment en mode LuaLaTeX.
-\usepackage{unicode-math}
-% Par exemple, une fonte sans serif pour les briques Scratch.
-\newfontfamily\myfontScratch[]{FreeSans}
-
-% Pour générer du faux texte
-\usepackage{lipsum}
-
-% Pour les hyperliens, notamment des sommaires cliquables
-\usepackage{hyperref}
-
-% Pour fixer les Warnings : "Underfull \hbox (badness 10000)"
-\usepackage{parskip} 
+% ============================================================================================
+% ======= 1ere de couverture
+% ============================================================================================
 
 \newcommand\myAuthorName{Sébastien LOZANO}
 \newcommand\myAuthorSchoolName{Collège Jean Lurçat 54390 FROUARD}
@@ -24,6 +12,15 @@
 \newcommand{\myMessage}{Nom, Lieu de travail et Année courante, sont à modifier dans le fichier 0persoCommandes.tex \par
 Ce message est à supprimer en supprimant l'appel à la commande \textbackslash myMessage !
 }
+
+% ============================================================================================
+% ======= Sommaire
+% ============================================================================================
+
+% Pour pouvoir séparer la numérotation des chapitres en fonction des parties
+% Important pour que les liens cliquables du sommaire renvoient au bon endroit
+\counterwithin*{chapter}{part}
+
 % En prévision de l'application d'un style particulier
 % pour les parties dans le sommaire
 \newcommand{\myTocFrame}[2]{%couleur, texte
@@ -37,10 +34,9 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
     }
 }
 
-% Pour pouvoir séparer la numérotation des chapitres en fonction des parties
-% Important pour que les liens cliquables du sommaire renvoient au bon endroit
-\counterwithin*{chapter}{part}
-
+% ============================================================================================
+% Factorisation de commandes
+% ============================================================================================
 % Pour pouvoir numéroter les énigmes quand on en met plusieurs
 % dans la section \recreation
 \newcommand{\numeroteEnigme}{
@@ -54,6 +50,9 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
       }
   \end{pspicture}  
 }
+
+% ======= Il n'y a qu'un glossaire, est-ce judicieux de regrouper ici ?
+% ======= Je pense que oui, question de "séparatisme" !
 
 % On factorise les titres des sections pour le glossaire de propriété
 \newcommand{\sectionsGlossaireProprietes}[3]{
