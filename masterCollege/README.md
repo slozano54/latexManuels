@@ -229,6 +229,20 @@ Pour chaque chapitre, la structure est la même, le détail pour le chaptire té
 ```
 
 # Aide-mémoire, tentative de tutos
+
+## Démarrer un nouveau manuel
+
+Il vaut mieux commencer par cloner ce dépôt :
+```bash
+git clone https://github.com/slozano54/latexManuels.git
+```
+Cela permettra de récupérer les éventuelles modifications dans le dossier fraîchement créé avec un :
+```bash
+git pull
+```
+Puis 
+- Copier le dossier **masterManuel** quelque part en dehors de ce dossier fraîchement créé.
+- Renommer le dossier, par exemple **nouveauManuel**
 ## Ajouter un nouveau chapitre avant inclusion au manuel complet
 
 Consulter la vidéo `./documentations/masterCollegeAjouterUnChapitre.mp4`.

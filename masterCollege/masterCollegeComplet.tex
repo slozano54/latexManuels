@@ -13,6 +13,30 @@
 % ======= Ajout de commandes
 \input{./0persoCommandes.tex}
 
+% ======= Pour inclure de façon sélective
+\includeonly{%
+    ./couverture/incFirstCover.tex,
+    ./tocs/incPreface.tex,
+    ./resume/incResume.tex,
+    ./remerciements/incRemerciements.tex,
+    ./dedicaces/incDedicaces.tex,
+    ./tocs/incIntroduction.tex,
+    ./introduction/introduction/incChapitre.tex,
+    ./tocs/incNumerique.tex,
+    ./N1/N1/incChapitre.tex,
+    ./tocs/incGeometrie.tex,
+    % ./G1/G1/incChapitre.tex,
+    ./tocs/incGestionDeDonnees.tex,
+    % ./D1/D1/incChapitre.tex,
+    ./tocs/incGrandeursEtMesures.tex,
+    % ./M1/M1/incChapitre.tex,
+    ./tocs/incAlgorithmiqueEtProgrammation.tex,
+    % ./A1/A1/incChapitre.tex,
+    ./tocs/incPostface.tex,    
+    ./glossaireProprietes/glossaireProprietes/incGlossaireProprietes.tex,    
+    ./lexique/lexique/incLexique.tex,
+    ./couverture/incBackCover.tex,
+}
 % ============================================================================================
 % ======= Début du document
 % ============================================================================================
@@ -47,7 +71,7 @@
     \include{\currentpath/incIntroduction.tex}          % On inclut un bandeau au sommaire
 
     \def\currentpath{./introduction/introduction}       % On définit le répertoire courant    
-    \include{\currentpath/incChapitreIntroduction.tex}  % On inclut le chapitre d'introduction
+    \include{\currentpath/incChapitre.tex}              % On inclut le chapitre d'introduction
 
     % ============================================================================================
     % ======= Chapitres de la partie Numerique
@@ -139,7 +163,7 @@
     % ============================================================================================
 
     \def\currentpath{./lexique/lexique}    % On définit le répertoire courant    
-    \input{\currentpath/incLexique.tex}    % On inclut le lexique via \input cf doc sesamanuel p45
+    \include{\currentpath/incLexique.tex}    % On inclut le lexique via \input cf doc sesamanuel p45
     
     % Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
     % remplacée par l'utilisation de deux colonnes
