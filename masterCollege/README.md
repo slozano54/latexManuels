@@ -243,6 +243,20 @@ git pull
 Puis 
 - Copier le dossier **masterManuel** quelque part en dehors de ce dossier fraîchement créé.
 - Renommer le dossier, par exemple **nouveauManuel**
+- Supprimer tous les éventuels fichiers de compilation
+- Vider tous les dossiers **corrections** saut le fichier **emptyFile.txt** necessaire pour GitHub
+- Démarrer un nouveau chapitre, par exemple N1
+- Compiler le fichier **nouveauManuelN1.tex**
+- Pour le manuel complet :
+    - Ajouter les appels aux fichiers du nouveau chapitre
+
+```tex
+    \def\currentpath{./N1/N1}                           % On définit le répertoire courant    
+    \include{\currentpath/incChapitre.tex}              % On inclut le chapitre N1
+```
+- 
+    - Compiler le fichier **nouveauManuelComplet.tex**
+
 ## Ajouter un nouveau chapitre avant inclusion au manuel complet
 
 Consulter la vidéo `./documentations/masterCollegeAjouterUnChapitre.mp4`.
