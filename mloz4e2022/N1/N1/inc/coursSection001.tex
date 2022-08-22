@@ -1,0 +1,74 @@
+\section{Section 1}
+\subsection{Sous-section 1.1}
+\begin{definition}[Titre optionnel]
+    Dans le cours, on utilise assez souvent des cadres du type
+    définition (comme ici par exemple).
+
+    Une dizaine c'est dix unités.
+
+    Un \MotDefinition[rationnel (nombre)]{nombre rationnel}{} est \dots
+
+    \RepresenterEntier{10}
+\end{definition}
+\begin{remarque}
+    Ceci est une remarque permettant de tirer sur la corde nostalgie.
+
+    \begin{center}
+        \multido{\i=1+1}{10}{%
+        \fbox{%
+        \tiny%
+        \setlength{\arraycolsep}{0.25\arraycolsep}%
+        \Tables[Seul]{\i}%
+        \setlength{\arraycolsep}{4\arraycolsep}%
+        }%
+        }
+    \end{center}
+
+
+\end{remarque}
+\begin{propriete}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour une propriete.
+\end{propriete}
+\begin{remarques}
+  \begin{itemize}
+    \item remarque.
+    \item remarque.
+  \end{itemize}
+\end{remarques}
+
+\subsection{Sous-section 1.2}
+\begin{theoreme}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour un théorème.
+\end{theoreme}
+\begin{notation}
+  notation
+\end{notation}
+\begin{notations}
+  \begin{itemize}
+    \item notation.
+    \item notation.
+  \end{itemize}
+\end{notations}
+\begin{preuve}
+  Ceci est une preuve\par Deuxième ligne de la preuve
+\end{preuve}
+\begin{exemple}
+  Texte de l’exemple
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
+
+\begin{exemple*1}
+  Texte de l’exemple
+  \correction
+  Texte de la correction, le tout verticalement affiché
+\end{exemple*1}
+
+\begin{exemple}[0.6]
+  Texte de l’exemple très long sur une ligne, très très très long.
+  On peut modifier la répartition horizontale  à l'aide d'un argument optionnel valant par défaut 0,4, valant ici 0,6.
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}

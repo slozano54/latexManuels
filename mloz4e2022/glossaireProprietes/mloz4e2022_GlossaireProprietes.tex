@@ -1,0 +1,42 @@
+% On définit le répertoire courant
+\def\currentpath{./glossaireProprietes}  
+      
+\documentclass[nocrop]{../sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+% ======= Classe sesamanuel
+\input{../0persoConfigClasseSesamanuel.tex}
+
+% ======= Ajout de paquets
+\input{../0persoPaquets.tex}
+
+% ======= Ajout de commandes
+\input{../0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+Texte de présentation dans le document autonome n'apparaissant pas dans le document complet.
+
+\medskip
+
+Dans le dossier \textbf{./glossaireProprietes}, on trouve l'arborescence de fichiers permettant de construire un glossaire
+regroupant toutes sortes de propriétés que l'on purra répartir dans différentes sections.
+
+\medskip
+
+Les commandes permettant de définir les titres des différentes sections du glossaire sont dans le fichier \textbf{./0persoCommandes.tex},
+on peut en ajouter sur le même modèle.
+
+\medskip
+
+La commande permettant de définir le titre du glossaire de propriété se trouve dans le fichier \textbf{./0persoConfigClasseSesamanuel.tex},
+elle s'appelle \textbf{\textbackslash StringGlossaireProprietes}.
+
+\include{\currentpath/incGlossaireProprietes.tex}
+
+\end{document}

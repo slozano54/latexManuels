@@ -1,0 +1,61 @@
+% ============================================================================================
+% ======= Lexique
+% ============================================================================================
+
+% ============================================================================================
+% LES LIGNES SUIVANTES SERVENT ÉVENTUELLEMENT DE DOCUMENTATION
+% ============================================================================================
+
+% % Classement forcé
+% % Impose le symbile int directement après le mot intégrale
+% \MotDefinition{$\int$}[integrale]{symbole}
+% \MotDefinition{intégrale}{mot intégrale}
+% \MotDefinition{intégration}{autre mot intégrale}
+
+% % Utilisation d’un mot au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
+% % Par exemple, on utilise le code pour ajouter l'entrée au lexique :
+% \MotDefinition[mot]{mots}{Exemple mot lexique distinct du texte}
+% % Et comme ceci dans un texte
+% Utilisation de \MotDefinition[mot]{mots}{} au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
+
+% ============================================================================================
+% On centralise les entrées du lexique ici
+% Quelques définitions pour la maquette ...
+% ============================================================================================
+
+\MotDefinition{cercle inscrit}{Le cercle inscrit à un triangle est le cercle tangent aux trois côtés de ce triangle. 
+Son centre est le point de concours des \Lexique{bissectrices} de ce triangle.\begin{center}\begin{tikzpicture}[general, scale=0.27] 
+\draw[color=A2,fill=A2] (6.92,0.99) -- (7.32,1.11) -- (7.2,1.52) -- (6.79,1.4) -- cycle; 
+\draw[color=A2,fill=A2] (9.98,0.29) -- (9.6,0.11) -- (9.78,-0.28) -- (10.16,-0.1) -- cycle; 
+\draw[color=A2,fill=A2] (6.93,-4.08) -- (7.09,-3.69) -- (6.7,-3.53) -- (6.54,-3.92) -- cycle; 
+\clip(-1,-7) rectangle (14,3);
+\draw (-0.82,-0.9) -- (9.12,2.1) -- (13.3,-6.7) -- cycle;
+ \draw [domain=6.54:7.61] plot(\x,{(--75.01-9.21*\x)/-3.78});
+ \draw(7.61,-1.31) circle (2.83);
+ \draw [domain=6.79:7.61] plot(\x,{(-46.76--6.48*\x)/-1.96});
+\draw [domain=7.61:10.16] plot(\x,{(-28.24--2.73*\x)/5.74});
+\end{tikzpicture}\end{center}}
+
+\MotDefinition{médiane (d'un triangle)}{Dans un triangle, une médiane est un segment qui joint un sommet du triangle et  le milieu du côté opposé à ce sommet.
+\begin{center}\begin{tikzpicture}[general, scale=0.9]
+\draw (0,0)--(4,1)--(1,3)--cycle;
+\draw[color=F1, epais] (1,3)--(2,0.5);
+\draw[color=F1] (1,0.25) node {$\approx$};
+\draw[color=F1] (3,0.75) node {$\approx$};
+\end{tikzpicture}
+\end{center}}
+
+\MotDefinition{médiatrice}{La médiatrice d'un segment est la droite qui coupe ce segment perpendiculairement en son milieu.
+La médiatrice d'un segment est un axe de symétrie de ce segment.
+\begin{center}\begin{tikzpicture}[general, scale=0.9]
+   \draw[shift={(2,2.5)}, rotate=-14, color=J1, fill=J1] (0,0)rectangle(0.3,0.3);
+   \draw (0.5,2.825)--(3.5,2.125);
+   \draw[color=J1] (1.5,0.5)--(2.5,4.5);
+   \foreach \x/\y/\N/\pos in {0.5/2.825/A/left, 3.5/2.125/B/right} {\draw (\x,\y) node{$\times$};\draw (\x,\y) node[\pos]{$\N$}; } 
+   \draw (2,2.5) node[below left] {$O$};
+   \draw (3,4) node {$(d)$};
+  \draw (1.25,2.66) node[color=A1, rotate=-19.29] {$\infty$};
+  \draw (2.75,2.31) node[color=A1, rotate=-19.29] {$\infty$};
+  \end{tikzpicture}\end{center}}
+
+\MotDefinition{rationnel (nombre)}{Un nombre rationnel est un nombre qui peut s'écrire sous la forme d'une fraction de deux nombres entiers.}

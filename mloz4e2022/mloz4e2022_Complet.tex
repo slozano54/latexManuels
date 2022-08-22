@@ -1,0 +1,152 @@
+\documentclass[nocrop]{sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+
+% ======= Classe sesamanuel
+\input{./0persoConfigClasseSesamanuel.tex}
+
+% ======= Ajout de paquets
+\input{./0persoPaquets.tex}
+
+% ======= Ajout de commandes
+\input{./0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+    \frontmatter                                        % Formatage des pages préliminaires
+    % \pagenumbering{gobble}                              % On supprime la numérotation
+    \def\currentpath{./couverture}                      % On définit le répertoire courant
+    \include{\currentpath/incFirstCover.tex}            % On inclut la 1ere de couverture
+
+    \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    \include{\currentpath/incPreface.tex}               % On inclut un bandeau au sommaire
+
+    \def\currentpath{./resume}                          % On définit le répertoire courant    
+    \include{\currentpath/incResume.tex}                % On inclut le résumé
+
+    \def\currentpath{./remerciements}                   % On définit le répertoire courant    
+    \include{\currentpath/incRemerciements.tex}         % On inclut les remerciements
+
+    \def\currentpath{./dedicaces}                       % On définit le répertoire courant    
+    \include{\currentpath/incDedicaces.tex}             % On inclut les remerciements    
+    
+    \renewcommand{\contentsname}{Sommaire}              % Changer le nom de la table des matières
+    \tableofcontents
+    \addcontentsline{toc}{chapter}{Sommaire}            % On ajoute le sommaire dans le sommaire!    
+
+    \mainmatter                                         % Contenu principal
+    % % ============================================================================================
+    % % ======= Chapitre d'introduction
+    % % ============================================================================================    
+    % \themaI    
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incIntroduction.tex}          % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./introduction/introduction}       % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre d'introduction
+
+    % % ============================================================================================
+    % % ======= Chapitres de la partie Numerique
+    % % ============================================================================================ 
+
+    % \themaN    
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incNumerique.tex}             % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./N1/N1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre N1
+
+    % % ============================================================================================
+    % % ======= Chapitres de la partie Géométrie
+    % % ============================================================================================ 
+
+    % \themaG
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incGeometrie.tex}             % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./G1/G1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre G1
+
+    % % ============================================================================================
+    % % ======= Chapitres de la partie Gestion de données
+    % % ============================================================================================ 
+
+    % \themaD
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incGestionDeDonnees.tex}      % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./D1/D1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre D1
+
+    % % ============================================================================================
+    % % ======= Chapitres de la partie Grandeurs et Mesures
+    % % ============================================================================================ 
+
+    % \themaM
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incGrandeursEtMesures.tex}    % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./M1/M1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre D1
+
+    % % ============================================================================================
+    % % ======= Chapitres de la partie Algorithmique
+    % % ============================================================================================ 
+
+    % \themaA
+    % \def\currentpath{./tocs}                                   % On définit le répertoire courant    
+    % \include{\currentpath/incAlgorithmiqueEtProgrammation.tex} % On inclut un bandeau au sommaire
+
+    % \def\currentpath{./A1/A1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre A1
+
+    % ============================================================================================
+    % ======= Ajout d'un bandeau au sommaire
+    % ============================================================================================    
+
+    % \myTocFrame{gray}{\MakeUppercase{\StringCorriges~et \StringMethodes}}
+    
+    % % ============================================================================================
+    % % ======= Génère la liste des méthodes
+    % % ============================================================================================
+
+    % \AfficheListeMethodes[1]
+
+    % % ============================================================================================
+    % % ======= Génère les solutions des exercices
+    % % ============================================================================================
+    
+    % \AfficheCorriges[1]
+  
+    \backmatter                                         % Formatage des pages postliminaires
+
+    \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    \include{\currentpath/incPostface.tex}              % On inclut un bandeau au sommaire    
+    
+    % ============================================================================================
+    % ======= Glossaire de propriétés
+    % ============================================================================================
+
+    \def\currentpath{./glossaireProprietes/glossaireProprietes}   % On définit le répertoire courant    
+    \include{\currentpath/incGlossaireProprietes.tex}             % On inclut le glossaire
+     
+    % ============================================================================================
+    % ======= Lexique
+    % ============================================================================================
+
+    \def\currentpath{./lexique/lexique}    % On définit le répertoire courant    
+    \include{\currentpath/incLexique.tex}    % On inclut le lexique via \input cf doc sesamanuel p45
+    
+    % Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
+    % remplacée par l'utilisation de deux colonnes
+    \AfficheLexique 
+    
+    % \addcontentsline{toc}{chapter}{\StringCorriges \pageref{toutes-solutions}}
+
+    \def\currentpath{./couverture}                      % On définit le répertoire courant
+    \include{\currentpath/incBackCover.tex}             % On inclut la 4e de couverture
+\end{document}

@@ -1,0 +1,69 @@
+% ============================================================================================
+% ======= 1ere et 4eme de couverture
+% ============================================================================================
+
+\newcommand\myAuthorName{Sébastien LOZANO}
+\newcommand\myAuthorSchoolName{Collège Jean Lurçat 54390 FROUARD}
+\newcounter{postCurrentSchoolYear}
+\setcounter{postCurrentSchoolYear}{\the\year}
+\addtocounter{postCurrentSchoolYear}{1}
+\newcommand\currentSchoolYear{Année  \the\year ~- \thepostCurrentSchoolYear}
+
+\newcommand{\mySite}{\href{https://mathslozano.fr}{https://mathslozano.fr}}
+\newcommand{\myManualName}{Master Manuel \LaTeX}
+
+\newcommand{\myMessage}{Nom, Lieu de travail et Année courante, sont à modifier dans le fichier 0persoCommandes.tex \par
+Ce message est à supprimer en supprimant l'appel à la commande \textbackslash myMessage !
+}
+
+% ============================================================================================
+% ======= Sommaire
+% ============================================================================================
+
+% Pour pouvoir séparer la numérotation des chapitres en fonction des parties
+% Important pour que les liens cliquables du sommaire renvoient au bon endroit
+\counterwithin*{chapter}{part}
+
+% En prévision de l'application d'un style particulier
+% pour les parties dans le sommaire
+\newcommand{\myTocFrame}[2]{%couleur, texte
+    \addtocontents{toc}{
+        \vspace{1cm}
+        \begin{cadre}[#1][#1!50]
+            \begin{center}
+                #2
+            \end{center}
+        \end{cadre}
+    }
+}
+
+% ============================================================================================
+% Factorisation de commandes
+% ============================================================================================
+% Pour pouvoir numéroter les énigmes quand on en met plusieurs
+% dans la section \recreation
+\newcommand{\numeroteEnigme}{
+    \begin{pspicture}(0,0)(\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+        \psframe*[linewidth=0pt,
+                  linecolor=LibreExerciceNumFrameColor]
+                 (0,-\ExerciceNumFrameDepth)
+                 (\ExerciceNumFrameWidth,\ExerciceNumFrameHeight)
+      \rput[B](\dimexpr\ExerciceNumFrameWidth/2,0){%
+        \textcolor{LibreExerciceNumColor}{\ExerciceNumFont \theexercice}%
+      }
+  \end{pspicture}  
+}
+
+% ======= Il n'y a qu'un glossaire, est-ce judicieux de regrouper ici ?
+% ======= Je pense que oui, question de "séparatisme" !
+
+% On factorise les titres des sections pour le glossaire de propriété
+\newcommand{\sectionsGlossaireProprietes}[3]{
+    \section{#1 \textcolor{#2}{#3}}
+}
+\newcommand{\titreSectionGlossairePropUn}{
+    \sectionsGlossaireProprietes{Section 1}{A1}{texte en couleur différente}
+}
+\newcommand{\titreSectionGlossairePropDeux}{
+    \sectionsGlossaireProprietes{Section 2}{A1}{texte en couleur différente}
+}

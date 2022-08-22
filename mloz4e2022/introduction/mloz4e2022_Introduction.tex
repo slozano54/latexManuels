@@ -1,0 +1,26 @@
+% On définit le répertoire courant
+\def\currentpath{./introduction}  
+      
+\documentclass[nocrop]{../sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+% ======= Classe sesamanuel
+\input{../0persoConfigClasseSesamanuel.tex}
+
+% ======= Ajout de paquets
+\input{../0persoPaquets.tex}
+
+% ======= Ajout de commandes
+\input{../0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+\themaI
+\include{\currentpath/incChapitre.tex}
+
+\end{document}

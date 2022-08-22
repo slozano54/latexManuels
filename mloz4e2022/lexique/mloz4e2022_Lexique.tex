@@ -1,0 +1,70 @@
+% On définit le répertoire courant
+\def\currentpath{./lexique}  
+      
+\documentclass[nocrop]{../sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+% ======= Classe sesamanuel
+\input{../0persoConfigClasseSesamanuel.tex}
+
+% ======= Ajout de paquets
+\input{../0persoPaquets.tex}
+
+% ======= Ajout de commandes
+\input{../0persoCommandes.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+Dans ce pdf, on parle de \MotDefinition{lexique}{} et de \MotDefinition{glossaire}{}
+
+\medskip
+
+Le lexique est construit de proche en proche en fonction de l'utilisation de la commande \textbf{\textbackslash MotDefinition\{\}\{\}}
+
+\medskip
+
+Il me semble plus pertinent de centraliser l'ensemble des entrées du lexique est dans le fichier \textbf{./lexique/lexique/incLexique.tex}
+plutôt que de disséminer les appels dans les fichiers.
+
+\medskip
+
+Quelques entrées supplémentaires son présente dans le fichier \textbf{./lexique/masterCollegeLexique} pour la maquette.
+
+\medskip
+
+\MotDefinition{lexique}{Dictionnaire succint.}
+\MotDefinition{glossaire}{Liste de mots utilisés dans le texte avec leurs définitions}
+
+% Classement forcé
+% Impose le symbile int directement après le mot intégrale
+\MotDefinition{$\int$}[integrale]{symbole}
+\MotDefinition{intégrale}{mot intégrale}
+\MotDefinition{intégration}{autre mot intégrale}
+
+% Utilisation d’un mot au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
+% Par exemple, on utilise le code pour ajouter l'entrée au lexique :
+\MotDefinition[mot]{mots}{Exemple mot lexique distinct du texte}
+% Et comme ceci dans un texte
+Utilisation de \MotDefinition[mot]{mots}{} au pluriel dans le texte alors que le lexique présente normalement le mot au singulier.
+
+\medskip
+
+Pour que les référence aux pages dans lequelles sont utiliser les mots du lexique soient ajoutées au lexique,
+il faut utiliser la commande \textbf{\textbackslash MotDefinition\{cercle inscrit\}\{\}} si la définition de \MotDefinition{cercle inscrit}{} est présente dans le fichier \textbf{./lexique/lexique/incLexique.tex}.
+
+\medskip
+
+Pour ce point particulier, la documentation de la classe \href{https://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/ctan/macros/latex/contrib/sesamanuel/sesamath-doc-fr.pdf}{sesamanuel p44} est rudement conseillé !
+
+\input{\currentpath/incLexique.tex} % Il faut utiliser la commande input pour inclure un lexique, cf doc sesamanuel p 45
+
+% Par défaut sur deux colonnes, l'utilisation d'une seule colonne est automatiquement
+% remplacée par l'utilisation de deux colonnes
+\AfficheLexique 
+
+\end{document}
