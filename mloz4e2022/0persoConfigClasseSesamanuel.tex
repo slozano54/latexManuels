@@ -78,7 +78,7 @@
   \href{https://mathslozano.fr}{\textcolor{U4}{\LogoURLManuelFont https://mathslozano.fr}}}
 
 % Ajout d'un logo
-\newcommand*\NewLogoFont{\fontsize{9.5}{9.5}\sffamily\bfseries}  
+\newcommand*\NewLogoFont{\fontsize{9}{9}\sffamily\bfseries}  
 \newcommand*\StringNEWLOGO{NEWLOGO}
 \newcommand*\newLogo{%
   \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
@@ -88,6 +88,21 @@
     \textcolor{TiceTextColor}{\StringNEWLOGO}%
   }
 }
+
+\newcommand*\StringMATHALEA{MATHALEA}
+\colorlet{mathaleaLineColor}{J3}
+\colorlet{mathaleaBkgColor}{J1}
+\colorlet{mathaleaTextColor}{Blanc}
+\newcommand*\mathaleaLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=mathaleaLineColor, fillstyle=solid,
+              fillcolor=mathaleaBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{mathaleaTextColor}{\StringMATHALEA}%
+  }
+}
+% Un environnement pour mathalea
+\DeclareActivityLike{mathalea}{BESOIN DE RÉVISER}{J3}{J1}{H1}
 
 % Pour uniformiser les titres de l'environnement acquis
 \newcommand{\titreConnaissancesAcquis}[1]{%
@@ -99,3 +114,4 @@
 
 % On factorise le titre du glossaire de propriétés
 \newcommand{\StringGlossaireProprietes}{Glossaire de propriétés}
+

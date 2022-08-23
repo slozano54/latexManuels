@@ -89,6 +89,21 @@
   }
 }
 
+\newcommand*\StringMATHALEA{MATHALEA}
+\colorlet{mathaleaLineColor}{J3}
+\colorlet{mathaleaBkgColor}{J1}
+\colorlet{mathaleaTextColor}{Blanc}
+\newcommand*\mathaleaLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=mathaleaLineColor, fillstyle=solid,
+              fillcolor=mathaleaBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{mathaleaTextColor}{\StringMATHALEA}%
+  }
+}
+% Un environnement pour mathalea
+\DeclareActivityLike{mathalea}{BESOIN DE RÉVISER}{J3}{J1}{H1}
+
 % Pour uniformiser les titres de l'environnement acquis
 \newcommand{\titreConnaissancesAcquis}[1]{%
   \textcolor{G1}{\textbf{#1}} :
