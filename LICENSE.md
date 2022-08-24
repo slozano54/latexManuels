@@ -1,6 +1,4 @@
-BY NC SA 4.0
-
-Copyright (c) [2022] [LOZANO Sébastien]
+BY-NC-SA 4.0 Copyright (c) [2022] [LOZANO Sébastien]
 
 # Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
