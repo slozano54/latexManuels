@@ -1,50 +1,88 @@
-\section{Section 2}
-\subsection{Sous-section 2.1}
-Quatre affichages prévus pour les méthodes.
+\section{Soustraction de deux nombres relatifs}
+\begin{definition}[nombres opposés]
+    Deux nombres relatifs sont dits \MotDefinition{opposés}{} quand leur somme vaut zéro.
+\end{definition}
 
-\begin{methode}[Titre de la méthode]
-    \Papiers[Largeur=10,Hauteur=5,Couleur=Olive]
-    
-    Texte introductif
-    \exercice
-    Texte de l’exercice
-    \correction
-    Texte de la correction sur un minimum de trois lignes pour faire la
-    différence entre vis-à-vis et double colonne. C’est l’endroit de la
-    coupure qui va différer.
-\end{methode}
+\begin{notation}
+    On note $-a$ l'opposé du nombre relatif $a$.
+\end{notation}
 
-\begin{methode*1}[Titre de la méthode*1]
-    Texte introductif
-    \exercice
-    Texte de l’exercice
-    \correction
-    Texte de la correction sur un minimum de trois lignes pour faire la
-    différence entre vis-à-vis et double colonne. C’est l’endroit de la
-    coupure qui va différer.
-\end{methode*1}
+\begin{remarque}
+    $-a$ peut être positif ! Par exemple lorsque $a$ vaut $-4$.
+\end{remarque}
 
-\subsection{Sous-section 2.2}
-\begin{methode*2}[Titre de la méthode*2]
-    Texte introductif
-    \exercice
-    Texte de l’exercice
-    \correction
-    Texte de la correction sur un minimum de trois lignes pour faire la
-    différence entre vis-à-vis et double colonne. C’est l’endroit de la
-    coupure qui va différer.
-\end{methode*2}
+\begin{propriete}[(admise)]
+    Si un nombre relatif est positif alors son opposé est négatif.
+\end{propriete}
 
-\begin{methode*2*2}[Dernière méthode  \MethodeRefExercice{exoN1-exemple1} \MethodeRefExercice{exoN1-exemple2}]
-    \exercice
-    \label{methodeN1-exemple}
-    Texte du premier exercice
-    \correction
-    Correction du premier exercice
-    \exercice
-    Texte du deuxième exercice
-    \correction
-    Texte de la correction du deuxième exercice sur un minimum de trois
-    lignes pour faire la différence entre vis-à-vis et double
-    colonne. C’est l’endroit de la coupure qui va différer.
-\end{methode*2*2}
+\begin{propriete}[(admise)]
+    Si un nombre relatif est négatif alors son opposé est positif.
+\end{propriete}
+
+\begin{exemple*1}
+    \begin{enumerate}
+        \item $-5,28$ est l'opposé de $+5,28$ mais $+5,28$ est aussi l'opposé de $-5,28$ \\en particulier $-(-5,28)=5,28$
+        \item si $a=+2,14$ alors $-a=-2,14$ et si $a=-7,81$ alors $-a=+7,81$
+    \end{enumerate}
+\end{exemple*1}
+
+\begin{propriete}[géométriquement (admise)]
+    Si deux nombres relatifs sont opposés alors ils correspondent à des points symétriques par rapport à l'origine.
+\end{propriete}
+
+\begin{exemple*1}
+        $-7$ et $+7$ sont opposés.
+        \par\vspace{0.25cm}
+        \pspicture(-4,-.5)(4,1)
+            \psline{->}(-4,.5)(4,.5)
+            \rput(0,0.5){+}
+            \uput[90](0,0.5){O} 
+            \uput[-90](0,0.5){0} 
+            \rput(-3.5,.5){+}
+            \uput[90](-3.5,0.5){A} 
+            \uput[-90](-3.5,0.5){-7} 
+            \rput(3.5,.5){+}
+            \uput[90](3.5,0.5){B} 
+            \uput[-90](3.5,0.5){+7} 
+            \psline[linecolor=red]{<->}(-3.5,-0.2)(0,-0.2)
+            \uput[-90](-1.5,-0.2){7 unités} 
+            \psline[linecolor=red]{<->}(0,-0.2)(3.5,-0.2)
+            \uput[-90](1.5,-0.2){7 unités} 
+         \endpspicture
+        \par\vspace{0.25cm}
+        $A$ et $B$ sont symétriques par rapport à $O$
+\end{exemple*1}
+
+\begin{exemple*1}
+        $\dfrac13$ et $-\dfrac13$ sont opposés.
+        \par\vspace{0.25cm}
+        \pspicture(-4,-.5)(4,1)
+            \psline{->}(-4,.5)(4,.5)
+            \multirput(-3,0.5)(1,0){7}{+}
+            \uput[90](0,0.5){O} 
+            \uput[-90](0,0.5){0} 
+            \uput[-90](3,0.2){+1} 
+            \uput[90](-1,0.5){C} 
+            \uput[-90](-1,0.5){$-\frac13$} 
+            \uput[90](1,0.5){D} 
+            \uput[-90](1,0.5){$\frac13$} 
+            \psline[linecolor=red]{<->}(-1,-0.2)(0,-0.2)
+            \psline[linecolor=red]{<->}(0,-0.2)(1,-0.2)
+         \endpspicture
+        \par\vspace{0.25cm}
+        $C$ et $D$ sont symétriques par rapport à $O$
+\end{exemple*1}
+
+\begin{propriete}[(admise)]
+    Si on soustrait un nombre relatif alors cela revient à additionner son nombre opposé.
+\end{propriete}
+
+\begin{exemple*1}
+    \begin{itemize}
+        \item l'opposé de $+8,2$ est $-8,2$ donc soustraire $+8,2$ revient à ajouter $-8,2$.
+        $$(+14)-(+8,2)=(+14)+(-8,2)=+5,8$$
+        \item l'opposé de $-8,2$ est $+8,2$ donc soustraire $-8,2$ revient à ajouter $+8,2$.
+        $$(-17,2)-(-8,2)=(-17,2)+(+8,2)=-9$$
+        \item $+\dfrac54 -(+\dfrac34)=+\dfrac54 +(-\dfrac34)=-\dfrac14$
+    \end{itemize}
+\end{exemple*1}
