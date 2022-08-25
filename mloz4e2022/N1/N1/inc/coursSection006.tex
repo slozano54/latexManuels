@@ -1,0 +1,25 @@
+\section{Enchaînement d'opérations}
+
+\begin{propriete}[Règles de priorités opératoires \admise]
+  Dans une suite d'opérations, on effectue les calculs dans l'\textbf{ordre suivant} :
+  \begin{itemize}
+    \item les calculs entre parenthèses
+    \item les multiplications et les divisions dans le sens de l'écriture
+    \item les additions et les soustractions dans le sens de l'écriture
+  \end{itemize} 
+\end{propriete}
+
+\begin{exemple}
+  Effectuer le calcul suivant :
+   $$A=-7-9\times(-8+2)$$
+  \correction
+  $\Eqalign{
+  A=&-7-9\times(\underbrace{-8+2}_{-6})\cr
+  A=&-7-\underbrace{9\times(-6)}_{-54}\cr
+  A=&-7-(-54)\cr
+  A=&\underbrace{-7+54}\cr
+  A=&\psshadowbox{47}\cr
+  }
+  $
+\end{exemple}
+
