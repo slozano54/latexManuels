@@ -1,0 +1,53 @@
+\begin{exercice*}[Longs produits]
+    Donner le signe de chaque produit.
+    \begin{itemize}
+        \item[] $D = (-1)\times 2\times (-3)\times 4\times\ldots \times (-9) $
+        \item[] $E = (-1)\times(-2)\times(-3)\times(-4)\times\ldots\times (-12) $
+        \item[] $F = (-4)\times(-3)\times(-2)\times\ldots\times 3\times 4\times 5$
+        \item[] $G = 5\times (-10)\times 15\times (-20)\times\ldots\times (-100)$
+        \item[] $H = 1\times (-2)\times 4\times (-8)\times\ldots\times \num{1024}$
+    \end{itemize}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+    \begin{multicols}2
+    \begin{list}{}{}
+        \item $D = (-1)\times 2\times (-3)\times 4\times\ldots \times (-9) $
+        
+        $D$ est un produit de neuf facteurs dont cinq sont négatifs.
+        
+        \psshadowbox{$D$ est donc négatif}
+
+        \medskip
+        \item $E = (-1)\times(-2)\times(-3)\times(-4)\times\ldots\times (-12) $
+        
+        $E$ est un produit de douze facteurs tous négatifs.
+
+        \psshadowbox{$E$ est donc positif}
+        \item
+        \item $F = (-4)\times(-3)\times(-2)\times\ldots\times 3\times 4\times 5$
+        
+        $F$ contient un facteur nul ! 
+
+        \psshadowbox{$F$ est donc nul}
+        \medskip
+        \item $G = 5\times (-10)\times 15\times (-20)\times\ldots\times (-100)$
+        
+        $G = [5\times 1]\times (-[5\times 2])\times [5\times 3]\times (-[5\times 4])\times\ldots\times (-[5\times 20])$
+
+        $G$ est un produit de vingt facteurs dont dix sont négatifs.
+
+        \psshadowbox{$G$ est donc positif}
+        \medskip
+        \item $H = 1\times (-2)\times 4\times (-8)\times\ldots\times \num{1024}$
+        
+        $H = 2^0\times (-2^1)\times 2^2\times (-2^3)\times\ldots\times 2^{10}$
+
+        $H$ est un produit de onze facteurs dont cinq sont négatifs.
+
+        \psshadowbox{$H$ est donc négatif}        
+    \end{list}
+\end{multicols}
+\end{corrige}
+
