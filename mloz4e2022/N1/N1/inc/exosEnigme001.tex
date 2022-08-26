@@ -2,16 +2,38 @@
 % si on veut mettre plusieurs enigmes
 \refstepcounter{exercice}
 \numeroteEnigme
-\begin{enigme}
-    Trouveras-tu un chemin de multiples entre les cases colorées ?
+\begin{enigme}[Pyramides de nombres additives]
+    \begin{enumerate}
+        \item Compléter les pyramides sachant que chaque nombre est la somme
+        des nombres se trouvant dans les deux cases juste en dessous.    
 
-    Sans labytinthe pour tester !
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{-1,\num{6.5},3,~,~,~,\num{-5.5},~,~,~}
+        \hfill
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{7-3,5-1-9,\num{3.1}-\num{2.8},\num{-0.1}-\num{1.4},~,~,~,~,~,~}
+
+        \item Inventer un contenu et échanger avec son voisin.
+    
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{~,~,~,~,~,~,~,~,~,~}
+        \hfill
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{~,~,~,~,~,~,~,~,~,~}
+    \end{enumerate}
 \end{enigme}
   
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 \addtocounter{exercice}{-1}
 \begin{corrige}
-    N1 - Correction enigme de la fin de la partie cours.  
+    \begin{enumerate}
+        \item \phantom{rrr}
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{-1,\num{6.5},3,*-\num{8.5},*\num{5.5},*\num{9.5},\num{-5.5},*\num{14.5},*4,*\num{18.5}}
+        
+        On calcule d'abord dans les cases :
 
-    Sans labytinthe pour tester !
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{*4,*-5,*\num{0.3},*\num{-1.5},~,~,~,~,~,~}
+
+        Puis on complète
+
+        \PyramideNombre[Etages=4,Hauteur=8mm,Largeur=1.5cm]{4,-5,\num{0.3},\num{-1.5},*-1,*-\num{4.7},*-\num{1.2},*-\num{5.7},*\num{5.9},*\num{0.2}}
+
+        \item Pas de correction \ldots
+    \end{enumerate}
 \end{corrige}
