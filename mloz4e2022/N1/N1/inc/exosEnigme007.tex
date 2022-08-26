@@ -1,0 +1,26 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}[Rose multiplicative]
+    Les nombres situés à l'extrémité des flèches sont les produits des nombres dont les flèches sont issues.     
+
+    \RoseMul[Aide,Rayon=18mm]    
+    \hfill
+    \RoseMul[Aide,Produits,Rayon=18mm]    
+
+    % \href{https://coopmaths.fr/mathalea.html?ex=5R20-6,s=10,s2=1,s3=2,s4=false,n=3,i=1&v=l}{Cliquer pour vous entraîner sur le site \mathaleaLogo} 
+    \hrefMathalea[\emoji{star-struck} Calculer les produits - ]{https://coopmaths.fr/mathalea.html?ex=4C10-9,s=10,s2=7,s3=1,n=1,i=1&v=l}
+
+    \hrefMathalea[\emoji{star-struck} Déterminer les facteurs - ]{https://coopmaths.fr/mathalea.html?ex=4C10-9,s=10,s2=7,s3=2,n=1,i=1&v=l}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    Pas de corrections pour les roses multiplicatives.
+    % \RoseMul[Aide,Solution]
+    % \hfill
+    % \RoseMul[Aide,Produits,Solution]
+
+\end{corrige}

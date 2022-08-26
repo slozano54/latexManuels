@@ -1,0 +1,20 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}[Puissance 4 !]
+    Comment jouer ?
+    \begin{itemize}
+        \item Deux joueurs
+        \item Chacun sa couleur
+        \item Chacun son tour, un joueur prend une position en inscrivant le resultat d'un calcul à l'intersection choisie.
+        \item Pour gagner c'est comme au puissance 4 !
+    \end{itemize}
+    \PQuatre[Relatif]{}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    Pas de correction c'est un jeu !    
+\end{corrige}

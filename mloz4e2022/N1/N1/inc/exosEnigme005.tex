@@ -1,0 +1,41 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}
+    \begin{enumerate}
+        \item Compléter les pyramides sachant que chaque nombre est le produit
+        des nombres se trouvant dans les deux cases d'où partent les flêches.    
+
+        \PyramideNombre[Multiplication,Aide]{-3,5,7}
+        \hfill
+        \PyramideNombre[Multiplication,Aide]{3,-5,7}
+        \hfill
+        \PyramideNombre[Multiplication,Produit,Aide]{4,-5,-3}
+        \pagebreak
+        \item Inventer un contenu et échanger avec son voisin.
+        \begin{center}
+            \scalebox{0.8}{
+                \PyramideNombre[Multiplication,Aide]{}
+                \hfill
+                \PyramideNombre[Multiplication,Aide]{}
+                \hfill
+                \PyramideNombre[Multiplication,Aide]{}
+            }
+        \end{center}
+    \end{enumerate}
+\end{enigme}
+  
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    \begin{enumerate}
+        \item \phantom{rrr}
+        \PyramideNombre[Multiplication,Aide,Solution]{-3,5,7}
+        \hfill
+        \PyramideNombre[Multiplication,Aide,Solution]{3,-5,7}
+        \hfill
+        \PyramideNombre[Multiplication,Produit,Aide,Solution]{4,-5,-3}
+        \item Pas de correction \ldots
+    \end{enumerate}
+\end{corrige}
