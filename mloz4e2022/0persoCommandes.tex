@@ -70,3 +70,9 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
 
 % Pour écrire (admise) pour les propriétés
 \newcommand{\admise}{(admise)}
+
+% Pour le lien vers un exo interactif mathalea
+% Par défaut #1 est un smiley mais on peut le remplacer par la ref mathalea
+\newcommand{\hrefMathalea}[2][\emoji{star-struck}]{
+    \href{#2}{#1 S'entraîner sur le site \mathaleaLogo} 
+}
