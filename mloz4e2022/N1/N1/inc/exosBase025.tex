@@ -1,0 +1,36 @@
+\begin{exercice*}[Programme de calcul \tice]
+    Voici un programme élaboré avec le logiciel Scratch.
+    \begin{Scratch}[Echelle=0.75]
+        Place Drapeau;
+        Place Demander("Choisir un nombre");
+        Place Dire(OpMul(OpMul(OvalCap("réponse"),"-7"),OpMul("2",OvalCap("réponse"))));
+    \end{Scratch}
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item Que répond le programme si on choisit $-1$ ?
+            \item Écris le programme de calcul correspondant.
+        \end{enumerate}
+    % \end{multicols}    
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item Si on choisit $-1$ la variable
+            \raisebox{-0.3\totalheight}[0.7\totalheight]{\raisebox{\depth}{
+            \begin{Scratch}[Echelle=0.75]
+                Place OvalCap("réponse");
+            \end{Scratch}
+            }}
+            contient $-1$, donc le calcul à faire est : $ R = \left( (-1)\times (-7) \right)\times\left(2\times (-1)\right) $
+
+            $ R = \left( (-1)\times (-7) \right)\times\left(2\times (-1)\right) $
+            
+            $ R = \left( +7 \right)\times\left(-2 \right) $
+
+            $ \psshadowbox{R = -14} $
+            \item .
+        \end{enumerate}
+    % \end{multicols}
+\end{corrige}
