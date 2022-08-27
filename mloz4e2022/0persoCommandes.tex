@@ -77,7 +77,7 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
     \href{#2}{#1 S'entraîner sur le site \mathaleaLogo} 
 }
 
-% Box pour les programmes de calcul
+% Box perso pour les programmes de calcul
 \newtcolorbox{myProgCalculBox}[2][]{
     enhanced,
     boxsep=1mm,
@@ -92,3 +92,37 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
     attach boxed title to top center={yshift=-2mm},
     title={#2},#1
 }
+
+% Patch pour pouvoir redefinir un compteur via \setlist
+% Necessaire pour la commande \ProgCalcul du paquet profcollege
+\let\enumerateold\enumerate
+\let\endenumerateold\endenumerate
+
+\newcommand{\myTCBset}[1]{
+    \tcbset{ProgCalcul/.style={%
+    enhanced,
+    boxsep=1mm,
+    bottom=.75mm,
+    boxrule=2pt,
+    text width=0.75\linewidth,
+    colframe=gray,
+    colback=gray!20,
+    colbacktitle=white,
+    fonttitle=\bfseries\color{black},
+    halign upper=center,
+    attach boxed title to top center={yshift=-2mm},
+    title={#1},
+    }%
+    }%   
+}
+
+\newcommand{\myProgCalcul}[3]{% label, titre, commande \ProgCalcul
+    \begingroup
+    \let\enumerate\enumerateold
+    \let\endenumerate\endenumerateold
+    \setlist[enumerate]{label=#1}
+    \myTCBset{#2}
+    #3
+    \endgroup
+}
+

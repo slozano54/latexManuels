@@ -30,16 +30,18 @@
             $ R = \left( +7 \right)\times\left(-2 \right) $
 
             $ \psshadowbox{R = -14} $
-            \item  
-            \begin{myProgCalculBox}{Programme de calcul correspondant}
-                \begin{itemize}
-                    \item Choisir un nombre.\hfill\phantom{.}
-                    \item Multiplier le nombre de départ par $(-7)$.\hfill\phantom{.}
-                    \item Multiplier le nombre de départ par $2$.\hfill\phantom{.}
-                    \item Multiplier les deux nombres obtenus précédemment.\hfill\phantom{.}
-                \end{itemize}
-            \end{myProgCalculBox}
 
+            \medskip
+            \item 
         \end{enumerate}
+        % La commande doit être en dehors de l'environnement enumerate sinon bug !
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+            \ProgCalcul[Enonce,ThemePerso]{%                
+                Choisir un nombre.,
+                Multiplier le nombre de départ par $(-7)$.,
+                Multiplier le nombre de départ par $2$.,
+                Multiplier les deux nombres obtenus précédemment.,
+            }
+        } 
     % \end{multicols}
 \end{corrige}

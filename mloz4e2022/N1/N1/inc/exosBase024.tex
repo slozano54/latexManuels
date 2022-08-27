@@ -1,13 +1,12 @@
 \begin{exercice*}[Programme de calcul]
     Voici un programme de calcul :
-    \begin{myProgCalculBox}{Programme de calcul}
-        \begin{itemize}
-            \item Choisir un nombre.
-            \item Multiplier ce nombre par (-5).
-            \item Doubler le résultat obtenu.
-        \end{itemize}
-    \end{myProgCalculBox}
-   
+    \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+        \ProgCalcul[Enonce,ThemePerso]{%
+            Choisir un nombre.,
+            Multiplier ce nombre par (-5).,
+            Doubler le résultat obtenu.,
+        }
+    }  
     Applique ce programme à chacun de ces nombres :
     \begin{multicols}4
         \begin{enumerate}
@@ -37,13 +36,15 @@
         \begin{enumerate}
             \setcounter{enumi}{4}
             \item On remarque que chaque fois le nombre de départ est multiplié par $(-10)$. En effet :
-            \begin{myProgCalculBox}{Programme de calcul}
-                \begin{itemize}
-                    \item Choisir un nombre \dotfill $x$.
-                    \item Multiplier ce nombre par (-5)\dotfill $(-5)\times x $.
-                    \item Doubler le résultat obtenu\dotfill $(-10)\times x$.
-                \end{itemize}
-            \end{myProgCalculBox}        
         \end{enumerate}
+        % La commande doit être en dehors de l'environnement enumerate sinon bug !
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+            \ProgCalcul[Application,SansCalcul,ThemePerso]{%                
+                Multiplier ce nombre par (-5).,
+                Doubler le résultat obtenu.,
+                §
+                x,*(-5) *2,(-5)\times x (-10)\times x
+            }
+        } 
     % \end{multicols}
 \end{corrige}
