@@ -7,28 +7,35 @@
             \item Doubler le résultat obtenu.
         \end{itemize}
     \end{myProgCalculBox}
-   % \ProgCalcul[Enonce,ThemePerso]{}
-
-    % \begin{multicols}2
-        Applique ce programme à chacun de ces nombres :
+   
+    Applique ce programme à chacun de ces nombres :
+    \begin{multicols}4
         \begin{enumerate}
             \item $ 5 $
             \item $ 0 $
             \item $ (-5) $
             \item $ (-1,2) $
-            \item Que remarques-tu ? Expliquer pourquoi.
         \end{enumerate}
-    % \end{multicols}    
+    \end{multicols}
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Que remarques-tu ? Expliquer pourquoi.
+    \end{enumerate}
+        
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     \phantom{rrr}    
-    % \begin{multicols}2
+    \begin{multicols}4
         \begin{enumerate}
-            \item \ProgCalcul{5,*(-5) *2}
-            \item \ProgCalcul{0,*(-5) *2}
-            \item \ProgCalcul{-5,*(-5) *2}
+            \item \ProgCalcul{5,*(-5) *2}            
+            \item \ProgCalcul{0,*(-5) *2}            
+            \item \ProgCalcul{-5,*(-5) *2}            
             \item \ProgCalcul{-1.2,*(-5) *2}
+        \end{enumerate}
+    \end{multicols}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
             \item On remarque que chaque fois le nombre de départ est multiplié par $(-10)$. En effet :
             \begin{myProgCalculBox}{Programme de calcul}
                 \begin{itemize}
