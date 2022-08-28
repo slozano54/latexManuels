@@ -243,6 +243,7 @@ git pull
 Puis 
 - Copier le dossier **masterManuel** quelque part en dehors de ce dossier fraîchement créé.
 - Renommer le dossier, par exemple **nouveauManuel**
+- Remplacer aussi dans tous les dossiers/fichiers qui contiendraient **masterManuel**, **masterManuel** par **nouveauManuel**
 - Supprimer tous les éventuels fichiers de compilation
 - Vider tous les dossiers **corrections** saut le fichier **emptyFile.txt** necessaire pour GitHub
 - Démarrer un nouveau chapitre, par exemple N1

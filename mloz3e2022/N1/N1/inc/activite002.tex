@@ -1,0 +1,37 @@
+\def\thermo{\pspolygon[linearc=0.1,fillstyle=solid](-0.1,6.8)(-0.1,0.6)(-0.2,0.4)(-0.2,-0.1)(0.2,-0.1)(0.2,0.4)(0.1,0.6)(0.1,6.8) \pspolygon[linecolor=B1, linearc=0.1, fillstyle=solid, fillcolor=B1](0,5)(0,0.5)(-0.1,0.3)(-0.1,0)(0.1,0)(0.1,0.3)(0,0.5) \pscircle(0,6.7){0.05}}
+
+\begin{histoire}[Les unités de mesure de température][]
+    Il existe trois échelles principales de température :
+    \begin{itemize}
+       \item l'échelle Farenheit, créée en 1720 par le scientifique allemand {\bf Gabriel Farenheit} et allant de \udeg{32}F à \udeg{212}F ;
+       \item l'échelle Celsius, créée en 1741 par le physicien suédois {\bf Anders Celsius}  dans laquelle \udeg{0}C correspond au point de congélation de l'eau et \udeg{100}C à son point d'ébullition ;
+       \item l'échelle de Kelvin, créée à la fin du {\small XIX}\up{e} siècle par {\bf Lord Kelvin} pour laquelle le point 0 correspond au zéro absolu, c'est-à-dire à la plus basse température existante.
+    \end{itemize}
+    \begin{center}
+       {\psset{yunit=0.7}
+       \begin{pspicture}(0,0)(8,7)
+          \textcolor{B1}{
+          \rput(1,0){\thermo}
+          \rput[l](1.2,1){\udeg{-459}F}
+          \rput[l](1.2,6){\udeg{212}F}
+          \rput[l](1.2,4.66){\udeg{32}F}
+          \rput(3.5,0){\thermo}
+          \rput[l](3.7,1){\udeg{-273}C} 
+          \rput[l](3.7,4.66){\udeg{0}C}
+          \rput[l](3.7,6){\udeg{100}C}
+          \rput(6,0){\thermo}
+          \rput[l](6.2,1){\udeg{0}K} 
+          \rput[l](6.2,4.66){\udeg{273}K}  
+          \rput[l](6.2,6){\udeg{373}K} }          
+       \end{pspicture}}
+    \end{center}
+    \bigskip
+    \begin{cadre}[B2][F4]
+       \begin{center}
+          Vidéo : \href{https://www.yout-ube.com/watch?v=nzirDkQN99M}{\bf Celsius et Farenheit}\\
+          
+          Chaîne YouTube {\it Ma deuxième école}, épisode de la série {\it Culture G}.
+       \end{center}
+    \end{cadre}
+\end{histoire}
+  

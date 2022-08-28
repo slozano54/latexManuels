@@ -1,0 +1,120 @@
+% ============================================================================================
+% ======= Compatibilité avec ProfCollege
+% ============================================================================================
+\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{svgnames}{xcolor}
+
+% ============================================================================================
+% ======= Générer les correction dans un dossier spécifique
+% ============================================================================================
+\renewcommand\PrefixeCorrection{corrections/}
+
+% ============================================================================================
+% Factorisation des titres et couleurs de thèmes
+% ============================================================================================
+\colorlet{IColor}{gray}
+\colorlet{NColor}{J1}
+\colorlet{GColor}{PartieGeometrie}
+\colorlet{DColor}{PartieStatistique}%H1
+\colorlet{MColor}{A1}
+\colorlet{AColor}{G1}
+\colorlet{preAndPostFace}{C1}
+
+% ============================================================================================
+% ======= Thèmes de base prédéfinis
+% \themaG ; \themaF ; \themaS
+%
+% ======= Thèmes personnalisés
+%
+% \NewThema{N}{n}{titre}{Titre}{TITRE}{couleur entete et ...}{couleur pied de page et ...}
+%
+% ============================================================================================
+% Modifier ./tocs/incIntroduction.tex en conséquence si on change pour autre chose ici
+\NewThema{I}{i}{introduction}{Introduction}{INTRODUCTION}{IColor}{IColor!50}
+
+% Modifier ./tocs/incNumerique.tex en conséquence si on change pour autre chose ici
+\NewThema{N}{n}{nombres \&\\~calculs}{Nombres \&\\~calculs}{NOMBRES \&\\~CALCULS}{NColor}{NColor!50}
+
+% Pour la géométrie on garde le théme d'origine, donc renewcommand ou défintion d'un nouveau theme
+% au besoin
+% Modifier ./tocs/incGeometrie.tex en conséquence
+
+% Modifier ./tocs/incGestionDeDonnees.tex en conséquence si on change pour autre chose ici
+\NewThema{D}{d}{organisation \&\\~gestion de données}{Organisation \&\\~gestion de données}{ORGANISATION \&\\~GESTION DE DONNÉES}{DColor}{DColor!50}
+
+% Modifier ./tocs/incGrandeursEtMesures.tex en conséquence si on change pour autre chose ici
+\NewThema{M}{m}{grandeurs \&\\~mesures}{Grandeurs \&\\~mesures}{GRANDEURS \&\\~MESURES}{MColor}{MColor!50}
+
+% Modifier ./tocs/incAlgorithmiqueEtProgrammation.tex en conséquence si on change pour autre chose ici
+\NewThema{A}{a}{algorithmique \&\\~programmation}{Algorithmique \&\\~programmation}{ALGORITHMIQUE \&\\~PROGRAMMATION}{AColor}{AColor!50}
+
+% ============================================================================================
+% ======= Comme il y a des thèmes personnalisés
+% ======= Il faut redefinir la commande \ListeMethodesThemes{}
+% ============================================================================================
+
+\renewcommand\ListeMethodesThemes{{i}{I},{n}{N},{g}{G},{d}{D},{m}{M},{a}{A}}
+
+% ============================================================================================
+% ======= Quelques styles supplémentaires
+% ============================================================================================
+\fancypagestyle{firstCover}{%   1ere de couverture
+    \fancyhf{}%                 On initialise headers and footers à rien du tout !        
+    \renewcommand{\headrulewidth}{0pt}%trait horizontal pour l'en-tête
+    %\renewcommand{\footrulewidth}{0.4pt}%trait horizontal pour le pied de page    
+}
+\fancypagestyle{backCover}{%   4ere de couverture
+    \fancyhf{}%                 On initialise headers and footers à rien du tout !        
+    %\renewcommand{\headrulewidth}{0pt}%trait horizontal pour l'en-tête
+    %\renewcommand{\footrulewidth}{0.4pt}%trait horizontal pour le pied de page
+}
+
+% ============================================================================================
+% ======= Quelques redéfinitions et ajouts de commandes sesamanuel
+% ============================================================================================
+
+\renewcommand*\StringManuel{Des ressources num\'eriques pour pr\'eparer
+  le chapitre sur
+  \href{https://mathslozano.fr}{\textcolor{U4}{\LogoURLManuelFont https://mathslozano.fr}}}
+
+% Ajout d'un logo
+\newcommand*\NewLogoFont{\fontsize{9}{9}\sffamily\bfseries}  
+\newcommand*\StringNEWLOGO{NEWLOGO}
+\newcommand*\newLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=TiceLineColor, fillstyle=solid,
+              fillcolor=TiceBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{TiceTextColor}{\StringNEWLOGO}%
+  }
+}
+
+\newcommand*\StringMATHALEA{MATHALEA}
+\colorlet{mathaleaLineColor}{J3}
+\colorlet{mathaleaBkgColor}{J1}
+\colorlet{mathaleaTextColor}{Blanc}
+\newcommand*\mathaleaLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=mathaleaLineColor, fillstyle=solid,
+              fillcolor=mathaleaBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{mathaleaTextColor}{\StringMATHALEA}%
+  }
+}
+% Un environnement pour mathalea
+\DeclareActivityLike{mathalea}{BESOIN DE RÉVISER}{J3}{J1}{H1}
+
+% Un environnement pour les points de vue historique
+\DeclareActivityLike{histoire}{INTERLUDE HISTORIQUE}{J3}{J1}{H1}
+
+% Pour uniformiser les titres de l'environnement acquis
+\newcommand{\titreConnaissancesAcquis}[1]{%
+  \textcolor{G1}{\textbf{#1}} :
+}
+
+% Pour avoir un nouvel environnement de type activité
+\DeclareActivityLike{nouveau}{DÉCOUVERTE}{lime}{orange}{red}
+
+% On factorise le titre du glossaire de propriétés
+\newcommand{\StringGlossaireProprietes}{Glossaire de propriétés}
+
