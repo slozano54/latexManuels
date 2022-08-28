@@ -1,0 +1,66 @@
+\begin{exercice*}[Programme de calcul]
+    Voici un programme de calcul :
+    \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+        \ProgCalcul[Enonce,ThemePerso]{%
+            Choisir un nombre.,
+            Ajouter $5$ à ce nombre.,
+            Multiplier le résultat par $-3$.,
+            Soustraire le double du nombre de départ.,
+            Ajouter $15$ au résultat.,
+        }
+    }  
+    Applique ce programme à chacun de ces nombres :
+    \begin{multicols}4
+        \begin{enumerate}
+            \item $ 2 $
+            \item $ 4 $
+            \item $ -3 $
+            \item $ -4 $
+        \end{enumerate}
+    \end{multicols}
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Que remarques-tu ? Expliquer pourquoi.
+        \item Peux-tu trouver un programme plus court qui donne le même résultat ?
+    \end{enumerate}
+        
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+    \begin{multicols}2
+    \begin{spacing}2
+        \begin{enumerate}
+            \item \ProgCalcul{2,+5 *(-3) -4 +15}            
+            \item \ProgCalcul{4,+5 *(-3) -8 +15}           
+            \item \ProgCalcul{-3,+5 *(-3) -(-6) +15}            
+            \item \ProgCalcul{-4,+5 *(-3) -(-8) +15}
+        \end{enumerate}
+    \end{spacing}
+    \end{multicols}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item On remarque que chaque fois le résultat vaut $-5$ fois le nombre de départ. En effet :
+        \end{enumerate}
+        % La commande doit être en dehors de l'environnement enumerate sinon bug !
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+            \ProgCalcul[Application,SansCalcul,ThemePerso]{%                
+            Ajouter $5$ à ce nombre.,
+            Multiplier le résultat par $-3$.,
+            Soustraire le double du nombre de départ.,
+            Ajouter $15$ au résultat.,
+            §                §
+            n,+5 *(-3) -2n +15,n+5 -3\times(n+5)=-3n-15 -3n-15-2n=-5n-15 -5n-15+15=-5n
+            }
+        } 
+        \begin{enumerate}
+            \setcounter{enumi}{5}
+            \item Un programme qui donne $-5$ fois le nombre de départ.
+        \end{enumerate}
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+            \ProgCalcul[Enonce,ThemePerso]{%
+                Choisir un nombre.,
+                Multiplier le résultat par $-5$.,
+            }
+        }
+\end{corrige}

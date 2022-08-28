@@ -1,17 +1,37 @@
 % Pas de commande \exercice ou \correction ici, ni d'environnement corrige
-\begin{TP}[Titre TP001 Optionnel][\tice \algo]
-    Contenu TP001
+\begin{TP}[Tableur \tice]
+    \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+        \ProgCalcul[Enonce,ThemePerso]{%
+            Choisir un nombre.,
+            Multiplier ce nombre par $(-3)$.,
+            Ajouter $4$ au nombre obtenu.,
+            Soustraire au résultat le carré du nombre choisi au départ.,
+        }
+    }  
     
-    Possibilité de mettre plusieurs logos
-    \partie{Titre partie 1}
-    
-    TP001 partie 1
-    
-    \partie{Titre partie 2}
-    
-    TP001 partie 2
-    
-    \partie{Titre partie 3}
-    
-    TP001 partie 3 
+    \begin{enumerate}
+        \item Appliquer ce programme à $0$, puis à $2$.
+        \item Reproduire dette feuille de calcul dans un tableur.
+        
+        Quelles formules doit-on saisir en B2, B3, B4 et B5 ?
+
+        \medskip
+        \begin{Tableur}[Bandeau=false,Colonnes=2,LargeurUn=12]
+            Nombre de départ&\\
+            Multiplier par $-3$&\\
+            Ajouter $4$&\\
+            Soustraire le carré du nombre de départ&\\
+            Résultat final&\\
+        \end{Tableur}
+
+        \medskip
+        \item On se demande s'il existe un \textbf{nombre entier} compris entre $-10$ et $10$, 
+        pour lequel le programme donne $0$ comme résultat final. 
+
+        Utiliser la feuille de calcul pour répondre à cette question.
+        \item Existe-t-il un \textbf{nombre entier relatif} compris entre $-10$ et $10$, 
+        pour lequel le résultat final est supérieur à 6 ?
+        \item  Existe-t-il un \textbf{nombre relatif} compris entre $-10$ et $10$, 
+        pour lequel le résultat final est supérieur à 6 ? Expliquer.
+    \end{enumerate}
 \end{TP}
