@@ -1718,6 +1718,16 @@
              \dimexpr -\smc@headsep-\textheight-\smc@marginbottom-\smc@bleed)
   \end{pspicture}%
 }
+\newcommand{\copyName}{
+  \emoji{copyright} Sébastien LOZANO
+}
+\newcommand{\licenceCC}{
+  \href{https://creativecommons.org/licenses/by-nc-sa/3.0/fr/}{\color{red}{CreativeCommons BY-NC-SA}}
+}
+\newcommand{\myCopyrightFoot}{
+  \fancyfoot[LO]{\copyName - \licenceCC}
+  \fancyfoot[RE]{\licenceCC - \copyName}
+}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{firstchapter}{%
@@ -1726,6 +1736,7 @@
   \fancyhead[RO]{}
   \fancyfoot[LE]{\smc@footpage{FirstChapterFootColor}}
   \fancyfoot[RO]{\smc@footpage{FirstChapterFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{activites}{%
   \fancyhf{}
@@ -1733,6 +1744,7 @@
   \fancyhead[RO]{\smc@headodd{ActiviteHeadFrame}{\StringActivitesApproche}}
   \fancyfoot[LE]{\smc@footpage{ActiviteFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ActiviteFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{cours}{%
   \fancyhf{}
@@ -1740,6 +1752,7 @@
   \fancyhead[RO]{\smc@headodd{CoursHeadFrame}{\StringCoursMethodes}}
   \fancyfoot[LE]{\smc@footpage{CoursFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{CoursFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{exercicesbase}{%
   \fancyhf{}
@@ -1747,6 +1760,7 @@
   \fancyhead[RO]{\smc@headodd{ExoBaseHeadFrame}{\StringExercicesBase}}
   \fancyfoot[LE]{\smc@footpage{ExoBaseFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ExoBaseFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{exercicesappr}{%
   \fancyhf{}
@@ -1754,11 +1768,13 @@
   \fancyhead[RO]{\smc@headodd{ExoApprHeadFrame}{\StringExercicesAppr}}
   \fancyfoot[LE]{\smc@footpage{ExoApprFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ExoApprFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{connaissances}{%
   \fancyhf{}
   \fancyfoot[LE]{\smc@footpage{ConnFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ConnFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{firstconnaissances}{%
   \fancyhf{}
@@ -1772,6 +1788,7 @@
   }
   \fancyfoot[LE]{\smc@footpage{ConnFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{ConnFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{TP}{%
   \fancyhf{}
@@ -1779,6 +1796,7 @@
   \fancyhead[RO]{\smc@headodd{TPHeadFrame}{\StringTravauxPratiques}}
   \fancyfoot[LE]{\smc@footpage{TPFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{TPFootColor}}
+  \myCopyrightFoot
 }
 \fancypagestyle{recreation}{%
   \fancyhf{}
@@ -1786,6 +1804,7 @@
   \fancyhead[RO]{\smc@headodd{RecreationHeadFrame}{\StringRecreation}}
   \fancyfoot[LE]{\smc@footpage{RecreationFootColor}\smc@foottitleeven}
   \fancyfoot[RO]{\smc@foottitleodd\smc@footpage{RecreationFootColor}}
+  \myCopyrightFoot
 }
 \newcommand*\smc@firstheadevenannexe[1]{%
   \begin{pspicture}(0,0)(0,0)
@@ -1854,6 +1873,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringCorriges}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{corrige}{%
   \fancyhf{}
@@ -1871,6 +1891,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringCorriges}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{firstannexe}{%
   \fancyhf{}
@@ -1888,6 +1909,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\smc@TitleAnnexe}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{annexe}{%
   \fancyhf{}
@@ -1905,6 +1927,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\smc@TitleAnnexe}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{firstlexique}{%
   \fancyhf{}
@@ -1922,6 +1945,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringLexique}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{lexique}{%
   \fancyhf{}
@@ -1939,6 +1963,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringLexique}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{firstaffichemethode}{%
   \fancyhf{}
@@ -1956,6 +1981,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringListeMethode}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{affichemethode}{%
   \fancyhf{}
@@ -1973,6 +1999,7 @@
     {\FootAnnexeTxtFont \MakeUppercase{\StringListeMethode}}
     {\FootAnnexePageFont \thepage}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{firstlibre}{%
   \fancyhf{}
@@ -1982,6 +2009,7 @@
   \fancyfoot[RO]{%
     {\ifsmc@page\FootLibrePageFont \thepage\fi}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{libre}{%
   \fancyhf{}
@@ -1991,6 +2019,7 @@
   \fancyfoot[RO]{%
     {\ifsmc@page\FootLibrePageFont \thepage\fi}%
   }
+  \myCopyrightFoot
 }
 \fancypagestyle{empty}{%
   \fancyhead{}
