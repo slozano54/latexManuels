@@ -1,0 +1,45 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}
+    Les nombres en bout de ligne ou de colonne sont les produits des nombres contenus dans la ligne ou la colonne.
+
+    Compléter les grilles avec des nombres qui conviennent (plusieurs solutions possibles).
+
+    \Yohaku[Perso,Multiplication]{%
+        $\dfrac{1}{3}$/$2$/$\dfrac{2}{7}$/$2$,
+        $\dfrac{2}{21}$/$4$/$\dfrac{4}{7}$/$\dfrac{2}{3}$
+    }    
+    \hfill
+    \Yohaku[Perso,Multiplication]{%
+        $\dfrac{1}{7}$/$\dfrac{3}{5}$/$\dfrac{5}{2}$/$\dfrac{8}{5}$,
+        $\dfrac{5}{14}$/$\dfrac{24}{25}$/$4$/$\dfrac{3}{35}$
+    }    
+    \hfill
+    \Yohaku[Perso,Multiplication]{%
+        $4$/$\dfrac{10}{7}$/$\dfrac{4}{7}$/$\dfrac{6}{5}$,
+        $\dfrac{16}{7}$/$\dfrac{12}{7}$/$\dfrac{24}{35}$/$\dfrac{40}{7}$
+    }    
+    
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4C22-3,s=10,s2=2,s3=2,s4=false,n=3,i=1&v=l}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    \Yohaku[Perso,Solution,Multiplication]{%
+    $\dfrac{1}{3}$/$2$/$\dfrac{2}{7}$/$2$,
+    $\dfrac{2}{21}$/$4$/$\dfrac{4}{7}$/$\dfrac{2}{3}$
+    }    
+    \hfill
+    \Yohaku[Perso,Solution,Multiplication]{%
+    $\dfrac{1}{7}$/$\dfrac{3}{5}$/$\dfrac{5}{2}$/$\dfrac{8}{5}$,
+    $\dfrac{5}{14}$/$\dfrac{24}{25}$/$4$/$\dfrac{3}{35}$
+    }    
+    \hfill
+    \Yohaku[Perso,Solution,Multiplication]{%
+    $4$/$\dfrac{10}{7}$/$\dfrac{4}{7}$/$\dfrac{6}{5}$,
+    $\dfrac{16}{7}$/$\dfrac{12}{7}$/$\dfrac{24}{35}$/$\dfrac{40}{7}$
+    }  
+\end{corrige}

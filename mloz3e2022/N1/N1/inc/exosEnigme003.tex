@@ -1,0 +1,24 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\numeroteEnigme
+\begin{enigme}
+    Comment jouer ?
+    \begin{itemize}
+        \item Deux joueurs
+        \item Chacun sa couleur
+        \item Chacun son tour, un joueur prend une position en inscrivant le resultat d'un calcul à l'intersection choisie.
+        \item Pour gagner c'est comme au puissance 4 !
+    \end{itemize}
+    
+    \PQuatre[Addition,Autre,Couleur=.2Gray+.8White]{
+        $\dfrac1{2}$/$\dfrac1{4}$/$\dfrac1{8}$/$\dfrac1{16}$/$\dfrac1{32}$/$\dfrac1{64}$/$\dfrac1{128}$,
+        $\dfrac1{128}$/$\dfrac1{64}$/$\dfrac1{32}$/$\dfrac1{16}$/$\dfrac1{8}$/$\dfrac1{4}$/$\dfrac1{2}$
+    }
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+Pas de correction, c'est un jeu !
+\end{corrige}
