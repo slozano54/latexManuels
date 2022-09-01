@@ -1724,9 +1724,12 @@
 \newcommand{\licenceCC}{
   \href{https://creativecommons.org/licenses/by-nc-sa/3.0/fr/}{\color{red}{CreativeCommons BY-NC-SA}}
 }
+\newcommand{\niveau}[1]{
+    $#1$\up{e}
+}
 \newcommand{\myCopyrightFoot}{
-  \fancyfoot[LO]{\copyName - \licenceCC}
-  \fancyfoot[RE]{\licenceCC - \copyName}
+  \fancyfoot[LO]{\niveau{3} - \copyName - \licenceCC}
+  \fancyfoot[RE]{\licenceCC - \copyName - \niveau{3}}
 }
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
