@@ -2,19 +2,22 @@
 % ======= 1ere et 4eme de couverture
 % ============================================================================================
 
-\newcommand\myAuthorName{Sébastien LOZANO}
-\newcommand\myAuthorSchoolName{Collège Jean Lurçat 54390 FROUARD}
+\newcommand{\myAuthorName}{Sébastien LOZANO}
+
+\newcommand{\myAuthorSchoolName}{Collège Jean Lurçat 54390 FROUARD}
+
 \newcounter{postCurrentSchoolYear}
 \setcounter{postCurrentSchoolYear}{\the\year}
 \addtocounter{postCurrentSchoolYear}{1}
-\newcommand\currentSchoolYear{Année  \the\year ~- \thepostCurrentSchoolYear}
+\newcommand{\currentSchoolYear}{Année  \the\year ~- \thepostCurrentSchoolYear}
 
 \newcommand{\mySite}{\href{https://mathslozano.fr}{https://mathslozano.fr}}
 
-\newcommand{\myManualName}{Master Manuel \LaTeX de \niveau{000}}
+\newcommand{\myManualName}{Master Manuel \LaTeX de \currentNiveau}
 
-\newcommand{\myMessage}{Nom, Lieu de travail et Année courante, sont à modifier dans le fichier 0persoCommandes.tex \par
-Ce message est à supprimer en supprimant l'appel à la commande \textbackslash myMessage !
+\newcommand{\myMessage}{Nom, Lieu de travail et Année courante, sont à modifier dans le fichier
+./config.tex  du manuel concerné \par Ce message est à supprimer en supprimant l'appel à la commande
+\textbackslash myMessage !
 }
 
 % ============================================================================================
@@ -57,6 +60,10 @@ Ce message est à supprimer en supprimant l'appel à la commande \textbackslash 
 
 % ======= Il n'y a qu'un glossaire, est-ce judicieux de regrouper ici ?
 % ======= Je pense que oui, question de "séparatisme" !
+% Pour uniformiser les titres de l'environnement acquis
+\newcommand{\titreConnaissancesAcquis}[1]{%
+  \textcolor{G1}{\textbf{#1}} :
+}
 
 % On factorise les titres des sections pour le glossaire de propriété
 \newcommand{\sectionsGlossaireProprietes}[3]{

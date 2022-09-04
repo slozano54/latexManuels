@@ -4,8 +4,10 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 
 # Objectifs
 
-- Parametrages de la classe dans le fichier **0persoConfigClasseSesamanuel.tex**.
-- Commandes personnelles et paquets supplémentaires dans le fichier **0persoCommandes.tex**.
+- Parametrages de la classe dans le fichier **../0perso/configClasseSesamanuel.tex**.
+- Commandes personnelles et paquets supplémentaires dans le fichier **../0perso/commandes.tex**.
+- Paquets supplémentaires dans **../0perso/paquets.tex**
+- Classe sésamanuel modifiée **../0perso/sesamanuel.cls**
 - Un document global compilable avec tous les chapitres.
 - Chaque chapitre doit être compilable séparément.
 - Un chapitre témoin pour chaque thème reprenant toutes les possibilités de la classe
@@ -35,9 +37,15 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 ## Fichiers du dépot
 
 ```bash
+├── 0perso                          # Dossier contenant les fichiers de configuration persos
 ├── documentations                  # No comment
 ├── images                          # No comment
 ├── masterCollege                   # Dossier du masterCollege
+│   ├── 000                         # Chapitre vide pour duplication
+│   │   ├── 000                     # Pour regrouper les fichiers de structure du chapitre
+│   │   │   ├── images              # No comment
+│   │   │   └── inc                 # Pour regrouper les fichiers du chapitre
+│   │   └── corrections             # Pour récupérer les fichiers de correction générés du chapitre
 │   ├── A1                          # Chapitre témoin d'Algorithmique
 │   │   ├── A1                      # Pour regrouper les fichiers de structure du chapitre
 │   │   │   ├── images              # No comment
@@ -79,10 +87,8 @@ Ce dossier contient un master pour la réalisation d'un manuel de college avec l
 │   ├── remerciements               # Fichiers pour les remerciements
 │   ├── resume                      # Fichiers pour le résumé
 │   └── tocs                        # Fichiers pour le sommaire
-└── sandBox                         # Dossier Bac à sable, ne sert pas pour un manuel
-    ├── corrections
-    ├── fixCorrigeEnigmeCorrections
-    └── images
+├── mloz3e2022                      # Dossier pour le manuel de 3e
+└── mloz4e2022                      # Dossier pour le manuel de 4e
 ```
 
 ## Fichiers du dossier masterCollege
@@ -92,6 +98,11 @@ Pour faire un nouveau manuel, il suffit de copier ce dossier et de modifier/ajou
 
 ```bash
 ./masterCollege
+├── 000                         # Chapitre vide pour duplication
+│   ├── 000                     # Pour regrouper les fichiers de structure du chapitre
+│   │   ├── images              # No comment
+│   │   └── inc                 # Pour regrouper les fichiers du chapitre
+│   └── corrections             # Pour récupérer les fichiers de correction générés du chapitre
 ├── A1                          # Chapitre témoin d'Algorithmique
 │   ├── A1                      # Pour regrouper les fichiers de structure du chapitre
 │   │   ├── images              # No comment
@@ -132,7 +143,10 @@ Pour faire un nouveau manuel, il suffit de copier ce dossier et de modifier/ajou
 │       └── inc
 ├── remerciements               # Fichiers pour les remerciements
 ├── resume                      # Fichiers pour le résumé
-└── tocs                        # Fichiers pour le sommaire
+├── tocs                        # Fichiers pour le sommaire
+├── config.tex                  # Fichier permettant de redéfinir certaines commandes spécifique au manuel
+├── masterCollegeComplet.tex            # Fichier source du manuel complet
+└── masterCollegeCompletSansCorrection  # Fichier source du manuel complet sans les corrections
 ```
 
 ### Détails pour un chapitre
@@ -225,7 +239,18 @@ Pour chaque chapitre, la structure est la même, le détail pour le chaptire té
 ├── masterCollegeA1Complet.out                          # Fichier de compilation
 ├── masterCollegeA1Complet.pdf                          # Fichier PDF
 ├── masterCollegeA1Complet.synctex.gz                   # Fichier de compilation
-└── masterCollegeA1Complet.tex                          # Fichier source
+├── masterCollegeA1Complet.tex                          # Fichier source
+├── masterCollegeA1CompletSansCorrection.aux            # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.cor            # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.fdb_latexmk    # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.fls            # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.log            # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.loma           # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.out            # Fichier de compilation
+├── masterCollegeA1CompletSansCorrection.pdf            # Fichier PDF
+├── masterCollegeA1CompletSansCorrection.synctex.gz     # Fichier de compilation
+└── masterCollegeA1CompletSansCorrection.tex            # Fichier source
+
 ```
 
 # Aide-mémoire, tentative de tutos

@@ -1718,6 +1718,8 @@
              \dimexpr -\smc@headsep-\textheight-\smc@marginbottom-\smc@bleed)
   \end{pspicture}%
 }
+
+% AjoutSeb
 \newcommand{\copyName}{
   \emoji{copyright} Sébastien LOZANO
 }
@@ -1727,10 +1729,16 @@
 \newcommand{\niveau}[1]{
     $#1$\up{e}
 }
-\newcommand{\myCopyrightFoot}{
-  \fancyfoot[LO]{\niveau{3} - \copyName - \licenceCC}
-  \fancyfoot[RE]{\licenceCC - \copyName - \niveau{3}}
+
+\newcommand{\currentNiveau}{
+  \niveau{xxx}
 }
+
+\newcommand{\myCopyrightFoot}{
+  \fancyfoot[LO]{\currentNiveau - \copyName - \licenceCC}
+  \fancyfoot[RE]{\licenceCC - \copyName - \currentNiveau}
+}
+% AjoutSeb Fin
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{firstchapter}{%

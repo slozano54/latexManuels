@@ -1,17 +1,22 @@
-\documentclass[nocrop]{sesamanuel}
+% On définit le répertoire avec les adaptations globales persos
+\def\persopath{../0perso}
+
+\documentclass[nocrop]{\persopath/sesamanuel}
 
 % ============================================================================================
 % ======= Configurations 
 % ============================================================================================
-
 % ======= Classe sesamanuel
-\input{./0persoConfigClasseSesamanuel.tex}
+\input{\persopath/configClasseSesamanuel.tex}
 
 % ======= Ajout de paquets
-\input{./0persoPaquets.tex}
+\input{\persopath/paquets.tex}
 
 % ======= Ajout de commandes
-\input{./0persoCommandes.tex}
+\input{\persopath/commandes.tex}
+
+% ======= Configuration de certaines commandes
+\input{./config.tex}
 
 % ============================================================================================
 % ======= Début du document

@@ -55,6 +55,12 @@ Ce dossier peu être copier et son contenu adapté pour la réalisation d'un nou
 
 Consulter le <a href="https://github.com/slozano54/latexManuels/blob/master/masterCollege/README.md">README.md</a> du dossier pour plus d'informations.
 
+<!-- DOSSIER mloz3e2022 -->
+## Dossier ./mloz3e2022
+Dossier du manuel de 3e
+<!-- DOSSIER mloz4e2022 -->
+## Dossier ./mloz4e2022
+Dossier du manuel de 4e
 ## Découverte de la classe sesamanuel
 
 - Je récupère le fichier de classe **sesamanuel.cls** originale de ma TexLive2022
