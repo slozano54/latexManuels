@@ -51,13 +51,19 @@
 Proposition de maquette vide pour un manuel de college
 <a href="https://github.com/slozano54/latexManuels/blob/master/masterCollege/README.md">README.md du dossier ./masterCollege</a>
 
+Ce dossier peu être copier et son contenu adapté pour la réalisation d'un nouveau manuel. 
+
+Consulter le <a href="https://github.com/slozano54/latexManuels/blob/master/masterCollege/README.md">README.md</a> du dossier pour plus d'informations.
+
 ## Découverte de la classe sesamanuel
 
 - Je récupère le fichier de classe **sesamanuel.cls** originale de ma TexLive2022
-- Je répercute les modifications faites par Christophe POULAIN sur cette classe pour permettre de compiler avec **luaLaTeX**
+- Je répercute les modifications de Christophe POULAIN sur cette classe pour permettre de compiler avec **luaLaTeX**
 - Je commence la lecture de la [documentation du paquet sesamanuel](https://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/ctan/macros/latex/contrib/sesamanuel/sesamath-doc-fr.pdf)
 
 ### Correctifs et ajouts
+
+- Pour rechercher les ajouts et modifications dans le fichier de classe sesamanuel faire une recherche avec **AjoutSeb** dans le fichier **sesamanuel.cls**
 
 - Lorsqu'on utilise la commande **\newThema** le compteur de chapitre n'était pas initialisé, je modifie donc la classe cf [commit 36181c2](https://github.com/slozano54/latexManuels/commit/36181c2adbd5b45d925bc58a936daf7dfc941a00)
 
