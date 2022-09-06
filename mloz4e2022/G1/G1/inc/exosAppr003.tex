@@ -1,0 +1,45 @@
+\begin{exercice*}[\ldots]
+    On considère les deux triangles $SUR$ et $MOT$ ci-dessous.
+
+    \begin{tikzpicture}[scale = 0.5]
+        % \draw[help lines, color=gray!30, dashed] (0,0) grid (18,10);
+        \coordinate[label=below:$S$] (S) at (1,3);
+        \coordinate[label=above:$U$] (U) at (4,7);
+        \coordinate[label=below:$R$] (R) at (11,1);        
+        \draw (S) -- node[sloped,above] {\Lg{2.9}} (U) -- (R) -- node[sloped,below] {\Lg{5.8}} (S);        
+        \pic [draw=black, -, "\ang{69}",angle eccentricity=1.6] {angle = R--S--U};        
+        \pic [draw=black, -, "\ang{82}",angle eccentricity=1.6,angle radius=0.5cm] {angle = S--U--R};
+        \pic [draw=black, -,angle eccentricity=1.5,angle radius=0.6cm] {angle = S--U--R};
+        \coordinate[label=right:$M$] (M) at (15,7);
+        \coordinate[label=below:$O$] (O) at (12,3);
+        \coordinate[label=left:$T$] (T) at (5,9);
+        \draw (T) -- node[sloped,above] {\Lg{5.8}} (M) -- (O) -- (T);        
+        \pic [draw=black, -, "\ang{69}",angle eccentricity=1.6] {angle = T--M--O};        
+        \pic [draw=black, -,angle eccentricity=1.6,,angle radius=0.5cm] {angle = O--T--M};        
+        \pic [draw=black, -,angle eccentricity=1.6,,angle radius=0.6cm] {angle = O--T--M};        
+        \pic [draw=black, -, "\ang{29}",angle eccentricity=1.5,,angle radius=0.7cm] {angle = O--T--M};        
+    \end{tikzpicture}
+
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item Déterminer la mesure de l'angle $\widehat{SRU}$.
+            \item Dépontrer que les triangles $SUR$ et $MOT$ sont égaux.
+        \end{enumerate}
+    % \end{multicols}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item Dans le triangle $SUR$, la somme des mesures des angles vaut \ang{180}.
+            
+            Donc $\widehat{SRU} = \ang{180} - \ang{82} - \ang{69} = \ang{29}$, d'où $\psshadowbox{\widehat{SRU} = \ang{29}}$.
+            
+            \item Les triangles $SUR$ et $MOT$ ont chacun un côté de \Lg{5.8} compris entre deux angles
+            de mêmes mesures \ang{69} et \ang{29}, \psshadowbox{ils sont donc égaux}.
+        \end{enumerate}
+    % \end{multicols}
+\end{corrige}
+
