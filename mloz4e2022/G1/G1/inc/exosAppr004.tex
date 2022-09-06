@@ -1,0 +1,43 @@
+\begin{exercice*}[Triangles jumeaux]
+
+    \begin{tikzpicture}[scale = 0.5]
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (18,10);
+        \coordinate[label=below:$S$] (S) at (3,1);
+        \coordinate[label=below:$V$] (V) at (9,1);
+        \coordinate[label=below:$T$] (T) at (15,1);
+        \coordinate[label=above:$U$] (U) at (9,9);
+        \draw (S) -- (U) -- (V) -- (S);
+        \draw (V) -- (T) -- (U) -- (V);
+        \draw[fill=gray!20] (V) -- (10,1) -- (10,2) -- (9,2) -- (V);
+        \pic [draw=black, -, "\ang{56}",angle eccentricity=1.5] {angle = U--T--V};        
+        \pic [draw=black, -, "\ang{34}",angle eccentricity=1.5, angle radius=7mm] {angle = S--U--V};        
+    \end{tikzpicture}
+
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item Expliquer pourquoi les triangles $SUV$ et $TUV$ sont égaux.
+            \item Déterminer la nature du triangle $SUT$. Justifier.
+        \end{enumerate}
+    % \end{multicols}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+
+    % \begin{multicols}2
+        \begin{enumerate}
+            \item LA somme des angles du triangle $VUT$ est égale à \ang{180} 
+            
+            donc $\widehat{VUT} = \ang{180} - (\ang{90} + \ang{56}) = \ang{34}$,
+
+            $\widehat{SVU} = \widehat{UVT} = \ang{90}$ et $\widehat{SUV} = \widehat{VUT} = \ang{34}$
+
+            $SVU$ et $VUT$ ont un côté égal $[VU]$ adjacent à deux angles égaux deux à deux donc \psshadowbox{ils sont égaux}.
+            
+            \item Les triangles $SVU$ et $VUT$ sont isométriques donc $SU=UT$.
+            
+            \psshadowbox{Le triangle $SUT$ est donc isocèle en $U$}.
+        \end{enumerate}
+    % \end{multicols}
+\end{corrige}
+

@@ -14,32 +14,33 @@
     \scalebox{0.6}{    
         \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
             \clip(-9,-7) rectangle (9,5.5);
-            \draw [line width=2pt,color=myGreen] (-7.74,1.07)-- (-1.28,2.07);
-            \draw [line width=2pt,color=red] (-1.28,2.07)-- (-4,4.51);
-            \draw [line width=2pt,color=blue] (-4,4.51)-- (-7.74,1.07);
-            \draw [line width=2pt,color=myGreen] (0.7443407477719717,0.8432900996677757)-- (7.204340747771972,1.8432900996677755);
-            \draw [line width=2pt,color=red] (7.204340747771972,1.8432900996677755)-- (4.484340747771972,4.283290099667775);
-            \draw [line width=2pt,color=blue] (4.484340747771972,4.283290099667775)-- (0.7443407477719717,0.8432900996677757);
-            \draw [line width=2pt,color=myGreen] (-2.1824604714443954,-1.569871362126245)-- (-8.642460471444396,-2.5698713621262446);
-            \draw [line width=2pt,color=red] (-8.642460471444396,-2.5698713621262446)-- (-5.922460471444396,-5.009871362126245);
-            \draw [line width=2pt,color=blue] (-5.922460471444396,-5.009871362126245)-- (-2.1824604714443954,-1.569871362126245);
-            \draw [line width=2pt,color=myGreen] (1.273312430294113,-1.521587110006146)-- (7.758729359192739,-2.340713021179218);
-            \draw [line width=2pt,color=red] (7.758729359192739,-2.340713021179218)-- (5.107961464351075,-4.855753690368624);
-            \draw [line width=2pt,color=blue] (5.107961464351075,-4.855753690368624)-- (1.273312430294113,-1.521587110006146);
-            \begin{small}
-                \draw (-8,0.8) node {$A$};
-                \draw (-1.1,2.4) node {$B$};
-                \draw (-3.8,4.9) node {$C$};
-                \draw (0.1,1) node {$I$};
-                \draw (7.6,2.2) node {$K$};
-                \draw (4.7,4.7) node {$J$};
-                \draw (-1.9,-1.1) node {$M$};
-                \draw (-8.9,-1.9) node {$L$};
-                \draw (-5.9,-5.5) node {$N$};
-                \draw (1.3,-1.1) node {$X$};
-                \draw (8,-1.9) node {$Y$};
-                \draw (5.1,-5.3) node {$Z$};
-            \end{small}
+            \coordinate[label=below:$A$] (A) at (-7.74,1.07);
+            \coordinate[label=below:$B$] (B) at (-1.28,2.07);
+            \coordinate[label=above:$C$] (C) at (-4,4.51);
+            \draw [line width=2pt,color=myGreen] (A)-- (B);
+            \draw [line width=2pt,color=red] (B)-- (C);
+            \draw [line width=2pt,color=blue] (C)-- (A);
+
+            \coordinate[label=below:$I$] (I) at (0.7443407477719717,0.8432900996677757);
+            \coordinate[label=above:$J$] (J) at (4.484340747771972,4.283290099667775);
+            \coordinate[label=below:$K$] (K) at (7.204340747771972,1.8432900996677755);
+            \draw [line width=2pt,color=myGreen] (I)-- (K);
+            \draw [line width=2pt,color=red] (K)-- (J);
+            \draw [line width=2pt,color=blue] (J)-- (I);
+
+            \coordinate[label=above:$L$] (L) at (-8.642460471444396,-2.5698713621262446);
+            \coordinate[label=above:$M$] (M) at (-2.1824604714443954,-1.569871362126245);
+            \coordinate[label=below:$N$] (N) at (-5.922460471444396,-5.009871362126245);
+            \draw [line width=2pt,color=myGreen] (M)-- (L);
+            \draw [line width=2pt,color=red] (L)-- (N);
+            \draw [line width=2pt,color=blue] (N)-- (M);
+            
+            \coordinate[label=above:$X$] (X) at (1.273312430294113,-1.521587110006146);
+            \coordinate[label=above:$Y$] (Y) at (7.758729359192739,-2.340713021179218);
+            \coordinate[label=below:$Z$] (Z) at (5.107961464351075,-4.855753690368624);
+            \draw [line width=2pt,color=myGreen] (X)-- (Y);
+            \draw [line width=2pt,color=red] (Y)-- (Z);
+            \draw [line width=2pt,color=blue] (Z)-- (X);
         \end{tikzpicture}
     }
     \end{center}
@@ -66,20 +67,20 @@
                 \draw [shift={(-4,-3)},line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.5] (0,0) -- (135:0.6) arc (135:170.53767779197437:0.6) -- cycle;
                 \draw [shift={(-2,1)},line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.5] (0,0) -- (-45:0.6) arc (-45:-9.462322208025615:0.6) -- cycle;
                 \draw [shift={(4,0)},line width=2pt,color=blue,fill=blue,fill opacity=0.5] (0,0) -- (170.53767779197437:0.6) arc (170.53767779197437:236.3099324740202:0.6) -- cycle;
-                \draw [line width=2pt] (-10,-2)-- (-8,1);
-                \draw [line width=2pt] (-8,1)-- (-4,-3);
-                \draw [line width=2pt,color=red] (-4,-3)-- (-10,-2);
-                \draw [line width=2pt,color=red] (-2,1)-- (4,0);
-                \draw [line width=2pt] (4,0)-- (2,-3);
-                \draw [line width=2pt] (2,-3)-- (-2,1);
-                \begin{small}
-                \draw (-10.4,-2.12) node {$A$};
-                \draw (-7.84,1.42) node {$B$};
-                \draw (-3.72,-3.34) node {$C$};
-                \draw (-2.22,1.5) node {$I$};
-                \draw (2.5,-3.34) node {$J$};
-                \draw (4.24,0.42) node {$K$};
-                \end{small}
+                
+                \coordinate[label=below:$A$] (A) at (-10,-2);
+                \coordinate[label=above:$B$] (B) at (-8,1);
+                \coordinate[label=below:$C$] (C) at (-4,-3);
+                \coordinate[label=above:$I$] (I) at (-2,1);
+                \coordinate[label=below:$J$] (J) at (2,-3);
+                \coordinate[label=above:$K$] (K) at (4,0);
+
+                \draw [line width=2pt] (A)-- (B);
+                \draw [line width=2pt] (B)-- (C);
+                \draw [line width=2pt,color=red] (C)-- (A);
+                \draw [line width=2pt,color=red] (I)-- (K);
+                \draw [line width=2pt] (K)-- (J);
+                \draw [line width=2pt] (J)-- (I);
             \end{tikzpicture}
         }
     \end{center}
@@ -104,20 +105,19 @@
                 \clip(-11,-4) rectangle (5,2);
                 \draw [shift={(-10,-2)},line width=2pt,color=blue,fill=blue,fill opacity=0.5] (0,0) -- (-9.462322208025617:0.6) arc (-9.462322208025617:56.309932474020215:0.6) -- cycle;
                 \draw [shift={(4,0)},line width=2pt,color=blue,fill=blue,fill opacity=0.5] (0,0) -- (170.53767779197437:0.6) arc (170.53767779197437:236.3099324740202:0.6) -- cycle;
-                \draw [line width=2pt,color=myGreen] (-10,-2)-- (-8,1);
-                \draw [line width=2pt] (-8,1)-- (-4,-3);
-                \draw [line width=2pt,color=red] (-4,-3)-- (-10,-2);
-                \draw [line width=2pt,color=red] (-2,1)-- (4,0);
-                \draw [line width=2pt,color=myGreen] (4,0)-- (2,-3);
-                \draw [line width=2pt] (2,-3)-- (-2,1);
-                \begin{small}
-                    \draw (-10.4,-2.12) node {$A$};
-                    \draw (-7.84,1.42) node {$B$};
-                    \draw (-3.72,-3.34) node {$C$};
-                    \draw (-2.22,1.5) node {$I$};
-                    \draw (2.5,-3.34) node {$J$};
-                    \draw (4.24,0.42) node {$K$};
-                \end{small}
+                \coordinate[label=below:$A$] (A) at (-10,-2);
+                \coordinate[label=above:$B$] (B) at (-8,1);
+                \coordinate[label=below:$C$] (C) at (-4,-3);
+                \coordinate[label=above:$I$] (I) at (-2,1);
+                \coordinate[label=below:$J$] (J) at (2,-3);
+                \coordinate[label=above:$K$] (K) at (4,0);
+
+                \draw [line width=2pt,color=myGreen] (A)-- (B);
+                \draw [line width=2pt] (B)-- (C);
+                \draw [line width=2pt,color=red] (C)-- (A);
+                \draw [line width=2pt,color=red] (I)-- (K);
+                \draw [line width=2pt,color=myGreen] (K)-- (J);
+                \draw [line width=2pt] (J)-- (I);
             \end{tikzpicture}
         }
     \end{center}
