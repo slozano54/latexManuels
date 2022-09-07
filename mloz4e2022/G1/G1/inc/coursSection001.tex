@@ -142,35 +142,24 @@
     \end{itemize}
     \begin{center}
         \scalebox{0.7}{
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-                \clip(-8,0) rectangle (6,5);
-                \draw[line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.10000000149011612] (-3,1.5998547467921123) -- (-3.5998547467921123,1.5998547467921125) -- (-3.5998547467921123,1) -- (-3,1) -- cycle; 
-                \draw[line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.10000000149011612] (4,1.5998547467921123) -- (3.4001452532078877,1.5998547467921125) -- (3.4001452532078877,1) -- (4,1) -- cycle; 
-                \draw [line width=2pt] (-7,1)-- (-3,1);
-                \draw [line width=2pt] (-3,1)-- (-3,4);
-                \draw [line width=2pt] (-3,4)-- (-7,1);
-                \draw [line width=2pt] (1,1)-- (5,1);
-                \draw [line width=2pt] (5,1)-- (4,4);
-                \draw [line width=2pt] (4,4)-- (1,1);
-                \draw [line width=2pt] (4,4)-- (4,1);
-                \draw [->,line width=2pt] (3.7,0.35) -- (5,0.35);
-                \draw [->,line width=2pt] (3,0.35) -- (1,0.35);
-                \draw (-4.905632943307733,0.7) node {$4$};
-                \draw (-2.4454970600426087,2.7) node {$3$};
-                \draw (-5.160129758817918,3.202963742906823) node {$5$};
-                \draw (3.4,0.35) node {$4$};
-                \draw (5.359071948936407,2.976744351342214) node {$\num{3.16}$};
-                \draw (1.9092262275761174,3.202963742906823) node {$\num{4.24}$};
-                \draw (3.7,2.8) node {$3$};
-                \begin{small}
-                    \draw (-7.478878522355162,1) node {$A$};
-                    \draw (-2.162722820586847,1) node {$B$};
-                    \draw (-2.7848261473895217,4.616834940185631) node {$C$};
-                    \draw (0.3822453345150058,1.0256020990974606) node {$D$};
-                    \draw (5.359071948936406,1) node {$E$};
-                    \draw (4.227974991113361,4.616834940185631) node {$F$};
-                    \draw (4.199697567167784,0.7711052835872751) node {$G$};
-                \end{small}
+            \begin{tikzpicture}[scale=1.6]                
+                % \draw[help lines, color=black!30, dashed] (-8,0) grid (6,5);
+                \coordinate[label=below:$A$] (A) at (-7,1);
+                \coordinate[label=below:$B$] (B) at (-3,1);
+                \coordinate[label=above:$C$] (C) at (-3,4);
+                \coordinate[label=below:$D$] (D) at (1,1);
+                \coordinate[label=below:$E$] (E) at (5,1);
+                \coordinate[label=above:$F$] (F) at (4,4);
+                \coordinate[label=below:$G$] (G) at (4,1);
+                
+                \draw[line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.1] (B)--(-3.3,1)--(-3.3,1.3)--(-3,1.3)--(B);
+                \draw[line width=2pt,color=myGreen,fill=myGreen,fill opacity=0.1] (G)--(3.7,1)--(3.7,1.3)--(4,1.3)--(G);
+
+                \draw [line width=2pt] (A) -- node[sloped,below] {\large\Lg{4}} (B) -- node[sloped,below] {\large\Lg{3}} (C) -- node[sloped,above] {\large\Lg{5}} (A);
+                \draw [line width=2pt] (D) -- (E) -- node[sloped,above] {\large\Lg{3.16}} (F) -- node[sloped,above] {\large\Lg{4.24}} (D);                
+                \draw [line width=2pt] (F) -- node[sloped,below] {\large\Lg{3}} (G);
+
+                \draw[<->,dashed, ultra thick] (1,0.5) -- node[sloped,below] {\large\Lg{4}} (5,0.5);
             \end{tikzpicture}
         }
     \end{center}
