@@ -84,7 +84,7 @@
 
 % Pour le lien vers un exo interactif mathalea
 % Par défaut #1 est un smiley mais on peut le remplacer par la ref mathalea
-\newcommand{\hrefMathalea}[2][\emoji{star-struck} S'entraîner sur le site \mathaleaLogo]{
+\newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} S'entraîner sur le site \mathaleaLogo]{
     \href{#2}{#1} 
 }
 
@@ -155,3 +155,60 @@
 
 % Pour l'environnement tabularx
 \newcolumntype{C}{>{\centering}X}
+
+%==========================================
+% Gestion des crédits
+%==========================================
+\makeatletter
+\def\blfootnote{\gdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+% InstrumentPoche
+\newcommand{\creditInstrumentPoche}{
+%\footnotetext{Source : Animations InstrumentPoche association Sésamath}
+\blfootnote{Source : Animations InstrumentPoche association Sésamath}
+}
+
+% Geogebra
+% #1 Auteur
+\newcommand{\creditGeogebra}[1]{
+%\footnotetext{Source : D'après une appliquette Geogebra de #1}
+\blfootnote{Source : D'après une appliquette Geogebra de #1}
+}
+
+% Cahiers Iparcours
+% #1 Année
+% #2 Niveau
+\newcommand{\creditCahiersIparcours}[2]{
+%\footnotetext{Source : Fiches tirées du cahier iParcours #1 de #2}
+\blfootnote{Source : Fiches tirées du cahier iParcours #1 de #2}
+}
+
+% Manuels Iparcours
+% #1 Niveau
+\newcommand{\creditManuelsIparcours}[1]{
+%\footnotetext{Source : Exercices tirés du manuel iParcours de #1}
+\blfootnote{Source : Exercices tirés du manuel iParcours de #1}
+}
+
+% Cahiers Sesamath
+% #1 Année
+% #1 Niveau
+\newcommand{\creditCahiersSesamath}[2]{
+%\footnotetext{Source : Fiches tirées du cahier Sésamath #1 de #2}
+\blfootnote{Source : Fiches tirées du cahier Sésamath #1 de #2}
+}
+
+% Manuels Sesamath
+% #1 Niveau
+\newcommand{\creditManuelsSesamath}[1]{
+%\footnotetext{Source : Exercices tirés du manuel Sésamath de #1}
+\blfootnote{Source : Exercices tirés du manuel Sésamath de #1}
+}
+
+% Libre
+% #1 texte
+\newcommand{\creditLibre}[1]{
+%\footnotetext{Source : #1}
+\blfootnote{Source : #1}
+}
