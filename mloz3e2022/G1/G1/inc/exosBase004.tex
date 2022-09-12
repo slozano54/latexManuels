@@ -93,12 +93,14 @@
             \coordinate[label=below:$G$] (G) at (4,1);
             \coordinate[label=left:$(d_2)$] (d2) at (3.44,0.76);
             \coordinate[label=above:$E$] (E) at (7.01,4.5);            
+            \coordinate (E1) at (7.1,4.4);
             \coordinate[label=above:$H$] (H) at (9,4);
             \tkzDrawLine(E,F);
             \tkzDrawLine(H,G);
             \draw (A)--(H);
             \draw (A)--(G);
             \draw[dashed, color=red, ultra thick](A)--(E)--(F)--(A);
+            \draw[dashed, color=red, ultra thick](E1)--(A);
             \draw[dashed, color=blue, ultra thick](A)--(H)--(G)--(A);
         \end{tikzpicture}
 
