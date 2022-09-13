@@ -1,0 +1,41 @@
+\begin{exercice*}    
+    On considère un triangle $POT$ tel que $PO=\Lg{4}$ ; $TP=\Lg{2.5}$ et $OT=\Lg{3.3}$.
+    
+    On appelle $K$ le point de $[PT)$ tel que $PK=\Lg{4}$.
+    
+    \begin{enumerate}
+        \item Construire la figure.
+        \item Tracer la parallèle à $(OT)$ passant par le point $K$.
+        
+        Elle coupe $[PO)$ en $I$.
+        \item Calculer $PI$ et $KI$.
+    \end{enumerate}
+
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}[scale = 0.7]
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (10,7);        
+        \coordinate[label=below:$P$] (P) at (1,1);            
+        \coordinate[label=above:$T$] (T) at (2.6,2.92);            
+        \coordinate[label=above:$K$] (K) at (3.56,4.07);            
+        \coordinate[label=below:$O$] (O) at (4.94,1.72);
+        \coordinate[label=below:$I$] (I) at (7.3,2.14);
+        \tkzDrawLine[add = 0 and 0.2](P,K);
+        \tkzDrawLine[add = 0 and 0.2](P,I);
+        \tkzDrawSegment(T,O);
+        \tkzDrawLine[add = 0.1 and 0.1](K,I);
+        \draw[<->, dashed] (0.5,1.5)--node[sloped,above] {\Lg{4}} (3.06,4.57);
+        \tkzLabelSegment[sloped, above](T,O){$\Lg{3.3}$};
+        \draw[<->, dashed] (1,0.3)--node[sloped,below] {\Lg{4}} (4.94,1.02);
+    \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \Thales[Droites]{PKITO}{2.5}{4}{3.3}{4}{PI}{KI}  
+    \end{minipage}
+
+\end{corrige}
+
