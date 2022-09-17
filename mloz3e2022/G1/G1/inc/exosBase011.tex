@@ -1,0 +1,40 @@
+\begin{exercice*}
+    Sur le schéma suivant, $\dfrac{AB}{AC}=\dfrac{3}{4}$ et $\dfrac{AD}{AE}=\dfrac{3}{4}$.
+
+    Pour tant les droites $(BE)$ et $(CD)$ ne sont pas parallèles.
+
+    \begin{tikzpicture}[scale=0.7]
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+        \coordinate[label=above:$A$] (A) at (4,2);
+        \coordinate[label=below:$D$] (D) at (7,2);
+        \draw (7,1.9)--(7,2.1);
+        \coordinate[label=below:$E$] (E) at (8,2);
+        \draw (8,1.9)--(8,2.1);
+        \coordinate[label=above:$C$] (C) at (7.76,3.36);
+        \draw (7.76,3.26)--(7.76,3.46);
+        \coordinate[label=below:$B$] (B) at (1.18,0.98);
+        \draw (1.18,0.88)--(1.18,1.08);
+        \tkzDrawLine[add = 1 and 0.1](A,E);        
+        \tkzDrawLine(B,C);
+        \draw[<->, dashed] (4,1)--node[sloped,below] {$4$} (8,1);
+        \tkzLabelSegment[sloped,above](A,C){$4$}
+        \tkzLabelSegment[sloped,below](B,A){$3$}
+        \tkzLabelSegment[sloped,below](A,D){$3$}
+    \end{tikzpicture}
+
+    \medskip
+    Expliquer pourquoi.
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+
+    Les points $B$, $A$ et $C$ ne sont pas alignés dans le me ordre que les points $D$, $A$ et $E$.
+
+    $A$ appartient à $[BC]$ mais $A$ n'appartient pas à $[DE]$.
+
+    L'une des conditions nécessaires à l'application de la réciproque du théorème de Thalès n'est pas vérifiée,
+    
+    donc les droites $(BE)$ et $(CD)$ ne sont pas parallèles.
+\end{corrige}
+
