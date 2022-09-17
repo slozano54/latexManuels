@@ -1,0 +1,107 @@
+\begin{exercice*}
+    Dans chaque cas :
+    \begin{itemize}
+        \item Faire une figure à main levée
+        \item Justifier que le parallélisme de certaines droites de la figure.
+    \end{itemize}
+
+    \begin{enumerate}
+        \item Première configuration :
+        \begin{itemize}
+            \item $NF=\Lg{5}$.
+            \item $NU=\Lg{6}$.
+            \item $UC=\Lg{7.2}$.
+            \item $FP=\Lg{6}$.
+            \item Les points $C$, $N$ et $U$ sont alignés.
+            \item Les points $P$, $N$ et $F$ sont alignés.
+        \end{itemize}
+        \item Seconde configuration :
+        \begin{itemize}
+            \item $MJ=\Lg{6}$.
+            \item $ME=\Lg{5}$.
+            \item $EO=\Lg{2}$.
+            \item $JU=\Lg{2.4}$.
+            \item Les points $M$, $U$ et $J$ sont alignés.
+            \item Les points $M$, $O$ et $E$ sont alignés.
+        \end{itemize}
+
+    \end{enumerate}
+
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{enumerate}
+        \item \begin{spacing}{1.5}
+            \begin{minipage}{0.3\linewidth}
+                % \hspace*{-10mm}
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzDefPoints{0/0/N,6/1/U,3/4/F}
+                    \tkzDrawPolygon(N,F,U)
+                    \tkzDefPointBy[homothety=center N ratio -0.2](F)	\tkzGetPoint{P}
+                    \tkzDefPointBy[homothety=center N ratio -0.2](U)	\tkzGetPoint{C}
+                    \tkzDrawSegment(P,C)
+                    \tkzLabelPoints[below](N)
+                    \tkzLabelPoints[below](U,P)
+                    \tkzLabelPoints[above](F,C)
+                    \tkzDrawPolygon(N,P,C)
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{.65\linewidth} 
+                On sait que $NC=UC-NU=7{,}2-6=1{,}2$ cm.
+
+                On sait aussi que $NP=FP-NF=6-5=1$ cm.
+                
+                D'une part on a $\dfrac{NF}{NP}=\dfrac{5}{1}=\dfrac{5\times\mathbf{{\color[HTML]{f15929}1{,}2}}}{1\times\mathbf{{\color[HTML]{f15929}1{,}2}}}=\dfrac{6}{1{,}2}$
+
+                D'autre part on a $\dfrac{NU}{NC}=\dfrac{6}{1{,}2}=\dfrac{6\times\mathbf{{\color[HTML]{f15929}1}}}{1{,}2\times\mathbf{{\color[HTML]{f15929}1}}}=\dfrac{6}{1{,}2}$
+                
+                $\dfrac{NF}{NP}=\dfrac{NU}{NC}$.
+                
+                $P$,$N$,$F$ et $C$,$N$,$U$ sont alignés dans le même ordre.
+                
+                Donc d'après la réciproque du théorème de Thales,
+                
+                les droites $(FU)$ et $(PC)$ sont parallèles.                
+            \end{minipage}
+ 
+            \end{spacing}
+        \item \begin{spacing}{1.5}
+            \begin{minipage}{0.3\linewidth}
+                % \hspace*{-10mm}
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzDefPoints{0/0/M,5/-1/E,4/5/J}
+                    \tkzDrawPolygon(M,J,E)
+                    \tkzDefPointBy[homothety=center M ratio 0.6](J)	\tkzGetPoint{U}
+                    \tkzDefPointBy[homothety=center M ratio 0.6](E)	\tkzGetPoint{O}
+                    \tkzDrawSegment(U,O)
+                    \tkzLabelPoints[left](M)
+                    \tkzLabelPoints[above left](J,U)
+                    \tkzLabelPoints[below](E,O)
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{.65\linewidth} 
+                On sait que $MO=ME-EO=5-2=3$ cm.
+
+                On sait aussi que $MU=MJ-JU=6-2{,}4=3{,}6$ cm.
+
+                D'une part on a $\dfrac{MJ}{MU}=\dfrac{6}{3{,}6}=\dfrac{6\times\mathbf{{\color[HTML]{f15929}3}}}{3{,}6\times\mathbf{{\color[HTML]{f15929}3}}}=\dfrac{18}{10{,}8}$
+
+                D'autre part on a $\dfrac{ME}{MO}=\dfrac{5}{3}=\dfrac{5\times\mathbf{{\color[HTML]{f15929}3{,}6}}}{3\times\mathbf{{\color[HTML]{f15929}3{,}6}}}=\dfrac{18}{10{,}8}$
+
+                $\dfrac{MJ}{MU}=\dfrac{ME}{MO}$.
+
+                $M$,$U$,$J$ et $M$,$O$,$E$ sont alignés dans le même ordre.
+
+                Donc d'après la réciproque du théorème de Thales,
+                
+                les droites $(JE)$ et $(UO)$ sont parallèles.
+                
+            \end{minipage} 
+            \end{spacing}
+    \end{enumerate}
+\end{corrige}
+
