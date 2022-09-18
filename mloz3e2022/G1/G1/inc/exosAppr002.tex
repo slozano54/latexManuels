@@ -1,0 +1,64 @@
+\begin{exercice*}
+    \begin{minipage}{0.7\linewidth}
+    \begin{itemize}
+        \item $(EN)$ et $(CO)$ sont parallèles.
+        \item $(NO)$ et $(EC)$ sont sécantes en $S$.
+    \end{itemize}    
+
+    Déterminer la valeur de $x$.
+    \end{minipage}
+    \begin{minipage}{0.3\linewidth}
+    \begin{tikzpicture}[scale=0.6]
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+        \coordinate[label=above:$S$] (S) at (4,5);
+        \coordinate[label=below:$O$] (O) at (1,1);
+        \coordinate[label=below:$C$] (C) at (8,1);
+        \tkzDefPointBy[homothety=center S ratio 0.7](O)	\tkzGetPoint{N};
+        \tkzDefPointBy[homothety=center S ratio 0.7](C)	\tkzGetPoint{E};
+        \tkzLabelPoints[left](N);
+        \tkzLabelPoints[right](E);
+        \tkzDrawLine(S,O);
+        \tkzDrawLine(S,C);
+        \tkzDrawSegment[ultra thick](N,E);
+        \tkzDrawSegment[ultra thick](O,C);
+        \begin{scope}[ dim style/.append style={red, dashed},
+            dim fence style/.style={red, dashed}]                
+            \tkzDrawSegment[dim={\(4\),-5mm,above left=2mm}](S,N);
+            \tkzDrawSegment[dim={\(2\),-5mm,above left=2mm}](N,O);
+            \tkzDrawSegment[dim={\(5\),-5mm,above right=2mm}](E,S);
+            \tkzDrawSegment[dim={\(x\),-5mm,above right=2mm}](C,E);
+        \end{scope}
+        % \tkzDrawSegment[dim={$4$,2cm,}](N,S)
+    \end{tikzpicture}
+    \end{minipage}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+
+    Les droites $(EN)$ et $(CO)$ sont parallèles.
+
+    Les droites $(NO)$ et $(EC)$ sont sécantes en $S$.
+
+    D'après le théorème de Thalès :
+
+    \medskip
+    $\dfrac{SN}{SO}=\dfrac{SE}{SC}=\dfrac{NE}{OC}$ soit $\dfrac{4}{4+2}=\dfrac{5}{5+x}=\dfrac{NE}{OC}$
+    donc $\dfrac{4}{6}=\dfrac{5}{5+x}=\dfrac{NE}{OC}$.
+
+    \medskip
+    \textbf{Les produits en croix sont égaux donc} :
+
+    $4\times (5+x) = 6\times 5$
+
+    \textbf{On divise par 4}
+
+    $5+x = 6\times 5 \div 4$
+
+    $5+x = \num{7.5}$
+
+    \textbf{On soustrait 5}
+
+    $x = \num{2.5}$
+\end{corrige}
+
