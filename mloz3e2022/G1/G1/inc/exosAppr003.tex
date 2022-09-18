@@ -1,0 +1,105 @@
+\begin{exercice*}
+    \phantom{rrr}
+
+    % \begin{minipage}{0.5\linewidth}
+        Sur la figure ci-dessous : 
+        \begin{itemize}
+            \item $BCRE$ est un parallélogramme.
+            \item $A$, $R$ et $C$ sont alignés.
+        \end{itemize}
+
+        \begin{enumerate}
+            \item Démontrer que $BP=2AP$.
+            \item En déduire la longueur $AR$.
+        \end{enumerate}
+    % \end{minipage}
+
+    % \begin{minipage}{0.5\linewidth}
+    \begin{tikzpicture}[scale=0.6]
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+        \coordinate[label=right:$A$] (A) at (10,1);
+        \coordinate[label=right:$R$] (R) at (9,3);
+        \coordinate[label=below:$P$] (P) at (6,2.5);
+        \tkzDefPointBy[homothety=center A ratio 3](R)	\tkzGetPoint{C};
+        \tkzDefPointBy[homothety=center A ratio 3](P)	\tkzGetPoint{B};
+        \tkzDefPointBy[translation= from C to B](R)	\tkzGetPoint{E};
+        % \tkzDefPointBy[homothety=center P ratio -3](A)	\tkzGetPoint{BE};
+        \tkzDrawSegment(A,C);
+        \tkzDrawSegment(A,B);
+        \tkzDrawSegment(E,R);
+        \tkzDrawSegment(B,C);
+        \tkzDrawSegment(B,E);
+        \tkzLabelPoints[right](C);
+        \tkzLabelPoints[left](B);
+        \tkzLabelPoints[below](E);
+        \tkzDefMidPoint(B,E) \tkzGetPoint{M};
+        \tkzDrawPoints[shape= cross out](A,B,C,E,P,R,M);
+        \tkzMarkSegments[mark=||,size=6pt](B,M M,E);
+        \tkzMarkSegments[mark=||,size=6pt](R,A);
+        \begin{scope}[ dim style/.append style={red, dashed},
+            dim fence style/.style={red, dashed}]                
+            \tkzDrawSegment[dim={\(6\),-8mm,above right=2mm}](A,C);
+        \end{scope}
+    \end{tikzpicture}
+    % \end{minipage}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    \begin{enumerate}
+        \item $A$, $R$ et $C$ sont alignés.
+        
+        Comme $BCRE$ est un parallélogramme, $(BE)$ et $(RA)$ sont parallèles.
+
+        $(BA)$ et $(ER)$ se coupent en $P$.
+
+        \medskip
+        Le théorème de Thalès permet d'écrire : $\dfrac{BP}{AP}=\dfrac{PE}{PR}=\dfrac{BE}{RA}$ or $\dfrac{BE}{RA}=2$
+        car d'après les codages de la figure, $BE=2RA$.
+
+        \medskip
+        Donc $\dfrac{BP}{AP}=2$ donc $BP = 2AP$.
+        \item  On peut obtenir la longueur $AR$ de plusieurs façons.
+        
+        \begin{enumerate}
+            \item \textbf{Première façon}
+            
+            Comme $BRCE$ est un parallélogramme, $(BC)$ et $(PR)$ sont parallèlles.
+
+            D'après le théorème de Thalès, les triangles $APR$ et $ABC$ sont semblables car en configuration de Thalès.
+
+            \medskip
+            $\dfrac{AR}{AC}=\dfrac{AP}{AB}=\dfrac{PR}{BC}$, on va utiliser la première égalité $\dfrac{AR}{AC}=\dfrac{AP}{AB}$
+
+            \medskip
+            donc $\dfrac{AR}{AC}=\dfrac{AP}{AP+PB}=\dfrac{AP}{AP+2AP}=\dfrac{1}{3}$
+
+            \medskip
+            On en déduit que $AC=3AR$ donc le coefficient d'agrandissement entre les deux triangles vaut $3$.
+
+            \medskip
+            or $AR= \dfrac{1}{3}AC=\dfrac{1}{3}\times 6 = 2$
+
+            \medskip
+            \item \textbf{Deuxième façon}
+            
+            Comme $BRCE$ est un parallélogramme, $BE=CR$.
+
+            \medskip
+            D'après la figure $AR=\dfrac{1}{2}BE=\dfrac{1}{2}CR$ donc $CR=2AR$.
+
+            \medskip
+            Donc $AC=AR+CR=AR+2AR=3AR$ donc $AR=\dfrac{1}{3}AC$ soit $AR=\dfrac{1}{3}\times 6=2$.
+            \item \textbf{Troisième façon}
+            
+            Comme $BRCE$ est un parallélogramme, $BE=CR$.
+
+            \medskip
+            D'après la figure $BE=2AR$ donc $CR=2AR$.
+
+            \medskip
+            Donc $AC=AR+CR=AR+2AR=3AR$, comme $AC=6$ et que $3AR=6$ on en déduit que $AR=2$.
+        \end{enumerate}
+    \end{enumerate}
+\end{corrige}
+

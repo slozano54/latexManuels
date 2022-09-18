@@ -1,0 +1,49 @@
+\begin{exercice*}
+    Pour trouver la hauteur d'une éolienne, on a les renseignements suivants :
+
+    \begin{itemize}
+        \item Les points $O$, $A$ et $C$ sont alignés.
+        \item Les points $O$, $B$ et $D$ sont alignés.
+        \item Les angles $\widehat{OAB}$ et $\widehat{ACD}$ sont droits.
+        \item $OA = \Lg[m]{11}$.
+        \item $AC = \Lg[m]{594}$.
+        \item $AB = \Lg[m]{1.5}$.
+    \end{itemize}
+
+    \begin{minipage}{1\linewidth}
+    \begin{center}
+        La figure n'est pas à l'échelle.
+
+        \includegraphics[scale=0.4]{\currentpath/images/eolienne.png}    
+    \end{center}
+    \creditLibre{Cahier iparcours 2022 de $3^e$}
+    \end{minipage}    
+
+    \begin{enumerate}
+        \item Expliquer pourquoi les droites $(AB)$ et $(CD)$ sont parallèles.
+        \item Calculer la hauteur $CD$ de l'éolienne. Justifier.
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    \begin{enumerate}
+        \item Les droites $(AB)$ et $(CD)$ sont perpendiculaires à la même droite $(AC)$, elles sont donc parallèles entre elles.
+        \item $OC = OA+AC = \Lg[m]{11}+\Lg[m]{594} = \Lg[m]{605}$
+        \begin{itemize}
+            \item Les droites $(BD)$ et $(AC)$ sont sécantes en $O$.
+            \item $(AB)$ et $(CD)$ sont parallèles.
+        \end{itemize}
+
+        Le théorème de Thalès permet d'écrire $\dfrac{OA}{OC}=\dfrac{OB}{OD}=\dfrac{BA}{DC}$ d'où $\dfrac{11}{605}=\dfrac{OB}{OD}=\dfrac{\num{1.5}}{DC}$.
+
+        \medskip
+        D'où $CD = \dfrac{605\times \num{1.5}}{11}=\num{82.5}$.
+
+        \medskip
+        L'éolienne mesure donc \Lg{82.5}.
+    \end{enumerate}
+\end{corrige}
+
+
+
