@@ -1,0 +1,36 @@
+\begin{exercice*}
+    \begin{itemize}
+        \item Les points $$, $$, $$ et $$ sont alignés.
+        \item Les points $$, $$, $$ et $$ sont alignés.
+        \item Les droites $(DE)$ et $(FG)$ sont parallèles.
+    \end{itemize}
+
+    \begin{minipage}{1\linewidth}
+    \begin{center}
+        \includegraphics[scale=0.4]{\currentpath/images/pythagorePuisThales.png}    
+    \end{center}
+    \creditLibre{Cahier iparcours 2022 de $3^e$}
+    \end{minipage}    
+
+    \begin{enumerate}
+        \item Montrer que le triangle $AFG$ est rectangle.
+        \item Calculer la longueur du segment $[AD]$.
+        \item En déduire la longueur du segment $[FD]$.
+        \item Déterminer si les droites $(FG)$ et $(BC)$ sont parallèles.        
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+
+    \begin{enumerate}
+        \item \Pythagore[Reciproque]{FGA}{5}{3}{4}
+        \item \Thales[Droites]{ADEFG}{5}{AG}{3}{AD}{AE}{8.1}
+        
+        $FD=AD-AF=\num{13.5}-5=\Lg{8.5}$.
+        \item \Thales[Reciproque,Droites,Produit]{ABCFG}{5}{6.25}{4}{5}{}{}
+    \end{enumerate}
+\end{corrige}
+
+
+
