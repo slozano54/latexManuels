@@ -1,0 +1,50 @@
+\begin{exercice*}
+    Sur la figure ci-dessous, réalisée à main levée :
+    \begin{itemize}
+        \item Les points $S$, $R$, $I$ et $N$ sont alignés.
+        \item Les points $T$, $P$, $I$ et $M$ sont alignés.
+        \item $IR=\Lg{8}$, $RP = \Lg{10}$, $IP=\Lg{4.8}$, $IM=\Lg{4}$.
+        \item $IS=\Lg{10}$, $IN=\Lg{6}$, $IT=\Lg{6}$.
+    \end{itemize}
+
+    \begin{minipage}{1\linewidth}
+    \begin{center}
+        \textit{Il n'est pas demandé de construire la figure.}
+
+        \begin{tikzpicture}[scale=0.4]        
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+            \coordinate[label=below:$I$] (I) at (5,5);
+            \coordinate[label=right:$M$] (M) at (8,8);
+            \coordinate[label=below left:$N$] (N) at (9,3);
+            \tkzDefPointBy[homothety=center I ratio -1.5](N) \tkzGetPoint{S};
+            \tkzDefPointBy[homothety=center I ratio -1.5](M) \tkzGetPoint{T};
+            \tkzDefPointBy[homothety=center I ratio -1.2](N) \tkzGetPoint{R};
+            \tkzDefPointBy[homothety=center I ratio -1.2](M) \tkzGetPoint{P};
+            \tkzLabelPoints[right](P);
+            \tkzLabelPoints[left](T);
+            \tkzLabelPoints[above right](R);
+            \tkzLabelPoints[below left](S);
+            \tkzDrawLines[decorate,decoration={random steps,segment length=0.5mm,amplitude=0.1mm}](S,N T,M S,T R,P M,N);
+        \end{tikzpicture}        
+    \end{center}
+    \end{minipage}    
+
+    \begin{enumerate}
+        \item Démontrer que $(ST)$ et $(RP)$ sont parallèles.
+        \item En déduire $ST$.
+        \item Déterminer si $(MN)$ et $(ST)$ sont parallèles.        
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+
+    \begin{enumerate}
+        \item \Thales[Reciproque,Droites,Produit]{ISTRP}{8}{10}{4.8}{6}{}{}
+        \item \Thales[Droites]{ISTRP}{8}{4.8}{10}{10}{6}{ST}       
+        \item \Thales[Reciproque,Droites,Produit]{ISTNM}{6}{10}{4}{6}{}{}        
+    \end{enumerate}
+\end{corrige}
+
+
+
