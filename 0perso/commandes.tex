@@ -212,3 +212,6 @@
 %\footnotetext{Source : #1}
 \blfootnote{Source : #1}
 }
+
+%macro pour entourer les opérandes
+\newcommand{\OPoval}[3]{\dimen1=#2\opcolumnwidth \ovalnode{#1}{\kern\dimen1 #3\kern\dimen1}}

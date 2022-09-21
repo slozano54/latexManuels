@@ -1,0 +1,61 @@
+\section{Nombres premiers}
+\begin{definition}[Nombre premier]
+	Un nombre entier supérieur à 1 est un \textbf{nombre premier} s'il admet \textbf{exactement} deux diviseurs, 1 et lui-même.
+\end{definition}
+
+\begin{remarque}
+	\begin{itemize}
+		\item Quelques nombres premiers : $2$ ; $3$ ; $5$ ; $7$ ; $11$ ; $13$ ; $17$ ; $19$ ; $23$ ; \ldots
+		\item $119$ n'est pas divisible par $2$, $3$, $5$ ou $9$ d'après les critères de divisibilité.
+		
+		Pour autant, il n'est pas premier car $7\times 17 = 119$. 
+	\end{itemize}
+\end{remarque}	
+
+\begin{methode}[Primalité ou pas]
+	Pour savoir si un nombre entier est premier :
+	\begin{itemize}
+		\item Il est nécessaire de tester sa divisibilité par tous les nombres premiers qui lui sont inférieurs,
+		\item Mais il peut être suffisant de tester par beaucoup moins que ça si le nombre entier n'est pas premier, puisque dès lors qu'il a un autre diviseur que 1 et lui-même, il n'est pas premier dans ce cas il a alors au moins trois diviseurs. 
+	\end{itemize}
+	\exercice
+	Pour chaque nombre, déterminer si c'est une nombre premier.
+	
+	\begin{itemize}
+		\item $23$
+		\item $\num{18645}$
+	\end{itemize}
+
+	\correction
+	\begin{itemize}
+		\item $23$ n'est divisible par aucun des nombres premiers qui lui sont inférieurs, $2$, $3$, $5$, $7$, $11$, $13$, $17$ et $19$, $23$ est donc premier.
+		\item $\num{18645}$ se termine par $5$ donc il est divisible par $5$.
+		$\num{18645}$ admet donc au moins trois diviseurs $1$, $5$ et $\num{18645}$, il n'est pas premier.
+	\end{itemize}
+\end{methode}
+
+\begin{exemple*1}
+$29$ est un nombre premier, en effet, On teste sa divisibilité par $2$, $3$, $5$, $7$, $11$, $13$, $17$, $19$ et $23$ :
+\begin{itemize}
+	\item $29=14\times 2+1$ donc $2$ ne divise pas $29$.
+	\item $29=9\times 3+2$ donc $29$ n'est pas divisible par $3$.
+	\item $29=5\times 5+4$ donc $29$ n'est pas un multiple de $5$.
+	\item $29=4\times 7+1$ donc $7$ n'est pas un diviseur de $29$.
+	\item $29=2\times 11+7$ donc $11$ ne divise pas $29$.
+	\item $29=2\times 13+3$ donc $29$ n'est pas divisible par $13$.
+	\item $29=1\times 17+12$ donc $29$ n'est pas un multiple de $17$.
+	\item $29=1\times 19+10$ donc $19$ n'est pas un diviseur de $29$.
+	\item $29=1\times 23+6$ donc $23$ n'est pas un diviseur de $29$.
+\end{itemize}
+
+$29$ n'est divisible par aucun des nombres premiers qui lui sont iférieurs, il est donc premier.
+\end{exemple*1}
+
+\begin{exemple*1}
+	$27$ n'est pas un nombre premier, en effet, on teste sa divisibilité au plus par $2$, $3$, $5$, $7$, $11$, $13$, $17$, $19$ et $23$ :
+	\begin{itemize}
+		\item $27=13\times 2+1$ donc $2$ ne divise pas $27$.
+		\item $27=9\times 3+0$ donc 3 est un diviseur de $27$ !
+	\end{itemize}
+Inutile de continuer, $27$ a au moins trois diviseurs $1$, $3$ et $27$, il n'est donc pas premier.
+\end{exemple*1}
