@@ -1,44 +1,49 @@
-\begin{exercice*}[Priorités opératoires]
-    Calculer.
-    \begin{itemize}
-        \item[] $ A = 25\div(-5)\times4$
-        \item[] $ B = (-8+9-5)\times(-5)$
-        \item[] $ C = 5\times4\div(-30+28)$
-        \item[] $ D = -2\times(-2)\times(22-25)$
-        \item[] $ E = 7\times(-8)-27\div9$
-    \end{itemize}
-
-    % \href{https://coopmaths.fr/mathalea.html?ex=4C11,s=3,s2=true,n=5,i=1&v=l}{Cliquer pour vous entraîner sur le site \mathaleaLogo} 
-    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4C11,s=3,s2=true,n=5,i=1&v=l}
+\begin{exercice*}[Programme de calcul]
+    Voici un programme de calcul :
+    \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+        \ProgCalcul[Enonce,ThemePerso]{%
+            Choisir un nombre.,
+            Multiplier ce nombre par $(-5)$.,
+            Doubler le résultat obtenu.,
+        }
+    }  
+    Applique ce programme à chacun de ces nombres :
+    \begin{multicols}4
+        \begin{enumerate}
+            \item $ 5 $
+            \item $ 0 $
+            \item $ (-5) $
+            \item $ (-1,2) $
+        \end{enumerate}
+    \end{multicols}
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Que remarques-tu ? Expliquer pourquoi.
+    \end{enumerate}
+        
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    \phantom{rrr}
-    \begin{multicols}2
-    \begin{list}{}{}
-        \item 
-        $ A = \mathbf{{\color[HTML]{f15929}25\div(-5)}}\times4$ \\
-        $ A = -5\times4$ \\
-        $ \psshadowbox{A = -20} $ 
-        \item 
-        $ B = (\mathbf{{\color[HTML]{f15929}-8+9-5}})\times(-5)$ \\
-        $ B = -4\times(-5)$ \\
-        $ \psshadowbox{B = 20} $ 
-        \columnbreak
-        \item 
-        $ C = 5\times4\div(\mathbf{{\color[HTML]{f15929}-30+28}})$ \\
-        $ C = \mathbf{{\color[HTML]{f15929}5\times4}}\div(-2)$ \\
-        $ C = 20\div(-2)$ \\
-        $ \psshadowbox{C = -10} $ 
-        \item 
-        $ D = -2\times(-2)\times(\mathbf{{\color[HTML]{f15929}22-25}})$ \\
-        $ D = -2\times(-2)\times(-3)$ \\
-        $ \psshadowbox{D = -12} $ 
-        \item
-        $ E = 7\mathbf{{\color[HTML]{f15929}\times}}(-8)-27\mathbf{{\color[HTML]{f15929}\div}}9$ \\
-        $ E = -56-3$ \\
-        $ \psshadowbox{E = -59} $ 
-    \end{list}
-\end{multicols}
+    \phantom{rrr}    
+    \begin{multicols}4
+        \begin{enumerate}
+            \item \ProgCalcul{5,*(-5) *2}            
+            \item \ProgCalcul{0,*(-5) *2}            
+            \item \ProgCalcul{-5,*(-5) *2}            
+            \item \ProgCalcul{-1.2,*(-5) *2}
+        \end{enumerate}
+    \end{multicols}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item On remarque que chaque fois le nombre de départ est multiplié par $(-10)$. En effet :
+        \end{enumerate}
+        % La commande doit être en dehors de l'environnement enumerate sinon bug !
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+            \ProgCalcul[Application,SansCalcul,ThemePerso]{%                
+                Multiplier ce nombre par $(-5)$.,
+                Doubler le résultat obtenu.,
+                §
+                x,*(-5) *2,(-5)\times x (-10)\times x
+            }
+        } 
 \end{corrige}
-
