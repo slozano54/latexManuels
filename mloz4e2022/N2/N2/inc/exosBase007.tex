@@ -1,0 +1,43 @@
+\begin{exercice*}[Conjonction de phénomènes]
+    Pour sa résolution de cette année, Aude a décidé de ne pas abuser des bonnes choses.
+
+    Elle s'accorde le droit d'aller au restaurant tous les $15$ jours et d'aller au cinéma tous les $10$ jours.
+
+    Aujourd'hui, elle s'est fait un « restau - ciné ».
+
+    \begin{enumerate}
+        \item Jsutifier que cela ne pourra pas se produire à nouveau dans $20$ jours.
+        \item Déterminer au bout de combien de temps elle s'en fera un autre.
+    \end{enumerate}
+
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4A12,s=1,n=1,cd=1,i=0&v=l}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}    
+    \begin{enumerate}
+        \item $20$ est un multipe de $10$ mais pas de $15$. Donc il n'y aura pas un autre \og restau - ciné \fg dans $20$ jours.
+        \item Aude va au restaurant à chaque multiple de {\bfseries \color{red}15} jours, au cinéma à chaque multiple de {\bfseries \color{green}10} jours.\\
+        elle se fera à nouveau un « restau - ciné » à chaque multiple commun de {\bfseries \color{red}15} et de {\bfseries \color{green}10}.\\
+        Pour trouver le nombre de jours avant le prochain « restau - ciné », on cherche le plus petit multiple qu'ils ont en commun.\\
+        Un moyen d'y arriver est de décomposer les nombres de jours en produits de facteurs premiers et d'identifier les différences entre les décompositions :\\
+{\bfseries \color{red}15} = {\bfseries \color{blue}5} $\times$ {\bfseries \color{red}3} \\
+        {\bfseries \color{green}10} = {\bfseries \color{blue}5} $\times$ {\bfseries \color{green}2}\\
+On multiplie les facteurs communs aux deux décompositions avec les facteurs spécifiques à chaque décomposition :\\
+{\bfseries \color{blue}5} $\times$ {\bfseries \color{red}3} $\times$ {\bfseries \color{green}2} = 30\\
+      Ce phénomène se produira à nouveau au bout de 30 jours, 
+      après {\bfseries \color{green}2 sorties} pour {\bfseries \color{red}aller au restaurant} et après {\bfseries \color{red}3 sorties} pour {\bfseries \color{green}aller au cinéma}.\\
+30 est bien un multiple de {\bfseries \color{red}15} car :
+         {\bfseries \color{blue}5} $\times$ {\bfseries \color{red}3} $\times$ {\bfseries \color{green}2} =
+         ({\bfseries \color{blue}5} $\times$ {\bfseries \color{red}3}) $\times$ {\bfseries \color{green}2} =
+         {\bfseries \color{red}15} $\times$ {\bfseries \color{green}2}.\\
+        30 est bien un multiple de {\bfseries \color{green}10} car :
+         {\bfseries \color{blue}5} $\times$ {\bfseries \color{red}3} $\times$ {\bfseries \color{green}2} =
+         {\bfseries \color{blue}5} $\times$ {\bfseries \color{green}2} $\times$ {\bfseries \color{red}3} =
+         ({\bfseries \color{blue}5} $\times$ {\bfseries \color{green}2}) $\times$ {\bfseries \color{red}3} =
+         {\bfseries \color{green}10} $\times$ {\bfseries \color{red}3}.\\
+    \end{enumerate}
+
+
+\end{corrige}
+
