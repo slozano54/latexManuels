@@ -14,32 +14,75 @@
 \end{remarque}	
 
 \subsection{Nombres premiers inférieurs à 100}
-Les cases grisées sont celles qui contiennent les nombres premiers.
+	On désigne sous le nom de crible d'Eratosthène (vers 276 av.J.-C - vers 194 av.J.-C),
+    une méthode de recherche des nombres premiers plus petits qu'un entier naturel $N$ donné.
+    \smallskip
+    Pour ceci, on écrit la liste de tous les nombres jusqu'à $N$, puis on applique l'algorithme suivant.
+	\begin{spacing}{0.5}
+    \begin{myBox}{Crible d'Eratosthène}		
+        \begin{list}{$\bullet$}{}
+            \item On élimine $1$, en le barrant par exemple.
+            \item On entoure $2$ et on élimine tous les multiples de $2$.
+            \item On recommence avec le plus petit nombre non éliminé restant dans la liste : $3$.
+            \item On recommence avec le plus petit nombre non entouré et non éliminé : $5$.
+            \item \dots
+            \item On réitère le procédé jusqu'à la partie entière de la racine carrée de $N$.
+        \end{list}
+    \end{myBox}
+	\end{spacing}
+    Les nombres non éliminés sont les nombres premiers jusqu'à $N$.
 
-\newcommand{\cribleEratostheneColor}{gray!40}
+	En appliquant cet algorithme avec les entiers inférieurs à $100$, on obtient le tableau suivant :
+
 \begin{tabularx}{0.75\linewidth}{|*{10}{>{\centering\arraybackslash}X|}}
 	\hline	
-    $1 $  & \cellcolor{\cribleEratostheneColor}$2 $  & \cellcolor{\cribleEratostheneColor}$3 $  & $4 $  & \cellcolor{\cribleEratostheneColor}$5 $  & $6 $  & \cellcolor{\cribleEratostheneColor}$7 $  & $8 $  & $9 $  & $10 $\\
+	\xout{$1 $}  & \Circled{$2 $}  & \Circled{$3 $}  & \xout{$4 $}  & \Circled{$5 $}  & \xout{$6 $}  & \Circled{$7 $}  & \xout{$8 $}  & \xout{$9 $}  & \xout{$10 $}\\
 	\hline
-    \cellcolor{\cribleEratostheneColor}$11$  & $12$  & \cellcolor{\cribleEratostheneColor}$13$  & $14$  & $15$  & $16$  & \cellcolor{\cribleEratostheneColor}$17$  & $18$  & \cellcolor{\cribleEratostheneColor}$19$  & $20 $\\
+	\Circled{$11$}  & \xout{$12$} & \Circled{$13$}  & \xout{$14$} & \xout{$15$} & \xout{$16$} & \Circled{$17$}  & \xout{$18$} & \Circled{$19$}  & \xout{$20 $}\\
 	\hline
-    $21$  & $22$  & \cellcolor{\cribleEratostheneColor}$23$  & $24$  & $25$  & $26$  & $27$  & $28$  & \cellcolor{\cribleEratostheneColor}$29$  & $30 $\\
+	\xout{$21$} & \xout{$22$} & \Circled{$23$}  & \xout{$24$} & \xout{$25$} & \xout{$26$} & \xout{$27$} & \xout{$28$} & \Circled{$29$}  & \xout{$30 $}\\
 	\hline
-    \cellcolor{\cribleEratostheneColor}$31$  & $32$  & $33$  & $34$  & $35$  & $36$  & \cellcolor{\cribleEratostheneColor}$37$  & $38$  & $39$  & $40 $\\
+	\Circled{$31$}  & \xout{$32$} & \xout{$33$} & \xout{$34$} & \xout{$35$} & \xout{$36$} & \Circled{$37$}  & \xout{$38$} & \xout{$39$} & \xout{$40 $}\\
 	\hline
-    \cellcolor{\cribleEratostheneColor}$41$  & $42$  & \cellcolor{\cribleEratostheneColor}$43$  & $44$  & $45$  & $46$  & \cellcolor{\cribleEratostheneColor}$47$  & $48$  & $49$  & $50 $\\
+	\Circled{$41$}  & \xout{$42$} & \Circled{$43$}  & \xout{$44$} & \xout{$45$} & \xout{$46$} & \Circled{$47$}  & \xout{$48$} & \xout{$49$} & \xout{$50 $}\\
 	\hline
-    $51$  & $52$  & \cellcolor{\cribleEratostheneColor}$53$  & $54$  & $55$  & $56$  & $57$  & $58$  & \cellcolor{\cribleEratostheneColor}$59$  & $60 $\\
+	\xout{$51$} & \xout{$52$} & \Circled{$53$}  & \xout{$54$} & \xout{$55$} & \xout{$56$} & \xout{$57$} & \xout{$58$} & \Circled{$59$}  & \xout{$60 $}\\
 	\hline
-    \cellcolor{\cribleEratostheneColor}$61$  & $62$  & $63$  & $64$  & $65$  & $66$  & \cellcolor{\cribleEratostheneColor}$67$  & $68$  & $69$  & $70 $\\
+	\Circled{$61$}  & \xout{$62$} & \xout{$63$} & \xout{$64$} & \xout{$65$} & \xout{$66$} & \Circled{$67$}  & \xout{$68$} & \xout{$69$} & \xout{$70 $}\\
 	\hline
-    \cellcolor{\cribleEratostheneColor}$71$  & $72$  & \cellcolor{\cribleEratostheneColor}$73$  & $74$  & $75$  & $76$  & $77$  & $78$  & \cellcolor{\cribleEratostheneColor}$79$  & $80 $\\
+	\Circled{$71$}  & \xout{$72$} & \Circled{$73$}  & \xout{$74$} & \xout{$75$} & \xout{$76$} & \xout{$77$} & \xout{$78$} & \Circled{$79$}  & \xout{$80 $}\\
 	\hline
-    $81$  & $82$  & \cellcolor{\cribleEratostheneColor}$83$  & $84$  & $85$  & $86$  & $87$  & $88$  & \cellcolor{\cribleEratostheneColor}$89$  & $90 $\\
+	\xout{$81$} & \xout{$82$} & \Circled{$83$}  & \xout{$84$} & \xout{$85$} & \xout{$86$} & \xout{$87$} & \xout{$88$} & \Circled{$89$}  & \xout{$90 $}\\
 	\hline
-    $91$  & $92$  & $93$  & $94$  & $95$  & $96$  & \cellcolor{\cribleEratostheneColor}$97$  & $98$  & $99$  & $100$ \\
+	\xout{$91$} & \xout{$92$} & \xout{$93$} & \xout{$94$} & \xout{$95$} & \xout{$96$} & \Circled{$97$}  & \xout{$98$} & \xout{$99$} & \xout{$100$}\\
 	\hline
 \end{tabularx}
+
+% Les cases grisées sont celles qui contiennent les nombres premiers.
+% \newcommand{\cribleEratostheneColor}{gray!40}
+% \begin{tabularx}{0.75\linewidth}{|*{10}{>{\centering\arraybackslash}X|}}
+% 	\hline	
+%     $1 $  & \cellcolor{\cribleEratostheneColor}$2 $  & \cellcolor{\cribleEratostheneColor}$3 $  & $4 $  & \cellcolor{\cribleEratostheneColor}$5 $  & $6 $  & \cellcolor{\cribleEratostheneColor}$7 $  & $8 $  & $9 $  & $10 $\\
+% 	\hline
+%     \cellcolor{\cribleEratostheneColor}$11$  & $12$  & \cellcolor{\cribleEratostheneColor}$13$  & $14$  & $15$  & $16$  & \cellcolor{\cribleEratostheneColor}$17$  & $18$  & \cellcolor{\cribleEratostheneColor}$19$  & $20 $\\
+% 	\hline
+%     $21$  & $22$  & \cellcolor{\cribleEratostheneColor}$23$  & $24$  & $25$  & $26$  & $27$  & $28$  & \cellcolor{\cribleEratostheneColor}$29$  & $30 $\\
+% 	\hline
+%     \cellcolor{\cribleEratostheneColor}$31$  & $32$  & $33$  & $34$  & $35$  & $36$  & \cellcolor{\cribleEratostheneColor}$37$  & $38$  & $39$  & $40 $\\
+% 	\hline
+%     \cellcolor{\cribleEratostheneColor}$41$  & $42$  & \cellcolor{\cribleEratostheneColor}$43$  & $44$  & $45$  & $46$  & \cellcolor{\cribleEratostheneColor}$47$  & $48$  & $49$  & $50 $\\
+% 	\hline
+%     $51$  & $52$  & \cellcolor{\cribleEratostheneColor}$53$  & $54$  & $55$  & $56$  & $57$  & $58$  & \cellcolor{\cribleEratostheneColor}$59$  & $60 $\\
+% 	\hline
+%     \cellcolor{\cribleEratostheneColor}$61$  & $62$  & $63$  & $64$  & $65$  & $66$  & \cellcolor{\cribleEratostheneColor}$67$  & $68$  & $69$  & $70 $\\
+% 	\hline
+%     \cellcolor{\cribleEratostheneColor}$71$  & $72$  & \cellcolor{\cribleEratostheneColor}$73$  & $74$  & $75$  & $76$  & $77$  & $78$  & \cellcolor{\cribleEratostheneColor}$79$  & $80 $\\
+% 	\hline
+%     $81$  & $82$  & \cellcolor{\cribleEratostheneColor}$83$  & $84$  & $85$  & $86$  & $87$  & $88$  & \cellcolor{\cribleEratostheneColor}$89$  & $90 $\\
+% 	\hline
+%     $91$  & $92$  & $93$  & $94$  & $95$  & $96$  & \cellcolor{\cribleEratostheneColor}$97$  & $98$  & $99$  & $100$ \\
+% 	\hline
+% \end{tabularx}
 
 \begin{remarque}
 	Liste des nombres premiers à connaître par coeur.
