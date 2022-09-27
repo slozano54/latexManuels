@@ -1,39 +1,49 @@
+\begin{exercice*}
+    Calculer le nombre $n$ sachant que :
+    \begin{enumerate}
+            \item Le quotient de la division euclidienne de $71$ par $n$ vaut $5$ et que le reste vaut $6$.
+            \item Le quotient de la division euclidienne de $148$ par $19$ vaut $7$ et que le reste vaut $n$.            
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}
+    % \phantom{rrr}    
     Calculer le nombre $n$ sachant que :
 
     \begin{enumerate}
             \item Le quotient de la division euclidienne de $71$ par $n$ vaut $5$ et que le reste vaut $6$.
-
+            
             $71 = 5\times n + 6$ soit $5\times n + 6 =71$
-
+            
             On peut trouver $n$ :
             \begin{itemize}
-                \item En remontant un programme de calcul :
-
+                \item En remontant un programme de calcul : 
+                
                 \ProgCalcul[SansCalcul]{n,*5 +6,5\times n 5\times n+6=71}
 
                 \ProgCalcul[SansCalcul]{5\times n+6=71,-6 /5,5\times n=65 n=65\div 5=13}
-
+                
                 \ProgCalcul{71,-6 /5}
                 \item En résolvant l'équation :
             \ResolEquation[Lettre=n,Decomposition,Fleches,Decimal,Ecart=1.1]{0}{71}{5}{6}
             \end{itemize}
-            \item Le quotient de la division euclidienne de $148$ par $19$ vaut $7$ et que le reste vaut $n$.
-
+            \item Le quotient de la division euclidienne de $148$ par $19$ vaut $7$ et que le reste vaut $n$.            
+            
             $148 = 7\times 19 + n$ soit $7\times 19 + n = 148$ ou $133+n=148$ ou encore $n+133=148$
 
             On peut trouver $n$ :
             \begin{itemize}
-                \item En remontant un programme de calcul :
-
+                \item En remontant un programme de calcul : 
+                
                 \ProgCalcul[SansCalcul]{n,+133,n+133=148}
 
                 \ProgCalcul[SansCalcul]{n+133=148,-133,n=148-133=15}
-
+                
                 \ProgCalcul{148,-133}
                 \item En résolvant l'équation :
             \ResolEquation[Lettre=n,Decomposition,Fleches,Ecart=1.2]{0}{148}{1}{133}
             \end{itemize}
 
     \end{enumerate}
+\end{corrige}
+
