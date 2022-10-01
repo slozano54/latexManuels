@@ -1,4 +1,4 @@
-\begin{exercice*}
+\begin{exercice*}[Engrenages]
     \newcommand{\roue}[4]{% #1 = rayon, #2 = nombre de dents, #3 = X centre, #4 = Y centre
         \foreach \i in {1,2,...,#2}
         {
@@ -25,24 +25,26 @@
         \end{scope}
         }
     }
+    % \begin{minipage}{0.6\linewidth}
+        On s'intéresse aux engrenages de deux roues.
 
-    On s'intéresse à des engrenages composés de plusieurs roues.
+        Sur la figure ci-dessous les nombres de dents ne correspondent pas à ceux des questions.
 
-    Sur la figure ci-dessous les nombres de dents ne correspond pas à ceux aux questions.
-
-    On fait tourner la roue n°$1$ d'un nombre entier de tours.
-
-    \begin{tikzpicture}
-        \roue{1}{12}{0}{0}
-        \roue{0.7}{8}{1.8}{0.9}
-        \node at (1.05,0.6) {\textbullet};
-        \node at (1.25,0.7) {\textbullet};
-        \tkzDefPoint(0,0){A}
-        \tkzLabelPoint[above](A){roue n°$1$}
-        \tkzDefPoint(1.8,0.9){B}
-        \tkzLabelPoint[above](B){roue n°$2$}
-    \end{tikzpicture}
-
+        On fait tourner la roue n°$1$ d'un nombre entier de tours.
+    % \end{minipage}
+    % \begin{minipage}{0.4\linewidth}
+        % \hspace*{10mm}
+        \begin{tikzpicture}
+            \roue{1}{12}{0}{0}
+            \roue{0.7}{8}{1.8}{0.9}
+            \node at (1.05,0.6) {\textbullet};
+            \node at (1.25,0.7) {\textbullet};
+            \tkzDefPoint(0,0){A}
+            \tkzLabelPoint[above](A){roue n°$1$}
+            \tkzDefPoint(1.8,0.9){B}
+            \tkzLabelPoint[above](B){roue n°$2$}
+        \end{tikzpicture}
+    % \end{minipage}
     \begin{enumerate}
         \item     La roue n°$1$ possède $6$ dents et la roue n°$2$ a $20$ dents.
         \begin{enumerate}
@@ -51,12 +53,13 @@
         \end{enumerate}
         \item La roue n°$1$ possède $72$ dents et la roue n°$2$ a $39$ dents.
         \begin{enumerate}
-            \item Décomposer $72$ et $39$ en produit de facteurs premiers.
+            \item Décomposer $72$ et $39$ en produit de facteurs 
+            
+            premiers.
             \item En déduire le nombre de tours de chaque roue avant le retour à leur position initiale.
         \end{enumerate}
         \item La roue n°$2$ a maintenant $38$ dents. Déterminer le nombre de dents de la roue n°$1$ qui ferait $19$ tours pendant que la roue n°$2$ en fait $8$.
     \end{enumerate}        
-
     \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=3A12,s=false,n=4&v=l}
 \end{exercice*}
 \begin{corrige}
