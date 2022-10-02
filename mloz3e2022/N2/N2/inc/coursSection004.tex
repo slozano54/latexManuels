@@ -1,22 +1,71 @@
-\section{Fractions irréductibles}
-\begin{definition}[Fraction irreductible]
-    Une fraction est dite \textbf{irréductible} lorsque son numérateur et son dénominateur n'ont pas d'autre diviseur commun que 1.
-\end{definition}
+\section{Décomposition en facteurs premiers}
 
 \begin{propriete}[\admise]
-    Toute fraction admet une unique écriture sous forme de fraction irréductible
+Tout nombre entier $n$ supérieur à 1 admet une unique \textbf{décomposition} en 
+
+produit de \textbf{facteurs premiers}.
+$$n=p_1^{a_1}\times...\times p_k^{a_k}$$
 \end{propriete}
 
-\begin{exemple}
-    Démontrer que la fraction $\dfrac23$ est irréductible.
+\begin{methode}[\mbox{Décomposition en facteurs premiers}]
+    Soit N un nombre entier quelconque, dont on cherche la décomposition en facteurs premiers :
+    \begin{itemize}
+        \item On teste la divisibilité de N par les nombres premiers en commençant par 2
+        \item Si N est divisible par 2, on teste à nouveau la divisibilité par 2 du quotient de N par 2
+        \item Tant que c'est possible on continue avec 2
+        \item Lorsque le quotient n'est plus divisible par 2, on teste avec 3
+        \item Ainsi de suite avec les nombres premiers 
+        \item L'algorithme se termine au plus tard avec le nombre premier qui précède N.
+    \end{itemize}
+    \exercice
+    Décomposer $396$ en produit de facteurs premiers.
     \correction
-    $2$ et $3$ n'ont pas d'autre diviseur commun que 1 donc la fraction $\dfrac23$ est irréductible.
+    $396 = \colorbox{red!30}{2} \times  198$\\
+    $396 = \colorbox{red!30}{2} \times  \colorbox{red!30}{2} \times  99$\\
+    $396 = \colorbox{red!30}{2} \times  \colorbox{red!30}{2} \times  \colorbox{blue!30}{3} \times  33$\\
+    $396 = \colorbox{red!30}{2} \times  \colorbox{red!30}{2} \times  \colorbox{blue!30}{3} \times  \colorbox{blue!30}{3} \times  \colorbox{orange}{11}$\\
+    {\bfseries Donc la décomposition en produit de facteurs premiers de $\mathbf{396}$ vaut $\mathbf{2 \times  2 \times  3 \times  3 \times  11 = 2^2\times 3^2\times 11}$}
+
+\end{methode}
+
+\begin{exemple}
+    Décomposer $\num{3626}$ en produit de facteurs premiers.
+    \correction
+    $\num{3626}=\colorbox{red!30}{2}\times \num{1813}$\\
+    $\num{3626}=\colorbox{red!30}{2}\times\colorbox{blue!30}{7}\times 259$\\
+    $\num{3626}=\colorbox{red!30}{2}\times\colorbox{blue!30}{7}\times\colorbox{blue!30}{7}\times \colorbox{orange}{37}$
+
+    \medskip
+    d'où $\num{3626}=\colorbox{red!30}{2}\times $\colorbox{blue!30}{$7^2$}$\times $ \colorbox{orange}{$37$}
 \end{exemple}
 \begin{exemple}
-    Démontrer que la fraction $\dfrac{322}{\num{1078}}$ n'est pas irréductible.
-    \correction    
-    $14$ divise $322$ et $\num{1078}$, donc on peut simplifier $\dfrac{322}{\num{1078}}$ par $14$.
+    Décomposer $\num{504}$ en produit de facteurs premiers.
+    \correction
+    $504=\colorbox{red!30}{2}\times 252$ car 504 est pair donc divisible par 2!\\
+    $504=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times 126$ car 252 est pair!\\
+    $504=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times 63$ car 126 est pair!\\
+    $504=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{blue!30}{3}\times 21$ car 63 est multiple de 3\\
+    $504=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{blue!30}{3}\times\colorbox{blue!30}{3}\times \colorbox{green!30}{7}$
+    
+    \medskip
+    Il ne reste qu'à écrire la décomposition en produit de facteurs premiers de $504$
 
-    \medskip    
-    $\dfrac{322}{\num{1078}}=\dfrac{23\times14}{77\times14}=\dfrac{23}{77}$
+    \medskip
+    $504=\colorbox{red!30}{2}\times \colorbox{red!30}{2}\times \colorbox{red!30}{2}\times \colorbox{blue!30}{3}\times \colorbox{blue!30}{3}\times \colorbox{green!30}{7}$
+
+    \medskip
+    Puis on utilise les notations puissances : $504=$\colorbox{red!30}{$2^{3}$}$\times $\colorbox{blue!30}{$3^2$}$\times \colorbox{green!30}{7}$
+\end{exemple}
+\begin{exemple}
+    Décomposer $\num{4680}$ en produit de facteurs premiers.
+    \correction
+    $\num{4680}=\colorbox{red!30}{2}\times \num{2340}$\\
+    $\num{4680}=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times \num{1170}$\\
+    $\num{4680}=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times 585$\\
+    $\num{4680}=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{blue!30}{3}\times 195$\\
+    $\num{4680}=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{blue!30}{3}\times\colorbox{blue!30}{3}\times 65$\\
+    $\num{4680}=\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{red!30}{2}\times\colorbox{blue!30}{3}\times\colorbox{blue!30}{3}\times\colorbox{orange}{5}\times \colorbox{green!30}{13}$\\
+
+    \medskip
+    d'où $\num{4680} =$\colorbox{red!30}{$2^3$}$\times$\colorbox{blue!30}{$3^2$}$\times$\colorbox{orange}{$5$}$\times \colorbox{green!30}{13}$
 \end{exemple}
