@@ -32,53 +32,45 @@
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}
-    \begin{enumerate}
-        \item Déterminer la décomposition en produit de facteurs premiers de $110$.
-        
-        \Decomposition[All]{110}
-        \item Lister ses diviseurs premiers.
-        
-        Les diviseurs premiers de $110$ sont donc $2$, $5$ et $11$.
-        \item Compléter le tableau ci-dessous.
-        
-        \smallskip
-        $\renewcommand{\arraystretch}{1}
-        \begin{array}{|c|c|c|}
-            \hline
-            \times & 2^{0} & 2^{1}\\
-            \hline
-            5^{0}\times11^{0} & 5^{0}\times11^{0}\times2^{0}=\mathbf{1} & 5^{0}\times11^{0}\times2^{1}=\mathbf{2}\\
-            \hline
-            5^{0}\times11^{1} & 5^{0}\times11^{1}\times2^{0}=\mathbf{11} & 5^{0}\times11^{1}\times2^{1}=\mathbf{22}\\
-            \hline
-            5^{1}\times11^{0} & 5^{1}\times11^{0}\times2^{0}=\mathbf{5} & 5^{1}\times11^{0}\times2^{1}=\mathbf{10}\\
-            \hline
-            5^{1}\times11^{1} & 5^{1}\times11^{1}\times2^{0}=\mathbf{55} & 5^{1}\times11^{1}\times2^{1}=\mathbf{110}\\
-            \hline
-        \end{array}
-        \renewcommand{\arraystretch}{1}$
-        \smallskip
+    \phantom{rrr}
+    \begin{multicols}2
+        \begin{enumerate}
+            \item Déterminer la décomposition en produit de facteurs premiers de $110$.        
+            \Decomposition[All]{110}
+            \item Lister ses diviseurs premiers.
+            
+            Les diviseurs premiers de $110$ sont donc $2$, $5$ et $11$.
+            \item Compléter le tableau ci-dessous.
+            
+            \smallskip
+            $\renewcommand{\arraystretch}{1}
+            \begin{array}{|c|c|c|}
+                \hline
+                \times & 2^{0} & 2^{1}\\
+                \hline
+                5^{0}\times11^{0} & 5^{0}\times11^{0}\times2^{0}=\mathbf{1} & 5^{0}\times11^{0}\times2^{1}=\mathbf{2}\\
+                \hline
+                5^{0}\times11^{1} & 5^{0}\times11^{1}\times2^{0}=\mathbf{11} & 5^{0}\times11^{1}\times2^{1}=\mathbf{22}\\
+                \hline
+                5^{1}\times11^{0} & 5^{1}\times11^{0}\times2^{0}=\mathbf{5} & 5^{1}\times11^{0}\times2^{1}=\mathbf{10}\\
+                \hline
+                5^{1}\times11^{1} & 5^{1}\times11^{1}\times2^{0}=\mathbf{55} & 5^{1}\times11^{1}\times2^{1}=\mathbf{110}\\
+                \hline
+            \end{array}
+            \renewcommand{\arraystretch}{1}$
+            \smallskip
 
-        \item En déduire le nombre de diviseurs de $110$.
-        
-        $110$ a donc $8$ diviseurs.
+            \item En déduire le nombre de diviseurs de $110$.
+            
+            $110$ a donc $8$ diviseurs.
 
-        \item Conjecturer la façon de déterminer le nombre de diviseurs de $110$ par le calcul.
-        $110$ a $(1+1)\times(1+1)\times(1+1) = 2\times2\times2 = 8$ diviseurs.
+            \item Conjecturer la façon de déterminer le nombre de diviseurs de $110$ par le calcul.
 
-        En effet, dans la décomposition apparaît :
+            $110$ a $(1+1)\times(1+1)\times(1+1) = 2\times2\times2 = 8$ diviseurs.
 
-        - Le facteur premier $2$ avec la multiplicité $1$, le facteur $2$ apparaît donc sous les formes : $2^{0}$ ou $2^{1}$ d'où le facteur $(1+1)$.
-
-        - Le facteur premier $5$ avec la multiplicité $1$, le facteur $5$ apparaît donc sous les formes : $5^{0}$ ou $5^{1}$ d'où le facteur $(1+1)$.
-
-        - Le facteur premier $11$ avec la multiplicité $1$, le facteur $11$ apparaît donc sous les formes : $11^{0}$ ou $11^{1}$ d'où le facteur $(1+1)$.
-       
-        \item Dresser la liste des diviseurs de $110$ dans l'ordre croissant.
-        
-        Voici la liste des $8$ diviseurs de $110$ issus du tableau ci-dessus : $1\text{ ; }2\text{ ; }5\text{ ; }10\text{ ; }11\text{ ; }22\text{ ; }55\text{ ; }110.$
-
-    \end{enumerate}
+            Par exemple, dans la décomposition, le facteur $2$ apparaît avec la multiplicité $1$, donc sous les formes : $2^{0}$ ou $2^{1}$ d'où le facteur $(1+1)$.       
+            \item Dresser la liste des diviseurs de $110$ dans l'ordre croissant : les $8$ diviseurs de $110$ issus du tableau ci-dessus : $1\text{ ; }2\text{ ; }5\text{ ; }10\text{ ; }11\text{ ; }22\text{ ; }55\text{ ; }110.$
+        \end{enumerate}
+    \end{multicols}
 \end{corrige}
 

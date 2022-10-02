@@ -64,42 +64,46 @@
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    \begin{enumerate}
+    % \phantom{rrr}
+    % \begin{multicols}{2}
         \begin{enumerate}
             \item 
-            \begin{enumerate}
-                \item Liste des premiers multiples de $6$ : \\
-                $1\times6 = 6$ ; $2\times6 = 12$ ; $3\times6 = 18$ ; $4\times6 = 24$ ; $5\times6 = 30$ ; \\
-                $6\times6 = 36$ ; $7\times6 = 42$ ; $8\times6 = 48$ ; $9\times6 = 54$ ; $10\times6 = \mathbf{{\color[HTML]{f15929}60}}$ ; \\
-                $11\times6 = 66$ ; $12\times6 = 72$ ; $13\times6 = 78$ ; $14\times6 = 84$ ; $15\times6 = 90$ ; \\
-                \dots \\
-                Liste des premiers multiples de $20$ : \\
-                $1\times20 = 20$ ; $2\times20 = 40$ ; $3\times20 = \mathbf{{\color[HTML]{f15929}60}}$ ; $4\times20 = 80$ ; $5\times20 = 100$ ; \\      
-                \dots \\
+                \begin{enumerate}
+                    \item Liste des premiers multiples de $6$ : \\
+                    $1\times6 = 6$ ; $2\times6 = 12$ ; $3\times6 = 18$ ; $4\times6 = 24$ ; $5\times6 = 30$ ;
+                    $6\times6 = 36$ ; $7\times6 = 42$ ; $8\times6 = 48$ ; $9\times6 = 54$ ; $10\times6 = \mathbf{{\color[HTML]{f15929}60}}$ ;
+                    $11\times6 = 66$ ; $12\times6 = 72$ ; $13\times6 = 78$ ; $14\times6 = 84$ ; $15\times6 = 90$ ;
+                    \dots \\
+                    Liste des premiers multiples de $20$ : \\
+                    $1\times20 = 20$ ; $2\times20 = 40$ ; $3\times20 = \mathbf{{\color[HTML]{f15929}60}}$ ; $4\times20 = 80$ ; $5\times20 = 100$ ;
+                    \dots \\
+                    \medskip
+                    \item Le plus petit multiple commun à $6$ et $20$ vaut donc $60$.\\
+                    Chaque roue doit tourner de $60$ dents pour faire un nombre entier de tours et revenir dans sa position initiale. 
+                    En effet, chaque roue doit tourner afin que le nombre de dents utilisé soit un multiple de son nombre de dents.
+                    Cela correspond à $(60\text{ dents})\div (6\text{ dents/tour}) = 10$ tours pour la roue n°$1$ 
+                    
+                    et à $(60\text{ dents})\div (20\text{ dents/tour}) = 3$ tours pour la roue n°$2$.
+                \end{enumerate}            
+            \setcounter{enumi}{1}
+            \item Pour un nombre de dents plus élevé : Les décompositions en produit de facteurs premiers.\\
+                \begin{enumerate}
+                    \item Décomposition de $72$ en produit de facteurs premiers :  $72 = 2\times2\times2\times3\times3$.\\
+                    Décomposition de $39$ en produit de facteurs premiers :  $39 = 3\times13$.
                 \medskip
-                \item Le plus petit multiple commun à $6$ et $20$ vaut donc $60$.\\
-                Il suffit donc que chaque roue tourne de $60$ dents pour faire un nombre entier de tours et ainsi revenir dans sa position initiale.\\
-                En effet, chaque roue doit tourner de façon à ce que le nombre total de dents utilisé soit un multiple de son nombre
-                de dents soit au minimum de $60$ dents.\\
-                 Cela correspond à $(60\text{ dents})\div (6\text{ dents/tour}) = 10$ tours pour la roue n°$1$.\\
-                Cela correspond à $(60\text{ dents})\div (20\text{ dents/tour}) = 3$ tours pour la roue n°$2$.
-            \end{enumerate}
-            \item Pour un nombre de dents plus élevé, il est plus commode d'utiliser les décompositions en produit de facteurs premiers.\\
-            \begin{enumerate}
-                \item Décomposition de $72$ en produit de facteurs premiers :  $72 = 2\times2\times2\times3\times3$.\\
-                Décomposition de $39$ en produit de facteurs premiers :  $39 = 3\times13$.
-               \medskip
-                \item Pour retrouver la position initiale,
-                chaque roue doit tourner de façon à ce que le nombre total de dents utilisé soit un multiple de son nombre
-                de dents.\\
-                Soit, grâce aux décompositions précédentes, au minimum de $2\times2\times2\times3\times3\times13 = 936$ dents.\\
-                 Cela correspond à $(936\text{ dents})\div (72\text{ dents/tour}) = 13$ tours pour la roue n°$1$.\\
-                Cela correspond à $(936\text{ dents})\div (39\text{ dents/tour}) = 24$ tours pour la roue n°$2$.
-            \end{enumerate}
+                    \item Pour retrouver la position initiale,
+                    chaque roue doit tourner de façon à ce que le nombre total de dents utilisé soit un multiple de son nombre
+                    de dents.\\
+                    Soit, grâce aux décompositions précédentes, au minimum de $2\times2\times2\times3\times3\times13 = 936$ dents.\\
+                    Cela correspond à $(936\text{ dents})\div (72\text{ dents/tour}) = 13$ tours pour la roue n°$1$.\\
+                    Cela correspond à $(936\text{ dents})\div (39\text{ dents/tour}) = 24$ tours pour la roue n°$2$.
+                \end{enumerate}
+            \setcounter{enumi}{2}                
             \item Puisque la roue n°$2$, qui a $38$ dents, fait $8$  tours , cela représente $304$ dents.\\
             La roue n°$1$ doit donc aussi tourner de $304$ dents, ceci en $19$  tours .\\
             On obtient donc $(304\text{ dents})\div (19\text{ tours }) = 16 \text{ dents/tour}.$\\
             La roue n°$1$ a donc $16$ dents.
         \end{enumerate}
+    % \end{multicols}
 \end{corrige}
 
