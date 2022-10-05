@@ -2962,7 +2962,7 @@
     \rput[B](\dimexpr \linewidth/2+\ChapterNumLeftFrame/2,
                        \ChapterNumBase)
             {\textcolor{ChapterNumColor}
-                       {\ChapterNumFont \thechapter}}
+                       {\ChapterNumFont \smc@thema@initcap\thechapter}}
     \rput[Bl](0,\ChapterTitleBase){%
       \begin{minipage}[b]{\dimexpr\ChapterNumLeftFrame-\ChapterTitleSep}
         \ChapterTitleFont \color{ChapterTitleColor}#1%
