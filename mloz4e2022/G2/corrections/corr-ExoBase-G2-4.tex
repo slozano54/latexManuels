@@ -1,0 +1,36 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.3\linewidth}
+        \begin{tikzpicture}[scale=0.4]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);
+            \coordinate[label=below:$V$] (V) at (7,1);
+            \coordinate[label=above:$U$] (U) at (1,9);
+            \coordinate[label=above:$S$] (S) at (6.5,10);
+            \tkzDefPointBy[homothety=center V ratio 0.6](U)        \tkzGetPoint{H};
+            \tkzDefPointBy[homothety=center V ratio 0.6](S)        \tkzGetPoint{R};
+            \tkzLabelPoints[left](H);
+            \tkzLabelPoints[right](R);
+            \tkzDrawSegment(V,U);
+            \tkzDrawSegment(U,S);
+            \tkzDrawSegment[dashed,ultra thick,color=red](U,S);
+            \tkzDrawSegment(S,V);
+            \tkzDrawSegment(H,R);
+            \tkzDrawSegment[dashed,ultra thick,color=red](H,R);
+        \end{tikzpicture}
+    \end{minipage}
+    % \hfill
+    \begin{minipage}{0.6\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre, les droites portant les segments en pontillés sont parallèles.
+
+        \begin{enumerate}
+            \item Nommer les triangles dont les longueurs sont proportionnelles.
+
+            {\color{red} Les triangles $USV$ et $HRV$ ont leurs longeurs proportionnelles.}
+            \item Écrire les rapports de proportionnalités égaux.
+
+            \smallskip
+            {\color{red} $\dfrac{UV}{HV} = \dfrac{SV}{RV} = \dfrac{US}{HR}$}
+        \end{enumerate}
+    \end{minipage}
+
