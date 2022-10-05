@@ -28,8 +28,6 @@
                 \begin{tikzpicture}[scale = 0.3]
                     % \draw[help lines, color=black!30, dashed] (0,0) grid (12,14);        
                     \coordinate[label=above:$A$] (A) at (7,13);
-                    % \coordinate[label=left:$(d')$] (d') at (6.7,14);
-                    % \coordinate[label=right:$(d)$] (d) at (7.5,14);
                     \coordinate[label=right:$N$] (N) at (9,5);
                     \coordinate[label=left:$M$] (M) at (3,5);
                     \coordinate[label=left:$B$] (B) at (5,9.2);
@@ -41,7 +39,6 @@
                     \tkzDrawSegment(A,N);
                     \tkzDrawSegment(M,N);
                     \tkzDrawSegment(B,C);
-                    % \tkzDrawSegment(M1,N1);     
                     \draw[dashed, color=red, ultra thick] (A)--(M)--(N)--(A);
                     \draw[dashed, color=blue, ultra thick] (A)--(B)--(C)--(A);
                 \end{tikzpicture}
