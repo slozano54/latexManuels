@@ -1,3 +1,94 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    \phantom{rrr}
+    % \phantom{rrr}
 
+    Sur la figure ci-dessous :
+    \begin{itemize}
+        \item $SABCD$ et $SIJKL$ sont deux pyramides régulières à bases carrées.
+        \item $[SM]$ et $[SO]$ sont les hauteurs respectives de $SIJKL$ et $SABCD$.
+    \end{itemize}
+    \begin{minipage}{0.5\linewidth}
+        \scalebox{0.63}{
+            \begin{tikzpicture}
+                % \draw[help lines, color=black!30, dashed] (0,0) grid (9,5);
+                \coordinate[label=below:$A$] (A) at (0.1,0.1);
+                \coordinate[label=below:$B$] (B) at (5.1,0.1);
+                \coordinate[label=left:$D$] (D) at (2.1,1.5);
+                \coordinate[label=right:$C$] (C) at (7.1,1.5);
+                \coordinate[label=below:$O$] (O) at (3.6,0.8);
+                \coordinate[label=above:$S$] (S) at (3.6,5);
+                \tkzDrawSegment(A,B);
+                \tkzDrawSegment(B,C);
+                \tkzDrawSegment[dashed](C,D);
+                \tkzDrawSegment[dashed](D,A);
+                \tkzDrawSegment(A,S);
+                \tkzDrawSegment(B,S);
+                \tkzDrawSegment(C,S);
+                \tkzDrawSegment[dashed](D,S);
+                \tkzDrawSegment[dashed](D,B);
+                \tkzDrawSegment[dashed](A,C);
+                \tkzDrawSegment[dashed](O,S);
+                \tkzDefPointBy[homothety=center S ratio 0.6](A)        \tkzGetPoint{I};
+                \tkzDefPointBy[homothety=center S ratio 0.6](B)        \tkzGetPoint{J};
+                \tkzDefPointBy[homothety=center S ratio 0.6](C)        \tkzGetPoint{K};
+                \tkzDefPointBy[homothety=center S ratio 0.6](D)        \tkzGetPoint{L};
+                \tkzDefPointBy[homothety=center S ratio 0.6](O)        \tkzGetPoint{M};
+                \tkzDrawSegment(I,J);
+                \tkzDrawSegment(J,K);
+                \tkzDrawSegment[dashed](K,L);
+                \tkzDrawSegment[dashed](L,I);
+                \tkzDrawSegment[dashed](L,J);
+                \tkzDrawSegment[dashed](I,K);
+                \tkzLabelPoints[left](I,L);
+                \tkzLabelPoints[right](K);
+                \tkzLabelPoints[above right](M);
+                \tkzLabelPoints[below right](J);
+                \tkzMarkRightAngle[fill=gray,size=0.15](J,M,S);
+                \tkzMarkRightAngle[fill=gray,size=0.15](B,O,S);
+                \fill[opacity=0.2,gray] (I)--(L)--(S)--(I);
+                \fill[opacity=0.2,gray] (L)--(S)--(K)--(L);
+                \fill[opacity=0.2,gray] (I)--(L)--(K)--(J)--(J)--(I);
+            \end{tikzpicture}
+        }
+    \end{minipage}
+    \begin{minipage}{0.45\linewidth}
+        \begin{itemize}
+            \item $M \in [SO]$.
+            \item $SM=\Lg{1.5}$.
+            \item $SO=\Lg{4.5}$.
+            \item $DB=\Lg{5}$.
+        \end{itemize}
+    \end{minipage}
+
+    \begin{enumerate}
+        \item Justifier la position relative de $(MJ)$ et $(OB)$.
+
+        {\color{red} Les droites $(MJ)$ et $(OB)$ sont perpendiculaires à la même droite, $(OS)$.
+
+        Elles sont donc parallèles.
+        }
+        \item Justifier le calcul la valeur exacte de $MJ$.
+
+        {\color{red} Dans le triangle $SOB$ :
+        \begin{itemize}
+            \item $M \in [SO]$ et $J \in [SB]$.
+            \item Les droites $(MJ)$ et $(OB)$ sont parallèles.
+        \end{itemize}
+        On peut donc appliquer le théorème de Thalès et écrire : $\dfrac{SM}{SO}=\dfrac{SJ}{SB}=\dfrac{MJ}{OB}$.
+
+        \smallskip
+        De plus $ABCD$ est un carré, ses diagonales se coupent donc en leur milieu $O$ donc $OB=DB\div 2 = 5\div 2 = \Lg{2.5}$.
+
+        On peut alors écrire l'égalité de Thalès avec les valeurs numériques : $\dfrac{\num{1.5}}{\num{4.5}}=\dfrac{SJ}{SB}=\dfrac{MJ}{\num{2.5}}$.
+
+        \textbf{On utilise l'égalité} $\dfrac{\num{1.5}}{\num{4.5}}=\dfrac{MJ}{\num{2.5}}$
+
+        \textbf{Les produits en croix sont égaux} donc $\num{4.5}\times MJ=\num{1.5}\times \num{2.5}$
+
+        \textbf{On divise par $\num{4.5}$}
+
+        \smallskip
+        d'où $MJ=\dfrac{\num{1.5}\times \num{2.5}}{\num{4.5}}=\dfrac{\num{3.75}}{\num{4.5}}=\dfrac{5}{6}$
+
+        $MJ=\dfrac{5}{6} \Lg{}$
+        }
+    \end{enumerate}
