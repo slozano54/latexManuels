@@ -9,16 +9,17 @@
     \end{minipage}
     \hfill
     \begin{minipage}{0.3\linewidth}
-        \rotatebox{-90}{
+        \hspace*{-10mm}
+        \rotatebox{-80}{
         \begin{tikzpicture}[scale=0.4]
             % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
-            \coordinate[label={[rotate=90]left:$C$}] (C) at (7,1);
-            \coordinate[label={[rotate=90]above:$A$}] (A) at (1,9);
-            \coordinate[label={[rotate=90]below:$E$}] (E) at (6.5,10);
+            \coordinate[label={[rotate=80]left:$C$}] (C) at (7,1);
+            \coordinate[label={[rotate=80]above:$A$}] (A) at (1,9);
+            \coordinate[label={[rotate=80]below:$E$}] (E) at (6.5,10);
             \tkzDefPointBy[homothety=center V ratio 0.6](A)	\tkzGetPoint{B};
             \tkzDefPointBy[homothety=center V ratio 0.6](E)	\tkzGetPoint{D};
-            \tkzLabelPoints[above,rotate=90](B);
-            \tkzLabelPoints[below,rotate=90](D);
+            \tkzLabelPoints[above,rotate=80](B);
+            \tkzLabelPoints[below,rotate=80](D);
             \tkzDrawSegment(C,E);
             \tkzDrawSegment(E,A);
             \tkzDrawSegment[dashed,ultra thick,color=red](E,A);
@@ -49,7 +50,7 @@
         }
     \end{minipage}
     \hfill
-    \begin{minipage}{0.3\linewidth}
+    \begin{minipage}{0.3\linewidth}        
         \rotatebox{-90}{
         \begin{tikzpicture}[scale=0.4]
             % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
