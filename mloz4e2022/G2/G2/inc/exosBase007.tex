@@ -1,0 +1,74 @@
+\begin{exercice*}[Triangles]    
+    \begin{minipage}{0.7\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre, les droites portant les segments en pontillés sont parallèles.
+
+        Jean Rage a écrit : $\dfrac{AB}{AC}=\dfrac{ED}{EC}=\dfrac{AE}{BD}$
+
+        \smallskip
+        Expliquer son erreur.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\linewidth}
+        \rotatebox{-90}{
+        \begin{tikzpicture}[scale=0.4]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+            \coordinate[label={[rotate=90]left:$C$}] (C) at (7,1);
+            \coordinate[label={[rotate=90]above:$A$}] (A) at (1,9);
+            \coordinate[label={[rotate=90]below:$E$}] (E) at (6.5,10);
+            \tkzDefPointBy[homothety=center V ratio 0.6](A)	\tkzGetPoint{B};
+            \tkzDefPointBy[homothety=center V ratio 0.6](E)	\tkzGetPoint{D};
+            \tkzLabelPoints[above,rotate=90](B);
+            \tkzLabelPoints[below,rotate=90](D);
+            \tkzDrawSegment(C,E);
+            \tkzDrawSegment(E,A);
+            \tkzDrawSegment[dashed,ultra thick,color=red](E,A);
+            \tkzDrawSegment(A,C);
+            \tkzDrawSegment(D,B);
+            \tkzDrawSegment[dashed,ultra thick,color=red](D,B);
+        \end{tikzpicture}
+        }
+    \end{minipage}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.6\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre, les droites portant les segments en pontillés sont parallèles.
+
+        Jean Rage a écrit : $\dfrac{AB}{AC}=\dfrac{ED}{EC}=\dfrac{AE}{BD}$
+
+        \smallskip
+        Expliquer son erreur.
+
+        {\color{red} $[AB]$ et $[ED]$ ne sont pas des côtés des triangles de la configuration de Thalès, $CBD$ et $CAE$.
+
+
+        L'égalité correcte est  : $\dfrac{\cancelto{CB}{AB}}{AC}=\dfrac{\cancelto{CD}{ED}}{EC}=\dfrac{AE}{BD}$
+        
+        }
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\linewidth}
+        \rotatebox{-90}{
+        \begin{tikzpicture}[scale=0.4]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+            \coordinate[label={[rotate=90]left:$C$}] (C) at (7,1);
+            \coordinate[label={[rotate=90]above:$A$}] (A) at (1,9);
+            \coordinate[label={[rotate=90]below:$E$}] (E) at (6.5,10);
+            \tkzDefPointBy[homothety=center V ratio 0.6](A)	\tkzGetPoint{B};
+            \tkzDefPointBy[homothety=center V ratio 0.6](E)	\tkzGetPoint{D};
+            \tkzLabelPoints[above,rotate=90](B);
+            \tkzLabelPoints[below,rotate=90](D);
+            \tkzDrawSegment(C,E);
+            \tkzDrawSegment(E,A);
+            \tkzDrawSegment[dashed,ultra thick,color=red](E,A);
+            \tkzDrawSegment(A,C);
+            \tkzDrawSegment(D,B);
+            \tkzDrawSegment[dashed,ultra thick,color=red](D,B);
+        \end{tikzpicture}
+        }
+    \end{minipage}   
+
+\end{corrige}
+

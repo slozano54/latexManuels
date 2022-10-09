@@ -1,0 +1,61 @@
+\begin{exercice*}[Rédaction complète] 
+    \begin{minipage}{0.6\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $(GI)$ et $(FD)$ sont parallèles.
+            \item $EI=4$, $ED=7$ et $GI=5$.
+        \end{itemize}
+
+        \begin{enumerate}
+            \item Calculer la longueur $FD$.
+            \item Justifier que l'on ne peut calculer ni $EG$ ni $EF$.
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}   
+        \Thales[FigureSeule,Angle=-45]{EFDGI}{}{}{}{}{}{}
+    \end{minipage}
+    
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.6\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $(GI)$ et $(FD)$ sont parallèles.
+            \item $EI=4$, $ED=7$ et $GI=5$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.3\linewidth}   
+        \Thales[FigureSeule,Angle=-45]{EFDGI}{}{}{}{}{}{}
+    \end{minipage}
+        \begin{enumerate}
+            \item Calculer la longueur $FD$.
+            
+            {\color{red}
+            Dans la configuration ci-dessus : 
+            \begin{itemize}
+                \item les deux triangles sont $EGI$ et $EFD$.
+                \item $G \in [EF]$ et $I \in [ED]$.
+                \item les droites $(GI)$ et $(FD)$ sont parallèles.                
+            \end{itemize}
+            D'après le théorème de Thalès, on peut donc écrire l'égalité des trois rapports :
+            $$\frac{EG}{EF}=\frac{EI}{ED}=\frac{GI}{FD}\qquad\mbox{c'est à dire}\qquad\frac{EG}{EF}=\frac{4}{7}=\frac{5}{FD}$$
+            
+                $$\mbox{\bf Pour le calcul de $FD$}$$
+                $$\mbox{on utilise} \quad \dfrac{4}{7}=\dfrac{5}{FD}$$
+                $$\mbox{\bf Les produits en croix sont égaux}$$
+                $$4\times FD=7\times5$$
+                $$\mbox{\bf On divise les deux membres par $4$}$$                
+                $$FD=\frac{7\times5}{4}=\num{8.75}$$            
+            }
+            \item Justifier que l'on ne peut calculer ni $EG$ ni $EF$.
+            
+            {\color{red} Pour caluler $EG$ ou $EF$ il faut utiliser le rapport $\dfrac{EG}{EF}$ dont on ne connait ni le 
+            numérateur ni le dénominateur donc au mieux on peut établir une relation de proportionnalité entre $EG$ et $EF$.}
+        \end{enumerate}
+
+
+\end{corrige}
+
