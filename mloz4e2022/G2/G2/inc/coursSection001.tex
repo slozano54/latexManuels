@@ -32,9 +32,7 @@
         \emoji{light-bulb} \color{black}{\dashuline{\color{black}{Les droites en pointillés noirs sont parallèles.}}}
         \color{black}
 
-        \begin{minipage}{0.35\linewidth}
-        % \hspace*{-20mm}
-        % \vspace*{-4cm}
+        \begin{minipage}{0.32\linewidth}
         \begin{tikzpicture}[scale = 0.5]        
             % \draw[help lines, color=black!30, dashed] (0,0) grid (12,14);        
             \coordinate[label=above:$A$] (A) at (7,13);
@@ -70,7 +68,7 @@
             $\dfrac{\textcolor{red}{AM}}{\textcolor{blue}{AB}}=\dfrac{\textcolor{red}{AN}}{\textcolor{blue}{AC}}=\dfrac{\textcolor{red}{MN}}{\textcolor{blue}{BC}}$            
         \end{minipage}
 
-        \begin{minipage}{0.75\linewidth}
+        \begin{minipage}{0.65\linewidth}
             Les deux triangles de la configuration ci-contre sont {\color{red}$AMN$} et {\color{blue}$ABC$}.
 
             Dans le triangle $AMN$ :
@@ -82,7 +80,7 @@
             On peut appliquer le théorème de Thalès donc 
             $\dfrac{\textcolor{blue}{AB}}{\textcolor{red}{AM}}=\dfrac{\textcolor{blue}{AC}}{\textcolor{red}{AN}}=\dfrac{\textcolor{blue}{BC}}{\textcolor{red}{MN}}$            
         \end{minipage}
-        \begin{minipage}{0.25\linewidth}
+        \begin{minipage}{0.32\linewidth}
         \begin{tikzpicture}[scale = 0.5]
             % \draw[help lines, color=black!30, dashed] (0,0) grid (12,14);        
             \coordinate[label=above:$A$] (A) at (7,13);
@@ -123,22 +121,22 @@
 
             \exercice
 
-            \begin{minipage}{8cm}
-                \begin{tikzpicture}[scale=1]
+            \begin{minipage}{0.6\linewidth}
+                \begin{tikzpicture}[scale=0.8]
                     % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
                     \coordinate[label=above:$O$] (O) at (4,6);
                     \coordinate (O1) at (4,5.9);
                     \coordinate (O2) at (4,6.1);
-                    \coordinate[label=left:$N$] (N) at (2,1);
+                    \coordinate[label=below:$N$] (N) at (2,1);
                     \coordinate (N1) at (1.9,0.95);
-                    \coordinate[label=right:$S$] (S) at (10,1);
+                    \coordinate[label=below:$S$] (S) at (10,1);
                     \coordinate (S1) at (10.15,0.95);
                     \tkzDefPointBy[homothety=center O ratio 0.6](N) \tkzGetPoint{M};
                     \tkzDefShiftPoint[M](0.1,0.1){M1}                    
                     \tkzDefPointBy[homothety=center O ratio 0.6](S) \tkzGetPoint{V};
                     \tkzDefShiftPoint[V](-0.2,0.1){V1}  
                     \tkzLabelPoints[left](M);
-                    \tkzLabelPoints[right](V);
+                    \tkzLabelPoints[right,xshift=2mm](V);
                     \draw(O)--(N)--(S)--(O)--(V)--(M);
                     \draw[dashed, ultra thick, color=red] (O1)--(M1)--(V1)--(O1);
                     \draw[dashed, ultra thick, color=blue] (O2)--(N1)--(S1)--(O2);
@@ -150,9 +148,9 @@
                     \end{scope}
                 \end{tikzpicture}
             \end{minipage}
-            \begin{minipage}{8cm}
+            \begin{minipage}{0.35\linewidth}
                 \begin{itemize}
-                    \item Les droites $(MV)$ et $(NS)$ sont parallèles.
+                    \item $(MV)$ et $(NS)$ sont parallèles.
                     \item $M \in [ON]$ et $V \in [OS]$.
                 \end{itemize}
                 Calculer la longueur $NS$.
