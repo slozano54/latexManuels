@@ -1,0 +1,64 @@
+\begin{exercice*}[Dans l'espace]    
+    \begin{tikzpicture}
+        \draw[help lines, color=black!30, dashed] (0,0) grid (9,5);                
+        \coordinate[label=below:$A$] (A) at (0.1,0.1);
+        \coordinate[label=below:$B$] (B) at (5.1,0.1);
+        \coordinate[label=left:$D$] (D) at (2.1,1.5);
+        \coordinate[label=right:$C$] (C) at (7.1,1.5);
+        \coordinate[label=below:$O$] (O) at (3.6,0.8);
+        \coordinate[label=above:$S$] (S) at (3.6,5);
+        \tkzDrawSegment(A,B);
+        \tkzDrawSegment(B,C);
+        \tkzDrawSegment[dashed](C,D);
+        \tkzDrawSegment[dashed](D,A);
+        \tkzDrawSegment(A,S);
+        \tkzDrawSegment(B,S);
+        \tkzDrawSegment(C,S);
+        \tkzDrawSegment[dashed](D,S);
+        \tkzDrawSegment[dashed](D,B);
+        \tkzDrawSegment[dashed](A,C);
+        \tkzDrawSegment[dashed](O,S);
+        \tkzDefPointBy[homothety=center S ratio 0.6](A)	\tkzGetPoint{I};            
+        \tkzDefPointBy[homothety=center S ratio 0.6](B)	\tkzGetPoint{J};            
+        \tkzDefPointBy[homothety=center S ratio 0.6](C)	\tkzGetPoint{K};            
+        \tkzDefPointBy[homothety=center S ratio 0.6](D)	\tkzGetPoint{L};            
+        \tkzDefPointBy[homothety=center S ratio 0.6](O)	\tkzGetPoint{M};            
+        \tkzDrawSegment(I,J);
+        \tkzDrawSegment(J,K);
+        \tkzDrawSegment[dashed](K,L);
+        \tkzDrawSegment[dashed](L,I);
+        \tkzDrawSegment[dashed](L,J);
+        \tkzDrawSegment[dashed](I,K);
+        \tkzLabelPoints[left](I,L);
+        \tkzLabelPoints[right](K);
+        \tkzLabelPoints[above right](M);
+        \tkzLabelPoints[below right](J);
+        \tkzMarkRightAngle[fill=gray,size=0.15](J,M,S);
+        \tkzMarkRightAngle[fill=gray,size=0.15](B,O,S);
+        \fill[opacity=0.2,gray] (I)--(L)--(S)--(I);
+        \fill[opacity=0.2,gray] (L)--(S)--(K)--(L);
+        \fill[opacity=0.2,gray] (I)--(L)--(K)--(J)--(J)--(I);
+
+        % \tkzDrawPoint[shape=cross out](S);
+        % \coordinate[label=below:$H$] (H) at (8.5,0.08);
+        % \tkzDrawPoint[shape=cross out](H);
+        % \tkzDrawSegment[ultra thick](H,S);
+        % \coordinate[label=left:$O$] (O) at (0.5,0.08);
+        % \tkzDrawSegment[yellow, ultra thick](O,S);
+        % \tkzLabelSegment[sloped,above](O,S){Rayons du Soleil};        
+        % \tkzDrawSegment[ultra thick](O,H);
+        % \tkzMarkRightAngle[fill=gray,size=0.2](S,H,O);
+        % \tkzDefPointBy[homothety=center O ratio 0.1](S)	\tkzGetPoint{N};            
+        % \tkzDefPointBy[homothety=center O ratio 0.1](H)	\tkzGetPoint{M};
+        % \tkzDrawSegment[brown,ultra thick](M,N);
+        % \tkzMarkRightAngle[fill=gray,size=0.2](H,M,N);
+        % \tkzLabelPoints(M);
+        % \tkzLabelPoints[above](N);
+    \end{tikzpicture}    
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+    
+\end{corrige}
+
