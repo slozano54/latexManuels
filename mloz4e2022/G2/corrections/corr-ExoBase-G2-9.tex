@@ -1,0 +1,77 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.3\linewidth}
+        \hspace*{-15mm}
+        \begin{tikzpicture}[scale=0.4]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (10,8);
+            \coordinate[label=below left:$R$] (R) at (8,1);
+            \coordinate[label=above:$T$] (T) at (4,6);
+            \coordinate[label=below right:$V$] (V) at (1,1);
+            \tkzDrawLine(R,T);
+            \tkzDrawLine(R,V);
+            \tkzDrawLine(V,T);
+            \tkzDrawLine[ultra thick](V,T);
+            \tkzLabelSegment[above,sloped](V,T){$\Lg{5}$}
+            \tkzDefPointBy[homothety=center R ratio 0.7](T)        \tkzGetPoint{S};
+            \tkzDefPointBy[homothety=center R ratio 0.7](V)        \tkzGetPoint{U};
+            \tkzLabelPoints[right](S);
+            \tkzLabelPoints[below right](U);
+            \tkzDrawLine(U,S);
+            \tkzDrawLine[ultra thick](U,S);
+            \tkzLabelSegment[above,sloped](U,S){$\Lg{4}$};
+            \begin{scope}[ dim style/.append style={red, dashed},
+                dim fence style/.style={red, dashed}]
+                \tkzDrawSegment[dim={\(\Lg{2.5}\),-5mm,sloped,above=1mm}](R,T);
+                \tkzDrawSegment[dim={\(\Lg{3}\),-5mm,sloped,above=1mm}](U,R);
+            \end{scope}
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.65\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre :
+        \begin{itemize}
+            \item Les points $R$, $S$ et $T$ sont alignés.
+            \item Les points $R$, $U$ et $V$ sont alignés.
+            \item Les droites $(SU)$ et $(TV)$ sont
+
+            parallèles.
+        \end{itemize}
+    \end{minipage}
+
+    \medskip
+    {\color{red}
+        Dans la configuration ci-dessus :
+        \begin{itemize}
+            \item les deux triangles sont \textcolor{black}{$RSU$} et \textcolor{blue}{$RTV$}.
+            \item $S \in [RT]$ et $U \in [RV]$.
+            \item les droites $(SU)$ et $(TV)$ sont parallèles.
+        \end{itemize}
+        D'après le théorème de Thalès, on peut donc écrire l'égalité des trois rapports :
+        $$\frac{\textcolor{black}{RS}}{\textcolor{blue}{RT}}=\frac{\textcolor{black}{RU}}{\textcolor{blue}{RV}}=\frac{\textcolor{black}{SU}}{\textcolor{blue}{TV}}\qquad\mbox{c'est à dire}\qquad
+        \frac{\textcolor{black}{RS}}{\textcolor{blue}{\num{2.5}}}=\frac{\textcolor{black}{3}}{\textcolor{blue}{RV}}=\frac{\textcolor{black}{4}}{\textcolor{blue}{5}}$$
+    }
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item Justifier le calcul de $RS$.
+
+            {\color{red}
+            $$\mbox{\bf Pour le calcul de $RS$}, \mbox{ on utilise} \quad \dfrac{RS}{\num{2.5}}=\dfrac{4}{5}$$
+            $$\mbox{\bf Les produits en croix sont égaux}$$
+            $$5\times RS=\num{2.5}\times4$$
+            $$\mbox{\bf On divise les deux membres par $5$}$$
+            $$RS=\frac{\num{2.5}\times4}{5}=\Lg{2}$$
+            }
+            \columnbreak
+            \item Jusitifier le calcul de $RV$.
+
+            {\color{red}
+            $$\mbox{\bf Pour le calcul de $RV$}, \mbox{ on utilise} \quad \dfrac{3}{RV}=\dfrac{4}{5}$$
+            $$\mbox{\bf Les produits en croix sont égaux}$$
+            $$4\times RV=5\times3$$
+            $$\mbox{\bf On divise les deux membres par $4$}$$
+            $$RV=\frac{5\times3}{4}=\Lg{3.75}$$
+            }
+        \end{enumerate}
+    \end{multicols}
+

@@ -1,0 +1,87 @@
+\begin{exercice*}[Deux longueurs inconnues sans figure]    
+    Soit un triangle $EFG$ tel que :
+        \begin{itemize}
+            \item $EG=\Lg{4}$ ; $FG=\Lg{3.3}$ et $EF=\Lg{5}$.
+            \item $M$ est le ploint de $[EG)$ tel que $EM=\Lg{6}$.
+            \item La parallèle à $(FG)$ passant par le point $M$ coupe $[EF)$ en $N$.
+        \end{itemize}
+        \begin{enumerate}
+            \item Faire la figure aux instruments.
+            \item Calculer $EN$ et $MN$.
+        \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    Soit un triangle $EFG$ tel que :
+    \begin{itemize}
+        \item $EG=\Lg{4}$ ; $FG=\Lg{3.3}$ et $EF=\Lg{5}$.
+        \item $M$ est le ploint de $[EG)$ tel que $EM=\Lg{6}$.
+        \item La parallèle à $(FG)$ passant par le point $M$ coupe $[EF)$ en $N$.
+    \end{itemize}
+    \begin{enumerate}
+        \item Faire la figure aux instruments.
+        
+        \begin{tikzpicture}[scale=0.4]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (10,8);        
+            \coordinate[label=below left:$E$] (E) at (1,1);
+            \coordinate[label=below left:$N$] (N) at (9,1);
+            \coordinate[label=right:$M$] (M) at (7,7);
+            \tkzDrawLine[add = 0 and 0.3](E,M);
+            \tkzDrawLine[add = 0 and 0.3](E,N);
+            \tkzDefPointBy[homothety=center E ratio 0.6](M)	\tkzGetPoint{G};
+            \tkzDefPointBy[homothety=center E ratio 0.6](N)	\tkzGetPoint{F};
+            % \tkzDrawSegment(G,F);
+            \tkzLabelPoints[above](G);
+            \tkzLabelPoints[below right](F);
+            \tkzDrawLine(M,N);                        
+            \begin{scope}[ dim style/.append style={dashed},
+                dim fence style/.style={dashed}]                
+                \tkzDrawSegment[dim={\(\Lg{6}\),10mm,sloped,above=1mm}](E,M);
+                \tkzDrawSegment[dim={\(\Lg{4}\),5mm,sloped,above=1mm}](E,G);
+                \tkzDrawSegment[dim={\(\Lg{5}\),-2mm,sloped,below=1mm}](E,F);
+                \tkzDrawSegment[dim={\(\Lg{3.3}\),2mm,sloped,above=1mm}](G,F);
+            \end{scope}
+        \end{tikzpicture}
+
+        \item Calculer $EN$ et $MN$.
+        
+        {\color{red}    
+        Dans la configuration ci-dessus : 
+        \begin{itemize}
+            \item les deux triangles sont \textcolor{black}{$EGF$} et \textcolor{blue}{$EMN$}.
+            \item $G \in [EM]$ et $F \in [EN]$.
+            \item les droites $(GF)$ et $(MN)$ sont parallèles.                
+        \end{itemize}
+        D'après le théorème de Thalès, on peut donc écrire l'égalité des trois rapports :
+        $$\frac{\textcolor{black}{EG}}{\textcolor{blue}{EM}}=\frac{\textcolor{black}{EF}}{\textcolor{blue}{EN}}=\frac{\textcolor{black}{GF}}{\textcolor{blue}{MN}}\qquad\mbox{c'est à dire}\qquad
+        \frac{\textcolor{black}{4}}{\textcolor{blue}{6}}=\frac{\textcolor{black}{5}}{\textcolor{blue}{EN}}=\frac{\textcolor{black}{\num{3.3}}}{\textcolor{blue}{MN}}$$
+        }
+    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{itemize}            
+        \item \phantom{rrr}
+        
+        {\color{red}    
+        $$\mbox{\bf Pour le calcul de $EN$}, \mbox{ on utilise} \quad \dfrac{4}{6}=\dfrac{5}{EN}$$
+        $$\mbox{\bf Les produits en croix sont égaux}$$
+        $$4\times EN=6\times 5$$
+        $$\mbox{\bf On divise les deux membres par $4$}$$
+        $$EN=\frac{6\times 5}{4}=\Lg{7.5}$$
+        }
+        \columnbreak
+        \item \phantom{rrr}
+        
+        {\color{red}    
+        $$\mbox{\bf Pour le calcul de $MN$}, \mbox{ on utilise} \quad \dfrac{4}{6}=\dfrac{\num{3.3}}{MN}$$
+        $$\mbox{\bf Les produits en croix sont égaux}$$
+        $$4\times MN=\num{3.3}\times 6$$
+        $$\mbox{\bf On divise les deux membres par $4$}$$
+        $$MN=\frac{\num{3.3}\times 6}{4}=\Lg{4.95}$$
+        }          
+        \end{itemize}  
+    \end{multicols}
+
+\end{corrige}
+
