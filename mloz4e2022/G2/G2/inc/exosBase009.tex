@@ -1,10 +1,20 @@
 \begin{exercice*}[Deux longueurs inconnues]    
-    \begin{minipage}{0.35\linewidth}
-        \hspace*{-15mm}
-        \begin{tikzpicture}[scale=0.4]
+    \emoji{light-bulb} Sur la figure ci-dessous :
+    \begin{itemize}
+        \item Les points $R$, $S$ et $T$ sont alignés.
+        \item Les points $R$, $U$ et $V$ sont alignés.
+        \item Les droites $(SU)$ et $(TV)$ sont
+        
+        parallèles.
+    \end{itemize}
+
+    % \begin{minipage}{0.35\linewidth}
+        \hspace*{-10mm}
+        \begin{tikzpicture}[scale=0.9]
             % \draw[help lines, color=black!30, dashed] (0,0) grid (10,8);        
             \coordinate[label=below left:$R$] (R) at (8,1);
-            \coordinate[label=above:$T$] (T) at (4,6);
+            \coordinate (T) at (4,6);
+            \tkzLabelPoints[above, yshift=-2mm](T);
             \coordinate[label=below right:$V$] (V) at (1,1);
             \tkzDrawLine(R,T);
             \tkzDrawLine(R,V);
@@ -20,28 +30,20 @@
             \tkzLabelSegment[above,sloped](U,S){$\Lg{4}$};
             \begin{scope}[ dim style/.append style={red, dashed},
                 dim fence style/.style={red, dashed}]                
-                \tkzDrawSegment[dim={\(\Lg{2.5}\),-5mm,sloped,above=1mm}](R,T);
+                \tkzDrawSegment[dim={\(\Lg{2.5}\),-10mm,sloped,above=1mm}](R,T);
                 \tkzDrawSegment[dim={\(\Lg{3}\),-5mm,sloped,above=1mm}](U,R);
             \end{scope}
         \end{tikzpicture}
-    \end{minipage}    
-    \hfill
-    \begin{minipage}{0.65\linewidth}
-        \emoji{light-bulb} Sur la figure ci-contre :
-        \begin{itemize}
-            \item Les points $R$, $S$ et $T$ sont alignés.
-            \item Les points $R$, $U$ et $V$ sont alignés.
-            \item Les droites $(SU)$ et $(TV)$ sont
-            
-            parallèles.
-        \end{itemize}
+    % \end{minipage}    
+    % \hfill
+    % \begin{minipage}{0.65\linewidth}
         \begin{enumerate}
             \item Justifier le calcul de $RS$.
             \item Jusitifier le calcul de $RV$.
         \end{enumerate}
+    % \end{minipage}    
 
-    \end{minipage}
-
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4G30,s=1,n=1,video=nFgFG3YQ1O4,cd=1,i=0&v=l}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
