@@ -1,0 +1,91 @@
+\begin{activite}[D'équerre ou pas d'équerre ?]
+    {\bf Objectifs :} repérer des angles droits ; utiliser des instruments pour vérifier qu'un angle est droit ; coder une figure.
+   %  \begin{QCM}
+       \partie[construction d'un gabarit d'angle droit en papier]
+          Pour vérifier qu'un angle est droit, on peut utiliser une équerre, mais il est facile de construire un gabarit d'angle droit avec un simple morceau de papier :
+          \begin{center}
+             \begin{pspicture}(0,0)(4,4.5)
+                \psline(0,4)(0,1.5)(4,1.5)(4,3.5)
+                \pslineByHand(0,4)(4,3.5)
+                \rput(2,1){prendre un morceau}
+                \rput(2,0.6){de papier}
+             \end{pspicture}
+             \begin{pspicture}(0,0)(3.5,4.5)
+                \psline(1,4)(1,2.85)
+                \psline(1,2.4)(1,1.5)(2.5,1.5)(3,3.5)
+                \psline(2.5,1.5)(0.8,2.5)(1.8,4.2)
+                \pslineByHand(1,4)(1.65,3.9)
+                \pslineByHand(3,3.5)(1.75,4.25)
+                \rput(2,1){le plier en deux}
+                \rput(2,0.6){n'importe comment}
+             \end{pspicture}
+             \begin{pspicture}(0.5,0)(3.5,4.5)
+                \pspolygon(3,3.5)(2.75,2.5)(1,3)(2,4.3)
+                \psline(1,4)(1,3)(1.1,3.5)(1.35,3.46)
+                \pslineByHand(1.65,3.9)(0.95,4)
+                \rput(2,1.4){le replier en}
+                \rput(2,1){suivant la}
+               \rput(2,0.6){première pliure}
+             \end{pspicture}
+             \begin{pspicture}(0.5,0)(3.5,4.5)
+                \pspolygon(3,3.5)(2.75,2.5)(1,3)(2,4.3)
+                \psline(1,4)(1,3)(1.1,3.5)(1.35,3.46)
+                \pspolygon[fillstyle=solid,fillcolor=black](2.75,2.5)(2.8,2.7)(2.6,2.755)(2.55,2.56)
+                \pslineByHand(1.65,3.9)(0.95,4)
+                \rput(2,1){marquer}
+                \rput(2,0.6){l'angle droit}
+             \end{pspicture}
+          \end{center}
+          
+       \partie[angle droit ou pas ?]    
+          Marquer les angles droits de cette figure : combien y en a-t-il ? \dotfill
+          \begin{center}
+            %  \begin{pspicture}(0,-0.5)(14,10.5)
+            %     \pstGeonode[PointSymbol=none,PointName=none](4,0.5){Q}(6.5,0.4375){R}(10,1){C}(0.66,3.5){D}(6.5,3.5){E}(10,3.5){F}(13,3.5){G}(0.5,7.5){H}(5,7.5){I}(10,8){J}(13,8){K}(14,8.5){L}(6.5,8.5){M}(4.25,10.5){N}(7,9.5){O}
+            %     \pstLineAB{Q}{R}
+            %     \pstLineAB{R}{E}
+            %     \pstLineAB{D}{G}
+            %     \pstLineAB{C}{G}
+            %     \pstLineAB{C}{J}
+            %     \pstLineAB{J}{O}
+            %     \pstLineAB{D}{H}
+            %     \pstLineAB[nodesepB=2.36]{Q}{N}
+            %     \pstLineAB[nodesepB=-0.87]{O}{M}
+            %     \pstLineAB[nodesepB=0.62]{F}{L}
+            %     \pstLineAB[nodesepB=-1.04]{F}{I}
+            %     \pstLineAB[nodesepB=-0.62]{H}{K}
+            %  \end{pspicture}
+               \begin{tikzpicture}[scale=0.9]
+                  % \draw[help lines, color=black!30, dashed] (0,0) grid (14,11);        
+                  \coordinate (Q) at (4,0.5);     
+                  \coordinate (R) at (6.5,0.4375);
+                  \coordinate (C) at (10,1);
+                  \coordinate (D) at (0.66,3.5);
+                  \coordinate (E) at (6.5,3.5); 
+                  \coordinate (F) at (10,3.5);  
+                  \coordinate (G) at (13,3.5);   
+                  \coordinate (H) at (0.5,7.5);   
+                  \coordinate (I) at (5,7.5);  
+                  \coordinate (J) at (10,8);    
+                  \coordinate (K) at (13,8);     
+                  \coordinate (L) at (14,8.5);
+                  \coordinate (M) at (6.5,8.5);   
+                  \coordinate (N) at (4.25,10.5);
+                  \coordinate (O) at (7,9.5);
+                  % \tkzLabelPoints(Q,R,C,D,E,F,G,H,I,J,K,L,M,N,O);
+                  \tkzDrawSegment(Q,R);
+                  \tkzDrawSegment(R,E);
+                  \tkzDrawSegment(D,G);
+                  \tkzDrawSegment(C,G);
+                  \tkzDrawSegment(C,J);
+                  \tkzDrawSegment(J,O);
+                  \tkzDrawSegment(D,H);
+                  \tkzDrawSegment[add=0 and -0.236](Q,N);
+                  \tkzDrawSegment[add=0.78 and 0](M,O);
+                  \tkzDrawSegment[add=0 and -0.1](F,L);
+                  \tkzDrawSegment[add=0 and 0.16](F,I);
+                  \tkzDrawSegment[add=0 and 0.045](H,K);
+               \end{tikzpicture}
+          \end{center}
+      %  \end{QCM}
+ \end{activite}

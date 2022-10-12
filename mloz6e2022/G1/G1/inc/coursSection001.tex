@@ -1,0 +1,67 @@
+\section{Section 1}
+\subsection{Sous-section 1.1}
+\begin{definition}[Titre optionnel]
+    Dans le cours, on utilise assez souvent des cadres du type
+    définition (comme ici par exemple).
+
+    Ajout d'une référence au lexique via l'utilisation de la commande \textbf{\textbackslash MotDefinition\{\}\{\}}.
+    Les trois \MotDefinition[médiane (d'un triangle)]{médianes d'un triangle}{}  sont coucourantes.
+    
+\end{definition}
+\begin{remarque}
+    Ceci est une remarque utilisant une commande du paquet profcollege.
+
+    \begin{center}
+      \Pythagore[Figure]{ILC}{5}{6}{}
+    \end{center}
+
+
+\end{remarque}
+\begin{propriete}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour une propriete.
+\end{propriete}
+\begin{remarques}
+  \begin{itemize}
+    \item remarque.
+    \item remarque.
+  \end{itemize}
+\end{remarques}
+
+\subsection{Sous-section 1.2}
+\begin{theoreme}[Titre optionnel]
+  Dans le cours, on utilise assez souvent des cadres du type
+  définition, comme ici par exemple pour un théorème.
+\end{theoreme}
+\begin{notation}
+  notation
+\end{notation}
+\begin{notations}
+  \begin{itemize}
+    \item notation.
+    \item notation.
+  \end{itemize}
+\end{notations}
+\begin{preuve}
+  Ceci est une preuve\par Deuxième ligne de la preuve
+\end{preuve}
+\begin{exemple}
+  Texte de l’exemple
+  \correction
+  
+\end{exemple}
+
+\begin{exemple*1}
+  \phantom{rrr}
+  
+  \SommeAngles[FigureSeule,Angle=10]{RST}{50}{70}
+  \correction
+  \SommeAngles[Figure,Angle=10]{RST}{50}{70}
+\end{exemple*1}
+
+\begin{exemple}[0.6]
+  Texte de l’exemple très long sur une ligne, très très très long.
+  On peut modifier la répartition horizontale  à l'aide d'un argument optionnel valant par défaut 0,4, valant ici 0,6.
+  \correction
+  Texte de la correction en vis à vis
+\end{exemple}
