@@ -1,3 +1,49 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
+    Sur la figure ci-dessous :
+    \begin{itemize}
+        \item Les points $A$, $M$, $B$ sont alignés.
+        \item Les points $A$, $N$, $C$ sont alignés.
+    \end{itemize}
+    \begin{tikzpicture}
+        % \draw[help lines, color=black!30, dashed] (0,0) grid (9,5);
+        \coordinate (A) at (1,5);
+        \tkzLabelPoints[above,xshift=-2mm,yshift=2mm](A);
+        \coordinate (B) at (0,1);
+        \tkzLabelPoints[left](B);
+        \coordinate (C) at (5,4);
+        \tkzLabelPoints[right](C);
+        \tkzDrawSegment(B,C);
+        \tkzDefPointBy[homothety=center A ratio 0.6](C)        \tkzGetPoint{N};
+        \tkzLabelPoints[above right](N);
+        \tkzDefPointBy[homothety=center A ratio 0.6](B)        \tkzGetPoint{M};
+        \tkzLabelPoints[below left](M);
+        \tkzDrawSegment(M,N);
+        \begin{scope}[dim style/.append style={red, dashed}, dim fence style/.style={red, dashed}]
+            \tkzDrawSegment[dim={\(\Lg{4}\),10mm,sloped,above=1mm}](A,C);
+            \tkzDrawSegment[dim={\(\Lg{2.5}\),5mm,sloped,above=1mm}](A,N);
+            \tkzDrawSegment[dim={\(\Lg{3.5}\),10mm,sloped,above=1mm}](B,A);
+            \tkzDrawSegment[dim={\(\Lg{1.5}\),5mm,sloped,above=1mm}](M,A);
+        \end{scope}
+        \end{tikzpicture}
+    \begin{spacing}{1.5}
+        \begin{enumerate}
+            \item Déterminer les deux triangles de cette configurations.
 
+            {\color{red} Les deux triangles de la configurations sont $AMN$ et $ABC$.}
+            \item Calculer les rapports $\dfrac{AM}{AB}$ et $\dfrac{AN}{AC}$.
+
+            {\color{red}
+            $\dfrac{AM}{AB}=\dfrac{\num{1.5}}{\num{3.5}}=\dfrac{3}{7}$ et $\dfrac{AN}{AC}=\dfrac{\num{2.5}}{\num{4}}=\dfrac{5}{8}$
+            }
+            \item Conclure sur le parallélisme de $(MN)$ et de $(BC)$.
+
+            {\color{red}
+            $\dfrac{3}{7}=\dfrac{24}{56}$ et $\dfrac{35}{56}$ donc $\dfrac{3}{7}\neq\dfrac{5}{8}$
+
+            Or si $(MN)$ et $(BC)$ étaient parallèles, les rapports seraient égaux.
+
+            D'après la contraposée du théorème de Thalès, $(MN)$ et $(BC)$ ne sont pas parallèles.
+            }
+        \end{enumerate}
+    \end{spacing}
