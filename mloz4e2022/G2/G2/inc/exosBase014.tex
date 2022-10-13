@@ -34,19 +34,19 @@
             \item Les points $S$, $D$, $B$ sont alignés.
             \item Les points $S$, $C$, $A$ sont alignés.
         \end{itemize}
-        \begin{tikzpicture}[scale=0.6]
+        \begin{tikzpicture}[scale=0.4]
             \draw[help lines, color=black!30, dashed] (0,0) grid (10,8);
-            \coordinate (A) at (1,1);
+            \coordinate (O) at (1,1);
             \coordinate (C) at (4,1);
             \coordinate (S) at (9,1);
             \coordinate (D) at (9,5);
             \coordinate (B) at (9,7);
-            \tkzDrawSegment(A,S);
-            \tkzDrawSegment(A,B);
-            \tkzDrawSegment(B,S);
-            \tkzDrawSegment(C,D);
+            \tkzDrawSegment[ultra thick](O,S);
+            \tkzDrawSegment[ultra thick](O,B);
+            \tkzDrawSegment[ultra thick](B,S);
+            \tkzDrawSegment[ultra thick](C,D);
             \tkzLabelPoints[above right](B);
-            \tkzLabelPoints[below left](A);
+            \tkzLabelPoints[below left](O);
             \tkzLabelPoints[below right](S);
             \tkzLabelPoints[right](D);
             \tkzLabelPoints[below](C);

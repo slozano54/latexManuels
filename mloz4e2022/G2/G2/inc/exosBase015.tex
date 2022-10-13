@@ -21,7 +21,7 @@
         \begin{scope}[dim style/.append style={red, dashed}, dim fence style/.style={red, dashed}]                
             \tkzDrawSegment[dim={\(\Lg{4}\),10mm,sloped,above=1mm}](A,C);
             \tkzDrawSegment[dim={\(\Lg{2.5}\),5mm,sloped,above=1mm}](A,N);
-            \tkzDrawSegment[dim={\(\Lg{3.5}\),10mm,sloped,above=1mm}](B,A);
+            \tkzDrawSegment[dim={\(\Lg{2.4}\),10mm,sloped,above=1mm}](B,A);
             \tkzDrawSegment[dim={\(\Lg{1.5}\),5mm,sloped,above=1mm}](M,A);
         \end{scope}                
         \end{tikzpicture}
@@ -32,7 +32,7 @@
             \item Conclure sur le parallélisme de $(MN)$ et de $(BC)$.
         \end{enumerate}
     \end{spacing}
-    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4G31,s=1,s2=2,s3=1,i=0&v=l}
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4G31,s=1,s2=1,s3=1,i=0&v=l}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
@@ -61,7 +61,7 @@
             \begin{scope}[dim style/.append style={red, dashed}, dim fence style/.style={red, dashed}]                
                 \tkzDrawSegment[dim={\(\Lg{4}\),10mm,sloped,above=1mm}](A,C);
                 \tkzDrawSegment[dim={\(\Lg{2.5}\),5mm,sloped,above=1mm}](A,N);
-                \tkzDrawSegment[dim={\(\Lg{3.5}\),10mm,sloped,above=1mm}](B,A);
+                \tkzDrawSegment[dim={\(\Lg{2.4}\),10mm,sloped,above=1mm}](B,A);
                 \tkzDrawSegment[dim={\(\Lg{1.5}\),5mm,sloped,above=1mm}](M,A);
             \end{scope}                
             \end{tikzpicture}
@@ -74,15 +74,12 @@
                 \item Calculer les rapports $\dfrac{AM}{AB}$ et $\dfrac{AN}{AC}$.
                 
                 {\color{red}
-                $\dfrac{AM}{AB}=\dfrac{\num{1.5}}{\num{3.5}}=\dfrac{3}{7}$ et $\dfrac{AN}{AC}=\dfrac{\num{2.5}}{\num{4}}=\dfrac{5}{8}$
+                $\dfrac{AM}{AB}=\dfrac{\num{1.5}}{\num{2.4}}=\dfrac{5}{8}$ et $\dfrac{AN}{AC}=\dfrac{\num{2.5}}{\num{4}}=\dfrac{5}{8}$
                 }
                 \item Conclure sur le parallélisme de $(MN)$ et de $(BC)$.
                 
                 {\color{red}
-                $\dfrac{3}{7}=\dfrac{24}{56}$ et $\dfrac{5}{8}=\dfrac{35}{56}$ donc $\dfrac{3}{7}\neq\dfrac{5}{8}$
-
-                Or si $(MN)$ et $(BC)$ étaient parallèles, les rapports seraient égaux.               
-                D'après la contraposée du théorème de Thalès, $(MN)$ et $(BC)$ ne sont donc pas parallèles.
+                \Thales[Reciproque,Droites,Produit]{ABCMN}{1.5}{2.4}{2.5}{4}{}{}
                 }            
             \end{enumerate}
         \end{spacing}

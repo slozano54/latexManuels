@@ -1,0 +1,40 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{multicols}{2}
+        Sur la figure ci-dessous :
+        \begin{itemize}
+            \item Les points $O$, $P$, $T$ sont alignés.
+            \item Les points $O$, $R$, $F$ sont alignés.
+        \end{itemize}
+        \def\width{8}
+        \def\hauteur{5}
+        \begin{tikzpicture}[scale=0.8]
+            \draw[step=2mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\hauteur);
+            \draw[step=1cm, line width=0.3mm, black!50!white] (0,0) grid (\width,\hauteur);
+            \coordinate (O) at (1,1);
+            \coordinate (P) at (1,2);
+            \coordinate (T) at (1,4);
+            \coordinate (R) at (3,1);
+            \coordinate (F) at (7,1);
+            \tkzDrawSegment(O,T);
+            \tkzDrawSegment(T,F);
+            \tkzDrawSegment(F,O);
+            \tkzDrawSegment(P,R);
+            \tkzLabelPoints[above left](T);
+            \tkzLabelPoints[left](P);
+            \tkzLabelPoints[below left](O);
+            \tkzLabelPoints[below right](F);
+            \tkzLabelPoints[below](R);
+        \end{tikzpicture}
+
+        Agathe Deblouse affirme que $(PR)$ et $(TF)$ sont parallèles.
+        Justifier qu'elle a raison.
+        \columnbreak
+
+        % \smallskip
+        {\color{red}
+        \Thales[Reciproque,Droites,Produit]{OTFPR}{1}{3}{2}{6}{}{}
+        }
+    \end{multicols}
+
