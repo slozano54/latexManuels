@@ -1,64 +1,58 @@
 \begin{exercice*}
-    On considère la figure ci-dessous :
-
-    \hspace*{-1cm}%
-    \begin{tikzpicture}[scale = 0.45]
-        \draw[help lines, color=gray!30, dashed] (0,0) grid (18,10);
-        \coordinate[label=below:$A$] (A) at (2,2);
-        \coordinate[label=below:$B$] (B) at (9,2);
-        \coordinate[label=above:$C$] (C) at (9,7);
-        \coordinate[label=below:$D$] (D) at (12,2);
-        \coordinate[label=above:$E$] (E) at (12,9);
-        \coordinate[label=above:$F$] (F) at (17,9);
-        \draw (A) -- (B) -- (C) -- (A);
-        \draw (D) -- (E) -- (F) -- (D);
-    \end{tikzpicture}
-
     \begin{enumerate}
-        \item Justifier que les triangles $ABC$ et $DEF$ sont isométriques.
-        \item Recopier la figure puis coder les angles et les longueurs de même mesure.
+        \item Justifier que les triangles sont isométriques.
+        
+        \hspace*{-10mm}
+        \begin{tikzpicture}[scale = 0.5]
+            % \draw[help lines, color=gray!30, dashed] (0,0) grid (18,10);
+            \coordinate[label=above:$A$] (A) at (3,6);
+            \coordinate[label=below:$B$] (B) at (1,1);
+            \coordinate[label=below:$C$] (C) at (10,3);
+            \coordinate[label=below:$D$] (D) at (15,4);
+            \coordinate[label=above:$E$] (E) at (17,9);
+            \coordinate[label=above:$F$] (F) at (8,7);
+            \draw (A) -- (B) -- node[sloped,below] {\large\Lg{4.3}} (C) -- node[sloped,above] {\large\Lg{3.4}} (A);
+            \draw (D) -- (E) -- node[sloped,above] {\large\Lg{4.3}} (F) -- node[sloped,below] {\large\Lg{3.4}} (D);
+            \pic [draw=red, text=red, -, "\ang{32}",angle eccentricity=1.5] {angle = A--C--B};
+            \pic [draw=red, text=red, -, "\ang{32}",angle eccentricity=1.5] {angle = D--F--E};
+        \end{tikzpicture}
+        % \pagebreak
+        % \columnbreak
+        \item Justifier que les triangles ne sont pas isométriques.
+        
+        % \hspace*{-2cm}%
+        \begin{tikzpicture}[scale = 0.4]
+            % \draw[help lines, color=gray!30, dashed] (0,0) grid (18,10);
+            \coordinate[label=above:$G$] (A) at (8,7);
+            \coordinate[label=above:$H$] (B) at (1,7);
+            \coordinate[label=below:$J$] (C) at (2,1);
+            \coordinate[label=below:$K$] (D) at (8,1);
+            \coordinate[label=below:$L$] (E) at (15,1);
+            \coordinate[label=above:$M$] (F) at (16.375,9.375);
+            \draw (A) -- node[sloped,above] {\large\Lg{7}} (B) -- (C) -- node[sloped,above] {\large\Lg{8.5}} (A);
+            \draw (D) -- node[sloped,below] {\large\Lg{7}} (E) -- node[sloped,above] {\large\Lg{8.5}} (F) -- (D);
+            \pic [draw=red, text=red, -, "\ang{45}",angle eccentricity=1.5] {angle = B--A--C};
+            \pic [draw=red, text=red, -, "\ang{45}",angle eccentricity=1.5] {angle = E--D--F};
+        \end{tikzpicture}
     \end{enumerate}
 
-    % \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G24-2,s=1,n=4&v=l} % On peut personnaliser le texte entre crochets si on veut sinon supprimer les crochets
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G24-2,s=1,n=4&v=l} % On peut personnaliser le texte entre crochets si on veut sinon supprimer les crochets
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     \phantom{rrr}    
-    % \begin{multicols}2
+    \begin{multicols}2
         \begin{enumerate}
-            \item Les angles $\widehat{FED}$ et $\widehat{CBA}$ sont deux angles droits, ils sont donc égaux.
+            \item $\widehat{ABC}=\widehat{FED}$; $AB=DE$ et $BC=EF$, les triangles $ABC$ et $DEF$ ont
+            un angle égal compris entre deux côtés égaux deux à deux
             
-            Les côtés adjacents à ces angles droits sont deux à deux égaux, $EF=CB$ et $ED=AB$.
+            donc \psshadowbox{ils sont isométriques.}
+            \item $\widehat{JHG}=\widehat{MLK}$; $GH=LK$ et $JH\neq LM$, les triangles $GHJ$ et $MK$ ont
+            un angle égal compris entre deux côtés qui ne sont pas égaux deux à deux
+            
+            donc \psshadowbox{ils ne sont pas isométriques.}
 
-            Donc \psshadowbox{Les triangles $ABC$ et $EDF$ sont isométriques.}
-            % \columnbreak
-            \item \phantom{rrr}
-            
-            \begin{tikzpicture}[scale = 0.5]
-                \draw[help lines, color=gray!30, dashed] (0,0) grid (18,10);
-                \coordinate[label=below:$A$] (A) at (2,2);
-                \coordinate[label=below:$B$] (B) at (9,2);
-                \coordinate[label=above:$C$] (C) at (9,7);
-                \coordinate[label=below:$D$] (D) at (12,2);
-                \coordinate[label=above:$E$] (E) at (12,9);
-                \coordinate[label=above:$F$] (F) at (17,9);
-                \draw (A) -- (B) -- (C) -- (A);
-                \draw (D) -- (E) -- (F) -- (D);
-                \fill[color=red] (B)--(8,2)--(8,3)--(9,3)--cycle;
-                \fill[color=red] (E)--(13,9)--(13,8)--(12,8)--cycle;                
-                \pic [draw=black, fill=black, -, angle eccentricity=1.5] {angle = A--C--B};
-                \pic [draw=black, fill=black, -, angle eccentricity=1.5] {angle = E--F--D};
-                \pic [draw=blue, fill=blue, -, angle eccentricity=1.5] {angle = B--A--C};
-                \pic [draw=blue, fill=blue, -, angle eccentricity=1.5] {angle = F--D--E};
-                \draw [color=red] (5.5,2) node[anchor = center, rotate = -20] {||};% (A)(B)
-                \draw [color=red] (12,5.5) node[anchor = center, rotate = 70] {||};% (E)(D)
-                \draw [color=red] (9,4.5) node[anchor = center, rotate = -20] {o};% (B)(C)
-                \draw [color=red] (14.5,9) node[anchor = center, rotate = 20] {o};% (E)(F)
-                \draw [color=red] (5.5,4.5) node[anchor = center, rotate = -20] {x};% (A)(C)
-                \draw [color=red] (14.5,5.5) node[anchor = center, rotate = 20] {x};% (D)(F)
-    
-            \end{tikzpicture}
         \end{enumerate}
-    % \end{multicols}
+    \end{multicols}
 \end{corrige}
 
