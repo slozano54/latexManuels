@@ -1,0 +1,86 @@
+\begin{exercice*}[Triangles]    
+    \begin{minipage}{0.7\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre : 
+        \begin{itemize}
+            \item $(BA)\sslash (RT)$.
+            \item $ST=\Lg{4}$ ; $SB=\Lg{3}$.
+            \item $AB=\Lg{2}$ ; $RT=\Lg{5}$.
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\linewidth}
+        \hspace*{-10mm}
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+            \coordinate[label={left:$S$}] (S) at (1,1);
+            \coordinate[label={above:$R$}] (R) at (7,4);
+            \coordinate[label={below:$T$}] (T) at (8,1);
+            \tkzDefPointBy[homothety=center S ratio 0.6](R)	\tkzGetPoint{B};
+            \tkzDefPointBy[homothety=center S ratio 0.6](T)	\tkzGetPoint{A};
+            \tkzLabelPoints[above](B);
+            \tkzLabelPoints[below](A);
+            \tkzDrawSegment[ultra thick](S,R);
+            \tkzDrawSegment[ultra thick](S,T);
+            \tkzDrawSegment[ultra thick](R,T);
+            \tkzDrawSegment[ultra thick](A,B);
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{enumerate}
+        \item Expliquer pourquoi le triangle $SBA$ est une réduction du triangle $SRT$.
+        \item Déterminer le rapport de réduction.
+        \item Calculer $SA$ et $SR$.
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}
+
+    \begin{minipage}{0.3\linewidth}
+        \emoji{light-bulb} Sur la figure ci-contre : 
+        \begin{itemize}
+            \item $(BA)\sslash (RT)$.
+            \item $ST=\Lg{4}$ ; $SB=\Lg{3}$.
+            \item $AB=\Lg{2}$ ; $RT=\Lg{5}$.
+        \end{itemize}
+    \end{minipage}    
+    \begin{minipage}{0.3\linewidth}
+        \hspace*{-10mm}
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,12);        
+            \coordinate[label={left:$S$}] (S) at (1,1);
+            \coordinate[label={above:$R$}] (R) at (7,4);
+            \coordinate[label={below:$T$}] (T) at (8,1);
+            \tkzDefPointBy[homothety=center S ratio 0.6](R)	\tkzGetPoint{B};
+            \tkzDefPointBy[homothety=center S ratio 0.6](T)	\tkzGetPoint{A};
+            \tkzLabelPoints[above](B);
+            \tkzLabelPoints[below](A);
+            \tkzDrawSegment[ultra thick](S,R);
+            \tkzDrawSegment[ultra thick](S,T);
+            \tkzDrawSegment[ultra thick](R,T);
+            \tkzDrawSegment[ultra thick](A,B);
+        \end{tikzpicture}
+    \end{minipage}
+
+    \begin{enumerate}
+        \item Expliquer pourquoi le triangle $SBA$ est une réduction du triangle $SRT$.
+        
+        {\color{red}On sait que les points $S$, $B$ et $R$ sont alignés, ainsi que les points $S$, $A$ et $T$,
+        l'ordre d'alignement étant respectivement le même. De plus $(BA)\sslash (RT)$, le théorème de Thalès permet donc d'écrire :
+        $\dfrac{SB}{SR}=\dfrac{SA}{ST}=\dfrac{BA}{RT}$.
+
+        Les côtés des triangles $SBA$ et $SRT$ sont donc proportionnels.
+        
+        Le triangle $SBA$ est donc une réduction du triangle $SRT$.        
+        }
+        \item Déterminer le rapport de réduction.
+        
+        {\color{red}$k=\dfrac{BA}{RT}=\dfrac{2}{5}=\num{0.4}$.}
+        \item Calculer $SA$ et $SR$.
+        
+        {\color{red} $SA=k\times ST=\num{0.4}\times 4=\num{1.6}$ donc $SA=\Lg{1.6}$
+        
+        $SR=SB\div k=3\div\num{0.4}=\num{7.5}$ donc $SR=\Lg{7.5}$
+        }
+    \end{enumerate}
+\end{corrige}
+
