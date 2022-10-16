@@ -1735,8 +1735,8 @@
 }
 
 \newcommand{\myCopyrightFoot}{
-  \fancyfoot[LO]{\currentNiveau - \copyName - \licenceCC}
-  \fancyfoot[RE]{\licenceCC - \copyName - \currentNiveau}
+  \fancyfoot[LO]{\currentNiveau - \copyName ~- \licenceCC}
+  \fancyfoot[RE]{\licenceCC - \copyName ~- \currentNiveau}
 }
 % AjoutSeb Fin
 \renewcommand{\headrulewidth}{0pt}
