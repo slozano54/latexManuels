@@ -1,0 +1,31 @@
+\section{Et si les droites sont parallèles ?}
+
+\begin{propriete}
+   \begin{itemize}
+      \item Si les deux droites $(d_1)$ et $(d_2)$ sont parallèles, alors les angles alternes-internes et les angles correspondants sont égaux deux à deux.
+      \item Si deux angles alternes-internes ou deux angles correspondants sont égaux, alors les droites $(d_1)$ et $(d_2)$ sont parallèles.
+   \end{itemize}
+   \ \\ [-14mm]
+\end{propriete}
+
+\begin{exemple}
+   {\psset{unit=0.9}
+   \begin{pspicture}(0,0.3)(6,3.2)
+      \psline(1,1)(6,1)
+      \psline(1,2.5)(6,2.5)
+      \psline(2,0)(4,3)
+      \rput(2.4,2.1){$\alpha =\udeg{56}$}
+      \rput(3.5,1.5){$\beta$}
+      \rput(1.8,0.5){$\gamma$}
+      \psarc[linecolor=B2,doubleline=true](3.67,2.5){0.6}{182}{234}
+      \psarc[linecolor=A1,doubleline=true](2.67,1){0.6}{2}{55}
+      \psarc[linecolor=J1,doubleline=true](2.67,1){0.6}{182}{233}
+      \rput(5.5,1.75){\parbox{1.5cm}{\small droites\\parallèles}}
+   \end{pspicture}}
+   \correction
+   Mesures de $\beta$ et $\gamma$, sachant que les droites sont parallèles :
+   \begin{itemize}
+      \item $\alpha$ et $\beta$ sont des angles alternes-internes, ils ont donc même mesure. D'où : $\beta =\alpha =\udeg{56}$.
+      \item $\alpha$ et $\gamma$ sont des angles correspondants, ils ont donc même mesure. D'où : $\gamma =\alpha =\udeg{56}$.
+   \end{itemize}
+\end{exemple}

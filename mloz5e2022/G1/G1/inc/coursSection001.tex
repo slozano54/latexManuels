@@ -1,0 +1,27 @@
+\section{Mesure d'angles particuliers : rappels}
+
+\begin{minipage}{10cm}
+   \begin{pspicture}(-5,0.25)(5,2.5)
+      \rput(0,-0.3){O}
+      \rput(3.8,0){angle nul : \udeg{0}}
+      \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0,0){1.5}{0}{90}
+      \rput(2.5,1.5){\parbox{2.1cm}{\textcolor{B2}{angle aigu : \\ \udeg{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \qquad < \udeg{90}}}}
+      \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,0){1.5}{90}{180}
+      \rput(-2.5,1.5){\parbox{2.5cm}{\textcolor{A1}{angle obtus : \\ \udeg{90} < \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0.4,0){0.3}{90}{180} \quad\; < \udeg{180}}}}
+      \rput(0,2.5){angle droit : \udeg{90}}
+      \rput(-3.8,0){angle plat : \udeg{180}}
+      \psline(-2.5,0)(2.5,0)
+      \psline(0,2)
+   \end{pspicture}   
+\end{minipage}
+\begin{minipage}{5.5cm}
+   Dans cette configuration, la somme des deux angles mesure \udeg{180}, on dit que ces angles sont supplémentaires. \\
+   \begin{pspicture}(7,1.5)
+      \psline(0.5,0)(5.5,0)
+      \psline(3,0)(1.8,1.2)
+      \psarc[linecolor=B1](3,0){0.7}{135}{180}
+      \rput(2,0.4){\textcolor{B1}{\udeg{45}}}
+      \psarc[linecolor=A1](3,0){0.5}{0}{135}
+      \rput(3.6,0.7){\textcolor{A1}{\udeg{135}}}
+   \end{pspicture}
+\end{minipage}

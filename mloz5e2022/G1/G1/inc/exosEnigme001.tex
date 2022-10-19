@@ -1,0 +1,75 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{enigme}[Le flexagone]
+    {\it Arthur Stone}, étudiant britannique de 23 ans, aurait découvert de curieuses formes géométriques polygonales en 1939, en découpant les feuilles de papier au format américain pour les transformer au format européen, plus étroit. Il lui restait alors des bandes qu'il se mit à plier pour obtenir des formes géométriques dont certaines se révélèrent \og flexibles \fg. Le premier {\bf flexagone} qu'il découvrit aurait été construit grâce à neuf triangles équilatéraux pliés puis assemblés pour former un hexagone. 
+    
+    % \medskip
+    \vspace*{-4mm}
+    \partie[construction du flexagone] \vspace*{-5mm}
+       \begin{enumerate}
+          \item Reproduire, puis découper la figure ci-dessous, composée de 9 triangles équilatéraux de côté 5 cm. \\
+             {\psset{unit=0.5}
+                \begin{pspicture}(-8,-0.2)(10,2.2)
+                   \multido{\n=0+2}{5}{\rput(\n,0){\pspolygon(0,0)(2,0)(2;60)}}
+                   \psline(2;60)(9,1.732)
+                \end{pspicture}}
+          \item Marquer le pli vallée au niveau de l'arête commune entre le 3\up{e} et le 4\up{e} triangle, puis replier vers le haut les trois premiers triangles. \\
+             {\psset{unit=0.5}
+                \begin{pspicture}(-8,-0.2)(10,3.6)
+                   \multido{\n=4+2}{3}{\rput(\n,0){\pspolygon(0,0)(2,0)(2;60)}}
+                   \pspolygon[fillstyle=solid,fillcolor=lightgray](4,0)(3,1.732)(4,3.464)(6,3.464)(6,3.464)
+                   \psline(3,1.732)(9,1.732)
+                   \psline(4,3.464)(5,1.732)
+                \end{pspicture}}
+          \item Marquer le pli montagne au niveau de l'arête commune entre le 6\up{e} et le 7\up{e} triangle, puis replier vers le haut les trois derniers triangles en faisant passer le dernier triangle sur le premier triangle. \\
+             Enfin, mettre un morceau de ruban adhésif pour maintenir le premier et le dernier triangle ensemble. \\
+             {\psset{unit=0.5}
+                \begin{pspicture}(-8,0)(13,5)
+                   \rput(4,0){\pspolygon(0,0)(2,0)(2;60)}
+                   \pspolygon[fillstyle=solid,fillcolor=lightgray](4,0)(3,1.732)(4,3.464)(6,3.464)(6,3.464)
+                   \psline(3,1.732)(7,1.732)
+                   \psline(4,3.464)(5,1.732)
+                   \psline(6,0)(7,1.732)
+                   \pspolygon[fillstyle=solid,fillcolor=gray](5,1.732)(7,1.732)(6,3.464)
+                   \psline{->}(8,3)(12,3)
+                   \rput(10,3.5){\it\small passer le dernier}
+                   \rput(10,2.5){\it\small triangle au dessus}
+                \end{pspicture}
+                \begin{pspicture}(3,0)(7,5)
+                   \rput(4,0){\pspolygon(0,0)(2,0)(2;60)}
+                   \pspolygon[fillstyle=solid,fillcolor=lightgray](4,0)(3,1.732)(4,3.464)(6,3.464)
+                   \pspolygon[fillstyle=solid,fillcolor=gray](5,1.732)(7,1.732)(6,3.464)(4,3.464)
+                   \psline(3,1.732)(7,1.732)(6,0)
+                   \psline(5,1.732)(6,3.464)   
+                   \rput(5,4.5){\it scotch} 
+                   \psline{->}(5,4.2)(5,3.7)    
+                \end{pspicture}}
+       \end{enumerate}
+    \vspace*{-4mm}                
+    \partie[utilisation du flexagone] \vspace*{-5mm}
+       \begin{enumerate}
+          \item On obtient un hexagone, ou plus précisément un hexaflexagone. Dessiner ou colorier les deux faces obtenues.
+          \item Marquer tous les plis dans les deux sens.
+          \item Plier une arête sur deux en alternant les plis vallée et montagne de telle sorte que les soufflets soient en plis montagne, puis ouvrir : on obtient, de manière magique, une troisième face que l'on peut à son tour colorier. \medskip
+             \begin{center}
+                \includegraphics[width=3cm]{\currentpath/images/flexagone1} 
+                \qquad
+                \includegraphics[width=4cm]{\currentpath/images/flexagone2} 
+             \end{center}
+          \item En réitérant le pliage, on obtient successivement les trois faces, une à une.
+       \end{enumerate}
+    \vspace*{-4mm}
+   {\bf Pour aller plus loin :}
+   \begin{itemize}
+       \item Un article, paru dan le magasine \og Pour la science \fg{} et écrit par Jean-Paul Delahaye, explique que l'on peut faire des flexagones avec autant de faces que l'on souhaite : \href{https://www.cristal.univ-lille.fr/~jdelahay/pls/2005/131.pdf}{\blue Le flexagone}
+       \item Il existe également des sites spécialisés, comme \href{http://www.flexagon.net}{\blue Flexagone.net} qui propose de multiples modèles décorés à imprimer 
+    \end{itemize}
+ \end{enigme}
+ 
+% % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     \ldots
+% \end{corrige}
