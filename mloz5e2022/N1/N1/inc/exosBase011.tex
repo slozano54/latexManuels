@@ -1,0 +1,28 @@
+\begin{exercice}
+   Pour chaque ligne de la grille, colorie de gauche à droite, de la couleur indiquée, le nombre de cases donné par le résultat du calcul.
+\begin{center}
+   \ColoriludeListeCouleur{N Noir Bl Bleu Bc Blanc R Rouge}
+\end{center}
+\small 
+\Colorilude[Largeur=7,Lignes=5]{%
+   Bc (9-7)\times2 N 7-3\times2 Bl 3\times4-11 N 8-2\times3-1\\%
+   Bc 8\times3-23 R 1\times3-2\times1 Bc 12-2\times5 Bl 56-55 Bc 10-3\times3 Bl 7-2\times3\\%
+   R 24-3\times7 Bc 9-4\times2 N ? Bl (4-3)\times1 N 31-5\times6\\%
+   Bc 50-7\times7 R ? Bc 8\times7-52 Bl 5-2\times2\\%
+   Bc 2\times(7-5) N 11-5\times2 Bl ? Bc (4-4)\times3 N 6\div(7-1)%
+}
+\end{exercice}
+
+\begin{corrige}
+   Pour chaque ligne de la grille, colorie de gauche à droite, de la couleur indiquée, le nombre de cases donné par le résultat du calcul.
+\begin{center}
+   \ColoriludeListeCouleur{N Noir Bl Bleu Bc Blanc R Rouge}
+\end{center}
+\Colorilude[Largeur=7,Lignes=5,Solution]{%
+   blanc 4 noir 1 bleu 1 noir 1\\%
+   blanc 1 rouge 1 blanc 2 bleu 1 blanc 1 bleu 1\\%
+   rouge 3 blanc 1 noir 1 bleu 1 noir 1\\%
+   blanc 1 rouge 1 blanc 4 bleu 1\\%
+   blanc 4 noir 1 bleu 1 blanc 0 noir 1%
+}
+\end{corrige}
