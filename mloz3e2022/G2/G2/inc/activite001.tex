@@ -1,0 +1,115 @@
+\begin{activite}[Les homothéties]
+    \begin{myBox}{Découverte avec Geogebra}
+
+        \vspace*{3mm}
+        \href{https://www.geogebra.org/classic/wydhjpuc}{\emoji{play-button} Suivre ce lien pour lancer l'animation Geogebra}
+
+        \vspace*{3mm}
+        \href{https://www.geogebra.org/m/vaxxugnh}{\emoji{red-question-mark} Compléter ce QCM de découverte Geogebra}
+
+        \vspace*{3mm}
+        \creditGeogebra{David Evéquoz}
+    \end{myBox}
+
+    {\large
+    \begin{tikzpicture}
+        \node (image) at (5,0) {\includegraphics[scale=0.4]{\currentpath/images/avionGeogebra.png}};
+        \coordinate[label=left:{\bfseries figure 1}] (fig1) at (0,-2);
+        \coordinate[label=right:{\bfseries figure 2}] (fig2) at (3,-2);
+        \coordinate[label=above:$H(0;k)$] (transf) at (1.5,-2);            
+        \draw[->,thick] (fig1)--(fig2);        
+    \end{tikzpicture}
+    }
+
+    \og La \textbf{figure 2} est l'image de la \textbf{figure 1} par une homothétie de centre $O$ et de rapport $k$ \fg
+
+    {\bfseries Dans cette \href{https://www.geogebra.org/classic/wydhjpuc}{appliquette Geogebra}, commencer par cocher la case \og Image \fg}
+    \begin{remarque}
+        Parfois, plusieurs réponses sont possibles.
+    \end{remarque}
+    \begin{enumerate}
+        \item Sans rien modifier, qu'est-ce qu'une homothétie ?
+        \begin{itemize}
+            \item[$\square$] Un agrandissement ou une réduction de l'objet.
+            \item[$\square$] Une transformation qui change les dimensions de l'objet.
+            \item[$\square$] Un simple déplacement de l'objet.            
+        \end{itemize}
+        \item Modifier le rapport d'homothétie $\mathbf{k}$ et observer !
+        \begin{itemize}
+            \begin{multicols}{2}
+                \item si $\mathbf{k > 1}$, alors \ldots
+                \begin{itemize}
+                    \item[$\square$] Rien ne change
+                    \item[$\square$] L'image est agrandie
+                    \item[$\square$] L'image est réduite
+                    \item[$\square$] L'image est inversée
+                \end{itemize}
+                \item si $\mathbf{k = 1}$, alors \ldots
+                \begin{itemize}
+                    \item[$\square$] Rien ne change
+                    \item[$\square$] L'image est agrandie
+                    \item[$\square$] L'image est réduite
+                    \item[$\square$] L'image est inversée
+                \end{itemize}
+                \item si $\mathbf{0< k < 1}$, alors \ldots
+                \begin{itemize}
+                    \item[$\square$] Rien ne change
+                    \item[$\square$] L'image est agrandie
+                    \item[$\square$] L'image est réduite
+                    \item[$\square$] L'image est inversée
+                \end{itemize}
+                \item si $\mathbf{k < 0}$, alors \ldots
+                \begin{itemize}
+                    \item[$\square$] Rien ne change
+                    \item[$\square$] L'image est agrandie
+                    \item[$\square$] L'image est réduite
+                    \item[$\square$] L'image est inversée
+                \end{itemize}
+            \end{multicols}
+            \item L'image est inversée mais ses dimensions ne changent  pas lorsque \ldots
+            \begin{itemize}
+                \item[$\square$] $k = 0$
+                \item[$\square$] $k = -1$
+                \item[$\square$] $k = 1$
+                \item[$\square$] $k = 2$
+            \end{itemize}
+        \end{itemize}    
+    \end{enumerate}
+
+    {\bfseries Décocher la case \og Image \fg et cocher la case \og Figure géométrique \fg}    
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Comment calculer $k$ à l'aide des longueurs des segments ?
+        \begin{itemize}            
+            \item[$\square$] En divisant la longueur d'un segment image par la longueur d'un segment origine ?
+            \begin{multicols}{2}
+                \item[$\square$] $\dfrac{OB'}{OB}$
+                \item[]
+                \item[$\square$] $\dfrac{OC}{OC'}$            
+                \item[$\square$] $\dfrac{A'B'}{AB}$
+                \item[]
+                \item[$\square$] $C'D'-CD$
+            \end{multicols}
+        \end{itemize}
+        \item Quel est le lien entre le rapport d'homothétie $\mathbf{k}$ et les longueurs ?
+        
+        Modifier $\mathbf{k}$ pour vérifier cette conjecture.
+        \begin{itemize}
+            \item[$\square$] $A'B' = k\times AB$
+            \item[$\square$] $AB = k\times A'B'$
+            \item[$\square$] $k\times OB = O'B'$
+        \end{itemize}
+        \item Est-ce qu'une homothétie modifie la mesure des angles ?
+        
+        Modifier $\mathbf{k}$ pour vérifier cette conjecture.
+        \begin{itemize}
+            \item[$\square$] Oui
+            \item[$\square$] Non            
+        \end{itemize}
+        \item Est-ce qu'une homothétie est une isométrie ? Pourquoi ?
+        \begin{itemize}
+            \item[$\square$] Oui, car les longueurs sont conservées
+            \item[$\square$] Non,  car les longueurs ne sont pas conservées
+        \end{itemize}
+    \end{enumerate}
+\end{activite}
