@@ -30,7 +30,9 @@
 
 % En prévision de l'application d'un style particulier
 % pour les parties dans le sommaire
-\newcommand{\myTocFrame}[2]{%couleur, texte
+% #1 --> couleur
+% #2 --> texte
+\newcommand{\myTocFrame}[2]{%
     \addtocontents{toc}{
         \vspace{1cm}
         \begin{cadre}[#1][#1!50]
@@ -44,6 +46,10 @@
 % ============================================================================================
 % Factorisation de commandes
 % ============================================================================================
+
+%==========================================
+% Gestion enigmes/recreation
+%==========================================
 % Pour pouvoir numéroter les énigmes quand on en met plusieurs
 % dans la section \recreation
 \newcommand{\numeroteEnigme}{
@@ -58,14 +64,21 @@
   \end{pspicture}  
 }
 
+%==========================================
+% Gestion Glossaire
+%==========================================
 % ======= Il n'y a qu'un glossaire, est-ce judicieux de regrouper ici ?
 % ======= Je pense que oui, question de "séparatisme" !
 % Pour uniformiser les titres de l'environnement acquis
+% #1 --> titre
 \newcommand{\titreConnaissancesAcquis}[1]{%
   \textcolor{G1}{\textbf{#1}} :
 }
 
 % On factorise les titres des sections pour le glossaire de propriété
+% #1 --> Titre principal
+% #2 --> couleur
+% #3 --> sous-titre
 \newcommand{\sectionsGlossaireProprietes}[3]{
     \section{#1 \textcolor{#2}{#3}}
 }
@@ -76,19 +89,43 @@
     \sectionsGlossaireProprietes{Section 2}{A1}{texte en couleur différente}
 }
 
+%==========================================
+% Gestion des propriétés
+%==========================================
+
 % Pour écrire (admise) pour les propriétés
 \newcommand{\admise}{(admise)}
 
 % Pour écrire (admis) pour les théorèmes
 \newcommand{\admis}{(admis)}
 
+%==========================================
+% Gestion des liens
+%==========================================
 % Pour le lien vers un exo interactif mathalea
-% Par défaut #1 est un smiley mais on peut le remplacer par la ref mathalea
+% #1 --> Texte par défaut
+% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #2 --> url
 \newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} S'entraîner sur le site \mathaleaLogo]{
     \href{#2}{#1} 
 }
 
+% Pour la géométrie, voir des constructions etc ...
+% #1 --> emojis par dafaut
+% Par défaut #1 est le smiley monocle + le smiley link mais cela peut être modifié
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefConstruction}[3][\emoji{face-with-monocle} \emoji{link}]{
+    \href{#2}{#1 #3} 
+}
+
+%==========================================
+% Gestion des boxs
+%==========================================
+
 % Box perso
+% #1 --> Contenu
+% #2 --> Titre
 \newtcolorbox{myBox}[2][]{
     enhanced,
     boxsep=1mm,
@@ -156,6 +193,20 @@
 % Pour l'environnement tabularx
 \newcolumntype{C}{>{\centering}X}
 
+% Couleurs
+\definecolor{mygreen}{rgb}{0.0, 0.5, 0.0}
+
+%==========================================
+% Textes répétitifs
+%==========================================
+%====Pour renvoyer vers des compléments numériques
+\newcommand{\infoComplementsNumeriques}[1]{
+    \ifthenelse{\equal{#1}{singulier}}{\textbf{Complément numérique}}{%
+        \ifthenelse{\equal{#1}{pluriel}}{\textbf{Compléments numériques}}{%
+            \textbf{#1}
+        }
+    }
+}
 %==========================================
 % Gestion des crédits
 %==========================================
@@ -165,61 +216,61 @@
 
 % InstrumentPoche
 \newcommand{\creditInstrumentPoche}{
-%\footnotetext{Source : Animations InstrumentPoche association Sésamath}
-\blfootnote{Source : Animations InstrumentPoche association Sésamath}
+    \blfootnote{Source : Animations InstrumentPoche association Sésamath}
 }
 
 % Geogebra
-% #1 Auteur
+% #1 --> Auteur
 \newcommand{\creditGeogebra}[1]{
-%\footnotetext{Source : D'après une appliquette Geogebra de #1}
-\blfootnote{Source : D'après une appliquette Geogebra de #1}
+    \blfootnote{Source : D'après une appliquette Geogebra de #1}
 }
 
 % Cahiers Iparcours
-% #1 Année
-% #2 Niveau
+% #1 --> Année
+% #2 --> Niveau
 \newcommand{\creditCahiersIparcours}[2]{
-%\footnotetext{Source : Fiches tirées du cahier iParcours #1 de #2}
-\blfootnote{Source : Fiches tirées du cahier iParcours #1 de #2}
+    \blfootnote{Source : Fiches tirées du cahier iParcours #1 de #2}
 }
 
 % Manuels Iparcours
-% #1 Niveau
+% #1 --> Niveau
 \newcommand{\creditManuelsIparcours}[1]{
-%\footnotetext{Source : Exercices tirés du manuel iParcours de #1}
-\blfootnote{Source : Exercices tirés du manuel iParcours de #1}
+    \blfootnote{Source : Exercices tirés du manuel iParcours de #1}
 }
 
 % Cahiers Sesamath
-% #1 Année
-% #1 Niveau
+% #1 --> Année
+% #1 --> Niveau
 \newcommand{\creditCahiersSesamath}[2]{
-%\footnotetext{Source : Fiches tirées du cahier Sésamath #1 de #2}
-\blfootnote{Source : Fiches tirées du cahier Sésamath #1 de #2}
+    \blfootnote{Source : Fiches tirées du cahier Sésamath #1 de #2}
 }
 
 % Manuels Sesamath
-% #1 Niveau
+% #1 --> Niveau
 \newcommand{\creditManuelsSesamath}[1]{
-%\footnotetext{Source : Exercices tirés du manuel Sésamath de #1}
-\blfootnote{Source : Exercices tirés du manuel Sésamath de #1}
+    \blfootnote{Source : Exercices tirés du manuel Sésamath de #1}
 }
 
 % Libre
-% #1 texte
+% #1 --> texte
 \newcommand{\creditLibre}[1]{
-%\footnotetext{Source : #1}
-\blfootnote{Source : #1}
+    \blfootnote{Source : #1}
 }
 
 %macro pour entourer les opérandes
+% #1 --> 
+% #2 --> 
+% #3 --> 
 \newcommand{\OPoval}[3]{\dimen1=#2\opcolumnwidth \ovalnode{#1}{\kern\dimen1 #3\kern\dimen1}}
 
 %==========================================
 % Instruments de géométrie
 %==========================================
 %Equerre
+% #1 --> 
+% #2 --> 
+% #3 --> 
+% #4 --> 
 \newcommand{\equerre}[4]
    {\scalebox{#4}
       {\rput{#3}(#1,#2)      
