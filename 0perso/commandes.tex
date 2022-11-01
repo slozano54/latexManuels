@@ -112,10 +112,10 @@
 
 % Pour la géométrie, voir des constructions etc ...
 % #1 --> emojis par dafaut
-% Par défaut #1 est le smiley monocle + le smiley link mais cela peut être modifié
+% Par défaut #1 est emoji equerre + emoji regle + le smiley link mais cela peut être modifié
 % #2 --> url
 % #3 --> texte
-\newcommand{\hrefConstruction}[3][\emoji{face-with-monocle} \emoji{link}]{
+\newcommand{\hrefConstruction}[3][\emoji{triangular-ruler} \emoji{straight-ruler} \emoji{link}]{
     \href{#2}{#1 #3} 
 }
 
@@ -189,8 +189,8 @@
 %====Pour renvoyer vers des compléments numériques
 % #1 --> Paramètre à passer, singulier ou pluriel en minuscules
 \newcommand{\infoComplementsNumeriques}[1]{
-    \ifthenelse{\equal{#1}{singulier}}{\textbf{Complément numérique}}{%
-        \ifthenelse{\equal{#1}{pluriel}}{\textbf{Compléments numériques}}{%
+    \ifthenelse{\equal{#1}{singulier}}{\emoji{face-with-monocle} \textbf{Complément numérique}}{%
+        \ifthenelse{\equal{#1}{pluriel}}{\emoji{face-with-monocle} \textbf{Compléments numériques}}{%
             \textbf{#1}
         }
     }

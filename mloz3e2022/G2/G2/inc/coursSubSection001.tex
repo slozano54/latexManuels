@@ -90,64 +90,59 @@
 \begin{remarque}
     Deux figures symétriques par rapport à un axe se superposent par un pliage le long de cet axe.
     \begin{myBox}{\infoComplementsNumeriques{singulier}}
-        \infoComplementsNumeriques{singulier}
-
-        \infoComplementsNumeriques{pluriel}
-
-        \infoComplementsNumeriques{toto}
-
         \hrefConstruction{https://www.geogebra.org/classic/jpxdv4ag}{Animation Geogebra}
         \creditGeogebra{Deguelle, Nolane}
     \end{myBox}
 \end{remarque}
 
-% \Methode{construction de l'image de M par rapport \`{a} l'axe (d)}{
-% \begin{center}
-% \begin{minipage}{4cm}
-% \newrgbcolor{qqwuqq}{0 0.39 0}
-% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=x,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(0.7,-3.22)(5.58,1.36)
-% \pspolygon[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1](3.07,-0.85)(2.65,-0.93)(2.74,-1.34)(3.15,-1.26)
-% \psline[linecolor=red](1.92,4.9)(3.92,-5.1)
-% \psline(3.15,-1.26)(5.04,-0.88)
-% \psline(4.3,-1.03)(4.23,-1.18)
-% \psline(4.3,-1.03)(4.17,-0.92)
-% \psline(4.1,-1.07)(4.02,-1.23)
-% \psline(4.1,-1.07)(3.97,-0.96)
-% \psline(1.26,-1.64)(3.15,-1.26)
-% \psline(2.41,-1.41)(2.34,-1.56)
-% \psline(2.41,-1.41)(2.28,-1.3)
-% \psline(2.21,-1.45)(2.13,-1.6)
-% \psline(2.21,-1.45)(2.08,-1.34)
-% \rput[tl](1.88,0.68){axe (d)}
-% \begin{scriptsize}
-% \psdots[linecolor=blue](1.92,4.9)
-% \rput[bl](2,5.02){\blue{$A$}}
-% \psdots[linecolor=blue](3.92,-5.1)
-% \rput[bl](4,-4.98){\blue{$B$}}
-% \psdots[linecolor=blue](1.26,-1.64)
-% \rput[bl](1.34,-1.52){\blue{$M$}}
-% \psdots[linecolor=blue](5.04,-0.88)
-% \rput[bl](5.12,-0.76){\blue{$M'$}}
-% \psdots[linecolor=black](3.15,-1.26)
-% \rput[bl](3.24,-1.14){\black{$I$}}
-% \end{scriptsize}
-% \end{pspicture*}
-% \end{minipage}
-% \begin{minipage}{12cm}
-% \begin{center}
-% %\underline{Programme de construction de l'image de M par rapport \`{a} l'axe (d)} :\par
-% \begin{enumerate}
-% \item Trace la perpendiculaire \`{a} l'axe (d) passant par M.
-% \item Elle coupe (d) en $I$, place le point $I$.
-% \item Reporte la distance $PI$ de l'autre c\^{o}t\'e de l'axe (d).
-% \item Place le point $M'$, sym\'etrique de $M$
-% \end{enumerate}
-% \end{center}
-% \end{minipage}
-% \infoComplementsNumeriques
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_113.html}{Construction à l'aide de la règle et de l'équerre}
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_111.html}{Construction à l'aide du compas}
-% \end{center}
-% \creditInstrumentPoche
-% }
+\begin{methode*1}[Construction de l'image de $M$ par rapport à l'axe $(d)$]    
+    \exercice
+    Construire l'image d'un point $M$ par rapport à une droite $(d)$, $m$ n'appartenant pas à la droite.
+    \correction
+    \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=x,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+            \begin{pspicture*}(0.7,-3.22)(5.58,1.36)
+                \pspolygon[linecolor=mygreen,fillcolor=mygreen,fillstyle=solid,opacity=0.1](3.07,-0.85)(2.65,-0.93)(2.74,-1.34)(3.15,-1.26)
+                \psline[linecolor=red](1.92,4.9)(3.92,-5.1)
+                \psline(3.15,-1.26)(5.04,-0.88)
+                \psline(4.3,-1.03)(4.23,-1.18)
+                \psline(4.3,-1.03)(4.17,-0.92)
+                \psline(4.1,-1.07)(4.02,-1.23)
+                \psline(4.1,-1.07)(3.97,-0.96)
+                \psline(1.26,-1.64)(3.15,-1.26)
+                \psline(2.41,-1.41)(2.34,-1.56)
+                \psline(2.41,-1.41)(2.28,-1.3)
+                \psline(2.21,-1.45)(2.13,-1.6)
+                \psline(2.21,-1.45)(2.08,-1.34)
+                \rput[tl](1.88,0.68){axe (d)}
+                \begin{scriptsize}
+                    \psdots[linecolor=blue](1.92,4.9)
+                    \rput[bl](2,5.02){\blue{$A$}}
+                    \psdots[linecolor=blue](3.92,-5.1)
+                    \rput[bl](4,-4.98){\blue{$B$}}
+                    \psdots[linecolor=blue](1.26,-1.64)
+                    \rput[bl](1.34,-1.52){\blue{$M$}}
+                    \psdots[linecolor=blue](5.04,-0.88)
+                    \rput[bl](5.12,-0.76){\blue{$M'$}}
+                    \psdots[linecolor=black](3.15,-1.26)
+                    \rput[bl](3.24,-1.14){\black{$I$}}
+                \end{scriptsize}
+            \end{pspicture*}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.65\linewidth}
+        \begin{enumerate}
+            \item Trace la perpendiculaire \`{a} l'axe (d) passant par M.
+            \item Elle coupe (d) en $I$, place le point $I$.
+            \item Reporte la distance $PI$ de l'autre c\^{o}t\'e de l'axe (d).
+            \item Place le point $M'$, sym\'etrique de $M$
+        \end{enumerate}
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_113.html}{Construction à l'aide de la règle et de l'équerre}
+        
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_111.html}{Construction à l'aide du compas}
+        \creditInstrumentPoche
+    \end{myBox}
+\end{methode*1}
