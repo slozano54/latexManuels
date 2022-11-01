@@ -1,70 +1,102 @@
 \subsection{Symétrie centrale}
-% \definNum{
-% $M$ et $M’$ sont symétriques \textbf{par rapport au point $\mathbf{O}$} signifie que :
-% \begin{mylist}
-% \item $M$, $O$ et $M’$ sont alignés,
-% \item $MO = OM’$.
-% \end{mylist}
-% }
+\begin{definition}
+    $M$ et $M’$ sont symétriques \textbf{par rapport au point $\mathbf{O}$} signifie que :
+    \begin{itemize}
+        \item $M$, $O$ et $M’$ sont alignés,
+        \item $MO = OM’$.
+    \end{itemize}
+\end{definition}
 
-% \begin{center}
-% %\includegraphics[scale=1]{actisymcentrale.4} 
-% \definecolor{cqcqcq}{rgb}{0.7,0.7,0.7}
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-% \draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-8,-1) grid (6,5);
-% \clip(-8,-1) rectangle (6,5);
-% \draw[line width=1pt, color=red,fill=red,fill opacity=0.4] (-5,4) -- (-3,4) -- (-4,3) -- (-3,2) -- (-3,0) -- (-4,1) -- (-5,0) -- (-7,0) -- (-5,2) -- cycle;
-% \draw[line width=1pt,color=mygreen,fill=mygreen,fill opacity=0.4] (3,0) -- (1,0) -- (2,1) -- (1,2) -- (1,4) -- (2,3) -- (3,4) -- (5,4) -- (3,2) -- cycle;
-% \begin{scriptsize}
-% \draw [color=blue] (-5,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-4.84,4.42) node {$A$};
-% \draw [color=blue] (-3,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-2.84,4.42) node {$B$};
-% \draw [color=blue] (-4,3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-3.58,3.16) node {$C$};
-% \draw [color=blue] (-3,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-2.84,2.42) node {$D$};
-% \draw [color=blue] (-3,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-2.84,0.42) node {$E$};
-% \draw [color=blue] (-4,1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-3.84,0.42) node {$F$};
-% \draw [color=blue] (-5,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-4.82,-0.14) node {$G$};
-% \draw [color=blue] (-7,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-6.98,-0.3) node {$H$};
-% \draw [color=blue] (-5,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-5.3,2.36) node {$I$};
-% \draw [color=blue] (-1,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (-0.84,2.42) node {$O$};
-% \draw [color=blue] (3,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (3.24,0.42) node {$A'$};
-% \draw [color=blue] (1,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (0.62,0.36) node {$B'$};
-% \draw [color=blue] (2,1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (1.42,1.18) node {$C'$};
-% \draw [color=blue] (1,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (0.58,2.18) node {$D'$};
-% \draw [color=blue] (1,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (1.24,4.42) node {$E'$};
-% \draw [color=blue] (2,3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (2.14,3.66) node {$F'$};
-% \draw [color=blue] (3,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (3.24,4.42) node {$G'$};
-% \draw [color=blue] (5,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (5.24,4.42) node {$H'$};
-% \draw [color=blue] (3,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw[color=blue] (3.52,2.02) node {$I'$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% \end{center}
+\begin{center}
+    \definecolor{cqcqcq}{rgb}{0.7,0.7,0.7}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+        \draw [color=gray!50,, xstep=0.6cm,ystep=0.6cm] (-8,-1) grid (6,5);
+        \clip(-8,-1) rectangle (6,5);
+        \draw[line width=1pt, color=red,fill=red,fill opacity=0.4] (-5,4) -- (-3,4) -- (-4,3) -- (-3,2) -- (-3,0) -- (-4,1) -- (-5,0) -- (-7,0) -- (-5,2) -- cycle;
+        \draw[line width=1pt,color=mygreen,fill=mygreen,fill opacity=0.4] (3,0) -- (1,0) -- (2,1) -- (1,2) -- (1,4) -- (2,3) -- (3,4) -- (5,4) -- (3,2) -- cycle;
+        \begin{scriptsize}
+            \draw [color=blue] (-5,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-4.84,4.42) node {$A$};
+            \draw [color=blue] (-3,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-2.84,4.42) node {$B$};
+            \draw [color=blue] (-4,3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-3.58,3.16) node {$C$};
+            \draw [color=blue] (-3,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-2.84,2.42) node {$D$};
+            \draw [color=blue] (-3,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-2.84,0.42) node {$E$};
+            \draw [color=blue] (-4,1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-3.84,0.42) node {$F$};
+            \draw [color=blue] (-5,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-4.9,-0.4) node {$G$};
+            \draw [color=blue] (-7,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-7.03,-0.36) node {$H$};
+            \draw [color=blue] (-5,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-5.3,2.36) node {$I$};
+            \draw [color=blue] (-1,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (-0.84,2.42) node {$O$};
+            \draw [color=blue] (3,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (3.24,0.42) node {$A'$};
+            \draw [color=blue] (1,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (0.62,0.36) node {$B'$};
+            \draw [color=blue] (2,1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (1.42,1.18) node {$C'$};
+            \draw [color=blue] (1,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (0.58,2.18) node {$D'$};
+            \draw [color=blue] (1,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (1.24,4.42) node {$E'$};
+            \draw [color=blue] (2,3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (2.14,3.66) node {$F'$};
+            \draw [color=blue] (3,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (3.24,4.42) node {$G'$};
+            \draw [color=blue] (5,4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (5.24,4.42) node {$H'$};
+            \draw [color=blue] (3,2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+            \draw[color=blue] (3.52,2.02) node {$I'$};
+        \end{scriptsize}
+    \end{tikzpicture}
+\end{center}
 
-% \CadreLampe{Remarque}{
-% Deux figures symétriques par symétrie centrale se superposent par un demi-tour autour du centre de 
-% symétrie.
-% \infoComplementNumerique
-% \lienCadre{https://www.geogebra.org/classic/fbfhreb8}{Animation Geogebra}
-% \creditGeogebra{Roumazeille Boris}
-% }
+\begin{remarque}
+    Deux figures symétriques par symétrie centrale se superposent par un demi-tour autour du centre de symétrie.
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \hrefConstruction{https://www.geogebra.org/classic/fbfhreb8}{Animation Geogebra}
+        \creditGeogebra{Roumazeille Boris}
+    \end{myBox}
+\end{remarque}
+
+\begin{methode*1}[Construction de l'image de $M$ par rapport à un point $O$]    
+    \exercice
+    Construire l'image d'un point $M$ par rapport à un point $O$,
+    
+    $M$ étant distinct de $O$.
+    \correction
+    \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \coordinate [label=left:$M$] (M) at (-1.5,0.5);
+                \coordinate [label=above:$O$] (O) at (0,0);
+                \coordinate [label=right:$M'$] (M') at (1.5,-0.5);
+                \tkzDrawPoints[shape=cross out](M,O,M');
+                \tkzMarkSegments[mark=||,size=3pt](M,O O,M');
+                \tkzDrawSegment(M,M');
+            \end{tikzpicture}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.65\linewidth}
+        \textbf{Programme de construction}
+        \begin{enumerate}
+            \item Tracer la demi-droite $[MO)$.
+            \item Avec le compas, placer M' sur la demi-droite $[MO)$
+            
+            tel que $M'O=OM$.
+        \end{enumerate}
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_116.html}{Construction à l'aide de la règle et du compas}
+        \creditInstrumentPoche
+    \end{myBox}
+\end{methode*1}
 
 % \Methode{}{
 % \begin{center}
