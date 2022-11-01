@@ -8,7 +8,7 @@
 \end{definition}
 
 \begin{center}    
-    \begin{tikzpicture}[x=0.6cm,y=0.6cm]
+    \begin{tikzpicture}[x=0.8cm,y=0.8cm]
         \draw [color=gray!50,, xstep=0.6cm,ystep=0.6cm] (-8,-1) grid (6,5);        
         \draw[line width=1pt, color=red,fill=red,fill opacity=0.4] (-5,4) -- (-3,4) -- (-4,3) -- (-3,2) -- (-3,0) -- (-4,1) -- (-5,0) -- (-7,0) -- (-5,2) -- cycle;
         \draw[line width=1pt,color=mygreen,fill=mygreen,fill opacity=0.4] (3,0) -- (1,0) -- (2,1) -- (1,2) -- (1,4) -- (2,3) -- (3,4) -- (5,4) -- (3,2) -- cycle;
@@ -63,7 +63,7 @@
     \end{myBox}
 \end{remarque}
 
-\begin{methode*1}[Construction de l'image de $M$ par rapport à un point $O$]    
+\begin{methode*1}[Construction de l'image d'un point par symétrie centrale]    
     \exercice
     Construire l'image d'un point $M$ par rapport à un point $O$,
     
@@ -96,42 +96,3 @@
     \end{myBox}
 \end{methode*1}
 
-% \Methode{}{
-% \begin{center}
-% \begin{minipage}{4cm}
-% %\includegraphics[scale=0.8]{figures/courssymcentrale.3} 
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
-% \clip(-1,1) rectangle (4,4);
-% \draw [line width=0.8pt,domain=-0.26:11.440000000000005] plot(\x,{(--5.9376-0.72*\x)/1.76});
-% \draw [line width=0.8pt] (-0.26,3.48)-- (1.5,2.76);
-% \draw [line width=0.8pt] (0.589288669180448,3.229803525258946) -- (0.5211347569507571,3.063205073141924);
-% \draw [line width=0.8pt] (0.6540769561148451,3.203299226058511) -- (0.5859230438851543,3.0367007739414893);
-% \draw [line width=0.8pt] (0.7188652430492422,3.1767949268580757) -- (0.6507113308195513,3.010196474741054);
-% \draw [line width=0.8pt] (1.5,2.76)-- (3.26,2.04);
-% \draw [line width=0.8pt] (2.3492886691804475,2.509803525258946) -- (2.2811347569507565,2.3432050731419243);
-% \draw [line width=0.8pt] (2.4140769561148447,2.483299226058511) -- (2.3459230438851537,2.316700773941489);
-% \draw [line width=0.8pt] (2.4788652430492415,2.456794926858076) -- (2.410711330819551,2.290196474741054);
-% \begin{scriptsize}
-% \draw (-0.26,3.48)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (-0.1,3.91) node {$M$};
-% \draw (1.5,2.76)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (1.66,3.19) node {$O$};
-% \draw (3.26,2.04)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (3.5,2.47) node {$M'$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% \end{minipage}
-% \begin{minipage}{11cm}
-% \begin{center}
-% \underline{Programme de construction} :\par
-% \begin{enumerate}
-% \item Trace la demi-droite $[MO)$.
-% \item Place M' sur la demi-droite $[MO)$ tel que $M'O=OM$ avec le compas.
-% \end{enumerate}
-% \end{center}
-% \end{minipage}
-% \infoComplementNumerique
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_116.html}{Construction à l'aide de la règle et du compas}
-% \creditInstrumentPoche
-% \end{center}
-% }

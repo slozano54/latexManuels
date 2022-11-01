@@ -1,18 +1,30 @@
 \subsection{Rotation}
 \begin{definition}
-    $M’$ est l’image de $M$ par la rotation de \textbf{centre $\mathbf{O}$} et d’\textbf{angle $\mathbf{\alpha}$} dans le sens inverse des aiguilles d’une montre signifie que : 
+    $A’$ est l’image de $A$ par la rotation de \textbf{centre $\mathbf{O}$} et d’\textbf{angle $\mathbf{\alpha}$} dans le sens positif signifie que : 
     \begin{itemize}
-        \item $\widehat{MOM'}=\mathbf{\alpha}$ de M vers M’ dans le sens inverse des aiguilles d’une montre,
+        \item $\widehat{MOM'}=\mathbf{\alpha}$ de A vers A’ dans le sens positif.
         \item $MO = OM’$
     \end{itemize}
 \end{definition}
 
+\begin{definition}
+    Le \textbf{sens postif} est le sens inverse des aiguilles d'une montre.
+    
+    On dit aussi \textbf{sens direct}.
+\end{definition}
+
+\begin{remarque}
+    Le \textbf{sens indirect} est donc le sens des aiguilles d'une montre.
+    
+    On dit aussi \textbf{sens négatif}.
+\end{remarque}
+
 \begin{center}
     \begin{minipage}{0.45\linewidth}
-        \includegraphics[scale=0.4]{\currentpath/images/coursRotationTux.png}
+        \includegraphics[scale=0.5]{\currentpath/images/coursRotationTux.png}
     \end{minipage}
     \begin{minipage}{0.45\linewidth}        
-        \begin{tikzpicture}[scale=1,>=triangle 45]
+        \begin{tikzpicture}[scale=1.25,>=triangle 45]
             % Points
             \coordinate (A) at (2,3);
             \coordinate (B) at (4.5,3);
@@ -52,7 +64,7 @@
             \tkzMarkRightAngles[size=0.1](A',K',I' A',C',B');
             \tkzDrawCircle(I',A');
             % Traits de construction
-            \tkzDrawArc[dashed,color=orange,->](O,A)(A');            
+            \tkzDrawArc[dashed,color=orange,->](O,A)(A');
             \tkzDrawArc[dashed,color=orange,->](O,C)(C');
             \tkzDrawArc[dashed,color=orange,->](O,K)(K');
             \tkzDrawArc[dashed,color=orange,->](O,I)(I');
@@ -86,30 +98,55 @@
 
 % \newpage
 
+\begin{methode*1}[Construction de l'image d'un point par rotation]    
+    \exercice
+    \begin{enumerate}
+        \item Construire l'image $M_1$ de $M$ par la rotation de centre $O$ et d'angle $\ang{140}$ dans le sens direct.
+        \item Construire l'image $M_2$ de $M$ par la rotation de centre $O$ et d'angle $\ang{60}$ dans le sens indirect.
+    \end{enumerate}
+    \correction
+    \begin{minipage}{0.45\linewidth}
+        \begin{tikzpicture}[scale=0.8,>=triangle 45]
+            % Points
+            \coordinate (M) at (4,0);
+            \coordinate (O) at (2,2);                
+            \tkzLabelPoints[left](O);
+            \tkzDefPointBy[rotation=center O angle 140](M);\tkzGetPoint{M1};
+            \tkzDefPointBy[rotation=center O angle -60](M);\tkzGetPoint{M2};
+            \tkzDrawPoints[shape=cross out,size=3pt](O,M1,M2);
+            \tkzDrawPoints[shape=cross,size=3pt](M);
+            \tkzLabelPoints[yshift=-0.2](M);
+            \tkzLabelPoint[left](M1){$M_1$};
+            \tkzLabelPoint[left](M2){$M_2$};
+            % Tracés
+            \tkzDrawLine[add = 0 and .3](O,M);
+            \tkzDrawLine[add = 0 and .3](O,M1);
+            \tkzDrawLine[add = 0 and .3](O,M2);
+            \tkzLabelLine[pos=1.25,right](O,M1){$x$}
+            \tkzLabelLine[pos=1.25,right](O,M2){$y$}
+            \tkzDrawArc[dashed,color=orange,->](O,M)(M1);
+            \tkzDrawArc[dashed,color=orange,<-](O,M2)(M);
+            \tkzMarkAngle[size=0.4](M,O,M1);
+            \tkzMarkAngle[size=0.6](M2,O,M);
+            \tkzLabelAngle[pos=0.8](M,O,M1){$\ang{140}$};
+            \tkzLabelAngle[pos=0.8](M2,O,M){$\ang{60}$};
+            \tkzMarkSegments[mark=||,size=3pt](O,M O,M1 O,M2);
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \textbf{Programme de construction}
+        \begin{enumerate}
+            \item Avec le rapporteur, tracer la demi-droite $\left[Ox\right)$ ou $\left[Oy\right)$. Attention au sens !
+            \item Avec le compas pointé en $O$, reporter la longueur $OM$ sur $\left[Ox\right)$ ou $\left[Oy\right)$.
+            \item Le point d'intersection est l'image $M_1$ ou $M_2$ selon la question.
+        \end{enumerate}
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+        \textbf{Construction de l'image :}
 
-% \Methode{}{
-% \begin{center}
-% $$\begin{tabular}{m{8cm}|m{8cm}}
-% \multicolumn{1}{c|}{Rotation de sens direct {\resizebox{!}{0.5cm}{$\circlearrowleft$}} de centre O}
-% &
-% \multicolumn{1}{c}{Rotation de sens indirect {\resizebox{!}{0.5cm}{$\circlearrowright$}} de centre O}\\
-% \multicolumn{1}{c|}{\par et d'angle 140\degres{}}
-% &
-% \multicolumn{1}{c}{\par et d'angle 60\degres{}}\\
-% \multicolumn{1}{c|}{\includegraphics[scale=1]{coursrota.1}}
-% &
-% \multicolumn{1}{c}{\includegraphics[scale=1]{coursrota.2}}\\
-% \end{tabular}$$
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_106.html}{d'un point sens direct}
 
-% \begin{mylist}
-% \item Tracer la demi-droite $\left[Ox\right)$ avec le rapporteur. Attention au sens\\
-% \item Avec le compas pointé en $O$, reporter la longueur $OM$ sur $\left[Ox\right)$.\\
-% \item Le point d'intersection est l'image $M'$.
-% \end{mylist}
-
-% \infoComplementNumerique
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_106.html}{Construction de l'image d'un point sens direct}
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_144.html}{Construction de l'image d'une polygone par report au compas}
-% \creditInstrumentPoche
-% \end{center}
-% }
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_144.html}{d'un polygone par report au compas}
+        \creditInstrumentPoche
+    \end{myBox}
+\end{methode*1}
