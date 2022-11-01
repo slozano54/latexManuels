@@ -74,56 +74,56 @@
 \ProcessOptions
 \RequirePackage{verbatim}     % AjoutSeb -> pour écrire tout ce qu'on veut (Christophe POULAIN)
 \begin{comment}             % AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
-\newif\ifxetex
-\begingroup\expandafter\expandafter\expandafter\endgroup
-\expandafter\ifx\csname XeTeXrevision\endcsname\relax
-  \xetexfalse
-\else
-  \xetextrue
-\fi
-\newif\ifpdftex
-\newif\ifpdfdvi
-\newif\ifluatex
-\ifx\luatexversion\undefined
-  \luatexfalse
-  \ifx\pdfoutput\undefined
-    \pdftexfalse
-    \pdfdvifalse
+  \newif\ifxetex
+  \begingroup\expandafter\expandafter\expandafter\endgroup
+  \expandafter\ifx\csname XeTeXrevision\endcsname\relax
+    \xetexfalse
   \else
-    \pdftextrue
-    \ifnum\pdfoutput=\z@
-      \pdfdvitrue
-    \else
+    \xetextrue
+  \fi
+  \newif\ifpdftex
+  \newif\ifpdfdvi
+  \newif\ifluatex
+  \ifx\luatexversion\undefined
+    \luatexfalse
+    \ifx\pdfoutput\undefined
+      \pdftexfalse
       \pdfdvifalse
+    \else
+      \pdftextrue
+      \ifnum\pdfoutput=\z@
+        \pdfdvitrue
+      \else
+        \pdfdvifalse
+      \fi
+    \fi
+  \else
+    \luatextrue
+  \fi
+  \ifpdftex
+    \unless\ifpdfdvi
+      \ClassError{sesamanuel}{Vous ne pouvez pas compiler en mode pdflatex}
+                          {Compilez en mode latex.}%
     \fi
   \fi
-\else
-  \luatextrue
-\fi
-\ifpdftex
-  \unless\ifpdfdvi
-    \ClassError{sesamanuel}{Vous ne pouvez pas compiler en mode pdflatex}
+  \ifluatex
+    \ClassError{sesamanuel}{Vous ne pouvez pas compiler en mode lualatex}
                         {Compilez en mode latex.}%
   \fi
-\fi
-\ifluatex
-  \ClassError{sesamanuel}{Vous ne pouvez pas compiler en mode lualatex}
-                      {Compilez en mode latex.}%
-\fi
-\RequirePackage{etex}
-\ifxetex
-  \RequirePackage{fontspec}
-  \RequirePackage{xunicode}
-  \defaultfontfeatures{Ligatures=TeX}
-  \unless\ifx\smc@encoding\smc@string@utfviii
-    \ClassError{sesamanuel}{Vous ne pouvez pas utiliser un codage autre
-      que utf8 avec xelatex}{Changez les codages de tous vos fichiers
-      pour les transformer en utf8.}%
+  \RequirePackage{etex}
+  \ifxetex
+    \RequirePackage{fontspec}
+    \RequirePackage{xunicode}
+    \defaultfontfeatures{Ligatures=TeX}
+    \unless\ifx\smc@encoding\smc@string@utfviii
+      \ClassError{sesamanuel}{Vous ne pouvez pas utiliser un codage autre
+        que utf8 avec xelatex}{Changez les codages de tous vos fichiers
+        pour les transformer en utf8.}%
+    \fi
+  \else
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage[\smc@encoding]{inputenc}
   \fi
-\else
-  \RequirePackage[T1]{fontenc}
-  \RequirePackage[\smc@encoding]{inputenc}
-\fi
 \end{comment}
 % Fin AjoutSeb -> du paquet verbatim pour commenter qqchose (Christophe POULAIN)
 
@@ -137,6 +137,10 @@
 \unless\ifluatex
   \ClassError{sesamanuel}{Mode de compilation incorrect}{Il faut compiler en mode LuaLaTex.}%
 \fi
+% \ifluatex
+%   \RequirePackage{fontspec}    
+%   \defaultfontfeatures{Ligatures=TeX}
+% \fi
 % Fin AjoutSeb -> Il est indispensable de compiler avec lualatex
 
 \RequirePackage[T1]{fontenc}              % AjoutSeb -> pour la gestion des fontes même en lualatex

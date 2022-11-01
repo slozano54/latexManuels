@@ -7,11 +7,9 @@
     \end{itemize}
 \end{definition}
 
-\begin{center}
-    \definecolor{cqcqcq}{rgb}{0.7,0.7,0.7}
-    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
-        \draw [color=gray!50,, xstep=0.6cm,ystep=0.6cm] (-8,-1) grid (6,5);
-        \clip(-8,-1) rectangle (6,5);
+\begin{center}    
+    \begin{tikzpicture}[x=0.6cm,y=0.6cm]
+        \draw [color=gray!50,, xstep=0.6cm,ystep=0.6cm] (-8,-1) grid (6,5);        
         \draw[line width=1pt, color=red,fill=red,fill opacity=0.4] (-5,4) -- (-3,4) -- (-4,3) -- (-3,2) -- (-3,0) -- (-4,1) -- (-5,0) -- (-7,0) -- (-5,2) -- cycle;
         \draw[line width=1pt,color=mygreen,fill=mygreen,fill opacity=0.4] (3,0) -- (1,0) -- (2,1) -- (1,2) -- (1,4) -- (2,3) -- (3,4) -- (5,4) -- (3,2) -- cycle;
         \begin{scriptsize}

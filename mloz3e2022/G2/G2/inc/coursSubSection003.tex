@@ -1,70 +1,65 @@
 \subsection{Translation}
-% \definNum{
-% $M’$ est l’image de $M$ par la translation \textbf{qui transforme $\mathbf{A}$ en $\mathbf{B}$} signifie que : $ABM’M$ est un parallélogramme.
-% }
-% \newcommand{\coursVecteurFigUn}[1]{
-% \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
-% \begin{tikzpicture}[line width=1pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=#1]
-% \clip(-7,-7) rectangle (6,1);
-% \draw (-6,-6)-- (-3,-4);
-% \draw (-3,-4)-- (-2,-1);
-% \draw (-2,-1)-- (-5,-3);
-% \draw (-5,-3)-- (-6,-6);
-% \draw (2,-2)-- (1,-5);
-% \draw (1,-5)-- (4,-3);
-% \draw (4,-3)-- (5,0);
-% \draw (5,0)-- (2,-2);
-% \draw [->,color=orange] (-2,-1) -- (5,0);
-% \draw [->,color=orange] (-5,-3) -- (2,-2);
-% \draw [->,color=orange] (-3,-4) -- (4,-3);
-% \draw [->,color=orange] (-6,-6) -- (1,-5);
-% \draw (-2.426427963055143,-5.405001161440179) node[anchor=north west] {$\overrightarrow{AB}$};
-% \begin{scriptsize}
-% \draw (-6,-6)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (-6.475761517615175,-5.6483505337094115) node {$A$};
-% \draw (1,-5)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (0.9609952989325763,-5.317395387423256) node {$B$};
-% \draw (-3,-4)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (-3.3608895525689966,-3.5458119573032416) node {$C$};
-% \draw (4,-3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (4.484694209391066,-2.552946518444773) node {$D$};
-% \draw (-2,-1)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (-2.212280515458218,-0.6450874398539891) node {$E$};
-% \draw (5,0)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (5.146604501963379,0.4256497981306344) node {$F$};
-% \draw (-5,-3)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (-5.307684530722859,-2.6113503677893886) node {$G$};
-% \draw (2,-2)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
-% \draw (1.8370530391018138,-1.3848695315524564) node {$H$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% }
-% \begin{center}
-% %\includegraphics{coursvecteurs.1}
-% \coursVecteurFigUn{1}
-% \end{center}
+\begin{definition}
+    $M’$ est l’image de $M$ par la translation \textbf{qui transforme $\mathbf{A}$ en $\mathbf{B}$} signifie que : $ABM’M$ est un parallélogramme.
+\end{definition}
 
-% \CadreLampe{Remarque}{
-% Une translation fait glisser une figure dans une direction, un sens et une longueur donnés.
-% \infoComplementNumerique
-% \lienCadre{https://www.geogebra.org/classic/efdft7qt}{Animation Geogebra}
-% \creditGeogebra{Gauthier}
-% }
 
-% \Methode{}{
-% \begin{center}
-% \begin{minipage}{6cm}
-% %\includegraphics[scale=0.5]{coursvecteurs.1}
-% \coursVecteurFigUn{0.5}
-% \end{minipage}
-% \begin{minipage}{10cm}
-% \begin{center}
-% \underline{Programme de construction} :\par
-% Pour construire l'image de ACEG par \mbox{la translation de vecteur $\vecteur{\strut AB}$}, il faut reproduire ce vecteur à partir de chaque sommet de la figure.
-% \end{center}
-% \end{minipage}
-% \infoComplementNumerique
-% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_122.html}{Construction de l'image d'un point à l'aide du compas}
-% \creditInstrumentPoche
-% \end{center}
-% }
+\newcommand{\coursVecteurFigUn}[1]{
+    %line width=1pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,
+    \begin{tikzpicture}[scale=#1,>=triangle 45]
+        \coordinate (A) at (-6,-6);
+        \coordinate (C) at (-3,-4);
+        \coordinate (E) at (-2,-1);
+        \coordinate (G) at (-5,-3);
+        \coordinate (B) at (1,-5);
+        \tkzDefPointBy[translation= from A to B](G);
+        \tkzGetPoint{H};
+        \tkzDefPointBy[translation= from A to B](E);
+        \tkzGetPoint{F};
+        \tkzDefPointBy[translation= from A to B](C);
+        \tkzGetPoint{D};
+        \draw (A)--(C)--(E)--(G)--(A);
+        \draw (B)--(D)--(F)--(H)--(B);
+        \draw [->,color=orange] (A) -- (B);
+        \draw [->,color=orange] (G) -- (H);
+        \draw [->,color=orange] (E) -- (F);
+        \draw [->,color=orange] (C) -- (D);
+        \tkzDefMidPoint(A,B);
+        \tkzGetPoint{M};
+        \tkzLabelPoint[below](M){$\overrightarrow{AB}$}        
+        \tkzDrawPoints[shape=cross out,size=2pt](A,B,C,D,E,F,G,H);
+        \tkzLabelPoints[below](A,B,C,D);
+        \tkzLabelPoints[above](E,F,G,H);
+    \end{tikzpicture}
+}
+\begin{center}
+    \coursVecteurFigUn{1}
+\end{center}
+
+\begin{remarque}
+    Une translation fait glisser une figure dans une direction, un sens et une longueur donnés.
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \hrefConstruction{https://www.geogebra.org/classic/efdft7qt}{Animation Geogebra}
+        \creditGeogebra{Gauthier}
+    \end{myBox}
+\end{remarque}
+
+\begin{methode*1}[Construction de l'image d'un quadrilatère par translation]    
+    \exercice
+    Construire l'image de $ACEG$ par la translation qui transforme $A$ en $B$.
+    \correction
+    \begin{minipage}{0.45\linewidth}
+        \begin{center}
+            \coursVecteurFigUn{0.5}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \textbf{Programme de construction}
+
+        Pour construire l'image de $ACEG$ par \mbox{la translation de vecteur $\overrightarrow{AB}$}, il faut reproduire ce vecteur à partir de chaque sommet de la figure.
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_122.html}{Construction de l'image d'un point à l'aide du compas}
+        \creditInstrumentPoche
+    \end{myBox}
+\end{methode*1}
