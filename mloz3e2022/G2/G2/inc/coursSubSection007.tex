@@ -1,91 +1,88 @@
 \subsection{Définition}
-% \definNum{
-% Deux triangles sont \textbf{semblables} si les longueurs de leurs côtés sont proportionnelles.
-% }
-% \Exemples[Exemple]{}{
-% \begin{minipage}{9cm}
-% \begin{tikzpicture}[line width=1pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.6]
-% \draw [color=lightgray,, xstep=1cm,ystep=1cm] (-5,-6) grid (10,0);
-% \clip(-5,-6) rectangle (10,0);
-% \draw [color=blue] (-3,-5)-- (-4,-3);
-% \draw [color=blue] (5,-5)-- (9,-3);
-% \draw [color=red] (-4,-3)-- (-2,-1);
-% \draw [color=red] (5,-5)-- (1,-1);
-% \draw (1,-1)-- (9,-3);
-% \draw (-2,-1)-- (-3,-5);
-% \begin{scriptsize}
-% \draw [fill=black] (-3,-5) circle (1pt);
-% \draw (-2.96,-5.26) node {$T$};
-% \draw [fill=black] (-4,-3) circle (1pt);
-% \draw (-4.4,-2.74) node {$O$};
-% \draw [fill=black] (5,-5) circle (1pt);
-% \draw (4.96,-5.6) node {$W$};
-% \draw [fill=black] (9,-3) circle (1pt);
-% \draw (9.16,-2.7) node {$E$};
-% \draw [fill=black] (-2,-1) circle (1pt);
-% \draw (-1.84,-0.7) node {$P$};
-% \draw [fill=black] (1,-1) circle (1pt);
-% \draw (0.96,-0.5) node {$B$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% \end{minipage}
-% \hfill
-% \begin{minipage}{7cm}
-% Sur la figure ci-contre, à l'aide du quadrillage, on peut constater que :
-% \begin{mylist}
-% \item $TO =2\times WE$
-% \item $OP =2\times EB$
-% \item $PT =2\times BW$
-% \end{mylist}
-% D'après la définition, puisque les longueurs de leurs côtés sont proportionnelles, \textbf{les triangles $\mathbf{TOP}$ et $\mathbf{WEB}$ sont donc semblables}.
-% \end{minipage}
-% }
+\begin{definition}
+    Deux triangles sont \textbf{semblables} si les longueurs de leurs côtés sont proportionnelles.
+\end{definition}
+\begin{exemple*1}
+    \titreExemple{Avec un quadrillage}
 
-% \Exemples[Exemple]{}{
-% \begin{minipage}{7cm}
-% Les triangles $MER$ et $GIF$ sont semblables.\\
-% Le tableau suivant est donc un tableau de proportionnalité :
-% \par\vspace{0.5cm}
-% \begin{tabular}{|c|c|c|c|}
-% \hline 
-% Triangle $MER$ & $ME$ & $ER$ & $RM$ \\ 
-% \hline 
-% Triangle $GIF$ & $GI$ & $IF$ & $FG$ \\ 
-% \hline 
-% \end{tabular}
-% Les trois rapports suivants sont donc égaux : $\dfrac{ME}{GI}=\dfrac{ER}{IF}=\dfrac{RM}{FG}$
-% \end{minipage}
-% \hfill
-% \begin{minipage}{9cm}
-% \begin{tikzpicture}[line width=1pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
-% \clip(-4,-4) rectangle (14,6);
-% \draw [color=red] (0,4)-- (-2,2);
-% \draw [color=red] (6,-3)-- (12,3);
-% \draw [color=blue] (-2,2)-- (-2,-1);
-% \draw [color=blue] (6,-3)-- (-3,-3);
-% \draw (-3,-3)-- (12,3);
-% \draw (-2,-1)-- (0,4);
-% \begin{scriptsize}
-% \draw [fill=black] (0,4) circle (1pt);
-% \draw (0.64,4.16) node {$M$};
-% \draw [fill=black] (-2,2) circle (1pt);
-% \draw (-2.4,2.26) node {$E$};
-% \draw [fill=black] (6,-3) circle (1pt);
-% \draw (5.96,-3.46) node {$I$};
-% \draw [fill=black] (12,3) circle (1pt);
-% \draw (12.16,3.5) node {$G$};
-% \draw [fill=black] (-2,-1) circle (1pt);
-% \draw (-2,-1.46) node {$R$};
-% \draw [fill=black] (-3,-3) circle (1pt);
-% \draw (-3.1,-3.44) node {$F$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% \end{minipage}
-% }
+    \begin{minipage}{0.55\linewidth}        
+        \begin{tikzpicture}[scale=0.45]
+            \draw[help lines, color=black!30] (-5,-6) grid (10,0);                            
+            \coordinate (T) at (-3,-5);
+            \coordinate (W) at (5,-5);
+            \coordinate (O) at (-4,-3);
+            \coordinate (E) at (9,-3);
+            \coordinate (P) at (-2,-1);
+            \coordinate (B) at (1,-1);
+            \tkzDrawSegment[thick,color=blue](O,T);
+            \tkzDrawSegment[thick,color=blue](W,E);
+            \tkzDrawSegment[thick,color=red](O,P);
+            \tkzDrawSegment[thick,color=red](B,W);
+            \tkzDrawSegment(T,P);
+            \tkzDrawSegment(B,E);
+            \tkzLabelPoints(T,W);
+            \tkzLabelPoints[above](P,B,E);
+            \tkzLabelPoints[left](O);
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\linewidth}
+        Sur la figure ci-contre, à l'aide du quadrillage, on peut constater que :
+        \begin{itemize}
+            \item $TO =2\times WE$
+            \item $OP =2\times EB$
+            \item $PT =2\times BW$
+        \end{itemize}
+        D'après la définition, puisque les longueurs de leurs côtés sont proportionnelles, \textbf{les triangles $\mathbf{TOP}$ et $\mathbf{WEB}$ sont donc semblables}.
+    \end{minipage}
+\end{exemple*1}
 
-% \CadreLampe{Remarques}{
-% \begin{mylist}
-% \item Si deux triangles sont \textbf{homothétiques} alors ils sont \textbf{semblables}.
-% \item La réciproque, Si deux triangles sont \textbf{semblables} alors ils sont  \textbf{homothétiques} est FAUSSE.
-% \end{mylist}
-% }
+\begin{exemple*1}
+    \titreExemple{Avec un tableau de proportionnalité}    
+
+    \medskip
+    \begin{minipage}{0.45\linewidth}
+        Les triangles $MER$ et $GIF$ sont semblables. Le tableau suivant est donc un tableau de proportionnalité :
+
+        \medskip
+        \begin{tabular}{|c|c|c|c|}
+        \hline 
+        Triangle $MER$ & $ME$ & $ER$ & $RM$ \\ 
+        \hline 
+        Triangle $GIF$ & $GI$ & $IF$ & $FG$ \\ 
+        \hline 
+        \end{tabular}
+
+        \medskip
+        Les trois rapports suivants sont donc égaux : $\dfrac{ME}{GI}=\dfrac{ER}{IF}=\dfrac{RM}{FG}$
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\linewidth}
+        \begin{tikzpicture}[scale=0.5]
+            \coordinate (M) at (0,4);            
+            \coordinate (E) at (-2,2);
+            \coordinate (R) at (-2,-1);
+            \coordinate (F) at (-3,-3);
+            \coordinate (I) at (6,-3);
+            \coordinate (G) at (12,3);
+            \tkzDrawSegment[color=red](E,M);
+            \tkzDrawSegment[color=red](I,G);
+            \tkzDrawSegment[color=blue](E,R);
+            \tkzDrawSegment[color=blue](F,I);
+            \tkzDrawSegment(R,M);
+            \tkzDrawSegment(F,G);
+            \tkzLabelPoints(R,F,I);
+            \tkzLabelPoints[above](M,G);
+            \tkzLabelPoints[left](E);
+        \end{tikzpicture}
+    \end{minipage}
+\end{exemple*1}
+
+\begin{remarque}
+    \begin{itemize}
+        \item Si deux triangles sont \textbf{homothétiques} alors ils sont \textbf{semblables}.
+        \item La réciproque : \og Si deux triangles sont \textbf{semblables} alors ils sont  \textbf{homothétiques} \fg 
+        
+        est FAUSSE.
+    \end{itemize}
+\end{remarque}
