@@ -1,173 +1,139 @@
 \subsection{Propriétés}
 
-% \proprNumBis{Conservations (admise)}{
-% L'homothétie conserve les \textbf{proportions}, les \textbf{mesures d'angle} et l'\textbf{alignement des points}. 
-% }
+\begin{propriete}[Conservations \admise]
+    L'homothétie conserve les \textbf{proportions}, les \textbf{mesures d'angle} et l'\textbf{alignement des points}. 
+\end{propriete}
 
-% \proprNumBis{Conséquence sur les longueurs et les aires (admise)}{
-% Dans une homothétie de rapport \textbf{k positif} : 
-% \begin{mylist}
-% \item les \textbf{longueurs} sont multipliées par $k$
-% \item les \textbf{aires} sont multipliées par $k^2$
-% \CadreLampe{En effet}{
-% Une aire est obtenue en multipliant deux longueurs, comme chaque longueur est multipliée par $k$ l'aire sera multipliée par $k\times k = k^2$.
-% }
-% \end{mylist}
-% }
+\begin{propriete}[Conséquence sur les longueurs et les aires \admise]
+    Dans une homothétie de rapport \textbf{k positif} : 
+    \begin{itemize}
+        \item les \textbf{longueurs} sont multipliées par $k$
+        \item les \textbf{aires} sont multipliées par $k^2$
+    \end{itemize}
+\end{propriete}
 
-% \proprNumBis{(admise)}{
-% La figure $F_2$ est l'image de la figure $F_1$ par cette homothétie :
-% \begin{mylist}
-% \item si $k$ est positif :\\
-% \hspace*{1cm}$\gtrdot$ si $k>1$ alors $F_2$ est un \textbf{agrandissement} de $F_1$\\
-% \hspace*{1cm}$\gtrdot$ si $0<k<1$ alors $F_2$ est une \textbf{réduction} de $F_1$
-% \item si $k$ est négatif :\\
-% \hspace*{1cm}$\gtrdot$ si $k<-1$ alors $F_2$ est un \textbf{agrandissement} de $F_1$\\
-% \hspace*{1cm}$\gtrdot$ si $-1<k<0$ alors $F_2$ est une \textbf{réduction} de $F_1$
-% \end{mylist}
-% }
+\begin{preuve}
+    En effet, une aire est obtenue en multipliant deux longueurs, comme chaque longueur est multipliée par $k$ l'aire sera multipliée par $k\times k = k^2$.
+\end{preuve}    
 
-% \begin{center}
-% %\includegraphics[scale=0.6]{../figures/courshomothetie4.ps}
-% \begin{tikzpicture}[line width=0.8pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.45]
-% \clip(-10,-15) rectangle (27,-3);
-% \fill[color=red,fill=red,fill opacity=0.1] (0,-8) -- (0,-5) -- (1,-5) -- (2,-6) -- (3,-5) -- (4,-5) -- (4,-8) -- (3,-8) -- (3,-6) -- (2,-7) -- (1,-6) -- (1,-8) -- cycle;
-% \fill[color=red,fill=red,fill opacity=0.1] (12,-14) -- (12,-5) -- (15,-5) -- (18,-8) -- (21,-5) -- (24,-5) -- (24,-14) -- (21,-14) -- (21,-8) -- (18,-11) -- (15,-8) -- (15,-14) -- cycle;
-% \draw [shift={(1,-5)},color=mygreen,fill=mygreen,fill opacity=0.1] (0,0) -- (180:0.5) arc (180:315:0.5) -- cycle;
-% \draw [shift={(15,-5)},color=mygreen,fill=mygreen,fill opacity=0.1] (0,0) -- (180:0.9442552027124941) arc (180:315:0.9442552027124941) -- cycle;
-% \draw [color=red] (0,-8)-- (0,-5);
-% \draw [color=red] (0,-5)-- (1,-5);
-% \draw [color=red] (1,-5)-- (2,-6);
-% \draw [color=red] (2,-6)-- (3,-5);
-% \draw [color=red] (3,-5)-- (4,-5);
-% \draw [color=red] (4,-5)-- (4,-8);
-% \draw [color=red] (4,-8)-- (3,-8);
-% \draw [color=red] (3,-8)-- (3,-6);
-% \draw [color=red] (3,-6)-- (2,-7);
-% \draw [color=red] (2,-7)-- (1,-6);
-% \draw [color=red] (1,-6)-- (1,-8);
-% \draw [color=red] (1,-8)-- (0,-8);
-% %\draw[line width=2.4pt] (3.248441502037381,-1.327775143530903) -- (9.543476186787341,-1.327775143530903);
-% \draw [color=red] (12,-14)-- (12,-5);
-% \draw [color=red] (12,-5)-- (15,-5);
-% \draw [color=red] (15,-5)-- (18,-8);
-% \draw [color=red] (18,-8)-- (21,-5);
-% \draw [color=red] (21,-5)-- (24,-5);
-% \draw [color=red] (24,-5)-- (24,-14);
-% \draw [color=red] (24,-14)-- (21,-14);
-% \draw [color=red] (21,-14)-- (21,-8);
-% \draw [color=red] (21,-8)-- (18,-11);
-% \draw [color=red] (18,-11)-- (15,-8);
-% \draw [color=red] (15,-8)-- (15,-14);
-% \draw [color=red] (15,-14)-- (12,-14);
-% \draw [dotted,domain=-12.740946597227518:27.547275385172227] plot(\x,{(-30-0*\x)/6});
-% \draw [dotted,domain=-12.740946597227518:27.547275385172227] plot(\x,{(-48-3*\x)/6});
-% \draw [dotted,domain=-12.740946597227518:27.547275385172227] plot(\x,{(-59-1.5*\x)/10});
-% \draw  (4,-5)-- (4,-6.5);
-% \draw  (4.188851040542487,-5.592624132881251) -- (3.81114895945749,-5.592624132881251);
-% \draw  (4.188851040542487,-5.75) -- (3.81114895945749,-5.75);
-% \draw  (4.188851040542487,-5.907375867118749) -- (3.81114895945749,-5.907375867118749);
-% \draw  (4,-6.5)-- (4,-8);
-% \draw  (4.188851040542487,-7.09262413288125) -- (3.81114895945749,-7.09262413288125);
-% \draw  (4.188851040542487,-7.25) -- (3.81114895945749,-7.25);
-% \draw  (4.188851040542487,-7.407375867118748) -- (3.81114895945749,-7.407375867118748);
-% \draw  (24,-5)-- (24,-9.5);
-% \draw  (24,-7.722127601356249) -- (23.71672343918622,-7.486063800678124);
-% \draw  (24,-7.722127601356249) -- (24.283276560813718,-7.486063800678124);
-% \draw  (24,-7.25) -- (23.71672343918622,-7.013936199321877);
-% \draw  (24,-7.25) -- (24.283276560813718,-7.013936199321877);
-% \draw  (24,-9.5)-- (24,-14);
-% \draw  (24,-12.222127601356245) -- (23.71672343918622,-11.986063800678123);
-% \draw  (24,-12.222127601356245) -- (24.283276560813718,-11.986063800678123);
-% \draw  (24,-11.75) -- (23.71672343918622,-11.513936199321874);
-% \draw  (24,-11.75) -- (24.283276560813718,-11.513936199321874);
-% \begin{scriptsize}
-% \draw (-6,-5) circle (1pt);
-% \draw (-5.910833964273811,-5.5611859690252565) node {$O$};
-% \draw (0,-8) circle (1pt);
-% \draw (-0.4971041353888451,-7.355270854178998) node {$A$};
-% \draw (0,-5) circle (1pt);
-% \draw (-0.4656289619650954,-4.144803164956514) node {$B$};
-% \draw (4,-6.5) circle (1pt);
-% \draw (4.55647051597374,-6) node {$M$};
-% \draw (0,-5.75) circle (1pt);
-% \draw (-0.6230048290838444,-5.520087145165085) node {$N$};
-% \draw  (12,-14) circle (1pt);
-% \draw (11.46346176563608,-13.17817793757272) node {$A'$};
-% \draw  (12,-5) circle (1pt);
-% \draw (12.376241794924823,-4.333654205499013) node {$B'$};
-% \draw (12,-7.25) circle (1pt);
-% \draw (11.43198659221233,-6.631341865432751) node {$N'$};
-% \draw (24,-9.5) circle (1pt);
-% \draw (24.682828693735,-8.897554351942741) node {$M'$};
-% \draw (1,-5) circle (1pt);
-% \draw (1.2655055763411436,-4.3966045523465125) node {$P$};
-% \draw (2,-6) circle (1pt);
-% \draw (1.9579593916636393,-5.52610802082151) node {$Q$};
-% \draw (15,-5) circle (1pt);
-% \draw (15.366383270181053,-4.3966045523465125) node {$P'$};
-% \draw (18,-8) circle (1pt);
-% \draw (18,-7.386746027602748) node {$Q'$};
-% \draw (4,-5) circle (1pt);
-% \draw (4.255647051597374,-4.3966045523465125) node {$R$};
-% \draw (4,-8) circle (1pt);
-% \draw (4.55647051597374,-7.586746027602748) node {$S$};
-% \draw (24,-5) circle (1pt);
-% \draw (24.3682828693735,-4.3966045523465125) node {$R'$};
-% \draw (24,-14) circle (1pt);
-% \draw (24.682828693735,-13.698504151538969) node {$S'$};
-% \end{scriptsize}
-% \end{tikzpicture}
-% \end{center}
+\begin{propriete}[\admise]
+    La figure $F_2$ est l'image de la figure $F_1$ par cette homothétie :
+    \begin{itemize}
+        \item si $k$ est positif :
+        
+        \hspace*{1cm}$\gtrdot$ si $k>1$ alors $F_2$ est un \textbf{agrandissement} de $F_1$
 
-% \Exemples[Exemple]{}{
-% \begin{mylist}
-% \item $M$ est le milieu de $[RS]$ donc son image $M'$ est le milieu de l'image de $[RS]$, à savoir $[R'S']$.
-% \item $\widehat{B'P'Q'}$ est l'image de $\widehat{BPQ}$ donc ils ont la même mesure.
-% \item $A$, $N$ et $B$ sont alignés donc leurs images $A'$, $N'$ et $B'$ le sont aussi.
-% \item Les longueurs sont multipliées par $3$ donc les aires sont multipiées par $3^2=9$
-% \end{mylist}
-% }
+        \hspace*{1cm}$\gtrdot$ si $0<k<1$ alors $F_2$ est une \textbf{réduction} de $F_1$
+        \item si $k$ est négatif :
+        
+        \hspace*{1cm}$\gtrdot$ si $k<-1$ alors $F_2$ est un \textbf{agrandissement} de $F_1$
 
-% \proprNum{(admise)}{le triangle $A’B’C’$ est l’image du triangle $ABC$ par une homothétie de rapport $k$}{les longueurs des côtés du triangle $A’B’C’$ sont proportionnelles aux longueurs des côtés du triangle $ABC$ :
-% \begin{mylist}
-% \item si $k$ est positif alors le rapport de proportionnalité vaut $k$.
-% \item si $k$ est négatif alors le rapport de proportionnalité vaut $-k$.
-% \end{mylist}
-% }
+        \hspace*{1cm}$\gtrdot$ si $-1<k<0$ alors $F_2$ est une \textbf{réduction} de $F_1$
+    \end{itemize}
+\end{propriete}
 
-% \CadreLampe{Remarque}{
-% Deux triangles qui sont liés par une homothétie sont dits \textbf{homothétiques}.\\
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
-% \clip(0,-5) rectangle (17,5);
-% \fill[line width=2pt,color=mygreen,fill=mygreen,fill opacity=0.1] (8.7,1.72) -- (7.145,-1.05) -- (10.47875,-2.91375) -- cycle;
-% \fill[line width=2pt,color=red,fill=red,fill opacity=0.2] (12.79,4.04) -- (10.4575,-0.115) -- (15.458125,-2.9106249999999996) -- cycle;
-% \draw [line width=2pt,color=mygreen] (8.7,1.72)-- (7.145,-1.05);
-% \draw [line width=2pt,color=mygreen] (7.145,-1.05)-- (10.47875,-2.91375);
-% \draw [line width=2pt,color=mygreen] (10.47875,-2.91375)-- (8.7,1.72);
-% %\draw[line width=2pt] (4.33625,4.515) -- (12.21125,4.515);
-% \draw [line width=2pt,color=red] (12.79,4.04)-- (10.4575,-0.115);
-% \draw [line width=2pt,color=red] (10.4575,-0.115)-- (15.458125,-2.9106249999999996);
-% \draw [line width=2pt,color=red] (15.458125,-2.9106249999999996)-- (12.79,4.04);
-% \draw [line width=0.8pt,dash pattern=on 1pt off 1pt,domain=0.52:29.299999999999994] plot(\x,{(-20.3174--1.87*\x)/6.625});
-% \draw [line width=0.8pt,dash pattern=on 1pt off 1pt,domain=0.52:29.299999999999994] plot(\x,{(-26.2984--4.64*\x)/8.18});
-% \draw [line width=0.8pt,dash pattern=on 1pt off 1pt,domain=0.52:29.299999999999994] plot(\x,{(-29.0828--0.00625*\x)/9.95875});
-% \begin{scriptsize}
-% \draw [fill=black] (8.7,1.72) circle (1.5pt);
-% \draw (8.64125,2.2181249999999997) node {$A$};
-% \draw [fill=black] (7.145,-1.05) circle (1.5pt);
-% \draw (6.69875,-0.7743749999999999) node {$B$};
-% \draw [fill=black] (10.47875,-2.91375) circle (1.5pt);
-% \draw (10.63625,-3.031875) node {$C$};
-% \draw [fill=black] (0.52,-2.92) circle (1.5pt);
-% \draw (0.71375,-2.533125) node {$O$};
-% \draw [fill=black] (12.79,4.04) circle (1.5pt);
-% \draw (12.78875,4.606875) node {$A'$};
-% \draw [fill=black] (10.4575,-0.115) circle (1.5pt);
-% \draw (10.1375,0.301875) node {$B'$};
-% \draw [fill=black] (15.458125,-2.9106249999999996) circle (1.5pt);
-% \draw (15.72875,-2.533125) node {$C'$};
-% \end{scriptsize}
-% \end{tikzpicture}
+\begin{center}
+    \begin{tikzpicture}[line width=0.8pt,scale=0.45]
+        % Points
+        \coordinate (O) at (-6,-5);
+        \coordinate (A) at (0,-8);
+        \coordinate (B) at (0,-5);
+        \coordinate (P) at (1,-5);
+        \coordinate (Q) at (2,-6);
+        \coordinate (T) at (3,-5);
+        \coordinate (R) at (4,-5);
+        \coordinate (S) at (4,-8);
+        \coordinate (U) at (3,-8);
+        \coordinate (V) at (3,-6);
+        \coordinate (W) at (2,-7);
+        \coordinate (X) at (1,-6);
+        \coordinate (Y) at (1,-8);
+        \coordinate (M) at (4,-6.5);
+        \coordinate (N) at (0,-5.75);
+        % Images
+        \tkzDefPointBy[homothety=center O ratio 3](A); \tkzGetPoint{A'};
+        \tkzDefPointBy[homothety=center O ratio 3](N); \tkzGetPoint{N'};
+        \tkzDefPointBy[homothety=center O ratio 3](B); \tkzGetPoint{B'};
+        \tkzDefPointBy[homothety=center O ratio 3](P); \tkzGetPoint{P'};
+        \tkzDefPointBy[homothety=center O ratio 3](Q); \tkzGetPoint{Q'};
+        \tkzDefPointBy[homothety=center O ratio 3](T); \tkzGetPoint{T'};
+        \tkzDefPointBy[homothety=center O ratio 3](R); \tkzGetPoint{R'};
+        \tkzDefPointBy[homothety=center O ratio 3](M); \tkzGetPoint{M'};
+        \tkzDefPointBy[homothety=center O ratio 3](S); \tkzGetPoint{S'};
+        \tkzDefPointBy[homothety=center O ratio 3](U); \tkzGetPoint{U'};
+        \tkzDefPointBy[homothety=center O ratio 3](V); \tkzGetPoint{V'};
+        \tkzDefPointBy[homothety=center O ratio 3](W); \tkzGetPoint{W'};
+        \tkzDefPointBy[homothety=center O ratio 3](X); \tkzGetPoint{X'};
+        \tkzDefPointBy[homothety=center O ratio 3](Y); \tkzGetPoint{Y'};        
+        % Tracés
+        \tkzLabelPoints(O);
+        \tkzLabelPoints[above left](B);
+        \tkzLabelPoints[below left](A,N);
+        \tkzLabelPoints[above](P,Q);
+        \tkzLabelPoints[above right](R,M,S);
+        \tkzLabelPoints[above left](B');
+        \tkzLabelPoints[below left](A');
+        \tkzLabelPoints[above left](N');
+        \tkzLabelPoints[above](P',Q');
+        \tkzLabelPoints[above right](R',M',S');
+        \draw[color=red,fill=red,fill opacity=0.1] (A) -- (B) -- (P) -- (Q) -- (T) -- (R) -- (S) -- (U) -- (V) -- (W) -- (X) -- (Y) -- cycle;        
+        \draw[color=red,fill=red,fill opacity=0.1] (A') -- (B') -- (P') -- (Q') -- (T') -- (R') -- (S') -- (U') -- (V') -- (W') -- (X') -- (Y') -- cycle;
+        \tkzMarkAngle[size=0.6,color=mygreen,fill=mygreen,fill opacity=0.1](B,P,Q);        
+        \tkzMarkAngle[size=0.6,color=mygreen,fill=mygreen,fill opacity=0.1](B',P',Q'); 
+        \tkzDrawSegment[thick](R,S);
+        \tkzDrawSegment[thick](R',S');       
+        \tkzMarkSegments[mark=oo,size=3pt](R,M M,S);
+        \tkzMarkSegments[mark=s,size=3pt](R',M' M',S');
+        \tkzDrawPoints[shape=cross out](O,A,N,B,P,Q,R,M,S);
+        \tkzDrawPoints[shape=cross out](A',N',B',P',Q',R',M',S');
+        \tkzDrawLine[dashed,add=0.1 and 0.1](O,R');
+        \tkzDrawLine[dashed,add=0.1 and 0.1](O,M');
+        \tkzDrawLine[dashed,add=0.1 and 0.1](O,A');    
+    \end{tikzpicture}
+\end{center}
 
-% }
+\begin{exemple*1}
+    {\color{red}\bfseries Déductions par conservation}
+
+    \begin{itemize}
+        \item $M$ est le milieu de $[RS]$ donc son image $M'$ est le milieu de l'image de $[RS]$, à savoir $[R'S']$.
+        \item $\widehat{B'P'Q'}$ est l'image de $\widehat{BPQ}$ donc ils ont la même mesure.
+        \item $A$, $N$ et $B$ sont alignés donc leurs images $A'$, $N'$ et $B'$ le sont aussi.
+        \item Les longueurs sont multipliées par $3$ donc les aires sont multipiées par $3^2=9$
+    \end{itemize}
+\end{exemple*1}
+
+\begin{propriete}[\admise]
+    Si le triangle $A’B’C’$ est l’image du triangle $ABC$ par une homothétie de rapport $k$ alors les longueurs des côtés du triangle $A’B’C’$ sont proportionnelles aux longueurs des côtés du triangle $ABC$ :
+    \begin{itemize}
+        \item si $k$ est positif alors le rapport de proportionnalité vaut $k$.
+        \item si $k$ est négatif alors le rapport de proportionnalité vaut $-k$.
+    \end{itemize}
+\end{propriete}
+
+\begin{remarque}
+    Deux triangles qui sont liés par une homothétie sont dits \textbf{homothétiques}.
+
+    \begin{tikzpicture}[scale=0.7]
+        % Points
+        \coordinate (O) at (0,-3);
+        \coordinate (A) at (8,2);
+        \coordinate (B) at (6,-1);
+        \coordinate (C) at (10,-3);
+        \tkzDefPointBy[homothety=center O ratio 1.6](A); \tkzGetPoint{A'};
+        \tkzDefPointBy[homothety=center O ratio 1.6](B); \tkzGetPoint{B'};
+        \tkzDefPointBy[homothety=center O ratio 1.6](C); \tkzGetPoint{C'};
+        % Tracés
+        \tkzLabelPoints[above](O);
+        \tkzLabelPoints[above left](A,B);
+        \tkzLabelPoints(C);
+        \tkzLabelPoints[above left](A',B');
+        \tkzLabelPoints(C');
+        \tkzDrawPoints[shape=cross out](O,A,B,C,A',B',C');
+        \draw[line width=2pt,color=mygreen,fill=mygreen,fill opacity=0.1] (A) -- (B) -- (C) -- cycle;
+        \draw[line width=2pt,color=red,fill=red,fill opacity=0.1] (A') -- (B') -- (C') -- cycle;        
+        \tkzDrawSegment[dashed,add=0 and 0.1](O,A');
+        \tkzDrawSegment[dashed,add=0 and 0.1](O,B');
+        \tkzDrawSegment[dashed,add=0 and 0.1](O,C');
+    \end{tikzpicture}
+\end{remarque}

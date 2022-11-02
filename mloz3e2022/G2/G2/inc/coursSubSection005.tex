@@ -44,25 +44,47 @@
     \end{center}
 \end{exemple*1}
 
-% \Methode{}{
-% \begin{center}
-% \begin{minipage}{8cm}
-% \includegraphics[scale=0.5]{../figures/courshomothetie3.ps}
-% \end{minipage}
-% \hfil
-% \begin{minipage}{6cm}
-% On construit respectivement les images $A’$, $B’$ et $C’$ de $A$, $B$ et $C$
-% par l’homothétie de centre $O$ et de rapport $-2$.
-% \end{minipage}
-% \par
-% \textbf{Par exemple pour construire $A’$ :}
-% \begin{mylist}
-% \item Tracer la droite $(OA)$.
-% \item L’image $A’$ de $A$ se trouve sur la demi-droite d'origine $O$ qui ne contient pas $A$ car le rapport est négatif.
-% \item $OA’= -(-2)\times OA = 2\times OA$.
-% \end{mylist}
-% On fait de même pour construire $B’$ et $C’$.
-% \infoComplementNumerique
-% \lienCadre{}{à venir}
-% \end{center}
-% }
+\begin{methode*1}[Construction de l'image d'un triangle par homothétie]
+    \exercice
+        Construire l'image de $ABC$ par l'homothétie de centre $O$ et de rapport $-2$.
+    \correction    
+        \begin{tikzpicture}[scale=0.6]
+            % Points
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (2,0);
+            \coordinate (B) at (4,2);
+            \coordinate (C) at (5,-2);
+            \tkzDefPointBy[homothety=center O ratio -2](A);\tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio -2](B);\tkzGetPoint{B'};
+            \tkzDefPointBy[homothety=center O ratio -2](C);\tkzGetPoint{C'};
+            % Tracés
+            \tkzLabelPoints(O,A,C);
+            \tkzLabelPoints[above](B,C');
+            \tkzLabelPoints(A',B');
+            \draw[fill=gray!10] (A)--(B)--(C)--(A);
+            \draw[fill=gray!10] (A')--(B')--(C')--(A');
+            \tkzDrawSegment[dashed,add=0.1 and 0.1](A,A');
+            \tkzDrawSegment[dashed,add=0.05 and 0.05](B,B');
+            \tkzDrawSegment[dashed,add=0.05 and 0.05](C,C');
+        \end{tikzpicture}
+
+        On construit respectivement les images $A’$, $B’$ et $C’$ de $A$, $B$ et $C$
+        par l’homothétie de centre $O$ et de rapport $-2$.
+
+        \textbf{Programme de construction pour A'}
+        \begin{enumerate}
+            \item Tracer la droite $(OA)$.
+            \item L’image $A’$ de $A$ se trouve sur la demi-droite d'origine $O$ qui ne contient pas $A$ car le rapport est négatif.
+            \item $OA’= -(-2)\times OA = 2\times OA$.
+        \end{enumerate}
+        On fait de même pour construire $B’$ et $C’$.
+
+    \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/homothetie001.html}{Image d'un point par une homothétie de rapport positif}
+
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/homothetie002.html}{Image d'un point par une homothétie de rapport négatif}
+
+        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/homothetie002.html}{Image d'un carré par une homothétie}
+        \creditInstrumentPoche
+    \end{myBox}
+\end{methode*1}
