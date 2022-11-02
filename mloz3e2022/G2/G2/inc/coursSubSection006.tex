@@ -1,9 +1,6 @@
-\subsection{Propriétés}
-
 \begin{propriete}[Conservations \admise]
     L'homothétie conserve les \textbf{proportions}, les \textbf{mesures d'angle} et l'\textbf{alignement des points}. 
 \end{propriete}
-
 \begin{propriete}[Conséquence sur les longueurs et les aires \admise]
     Dans une homothétie de rapport \textbf{k positif} : 
     \begin{itemize}
@@ -11,11 +8,9 @@
         \item les \textbf{aires} sont multipliées par $k^2$
     \end{itemize}
 \end{propriete}
-
 \begin{preuve}
     En effet, une aire est obtenue en multipliant deux longueurs, comme chaque longueur est multipliée par $k$ l'aire sera multipliée par $k\times k = k^2$.
 \end{preuve}    
-
 \begin{propriete}[\admise]
     La figure $F_2$ est l'image de la figure $F_1$ par cette homothétie :
     \begin{itemize}
@@ -31,9 +26,8 @@
         \hspace*{1cm}$\gtrdot$ si $-1<k<0$ alors $F_2$ est une \textbf{réduction} de $F_1$
     \end{itemize}
 \end{propriete}
-
 \begin{center}
-    \begin{tikzpicture}[line width=0.8pt,scale=0.45]
+    \begin{tikzpicture}[line width=0.8pt,scale=0.37]
         % Points
         \coordinate (O) at (-6,-5);
         \coordinate (A) at (0,-8);
@@ -91,7 +85,6 @@
         \tkzDrawLine[dashed,add=0.1 and 0.1](O,A');    
     \end{tikzpicture}
 \end{center}
-
 \begin{exemple*1}
     \titreExemple{Déductions par conservation}
 
@@ -102,7 +95,6 @@
         \item Les longueurs sont multipliées par $3$ donc les aires sont multipiées par $3^2=9$
     \end{itemize}
 \end{exemple*1}
-
 \begin{propriete}[\admise]
     Si le triangle $A’B’C’$ est l’image du triangle $ABC$ par une homothétie de rapport $k$ alors les longueurs des côtés du triangle $A’B’C’$ sont proportionnelles aux longueurs des côtés du triangle $ABC$ :
     \begin{itemize}
@@ -110,30 +102,30 @@
         \item si $k$ est négatif alors le rapport de proportionnalité vaut $-k$.
     \end{itemize}
 \end{propriete}
-
 \begin{remarque}
     Deux triangles qui sont liés par une homothétie sont dits \textbf{homothétiques}.
-
-    \begin{tikzpicture}[scale=0.7]
-        % Points
-        \coordinate (O) at (0,-3);
-        \coordinate (A) at (8,2);
-        \coordinate (B) at (6,-1);
-        \coordinate (C) at (10,-3);
-        \tkzDefPointBy[homothety=center O ratio 1.6](A); \tkzGetPoint{A'};
-        \tkzDefPointBy[homothety=center O ratio 1.6](B); \tkzGetPoint{B'};
-        \tkzDefPointBy[homothety=center O ratio 1.6](C); \tkzGetPoint{C'};
-        % Tracés
-        \tkzLabelPoints[above](O);
-        \tkzLabelPoints[above left](A,B);
-        \tkzLabelPoints(C);
-        \tkzLabelPoints[above left](A',B');
-        \tkzLabelPoints(C');
-        \tkzDrawPoints[shape=cross out](O,A,B,C,A',B',C');
-        \draw[line width=2pt,color=mygreen,fill=mygreen,fill opacity=0.1] (A) -- (B) -- (C) -- cycle;
-        \draw[line width=2pt,color=red,fill=red,fill opacity=0.1] (A') -- (B') -- (C') -- cycle;        
-        \tkzDrawSegment[dashed,add=0 and 0.1](O,A');
-        \tkzDrawSegment[dashed,add=0 and 0.1](O,B');
-        \tkzDrawSegment[dashed,add=0 and 0.1](O,C');
-    \end{tikzpicture}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.3]
+            % Points
+            \coordinate (O) at (0,-3);
+            \coordinate (A) at (8,2);
+            \coordinate (B) at (6,-1);
+            \coordinate (C) at (10,-3);
+            \tkzDefPointBy[homothety=center O ratio 1.8](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio 1.8](B); \tkzGetPoint{B'};
+            \tkzDefPointBy[homothety=center O ratio 1.8](C); \tkzGetPoint{C'};
+            % Tracés
+            \tkzLabelPoints[above](O);
+            \tkzLabelPoints[above left](A,B);
+            \tkzLabelPoints(C);
+            \tkzLabelPoints[above left](A',B');
+            \tkzLabelPoints(C');
+            \tkzDrawPoints[shape=cross out](O,A,B,C,A',B',C');
+            \draw[line width=2pt,color=mygreen,fill=mygreen,fill opacity=0.1] (A) -- (B) -- (C) -- cycle;
+            \draw[line width=2pt,color=red,fill=red,fill opacity=0.1] (A') -- (B') -- (C') -- cycle;        
+            \tkzDrawSegment[dashed,add=0 and 0.1](O,A');
+            \tkzDrawSegment[dashed,add=0 and 0.1](O,B');
+            \tkzDrawSegment[dashed,add=0 and 0.1](O,C');
+        \end{tikzpicture}
+    \end{center}
 \end{remarque}
