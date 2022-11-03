@@ -1,0 +1,150 @@
+\begin{exercice*}
+    Pour chaque situation, dire si $A'B'C'$ est l'image de $ABC$ par une homothétie de centre $O$.
+    
+    \textbf{Remarque :} Dans tous les cas $A'B'C'$ est un agrandissement de $ABC$.
+    \begin{enumerate}
+        \item \phantom{rrr}
+        
+        \begin{tikzpicture}[scale=0.6]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (15,4);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \coordinate (A') at (11,5);
+            \coordinate (B') at (10,2);
+            \coordinate (C') at (12,2);
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            % \tkzDrawSegment[color=red](O,A);
+            % \tkzDrawSegment[color=red](O,B);
+            % \tkzDrawSegment[color=red](O,C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+        \item \phantom{rrr}
+        
+        \begin{tikzpicture}[scale=0.6]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (7,6);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \coordinate (A') at (11,5);
+            \coordinate (B') at (10,2);
+            \coordinate (C') at (12,2);
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            % \tkzDrawSegment[color=red](A',A);
+            % \tkzDrawSegment[color=red](B',B);
+            % \tkzDrawSegment[color=red](C',C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+        \item \phantom{rrr}
+        
+        \begin{tikzpicture}[scale=0.6]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (15,4);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \tkzDefPointBy[homothety=center O ratio 0.5](A); \tkzGetPoint{A'}
+            \tkzDefPointBy[homothety=center O ratio 0.5](B); \tkzGetPoint{B'}
+            \tkzDefPointBy[homothety=center O ratio 0.5](C); \tkzGetPoint{C'}
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            % \tkzDrawSegment[color=red](O,A);
+            % \tkzDrawSegment[color=red](O,B);
+            % \tkzDrawSegment[color=red](O,C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Pour chaque situation, dire si $A'B'C'$ est l'image de $ABC$ par une homothétie de centre $O$.
+    
+    \textbf{Remarque :} Dans tous les cas $A'B'C'$ est un agrandissement de $ABC$.
+
+    \begin{enumerate}
+        \item {\color{red} $O$, $B$, $B'$ ne sont pas alignés, $O$, $C$, $C'$ non plus, donc les triangles $ABC$ et $A'B'C'$ ne sont pas homothétiques.}
+        
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (15,4);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \coordinate (A') at (11,5);
+            \coordinate (B') at (10,2);
+            \coordinate (C') at (12,2);
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            \tkzDrawSegment[color=red](O,A);
+            \tkzDrawSegment[color=red](O,B);
+            \tkzDrawSegment[color=red](O,C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+        \item {\color{red} $O$, $B$, $B'$ ne sont pas alignés, $O$, $C$, $C'$ non plus, donc les triangles $ABC$ et $A'B'C'$ ne sont pas homothétiques.}
+        
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (7,6);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \coordinate (A') at (11,5);
+            \coordinate (B') at (10,2);
+            \coordinate (C') at (12,2);
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            \tkzDrawSegment[color=red](A',A);
+            \tkzDrawSegment[color=red](B',B);
+            \tkzDrawSegment[color=red](C',C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+        \item {\color{red} $O$, $A$, $A'$ ; $O$, $B$, $B'$ et $O$, $C$, $C'$ sont alignés dans cet ordre et les rapports sont égaux, donc les triangles $ABC$ et $A'B'C'$ sont homothétiques par une homothétie de centre $O$.}
+        
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30] (0,0) grid (15,8);
+            % Points 
+            \coordinate (O) at (15,4);
+            \coordinate (A) at (3,7);
+            \coordinate (B) at (1,1);
+            \coordinate (C) at (5,1);
+            \tkzDefPointBy[homothety=center O ratio 0.5](A); \tkzGetPoint{A'}
+            \tkzDefPointBy[homothety=center O ratio 0.5](B); \tkzGetPoint{B'}
+            \tkzDefPointBy[homothety=center O ratio 0.5](C); \tkzGetPoint{C'}
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](O);
+            \draw (A)--(B)--(C)--cycle;
+            \draw (A')--(B')--(C')--cycle;
+            \tkzDrawSegment[color=red](O,A);
+            \tkzDrawSegment[color=red](O,B);
+            \tkzDrawSegment[color=red](O,C);
+            \tkzLabelPoints[above](A,A',O);
+            \tkzLabelPoints(B,B',C,C');
+        \end{tikzpicture}
+    \end{enumerate}    
+\end{corrige}
+
