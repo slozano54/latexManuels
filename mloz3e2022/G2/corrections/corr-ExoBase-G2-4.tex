@@ -1,0 +1,173 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Pour chacune des questions suivantes, la figure $\mathcal{F}_2$ est l'image de la figure $\mathcal{F}_1$ par une homothétie.
+
+    Déterminer son centre, le signe de son rapport, son rapport.
+
+    \begin{enumerate}
+        \item {\color{red}
+        \begin{itemize}
+            \item Centre : $A$
+            \item Signe du rapport : Positif, car les figures sont du même côté de $A$.
+            \item Rapport :  $3$, car $\dfrac{AE_2}{AE_1}=3$.
+        \end{itemize}
+        }
+
+        \medskip
+        \begin{tikzpicture}[scale=0.5]
+            \draw[help lines, color=black!30] (0,0) grid (17,7);
+            % Points
+            \coordinate (A) at (15,3);
+            \coordinate (B) at (9.5,3);
+            \coordinate (C1) at (10,2);
+            \coordinate (D1) at (13,2);
+            \coordinate (E1) at (13,4);
+            \coordinate (F1) at (10,4);
+            \tkzDefBarycentricPoint(C1=1,D1=1,E1=1,F1=1)
+            \tkzGetPoint{G1}
+            \tkzDefPointBy[homothety=center A ratio 3](C1); \tkzGetPoint{C2};
+            \tkzDefPointBy[homothety=center A ratio 3](D1); \tkzGetPoint{D2};
+            \tkzDefPointBy[homothety=center A ratio 3](E1); \tkzGetPoint{E2};
+            \tkzDefPointBy[homothety=center A ratio 2](E1); \tkzGetPoint{E3};
+            \tkzDefPointBy[homothety=center A ratio 3](F1); \tkzGetPoint{F2};
+            \tkzDefBarycentricPoint(C2=1,D2=1,E2=1,F2=1)
+            \tkzGetPoint{G2}
+            % % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+            \tkzLabelPoints[above](A,B);
+            \draw[fill=gray, fill opacity=0.2] (C1)--(D1)--(E1)--(F1)--cycle;
+            \draw[fill=gray, fill opacity=0.2] (C2)--(D2)--(E2)--(F2)--cycle;
+            \tkzMarkSegments[mark=oo,size=3pt](A,E1 E1,E3 E3,E2);
+            \tkzDrawPoints[shape=circle,color=red](E1,E2,E3);
+            \tkzDrawSegment[color=red, dashed](A,C2);
+            \tkzDrawSegment[color=red, dashed](A,D2);
+            \tkzDrawSegment[color=red, dashed](A,E2);
+            \tkzDrawSegment[color=red, dashed](A,F2);
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G1){$\mathcal{F}_1$};
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G2){$\mathcal{F}_2$};
+            \tkzLabelPoint[above](E1){$E_1$};
+            \tkzLabelPoint[above](E2){$E_2$};
+        \end{tikzpicture}
+        \item {\color{red}
+        \begin{itemize}
+            \item Centre : $B$
+            \item Signe du rapport : Négatif, car les figures ne sont pas du même côté de $B$.
+            \item Rapport :  $-2$, car $\dfrac{BC_2}{BC_1}=2$.
+        \end{itemize}
+        }
+
+        \medskip
+        \begin{tikzpicture}[scale=0.5]
+            \draw[help lines, color=black!30] (0,0) grid (17,7);
+            % Points
+            \coordinate (A) at (15,3);
+            \coordinate (B) at (9,2);
+            \coordinate (C1) at (7,1);
+            \coordinate (D1) at (8,3);
+            \coordinate (E1) at (6,3);
+            \tkzDefBarycentricPoint(C1=1,D1=1,E1=1)
+            \tkzGetPoint{G1}
+            \tkzDefPointBy[homothety=center B ratio -2](C1); \tkzGetPoint{C2};
+            \tkzDefPointBy[homothety=center B ratio -2](D1); \tkzGetPoint{D2};
+            \tkzDefPointBy[homothety=center B ratio -2](E1); \tkzGetPoint{E2};
+            \tkzDefPointBy[homothety=center B ratio -1](C1); \tkzGetPoint{C3};
+            \tkzDefBarycentricPoint(C2=1,D2=1,E2=1)
+            \tkzGetPoint{G2}
+            % % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+            \tkzLabelPoints[above](A,B);
+            \draw[fill=gray, fill opacity=0.2] (C1)--(D1)--(E1)--cycle;
+            \draw[fill=gray, fill opacity=0.2] (C2)--(D2)--(E2)--cycle;
+            \tkzMarkSegments[mark=oo,size=3pt](B,C1 B,C3 C3,C2);
+            \tkzDrawPoints[shape=circle,color=red](C1,C2,C3);
+            \tkzDrawSegment[color=red, dashed](C1,C2);
+            \tkzDrawSegment[color=red, dashed](D1,D2);
+            \tkzDrawSegment[color=red, dashed](E1,E2);
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G1){$\mathcal{F}_1$};
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G2){$\mathcal{F}_2$};
+            \tkzLabelPoint[below](C1){$C_1$};
+            \tkzLabelPoint[above](C2){$C_2$};
+        \end{tikzpicture}
+        \item {\color{red}
+        \begin{itemize}
+            \item Centre : $A$
+            \item Signe du rapport : Positif, car les figures sont du même côté de $A$.
+            \item Rapport :  $\dfrac{1}{3}$, car $\dfrac{AE_2}{AE_1}=\dfrac{1}{3}$.
+        \end{itemize}
+        }
+
+        \medskip
+        \begin{tikzpicture}[scale=0.5]
+            \draw[help lines, color=black!30] (0,0) grid (17,7);
+            % Points
+            \coordinate (A) at (15,3);
+            \coordinate (B) at (9.5,3);
+            \coordinate (C1) at (10,2);
+            \coordinate (D1) at (13,2);
+            \coordinate (E1) at (13,4);
+            \coordinate (F1) at (10,4);
+            \tkzDefBarycentricPoint(C1=1,D1=1,E1=1,F1=1)
+            \tkzGetPoint{G1}
+            \tkzDefPointBy[homothety=center A ratio 3](C1); \tkzGetPoint{C2};
+            \tkzDefPointBy[homothety=center A ratio 3](D1); \tkzGetPoint{D2};
+            \tkzDefPointBy[homothety=center A ratio 3](E1); \tkzGetPoint{E2};
+            \tkzDefPointBy[homothety=center A ratio 2](E1); \tkzGetPoint{E3};
+            \tkzDefPointBy[homothety=center A ratio 3](F1); \tkzGetPoint{F2};
+            \tkzDefBarycentricPoint(C2=1,D2=1,E2=1,F2=1)
+            \tkzGetPoint{G2}
+            % % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+            \tkzLabelPoints[above](A,B);
+            \draw[fill=gray, fill opacity=0.2] (C1)--(D1)--(E1)--(F1)--cycle;
+            \draw[fill=gray, fill opacity=0.2] (C2)--(D2)--(E2)--(F2)--cycle;
+            \tkzMarkSegments[mark=oo,size=3pt](A,E1 E1,E3 E3,E2);
+            \tkzDrawPoints[shape=circle,color=red](E1,E2,E3);
+            \tkzDrawSegment[color=red, dashed](A,C2);
+            \tkzDrawSegment[color=red, dashed](A,D2);
+            \tkzDrawSegment[color=red, dashed](A,E2);
+            \tkzDrawSegment[color=red, dashed](A,F2);
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G1){$\mathcal{F}_2$};
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G2){$\mathcal{F}_1$};
+            \tkzLabelPoint[above](E1){$E_2$};
+            \tkzLabelPoint[above](E2){$E_1$};
+        \end{tikzpicture}
+        \item {\color{red}
+        \begin{itemize}
+            \item Centre : $A$
+            \item Signe du rapport : Positif, car les figures sont du même côté de $A$.
+            \item Rapport :  $\dfrac{1}{\num{2.5}}$, car $\dfrac{AC_2}{AC_1}=\dfrac{1}{\num{2.5}}=\dfrac{2}{5}=\dfrac{4}{10}=\num{0.4}$.
+        \end{itemize}
+        }
+
+        \medskip
+        \begin{tikzpicture}[scale=0.5]
+            \draw[help lines, color=black!30] (0,0) grid (17,7);
+            \coordinate (A) at (15,3);
+            \coordinate (B) at (9,2);
+            \coordinate (C1) at (10,5);
+            \coordinate (D1) at (5,0.5);
+            \coordinate (E1) at (12.5,0.5);
+            \tkzDefBarycentricPoint(C1=1,D1=1,E1=1)
+            \tkzGetPoint{G1}
+            \tkzDefPointBy[homothety=center A ratio 0.4](C1); \tkzGetPoint{C2};
+            \tkzDefPointBy[homothety=center A ratio 0.4](D1); \tkzGetPoint{D2};
+            \tkzDefPointBy[homothety=center A ratio 0.4](E1); \tkzGetPoint{E2};
+            \tkzDefBarycentricPoint(C2=1,D2=1,E2=1)
+            \tkzGetPoint{G2}
+            % Tracés
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+            \tkzLabelPoints[above right](A,B);
+            \draw[fill=gray, fill opacity=0.2] (C1)--(D1)--(E1)--cycle;
+            \draw[fill=gray, fill opacity=0.2] (C2)--(D2)--(E2)--cycle;
+            \tkzMarkSegments[mark=oo,size=3pt](A,C1 C1,C3 C3,C2);
+            \tkzDrawPoints[shape=circle,color=red](C1,C2,C3);
+            \tkzDrawSegment[color=red, dashed](C1,C2);
+            \tkzDrawSegment[color=red, dashed](D1,D2);
+            \tkzDrawSegment[color=red, dashed](E1,E2);
+            \tkzLabelPoint[above,shift={(0.5,0.5)}](G1){$\mathcal{F}_1$};
+            \tkzLabelPoint[above,shift={(0,-0.3)}](G2){$\mathcal{F}_2$};
+            \tkzLabelPoint[below](C1){$C_1$};
+            \tkzLabelPoint[above](C2){$C_2$};
+        \end{tikzpicture}
+    \end{enumerate}
+
