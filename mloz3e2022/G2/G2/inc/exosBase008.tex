@@ -1,5 +1,5 @@
 \begin{exercice*}[Pavage]
-    \newcommand{\pavageBase}{%
+    \newcommand{\pavageBaseGdeuxExHuit}{%
         \foreach \a in {0,-2,-4}{%
             \draw[shift={(\a,-\a)}] (14,0) -- (14,2) -- (16,2) -- (16,4) -- (12,4) -- (12,0) -- cycle;
             \draw[shift={(\a,-\a)}] (15,2) -- (15,3) -- (13,3) -- (13,1) -- (14,1);
@@ -27,15 +27,15 @@
         \coordinate (O) at (16,0);
         \tkzDrawPoints[shape=cross out,size=3pt](O);
         \tkzLabelPoints[above](O);
-        \pavageBase
+        \pavageBaseGdeuxExHuit
         \begin{scope}[shift={(-8,8)}]
-            \pavageBase
+            \pavageBaseGdeuxExHuit
         \end{scope}
         \begin{scope}[rotate around={90:(8,0)}]
-            \pavageBase
+            \pavageBaseGdeuxExHuit
         \end{scope}
         \begin{scope}[rotate around={-90:(16,8)}]
-            \pavageBase
+            \pavageBaseGdeuxExHuit
         \end{scope}
         \draw[color=gray,fill=gray,fill opacity=0.5] (14,0) -- (15,0) -- (15,1) -- (16,1) -- (16,2) -- (14,2) -- cycle;
     \end{tikzpicture}
