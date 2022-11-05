@@ -1,52 +1,20 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     \phantom{rrr}
-    \newcommand{\pavageBaseGdeuxExSept}{%
-        \foreach \a in {0,-2,-4}{%
-            \draw[shift={(\a,-\a)}] (14,0) -- (14,2) -- (16,2) -- (16,4) -- (12,4) -- (12,0) -- cycle;
-            \draw[shift={(\a,-\a)}] (15,2) -- (15,3) -- (13,3) -- (13,1) -- (14,1);
-            \draw[shift={(\a,-\a)}] (12,2) -- (13,2);
-            \draw[shift={(\a,-\a)}] (14,3) -- (14,4);
-            \draw[shift={(\a,-\a)}] (14,0) -- (15,0) -- (15,1) -- (16,1) -- (16,2);
-        }
-        \foreach \a in {0}{%
-            \draw[shift={(\a,-\a)},rotate around={90:(12,0)}] (14,0) -- (14,2) -- (16,2) -- (16,4) -- (12,4) -- (12,0) -- cycle;
-            \draw[shift={(\a,-\a)},rotate around={90:(12,0)}] (15,2) -- (15,3) -- (13,3) -- (13,1) -- (14,1);
-            \draw[shift={(\a,-\a)},rotate around={90:(12,0)}] (12,2) -- (13,2);
-            \draw[shift={(\a,-\a)},rotate around={90:(12,0)}] (14,3) -- (14,4);
-            \draw[shift={(\a,-\a)},rotate around={90:(12,0)}] (14,0) -- (15,0) -- (15,1) -- (16,1) -- (16,2);
-        }
-        \foreach \a in {0}{%
-            \draw[shift={(\a,-\a)},rotate around={-90:(16,4)}] (14,0) -- (14,2) -- (16,2) -- (16,4) -- (12,4) -- (12,0) -- cycle;
-            \draw[shift={(\a,-\a)},rotate around={-90:(16,4)}] (15,2) -- (15,3) -- (13,3) -- (13,1) -- (14,1);
-            \draw[shift={(\a,-\a)},rotate around={-90:(16,4)}] (12,2) -- (13,2);
-            \draw[shift={(\a,-\a)},rotate around={-90:(16,4)}] (14,3) -- (14,4);
-            \draw[shift={(\a,-\a)},rotate around={-90:(16,4)}] (14,0) -- (15,0) -- (15,1) -- (16,1) -- (16,2);
-        }
-    }
-    \newcommand{\imageGdeuxExSept}[2]{
-        \tkzDefPointBy[homothety=center O ratio #1](A); \tkzGetPoint{Ab};
-        \tkzDefPointBy[homothety=center O ratio #1](B); \tkzGetPoint{Bb};
-        \tkzDefPointBy[homothety=center O ratio #1](C); \tkzGetPoint{Cb};
-        \tkzDefPointBy[homothety=center O ratio #1](D); \tkzGetPoint{Db};
-        \tkzDefPointBy[homothety=center O ratio #1](E); \tkzGetPoint{Eb};
-        \tkzDefPointBy[homothety=center O ratio #1](F); \tkzGetPoint{Fb};
-        \draw[color=#2,fill=#2,fill opacity=0.5] (Ab) -- (Bb) -- (Cb) -- (Db) -- (Eb) -- (Fb) -- cycle;
-    }
 
     \begin{tikzpicture}[scale=0.5]
         \draw[help lines, color=black!30] (0,0) grid (16,16);
         \coordinate (O) at (16,0);
         \tkzDrawPoints[shape=cross out,size=3pt](O);
         \tkzLabelPoints[above](O);
-        \pavageBaseGdeuxExSept
+        \pavageL
         \begin{scope}[shift={(-8,8)}]
-            \pavageBaseGdeuxExSept
+            \pavageL
         \end{scope}
         \begin{scope}[rotate around={90:(8,0)}]
-            \pavageBaseGdeuxExSept
+            \pavageL
         \end{scope}
         \begin{scope}[rotate around={-90:(16,8)}]
-            \pavageBaseGdeuxExSept
+            \pavageL
         \end{scope}
         % Les points
         \coordinate (A) at (14,0);
@@ -56,9 +24,9 @@
         \coordinate (E) at (16,2);
         \coordinate (F) at (14,2);
         \draw[color=gray,fill=gray,fill opacity=0.5] (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
-        \imageGdeuxExSept{2}{blue};
-        \imageGdeuxExSept{4}{red};
-        \imageGdeuxExSept{8}{mygreen};
+        \imageHomothetyHexaGone{2}{blue};
+        \imageHomothetyHexaGone{4}{red};
+        \imageHomothetyHexaGone{8}{mygreen};
     \end{tikzpicture}
 
     \begin{enumerate}
