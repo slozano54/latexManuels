@@ -1,0 +1,143 @@
+\begin{exercice*}[Message codé]
+    On considère {\color{red} l'homothétie de centre $A'$ et de rapport $2$}
+    et {\color{mygreen} celle de centre $A'$ et de rapport $3$}.
+
+    \begin{tikzpicture}[scale=0.36]            
+        % \draw[help lines, color=black!30] (0,0) grid (22,16);            
+        % Centre de l'homothétie
+        \coordinate (A') at (0,0);
+        % Points figure origine        
+        \coordinate (P) at (3,1);
+        \coordinate (Q) at (5,3);
+        \coordinate (C) at (5,5);
+        \coordinate (D) at (7,5);
+        \coordinate (F) at (6,4);
+        \coordinate (G) at (7,3);
+        \coordinate (H) at (7,1);
+        % \coordinate (J) at (6,2);
+        \coordinate (K) at (5,1);
+        % Points figure rouge
+        \tkzDefPointBy[homothety=center A' ratio 2](P); \tkzGetPoint{J};
+        \tkzDefPointBy[homothety=center A' ratio 2](Q); \tkzGetPoint{R};
+        \tkzDefPointBy[homothety=center A' ratio 2](C); \tkzGetPoint{A};
+        \tkzDefPointBy[homothety=center A' ratio 2](D); \tkzGetPoint{B};
+        \tkzDefPointBy[homothety=center A' ratio 2](F); \tkzGetPoint{U};
+        \tkzDefPointBy[homothety=center A' ratio 2](G); \tkzGetPoint{I};
+        \tkzDefPointBy[homothety=center A' ratio 2](H); \tkzGetPoint{L};
+        \tkzDefPointBy[homothety=center A' ratio 2](J); \tkzGetPoint{M};
+        \tkzDefPointBy[homothety=center A' ratio 2](K); \tkzGetPoint{N};        
+        % Points figure verte
+        \tkzDefPointBy[homothety=center A' ratio 3](P); \tkzGetPoint{Z};
+        \tkzDefPointBy[homothety=center A' ratio 3](Q); \tkzGetPoint{O};
+        \tkzDefPointBy[homothety=center A' ratio 3](C); \tkzGetPoint{S};
+        \tkzDefPointBy[homothety=center A' ratio 3](D); \tkzGetPoint{T};
+        \tkzDefPointBy[homothety=center A' ratio 3](F); \tkzGetPoint{E};
+        \tkzDefPointBy[homothety=center A' ratio 3](G); \tkzGetPoint{V};
+        \tkzDefPointBy[homothety=center A' ratio 3](H); \tkzGetPoint{W};
+        \tkzDefPointBy[homothety=center A' ratio 3](J); \tkzGetPoint{X};
+        \tkzDefPointBy[homothety=center A' ratio 3](K); \tkzGetPoint{Y};        
+        % Marques figure origine
+        \tkzDrawPoints[shape=cross out, size=3pt](A',P,Q,C,D,F,G,H,J,K);
+        \tkzLabelPoints[above](A',P,C,D,F,G,J);
+        \tkzLabelPoints[above left](Q,K);
+        \tkzLabelPoints[above right](H);
+        % Tracés figure origine
+        \draw[color=gray,fill=gray, fill opacity=0.2] (P)--(Q)--(C)--(D)--(F)--(G)--(H)--(J)--(K)--cycle;
+        % Marques figure rouge
+        \tkzDrawPoints[shape=cross out, size=3pt](J,R,A,B,U,I,L,M,N);
+        \tkzLabelPoints[above](A,B,U,I,M);
+        \tkzLabelPoints[above left](R);
+        %\tkzLabelPoints[above right](L);
+        \tkzLabelPoints[below](N,L);
+        % Tracés figure rouge
+        \draw[color=red,fill=red, fill opacity=0.2] (J)--(R)--(A)--(B)--(U)--(I)--(L)--(M)--(N)--cycle;
+        % Marques figure verte
+        \tkzDrawPoints[shape=cross out, size=3pt](Z,O,S,T,E,V,W,X,Y);
+        \tkzLabelPoints[above](Z,S,T,E,V,X);
+        \tkzLabelPoints[above left](O,Y);
+        \tkzLabelPoints[below](W);
+        % Tracés figure verte
+        \draw[color=mygreen,fill=mygreen, fill opacity=0.2] (Z)--(O)--(S)--(T)--(E)--(V)--(W)--(X)--(Y)--cycle;        
+    \end{tikzpicture}
+
+    Pour décoder le message ci-dessous, remplacer chaque point par son image obtenue
+    par l'homothétie conrrespondant à la couleur de la lettre.
+
+    {\color{red}PCJCG}{\color{mygreen}C} \hfill {\color{red}H}{\color{mygreen}F} \hfill {\color{mygreen}CQ}{\color{red}H}{\color{mygreen}F}{\color{red}GH} \hfill 
+    {\color{red}K}{\color{mygreen}F} \hfill {\color{mygreen}GQ}{\color{red}G}{\color{mygreen}D} \hfill {\color{red}H}'{\color{mygreen}Q}{\color{red}JDQ}{\color{mygreen}F}.      
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    On considère {\color{red} l'homothétie de centre $A'$ et de rapport $2$}
+    et {\color{mygreen} celle de centre $A'$ et de rapport $3$}.
+
+    \hspace*{-10mm}
+    \begin{tikzpicture}[scale=0.36]            
+        % \draw[help lines, color=black!30] (0,0) grid (22,16);            
+        % Centre de l'homothétie
+        \coordinate (A') at (0,0);
+        % Points figure origine        
+        \coordinate (P) at (3,1);
+        \coordinate (Q) at (5,3);
+        \coordinate (C) at (5,5);
+        \coordinate (D) at (7,5);
+        \coordinate (F) at (6,4);
+        \coordinate (G) at (7,3);
+        \coordinate (H) at (7,1);
+        % \coordinate (J) at (6,2);
+        \coordinate (K) at (5,1);
+        % Points figure rouge
+        \tkzDefPointBy[homothety=center A' ratio 2](P); \tkzGetPoint{J};
+        \tkzDefPointBy[homothety=center A' ratio 2](Q); \tkzGetPoint{R};
+        \tkzDefPointBy[homothety=center A' ratio 2](C); \tkzGetPoint{A};
+        \tkzDefPointBy[homothety=center A' ratio 2](D); \tkzGetPoint{B};
+        \tkzDefPointBy[homothety=center A' ratio 2](F); \tkzGetPoint{U};
+        \tkzDefPointBy[homothety=center A' ratio 2](G); \tkzGetPoint{I};
+        \tkzDefPointBy[homothety=center A' ratio 2](H); \tkzGetPoint{L};
+        \tkzDefPointBy[homothety=center A' ratio 2](J); \tkzGetPoint{M};
+        \tkzDefPointBy[homothety=center A' ratio 2](K); \tkzGetPoint{N};        
+        % Points figure verte
+        \tkzDefPointBy[homothety=center A' ratio 3](P); \tkzGetPoint{Z};
+        \tkzDefPointBy[homothety=center A' ratio 3](Q); \tkzGetPoint{O};
+        \tkzDefPointBy[homothety=center A' ratio 3](C); \tkzGetPoint{S};
+        \tkzDefPointBy[homothety=center A' ratio 3](D); \tkzGetPoint{T};
+        \tkzDefPointBy[homothety=center A' ratio 3](F); \tkzGetPoint{E};
+        \tkzDefPointBy[homothety=center A' ratio 3](G); \tkzGetPoint{V};
+        \tkzDefPointBy[homothety=center A' ratio 3](H); \tkzGetPoint{W};
+        \tkzDefPointBy[homothety=center A' ratio 3](J); \tkzGetPoint{X};
+        \tkzDefPointBy[homothety=center A' ratio 3](K); \tkzGetPoint{Y};        
+        % Marques figure origine
+        \tkzDrawPoints[shape=cross out, size=3pt](A',P,Q,C,D,F,G,H,J,K);
+        \tkzLabelPoints[above](A',P,C,D,F,G,J);
+        \tkzLabelPoints[above left](Q,K);
+        \tkzLabelPoints[above right](H);
+        % Tracés figure origine
+        \draw[color=gray,fill=gray, fill opacity=0.2] (P)--(Q)--(C)--(D)--(F)--(G)--(H)--(J)--(K)--cycle;
+        % Marques figure rouge
+        \tkzDrawPoints[shape=cross out, size=3pt](J,R,A,B,U,I,L,M,N);
+        \tkzLabelPoints[above](A,B,U,I,M);
+        \tkzLabelPoints[above left](R);
+        %\tkzLabelPoints[above right](L);
+        \tkzLabelPoints[below](N,L);
+        % Tracés figure rouge
+        \draw[color=red,fill=red, fill opacity=0.2] (J)--(R)--(A)--(B)--(U)--(I)--(L)--(M)--(N)--cycle;
+        % Marques figure verte
+        \tkzDrawPoints[shape=cross out, size=3pt](Z,O,S,T,E,V,W,X,Y);
+        \tkzLabelPoints[above](Z,S,T,E,V,X);
+        \tkzLabelPoints[above left](O,Y);
+        \tkzLabelPoints[below](W);
+        % Tracés figure verte
+        \draw[color=mygreen,fill=mygreen, fill opacity=0.2] (Z)--(O)--(S)--(T)--(E)--(V)--(W)--(X)--(Y)--cycle;        
+    \end{tikzpicture}
+
+    Pour décoder le message ci-dessous, remplacer chaque point par son image obtenue
+    par l'homothétie conrrespondant à la couleur de la lettre.
+
+    {\color{red}PCJCG}{\color{mygreen}C} \hfill {\color{red}H}{\color{mygreen}F} \hfill {\color{mygreen}CQ}{\color{red}H}{\color{mygreen}F}{\color{red}GH} \hfill 
+    {\color{red}K}{\color{mygreen}F} \hfill {\color{mygreen}GQ}{\color{red}G}{\color{mygreen}D} \hfill {\color{red}H}'{\color{mygreen}Q}{\color{red}JDQ}{\color{mygreen}F}.
+
+    {\color{red}JAMAIS \hfill LE \hfill SOLEIL \hfill NE \hfill VOIT \hfill L'OMBRE.}
+
+\end{corrige}
+
