@@ -325,3 +325,27 @@
     \tkzDefPointBy[homothety=center O ratio #1](F); \tkzGetPoint{Fb};
     \draw[color=#2,fill=#2,fill opacity=0.5] (Ab) -- (Bb) -- (Cb) -- (Db) -- (Eb) -- (Fb) -- cycle;
 }
+
+% Pavage en losanges dans un quadrillage mxn
+% #1 -> longueur du pavage en abscisse
+% #2 -> longueur du pavage en ordonnée
+\newcommand{\pavageLosange}[2]{%
+  \foreach \i in {1,...,#2}{%
+    \begin{scope}[shift={(\i-1,\i*1.73-1.73)}]
+        \foreach \j in {1,...,#1}{%
+            \draw[shift={(\j*2-2,0)}] (0,0) -- (2, 0) -- (3, 1.73) -- (1, 1.73) -- cycle;
+        }
+    \end{scope}
+  }
+}
+
+% Image d'une maille définie par des points nommés A,B,C,D,E,F par homothetie de centre O
+% #1 -> ratio
+% #2 -> couleur
+\newcommand{\imageHomothetyParallelogramme}[2]{
+    \tkzDefPointBy[homothety=center O ratio #1](A); \tkzGetPoint{Ab};
+    \tkzDefPointBy[homothety=center O ratio #1](B); \tkzGetPoint{Bb};
+    \tkzDefPointBy[homothety=center O ratio #1](C); \tkzGetPoint{Cb};
+    \tkzDefPointBy[homothety=center O ratio #1](D); \tkzGetPoint{Db};
+    \draw[color=#2,fill=#2,fill opacity=0.5] (Ab) -- (Bb) -- (Cb) -- (Db) -- cycle;
+}
