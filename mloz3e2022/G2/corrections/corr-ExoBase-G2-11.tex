@@ -1,0 +1,44 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    \begin{enumerate}
+        \item construire $A'B'C'$, l'image du triangle $ABC$ par l'homothétie de centre $O$ et de rapport $2$.
+        \item construire $E'F'G'$, l'image du triangle $EFG$ par l'homothétie de centre $O$ et de rapport $-\num{1.5}$.
+    \end{enumerate}
+
+    \begin{tikzpicture}[scale=0.45]
+        \quadrilageMailleCarree{18}{18}
+        % Points
+        \coordinate (O) at (12,7);
+        \coordinate (A) at (7,8);
+        \coordinate (B) at (10,8);
+        \coordinate (C) at (7,5);
+        \coordinate (E) at (15,5);
+        \coordinate (F) at (17,1);
+        \coordinate (G) at (13,1);
+        % Tracés
+        \tkzDrawPoints[shape=cross out, size=5pt](O);
+        \tkzLabelPoints[above](O,A,B,E);
+        \tkzLabelPoints[below](C,G,F);
+        \draw (A) -- (B) -- (C) -- cycle;
+        \draw (E) -- (F) -- (G) -- cycle;
+        % Correction
+        \tkzDefPointBy[homothety=center O ratio 2](A); \tkzGetPoint{A'};
+        \tkzDefPointBy[homothety=center O ratio 2](B); \tkzGetPoint{B'};
+        \tkzDefPointBy[homothety=center O ratio 2](C); \tkzGetPoint{C'};
+        \tkzDefPointBy[homothety=center O ratio -1.5](E); \tkzGetPoint{E'};
+        \tkzDefPointBy[homothety=center O ratio -1.5](F); \tkzGetPoint{F'};
+        \tkzDefPointBy[homothety=center O ratio -1.5](G); \tkzGetPoint{G'};
+        \draw[color=red] (A') -- (B') -- (C') -- cycle;
+        \draw[color=red] (E') -- (F') -- (G') -- cycle;
+        \draw[dashed] (O) -- (A');
+        \draw[dashed] (O) -- (B');
+        \draw[dashed] (O) -- (C');
+        \draw[dashed] (E) -- (E');
+        \draw[dashed] (F) -- (F');
+        \draw[dashed] (G) -- (G');
+        \tkzLabelPoints[right,color=red](B');
+        \tkzLabelPoints[below,color=red](E');
+        \tkzLabelPoints[above,color=red](A',G',F');
+        \tkzLabelPoints[below,color=red](C');
+    \end{tikzpicture}
+

@@ -316,7 +316,7 @@
 % Image d'une maille définie par des points nommés A,B,C,D,E,F par homothetie de centre O
 % #1 -> ratio
 % #2 -> couleur
-\newcommand{\imageHomothetyHexaGone}[2]{
+\newcommand{\imageHomothetyHexaGone}[2]{%
     \tkzDefPointBy[homothety=center O ratio #1](A); \tkzGetPoint{Ab};
     \tkzDefPointBy[homothety=center O ratio #1](B); \tkzGetPoint{Bb};
     \tkzDefPointBy[homothety=center O ratio #1](C); \tkzGetPoint{Cb};
@@ -342,10 +342,45 @@
 % Image d'une maille définie par des points nommés A,B,C,D,E,F par homothetie de centre O
 % #1 -> ratio
 % #2 -> couleur
-\newcommand{\imageHomothetyParallelogramme}[2]{
+\newcommand{\imageHomothetyParallelogramme}[2]{%
     \tkzDefPointBy[homothety=center O ratio #1](A); \tkzGetPoint{Ab};
     \tkzDefPointBy[homothety=center O ratio #1](B); \tkzGetPoint{Bb};
     \tkzDefPointBy[homothety=center O ratio #1](C); \tkzGetPoint{Cb};
     \tkzDefPointBy[homothety=center O ratio #1](D); \tkzGetPoint{Db};
     \draw[color=#2,fill=#2,fill opacity=0.5] (Ab) -- (Bb) -- (Cb) -- (Db) -- cycle;
 }
+
+% Axe Gradué
+% #1 -> abscisse de O
+% #2 -> abscisse de M
+\newcommand{\axeHomothety}[2]{%
+    \draw[help lines, color=black!30] (0,0) grid (18,2);            
+    % Axe
+    \draw (0,1)--(18,1);
+    \foreach \x in {0,...,18} \draw (\x,0.9) -- (\x,1.1);
+    % Points
+    \coordinate (O) at (#1,1);
+    \coordinate (M) at (#2,1);    
+    % Marques
+    \tkzDrawPoints[shape=cross out, size=5pt](O,M);
+    \tkzLabelPoints[above](O,M);    
+}
+
+% Image d'un point nommé M par homothetie de centre O
+% #1 -> ratio
+% #2 -> couleur
+\newcommand{\imageHomothetyPoint}[2][black]{%
+    \tkzDefPointBy[homothety=center O ratio #2](M); \tkzGetPoint{M1};            
+    % Marques
+    \tkzDrawPoints[shape=cross out, size=5pt,color=#1](M1);    
+    \tkzLabelPoint[above,color=#1](M1){$M_1$};
+}
+
+% Quadrillage à mailles carrées mxn
+% #1 -> couleur (facultive)
+% #2 -> nombre de carreaux en abscisse
+% #3 -> nombre de carreaux en ordonnée
+\newcommand{\quadrilageMailleCarree}[3][black!30]{%
+    \draw[help lines, color=#1] (0,0) grid (#2,#3);
+}
+

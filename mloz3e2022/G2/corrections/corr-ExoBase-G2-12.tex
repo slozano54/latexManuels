@@ -1,0 +1,125 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Pour chaque question, construire l'image de la figure proposée par l'homothétie de centre $O$ et de rapport indiqué.
+
+    \newcommand{\scaleGdeuxExDouze}{0.45}
+    \begin{enumerate}
+        \item Rapport $2$.
+
+        \begin{tikzpicture}[scale=\scaleGdeuxExDouze]
+            \quadrilageMailleCarree[white]{16}{7}
+            % Points
+            \coordinate (O) at (16,4);
+            \coordinate (A) at (14,5.5);
+            \coordinate (B) at (12,5.5);
+            \coordinate (C) at (13,2);
+            % Tracés
+            \tkzDrawPoints[shape=cross out, size=5pt](O);
+            \tkzLabelPoints[above right](O);
+            \draw (A) -- (B) -- (C) -- cycle;
+            % Correction
+            \tkzDefPointBy[homothety=center O ratio 2](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio 2](B); \tkzGetPoint{B'};
+            \tkzDefPointBy[homothety=center O ratio 2](C); \tkzGetPoint{C'};
+            \draw[color=red] (A') -- (B') -- (C') -- cycle;
+            \draw[dashed] (O) -- (A');
+            \draw[dashed] (O) -- (B');
+            \draw[dashed] (O) -- (C');
+        \end{tikzpicture}
+        \item Rapport $-2$.
+
+        \begin{tikzpicture}[scale=\scaleGdeuxExDouze]
+            \quadrilageMailleCarree[white]{16}{7}
+            % Points
+            \coordinate (O) at (6,2.5);
+            \coordinate (A) at (1,1);
+            \coordinate (B) at (3,1);
+            \coordinate (C) at (4,3);
+            \coordinate (D) at (2,3);
+            % Tracés
+            \tkzDrawPoints[shape=cross out, size=5pt](O);
+            \tkzLabelPoints[above right](O);
+            \draw (A) -- (B) -- (C) -- (D) -- cycle;
+            % Correction
+            \tkzDefPointBy[homothety=center O ratio -2](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio -2](B); \tkzGetPoint{B'};
+            \tkzDefPointBy[homothety=center O ratio -2](C); \tkzGetPoint{C'};
+            \tkzDefPointBy[homothety=center O ratio -2](D); \tkzGetPoint{D'};
+            \draw[color=red] (A') -- (B') -- (C') -- (D') -- cycle;
+            \draw[dashed] (A) -- (A');
+            \draw[dashed] (B) -- (B');
+            \draw[dashed] (C) -- (C');
+            \draw[dashed] (D) -- (D');
+        \end{tikzpicture}
+        \item Rapport $-\dfrac{1}{3}$.
+
+        \begin{tikzpicture}[scale=\scaleGdeuxExDouze]
+            \quadrilageMailleCarree[white]{16}{7}
+            % Points
+            \coordinate (O) at (10,4);
+            \coordinate (A) at (8,6.5);
+            \coordinate (B) at (2,6.5);
+            \coordinate (C) at (4,1);
+            % Tracés
+            \tkzDrawPoints[shape=cross out, size=5pt](O);
+            \tkzLabelPoints[above right](O);
+            \draw (A) -- (B) -- (C) -- cycle;
+            % Correction
+            \tkzDefPointBy[homothety=center O ratio -1/3](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio -1/3](B); \tkzGetPoint{B'};
+            \tkzDefPointBy[homothety=center O ratio -1/3](C); \tkzGetPoint{C'};
+            \draw[color=red] (A') -- (B') -- (C') -- cycle;
+            \draw[dashed] (A) -- (A');
+            \draw[dashed] (B) -- (B');
+            \draw[dashed] (C) -- (C');
+        \end{tikzpicture}
+        \item Rapport $\num{1.5}$.
+
+        \begin{tikzpicture}[scale=\scaleGdeuxExDouze]
+            \quadrilageMailleCarree[white]{16}{7}
+            % Points
+            \coordinate (O) at (1,1);
+            \coordinate (A) at (4,3);
+            \tkzDefCircle[R](O,2); \tkzGetPoint{B};
+            % Tracés
+            \tkzDrawPoints[shape=cross out, size=5pt](O,A);
+            \tkzLabelPoints[above left](O);
+            \tkzDrawCircle(A,B);
+            % Correction
+            \tkzDefPointBy[homothety=center O ratio 1.5](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio 1.5](B); \tkzGetPoint{B'};
+            \tkzDrawPoints[shape=cross out, size=5pt,color=red](B,A',B');
+            \tkzDrawCircle[color=red](A',B');
+            \draw[dashed] (O) -- (A');
+            \draw[dashed] (O) -- (B');
+        \end{tikzpicture}
+        \item Rapport $-\num{1.5}$.
+
+        \begin{tikzpicture}[scale=\scaleGdeuxExDouze]
+            \quadrilageMailleCarree[white]{16}{10}
+            % Points
+            \coordinate (O) at (11,6);
+            \coordinate (A) at (14,8);
+            \tkzDefCircle[R](O,2); \tkzGetPoint{B};
+            \coordinate (M) at (13,10);
+            \coordinate (N) at (15,6);
+            \coordinate (P) at (16,10);
+            % Tracés
+            \tkzDrawPoints[shape=cross out, size=5pt](O,A);
+            \tkzLabelPoints[above left](O);
+            \tkzDrawArc(A,M)(N);
+            \draw (M) -- (N) -- (P) -- cycle;
+
+            \tkzDefPointBy[homothety=center O ratio -1.5](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center O ratio -1.5](M); \tkzGetPoint{M'};
+            \tkzDefPointBy[homothety=center O ratio -1.5](N); \tkzGetPoint{N'};
+            \tkzDefPointBy[homothety=center O ratio -1.5](P); \tkzGetPoint{P'};
+
+            \draw[dashed] (M) -- (M');
+            \draw[dashed] (N) -- (N');
+            \draw[dashed] (P) -- (P');
+            \tkzDrawArc[color=red](A',M')(N');
+            \draw[color=red] (M') -- (N') -- (P') -- cycle;
+
+        \end{tikzpicture}
+    \end{enumerate}
