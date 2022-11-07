@@ -1,0 +1,29 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Une homothétie de centre $I$ et de rapport $-2$ transforme un segment $[AB]$ en un segment $[A'B']$.
+
+    \begin{enumerate}
+        \item Faire une figure.
+
+        % Correction
+        \begin{tikzpicture}[scale=0.5]
+            % \quadrilageMailleCarree{10}{6}
+            % Points
+            \coordinate (I) at (4,4);
+            \coordinate (A) at (1,5);
+            \coordinate (B) at (5,6);
+            \tkzDefPointBy[homothety=center I ratio -2](A); \tkzGetPoint{A'};
+            \tkzDefPointBy[homothety=center I ratio -2](B); \tkzGetPoint{B'};
+            % Tracés
+            \tkzLabelPoints[color=red](A,B,I,A',B');
+            \draw[color=red] (A) -- (B);
+            \draw[color=red] (A') -- (B');
+            \draw[dashed,color=red] (A) -- (A');
+            \draw[dashed,color=red] (B) -- (B');
+        \end{tikzpicture}
+        \item Justifier la position relative de $(AB)$ et $(A'B')$.
+
+        % Correction
+        {\color{red} L'image d'une droite par une homothétie est une droite parallèle, or $(A'B')$ est l'image de $(AB)$ par l'homothétie de ccentre $I$ et de rapport $-2$
+        donc $(A'B')$ et $(AB)$ sont parallèles.}
+    \end{enumerate}
