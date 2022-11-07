@@ -1,0 +1,69 @@
+\begin{exercice*}
+    $RULP$ est un trapèze rectangle. $OKFM$ est son image par une homothétie de rapport $\num{0.5}$.
+    \begin{enumerate}
+        \item Construire le centre $I$ de cette homothétie.
+        
+        \begin{tikzpicture}[scale=0.5]            
+            \quadrilageMailleCarree[white]{18}{8}
+            % Points
+            \coordinate (P) at (1,1);
+            \coordinate (L) at (8,1);
+            \coordinate (U) at (7,4);            
+            \coordinate (R) at (1,4);
+            \coordinate (I) at (17,7);
+            \tkzDefPointBy[homothety=center I ratio 0.5](P); \tkzGetPoint{M};
+            \tkzDefPointBy[homothety=center I ratio 0.5](L); \tkzGetPoint{F};
+            \tkzDefPointBy[homothety=center I ratio 0.5](U); \tkzGetPoint{K};
+            \tkzDefPointBy[homothety=center I ratio 0.5](R); \tkzGetPoint{O};
+            % Tracés
+            \tkzLabelPoints[above](R,U,O,K);
+            \tkzLabelPoints(P,L,M,F);        
+            \draw (P) -- (L) -- (U) -- (R) -- cycle;
+            \draw (M) -- (F) -- (K) -- (O) -- cycle;
+            \tkzMarkRightAngle(P,R,U);
+            \tkzMarkRightAngle(L,P,R);
+        \end{tikzpicture} 
+        \item Déterminer la nature de $OKFM$. Justifier.
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    $RULP$ est un trapèze rectangle. $OKFM$ est son image par une homothétie de rapport $\num{0.5}$.
+
+    \begin{enumerate}
+        \item Construire le centre $I$ de cette homothétie.
+        
+        \begin{tikzpicture}[scale=0.5]            
+            % \quadrilageMailleCarree{18}{8}
+            % Points
+            \coordinate (P) at (1,1);
+            \coordinate (L) at (8,1);
+            \coordinate (U) at (7,4);            
+            \coordinate (R) at (1,4);
+            \coordinate (I) at (17,7);
+            \tkzDefPointBy[homothety=center I ratio 0.5](P); \tkzGetPoint{M};
+            \tkzDefPointBy[homothety=center I ratio 0.5](L); \tkzGetPoint{F};
+            \tkzDefPointBy[homothety=center I ratio 0.5](U); \tkzGetPoint{K};
+            \tkzDefPointBy[homothety=center I ratio 0.5](R); \tkzGetPoint{O};
+            % Tracés
+            \tkzLabelPoints[above](R,U,O,K);
+            \tkzLabelPoints(P,L,M,F);        
+            \draw (P) -- (L) -- (U) -- (R) -- cycle;
+            \draw (M) -- (F) -- (K) -- (O) -- cycle;
+            \tkzMarkRightAngle(P,R,U);
+            \tkzMarkRightAngle(L,P,R);
+            % Correction
+            \tkzDrawSegment[add=0 and 0.1,color=red](R,I);
+            \tkzDrawSegment[add=0 and 0.1,color=red](L,I);
+            \tkzDrawPoints[shape=cross out, color=red, size=5pt](I);
+            \tkzLabelPoints[color=red](I);
+        \end{tikzpicture} 
+        \item Déterminer la nature de $OKFM$. Justifier.
+        
+        {\color{red} Une homothétie conserve les angles, elle agrandit ou réduit les figures donc leur forme est conservée.
+        
+        $OKFM$ est donc un trapèze rectangle comme $RULP$.}
+    \end{enumerate}
+\end{corrige}
+
