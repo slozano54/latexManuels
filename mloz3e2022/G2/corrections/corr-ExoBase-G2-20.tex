@@ -1,0 +1,34 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Justifier que $ABC$ et $FTS$ sont deux triangles semblables.
+
+    \begin{tikzpicture}[scale=0.5]
+        \quadrilageMailleCarree[white]{18}{8}
+        % Points
+        \coordinate (A) at (6,7);
+        \coordinate (B) at (1,1);
+        \coordinate (C) at (8,1);
+        \coordinate (O) at (16,3);
+        \tkzDefPointBy[homothety=center O ratio 0.4](A); \tkzGetPoint{F};
+        \tkzDefPointBy[homothety=center O ratio 0.4](B); \tkzGetPoint{T};
+        \tkzDefPointBy[homothety=center O ratio 0.4](C); \tkzGetPoint{S};
+        % Tracés
+        \tkzLabelPoints[above](A,F);
+        \tkzLabelPoints[below left](B,T);
+        \tkzLabelPoints[below right](C,S);
+        \begin{scope}[dim style/.append style={red,dashed},dim fence style/.style={red,dashed}]
+            \tkzDrawSegment[dim={$10$,5mm,left=2mm}](B,A);
+            \tkzDrawSegment[dim={$\num{7.5}$,5mm,right=2mm}](A,C);
+            \tkzDrawSegment[dim={$5$,5mm,below=2mm}](C,B);
+            \tkzDrawSegment[dim={$4$,5mm,left=2mm}](T,F);
+            \tkzDrawSegment[dim={$3$,5mm,right=2mm}](F,S);
+            \tkzDrawSegment[dim={$2$,5mm,below=2mm}](S,T);
+        \end{scope}
+    \end{tikzpicture}
+
+    {\color{red} On calcule les quotients des côtés homologues :
+
+    $\dfrac{AB}{FT}=\dfrac{10}{4}=\dfrac{5}{2}$ ;\hfill $\dfrac{AC}{FS}=\dfrac{\num{7.5}}{3}=\dfrac{15}{6}=\dfrac{5}{2}$ ;\hfill $\dfrac{BC}{TS}=\dfrac{5}{2}$.
+
+    Les triangles $ABC$ et $FTS$ sont donc semblables.
+    }
