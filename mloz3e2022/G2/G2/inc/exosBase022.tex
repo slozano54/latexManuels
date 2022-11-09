@@ -1,0 +1,53 @@
+\begin{exercice*}
+    Déterminer si $MAC$ et $RMC$ sont deux triangles semblables.
+
+        \begin{tikzpicture}[scale=0.5]            
+            \quadrilageMailleCarree[white]{18}{8}
+            % Points
+            \coordinate (R) at (1,1);
+            \coordinate (C) at (8,1);
+            \coordinate (M) at (3,6);            
+            \coordinate (A) at (7,7);            
+            % % Tracés
+            \tkzLabelPoints[above](M,A);
+            \tkzLabelPoints[below left](R);            
+            \tkzLabelPoints[below right](C); 
+            \tkzPicAngle["$\ang{78}$",draw=black,-,angle eccentricity=1.4,angle radius=5mm](R,M,C);
+            \tkzPicAngle["$\ang{62}$",draw=black,-,angle eccentricity=1.6,angle radius=5mm](C,R,M);
+            \tkzPicAngle["$\ang{62}$",draw=black,-,angle eccentricity=1.5,angle radius=7mm](C,M,A);
+            \tkzPicAngle["$\ang{39}$",draw=black,-,angle eccentricity=1.5,angle radius=7mm](A,C,M);
+            \draw (R) -- (M) -- (C) -- cycle;
+            \draw (M) -- (A) -- (C);
+        \end{tikzpicture} 
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Déterminer si $MAC$ et $RMC$ sont deux triangles semblables.
+
+        \begin{tikzpicture}[scale=0.5]            
+            \quadrilageMailleCarree[white]{18}{8}
+            % Points
+            \coordinate (R) at (1,1);
+            \coordinate (C) at (8,1);
+            \coordinate (M) at (3,6);            
+            \coordinate (A) at (7,7);            
+            % % Tracés
+            \tkzLabelPoints[above](M,A);
+            \tkzLabelPoints[below left](R);            
+            \tkzLabelPoints[below right](C); 
+            \tkzPicAngle["$\ang{78}$",draw=black,-,angle eccentricity=1.4,angle radius=5mm](R,M,C);
+            \tkzPicAngle["$\ang{62}$",draw=black,-,angle eccentricity=1.6,angle radius=5mm](C,R,M);
+            \tkzPicAngle["$\ang{62}$",draw=black,-,angle eccentricity=1.5,angle radius=7mm](C,M,A);
+            \tkzPicAngle["$\ang{39}$",draw=black,-,angle eccentricity=1.5,angle radius=7mm](A,C,M);
+            \draw (R) -- (M) -- (C) -- cycle;
+            \draw (M) -- (A) -- (C);
+        \end{tikzpicture} 
+
+    {\color{red} Dans le triangle $RMC$ : $\widehat{MCR} = \ang{180} - (\ang{78} + \ang{62}) = \ang{180}-\ang{140}=\ang{40}$
+    
+    Les angles des triangles $RMC$ et $MAC$ ne sont pas deux à deux de même mesure, il n'y a pas d'angle de \ang{39} dans le triangle $RMC$
+    ils ne sont donc pas semblables.
+    }
+\end{corrige}
+
