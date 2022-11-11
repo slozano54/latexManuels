@@ -1,0 +1,38 @@
+\section{Se repérer sur un plan ou une carte}
+
+\begin{definition}
+   \begin{minipage}{8cm}
+      Une {\bf rose des vents} est une figure qui indique les 4 points cardinaux : est, nord, ouest et sud et éventuellement les orientations intermédiaires.
+   \end{minipage}
+   \hfill
+   \begin{minipage}{4cm}
+      \psset{unit=0.5}
+      \footnotesize
+      \begin{pspicture}(-3,-4)(4,4)
+         \pspolygon[fillstyle=solid,fillcolor=white](2.5;45)(0,1)(2.5;135)(-1,0)(2.5;-135)(0,-1)(2.5;-45)(1,0)
+         \pspolygon[fillstyle=solid,fillcolor=white](0,-3)(1;-45)(3,0)(1;45)(0,3)(1;135)(-3,0)(1;-135)
+         \psline(-3,0)(3,0)
+         \psline(0,-3)(0,3)
+         \psline(2.5;45)(2.5;-135)
+         \psline(2.5;135)(2.5;-45)
+         \rput(3.5;0){E}
+         \rput(3.4;45){NE}
+         \rput(3.5;90){N}
+         \rput(3.4;135){NO}
+         \rput(3.5;180){O}
+         \rput(3.4;225){SO}
+         \rput(3.5;270){S}
+         \rput(3.4;315){SE}
+      \end{pspicture}
+   \end{minipage}
+\end{definition}
+
+\begin{center}
+   \begin{minipage}{0.45\linewidth}
+      \includegraphics[scale=0.5]{\currentpath/images/plan_college.eps}
+   \end{minipage}
+   \qquad
+   \begin{minipage}{0.45\linewidth}
+      Sur une carte, on peut se repérer grâce à la rose des vents, mais sur les cartes actuelles et les GPS, bien souvent, seule la direction du nord est indiquée. Elle permet à elle seule de se repérer dans le plan.
+   \end{minipage}
+\end{center}

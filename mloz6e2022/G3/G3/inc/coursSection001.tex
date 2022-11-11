@@ -1,0 +1,39 @@
+\section{Se repérer sur un quadrillage} %%%
+
+\begin{methode*2*2}[Repérage sur un quadrillage]
+Pour se repérer sur un quadrillage, on peut utiliser les {\bf coordonnées} des cases ou des n\oe uds.
+   \exercice
+      Quadrillage à {\bf cases}. \\
+      Déterminer l'emplacement du carré et du disque. \\
+      \psset{unit=0.7}
+      \begin{pspicture}(-2,0)(6,6.5)
+         \rput(1,1){\psgrid[gridlabels=0,subgriddiv=0](5,5)}
+         \rput(1.5,0.5){A}
+         \rput(2.5,0.5){B}
+         \rput(3.5,0.5){C}
+         \rput(4.5,0.5){D}
+         \rput(5.5,0.5){E}
+         \rput(0.5,0.5){\multido{\n=1+1}{5}{\rput(0,\n){\n}}}
+         \pscircle[linecolor=violet,fillstyle=solid,fillcolor=violet](4.5,3.5){0.3}
+         \psframe[linecolor=violet,fillstyle=solid,fillcolor=violet](2.25,4.25)(2.75,4.75)
+      \end{pspicture}
+   \correction
+      Le carré est en B4, le disque en D3.
+   \exercice
+      Quadrillage à {\bf n\oe uds}. Déterminer l'emplacement du triangle et du pentagone. \\
+      \psset{unit=0.7}
+      \begin{pspicture}(-2,0)(6,6.5)
+         \rput(1,1){\psgrid[gridlabels=0,subgriddiv=0](5,5)}
+         \rput(1,0.5){A}
+         \rput(2,0.5){B}
+         \rput(3,0.5){C}
+         \rput(4,0.5){D}
+         \rput(5,0.5){E}
+         \rput(6,0.5){F}
+         \rput(0.5,1){\multido{\n=0+1}{6}{\rput(0,\n){\n}}}
+         \psdot[linecolor=violet,linewidth=2mm,dotstyle=triangle*](3,2)
+         \psdot[linecolor=violet,linewidth=1.8mm,dotstyle=pentagon*](4,6)
+      \end{pspicture}
+   \correction
+      Triangle (C;1) et pentagone (D;5).
+\end{methode*2*2}
