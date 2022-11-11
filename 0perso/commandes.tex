@@ -107,11 +107,11 @@
 % Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
 % #2 --> url
 \newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} S'entraîner sur le site \mathaleaLogo]{
-    \href{#2}{#1} 
+    \href{#2}{#1}\qrcode[hyperlink,height=0.5in]{#2}  
 }
 
 % Pour la géométrie, voir des constructions etc ...
-% #1 --> emojis par dafaut
+% #1 --> emojis par defaut
 % Par défaut #1 est emoji equerre + emoji regle + le smiley link mais cela peut être modifié
 % #2 --> url
 % #3 --> texte
