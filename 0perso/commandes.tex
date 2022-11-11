@@ -377,10 +377,21 @@
 }
 
 % Quadrillage à mailles carrées mxn
-% #1 -> couleur (facultive)
+% #1 -> couleur : facultive black!30 par défaut
 % #2 -> nombre de carreaux en abscisse
 % #3 -> nombre de carreaux en ordonnée
 \newcommand{\quadrilageMailleCarree}[3][black!30]{%
     \draw[help lines, color=#1] (0,0) grid (#2,#3);
+}
+
+% Papier millimétré
+% #1 -> couleur : facultative, brown par défaut
+\newcommand{\papierMillimetre}[1][brown]{
+    \begin{pgfonlayer}{background}
+        \draw[step=1mm,ultra thin,#1!30] (current bounding box.south west) grid (current bounding box.north east);
+        \draw[step=5mm,very thin,#1!50] (current bounding box.south west) grid (current bounding box.north east);
+        \draw[step=1cm,thin,#1!70] (current bounding box.south west) grid (current bounding box.north east);
+        \draw[step=5cm,thick,#1!90] (current bounding box.south west) grid (current bounding box.north east);
+    \end{pgfonlayer}
 }
 
