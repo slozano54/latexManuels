@@ -1,0 +1,118 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+\phantom{\numeroteEnigme}
+\begin{enigme}[{\LARGE Nombres croisés}]    
+   \partie[mode d'emploi]
+    %   Une grille de nombres croisés se comporte comme une grille de mots croisés :
+      \begin{itemize}
+         \item horizontalement, les lignes sont repérées par des chiffres romains de I à V ;
+         \item verticalement, les colonnes sont repérées par des lettres de A à E ;
+         \item les indications des nombres à trouver sont indiquées sous la grille de nombres croisés, repérées par des chiffres romains ou des lettres selon s'ils sont horizontaux ou verticaux ;
+         \item il est interdit d'écrire dans les cases noires ;
+         \item si une ligne ou une colonne ne possède pas de carré noir, il y a un seul nombre à écrire ;
+         \item si une ligne ou colonne possède un carré noir, deux nombres sont à écrire, ils sont définis par deux lignes différentes. \\
+      \end{itemize}
+   
+   \partie[let's go !]
+Compléter la grille à l'aide de nombres entiers correspondant aux définitions.
+   \begin{center}
+      {\psset{unit=1.2}\begin{pspicture}(-1,-0.5)(5,5.8)
+         \psgrid[gridlabels=0,subgriddiv=0](0,0)(5,5)
+         \psframe[fillstyle=solid,fillcolor=black](0,0)(1,1)
+         \psframe[fillstyle=solid,fillcolor=black](4,1)(5,2)
+         \psframe[fillstyle=solid,fillcolor=black](1,2)(2,3)
+         \psframe[fillstyle=solid,fillcolor=black](3,4)(4,5)
+         \rput(0.5,5.4){\bf A}
+         \rput(1.5,5.4){\bf B}
+         \rput(2.5,5.4){\bf C}
+         \rput(3.5,5.4){\bf D}
+         \rput(4.5,5.4){\bf E}
+         \rput(-0.4,0.5){\bf V}
+         \rput(-0.4,1.5){\bf IV}
+         \rput(-0.4,2.5){\bf III}
+         \rput(-0.4,3.5){\bf II}
+         \rput(-0.4,4.5){\bf I}
+      \end{pspicture}}
+   \end{center}   
+   \begin{multicols}{2}        
+        \begin{itemize}
+            \begin{spacing}{1.2}
+            \item[] {\bf Horizontalement} 
+            \begin{itemize}
+                \item[] {\bf I} : Partie entière de 328,54.
+                \item[] \phantom{{\bf I} : }Chiffre des centièmes de 634,152.
+                \item[] {\bf II} : Son chiffre des dizaines est le triple
+                \item[] \phantom{{\bf II} : }de celui des unités.
+                \item[] {\bf III} : Chiffre des dixièmes de 34.
+                \item[] \phantom{{\bf III} : }Entier précédant 178,356.
+                \item[] {\bf IV} : Entier compris entre 8\,000 et 9\,000.
+                \item[] {\bf V} : Quarante-deux centaines.
+            \end{itemize}
+            \columnbreak
+            \item[] {\bf Verticalement}
+                \begin{itemize}
+                    \item[] {\bf A} : $(3\times1 000) + (5\times100) + (8\times1)$.
+                    \item[] {\bf B} : Nombre de dixièmes dans 2,6.
+                    \item[] \phantom{{\bf B} : }Partie entière de $\dfrac{2\,498}{100}$.
+                    \item[] {\bf C} : Quatre-vingt-six milliers et cent-deux unités.
+                    \item[] {\bf D} : En additionnant tous les chiffres
+                    \item[] \phantom{{\bf D} : }du nombre, on trouve 20.
+                    \item[] {\bf E} : Entier qui suit 537,56.
+                    \item[] \phantom{{\bf E} : }Entier qui précède 1.
+                \end{itemize}
+            \end{spacing}
+        \end{itemize}
+     \end{multicols}
+\end{enigme}
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    \phantom{rrr}
+
+    \begin{center}
+        {\psset{unit=1.2}\begin{pspicture}(-1,-0.5)(5,5.8)
+           \psgrid[gridlabels=0,subgriddiv=0](0,0)(5,5)
+           \psframe[fillstyle=solid,fillcolor=black](0,0)(1,1)
+           \psframe[fillstyle=solid,fillcolor=black](4,1)(5,2)
+           \psframe[fillstyle=solid,fillcolor=black](1,2)(2,3)
+           \psframe[fillstyle=solid,fillcolor=black](3,4)(4,5)
+           \rput(0.5,5.4){\bf A}
+           \rput(1.5,5.4){\bf B}
+           \rput(2.5,5.4){\bf C}
+           \rput(3.5,5.4){\bf D}
+           \rput(4.5,5.4){\bf E}
+           \rput(-0.4,0.5){\bf V}
+           \rput(-0.4,1.5){\bf IV}
+           \rput(-0.4,2.5){\bf III}
+           \rput(-0.4,3.5){\bf II}
+           \rput(-0.4,4.5){\bf I}
+           
+           \rput(0.5,4.5){\red $\mathbf{3}$}
+           \rput(1.5,4.5){\red $\mathbf{2}$}
+           \rput(2.5,4.5){\red $\mathbf{8}$}
+           \rput(4.5,4.5){\red $\mathbf{5}$}
+
+           \rput(0.5,3.5){\red $\mathbf{5}$}
+           \rput(1.5,3.5){\red $\mathbf{6}$}
+           \rput(2.5,3.5){\red $\mathbf{6}$}
+           \rput(3.5,3.5){\red $\mathbf{9}$}
+           \rput(4.5,3.5){\red $\mathbf{3}$}
+
+           \rput(0.5,2.5){\red $\mathbf{0}$}           
+           \rput(2.5,2.5){\red $\mathbf{1}$}
+           \rput(3.5,2.5){\red $\mathbf{7}$}
+           \rput(4.5,2.5){\red $\mathbf{8}$}
+
+           \rput(0.5,1.5){\red $\mathbf{8}$}
+           \rput(1.5,1.5){\red $\mathbf{2}$}
+           \rput(2.5,1.5){\red $\mathbf{0}$}
+           \rput(3.5,1.5){\red $\mathbf{4}$}
+           
+           \rput(1.5,0.5){\red $\mathbf{4}$}
+           \rput(2.5,0.5){\red $\mathbf{2}$}
+           \rput(3.5,0.5){\red $\mathbf{0}$}
+           \rput(4.5,0.5){\red $\mathbf{0}$}
+        \end{pspicture}}
+     \end{center}
+\end{corrige}
