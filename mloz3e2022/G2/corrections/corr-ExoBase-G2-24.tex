@@ -1,0 +1,32 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Démontrer que les triangles $FGH$ et $FKL$ sont semblables.
+
+    \begin{tikzpicture}[scale=0.4]
+        % \quadrilageMailleCarree[white]{18}{8}
+        % Points
+        \coordinate (F) at (4,4);
+        \coordinate (G) at (0,7);
+        \coordinate (H) at (6,7);
+        \tkzDefPointBy[homothety=center F ratio -2.3](G); \tkzGetPoint{L};
+        \tkzDefPointBy[homothety=center F ratio -2.3](H); \tkzGetPoint{K};
+        % Tracés
+        \tkzLabelPoints[left, xshift=-2mm](F);
+        \tkzLabelPoints[above](G);
+        \tkzLabelPoints[above](H);
+        \tkzLabelPoints[below](K);
+        \tkzLabelPoints[below](L);
+        \draw (F) -- (G) -- (H) -- cycle;
+        \draw (F) -- (K) -- (L) -- cycle;
+        % Texte
+        \coordinate (texte1) at (7,6);
+        \coordinate (texte2) at (7,3);
+        \tkzLabelPoint[right](texte1){\parbox{0.5\linewidth}{Les droites $(GL)$ et $(HK)$ sont sécantes en $F$.}}
+        \tkzLabelPoint[right](texte2){\parbox{0.5\linewidth}{Les droites $(GH)$ et $(KL)$ sont parallèles.}}
+    \end{tikzpicture}
+
+    {\color{red} On peut appliquer le théorème de Thalès donc
+
+    $\dfrac{FK}{FH}=\dfrac{FL}{FG}=\dfrac{KL}{HG}$.
+
+    Les triangles sont donc semblables.}

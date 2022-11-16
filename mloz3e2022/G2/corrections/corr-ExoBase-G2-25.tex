@@ -1,0 +1,33 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    Démontrer que les triangles $MNH$ et $MNP$ sont semblables.
+
+    \begin{tikzpicture}[scale=0.45]
+        % \quadrilageMailleCarree[black!30]{18}{8}
+        % Points
+        \coordinate (M) at (13,7);
+        \coordinate (P) at (1,1);
+        \coordinate (N) at (16,1);
+        \coordinate (H) at (13,1);
+        % Tracés
+        \tkzLabelPoints[above](M);
+        \tkzLabelPoints[below](P);
+        \tkzLabelPoints[below](H);
+        \tkzLabelPoints[below](N);
+        \draw (M) -- (N) -- (P) -- cycle;
+        \draw (M) -- (H);
+        \tkzMarkRightAngle[size=1,fill opacity=0.2,fill=red!30](P,M,N);
+        \tkzMarkRightAngle[size=1,fill opacity=0.2,fill=mygreen](N,H,M);
+    \end{tikzpicture}
+
+{\color{red} $\widehat{MHN} = \widehat{PMN}$ et $\widehat{MNP}=\widehat{MNH}$
+
+$\widehat{NMH} = \ang{180} - (\widehat{MHN}+\widehat{MNP})$
+
+$\widehat{NMH} = \ang{180} - (\widehat{PMN}+\widehat{MNH})$
+
+$\widehat{NMH} = \widehat{MPN}$
+
+Les triangles $MNH$ et $MNP$ ont donc des angles deux à deux égaux, ils sont semblables.
+}
+
