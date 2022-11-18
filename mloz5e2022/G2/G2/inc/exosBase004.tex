@@ -1,0 +1,99 @@
+\begin{exercice}
+   L'image suivante représente la position obtenue au déclenchement du bloc \og Départ \fg{} d'un programme. \\
+   L'arrière-plan est constitué de points espacés de 40 unités. Le chat a pour coordonnées $(-120\,;\,-80)$. \\
+   Le but du jeu est de positionner le chat sur la balle représentée par le petit disque.
+   \begin{center}
+   {\psset{unit=0.35}
+   \begin{pspicture}(-6,-3.3)(6,4.3)
+      \multido{\n=-6+1}{13}{
+      \multido{\na=-4+1}{9}{\psdots[dotscale=0.5](\n,\na)}}
+      \psaxes[Dx=10,Dy=10]{->}(0,0)(-6,-4)(6,4)
+      \uput[dl](0,0){O}
+      \psdots[dotscale=2](4,3)
+      \rput(-3,-2){Chat}
+   \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Quelles sont les coordonnées du centre de la balle représentée dans cette position?
+      \item Dans cette question, le chat est dans la position obtenue au déclenchement du bloc départ. \\
+      Voici le script du lutin \og chat \fg{} qui se déplace. \\ [2mm]
+      \begin{Scratch}[Echelle=0.75]
+         Place Drapeau;
+         Place Bloc("Départ");
+      \end{Scratch}
+      \quad
+      \begin{Scratch}[Echelle=0.75]
+         Place QPresse("n'importe laquelle");
+         Place Si(TestCapToucheObjet("Balle"));
+            Place DireT("Je t'ai attrapée","2");
+            Place Bloc("Départ");
+         Place FinBlocSi;
+      \end{Scratch} \\ [2mm]
+      \hspace*{-5mm}   
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche droite");
+         Place AjouterVar("80","x");
+      \end{Scratch}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche haut");
+         Place AjouterVar("80","y");
+      \end{Scratch} \\ [2mm]
+      \hspace*{-5mm}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche gauche");
+         Place AjouterVar("-40","x");
+      \end{Scratch}
+      \begin{Scratch}[Echelle=0.65]
+         Place QPresse("flèche bas");
+         Place AjouterVar("-40","y");
+      \end{Scratch} 
+      \begin{enumerate}
+         \item Expliquer pourquoi le chat ne revient pas à sa position de départ si le joueur appuie sur la touche $\to$ puis sur la touche $\gets$.
+         \item Le joueur appuie sur la succession de touches suivante : $\to$ $\to$  $\uparrow$ $\gets$ $\downarrow$. Quelles sont les coordonnées $x$ et $y$ du chat après ce déplacement ? Justifier.
+         \item Parmi les propositions ci-dessous, laquelle permet au chat d'atteindre la balle ? \medskip
+      \end{enumerate}
+      \hspace*{-5mm}
+      {\small
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabular}{|c|c|c|}
+         \hline
+         déplacement 1 & déplacement 2 & déplacement 3\\ \hline
+         $\to \to \to \to \to \to \to \uparrow\uparrow\uparrow\uparrow\uparrow$
+         &
+         $\to\to\to \uparrow\uparrow\uparrow \to \downarrow \gets$
+         &
+         $\uparrow \to \uparrow \to \uparrow \to \to \downarrow \downarrow$ \\
+         \hline
+      \end{tabular}}
+      \smallskip
+      \item Que se passe-t-il quand le chat atteint la balle ?
+   \end{enumerate}
+\end{exercice}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item La balle est située à quatre espaces vers la droite et trois espaces vers le haut, soit $4\times40$ unités = 160 unités et $3\times40$ unités = 120 unités. \\
+      Ses coordonnées sont donc {\blue (160\,;\,120)}.
+      \item \\
+      \begin{enumerate}
+         \item La touche $\to$ ajoute 80 à l'abscisse $x$ ; la touche $\gets$ ajoute $-40$ à l'abscisse $x$ ; donc, la succession $\to \, \gets$ ajoute $80+(-40) =40$ à l'abscisse $x$. \\
+            Le chat a donc \og avancé \fg{} de 40 unités vers la droite,  {\blue il ne revient pas à sa position de départ}. \vspace*{11.5cm}
+         \item On résume dans un tableau les déplacements : \\ \smallskip
+            {\hautab{1.3}
+            \begin{tabular}{|*{7}{c|}}
+               \hline
+               & départ & $\to$ & $\to$ & $\uparrow$ & $\gets$ & $\downarrow$ \\
+               \hline
+               $x$ & $-120$ & $-40$ & 40 & 40 & 0 & 0 \\
+               \hline 
+               $y$ & $-80$ & $-80$ & $-80$ & 0 & 0 & $-40$ \\
+               \hline
+            \end{tabular}} \\ \smallskip
+         Les coordonnées du chat après ces cinq déplacements sont {\blue $(0\,;\,-40)$}.
+         \item Seul le {\blue déplacement 2} permet au chat d'attraper la balle.
+      \end{enumerate}
+      \setcounter{enumi}{2}
+      \item Quand le chat atteint la balle, {\blue il dit \og Je t'ai attrapée \fg{} pendant 2 sec.} puis retourne au départ. 
+   \end{enumerate}
+\end{corrige}
