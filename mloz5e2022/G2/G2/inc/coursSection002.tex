@@ -1,0 +1,44 @@
+\section{Repérer un point dans un repère du plan}
+
+
+\begin{definition}  
+   Un \textbf{repère orthogonal} est constitué de deux axes gradués perpendiculaires et sécants en O.
+    \begin{itemize}
+      \item O est l'\textbf{origine} du repère ;
+      \item la droite horizontale est l'\textbf{axe des abscisses} ;
+      \item la droite verticale est l'\textbf{axe des ordonnées}.
+   \end{itemize} 
+\end{definition}
+
+\medskip
+
+\begin{propriete}
+   Dans un repère, un point $M$ est repéré par un couple $(x;y)$ appelé coordonnées du point $M$. \\
+   $x$ est l'\textbf{abscisse} du point et $y$ est l'\textbf{ordonnée}.
+\end{propriete}
+
+\begin{exemple*1}
+\ \\
+   \scalebox{0.9}{
+   \begin{pspicture}(-7,-3.5)(7,3.5)
+      \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray!70](-4,-3)(4,3)
+      \pstGeonode[PosAngle=45](3,2){A}(-2,1.5){B}(-3,-2){C}(2.5,-1.5){D}
+      \rput(-0.3,-0.3){\small $O$}
+      \rput[l](4.5,0){\textcolor{A1}{axe des abscisses}}
+      \rput(0,3.5){\textcolor{B1}{axe des ordonnées}}
+      \rput[l](4.5,-2.5){\gray origine du repère}
+      \footnotesize
+      \psaxes[yAxis=false,linecolor=A1,labels=none]{->}(0,0)(-4,0)(4,0)
+      \multido{\n=-4+1}{4}{\rput(\n,-0.4){\textcolor{A1}{\n}}}
+      \multido{\n=1+1}{4}{\rput(\n,-0.4){\textcolor{A1}{\n}}}
+      \psaxes[xAxis=false,linecolor=B1,labels=none]{->}(0,0)(0,-3)(0,3)
+      \multido{\n=-3+1}{3}{\rput(-0.4,\n){\textcolor{B1}{\n}}}
+      \multido{\n=1+1}{3}{\rput(-0.4,\n){\textcolor{B1}{\n}}}
+      \psline[linestyle=dashed,linecolor=gray]{->}(4,-2.5)(2,-2.5)(0.1,-0.1)
+      \psline[linestyle=dashed]{<->}(0,2)(3,2)(3,0)
+   \end{pspicture}
+   }
+   \correction
+      Les coordonnées des points $O, A, B, C$ et $D$ sont : \\
+      $O(\textcolor{A1}{0}\,;\textcolor{B1}{0})$ \qquad $A(\textcolor{A1}{3}\,;\textcolor{B1}{2})$ \qquad $B(\textcolor{A1}{-2}\,;\textcolor{B1}{1,5})$ \qquad $C(\textcolor{A1}{-3}\,;\textcolor{B1}{-2})$ \qquad $D(\textcolor{A1}{2,5}\,;\textcolor{B1}{-1,5})$
+\end{exemple*1}
