@@ -1,5 +1,5 @@
    Imane reconnait le dessin d'{\blue une maison}. \\
-   {\psset{unit=0.777,PointSymbol=none}
+   {\psset{unit=0.7,PointSymbol=none}
    \begin{pspicture}(-10,-5.6)(6,8.3)
    \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](-10,-6)(6,8)
       \psaxes[labels=none,ticks=none]{->}(0,0)(-10,-6)(6,8)
@@ -10,14 +10,26 @@
       \rput(1,0.5){1}
       \rput(-0.5,1){1}
       \psset{linecolor=blue}
-      \pstGeonode[PosAngle={90,135,-135,-45,50},CurveType=polygon](-6.5,4){W}(-9,0){X}(-9,-5){M}(-4,-5){Y}(-4,0){N}
-      \pstGeonode[PosAngle=45,CurveType=polyline](2.5,7){O'}(5,3){P}(5,-2){S}
+      \pstGeonode[PosAngle={90,135,-135,-45,50}](-6.5,4){W}(-9,0){X}(-9,-5){M}(-4,-5){Y}(-4,0){N}
+      \pstLineAB{W}{X}
+      \pstLineAB{X}{M}
+      \pstLineAB{M}{Y}
+      \pstLineAB{Y}{N}
+      \pstLineAB{N}{W}
+      \pstGeonode[PosAngle=45](2.5,7){O'}(5,3){P}(5,-2){S}
       \pstLineAB{W}{O'}
+      \pstLineAB{O'}{P}
+      \pstLineAB{P}{S}
       \pstLineAB{S}{Y}
       \pstGeonode[PosAngle={-90,135,45,-45},CurveType=polyline](-1,-4){U}(-1,-1){Q}(2,0){V}(2,-3){R}
+      \pstLineAB{U}{Q}
+      \pstLineAB{Q}{V}
+      \pstLineAB{V}{R}
       \pstLineAB{X}{N}
       \pstLineAB{N}{P}
       \pstGeonode(-6.5,-2){T}(-6.1,-1){Z}
       \psdot(-6.5,-2)
       \pstCircleOA{T}{Z}
    \end{pspicture}}
+
+   \smallskip
