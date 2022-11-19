@@ -1,93 +1,83 @@
 \section{Caractéristiques de position : Moyenne}
-\subsection{Moyenne arithmétique}
-% \definNum{
-% La {\bf moyenne} d'une s\'erie statistique est le quotient de la somme de toutes les valeurs par l'effectif total de cette s\'erie :
-% $${\mbox{moyenne} =\frac{\mbox{Somme de toutes les valeurs}}{\mbox{Effectif total de la s\'erie}}}$$
-% }
+% \subsection{Moyenne arithmétique}
+\begin{definition}[Moyenne arithmétique]
+    La {\bf moyenne} d'une série statistique est le quotient de la somme de toutes les valeurs par l'effectif total de cette série :
+    $${\text{moyenne} =\frac{\text{Somme de toutes les valeurs}}{\text{Effectif total de la série}}}$$
+\end{definition}
 
-% \Exemples[Exemple]{}{Dans une usine, sept employ\'es calculent le salaire moyen (en {\textgreek{\euro}}) des salaires de leur atelier.
-% $$\frac{760 + 825 + 915 + 990 + 1065 + 1160 + 1296}{7}\approx 1002$$
+\begin{exemple*1}
+    Dans une usine, sept employés calculent le salaire moyen (en €) des salaires de leur atelier :
+    \Prix[0]{760}; \Prix[0]{825}; \Prix[0]{915}; \Prix[0]{990}; \Prix[0]{1065}; \Prix[0]{1160}; \Prix[0]{1296}.
+    \correction
+    $$\frac{760 + 825 + 915 + 990 + 1065 + 1160 + 1296}{7}\approx 1002$$
+    \psshadowbox{Le salaire moyen des  employés de cet atelier s'élève environ à \Prix[0]{1002}}
+\end{exemple*1}
 
-% \psshadowbox{Le salaire moyen des  employ\'es de cet atelier s'\'el\`{e}ve environ \`{a} 1002 {\textgreek{\euro}}.}
-% }
+\begin{definition}[Moyenne pondérée]
+    La {\bf moyenne pondérée} d'une série statistique est le quotient de la somme des  valeurs, affectées chacune de leur coefficient, par la somme totale des coefficients.
+\end{definition}
 
-\subsection{Moyenne pond\'er\'ee}
+\begin{exemple*1}
+    Dans une classe de 28 élèves, les notes d'un devoir se répartissent ainsi :
 
-% \definNum{
-% La {\bf moyenne pond\'er\'ee} d'une s\'erie statistique est le quotient de la somme des  valeurs, affect\'ees chacune de leur coefficient, par la somme totale des coefficients.
-% }
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|m{2.5cm}|c|c|c|c|c|c|c|c|c|c|c|}
+    \cline{12-12}
+    \multicolumn{11}{c|}{}&total\\
+    \hline
+    Notes&6&7&8&9&10&11&12&13&15&17&\begin{LARGE}$\otimes$\end{LARGE}\\
+    \hline
+    Effectifs& \color{red} 2&\color{red} 1&\color{red} 2&\color{red} 4&\color{red} 6&\color{red} 3&\color{red} 3&\color{red} 3&\color{red} 2&\color{red} 2&\color{red} 28\\
+    \hline
+    \end{tabular}
+    }
 
-% \Exemples[Exemple]{}{ Dans une classe de 28 \'el\`{e}ves, les notes \`{a} un devoir se r\'epartissent de la mani\`{e}re suivante :
-% \begin{center}
-% \renewcommand{\arraystretch}{1.5}
-% \begin{tabular}{|m{2.5cm}|c|c|c|c|c|c|c|c|c|c|c|}
-% \cline{12-12}
-% \multicolumn{11}{c|}{}&total\\
-% \hline
-% Notes&6&7&8&9&10&11&12&13&15&17&\begin{LARGE}$\otimes$\end{LARGE}\\
-% \hline
-% Effectifs& \color{red} 2&\color{red} 1&\color{red} 2&\color{red} 4&\color{red} 6&\color{red} 3&\color{red} 3&\color{red} 3&\color{red} 2&\color{red} 2&\color{red} 28\\
-% \hline
-% \end{tabular}
-% \renewcommand{\arraystretch}{1}
-% \end{center}
-% Nous repr\'esentons cette s\'erie par un diagramme en barres.
-% \begin{center}
-% \psscalebox{0.7}{%
-% \begin{pspicture}(0,0)(13,8.5)
-% \psline{->}(0,0)(13.5,0)
-% \multido{\n=1+1}{7}{\psline[linecolor=red](0,\n)(13,\n)}
-% \psline{->}(0,0)(0,8)
-% \multido{\n=1+1}{7}{\uput{0.2}[180](0,\n){\textcolor{red}\n}}
-% \uput{0.2}[270](1,0){6}\uput{0.2}[270](2,0){7}
-% \uput{0.2}[270](3,0){8}\uput{0.2}[270](4,0){9}
-% \uput{0.2}[270](5,0){10}\uput{0.2}[270](6,0){11}\uput{0.2}[270](7,0){12}
-% \uput{0.2}[270](8,0){13}\uput{0.2}[270](9,0){14}\uput{0.2}[270](10,0){15}
-% \uput{0.2}[270](11,0){16}\uput{0.2}[270](12,0){17}
-% \psframe[fillstyle=solid,fillcolor=blue](0.7,0)(1.3,2)\psframe[fillstyle=solid,fillcolor=blue](1.7,0)(2.3,1)
-% \psframe[fillstyle=solid,fillcolor=blue](2.7,0)(3.3,2)\psframe[fillstyle=solid,fillcolor=blue](3.7,0)(4.3,4)
-% \psframe[fillstyle=solid,fillcolor=blue](4.7,0)(5.3,6)\psframe[fillstyle=solid,fillcolor=blue](5.7,0)(6.3,3)
-% \psframe[fillstyle=solid,fillcolor=blue](6.7,0)(7.3,3)\psframe[fillstyle=solid,fillcolor=blue](7.7,0)(8.3,3)
-% \psframe[fillstyle=solid,fillcolor=blue](9.7,0)(10.3,2)\psframe[fillstyle=solid,fillcolor=blue](11.7,0)(12.3,2)
-% \uput{0.2}[180](0,7.5){{\textit{Effectifs}}}\uput{0.2}[270](13,0){{\textit{Notes}}}
-% %\caption[pspicture]{\label{illustration}{\textbf{Diagramme en barres :}} La hauteur des barres est \'egale aux effectifs}
-% \end{pspicture}
-% }
-% \end{center}
-% Pour calculer la moyenne, on effectue le calcul suivant :\par\vspace{0.25cm}
-% $M = \dfrac{6\times\textcolor{red}{2}+7\times\textcolor{red}{1}+8\times\textcolor{red}{2}+9\times\textcolor{red}{4}+10\times\textcolor{red}{6}+11\times\textcolor{red}{3}+
-% 12\times\textcolor{red}{3}+13\times\textcolor{red}{3}+15\times\textcolor{red}{2}+17\times\textcolor{red}{2}}{2+1+2+4+6+3+3+3+2+2}$\par\vspace{0.25cm}
-% $M=\dfrac{303}{28}\approx10,8$
-% }
+    \smallskip
+    Pour calculer la moyenne, on effectue le calcul suivant :
+    
+    \smallskip
+    $M = \dfrac{\textcolor{red}{2}\times 6 + \textcolor{red}{1}\times 7 + \textcolor{red}{2}\times 8 + \textcolor{red}{4}\times 9 + \textcolor{red}{6}\times 10 + \textcolor{red}{3}\times 11 +
+    \textcolor{red}{3}\times 12 + \textcolor{red}{3}\times 13 + \textcolor{red}{2}\times 15 + \textcolor{red}{2}\times 17}{{\red 2}+{\red 1}+{\red 2}+{\red 4}+{\red 6}+{\red 3}+{\red 3}+{\red 3}+{\red 2}+{\red 2}}$
 
-\subsection{R\'epartition en classes et moyenne}
-% \Remarques[Vocabulaire]{
-% Dans certains cas une s\'erie statistique peut être r\'epartie en \textbf{classes} (par intervalles de valeurs).
-% }
+    $M=\dfrac{303}{28}\approx10,8$
+\end{exemple*1}
 
-% \Exemples[Exemple]{r\'epartition de 2000 adultes suivant leur taille}{
-% \begin{center}
-% \begin{tabular}{|m{3cm}|c|c|c|c|}
-% \hline
-% Tailles en $cm$ &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
-% \hline
-% Effectifs&48&397&913&642\\
-% \hline
-% \end{tabular}
-% \end{center}
-% \vspace{0.25cm}
-% Il est impossible, a priori, de calculer la moyenne de cette s\'erie puisqu'on ne connaît pas les valeurs des tailles et leurs effectifs. On peut donc, par exemple, consid\`{e}rer que la valeur au centre de la classe va repr\'esenter la classe. On calcule alors la moyenne pond\'er\'ee pour obtenir une valeur approch\'ee de la moyenne de la s\'erie.
-% \begin{center}
-% \begin{tabular}{|c|c|c|c|c|}
-% \hline
-% Tailles en $cm$ &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
-% \hline
-% Centre de la classe&145&155&165&182,5\\
-% \hline
-% Effectifs&48&397&913&642\\
-% \hline
-% \end{tabular}
-% \end{center}
-% Pour calculer la taille moyenne, on effectue le calcul suivant :$$\dfrac{145\times48+155\times397+165\times913+145\times642}{2000}\approx168$$
-% \psshadowbox{La taille moyenne de ce groupe d'adultes est d'environ $168\,cm$.}
-% }
+\begin{remarque}\titreRemarque{répartition en classes et moyenne}
+
+    Dans certains cas, une série statistique peut être répartie en \textbf{classes} qui sont des intervalles de valeurs.
+\end{remarque}
+
+\begin{exemple*1}
+    \titreExemple{Répartition de 2000 adultes suivant leur taille}
+
+    \begin{longtable}{|>{\columncolor{gray!20}\centering}m{0.3\textwidth}|*{4}{>{\centering\arraybackslash}m{0.125\textwidth}|}}
+        \hline
+        \rowcolor{gray!20}Tailles en \Lg{} &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
+        \hline
+        Effectifs&48&397&913&642\\
+        \hline
+    \end{longtable}
+    
+
+Il est impossible, a priori, de calculer la moyenne de cette série puisqu'on ne connaît ni les valeurs des tailles et ni leurs effectifs.
+
+On peut donc, par exemple, considèrer que la valeur au centre de la classe va représenter la classe.
+
+On calcule alors la moyenne pondérée pour obtenir une valeur approchée de la moyenne de la série.
+
+\begin{longtable}{|>{\columncolor{gray!20}\centering}m{0.3\textwidth}|*{4}{>{\centering\arraybackslash}m{0.125\textwidth}|}}
+    \hline
+    \rowcolor{gray!20}Tailles en \Lg{} &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
+    \hline
+    Centre de la classe&145&155&165&182,5\\
+    \hline
+    Effectifs&48&397&913&642\\
+    \hline
+\end{longtable}
+
+Pour calculer la taille moyenne, on effectue le calcul suivant : 
+$$\dfrac{48\times 145 + 397\times 155 + 913\times 165 + 642\times 145}{2000}\approx168$$
+
+\psshadowbox{La taille moyenne de ce groupe d'adultes est d'environ \Lg{168}.}
+
+\end{exemple*1}
