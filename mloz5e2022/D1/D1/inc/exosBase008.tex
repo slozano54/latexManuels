@@ -1,0 +1,98 @@
+\begin{exercice*}[Diagramme circulaire]
+    Dans le parc naturel de Fluasall, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+
+    \medskip
+    $
+    \begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{hyènes} & \text{crocodiles} & \text{girafes} & \text{zèbres}\\
+    \hline
+    \text{Effectifs} & 55 & 20 & 10 & 15\\
+    \hline
+    \text{Fréquences} &   &   &   &  \\
+    \hline
+    \text{Angles} &   &   &   &  \\
+    \hline
+    \end{array}
+    $
+
+
+    \medskip
+    Représenter ces données par un diagramme circulaire.
+
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5S12,s=3,s2=1,s3=1,s4=true&v=l} % On peut personnaliser le texte entre crochets si on veut sinon supprimer les crochets
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}
+    Dans le parc naturel de Fluasall, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+
+    \medskip
+    $
+    \begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{hyènes} & \text{crocodiles} & \text{girafes} & \text{zèbres}\\
+    \hline
+    \text{Effectifs} & 55 & 20 & 10 & 15\\
+    \hline
+    \text{Fréquences} &   &   &   &  \\
+    \hline
+    \text{Angles} &   &   &   &  \\
+    \hline
+    \end{array}
+    $
+
+
+    \medskip
+    Représenter ces données par un diagramme circulaire.
+
+    \smallskip
+    {\red
+    	$\renewcommand{\arraystretch}{1}
+        \begin{array}{|c|c|c|c|c|c|}
+        \hline
+        \text{Animaux} & \text{hyènes} & \text{crocodiles} & \text{girafes} & \text{zèbres} & \text{Totaux}\\
+        \hline
+        \text{Éffectifs} & 55 & 20 & 10 & 15 & 100\\
+        \hline
+        \text{Fréquences} & \dfrac{55}{100}=0{,}55 & \dfrac{20}{100}=0{,}2 & \dfrac{10}{100}=0{,}1 & \dfrac{15}{100}=0{,}15 & 1\\
+        \hline
+        \text{Angles} & \dfrac{55}{100} \times 360 = \ang{198} & \dfrac{20}{100} \times 360 = \ang{72} & \dfrac{10}{100} \times 360 = \ang{36} & \dfrac{15}{100} \times 360 = \ang{54} & \ang{360}\\
+        \hline
+        \end{array}
+        \renewcommand{\arraystretch}{1}$
+        
+        \bigskip
+        \begin{tikzpicture}[baseline,scale=0.6]
+
+            \tikzset{
+            point/.style={
+                thick,
+                draw,
+                cross out,
+                inner sep=0pt,
+                minimum width=5pt,
+                minimum height=5pt,
+            },
+            }
+            \draw[color={black},fill opacity = 1.1] (0,0) circle (6);
+            \draw[color ={{black}},opacity = 0.8] (0,0.1)--(0,-0.1);
+            \draw[color ={{black}},opacity = 0.8] (-0.1,0)--(0.1,0);
+            \draw  [color={black},preaction={fill,color = {blue}},fill opacity = 0.7,pattern color = {blue} , pattern = grid] (1.8541019662496847,-5.706339097770921) -- (0,0) -- (3.6739403974420594e-16,6) arc (90:288:6) -- cycle ;
+            \draw[color={black},preaction={fill,color = {blue}, opacity = 0.7},pattern color = {blue} , pattern = grid] (7,0)--(8,0)--(8,1)--(7,0.9999999999999999)--cycle;
+            \draw [color={black}] (8.5,0.5) node[anchor = west, rotate = 0] {hyènes};
+            \draw  [color={black},preaction={fill,color = {mygreen}},fill opacity = 0.7,pattern color = {mygreen} , pattern = dots] (6,-1.3322676295501878e-15) -- (0,0) -- (1.8541019662496834,-5.706339097770922) arc (-72:0:6) -- cycle ;
+            \draw[color={black},preaction={fill,color = {mygreen}, opacity = 0.7},pattern color = {mygreen} , pattern = dots] (7,1.5)--(8,1.5)--(8,2.5)--(7,2.5)--cycle;
+            \draw [color={black}] (8.5,2) node[anchor = west, rotate = 0] {crocodiles};
+            \draw  [color={black},preaction={fill,color = {brown}},fill opacity = 0.7,pattern color = {brown} , pattern = crosshatch] (4.854101966249686,3.5267115137548375) -- (0,0) -- (6,-1.4695761589768238e-15) arc (0:36:6) -- cycle ;
+            \draw[color={black},preaction={fill,color = {brown}, opacity = 0.7},pattern color = {brown} , pattern = crosshatch] (7,3)--(8,3)--(8,4)--(7,4)--cycle;
+            \draw [color={black}] (8.5,3.5) node[anchor = west, rotate = 0] {girafes};
+            \draw  [color={black},preaction={fill,color = {gray}},fill opacity = 0.7,pattern color = {gray} , pattern = fivepointed stars] (-3.9968028886505635e-15,6) -- (0,0) -- (4.854101966249682,3.5267115137548415) arc (36:90:6) -- cycle ;
+            \draw[color={black},preaction={fill,color = {gray}, opacity = 0.7},pattern color = {gray} , pattern = fivepointed stars] (7,4.5)--(8,4.5)--(8,5.5)--(7,5.5)--cycle;
+            \draw [color={black}] (8.5,5) node[anchor = west, rotate = 0] {zèbres};
+        \end{tikzpicture}
+    }
+\end{corrige}
+

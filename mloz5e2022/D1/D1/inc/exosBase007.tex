@@ -1,0 +1,88 @@
+\begin{exercice*}[Diagramme en barres]
+    Dans le parc naturel de Genser, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+    
+    \medskip
+    $
+    \begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{léopards} & \text{rhinocéros} & \text{girafes} & \text{crocodiles}\\
+    \hline
+    \text{Effectifs} & 48 & 30 & 18 & 24\\
+    \hline
+    \end{array}
+    $
+   
+    \medskip
+    Représenter ces données par un diagramme en barres.
+
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5S12,s=3,s2=1,s3=3,s4=true&v=l} % On peut personnaliser le texte entre crochets si on veut sinon supprimer les crochets
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \phantom{rrr}    
+
+    \begin{minipage}{0.55\linewidth}
+    Dans le parc naturel de Genser, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+    
+    \medskip
+    $
+    \begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{léopards} & \text{rhinocéros} & \text{girafes} & \text{crocodiles}\\
+    \hline
+    \text{Effectifs} & 48 & 30 & 18 & 24\\
+    \hline
+    \end{array}
+    $
+   
+    \medskip
+    Représenter ces données par un diagramme en barres.
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+    {\red
+    \begin{tikzpicture}[baseline,scale=0.6]
+    
+        \tikzset{
+          point/.style={
+            thick,
+            draw,
+            cross out,
+            inner sep=0pt,
+            minimum width=5pt,
+            minimum height=5pt,
+          },
+        }    
+    
+        \draw[color={black},preaction={fill,color = {blue}, opacity = 0.3},pattern color = {black} , pattern = north east lines] (1.7,0)--(1.7,4.800000000000001)--(2.3,4.800000000000001)--(2.3,0)--cycle;
+        \draw [color={black}] (2,-0.2) node[anchor = west, rotate = -66] {Léopards};
+        \draw[color={black},preaction={fill,color = {mygreen}, opacity = 0.3},pattern color = {black} , pattern = north east lines] (3.7,0)--(3.7,3)--(4.3,3)--(4.3,0)--cycle;
+        \draw [color={black}] (4,-0.2) node[anchor = west, rotate = -66] {Rhinocéros};
+        \draw[color={black},preaction={fill,color = {brown}, opacity = 0.3},pattern color = {black} , pattern = north east lines] (5.7,0)--(5.7,1.8)--(6.3,1.8)--(6.3,0)--cycle;
+        \draw [color={black}] (6,-0.2) node[anchor = west, rotate = -66] {Girafes};
+        \draw[color={black},preaction={fill,color = {gray}, opacity = 0.3},pattern color = {black} , pattern = north east lines] (7.7,0)--(7.7,2.4000000000000004)--(8.3,2.4000000000000004)--(8.3,0)--cycle;
+        \draw [color={black}] (8,-0.2) node[anchor = west, rotate = -66] {Crocodiles};        
+        \draw[color ={black},line width = 2] (0,0)--(10,0);
+        \draw[color ={black},line width = 2,->] (0,0)--(0,6.800000000000001);
+        \draw[color ={black},opacity = 0.5, dashed ] (0,1)--(10,1);
+        \draw[color ={black},opacity = 0.5, dashed ] (0,2)--(10,2);
+        \draw[color ={black},opacity = 0.5, dashed ] (0,3)--(10,3);
+        \draw[color ={black},opacity = 0.5, dashed ] (0,4)--(10,4);
+        \draw[color ={black},opacity = 0.5, dashed ] (0,5)--(10,5);
+        \draw[color ={black},line width = 2] (-0.2,1)--(0.2,1);
+        \draw[color ={black},line width = 2] (-0.2,2)--(0.2,2);
+        \draw[color ={black},line width = 2] (-0.2,3)--(0.2,3);
+        \draw[color ={black},line width = 2] (-0.2,4)--(0.2,4);
+        \draw[color ={black},line width = 2] (-0.2,5)--(0.2,5);
+        \draw [color={black},fill opacity = 1] (-0.5,1) node[anchor = center,scale=1] {$10$};
+        \draw [color={black},fill opacity = 1] (-0.5,2) node[anchor = center,scale=1] {$20$};
+        \draw [color={black},fill opacity = 1] (-0.5,3) node[anchor = center,scale=1] {$30$};
+        \draw [color={black},fill opacity = 1] (-0.5,4) node[anchor = center,scale=1] {$40$};
+        \draw [color={black},fill opacity = 1] (-0.5,5) node[anchor = center,scale=1] {$50$};
+        \draw [color={black},fill opacity = 1] (0.5,7.300000000000001) node[anchor = west,scale=1] {Nombre d'individus};    
+    \end{tikzpicture}
+    }
+    \end{minipage}
+\end{corrige}
+

@@ -1,0 +1,92 @@
+\begin{exercice*}[diagramme semi-circulaire]
+    Dans le parc naturel de Secai, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+    
+    \smallskip
+    $\begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{buffles} & \text{guépards} & \text{gazelles} & \text{zèbres}\\
+    \hline
+    \text{Effectifs} & 45 & 20 & 10 & 25\\
+    \hline
+    \text{Fréquences} &   &   &   &  \\
+    \hline
+    \text{Angles} &   &   &   &  \\
+    \hline
+    \end{array}$    
+    
+    \smallskip
+    Représenter ces données par un diagramme semi-circulaire. 
+
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5S12,s=3,s2=1,s3=2,s4=true&v=l} % On peut personnaliser le texte entre crochets si on veut sinon supprimer les crochets
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}
+    Dans le parc naturel de Secai, il y a beaucoup d'animaux.
+    Voici un tableau qui donne le nombre d'individus de quelques espèces.
+    
+    \smallskip
+    $\begin{array}{|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{buffles} & \text{guépards} & \text{gazelles} & \text{zèbres}\\
+    \hline
+    \text{Effectifs} & 45 & 20 & 10 & 25\\
+    \hline
+    \text{Fréquences} &   &   &   &  \\
+    \hline
+    \text{Angles} &   &   &   &  \\
+    \hline
+    \end{array}$    
+    
+    \smallskip
+    Représenter ces données par un diagramme semi-circulaire.
+    
+    \smallskip
+   {\red
+    $\renewcommand{\arraystretch}{3}
+    \begin{array}{|c|c|c|c|c|c|}
+    \hline
+    \text{Animaux} & \text{buffles} & \text{guépards} & \text{gazelles} & \text{zèbres} & \text{Totaux}\\
+    \hline
+    \text{Éffectifs} & 45 & 20 & 10 & 25 & 100\\
+    \hline
+    \text{Fréquences} & \dfrac{45}{100}=0{,}45 & \dfrac{20}{100}=0{,}2 & \dfrac{10}{100}=0{,}1 & \dfrac{25}{100}=0{,}25 & 1\\
+    \hline
+    \text{Angles} & \dfrac{45}{100} \times 180 = \ang{81} & \dfrac{20}{100} \times 180 = \ang{36} & \dfrac{10}{100} \times 180 = \ang{18} & \dfrac{25}{100} \times 180 = \ang{45} & \ang{180}\\
+    \hline
+    \end{array}
+    \renewcommand{\arraystretch}{1}$
+    \medskip
+    \begin{tikzpicture}[baseline,scale=0.5]
+    
+        \tikzset{
+          point/.style={
+            thick,
+            draw,
+            cross out,
+            inner sep=0pt,
+            minimum width=5pt,
+            minimum height=5pt,
+          },
+        }
+        \draw  [color={black},preaction={fill,color = {white}},fill opacity = 0.2] (-6,7.347880794884119e-16) -- (0,0) -- (6,0) arc (0:180:6) -- cycle ;        
+        \draw[color ={{black}},opacity = 0.8] (0,0.1)--(0,-0.1);
+        \draw[color ={{black}},opacity = 0.8] (-0.1,0)--(0.1,0);
+        \draw  [color={black},preaction={fill,color = {blue}},fill opacity = 0.7,pattern color = {blue} , pattern = dots] (0.9386067902413855,5.926130043570827) -- (0,0) -- (6,0) arc (0:81:6) -- cycle ;
+        \draw[color={black},preaction={fill,color = {blue}, opacity = 0.7},pattern color = {blue} , pattern = dots] (7,0)--(8,0)--(8,1)--(7,0.9999999999999999)--cycle;
+        \draw [color={black}] (8.5,0.5) node[anchor = west, rotate = 0] {buffles};
+        \draw  [color={black},preaction={fill,color = {mygreen}},fill opacity = 0.7,pattern color = {mygreen} , pattern = horizontal lines] (-2.7239429984372805,5.346039145130208) -- (0,0) -- (0.9386067902413855,5.926130043570827) arc (81:117:6) -- cycle ;
+        \draw[color={black},preaction={fill,color = {mygreen}, opacity = 0.7},pattern color = {mygreen} , pattern = horizontal lines] (7,1.5)--(8,1.5)--(8,2.5)--(7,2.5)--cycle;
+        \draw [color={black}] (8.5,2) node[anchor = west, rotate = 0] {guépards};
+        \draw  [color={black},preaction={fill,color = {brown}},fill opacity = 0.7,pattern color = {brown} , pattern = north east lines] (-4.242640687119285,4.242640687119286) -- (0,0) -- (-2.72394299843728,5.346039145130208) arc (117:135:6) -- cycle ;
+        \draw[color={black},preaction={fill,color = {brown}, opacity = 0.7},pattern color = {brown} , pattern = north east lines] (7,3)--(8,3)--(8,4)--(7,4)--cycle;
+        \draw [color={black}] (8.5,3.5) node[anchor = west, rotate = 0] {gazelles};
+        \draw  [color={black},preaction={fill,color = {gray}},fill opacity = 0.7,pattern color = {gray} , pattern = crosshatch] (-6,8.881784197001252e-16) -- (0,0) -- (-4.242640687119285,4.242640687119286) arc (135:180:6) -- cycle ;
+        \draw[color={black},preaction={fill,color = {gray}, opacity = 0.7},pattern color = {gray} , pattern = crosshatch] (7,4.5)--(8,4.5)--(8,5.5)--(7,5.5)--cycle;
+        \draw [color={black}] (8.5,5) node[anchor = west, rotate = 0] {zèbres};
+    
+    \end{tikzpicture}
+    }   
+\end{corrige}
+
