@@ -1,0 +1,55 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+% \numeroteEnigme
+\begin{enigme}[Le tableur]
+    Un tableur est un logiciel d'édition et de présentation de tableaux. Il comporte des \textbf{feuilles de calcul} composées de multiples lignes et colonnes formant des \textbf{cellules}. Chaque cellule est repérée par son adresse : une lettre désignant la colonne et un numéro désignant la ligne. Par exemple, la cellule {\bf A1} fait référence à la colonne A ligne numéro 1. \medskip
+ 
+ \partie[écrire dans une cellule] 
+    Ouvrir une nouvelle feuille de tableur, écrire les textes suivants et appuyer sur entrée.     
+    $$\text{Dans la cellule A1 : }  \fcolorbox[gray]{0.1}{0.9}{\makebox[2.5cm][l]{\texttt{1+2}}} \qquad ; \qquad \text{ Dans la cellule A2 : } \fcolorbox[gray]{0.1}{0.9}{\makebox[2.5cm][l]{\texttt{=1+2}}}$$
+    Quelle est la différence entre ces deux écritures ? Quelle est la différence d'interprétation du tableur ? \par     
+ \partie[utilisation du tableur-grapheur]
+    Le ministère de la culture a effectué une enquête sur les équipements utilisés le plus souvent pour se connecter à Internet en 2019, en fonction de l'âge des utilisateurs.
+    \begin{center}
+       \begin{Tableur}[Bandeau=false,Colonnes=7,LargeurUn=60pt,Largeur=48pt]
+          & 12-17 ans & 18-24 ans & 25-39 ans	 & 40-59 ans & 60-69 ans & 70 ans + \\
+          Smartphone & 78\,\% & 89\,\% & 79\,\% & 45\,\% & 24\,\% & 12\,\% \\
+          Ordinateur & 16\,\% & 10\,\% & 15\,\% & 42\,\% & 45\,\% & 38\,\% \\
+       \end{Tableur}
+    \end{center}
+    On souhaite représenter, sous différentes formes, les résultats de cette enquête.
+    \begin{enumerate}
+       \item Reproduire ce tableau dans un tableur. \\
+          {\it Enregistre ton travail dans un fichier nommé \texttt{Nom\_prenom\_classe\_tableur\_grapheur}.}
+       \item Sélectionner le tableau en entier (cellules A1 à G3) et insérer trois graphiques : 
+       \begin{itemize}
+            \item un diagramme en barres verticales (graphique 1)
+            \item un diagramme en barres horizontales (graphique 2)
+            \item un diagramme circulaire (graphique 3)
+       \end{itemize}
+       \item Laquelle de ces trois représentations vous parait-elle la plus lisible, pourquoi ?
+       \item Choisir deux autres représentations (graphique 4 et graphique 5) et les décrire brièvement.
+       \item Créer un graphique 6 de votre choix représentant uniquement les données concernant les ordinateurs.
+       \item Répondre aux questions suivantes :
+          \begin{enumerate}
+             \item Quelle tranche d'âge utilise le plus son smartphone pour aller sur Internet ? 
+             \item Selon toi, pourquoi \og les jeunes \fg{} utilisent-ils plus un smartphone qu'un ordinateur pour aller sur Internet ?                
+             \item Selon toi, pourquoi \og les seniors \fg{} utilisent-ils plus un ordinateur qu'un smartphone pour aller sur Internet ?
+          \end{enumerate}
+    \end{enumerate}
+    \dotfill\par
+    \dotfill\par
+    \dotfill\par
+    \dotfill\par
+    \dotfill\par
+    \dotfill\par    
+ \end{enigme}
+ 
+ 
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    \ldots
+\end{corrige}
