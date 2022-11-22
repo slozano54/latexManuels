@@ -1,0 +1,89 @@
+\section{Écriture scientifique d'un nombre décimal}\subitem{}\par
+
+% \proprNumBis{Produit par une puissance de 10}{
+% n est un entier positif.
+% \begin{mylist}
+% \item Multiplier par $10^n$ revient à rendre l'unité du nombre devient $10^n$ fois \textbf{plus} forte.
+% \item Multiplier par $10^{-n}$ revient à diviser par $10^n$, l'unité devient donc $10^n$ fois \textbf{moins} forte.
+% \end{mylist}
+% }
+
+% \Exemples{}{
+% $17,8 \times 10^4 = 17\underbrace{8\;000}_{4\;rangs}$\par\vspace{0.5cm}
+% $17,8 \times 10^-4 = 0,\underbrace{0017}_{4\;rangs}8$
+% }
+
+% \definNumTitre{Préfixes pour les sciences}{
+% \renewcommand{\arraystretch}{1.5}
+% \begin{tabular}{||c||c||c||c||c||c||c||c||}
+% \hline 
+% \rule[-1ex]{0pt}{2.5ex} Préfixe & giga & méga & kilo & milli & micro & nano & pico \\ 
+% \hline 
+% \rule[-1ex]{0pt}{2.5ex} Symbole & G & M & k & m & $\mu$ & n & p \\ 
+% \hline 
+% \rule[-1ex]{0pt}{2.5ex} Puissance de 10 & $10^{9}$ & $10^{6}$ & $10^{3}$ & $10^{-3}$ & $10^{-6}$ & $10^{-9}$ & $10^{-12}$ \\ 
+% \hline 
+% \end{tabular} 
+% \renewcommand{\arraystretch}{1}
+% }
+
+% \Exemples{}{
+% \begin{mylist}
+% \item \textbf{En informatique} : Un gigaoctet, noté Go, vaut $10^{3}$ mégaoctets soit $10^{9}$ octets c'est à dire 1 milliard d'octets.
+% \item \textbf{Dimensions atomiques} : Un nanomètre, noté nm, vaut $10^{-9}$m soit 1 milliardième de mètre.
+% \end{mylist}
+% }
+
+% \definNum{
+% \textbf{L'\'ecriture scientifique} d'un nombre d\'ecimal est l'\'ecriture de ce nombre sous la forme:
+%  $$a\times10^p$$
+% \begin{mylist}
+% \item $a$ est un nombre d\'ecimal ayant un seul chiffre non nul (diff\'erent de 0) avant la virgule
+% \item $p$ un entier relatif
+% \end{mylist}
+% }
+
+% \Exemples{}{
+% \begin{mylist}
+% \item $8,456\times 10^7$ est un nombre écrit en notation scientifique.
+% \item L'\'ecriture scientifique de 385 est $3,85\times10^2$.
+% \item $4,8\times 3^4$ n'est pas écrit en notation scientifique.
+% \item  L'\'ecriture scientifique de $A=35\,48\times10^4$ est $3,548\times10^5$, en effet :
+% $$\Eqalign{
+% A&=3,548\times10^1\times10^4\cr
+% }$$
+% $$\psshadowbox{A=3,548\times10^5}$$
+% \end{mylist}
+% \infoComplementNumerique
+% \lienCadre{https://mathix.org/glisse-nombre/puissance/}{https://mathix.org/glisse-nombre/puissance/}
+% \creditLibre{https://mathix.org/linux}
+% }
+
+% \Methode{Lorsque l'écriture est \og presque \fg scientifique}{
+% Comme pour $A$ dans l'exemple précédent.
+% \begin{mylist}
+% \item $B = 279,31\times10^6$
+% \item \textbf{On écrit le décimal en notation scientifique} : $B = 2,7931\times 10^2 \times10^6$
+% \item \textbf{On rassemble les puissances de 10} : $\psshadowbox{B = 2,7931\times 10^8}$
+% \end{mylist}
+% }
+
+% \Methode{Produit des écritures scientifiques}{
+% $C=7\times 10^7 \times 5 \times 10^4$\\
+% $C=7 \times 5 \times 10^7 \times 10^4$\\
+% $C=35 \times 10^{11}$\\ 
+% $\psshadowbox{C=3,5 \times 10^{12}}$ 
+% }
+
+% \Methode{Quotient des écritures scientifiques}{
+% $D=\dfrac{7\times 10^7}{5,6 \times 10^4}$\\
+% $D=\dfrac{7}{5,6}\times \dfrac{10^7}{10^4}$\\
+% $\psshadowbox{D=1,4\times 10^3}$
+% }
+
+% \CadreLampe{ATTENTION !}{
+% Le rapport de deux écritures scientifiques n'a pas toujours d'écriture scientifique.\par\vspace{0.25cm}
+% $E=\dfrac{8\times 10^4}{3 \times 10^2}$ n'a pas d'écriture scientifique car il n'est pas décimal!\par\vspace{0.25cm}
+% $E=\dfrac{8}{3}\times \dfrac{10^4}{10^2}$\par\vspace{0.25cm}
+% $E=\dfrac{8}{3}\times 10^2$ et $\dfrac{8}{3}$ n'est pas un nombre décimal.
+% }

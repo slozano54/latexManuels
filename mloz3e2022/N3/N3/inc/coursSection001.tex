@@ -1,0 +1,85 @@
+\section{Puissances d'un entier relatif}
+
+% \definNum{Soit $n$ un nombre entier positif.
+% $$a^n=\underbrace{a\times a\times a\times\dots\times a}_{n\mbox{ facteurs}}\quad (n\geq 2)\qquad a^1=a\qquad a^0=1$$
+% \par Le nombre n s'appelle \textbf{exposant}, $a^n$ se lit \textbf{a exposant n} ou \textbf{a puissance n}
+% \par On note $a^{-n}$ l'inverse de $a^n$, c'est \`{a} dire le nombre qui lorsqu'il est multipli\'e par $a^n$ donne $1$.
+% \par 
+% $$a^{-n}=\frac1{a^n}$$
+% }
+
+% \Exemples{}{
+% \begin{minipage}{8cm}
+% $2^5=2\times2\times2\times2\times2=\ldots$ \par\vspace{0.25cm}
+% $(-5)^3=(-5)\times(-5)\times(-5)=\ldots$
+% \end{minipage}
+% \begin{minipage}{8cm}
+% $5^{-3}=\dfrac1{5^3}=\ldots$ \par\vspace{0.25cm}
+% $(-2)^{-4}=\dfrac1{(-2)^4}=\ldots$
+% \end{minipage}
+% }
+
+% \Methode{Utilisation de la calculatrice}{
+% Touche \fbox{$\uparrow$} ou \fbox{$y^x$} ou \fbox{$x^y$} ou \fbox{$\hat{ }$} ou ...
+% \par\vspace{0.25cm}
+% {\hfill$(-5)^3=\quad\underbrace{(\,5\,\pm\,)\,\uparrow\,3\,=}_{\mbox{calculatrice}}\quad-125$\hfill$2^5=\quad\underbrace{2\,\uparrow\,5=}_{\mbox{calculatrice}}\quad32$\hfill}
+% }
+
+% \proprNumBis{ Op\'erations sur les puissances (admis)}{Si $a$ est un entier relatif non nul et si $m$ et $n$ sont des entiers relatifs alors
+% $$a^m\times a^n=a^{m+n}\kern1cm\frac{a^m}{a^n}=a^{m-n}\kern1cm\left(a^m\right)^n=a^{m\times n}\kern1cm a^m\times b^m=(a\times b)^m$$
+% }
+
+
+% \Exemples{}{
+% Les résultats ci-dessus ne sont pas exigibles mais il faut savoir faire le genre de calculs suivants :
+% \begin{enumerate}
+% \item $A=\dfrac{(-9)^1}{(-9)^6}= \dfrac{\mathbf{\color{blue}{(-9)}}}{\mathbf{\color{red}{(-9)}} \times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}}$
+
+% \medskip
+% Il y a donc $\mathbf{\color{blue}{1}}$ simplifications par $(-9)$ possible.
+
+% \medskip
+% $A=\dfrac{\mathbf{\color{blue}{\cancel{(-9)}}}}{\mathbf{\color{red}{\cancel{(-9)}}}\times\mathbf{\color{red}{(-9)}} \times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}\times \mathbf{\color{red}{(-9)}}}$
+
+% \medskip
+% $A=\dfrac{1}{(-9)^{6-1}}=\dfrac{1}{(-9)^{5}}=\psshadowbox{(-9)^{-5}}$
+
+% \item $B=((-6)^2)^{2}=\color{red}{\underbrace{\mathbf{\color{red}{((-6)^2)}} \times \mathbf{\color{red}{((-6)^2)}}}_{2\thickspace\text{facteurs}}}$
+
+% \medskip
+% $B=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-6)}} \times \mathbf{\color{blue}{(-6)}}}_{2\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-6)}} \times \mathbf{\color{blue}{(-6)}}}_{2\thickspace\text{facteurs}}}\color{red})}}}_{2\times\color{blue}{2}\thickspace\color{black}{\text{facteurs}}}}$
+
+% \medskip
+% Il y a donc $\mathbf{\color{red}{2}~\color{black}{\times}~\color{blue}{2}}$ facteurs tous égaux à $(-6)$
+
+% \medskip
+% $B=(-6)^{2\times2} = (-6)^{4}= \psshadowbox{ 6^{4}}$
+
+% \item $C=4^4\times 4^1=\mathbf{\color{red}{4}} \times \mathbf{\color{red}{4}}\times \mathbf{\color{red}{4}}\times \mathbf{\color{red}{4}} \times \mathbf{\color{blue}{4}}$
+
+% \medskip
+% Il y a donc $\mathbf{\color{red}{4}~\color{black}{+}~\color{blue}{1}}$ facteurs tous égaux à $4$
+
+% \medskip
+% $C=4^{4+1} = \psshadowbox{4^{5}}$
+
+% \item $D=5^5\times 8^5=\mathbf{\color{red}{5}} \times \mathbf{\color{red}{5}}\times \mathbf{\color{red}{5}}\times \mathbf{\color{red}{5}}\times \mathbf{\color{red}{5}} \times \mathbf{\color{blue}{8}} \times \mathbf{\color{blue}{8}}\times \mathbf{\color{blue}{8}}\times \mathbf{\color{blue}{8}}\times \mathbf{\color{blue}{8}}$
+
+% \medskip
+% $D=\mathbf{(\color{red}{5}} \times \mathbf{\color{blue}{8}}) \times (\mathbf{\color{red}{5}} \times \mathbf{\color{blue}{8}})\times (\mathbf{\color{red}{5}} \times \mathbf{\color{blue}{8}})\times (\mathbf{\color{red}{5}} \times \mathbf{\color{blue}{8}})\times (\mathbf{\color{red}{5}} \times \mathbf{\color{blue}{8}})$
+
+% \medskip
+% $D= (\color{red}{\mathbf{5}} \color{black}{\times} \color{blue}{\mathbf{8}}\color{black}{)^{5}}=\psshadowbox{40^5}$
+
+% \item $E=((-2)^2)^{4}=\color{red}{\underbrace{\mathbf{\color{red}{((-2)^2)}} \times \mathbf{\color{red}{((-2)^2)}}\times \mathbf{\color{red}{((-2)^2)}}\times \mathbf{\color{red}{((-2)^2)}}}_{4\thickspace\text{facteurs}}}$
+
+% \medskip
+% $E=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-2)}} \times \mathbf{\color{blue}{(-2)}}}_{2\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-2)}} \times \mathbf{\color{blue}{(-2)}}}_{2\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-2)}} \times \mathbf{\color{blue}{(-2)}}}_{2\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{(-2)}} \times \mathbf{\color{blue}{(-2)}}}_{2\thickspace\text{facteurs}}}\color{red})}}}_{4\times\color{blue}{2}\thickspace\color{black}{\text{facteurs}}}}$
+
+% \medskip
+% Il y a donc $\mathbf{\color{red}{4}~\color{black}{\times}~\color{blue}{2}}$ facteurs tous égaux à $(-2)$
+
+% \medskip
+% $E=(-2)^{2\times4} = (-2)^{8}= \psshadowbox{ 2^{8}}$
+% \end{enumerate}
+% }
