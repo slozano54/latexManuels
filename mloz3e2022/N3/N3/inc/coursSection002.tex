@@ -1,97 +1,115 @@
 \section{Puissances de 10}
-% \definNum{
-% Une puissance de 10 se note sous la forme $10^m$ o\`{u} $m$ est un nombre relatif.\\
-% Dans cette \'ecriture, $m$ est appel\'e \textbf{l'exposant}.
-% }
-% \definNum{
-% {\bf L'exposant est un entier positif}\par
-% Soit $m$ un entier positif, alors $10^0=1\mbox{ et }10^1=10$ et pour $m\geq 2$ :
-% $$10^m=\underbrace{10\times10\times10\times\ldots\times10}_{\mbox{$m$ facteurs tous égaux à 10}}=1\underbrace{000\ldots0}_{\mbox{$m$ z\'eros}}$$
-% }
+\begin{definition}
+    Une puissance de 10 se note sous la forme $10^m$ o\`{u} $m$ est un nombre relatif.\\
+    Dans cette \'ecriture, $m$ est appel\'e \textbf{l'exposant}.
+\end{definition}
 
-% \Exemples{}{
-% $10^3=10\times10\times10=1\,000\kern1cm10^5=10\times10\times10\times10\times10=100\,000$
-% }
+\begin{definition}[Puissance d'exposant entier positif]
+    Soit $m$ un entier positif, alors $10^0=1\mbox{ et }10^1=10$ et pour $m\geq 2$ :
+    $$10^m=\underbrace{10\times10\times10\times\ldots\times10}_{\mbox{$m$ facteurs tous égaux à 10}}=1\underbrace{000\ldots0}_{\mbox{$m$ z\'eros}}$$
+\end{definition}
 
-% \definNum{
-% {\bf L'exposant est un entier négatif}\par
-% Soit $m$ un entier positif, alors
-% $$10^{-m}=\frac1{10^m}=\underbrace{0,00\ldots0}_{\mbox{$m$ z\'eros}}1$$
-% }
+\begin{exemple*1}
+    $10^3=10\times10\times10=1\,000\kern1cm10^5=10\times10\times10\times10\times10=100\,000$
+\end{exemple*1}
 
-% \Exemples{}{
-% $10^{-3}=\dfrac1{10^3}=0,001\kern1cm10^{-5}=\dfrac1{10^5}=0,000\,01$
-% }
+\begin{definition}[Puissance d'exposant entier négatif]
+    Soit $m$ un entier positif, alors
+    $$10^{-m}=\frac1{10^m}=\underbrace{0,00\ldots0}_{\mbox{$m$ z\'eros}}1$$
+\end{definition}
 
-% \CadreLampe{Pourquoi la formule magique des m zéros ?}{
-% \begin{mylist}
-% \item \textbf{Cas de  l'exposant positif :} Multiplier par 10 fait changer l'unité de rang.\\
-% $1$ unité $\times 10 = 1$ dizaine $= 10$ ; \hfill $1$ unité $\times 10 \times 10= 1$ dizaine $\times 10 = 1$  centaine$=100$ ...
-% \item \textbf{Cas de  l'exposant négatif :} Multiplier par 0,1 fait changer l'unité de rang.\\
-% $1$ unité $\times 0,1 = 1$ dixième ; \hfill $1$ unité $\times 0,1 \times 0,1= 1$ dixième $\times 0,1 = 1$ centième $=0,01$ ...
-% \end{mylist}
-% \infoComplementNumerique
-% \lienCadre{https://mathix.org/glisse-nombre/puissance/}{https://mathix.org/glisse-nombre/puissance/}
-% \creditLibre{https://mathix.org/linux/}
-% }
+\begin{exemple*1}
+    $10^{-3}=\dfrac1{10^3}=0,001\kern1cm10^{-5}=\dfrac1{10^5}=0,000\,01$
+\end{exemple*1}
 
-% \proprNumBis{ Formules de calculs (admises)}{Soit $m$ et $n$ deux nombres entiers relatifs.$$10^m\times10^n=10^{m+n}\kern2cm\frac{10^m}{10^n}=10^{m-n}\kern2cm\left(10^m\right)^n=10^{m\times n}$$
-% }
+\begin{center}
+\begin{myBox}{\emoji{light-bulb} Lumière sur la formule magique des zéros !}
+    \begin{list}{}{}
+        \item \textbf{Cas de  l'exposant positif :} Multiplier par 10 fait changer l'unité de rang.\\
+        $1 \text{ unité } \times 10 = 1 \text{ dizaine } = 10$ ;\\
+        $1 \text{ unité } \times 10 \times 10= 1 \text{ dizaine }\times 10 = 1 \text{ centaine } = 100$;\\
+        \ldots
+        \item \textbf{Cas de  l'exposant négatif :} Multiplier par 0,1 fait changer l'unité de rang.\\
+        $1\text{ unité }\times \num{0.1} = 1 \text{ dixième }$ ;\\
+        $1\text{ unité }\times \num{0.1} \times \num{0.1} = 1 \text{ dixième }\times \num{0.1} = 1\text{ centième } = \num{0.01}$;\\
+        \ldots
+    \end{list}
 
-% \Exemples{}{
-% Les résultats ci-dessus ne sont pas exigibles mais il faut savoir faire le genre de calculs suivants :
-% \begin{enumerate}
-% \item $A=\dfrac{10^4}{10^1}=\dfrac{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}{\mathbf{\color{blue}{10}}}$
+    \hrefMathalea[\emoji{star-struck} \emoji{link} Glisse nombre pour les puissances]{https://mathix.org/glisse-nombre/puissance/}    
+    \creditLibre{https://mathix.org/linux/}
+\end{myBox}
+\end{center}
 
-% \medskip
-% Il y a donc $\mathbf{\color{blue}{1}}$ simplifications par $10$ possible.
+\begin{propriete}[Formules de calculs \admises]
+    Soit $m$ et $n$ deux nombres entiers relatifs.$$10^m\times10^n=10^{m+n};\kern2cm\frac{10^m}{10^n}=10^{m-n};\kern2cm\left(10^m\right)^n=10^{m\times n}$$
+\end{propriete}
 
-% \medskip
-% $A=\dfrac{\mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}{\mathbf{\color{blue}{\cancel{10}}}}$
+\begin{exemple*1}
+    \titreExemple{Mise en pratique}
 
-% \medskip
-% $A=10^{4-1}=\psshadowbox{10^{3}}$
+    Les résultats ci-dessus ne sont pas exigibles mais il faut savoir faire le genre de calculs suivants :
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $A=\dfrac{10^4}{10^1}=\dfrac{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}{\mathbf{\color{blue}{10}}}$
 
-% \newpage
-% \item $B=(10^4)^{2}=\color{red}{\underbrace{\mathbf{\color{red}{(10^4)}} \times \mathbf{\color{red}{(10^4)}}}_{2\thickspace\text{facteurs}}}$
+            \medskip
+            Il y a donc $\mathbf{\color{blue}{1}}$ simplifications par $10$ possible.
 
-% \medskip
-% $B=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{4\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{4\thickspace\text{facteurs}}}\color{red})}}}_{2\times\color{blue}{4}\thickspace\color{black}{\text{facteurs}}}}$
+            \medskip
+            $A=\dfrac{\mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}{\mathbf{\color{blue}{\cancel{10}}}}$
 
-% \medskip
-% Il y a donc $\mathbf{\color{red}{2}~\color{black}{\times}~\color{blue}{4}}$ facteurs tous égaux à $10$
+            \medskip
+            $A=10^{4-1}=\psshadowbox{10^{3}}$
 
-% \medskip
-% $B=10^{4\times2} = \psshadowbox{10^{8}}$
+            \item $B=(10^4)^{2}=\color{red}{\underbrace{\mathbf{\color{red}{(10^4)}} \times \mathbf{\color{red}{(10^4)}}}_{2\thickspace\text{facteurs}}}$
 
-% \item $C=10^7\times 10^8=\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}} \times \mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}$
-	
-% \medskip
-% Il y a donc $\mathbf{\color{red}{7}~\color{black}{+}~\color{blue}{8}}$ facteurs tous égaux à $10$
+            \medskip
+            $B=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{4\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{4\thickspace\text{facteurs}}}\color{red})}}}_{2\times\color{blue}{4}\thickspace\color{black}{\text{facteurs}}}}$
 
-% \medskip
-% $C=10^{7+8} = \psshadowbox{10^{15}}$
+            \medskip
+            Il y a donc $\mathbf{\color{red}{2}~\color{black}{\times}~\color{blue}{4}}$ facteurs tous égaux à $10$
 
-% \item $D=(10^3)^{4}=\color{red}{\underbrace{\mathbf{\color{red}{(10^3)}} \times \mathbf{\color{red}{(10^3)}}\times \mathbf{\color{red}{(10^3)}}\times \mathbf{\color{red}{(10^3)}}}_{4\thickspace\text{facteurs}}}$
-	
-% \medskip
-% $D=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}}_{4\times\color{blue}{3}\thickspace\color{black}{\text{facteurs}}}}$
+            \medskip
+            $B=10^{4\times2} = \psshadowbox{10^{8}}$
+        \end{enumerate}
+    \end{multicols}
+\end{exemple*1}
+    
+\begin{exemple*1}
+    \titreExemple{Mise en pratique - suite}
+    
+    \begin{enumerate}
+        \setcounter{enumi}{2}        
+        \item $C=10^7\times 10^8=\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}} \times \mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}$
+            
+        \medskip
+        Il y a donc $\mathbf{\color{red}{7}~\color{black}{+}~\color{blue}{8}}$ facteurs tous égaux à $10$
 
-% \medskip
-% Il y a donc $\mathbf{\color{red}{4}~\color{black}{\times}~\color{blue}{3}}$ facteurs tous égaux à $10$
+        \medskip
+        $C=10^{7+8} = \psshadowbox{10^{15}}$
 
-% \medskip
-% $D=10^{3\times4} = \psshadowbox{10^{12}}$
+        \medskip
+        \item $D=(10^3)^{4}=\color{red}{\underbrace{\mathbf{\color{red}{(10^3)}} \times \mathbf{\color{red}{(10^3)}}\times \mathbf{\color{red}{(10^3)}}\times \mathbf{\color{red}{(10^3)}}}_{4\thickspace\text{facteurs}}}$
+            
+        \medskip
+        $D=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}}_{4\times\color{blue}{3}\thickspace\color{black}{\text{facteurs}}}}$
 
-% \item $E=\dfrac{10^4}{10^7}=\dfrac{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}$
+        \medskip
+        Il y a donc $\mathbf{\color{red}{4}~\color{black}{\times}~\color{blue}{3}}$ facteurs tous égaux à $10$
 
-% \medskip
-% Il y a donc $\mathbf{\color{blue}{4}}$ simplifications par $10$ possibles.
+        \medskip
+        $D=10^{3\times4} = \psshadowbox{10^{12}}$
 
-% \medskip
-% $E=\dfrac{\mathbf{\color{blue}{\cancel{10}}} \times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}}{\mathbf{\color{red}{\cancel{10}}} \times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}$
+        \medskip
+        \item $E=\dfrac{10^4}{10^7}=\dfrac{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}$
 
-% \medskip
-% $E=\dfrac{1}{10^{7-4}}=\dfrac{1}{10^{3}}=\psshadowbox{10^{-3}}$
-% \end{enumerate}
-% }
+        \medskip
+        Il y a donc $\mathbf{\color{blue}{4}}$ simplifications par $10$ possibles.
+
+        \medskip
+        $E=\dfrac{\mathbf{\color{blue}{\cancel{10}}} \times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}}{\mathbf{\color{red}{\cancel{10}}} \times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}$
+
+        \medskip
+        $E=\dfrac{1}{10^{7-4}}=\dfrac{1}{10^{3}}=\psshadowbox{10^{-3}}$
+    \end{enumerate}
+\end{exemple*1}
