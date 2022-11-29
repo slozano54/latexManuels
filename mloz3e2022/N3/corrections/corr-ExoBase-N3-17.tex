@@ -1,0 +1,17 @@
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}
+    Colorier les cases qui contiennent des nombres écrits en notation scientifique.
+
+    \newcommand{\phantomRule}{\rule[-2.5mm]{0cm}{6mm}}
+
+    \medskip
+    \scalebox{0.9}{
+    \begin{tabular}{|>{\centering\arraybackslash}m{0.25\linewidth}|>{\centering\arraybackslash}m{0.25\linewidth}|>{\centering\arraybackslash}m{0.25\linewidth}|}
+        \hline
+        \phantomRule $\num{45}\times 10^{-6}$                       &\phantomRule  $\num{0.89}\times 10^{-6}$                    &\phantomRule  \cellcolor{red!30}$\num{8}\times 10^{-5}$ \\\hline
+        \phantomRule \cellcolor{red!30}$\num{4.6}\times 10^{17}$    &\phantomRule  $\num{10}\times 10^{9}$                       &\phantomRule  $\num{7.91}$ \\\hline
+        \phantomRule $\num{0.68}$                                   &\phantomRule  \cellcolor{red!30}$\num{1.78}\times 10^{0}$   &\phantomRule  $\pi\times 10^{14}$ \\\hline
+        \phantomRule $\num{15.9}\times 10^{4}$                      &\phantomRule  $\num{83.45}\times 10^{-13}$                  &\phantomRule  \cellcolor{red!30}$\num{9.99}\times 10$ \\\hline
+    \end{tabular}
+    }
+

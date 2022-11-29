@@ -2,8 +2,8 @@
     %\phantom{rrr}
     Compléter le tableau suivant.
     \newcommand{\phantomRule}{\rule[-4.5mm]{0cm}{10mm}}
-
-    \begin{tabular}{|>{\centering\arraybackslash}m{0.18\linewidth}|>{\centering\arraybackslash}m{0.18\linewidth}|>{\centering\arraybackslash}m{0.3\linewidth}|>{\centering\arraybackslash}m{0.2\linewidth}|}
+    \scalebox{0.9}{
+    \begin{tabular}{|>{\centering\arraybackslash}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.3\linewidth}|>{\centering\arraybackslash}m{0.2\linewidth}|}
         \hline
         \rowcolor{gray!20}Puissance&Définition&Écriture fractionnaire&Écriture décimale\\\hline
         \phantomRule $10^{-4}$          &\phantomRule {\red $\dfrac{1}{10^4}$}   &\phantomRule {\red $\dfrac{1}{\num{10000}}$}    &\phantomRule {\red$\num{0.0001}$}      \\\hline
@@ -12,3 +12,4 @@
         \phantomRule {\red $10^{-7}$}   &\phantomRule {\red $\dfrac{1}{10^7}$}   &\phantomRule {\red $\dfrac{1}{\num{10000000}}$}&\phantomRule $\num{0.0000001}$         \\\hline
         \phantomRule {\red $10^{-6}$}   &\phantomRule {\red $\dfrac{1}{10^6}$}   &\phantomRule $\dfrac{1}{\num{1000000}}$        &\phantomRule {\red $\num{0.000001}$}   \\\hline
     \end{tabular}
+    }
