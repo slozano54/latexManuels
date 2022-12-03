@@ -1,3 +1,61 @@
-\begin{activite}[Titre de l’activité][\tice]
-    Texte de l’activité... Avec titre et logo
-\end{activite}  
+\begin{activite}[L'art de mesurer]
+    {\bf Objectifs} : mesurer une longueur et le périmètre d'un polygone avec un étalon et une règle ; comparer des méthodes, communiquer.
+    \partie[mesurer grâce à un étalon]
+        On considère la bandelette en bas de page. La découper puis donner en fonction de cette bande la mesure de la longueur d'un stylo,
+        le périmètre d'une feuille de papier A4 et le périmètre de votre table. \\
+        Écrire les résultats dans le tableau ci-dessous et comparer avec les autres élèves de la classe. \\
+    \vspace*{-5mm}    
+    \partie[créer une graduation]
+        Avec la bandelette entière, il est difficile d'évaluer correctement les mesures demandées. Plier la bande en dix parties égales : une partie correspond donc à un dixième de bandelette. Mesurer de nouveau les trois objets cités en nombre de dixièmes de bandelette. \\
+        Écrire les résultats dans le tableau ci-dessous et comparer avec les autres élèves de la classe. \\
+    \vspace*{-5mm}    
+    \partie[mesurer à l'aide d'une règle graduée]
+        Enfin, refaire ces mesures à l'aide d'une règle graduée. \\
+        Écrire les résultats dans le tableau ci-dessous et comparer avec les autres élèves de la classe. \\
+        Débattre des avantages et inconvénients de chacun des outils. \\
+    \vspace*{-5mm}
+        \begin{center}
+            {\renewcommand{\arraystretch}{1.5}
+            \small
+            \begin{tabular}{|c|>{\centering\arraybackslash}p{4cm}|>{\centering\arraybackslash}p{4cm}|>{\centering\arraybackslash}p{4cm}|}
+                \cline{2-4}
+                \multicolumn{1}{c|}{} & Longueur du stylo & Périmètre d'une feuille format A4 & Périmètre de la table \\
+                \cline{2-4}
+                \multicolumn{1}{c|}{} & \begin{pspicture}(0,0.3)(4,4)
+                    \pspolygon(1.8,0.5)(2.2,0.5)(2.2,3)(2,3.4)(1.8,3)
+                    \psarc(2,3.4){0.06}{-120}{-70}
+                    \psline(1.8,3)(1.9,2.9)(2,3)(2.1,2.9)(2.2,3)
+                    \psset{linecolor=lightgray}
+                    \psline(1.9,0.5)(1.9,2.9)
+                    \psline(2,0.5)(2,2.98)
+                    \psline(2.1,0.5)(2.1,2.9)
+                \end{pspicture}
+                & \begin{pspicture}(0,0.3)(4,4)
+                    \psframe(1,0.5)(3,3.5)
+                    \rput(2,2){\begin{minipage}{1.5cm} \footnotesize Feuille\\de\\papier \end{minipage}}
+                    \rput(2.5,3){\large A4}
+                \end{pspicture}
+                & \begin{pspicture}(0,0.3)(4,4)
+                        \psline(0.5,0.7)(0.5,2.5)(1.5,3.3)(3.5,3.3)(2.5,2.5)(2.5,0.7)
+                        \psline(3.5,1.7)(3.5,3.3)
+                        \psline(0.5,2.5)(2.5,2.5)
+                        \psline(0.5,2.3)(2.5,2.3)(3.5,3.1)
+                        \psline(1.5,1.7)(1.5,2.3)
+                    \end{pspicture} \\
+                \hline
+                Avec l'étalon & & & \\
+                \hline
+                Etalon gradué & & & \\
+                \hline
+                Règle graduée & & & \\
+                \hline
+            \end{tabular}}
+        \end{center}
+    \vfill
+    Bandelette à découper :
+    \begin{center}
+       \begin{pspicture}(0,0)(15,1.5)
+          \psframe(0,0)(15,1.5)
+      \end{pspicture}
+   \end{center}
+ \end{activite}
