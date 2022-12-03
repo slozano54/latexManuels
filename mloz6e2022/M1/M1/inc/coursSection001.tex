@@ -1,77 +1,32 @@
-\section{Section 1}
-\subsection{Sous-section 1.1}
-\begin{definition}[Titre optionnel]
-    Dans le cours, on utilise assez souvent des cadres du type
-    définition (comme ici par exemple).    
-\end{definition}
-\begin{remarque}
-    Ceci est une remarque utilisant une commande du paquet profcollege.
-    Les formules peuvent être positionnées partout dans la page.
-    Ici c'est placé juste pour tester !
+\section{Le compas comme instrument de report de mesure}
 
-    \Formule[Aire,Surface=triangle,Ancre={([xshift=-3cm,yshift=-3cm]current page.east)}]
-  
-    \Formule[Aire,Surface=losange,Ancre={([xshift=15cm,yshift=5cm]current page.south west)},Angle=-20,Largeur=6cm]
-    
-    \begin{center}
-      \definecolor{myyellow}{RGB}{242,226,149}
-      % Positionnement relatif de l'ancre.
-      \Formule[Couleur=myyellow!15,Perimetre,Surface=cercle,Ancre={([xshift=-4cm,yshift=-3cm]current page.north east)},Angle=-30]
-      
-      % Positionnement absolu de l'ancre.
-      \Formule[Perimetre,Surface=parallelogramme,Ancre={(0,0)}]   
-      \par\vspace{3cm}   
-    \end{center}
-
-
-\end{remarque}
-\begin{propriete}[Titre optionnel]
-  Dans le cours, on utilise assez souvent des cadres du type
-  définition, comme ici par exemple pour une propriete.
-\end{propriete}
-\begin{remarques}
-  \begin{itemize}
-    \item remarque.
-    \item remarque.
-  \end{itemize}
-\end{remarques}
-
-\subsection{Sous-section 1.2}
-\begin{theoreme}[Titre optionnel]
-  Dans le cours, on utilise assez souvent des cadres du type
-  définition, comme ici par exemple pour un théorème.
-\end{theoreme}
-\begin{notation}
-  notation
-\end{notation}
-\begin{notations}
-  \begin{itemize}
-    \item notation.
-    \item notation.
-  \end{itemize}
-\end{notations}
-\begin{preuve}
-  Ceci est une preuve\par Deuxième ligne de la preuve
-\end{preuve}
-\begin{exemple}
-  Texte de l’exemple
-  \correction
-  
-\end{exemple}
-
-\begin{exemple*1}
-  \phantom{rrr}
-  Texte
-
-  \correction
-  \phantom{rrr}
-  Texte  
-  
-\end{exemple*1}
-
-\begin{exemple}[0.6]
-  Texte de l’exemple très long sur une ligne, très très très long.
-  On peut modifier la répartition horizontale  à l'aide d'un argument optionnel valant par défaut 0,4, valant ici 0,6.
-  \correction
-  Texte de la correction en vis à vis
-\end{exemple}
+\begin{methode}[Reporter une longueur au compas]
+   Pour reporter la mesure de la longueur d'un segment avec un compas, prendre la longueur de ce segment en plaçant chaque pointe du compas sur l'une des extrémités du segment puis la reporter sur une autre portion de droite.
+   \exercice
+      Reproduire un segment $[CD]$ de même mesure que $[AB]$. \\
+      {\psset{unit=0.6}
+      \begin{pspicture}(0,0.5)(4,1.5)
+         \psline[linecolor=violet]{|-|}(1,0.5)(2.8,1.4)
+         \rput(1,0.1){\textcolor{violet}{$A$}}
+         \rput(2.8,1){\textcolor{violet}{$B$}}
+      \end{pspicture}
+      }
+   \correction
+      {\psset{unit=0.5}
+      \begin{pspicture}(-3,0)(4.5,3.5)
+         \psline[linecolor=violet]{|-|}(1,0.5)(2.8,1.4)
+         \rput(1,0.1){\textcolor{violet}{$A$}}
+         \rput(2.8,1){\textcolor{violet}{$B$}}
+         \compas{2}{0.8}{25}{1}{18}
+         \psline[linewidth=1mm]{->}(2,3.9)(4.5,3.7)
+      \end{pspicture}
+      \begin{pspicture}(0.5,-0.5)(4,3.5)
+         \rotatebox{-27}{
+            \psline(0,0)(4,2)
+            \rput(1,0.1){\textcolor{cyan}{$C$}}
+            \rput(2.8,1){\textcolor{cyan}{$D$}}
+            \psline[linecolor=cyan]{|-|}(1,0.5)(2.8,1.4)
+            \psarc[linecolor=gray!50](2.8,1.4){2}{180}{240}
+            \compas{2}{0.8}{25}{1}{18}}
+      \end{pspicture}}
+\end{methode}
