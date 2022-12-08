@@ -1,0 +1,77 @@
+\section{Conversion de durées}
+
+La seconde (s) est l'unité du système SI permettant de caractériser une durée. Contrairement aux autres unités, elle ne suit pas un système décimal, mais hexadécimal (de base 60).
+
+\begin{methode*2*2}
+   Pour convertir des heures en minutes ou des minutes en secondes ou inversement, on peut utiliser le schéma suivant : \\
+   \begin{pspicture}(-1.5,-0.5)(11,3.3)
+      \rnode{A}{\psframebox{durée en heures}}
+      \hspace{12mm}
+      \rnode{B}{\psframebox{durée en minutes}}
+      \hspace{12mm}
+      \rnode{C}{\psframebox{durée en secondes}}
+      \nccurve[angle=90,linecolor=A1,offset=-1mm]{A}{B}
+      \naput*{\textcolor{A1}{$\stackrel{\times60}{\longrightarrow}$}}
+      \nbput*{\textcolor{A1}{$\stackrel{\div60}{\longleftarrow}$}}
+      \nccurve[angle=90,linecolor=A1,offset=-1mm]{->}{B}{C}
+      \naput*{\textcolor{A1}{$\stackrel{\times60}{\longrightarrow}$}}
+      \nbput*{\textcolor{A1}{$\stackrel{\div60}{\longleftarrow}$}}
+      \nccurve[angle=90,linecolor=B1]{->}{A}{C}
+      \naput*{\textcolor{B1}{$\stackrel{\times3\,600}{\longrightarrow}$}}
+      \nbput*{\textcolor{B1}{$\stackrel{\div3\,600}{\longleftarrow}$}}
+   \end{pspicture}
+   \exercice
+      Convertir 170 minutes \par en heures et minutes.     
+   \correction
+      $170=2\times60+50$, donc \\
+      $\umin{170} =\uh{2}\,\umin{50}$.
+   \exercice
+      Convertir \uh{1}\,\umin{25}\,\us{36} \par en secondes.
+   \correction
+      $\uh{1} =\us{3600}$ et $\umin{1} =\us{60}$ donc \\
+      $\uh{1}\,\umin{25}\,\us{36} =\us{3600}+25\times\us{60}+\us{36} =\us{5136}$.
+\end{methode*2*2}
+
+\smallskip
+
+Pour effectuer des additions ou soustractions de durées, on peut effectuer une opération en colonne (un peu périlleuse) ou procéder de proche en proche.
+ 
+\begin{exemple}
+\ \\ [-10mm]
+  \begin{itemize}
+      \item Un train part de Montpellier à \\
+      8 h 48 min. La durée du trajet pour se rendre à Paris est de 3 h et 20 min. \\
+      À quelle heure arrivera-t-il à Paris ?
+      \item Un automobiliste part de Perpignan à 8 h 35 min et arrive à Montpellier à 10~h~20~min. Quelle est la durée de son trajet ?
+   \end{itemize}
+\correction
+\ \\ [-8mm]
+   \begin{itemize}
+      \item   
+      \begin{tabular}{ccccc}
+         & 8 & h & 4 & 8 \\
+         $+$ & 3 & h & 2 & 0 \\
+         \hline
+         1 & $\cancel{1}$ & h & $\cancel{6}$ & 8 \\
+         \multicolumn{5}{c}{\psline{->}(0.5,0.3)(-0.5,-0.1)} \\
+         1 & 2 & h & 0 & 8
+      \end{tabular}
+      \quad
+      \begin{tabular}{p{5cm}}
+        {\small on aligne les heures sous les heures, les minutes sous les minutes puis on additionne terme à terme. Si le nombre de minutes est supérieur à 60, on soustrait 60 min et on ajoute 1 h.} \\
+      \end{tabular} 
+      \medskip
+      \item 8 h 35 $\xrightarrow{+\text{25 min}}$ 9 h 00 $\xrightarrow{+\text{1 h}}$ 10 h 00 $\xrightarrow{+\text{20 min}}$ 10 h 20. \\   
+      La durée totale du trajet est de 1 h 45 min.
+   \end{itemize}   
+\end{exemple}
+
+\medskip
+
+\begin{remarque}
+   attention à l'aspect hexadécimal de cette grandeur :
+   \begin{itemize}
+      \item lorsqu'on lit 1,5 h, cela correspond à 1 h et 0,5 h, c'est-à-dire 1h et 30 min ($0,5\times 60$ min).
+      \item Inversement, 2 h 15 min ce n'est pas 2,15 h mais à 2,25 h (15 min = $\dfrac{15}{60}$ h = 0,25 h).
+   \end{itemize}
+\end{remarque}
