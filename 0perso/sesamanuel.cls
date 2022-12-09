@@ -198,7 +198,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{longtable, tabularx}
 \RequirePackage{multirow}
-\RequirePackage[table]{xcolor}
+\RequirePackage[table,svgnames]{xcolor} % AjoutSeb option svgnames
 \RequirePackage{pst-all, pstricks-add}
 \RequirePackage{fancyhdr}
 \RequirePackage{fancyvrb}
