@@ -1,0 +1,43 @@
+\begin{exercice}
+    Résolution de problème : des robinets qui coulent. \\
+    On dispose de deux robinets.
+    \begin{itemize}
+       \item Le premier est capable de remplir un réservoir d’eau de \Capa{24} en 1 minute.
+       \item Le second peut remplir ce même réservoir en 2 minutes.
+    \end{itemize}
+    En ouvrant les deux robinets au même moment, combien de temps faudrait-il pour remplir un jacuzzi avec \Capa{1080} d’eau ? \\
+    \begin{minipage}{4cm}
+       \begin{enumerate}
+          \item \Temps{;;;;15;}. 
+          \item \Temps{;;;;67,5;}.
+          \item \Temps{;;;;135;}.
+          \item \Temps{;;;;30;}.
+       \end{enumerate}
+    \end{minipage}
+    \begin{minipage}{3cm}
+       \includegraphics[width=2.5cm]{\currentpath/images/robinet}
+    \end{minipage}
+    \hrefVideo{https://www.yout-ube.com/watch?v=8vEacS_HnNw}
+    \begin{flushright}
+        {\it Un sketch sur la résolution de problème, par Gad Elmaleh}
+    \end{flushright}
+ \end{exercice}
+ 
+ \begin{corrige}
+   Résolution de problème : des robinets qui coulent. \\
+   On dispose de deux robinets.
+   \begin{itemize}
+      \item Le premier est capable de remplir un réservoir d’eau de \Capa{24} en 1 minute.
+      \item Le second peut remplir ce même réservoir en 2 minutes.
+   \end{itemize}
+   En ouvrant les deux robinets au même moment, combien de temps faudrait-il pour remplir un jacuzzi avec \Capa{1080} d’eau ? \\
+
+   {\red
+    Pour un volume à remplir, le robinet R1 met deux fois moins de temps que le robinet R2. Donc, pendant le temps total, R1 remplit deux \og unités de volume \fg{} pendant que R2 n'en remplit qu’une : \\ [1mm]
+    \ModeleBarre[Largeur=2.5cm]{PowderBlue 3 {"\Capa{1080}"}}{DeepSkyBlue 1 "R1" DeepSkyBlue 1 "R1" LightSkyBlue 1 "R2"} \\
+    En partageant le volume total en trois parties égales, on trouve $\Capa{1080}\div3 =\Capa{360}$.
+    R2 remplit un tiers du volume total du jacuzzi : \Capa{360}. \\
+    Or, $360\div12 =30$. Sachant que R2 remplit \Capa{12} en \umin{1}, il remplit \Capa{360} en \Capa{30}. \\
+    La réponse est 30 minutes.
+    }
+ \end{corrige}

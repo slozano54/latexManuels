@@ -121,6 +121,14 @@
     \href{#2}{#1 #3} 
 }
 
+% Pour le lien vers youtube
+% #1 --> Texte par défaut
+% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #2 --> url
+\newcommand{\hrefVideo}[2][\emoji{movie-camera} \emoji{link} Visionner la vidéo]{
+    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1}
+}
+
 %==========================================
 % Gestion des boxs
 %==========================================
