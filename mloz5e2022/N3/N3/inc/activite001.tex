@@ -1,0 +1,73 @@
+\begin{activite}[Des variables aux inconnues]
+   \vspace*{-7mm}
+    {\bf Objectifs :} voir l'effet des variables dans un programme de calcul créé avec Scratch ; produire une expression littérale.
+    On considère le programme de calcul ci-dessous dans lequel $x$, Etape 1, Etape 2 et Résultat sont quatre variables.
+    \begin{center}
+       \begin{Scratch}[Echelle=0.75]
+          Place Drapeau ;
+          Place Demander("Choisis un nombre");
+          Place MettreVar("x",OvalCap("réponse"));
+          Place DireT("Je multiplie le nombre par 6.","2");
+          Place MettreVar("Etape 1",OpMul("6",OvalVar("x")));
+          Place DireT("J'ajoute 10 au résultat.","2");
+          Place MettreVar("Etape 2",OpAdd(OvalVar("Etape 1"),"10"));
+          Place DireT("Je divise le résultat par 2.","2");
+          Place MettreVar("Résultat",OpDiv(OvalVar("Etape 2"),"2"));
+          Place Dire(OpRegrouper("J'obtiens finalement",OvalVar("Résultat")));
+       \end{Scratch}
+    \end{center}
+    \begin{enumerate}
+    {\psset{unit=0.9}
+       \item Julien a fait fonctionner ce programme en choisissant le nombre 5.\\
+       Vérifier que ce qui est dit à la fin est : \og J’obtiens finalement 20 \fg.
+       
+       Pour cela, remplir le diagramme suivant : \\
+          \begin{pspicture}(-4,-0.2)(8,1.8)
+             \psframe(0,0.5)(1,1.5)
+             \rput(0.5,0){$x$}
+             \psline[arrowsize=2mm]{->}(1.1,1)(2.4,1)
+             \psframe(2.5,0.5)(3.5,1.5)
+             \rput(3,0){étape 1}
+             \psline[arrowsize=2mm]{->}(3.6,1)(4.9,1)
+             \psframe(5,0.5)(6,1.5)
+             \rput(5.5,0){étape 2}
+             \psline[arrowsize=2mm]{->}(6.1,1)(7.4,1)
+             \psframe(7.5,0.5)(8.5,1.5)
+             \rput(8,0){résultat}
+          \end{pspicture}         
+       \item Que dit le programme si Zakarie le fait fonctionner en choisissant au départ le nombre 7 ? \\
+           \begin{pspicture}(-4,-0.2)(8,1.8)
+             \psframe(0,0.5)(1,1.5)
+             \rput(0.5,0){$x$}
+             \psline[arrowsize=2mm]{->}(1.1,1)(2.4,1)
+             \psframe(2.5,0.5)(3.5,1.5)
+             \rput(3,0){étape 1}
+             \psline[arrowsize=2mm]{->}(3.6,1)(4.9,1)
+             \psframe(5,0.5)(6,1.5)
+             \rput(5.5,0){étape 2}
+             \psline[arrowsize=2mm]{->}(6.1,1)(7.4,1)
+             \psframe(7.5,0.5)(8.5,1.5)
+             \rput(8,0){résultat}
+          \end{pspicture}         
+       \item Titouan fait fonctionner le programme, ce qui est dit à la fin est : \og J’obtiens finalement 8 \fg.
+       
+       Quel nombre a-t-il choisi au départ ? \\
+       \begin{pspicture}(-4,-0.2)(8,1.8)
+             \psframe(0,0.5)(1,1.5)
+             \rput(0.5,0){$x$}
+             \psline[arrowsize=2mm]{<-}(1.1,1)(2.4,1)
+             \psframe(2.5,0.5)(3.5,1.5)
+             \rput(3,0){étape 1}
+             \psline[arrowsize=2mm]{<-}(3.6,1)(4.9,1)
+             \psframe(5,0.5)(6,1.5)
+             \rput(5.5,0){étape 2}
+             \psline[arrowsize=2mm]{<-}(6.1,1)(7.4,1)
+             \psframe(7.5,0.5)(8.5,1.5)
+             \rput(8,0){résultat}
+          \end{pspicture} 
+       \item Si l’on appelle $x$ le nombre choisi au départ, écrire en fonction de $x$ l’expression obtenue à la fin du programme. 
+       \par \smallskip \dotfill
+      }
+    \end{enumerate}
+    \vfill\hfill{\footnotesize\it Cette activité est une adaptation du DNB 2017 de Pondichery.}
+ \end{activite} 
