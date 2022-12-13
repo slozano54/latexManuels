@@ -1,0 +1,85 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+\refstepcounter{exercice}
+% \numeroteEnigme
+\def\croix{\psframe(0,-1)(1,2) \psframe(-1,-0)(2,1)}
+\def\carre{\psframe(0,0)(1,1)}
+
+\begin{enigme}[Défis !!!]
+
+\vfill
+
+\parbox{1.75cm}{\includegraphics[width=2cm]{\currentpath/images/defi.pdf} \\ [2mm] \textcolor{orange}{\bf\large \, Défi 1}}
+\qquad
+\parbox{14.45cm}{
+   Rayan et Aya ont choisi un nombre (entier positif). \\
+   Rayan le multiplie par 5 et ajoute 35. \\
+   Aya le multiplie par 2 et ajoute 146. \\
+   Ils trouvent le même nombre à la fin. \\
+   Quel nombre ont-ils choisi ?}
+
+\vfill
+
+\parbox{1.75cm}{\includegraphics[width=2cm]{\currentpath/images/defi.pdf} \\ [2mm] \textcolor{orange}{\bf\large \, Défi 2}}
+\qquad
+\parbox{14cm}{
+   Avec des petits carrés tous identiques, on construit un pattern selon le modèle évolutif ci-dessous : \\
+   {\psset{unit=0.8}
+   \begin{pspicture}(-3.5,-4.5)(4,3.75)
+      \croix
+      \rput(0.5,-2){Rang 1}
+   \end{pspicture}
+   \begin{pspicture}(-5,-4.5)(5,3.75)
+      \croix
+      \rput(2,0){\carre}
+      \rput(0,2){\carre}
+      \rput(-2,0){\carre}
+      \rput(0,-2){\carre}
+      \rput(0.5,-3){Rang 2}
+   \end{pspicture}
+   
+   \begin{pspicture}(-8,-4.5)(4,1)
+      \croix
+      \rput(2,0){\carre}
+      \rput(3,0){\carre}
+      \rput(0,2){\carre}
+      \rput(0,3){\carre}
+      \rput(-2,0){\carre}
+      \rput(-3,0){\carre}
+      \rput(0,-2){\carre}
+      \rput(0,-3){\carre}
+      \rput(0.5,-4){Rang 3}
+   \end{pspicture}}
+   \begin{enumerate}
+      \item Dessiner l’élément du rang suivant et expliquer la règle.
+      \item Déterminer le nombre de petits carrés des éléments du rang 5, du rang 10, du rang 17.
+      \item Déterminer le nombre de petits carrés de l’élément du rang 100 et donner un moyen de calculer rapidement le nombre de petits carrés d’un élément à n’importe quel rang.
+     \item Existe-t-il un élément qui contient 532 petits carrés ? Un élément qui contient 813 petits carrés ?
+  \end{enumerate}}
+   
+   \vfill\hfill {\it\small Source : La résolution de problèmes mathématiques au collège, MENJS, 2021}
+ \end{enigme}  
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    \phantom{rrr}
+
+    \hspace*{-7.5mm} \textcolor{orange}{\bf Défi 1} \\
+       On peut modéliser ce défi par un schéma en barres. Soit $x$, le nombre choisi. \\
+       \ModeleBarre[Separation=2]{DeepSkyBlue 1 "$x$" 1 "$x$" 1 "$x$" 1 "$x$" 1 "$x$" PowderBlue 2 "35"}{DeepSkyBlue 1 "$x$" 1 "$x$" SkyBlue 5 "146"}
+       \ModeleBarre[Separation=3]{DeepSkyBlue 1 "$x$" 1 "$x$" 1 "$x$" PowderBlue 2 "35"}{ SkyBlue 3 "111" PowderBlue 2 "35"}
+       \ModeleBarre{DeepSkyBlue 1 "$x$" 1 "$x$" 1 "$x$"}{SkyBlue 3 "111"} donc, $x =111\div3 ={\red 37}$.
+    
+    \hspace*{-7.5mm} \textcolor{orange}{\bf Défi 2} \\
+       \begin{enumerate}
+          \item Pour le rang 4, il suffit {\red d'ajouter 1 carré à chacune des extrémités}.
+          \item Au rang 1, on a 5 carrés. Au rang 2, $5+4 =9$ carrés. Au rang 3, $9+4 =13$ carrés.  Au rang 4, $13+4 =17$ carrés. {\red Au rang 5, $17+4 =21$ carrés}. \\
+             En continuant ainsi, on aura {\red 41 carrés au rang 10 et 69 carrés au rang 17}.
+             \item Soit $n$ le rang demandé, {\red le nombre de carrés au rang $n$ est de $1+4\times n$}. \\
+                Au rang 100, cela fait donc $1+4\times100 =401$.
+             \item En enlevant 1 carré, on doit obtenir un multiple de 4. Or, $532-1 =531$ n'est pas un multiple de 4. \\
+                $813-1 =812 =4\times203$ est un multiple de 4. \\
+                {\red Il y a donc 813 carrés au rang 203}.     
+       \end{enumerate}
+    \end{corrige}
