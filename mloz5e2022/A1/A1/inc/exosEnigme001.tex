@@ -1,0 +1,164 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+% Grille
+\newcommand{\cn}{\psframe[fillstyle=solid,fillcolor=black](0,0)(1,1)}
+\newcommand{\ho}{\includegraphics[width=0.3cm]{\currentpath/images/Hercule}}
+\newcommand{\po}{\includegraphics[width=0.3cm]{\currentpath/images/pommier}}
+
+% Commandes
+\newcommand{\dep}{\pspolygon[fillstyle=solid,fillcolor=orange](6,1)(0,1)(0,0)(1,0)(1.25,-0.25)(1.5,0)(6.5,0)(6.5,0.5) \pswedge[fillstyle=solid,fillcolor=orange,linecolor=orange](6,0.5){0.5}{0}{90} \psarc(6,0.5){0.5}{0}{90} \put(0.5,0.3){\footnotesize Démarre}}
+\newcommand{\av}[1]{\pspolygon[fillstyle=solid,fillcolor=green](0,0)(1,0)(1.25,-0.25)(1.5,0)(6.5,0)(6.5,1)(1.5,1)(1.25,0.75)(1,1)(0,1) \put(0.5,0.3){\footnotesize Avance de #1}}
+\newcommand{\tg}{\pspolygon[fillstyle=solid,fillcolor=yellow](0,0)(1,0)(1.25,-0.25)(1.5,0)(6.5,0)(6.5,1)(1.5,1)(1.25,0.75)(1,1)(0,1) \put(0.5,0.3){\footnotesize Tourne à gauche}}
+\newcommand{\td}{\pspolygon[fillstyle=solid,fillcolor=pink](0,0)(1,0)(1.25,-0.25)(1.5,0)(6.5,0)(6.5,1)(1.5,1)(1.25,0.75)(1,1)(0,1) \put(0.5,0.3){\footnotesize Tourne à droite}}
+\newcommand{\fin}{\pspolygon[fillstyle=solid,fillcolor=orange](0,0)(6,0)(6.5,0.5)(6.5,1)(1.5,1)(1.25,0.75)(1,1)(0,1)(0,0) \pswedge[fillstyle=solid,fillcolor=orange,linecolor=orange](6,0.5){0.5}{-90}{0} \psarc(6,0.5){0.5}{-90}{0} \put(0.5,0.3){\footnotesize Prends les pommes}}
+
+\begin{enigme}[Le jeu des dominogrammes]
+   
+    {\bf But du jeu} : en groupe, faire une chaîne fermée avec les huit cartes de domino. \\ [1mm]
+    {\bf Règle du jeu} : chaque domino est basé sur {\it Les douze travaux d'Hercule}, et notamment le travail n\degre11 dans lequel Hercule doit dérober les pommes d'or du jardin d'Hespérides. Le côté gauche comporte un quadrillage avec des cases noirs que l'on ne peut pas traverser, le personnage d'Hercule (orienté) et le pommier du jardin d'Hespérides. Le côté droit comporte un programme de déplacement d'Hercule. L'objectif est d'associer un programme d'un domino avec un quadrillage d'un autre domino. Les huit dominos doivent créer une chaine fermée. \\ [2mm]
+    {\psset{unit=0.4}
+    \begin{pspicture}(-1,-1)(19,10) % jaune 1
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \put(3.1,4.1){\ho} \put(7.1,6.1){\po}
+       \put(1,1){\cn} \put(2,3){\cn} \put(3,2){\cn} \put(2,4){\cn}  \put(5,5){\cn} \put(7,2){\cn} \put(5,7){\cn} \put(6,0){\cn} \put(1,6){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\av{3}}
+       \put(10,5){\td}
+       \put(10,4){\av{1}}
+       \put(10,3){\tg}
+       \put(10,2){\av{1}}
+       \put(10,1){\fin}
+       \put(18,8){\ding{40}}
+    \end{pspicture}
+    \;
+    \begin{pspicture}(-1,-1)(19,10) % jaune 2
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \rput{90}(3.5,2.5){\ho} \put(4.1,6.1){\po}
+       \put(1,2){\cn} \put(4,3){\cn} \put(3,0){\cn} \put(2,7){\cn}  \put(5,6){\cn} \put(1,2){\cn} \put(0,7){\cn} \put(6,2){\cn} \put(1,3){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\td}
+       \put(10,5){\av{4}}
+       \put(10,4){\tg}
+       \put(10,3){\av{3}}
+       \put(10,2){\tg}
+       \put(10,1){\av{1}}
+       \put(10,0){\fin}
+       \put(18,8){\ding{110}}
+    \end{pspicture}
+ 
+    \medskip
+    \begin{pspicture}(-1,-1)(19,9) % jaune 3
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \put(5.1,3.1){\reflectbox{\ho}} \put(2.1,6.1){\po}
+       \put(6,6){\cn} \put(3,3){\cn} \put(3,6){\cn} \put(2,5){\cn}  \put(3,5){\cn} \put(4,2){\cn} \put(1,3){\cn} \put(0,0){\cn} \put(2,5){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\av{7}}
+       \put(10,5){\tg}
+       \put(10,4){\av{7}}
+       \put(10,3){\tg}
+       \put(10,2){\av{7}}
+       \put(10,1){\fin}
+       \put(18,8){\ding{57}}
+    \end{pspicture}
+    \;
+    \begin{pspicture}(-1,-1)(19,9) % jaune 4
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \put(0.1,0.1){\ho} \put(0.1,7.1){\po}
+       \put(5,3){\cn} \put(4,3){\cn} \put(3,6){\cn} \put(0,6){\cn}  \put(5,5){\cn} \put(2,1){\cn} \put(2,5){\cn} \put(6,2){\cn} \put(1,3){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\av{3}}
+       \put(10,5){\tg}
+       \put(10,4){\td}
+       \put(10,3){\av{2}}
+       \put(10,2){\tg}
+       \put(10,1){\av{2}}
+       \put(10,0){\fin}
+       \put(18,8){\ding{52}}
+    \end{pspicture}
+ 
+    \medskip
+    \begin{pspicture}(-1,-1)(19,9) % jaune 5
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \rput{90}(5.5,0.5){\ho} \put(3.1,5.1){\po}
+       \put(1,1){\cn} \put(0,3){\cn} \put(4,2){\cn} \put(3,4){\cn}  \put(5,6){\cn} \put(7,3){\cn} \put(5,7){\cn} \put(6,1){\cn} \put(1,7){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\av{6}}
+       \put(10,5){\td}
+       \put(10,4){\av{3}}
+       \put(10,3){\td}
+       \put(10,2){\av{2}}
+       \put(10,1){\tg}
+       \put(10,0){\fin}
+       \put(18,8){\ding{70}}
+    \end{pspicture}
+    \;
+    \begin{pspicture}(-1,-1)(19,9) % jaune 6
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \rput{-90}(4.5,7.5){\ho} \put(1.1,3.1){\po}
+       \put(0,2){\cn} \put(6,5){\cn} \put(1,0){\cn} \put(2,0){\cn}  \put(3,6){\cn} \put(1,6){\cn} \put(6,7){\cn} \put(6,2){\cn} \put(1,7){\cn}     
+       \put(10,7){\dep}
+       \put(10,6){\av{2}}
+       \put(10,5){\tg}
+       \put(10,4){\av{1}}
+       \put(10,3){\fin}
+       \put(18,8){\ding{74}}
+    \end{pspicture}
+ 
+    \medskip
+    \begin{pspicture}(-1,-1)(19,9) % jaune 7
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \put(7.1,7.1){\reflectbox{\ho}} \put(5.1,6.1){\po}
+       \put(6,6){\cn} \put(2,3){\cn} \put(0,6){\cn} \put(4,2){\cn}  \put(3,7){\cn} \put(1,2){\cn} \put(0,3){\cn} \put(7,2){\cn} \put(2,5){\cn}
+       \put(10,7){\dep}
+       \put(10,6){\av{2}}
+       \put(10,5){\tg}
+       \put(10,4){\tg}
+       \put(10,3){\tg}
+       \put(10,2){\tg}
+       \put(10,1){\av{2}}
+       \put(10,0){\fin}
+       \put(18,8){\ding{87}}
+    \end{pspicture}
+    \;
+    \begin{pspicture}(-1,-1)(19,9) % jaune 8
+       \psframe(-1,-1)(19,9)
+       \psline(9,-1)(9,9)
+       \psgrid[subgriddiv=1,gridlabels=0](0,0)(8,8)
+       \rput{90}(2.5,3.5){\ho} \put(2.1,7.1){\po}
+       \put(5,3){\cn} \put(3,3){\cn} \put(3,6){\cn} \put(0,5){\cn}  \put(7,5){\cn} \put(2,1){\cn} \put(2,0){\cn} \put(6,2){\cn} \put(1,3){\cn}     
+    \put(10,7){\dep}
+       \put(10,6){\av{1}}
+       \put(10,5){\tg}
+       \put(10,4){\av{2}}
+       \put(10,3){\td}
+       \put(10,2){\av{2}}
+       \put(10,1){\av{1}}
+       \put(10,0){\fin}
+       \put(18,8){\ding{115}}
+    \end{pspicture}}
+    \\ [2mm]
+    Lorsque le groupe a réussi la mission, passer au niveau supérieur avec une autre série de dominos comportant des boucles de répétition. 
+ \end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+\begin{corrige}
+    Suite des dominos :\\    
+    \ding{40} -- \ding{110} -- \ding{57} -- \ding{52} -- \ding{70} -- \ding{74} -- \ding{87} -- \ding{115}
+ \end{corrige}
