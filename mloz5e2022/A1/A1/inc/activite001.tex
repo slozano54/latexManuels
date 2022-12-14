@@ -1,0 +1,111 @@
+\begin{activite}[La fourmi de Langton]
+    \begin{myBox}{Objectifs}    
+        \begin{itemize}
+            \item suivre un algorithme de déplacement ;
+            \item se repérer dans le plan dans un repérage relatif.
+        \end{itemize}
+    \end{myBox}
+
+    \hspace*{-10mm}La fourmi de Langton est un automate qui se déplace dans un quadrillage suivant les règles suivantes :
+    \begin{itemize}
+        \item au départ, toutes les cases sont de la même couleur, ici blanches ;
+        \item si la fourmi est sur une case blanche, elle tourne de \udeg{90} vers la droite, change la couleur de la case en noir et avance d'une case ;
+        \item si la fourmi est sur une case noire, elle tourne de \udeg{90} vers la gauche, change la couleur de la case en blanc et avance d'une case.
+    \end{itemize}
+    \hspace*{-10mm}Compléter dans les quadrillages ci-dessous les quinze premières étapes du déplacement de la fourni.
+    \begin{center}
+        \psset{unit=0.4,subgriddiv=1,gridlabels=0mm,gridcolor=gray}
+        \small
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \fourmi{3.5}{3.5}{0}
+            \rput(3.5,-0.5){étape 0}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psframe[fillstyle=solid,fillcolor=darkgray](3,3)(4,4)
+            \psgrid(0,0)(7,7)
+            \fourmi{4.5}{3.5}{-90}
+            \rput(3.5,-0.5){étape 1}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)  
+            \psframe[fillstyle=solid,fillcolor=darkgray](3,3)(5,4)
+            \psgrid(0,0)(7,7)
+            \fourmi{4.5}{2.5}{180}
+            \rput(3.5,-0.5){étape 2}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 3}
+        \end{pspicture}
+        \vfill
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psframe[fillstyle=solid,fillcolor=darkgray](3,2)(5,4)
+            \psgrid(0,0)(7,7)
+            \fourmi{3.5}{3.5}{0}
+            \rput(3.5,-0.5){étape 4}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 5}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 6}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psframe[fillstyle=solid,fillcolor=darkgray](2,3)(3,5)
+            \pspolygon[fillstyle=solid,fillcolor=darkgray](3,2)(5,2)(5,4)(4,4)(4,3)(3,3)
+            \psgrid(0,0)(7,7)
+            \fourmi{3.5}{4.5}{-90}
+            \rput(3.5,-0.5){étape 7}
+        \end{pspicture}
+        \vfill
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 8}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 9}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 10}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,-0.7)(7,7)
+            \pspolygon[fillstyle=solid,fillcolor=darkgray](2,2)(5,2)(5,4)(4,4)(4,5)(2,5)(2,4)(3,4)(3,3)(2,3)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 11}
+            \fourmi{1.5}{2.5}{90}
+        \end{pspicture}
+        \vfill
+        \begin{pspicture}(0,0)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 12}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,0)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 13}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,0)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 14}
+        \end{pspicture}
+        \quad
+        \begin{pspicture}(0,0)(7,7)
+            \psgrid(0,0)(7,7)
+            \rput(3.5,-0.5){étape 15}
+        \end{pspicture} 
+    \end{center}
+ \end{activite}
