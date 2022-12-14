@@ -1,10 +1,35 @@
+% Fourmi
+\newcommand{\fourmi}[3]{\rput{#3}(#1,#2){\psdot[linecolor=red,dotstyle=triangle*,linewidth=1mm](0,0)}}
+\newcommand{\cub}{\psframe[fillstyle=solid,fillcolor=black](0,0)(1,1)}
+\vspace*{-7mm}
 %pre-001
-\input{\currentpath/inc/prerequis000.tex}
-\vspace{0.9em}
-\begin{autoeval}
-    Nada
-\begin{multicols}{2}
-%000
-\input{\currentpath/inc/autoeval000.tex}
-\end{multicols}
-\end{autoeval}
+\input{\currentpath/inc/prerequis001.tex}
+%pre-002
+\input{\currentpath/inc/prerequis002.tex}
+\begin{debat}[La fourmi de Langton : que se passe-t-il ensuite ?] 
+    La {\bf fourmi de Langton}, du nom de son inventeur scientifique américain {\it Christopher Langton}, est un petit programme informatique inventé vers la fin des années 1980. Il consiste en un automate qui se déplace dans un quadrillage suivant des règles simples. Il modélise le fait qu'un ensemble de comportements élémentaires peut donner lieu à un comportement complexe.
+    \begin{center}
+       {\psset{unit=0.15}
+       \begin{pspicture}(0,0)(13,13)
+          \fourmi{6.5}{6.5}{-90}
+          \rput(2,0){\cub} \rput(3,0){\cub}
+          \rput(1,1){\cub} \rput(2,1){\cub} \rput(9,1){\cub} \rput(10,1){\cub}
+          \rput(0,2){\cub} \rput(2,2){\cub} \rput(3,2){\cub} \rput(5,2){\cub} \rput(8,2){\cub} \rput(11,2){\cub}
+          \rput(0,3){\cub} \rput(3,3){\cub} \rput(5,3){\cub} \rput(6,3){\cub} \rput(7,3){\cub} \rput(9,3){\cub} \rput(10,3){\cub} \rput(11,3){\cub}
+          \rput(1,4){\cub} \rput(3,4){\cub} \rput(10,4){\cub} \rput(12,4){\cub}
+          \rput(3,5){\cub} \rput(4,5){\cub} \rput(8,5){\cub} \rput(9,5){\cub}
+          \rput(3,6){\cub} \rput(4,6){\cub} \rput(5,6){\cub} \rput(7,6){\cub} \rput(8,6){\cub} \rput(9,6){\cub}
+          \rput(3,7){\cub} \rput(4,7){\cub} \rput(8,7){\cub} \rput(9,7){\cub}
+          \rput(0,8){\cub} \rput(2,8){\cub} \rput(9,8){\cub} \rput(11,8){\cub}
+          \rput(0,9){\cub} \rput(1,9){\cub} \rput(2,9){\cub} \rput(5,9){\cub} \rput(6,9){\cub} \rput(7,9){\cub} \rput(9,9){\cub} \rput(12,9){\cub}
+          \rput(1,10){\cub} \rput(4,10){\cub} \rput(7,10){\cub} \rput(9,10){\cub} \rput(10,10){\cub} \rput(12,10){\cub}
+          \rput(2,11){\cub} \rput(3,11){\cub} \rput(10,11){\cub} \rput(11,11){\cub}
+          \rput(9,12){\cub} \rput(10,12){\cub}
+       \end{pspicture}}
+    \end{center}
+    \begin{cadre}[B2][J4]
+       \begin{center}
+          Vidéo : \href{https://www.yout-ube.com/watch?v=qZRYGxF6D3w}{\bf La fourmi de Langton}, chaîne YouTube {\it Science étonnante}.
+       \end{center}
+    \end{cadre}
+ \end{debat}
