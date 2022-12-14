@@ -1,0 +1,121 @@
+\begin{exercice}
+   % https://coopmaths.fr/mathalea.html?ex=dnb_2021_09_metropole_4&serie=VbC4&z=1&v=exEtChoix
+   Voici trois programmes réalisés avec l'application Scratch.
+
+   \newcommand{\echelleAunMlozCinq}{0.8}
+   \small{
+      \begin{center}
+         \begin{tabularx}{\linewidth}{|*{3}{>{\centering \arraybackslash}X|}}\hline
+         Programme 1 &Programme 2 &Programme  3\rule[-3mm]{0mm}{6mm}\\
+         \begin{Scratch}[Numerotation,Echelle=\echelleAunMlozCinq]
+            Place Drapeau;
+            Place PoserStylo;
+            Place Repeter("3");
+               Place Avancer("100");
+               Place Tournerg("120");
+            Place FinBlocRepeter;
+            Place Avancer("50");
+            Place Repeter("4");
+               Place Avancer("?");
+               Place Tournerg("90");
+            Place FinBlocRepeter;
+         \end{Scratch}
+         &
+         \begin{Scratch}[Numerotation,Echelle=\echelleAunMlozCinq]
+            Place Drapeau;
+            Place PoserStylo;
+            Place Repeter("3");
+               Place Avancer("100");
+               Place Tournerg("120");
+            Place FinBlocRepeter;
+            Place Avancer("100");
+            Place Repeter("4");
+               Place Avancer("?");
+               Place Tournerg("90");
+            Place FinBlocRepeter;
+         \end{Scratch}
+         &
+         \begin{Scratch}[Numerotation,Echelle=\echelleAunMlozCinq]
+            Place Drapeau;
+            Place PoserStylo;
+            Place Repeter("3");
+               Place Avancer("100");
+               Place Tournerg("120");
+            Place FinBlocRepeter;
+            Place Tournerg("60");
+            Place Repeter("4");
+               Place Avancer("?");
+               Place Tournerg("90");
+            Place FinBlocRepeter;
+         \end{Scratch}
+         \\ \hline
+         \end{tabularx}
+       \end{center}
+   }
+   \begin{enumerate}
+   \item Ils donnent les trois figures suivantes constituées de triangles et de quadrilatères \textbf{identiques}.
+
+   \begin{center}
+   \begin{tabularx}{\linewidth}{|*{3}{>{\centering \arraybackslash}X|}}\hline
+   Figure A &Figure B& Figure C\\
+   \psset{unit=1cm}
+   \begin{pspicture}(-3.2,-1)(1.3,2.5)
+   %\psgrid
+   \pspolygon(1.1;-30)(1.1;90)(1.1;210)
+   \rput{60}(-0.98,-0.58){\psframe(1.95,1.95)}
+   \end{pspicture}&\psset{unit=1cm}
+   \begin{pspicture}(-1.3,-1)(3.2,2.5)
+   %\psgrid
+   \pspolygon(1.1;-30)(1.1;90)(1.1;210)
+   \psframe(0,-0.55)(1.95,1.4)
+   \end{pspicture}&\psset{unit=1cm}
+   \begin{pspicture}(-1.3,-1)(3.2,2.5)
+   %\psgrid
+   \pspolygon(1.1;-30)(1.1;90)(1.1;210)
+   \psframe(0.96,-0.55)(2.91,1.4)
+   \end{pspicture}\\ \hline
+   \end{tabularx}\end{center}
+
+
+      \begin{enumerate}
+         \item Indiquer la nature du triangle et du quadrilatère sur chaque figure. Aucune justification n'est attendue.
+         \item Déterminer la valeur manquante à la ligne 8 dans ces 3 programmes.
+         \item Indiquer, pour chaque figure, le numéro du programme qui permet de l'obtenir.
+      \end{enumerate}
+   \item  
+      \begin{enumerate}
+         \item Maintenant nous allons modifier les programmes précédents pour construire d'autres figures pour lesquelles
+         le périmètre du quadrilatère est égal au périmètre du triangle.
+         Indiquer la valeur du pas à choisir à la ligne 8 de chaque programme.
+         \item Représenter la figure A obtenue avec cette nouvelle valeur, en prenant 1 cm pour 25 pas.
+      \end{enumerate}
+   \end{enumerate}
+
+\end{exercice}
+ 
+\begin{corrige}
+   \begin{enumerate}
+      \item 
+         \begin{enumerate}
+            \item Dans chaque cas le triangle est équilatéral et le quadrilatère est un carré.
+            \item Avancer de 100 pas.
+            \item Programme 1 : figure B ; \\Programme 2 : figure C ;\\ Programme 3 : figure A.
+         \end{enumerate}
+      \item  
+         \begin{enumerate}
+            \item Si $c$ est la longueur du côté du carré et $t$ la longueur du côté du triangle, on doit avoir $4c = 3t$.
+            
+            Donc si $t = 100$, alors $4c = 300$, soit $c =  75$.
+      
+            Il faut donc écrire à la ligne 8  : avancer de 75 pas.
+            \item ~
+            
+               \psset{unit=1cm}
+               \begin{pspicture}(5,3)
+                  \pspolygon(1.8,0)(4.8,0)(3.3,2.6)
+                  \rput{60}(1.8,0){\psframe(2.25,2.25)}
+               \end{pspicture}
+         \end{enumerate}
+   \end{enumerate}
+\end{corrige}
+ 

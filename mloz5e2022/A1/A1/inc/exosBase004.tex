@@ -1,0 +1,23 @@
+\begin{exercice}
+    Proposer un programme permettant de dessiner les marches d'un escalier comme ci-dessous. \\
+    Chaque segment de la marche doit mesurer 100 pas. \\
+    {\psset{unit=0.5}
+    \begin{pspicture}(-4,0)(6,6.5)
+      \psline[linewidth=1mm,linecolor=blue](0,6)(0,4)(2,4)(2,2)(4,2)(4,0)(6,0)
+    \end{pspicture}}
+ \end{exercice}
+ 
+ \begin{corrige}
+    On peut proposer le programme suivant : \\ [1mm]
+    \begin{Scratch}[Echelle=0.6]
+       Place Drapeau;
+       Place PoserStylo;
+       Place Repeter("3");     
+          Place Tournerd("90");
+          Place Avancer("100");
+          Place Tournerg("90");
+          Place Avancer("100");
+       Place FinBlocRepeter;      
+    \end{Scratch}
+ \end{corrige}
+ 

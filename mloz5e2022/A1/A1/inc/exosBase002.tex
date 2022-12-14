@@ -1,0 +1,77 @@
+\begin{exercice}
+    Tracer les figures obtenues lorsque l'on exécute les programmes suivants avec scratch. Pour chaque cas, donner la nature de la figure obtenue. \\
+    {\it On représentera l'unité (un pas )par \umm{1} sur le cahier.} \\ [2mm]
+          Programme 1 \hspace*{2.2cm} Programme 2 \\ [1mm]
+          \begin{Scratch}[Echelle=0.7]
+             Place Drapeau;
+             Place PoserStylo;
+             Place Repeter("4");
+                Place Tournerd("90");
+                Place Avancer("50");
+             Place FinBlocRepeter;
+          \end{Scratch}
+          \qquad
+          \begin{Scratch}[Echelle=0.7]
+             Place Drapeau;
+             Place PoserStylo;
+             Place Repeter("3");
+                Place Avancer("40");
+                Place Tournerg("120");
+             Place FinBlocRepeter;
+          \end{Scratch}
+          \\ [3mm]
+          Programme 3 \hspace*{2.2cm} Programme 4 \\ [1mm]
+          \begin{Scratch}[Echelle=0.7]
+             Place Drapeau;
+             Place PoserStylo;
+             Place Repeter("2");
+                Place Avancer("20");
+                Place Tournerd("90");
+                Place Avancer("80");
+                Place Tournerd("90");
+             Place FinBlocRepeter;
+          \end{Scratch} 
+          \qquad
+          \begin{Scratch}[Echelle=0.7]
+             Place Drapeau;
+             Place PoserStylo;
+             Place Repeter("2");
+                Place Avancer("30");
+                Place Tournerd("50");
+                Place Avancer("30");
+                Place Tournerd("130");
+             Place FinBlocRepeter;
+          \end{Scratch}
+
+          \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=6I12,s=9,s2=1,i=0&v=l}
+          
+          \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5I11,s=1,s2=1,s3=4,s4=false,n=1,cd=1&v=l}          
+ \end{exercice}
+ 
+ \begin{corrige}
+   \begin{itemize}
+      \def\item{}
+    \item Le programme 1 donne un {\blue carré} de côté \ucm{5}, le programme 2 un {\blue triangle équilatéral} de côté \ucm{4}, le programme 3 un {\blue losange} de côté \ucm{3} et le programme 4 un {\blue rectangle} de longueur \ucm{8} et de largeur \ucm{2}. \\
+    {\psset{linecolor=blue,unit=0.8cm}
+    \begin{pspicture}(0,0)(7,7.3)                                                                              
+       \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(7,7)
+       \psdot[linewidth=0.7mm](1,6)
+       \psframe(1,1)(6,6)    
+    \end{pspicture}}
+   \end{itemize}
+  \Coupe
+  \begin{itemize}
+   \def\item{}
+    \item {\psset{linecolor=blue,unit=0.8cm}
+    \begin{pspicture}(0,0)(8,9)                                                                              
+       \psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](0,0)(8,9)    
+       \psdot[linewidth=0.7mm](0,4)
+       \pspolygon(0,4)(4,4)(2,7.46)
+       \psdot[linewidth=0.7mm](6,8)
+       \psframe(6,0)(8,8)
+       \psdot[linewidth=0.7mm](0,3)
+       \pspolygon(0,3)(3,3)(4.93,0.7)(1.93,0.7)
+    \end{pspicture}}
+   \end{itemize}
+ \end{corrige}
+ 

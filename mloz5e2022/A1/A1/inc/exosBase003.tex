@@ -1,0 +1,39 @@
+\begin{exercice}
+    En utilisant les instructions ci-dessous, écrire un programme permettant de tracer les pointillés. \\
+    \begin{pspicture}(0,-0.5)(10,0.5)
+       \psline[linewidth=1mm,linecolor=blue](0,0)(1,0)
+       \psline[linewidth=1mm,linecolor=blue](2,0)(3,0)
+       \psline[linewidth=1mm,linecolor=blue](4,0)(5,0)
+       \psline[linewidth=1mm,linecolor=blue](6,0)(7,0)
+       \psline[linewidth=1mm,linecolor=blue](8,0)(9,0)
+    \end{pspicture} \\
+    \begin{Scratch}[Echelle=0.7]
+       Place PoserStylo;
+       Place LigneVide;
+       Place Avancer("10");
+       Place LigneVide;
+       Place ReleverStylo;
+    \end{Scratch} 
+    \qquad
+    \begin{Scratch}[Echelle=0.7]
+       Place Drapeau;
+       Place LigneVide;
+       Place Repeter("");
+          Place LigneVide;
+       Place FinBlocRepeter;      
+    \end{Scratch} \\
+ \end{exercice}
+ 
+ \begin{corrige}
+    On peut proposer le programme suivant : \\ [1mm]
+    \begin{Scratch}[Echelle=0.7]
+       Place Drapeau;
+       Place Repeter("5");
+          Place PoserStylo;
+          Place Avancer("10");
+          Place ReleverStylo;
+          Place Avancer("10");
+       Place FinBlocRepeter;      
+    \end{Scratch}
+ \end{corrige}
+ 
