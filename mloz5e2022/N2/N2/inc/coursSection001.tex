@@ -1,0 +1,43 @@
+\section{Nombres relatifs}
+\begin{definition}
+    Les nombres sont séparés en deux grands groupes :
+    \begin{enumerate}
+        \item Ceux qui sont \colorbox{A1!30}{supérieurs} à zéro : les nombres \colorbox{A1!30}{positifs}.
+        \item Ceux qui sont \colorbox{B1!30}{inférieurs} à zéro : les nombres \colorbox{B1!30}{négatifs}.
+    \end{enumerate}
+    La réunion de ces deux grands groupes constitue \textbf{les nombres relatifs (à zéro)}.
+\end{definition}
+\begin{tikzpicture}
+\clip (-9,-1) rectangle (9,1);
+    \draw[->,thick](-8.5,0)--(8.5,0);
+    \foreach \x in {-8,...,8} \draw (\x,-.1)node[below]{\x} -- (\x,0.1);
+    \draw plot[mark=x, mark size=1mm] (-3,0) node[above]{B};
+    \draw plot[mark=x, mark size=1mm] (2,0) node[above]{A};
+    \draw [A1!30,line width=5pt,opacity=0.5] (0,0)--(8.5,0);
+    \draw [B1!30,line width=5pt,opacity=0.5] (-8.5,0)--(0,0);
+\end{tikzpicture}
+\begin{remarque}
+    $0$ fait partie des deux groupes à la fois.
+\end{remarque}
+\begin{definition}
+   Un {\bf nombre relatif} est un nombre positif ($+$) ou négatif ($-$).
+   
+   Le nombre sans son signe correspond à sa distance à l'origine 0.
+\end{definition}
+\begin{exemple*1}
+   Les étages d'un immeuble sont  repérés par rapport à un niveau 0 : le rez-de-chaussée. Les étages au-dessus sont les étages positifs et les étages en dessous (cave, garages) sont les étages négatifs.
+\end{exemple*1}
+\begin{exemple*1}
+   Le signe de $+3$ est $+$ et sa distance à l'origine 0 est 3. \\
+   Le signe de $-7$ est $-$ et sa distance à l'origine 0 est 7.  
+\end{exemple*1}
+\begin{definition}
+   L'{\bf opposé} d'un nombre relatif est le nombre de signe contraire et de même	
+distance à 0.
+\end{definition}
+\begin{exemple*1}
+   L'opposé de $-3$ est $+3$ et l'opposé de $+2$ est $-2$ .
+\end{exemple*1}
+\begin{remarque}
+   de manière usuelle, on omet le signe \og $+$ \fg{} devant les nombres positifs.
+\end{remarque}
