@@ -1,0 +1,80 @@
+\begin{activite}[Carrés magiques]
+    {\bf Objectifs : } résoudre un problème avec des nombres ; montrer que, pour résoudre un problème, il est parfois nécessaire d’inventer de nouveaux nombres, des nombres négatifs.
+
+       \begin{minipage}{0.7\linewidth}
+          Un carré magique est un tableau carré tel que la somme pour chaque ligne, chaque colonne et chaque diagonale soit la même.
+       \end{minipage}
+       \qquad
+       \begin{minipage}{0.3\linewidth}
+          \begin{pspicture}(-0.5,-1.5)(4,3.25)
+             \psgrid[griddots=50, subgriddiv=0, gridlabels=0](0,0)(3,3)
+             \rput(0.5,0.5){4}
+             \rput(1.5,0.5){3}
+             \rput(2.5,0.5){8}
+             \rput(0.5,1.5){9}
+             \rput(1.5,1.5){5}
+             \rput(2.5,1.5){1}
+             \rput(0.5,2.5){2}
+             \rput(1.5,2.5){7}
+             \rput(2.5,2.5){6}
+             \rput(0.5,-0.3){$\downarrow$}
+             \rput(0.5,-0.7){15}
+             \rput(1.5,-0.3){$\downarrow$}
+             \rput(1.5,-0.7){15}
+             \rput(2.5,-0.3){$\downarrow$}
+             \rput(2.5,-0.7){15}
+             \rput(3.3,0.5){$\rightarrow$}
+             \rput(3.7,0.5){15}
+             \rput(3.3,1.5){$\rightarrow$}
+             \rput(3.7,1.5){15}
+             \rput(3.3,2.5){$\rightarrow$}
+             \rput(3.7,2.5){15}
+             \rput(3.3,-0.3){$\searrow$}
+             \rput(3.7,-0.7){15}
+             \rput(-0.3,-0.3){$\swarrow$}
+             \rput(-0.7,-0.7){15}
+          \end{pspicture}
+       \end{minipage} \\
+       Compléter les carrés suivants pour les rendre magiques.
+       
+       Commencer par déterminer la somme commune.
+       \begin{center}
+       {\psset{unit=1.4,griddots=50, subgriddiv=0, gridlabels=0}
+       \large
+          \begin{pspicture}(0,-0.3)(4,4)
+             \psgrid(0,0)(3,3)
+             \rput(0.5,0.5){4}
+             \rput(0.5,2.5){8}
+             \rput(1.5,1.5){5}
+             \rput(2.5,0.5){2}
+             \rput(1.4,3.5){Somme = \pointilles[15mm]}
+          \end{pspicture}
+          \begin{pspicture}(-1,-0.3)(3,4)
+             \psgrid(0,0)(3,3)
+             \rput(2.5,2.5){24}
+             \rput(0.5,2.5){18}
+             \rput(1.5,1.5){15}
+             \rput(2.5,0.5){12}
+             \rput(1.4,3.5){Somme = \pointilles[15mm]}
+          \end{pspicture}
+       
+           \begin{pspicture}(0,-0.3)(4,4)
+             \psgrid(0,0)(3,3)
+             \rput(1.5,2.5){7}
+             \rput(0.5,2.5){2}
+             \rput(1.5,1.5){3}
+             \rput(2.5,0.5){4}
+             \rput(1.4,3.5){Somme = \pointilles[15mm]}
+          \end{pspicture}
+          \begin{pspicture}(-1,-0.3)(3,4)
+             \psgrid(0,0)(3,3)
+             \rput(2.5,2.5){4}
+             \rput(0.5,0.5){10}
+             \rput(1.5,1.5){7}
+             \rput(1.5,2.5){1}
+             \rput(1.4,3.5){Somme = \pointilles[15mm]}
+          \end{pspicture}}
+       \end{center}   
+    \hfill{\footnotesize\it Source : Une introduction des nombres relatifs en 5\up{e} - PLOT 45, APMEP 2014.}
+ \end{activite}
+ 
