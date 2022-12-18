@@ -1,0 +1,76 @@
+\begin{exercice}
+    Écrire l'abscisse de chacun des points représentés sur la droite graduée.
+    \begin{enumerate}
+    \small
+       \item \begin{pspicture}(0,0)(8,0.7)
+                   \psset{xunit=5}
+                   \psaxes[yAxis=false,subticks=10,subtickcolor=gray]{->}(0,0)(1.5,0)
+                   \pstGeonode[PosAngle=90](0.3,0){A}(0.8,0){B}(1.1,0){C}(1.3,0){D}
+                   \rput(1.024,-0.415){0}
+                \end{pspicture}
+       \item \begin{pspicture}(0,0)(8,1.2)
+                   \psset{xunit=1.15}
+                   \psaxes[yAxis=false,subticks=2,subtickcolor=gray,labels=none]{->}(0,0)(6.5,0)
+                   \rput(1,-0.4){1\,000}
+                   \rput(2,-0.4){2\,000}
+                   \pstGeonode[PosAngle=90](1.5,0){J}(3.5,0){K}(5.5,0){L}
+                \end{pspicture}
+       \item \begin{pspicture}(0,0)(8,1.2)
+                   \psset{xunit=0.47}
+                   \psline{->}(0,0)(16,0)
+                   \multido{\n=0+1}{15}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+                   \psline(3,-0.1)(3,0.1)
+                   \rput(3,-0.4){29\,000}
+                   \psline(13,-0.1)(13,0.1)
+                   \rput(13,-0.4){30\,000}
+                   \pstGeonode[PosAngle=90](2,0){R}(7,0){S}(10,0){T}(14,0){U}
+                \end{pspicture}
+    \end{enumerate}
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=6N11,s=4,n=3,i=0&v=l}
+ \end{exercice}
+
+ \begin{corrige}
+    Écrire l'abscisse de chacun des points représentés sur la droite graduée.
+    
+    \begin{enumerate}
+    \small    
+       \item 
+       
+       \hspace*{-8mm}\begin{pspicture}(0,0)(8,0.7)
+                   \psset{xunit=5}
+                   \psaxes[yAxis=false,subticks=10,subtickcolor=gray]{->}(0,0)(1.5,0)
+                   \pstGeonode[PosAngle=90](0.3,0){A}(0.8,0){B}(1.1,0){C}(1.3,0){D}
+                   \rput(1.024,-0.415){0}
+                \end{pspicture}
+        
+                \bigskip
+                {\red A($3$); B($8$); C($11$); D($13$)}               
+       \item 
+       
+       \hspace*{-8mm}\begin{pspicture}(0,0)(8,1.2)
+                   \psset{xunit=1.15}
+                   \psaxes[yAxis=false,subticks=2,subtickcolor=gray,labels=none]{->}(0,0)(6.5,0)
+                   \rput(1,-0.4){1\,000}
+                   \rput(2,-0.4){2\,000}
+                   \pstGeonode[PosAngle=90](1.5,0){J}(3.5,0){K}(5.5,0){L}
+                \end{pspicture}
+
+                \bigskip
+                {\red J($\num{1500}$); K($\num{3500}$); L($\num{5500}$)}      
+       \item
+       
+       \hspace*{-8mm}\begin{pspicture}(0,0)(8,1.2)
+                   \psset{xunit=0.47}
+                   \psline{->}(0,0)(16,0)
+                   \multido{\n=0+1}{15}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+                   \psline(3,-0.1)(3,0.1)
+                   \rput(3,-0.4){29\,000}
+                   \psline(13,-0.1)(13,0.1)
+                   \rput(13,-0.4){30\,000}
+                   \pstGeonode[PosAngle=90](2,0){R}(7,0){S}(10,0){T}(14,0){U}
+                \end{pspicture}
+
+                \bigskip
+                {\red R($\num{28900}$); S($\num{29400}$); T($\num{29700}$); U($\num{30100}$)}
+    \end{enumerate}
+ \end{corrige}

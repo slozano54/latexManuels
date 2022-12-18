@@ -1,0 +1,33 @@
+\begin{exercice}
+    Placer les points dont l'abscisse est donnée sur les droites graduées. \smallskip
+    \begin{enumerate}
+    \small
+       \item E(121) \qquad F(123) \qquad G(125) \qquad H(131) \\
+          \begin{pspicture}(0,-0.8)(8,0.7)
+                   \psset{xunit=5}
+                   \psaxes[yAxis=false,Ox=120,dx=1,Dx=10,subticks=10,subtickcolor=gray]{->}(0.2,0)(1.5,0)
+                   \psline(0,0)(0.2,0)
+                   \psline[linewidth=0.07mm](0.1,0.1)(0.1,-0.1)
+                \end{pspicture} 
+       \item M(7\,810) \qquad N(7\,830) \qquad P(7\,890) \qquad Q(7\,910) \\
+          \begin{pspicture}(0,-0.8)(8,0.7)
+                   \psset{xunit=0.45}
+                   \psline{->}(0,0)(16,0)
+                   \multido{\n=0+1}{16}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+                   \psline(2,-0.1)(2,0.1)
+                   \rput(2,-0.4){7\,800}
+                   \psline(12,-0.1)(12,0.1)
+                   \rput(12,-0.4){7\,900}
+                \end{pspicture}
+        \item V(640\,800) \qquad W(641\,300) \qquad Y(641\,600) \qquad Z(641\,800) \\
+           \begin{pspicture}(0,-0.5)(8,0.7)
+                   \psset{xunit=0.45}
+                   \psline{->}(0,0)(16,0)
+                   \multido{\n=0+1}{16}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+                   \psline(4,-0.1)(4,0.1)
+                   \rput(4,-0.4){641\,000}
+                   \psline(14,-0.1)(14,0.1)
+                   \rput(14,-0.4){642\,000}
+                \end{pspicture}
+    \end{enumerate}
+ \end{exercice}
