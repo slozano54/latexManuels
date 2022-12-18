@@ -1,0 +1,56 @@
+\begin{activite}[Un abaque romain]
+    {\bf Objectifs :} construire et utiliser un objet de calcul ancien ; comprendre et appliquer les règles de la numération décimale de position aux grands nombres entiers (jusqu’à 12 chiffres).
+    \partie[construction de l'abaque]
+        Un abaque est une table à calcul, le mot vient du latin {\it abax, abacus}. Il en existe de plusieurs formes. Celui que nous allons utiliser s'apparente à un abaque romain \og moderne \fg. \\
+        Reproduire cet abaque sur une feuille de papier en mode paysage et au format A4 : sachant qu'il y a douze colonnes, déterminer d'abors une largeur convenable
+        pour une colonne ? \smallskip
+        \begin{center}
+        {\psset{unit=0.375}
+        \begin{pspicture}(0,0)(36,16)
+            \multido{\i=3+3}{11}{\psline(\i,0)(\i,14)}
+            \multido{\i=0+9}{5}{\psline[linewidth=0.5mm](\i,0)(\i,16)}
+            \psline[linewidth=0.5mm](0,16)(36,16)
+            \psline[linewidth=0.5mm](0,12)(36,12)
+            \textcolor{J1}{
+            \rput(31.5,15){classe des unités}
+            \rput(34.5,13){\texttt{I}}
+            \rput(31.5,13){\texttt{X}}
+            \rput(28.5,13){\texttt{C}}}
+            \textcolor{B1}{
+            \rput(22.3,15){classe des milliers}
+            \rput(25.3,13){\texttt{I}}
+            \rput(22.3,13){\texttt{X}}
+            \rput(19.3,13){\texttt{C}}}
+            \textcolor{A1}{
+            \rput(13.1,15){classe des millions}
+            \rput(16.1,13){\texttt{I}}
+            \rput(13.1,13){\texttt{X}}
+            \rput(10.1,13){\texttt{C}}}
+            \rput(4,15){classe des milliards}
+            \rput(7,13){\texttt{I}}
+            \rput(4,13){\texttt{X}}
+            \rput(1,13){\texttt{C}}
+        \end{pspicture}}
+        \end{center} \smallskip
+    \partie[utilisation de l'abaque]
+        Un abaque s'utilise traditionnellement avec des jetons, on peut utiliser par exemple des jetons de jeu, des cailloux, des grains, des petites pâtes\dots{}
+        \begin{enumerate}
+            \item Débattre de l'utilisation possible de l'abaque.
+            \item Prendre un jeton et le placer dans l'une des colonnes de l'abaque. Quel nombre est représenté ?
+            \item Combien de nombres différents peut-on représenter avec un jeton ? Les lister.
+            \item Combien de nombres différents peut-on représenter avec deux jetons ? En donner cinq.
+            \item Représenter les nombres suivants :
+            \begin{multicols}{2}
+                \begin{itemize}
+                    \item 123
+                    \item mille-quatre-cent-quatre-vingts
+                    \item \num{1023}
+                    \item deux-cent-trois-millions
+                    \item \num{72105852}
+                    \item un-milliard-deux                        
+                \end{itemize}
+            \end{multicols}
+            \item Quels sont les nombres représentés sur l'abaque au tableau ?
+        \end{enumerate}
+  \end{activite}
+ 
