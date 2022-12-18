@@ -1,0 +1,38 @@
+\section{La droite graduée}
+
+\begin{definition}
+    Pour graduer une droite, il faut choisir : 
+    \begin{itemize}
+        \item une {\bf origine} qui correspond au \og 0 \fg{}
+        \item une {\bf unité} qui sera reportée de manière régulière
+        \item un {\bf sens croissant}.
+    \end{itemize}
+   Un point est repéré par son {\bf abscisse}. A a pour abscisse 3 se note A(3).\\
+   \begin{pspicture}(-2,-1)(5.5,1)
+   \psset{xunit=2}
+      \psaxes[yAxis=false]{->}(0,0)(5.2,1)
+      \psline[linecolor=violet]{<-}(-0.02,0.04)(-0.3,0.5)
+      \rput(-0.6,0.5){\textcolor{violet}{origine}}
+      \psline[linecolor=A1]{<->}(0,0.3)(1,0.3)
+      \rput(0.5,0.6){\textcolor{A1}{unité}}
+      \rput(3,0.4){\textcolor{B1}{A}}
+      \psline[linecolor=B1]{<-}(3.02,0.04)(3.3,0.5)
+      \rput(4.1,0.5){\textcolor{B1}{l'abscisse de A est 3}}
+      \psline[linecolor=mygreen]{<-}(5.15,0)(5.5,1.5)
+      \rput(5.3,1.6){\textcolor{mygreen}{sens croissant}}
+   \end{pspicture}
+\end{definition}
+      
+\begin{exemple*1}   
+   \ \\
+   \begin{pspicture}(-1,-0.5)(10,0.5)
+      \psaxes[yAxis=false,labels=none]{->}(0,0)(10.5,0)
+      \rput(0,-0.4){0}
+      \rput(1,-0.4){100}
+      \rput(3,0.4){A}
+      \rput(7,0.4){R}
+      \rput(10,0.4){C}
+   \end{pspicture} \\
+   Ici, l'unité vaut 100, donc les points A, R et C ont pour abscisses 300; 700 et \num{1000}.\\
+   On note  A(300), R(700) et C(\num{1000}).
+\end{exemple*1}
