@@ -1,0 +1,58 @@
+\section{Droites, demi-droites, segments}
+
+\begin{definition}
+   \begin{itemize}
+      \item Une {\bf droite} est une ligne rectiligne infinie. On peut noter une droite de différentes façons : \\
+      \begin{pspicture}(-0.5,-0.7)(13,1)
+         \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(3,0.5){B}
+         \pstLineAB[nodesep=-0.5,linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small droite $(AB)$}
+         \psline[linecolor=A1](4,0.25)(8,0)
+         \rput(7.25,-0.35){$(d)$}
+         \rput{-4}(6,0.5){\small droite $(d)$}
+         \psline[linecolor=A1](8.5,-0.25)(12.5,0.5)
+         \rput(9,-0.15){+}
+         \rput(9,-0.5){$T$}
+         \rput(12,0.2){$u$}
+         \rput{9}(10.5,0.5){\small droite $(Tu)$}
+      \end{pspicture}
+      \item Une {\bf demi-droite} est une portion de droite limitée d'un seul côté par un point appelé origine. La demi-droite d'origine $A$ passant par $B$ se note $[AB)$. \\
+      \begin{pspicture}(-5,-0.2)(5,1)
+         \pstGeonode[PosAngle=180,PointSymbol=+](0,0){A}
+         \pstGeonode[PosAngle=-90,PointSymbol=+](4,0.5){B}
+         \pstLineAB[nodesepB=-1,linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small demi-droite $[AB)$}
+      \end{pspicture}
+      \item Un \textbf{segment} est une portion de droite limitée par deux points appelés extrémités. Le segment d'extrémités $A$ et $B$ se note $[AB]$ ou $[BA]$. \\
+      \begin{pspicture}(-5,0.4)(5,1.2)
+         \pstGeonode[PosAngle={180,-90},PointSymbol=+](0,0.2){A}(4,0.7){B}
+         \pstLineAB[linecolor=A1]{A}{B}
+         \pstLabelAB{A}{B}{\small segment $[AB]$}
+      \end{pspicture}
+   \end{itemize}
+\end{definition}
+
+\begin{exemple*1}
+   \begin{minipage}{5cm}
+      \begin{pspicture}(-1,-0.25)(4,1.8)
+         \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(3,0){B}(2,1.25){C}
+         \pstLineAB[nodesep=-0.5]{A}{B}
+         \pstLineAB[nodesepB=-0.75]{A}{C}
+         \pstLineAB{C}{B}
+      \end{pspicture}
+   \end{minipage}
+   \begin{minipage}{6.5cm}
+   \begin{itemize}
+      \item $(AB)$ est une droite ;
+      \item $[AC)$ est la demi-droite d'origine $A$ passant par $C$ ;
+      \item $[CB]$ est le segment d'extrémités $C$ et $B$.
+   \end{itemize}
+   \end{minipage}
+\end{exemple*1}
+
+\begin{remarque}
+    \begin{itemize}
+        \item Le crochet signifie que l'objet est limité de ce côté.
+        \item La parenthèse signifie que l'objet est illimité.
+    \end{itemize}
+\end{remarque}
