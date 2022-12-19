@@ -1,7 +1,129 @@
 % Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
 % si on veut mettre plusieurs enigmes
-\refstepcounter{exercice}
-\phantom{\numeroteEnigme}
+% \refstepcounter{exercice}
+%\phantom{\numeroteEnigme}
+\begin{enigme}[La numération égyptienne]
+   \partie[introduction]
+      L'Égypte antique est une ancienne civilisation qui a vécu un peu plus de $3000$ ans entre $3150$ av. J.-C. et $30$ av. J.-C., elle s'est développée le long du Nil. Les Égyptiens maitrisent l'écriture, ils utilisent des symboles qui représentent des choses réelles ou non grâce à des hiéroglyphes. \\ [3mm]
+      \begin{minipage}{0.4\linewidth}
+         \includegraphics[scale=1.5]{\currentpath/images/rosette}
+      \end{minipage}
+      \qquad
+      \begin{minipage}{0.58\linewidth}
+         En 1821, Jean-François Champollion réussit à décrypter les caractères égyptiens. Comment a-t-il pu réussir cet exploit ? On pourra s'aider de l'image ci-contre. \\ [3mm]
+         \makebox[\linewidth]{\dotfill} \\ [3mm]
+         \makebox[\linewidth]{\dotfill} \\ [3mm]
+         \makebox[\linewidth]{\dotfill}
+      \end{minipage}
 
+      \bigskip
+      
+   \partie[la numération égyptienne]
+      \begin{enumerate}
+         \item Dans la numération égyptienne, voilà comment on écrit certains nombres indo-arabes : \smallskip
+         \begin{center} 
+            \begin{tabular}{|c|c|c|c|c|}
+               \hline
+               $18$ & $70$ & $235$ & $\num{3 018}$ & $\num{1 230 012}$ \\
+               \hline
+               & & & & \\ [-3mm]
+               \Large\textpmhg{\Hten\Hone\Hone\Hone\Hone\Hone\Hone\Hone\Hone}
+               &
+               \Large\textpmhg{\Hten\Hten\Hten\Hten\Hten\Hten\Hten}
+               & 
+               \Large\textpmhg{\Hhundred\Hhundred\Hten\Hten\Hten\Hone\Hone\Hone\Hone\Hone} & \Large\textpmhg{\Hthousand\Hthousand\Hthousand\Hten\Hone\Hone\Hone\Hone\Hone\Hone\Hone\Hone}
+               &
+               \Large\textpmhg{\Hmillion\HCthousand\HCthousand\HXthousand\HXthousand\HXthousand\Hten\Hone\Hone} \\
+               \hline
+            \end{tabular}
+         \end{center} \medskip
+      À la manière de Champollion, retrouver la valeur de ces symboles égyptiens. \smallskip
+      \begin{center}
+         \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{1.8cm}|}}
+            \hline
+            & & & & & & \\ [-3mm]
+            \Large\textpmhg{\Hone}
+            &
+            \Large\textpmhg{\Hten}
+            &
+            \Large\textpmhg{\Hhundred}
+            &
+            \Large\textpmhg{\Hthousand}
+            &
+            \Large\textpmhg{\HXthousand}
+            &
+            \Large\textpmhg{\HCthousand}
+            &
+            \Large\textpmhg{\Hmillion} \\
+            \hline
+            & & & & & & \\ [3mm]
+           \hline
+         \end{tabular}
+      \end{center}
+ 
+      \bigskip
+   
+      \item Écrire les nombres égyptiens suivants en nombres indo-arabes : \\ [2mm]
+      {\Large\textpmhg{\HXthousand\Hthousand\Hthousand\Hten\Hten\Hten\Hten\Hten\Hten}} : \dotfill \\ [3mm]
+      {\Large\textpmhg{\HCthousand\HXthousand\HXthousand\HXthousand\Hthousand\Hthousand\Hthousand\Hhundred\Hhundred\Hhundred\Hten\Hten\Hten\Hten\Hone\Hone\Hone\Hone\Hone\Hone\Hone\Hone}} : \dotfill \\  [3mm]
+      {\Large\textpmhg{\Hmillion\Hmillion\Hmillion\HCthousand\Hone\Hone}} : \dotfill \\
+      \item Écrire les nombres indo-arabes suivants en nombres égyptiens : \\ [4mm]
+      $\num{8 032}$ : \dotfill \\ [5mm]
+      $\num{3 000 100}$ :  \dotfill \\
+      \item Quel nombre présent dans notre numération écrite n'existe pas dans la numération égyptienne ? Pourquoi ? \\ [3mm]
+      \makebox[\linewidth]{\dotfill}
+      \end{enumerate}
+\end{enigme}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
-\addtocounter{exercice}{-1}
+% \addtocounter{exercice}{-1}
+\begin{corrige}
+    \setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \partie[introduction]
+       En 1821, Jean-François Champollion réussit à décrypter les caractères égyptiens. Comment a-t-il pu réussir cet exploit ?\\
+       {\red Sur la pierre de rosette, figurait trois fois le même texte dans des langages différents dont les caractères égyptien et le grec.
+       Ceci a permis de faire su lien avec le sens des caractères égyptiens}
+
+    \partie[la numération égyptienne]
+
+    \begin{enumerate}
+        \item À la manière de Champollion, retrouver la valeur de ces symboles égyptiens. 
+        \begin{tabular}{|*{4}{>{\centering\arraybackslash}p{0.14\linewidth}|}}
+           \hline
+           & & & \\ [-3mm]
+           \Large\textpmhg{\Hone}
+           &
+           \Large\textpmhg{\Hten}
+           &
+           \Large\textpmhg{\Hhundred}
+           &
+           \Large\textpmhg{\Hthousand}\\
+           \hline
+           {\red $1$} & {\red $10$} & {\red $100$} & {\red $\num{1 000}$} \\ [3mm]
+          \hline
+        \end{tabular}
+
+        \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.2\linewidth}|}}
+            \hline
+            & & \\ [-3mm]
+            \Large\textpmhg{\HXthousand}
+            &
+            \Large\textpmhg{\HCthousand}
+            &
+            \Large\textpmhg{\Hmillion} \\
+            \hline
+            {\red $\num{10 000}$} & {\red $\num{100 000}$} & {\red $\num{1 000 000}$}\\ [3mm]
+           \hline
+         \end{tabular}
+ 
+     \item Écrire les nombres égyptiens suivants en nombres indo-arabes : \\ [2mm]
+     {\Large\textpmhg{\HXthousand\Hthousand\Hthousand\Hten\Hten\Hten\Hten\Hten\Hten}} : {\red $\num{12 060}$} \\ [3mm]
+     {\Large\textpmhg{\HCthousand\HXthousand\HXthousand\HXthousand\Hthousand\Hthousand\Hthousand\Hhundred\Hhundred\Hhundred\Hten\Hten\Hten\Hten\Hone\Hone\Hone\Hone\Hone\Hone\Hone\Hone}} : {\red $\num{133 348}$} \\  [3mm]
+     {\Large\textpmhg{\Hmillion\Hmillion\Hmillion\HCthousand\Hone\Hone}} : {\red $\num{3 100 002}$} \\
+     \item Écrire les nombres indo-arabes suivants en nombres égyptiens : \\ [4mm]
+     $\num{8 032}$ : {\red {\Large\textpmhg{\HXthousand\Hthousand\Hthousand\Hthousand\Hthousand\Hthousand\Hthousand\Hthousand\Hten\Hten\Hten\Hone\Hone}}} \\ [5mm]
+     $\num{3 000 100}$ :  {\red {\Large\textpmhg{\Hmillion\Hmillion\Hmillion\Hhundred}}} \\
+     \item Quel nombre présent dans notre numération écrite n'existe pas dans la numération égyptienne ? Pourquoi ? \\ [3mm]
+     
+     {\red Le zéro n'existait pas. Il n'était pas nécessaire. Les symboles étaient répétés jusqu'à $9$ fois.}
+     \end{enumerate}
+\end{corrige}

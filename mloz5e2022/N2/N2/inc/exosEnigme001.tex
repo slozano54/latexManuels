@@ -2,10 +2,12 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
+
 \begin{enigme}[Nombres croisés]
     Compléter cette grille de nombres croisés à l'aide de chiffres et de signes \og $+$ \fg{} ou \og $-$ \fg{} grâce aux indications données.
     \begin{center}
     {\renewcommand{\arraystretch}{1.95}
+    \scalebox{1}{
     \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.57cm}|}}
        \hline
        & \cellcolor{J2}{\textcolor{B1}{a}} & \cellcolor{J2}{\textcolor{B1}{b}} & \cellcolor{J2}{\textcolor{B1}{c}} & \cellcolor{J2}{\textcolor{B1}{d}} & \cellcolor{J2}{\textcolor{B1}{e}} & \cellcolor{J2}{\textcolor{B1}{f}} \\
@@ -22,44 +24,45 @@
        \hline
        \cellcolor{J2}{\textcolor{A1}{6}} & & \cellcolor{black!70} & & & & \cellcolor{black!70} \\
        \hline
-    \end{tabular}}
+    \end{tabular}
+    }}
     \end{center}
     \bigskip
     \begin{multicols}{2}
-        {\bf Horizontalement} \\
+        {\bf Horizontalement}
         \begin{enumerate}
-        \item Valeur du plus grand chiffre. \\
-            Opposé de l'entier compris entre $-12,2$ et $-13,9$. \\
-            Les nombres négatifs sont précédés de ce signe. \\
-        \item Résultat du calcul $8\times20-(12+28)$. \\
-            Nombre entier compris entre $-1,8$ et $-0,2$. \\
-        \item Opposé de l’opposé de $+8$. \\
-            Nombre entier supérieur à $73,01$ et inférieur $74,99$. \\
-        \item Sur une droite graduée de $3$ en $3$, je suis placé à trois graduations à gauche de l'origine. \\
-            Signe de l’opposé d'un nombre positif. \\
-        \item Nombre entier le plus proche $-1,4$. \\
-            Nombre entier inférieur à $-15,154$ et supérieur à $-16,98$. \\
-        \item Diviseur commun à $12$ ; $24$ et $33$. \\
-            Mon chiffre des centaines est le double de mon chiffre des dizaines qui est lui-même le double de mon chiffre des unités. \\ [1mm]
+            \item Valeur du plus grand chiffre. \\
+                Opposé de l'entier compris entre $-12,2$ et $-13,9$. \\
+                Les nombres négatifs sont précédés de ce signe. \\
+            \item Résultat du calcul $8\times20-(12+28)$. \\
+                Nombre entier compris entre $-1,8$ et $-0,2$. \\
+            \item Opposé de l’opposé de $+8$. \\
+                Nombre entier supérieur à $73,01$ et inférieur $74,99$. \\
+            \item Sur une droite graduée de $3$ en $3$, je suis placé à trois graduations à gauche de l'origine. \\
+                Signe de l’opposé d'un nombre positif. \\
+            \item Nombre entier le plus proche $-1,4$. \\
+                Nombre entier inférieur à $-15,154$ et supérieur à $-16,98$. \\
+            \item Diviseur commun à $12$ ; $24$ et $33$. \\
+                Mon chiffre des centaines est le double de mon chiffre des dizaines qui est lui-même le double de mon chiffre des unités. \\ [1mm]
         \end{enumerate}
         
-        {\bf Verticalement} \\
-        \begin{enumerate}
-        \item[\textcolor{B1}{\bf a)}] Résultat du calcul $9\times(100+2)$. \\
-            Nombre relatif inférieur à zéro et se trouvant à 5 unités du nombre $+2$. \\
-        \item[\textcolor{B1}{\bf b)}] J'ai la même distance à zéro que le nombre $-2$. \\
-            Nombre opposé de la moitié de 2. \\
-        \item[\textcolor{B1}{\bf c)}] Le chiffre des unités est l'abscisse de l'origine et le chiffre des dizaines est le premier nombre entier positif non nul. \\
-            Opposé de l'entier compris entre $-9,12$ et $-8,93$. \\
-            Nombre relatif se situant après zéro et se trouvant à $11$ unités du nombre $-7$. \\
-        \item[\textcolor{B1}{\bf d)}] Distance à zéro de l'opposé de $-\dfrac{33}{11}$. \\ [1mm]
-            Opposé de $-42\div6$. \\
-            Nombre négatif se trouvant à deux unités de l'origine. \\
-        \item[\textcolor{B1}{\bf e)}] Nombre se trouvant à 8 unités de $-12$. \\ [1mm]
-            Distance à zéro de $+\dfrac{22}{2}$. \\
-        \item[\textcolor{B1}{\bf f)}] Opposé de $+1$. \\
-            Nombre entier le plus proche et supérieur à $-6,98$.
-        \end{enumerate}
+        {\bf Verticalement}         
+        \begin{itemize}
+            \item[\textcolor{B1}{\bf a)}] Résultat du calcul $9\times(100+2)$. \\
+                Nombre relatif inférieur à zéro et se trouvant à 5 unités du nombre $+2$. \\
+            \item[\textcolor{B1}{\bf b)}] J'ai la même distance à zéro que le nombre $-2$. \\
+                Nombre opposé de la moitié de 2. \\
+            \item[\textcolor{B1}{\bf c)}] Le chiffre des unités est l'abscisse de l'origine et le chiffre des dizaines est le premier nombre entier positif non nul. \\
+                Opposé de l'entier compris entre $-9,12$ et $-8,93$. \\
+                Nombre relatif se situant après zéro et se trouvant à $11$ unités du nombre $-7$. \\
+            \item[\textcolor{B1}{\bf d)}] Distance à zéro de l'opposé de $-\dfrac{33}{11}$. \\ [1mm]
+                Opposé de $-42\div6$. \\
+                Nombre négatif se trouvant à deux unités de l'origine. \\
+            \item[\textcolor{B1}{\bf e)}] Nombre se trouvant à 8 unités de $-12$. \\ [1mm]
+                Distance à zéro de $+\dfrac{22}{2}$. \\
+            \item[\textcolor{B1}{\bf f)}] Opposé de $+1$. \\
+                Nombre entier le plus proche et supérieur à $-6,98$.
+        \end{itemize}
     \end{multicols}
  \end{enigme}
  
@@ -67,26 +70,26 @@
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 \begin{corrige}
-    rrr
-    % \smallskip
-    % \begin{center}
-    %    {\renewcommand{\arraystretch}{1.95}
-    %    \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.57}|}}
-    %       \hline
-    %       & \cellcolor{J2}{a} & \cellcolor{J2}{b} & \cellcolor{J2}{c} & \cellcolor{J2}{d} & \cellcolor{J2}{e} & \cellcolor{J2}{f} \\
-    %       \hline
-    %       \cellcolor{J2}{1} & \textcolor{red}{9} & \cellcolor{black!70} & \textcolor{red}{1} & \textcolor{red}{3} & \cellcolor{black!70} & \textcolor{red}{$-$} \\
-    %       \hline
-    %       \cellcolor{J2}{2} & \textcolor{red}{1} & \textcolor{red}{2} & \textcolor{red}{0} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{1} \\
-    %       \hline
-    %       \cellcolor{J2}{3} & \textcolor{red}{8} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{red}{7} & \textcolor{red}{4} & \cellcolor{black!70} \\
-    %       \hline
-    %       \cellcolor{J2}{4} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{9} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{red}{$-$} \\
-    %       \hline
-    %       \cellcolor{J2}{5} & \textcolor{red}{$-$} & \textcolor{red}{1} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{1} & \textcolor{red}{6} \\
-    %       \hline
-    %       \cellcolor{J2}{6} & \textcolor{red}{3} & \cellcolor{black!70} & \textcolor{red}{4} & \textcolor{red}{2} & \textcolor{red}{1} & \cellcolor{black!70} \\
-    %       \hline
-    %    \end{tabular}}
-    %    \end{center}
+
+    \smallskip
+    \begin{center}
+       {\renewcommand{\arraystretch}{1.95}
+       \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.57cm}|}}
+          \hline
+          & \cellcolor{J2}{a} & \cellcolor{J2}{b} & \cellcolor{J2}{c} & \cellcolor{J2}{d} & \cellcolor{J2}{e} & \cellcolor{J2}{f} \\
+          \hline
+          \cellcolor{J2}{1} & \textcolor{red}{9} & \cellcolor{black!70} & \textcolor{red}{1} & \textcolor{red}{3} & \cellcolor{black!70} & \textcolor{red}{$-$} \\
+          \hline
+          \cellcolor{J2}{2} & \textcolor{red}{1} & \textcolor{red}{2} & \textcolor{red}{0} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{1} \\
+          \hline
+          \cellcolor{J2}{3} & \textcolor{red}{8} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{red}{7} & \textcolor{red}{4} & \cellcolor{black!70} \\
+          \hline
+          \cellcolor{J2}{4} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{9} & \cellcolor{black!70} & \cellcolor{black!70} & \textcolor{red}{$-$} \\
+          \hline
+          \cellcolor{J2}{5} & \textcolor{red}{$-$} & \textcolor{red}{1} & \cellcolor{black!70} & \textcolor{red}{$-$} & \textcolor{red}{1} & \textcolor{red}{6} \\
+          \hline
+          \cellcolor{J2}{6} & \textcolor{red}{3} & \cellcolor{black!70} & \textcolor{red}{4} & \textcolor{red}{2} & \textcolor{red}{1} & \cellcolor{black!70} \\
+          \hline
+       \end{tabular}}
+       \end{center}
 \end{corrige}
