@@ -1,0 +1,39 @@
+\section{Écrire des nombres décimaux}
+
+\begin{propriete}
+   On peut écrire un nombre décimal dans un tableau de numération comportant une partie entière identique aux nombres entiers à laquelle on ajoute une partie décimale :
+   \begin{center}
+      \begin{tabular}{*{6}{|c}@{{\LARGE \textbf{,}}}*{5}{|c}|}
+         \hline
+         \multicolumn{3}{|c|}{\textbf{Milliers}} & \multicolumn{3}{|c|}{\textbf{Unités}}&\multicolumn{5}{c|}{}\\ \hline
+         %%
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Centaines}\\ \num{100000}}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Dizaines}\\ \num{10000}}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Unités}\\ \num{1000}}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Centaines}\\ \num{100}}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Dizaines}\\ \num{10}}} &
+         \cellcolor{gray!25}\rotatebox{90}{\parbox{3.5cm}{\textbf{Unités}\\ \num{1} }} &
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Dixièmes}\\ $\frac{1}{10}$}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Centièmes}\\ $\frac{1}{100}$}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Millièmes}\\ $\frac{1}{\num{1000}}$}} &
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Dix-millièmes}\\ $\frac{1}{\num{10000}}$}} & 
+         \rotatebox{90}{\parbox{3.5cm}{\textbf{Cent-millièmes}\\ $\frac{1}{\num{100000}}$}} 
+          \\ \hline 
+         %%
+          &  &  &  & 4& \cellcolor{gray!25}5& 2& 1& 7& & \\ \hline
+          & 8& 3& 5& 0& \cellcolor{gray!25}2&  &  &  & & \\ \hline
+          &  & 2& 1& 4& \cellcolor{gray!25}7& 5& 6& 8& & \\ \hline
+          &  &  &  &  &  \cellcolor{gray!25}&  &  &  & & \\ \hline
+         \end{tabular}   
+   \end{center}  
+\end{propriete}
+
+\begin{exemple*1}
+   Dans le nombre \num{1 030 288 016.807} :      
+   \begin{itemize}
+      \item le chiffre des dizaines de millions est 3 ;
+      \item le chiffre des dixièmes est 8 ;
+      \item le chiffre des centièmes est 0 ;
+      \item le chiffre des millièmes est 7.
+   \end{itemize}
+\end{exemple*1}
