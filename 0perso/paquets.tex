@@ -21,7 +21,16 @@
 \usepackage{parskip} 
 
 % Pour les hyperliens, notamment des sommaires cliquables
-\usepackage{hyperref}
+% \usepackage{hyperref}
+\usepackage[luatex]{hyperref}
+\hypersetup{
+    colorlinks=true,% On active la couleur pour les liens. Couleur par défaut rouge
+    linkcolor=black,% On définit la couleur pour les liens internes
+    % filecolor=magenta,% On définit la couleur pour les liens vers les fichiers locaux      
+    urlcolor=black,% On définit la couleur pour les liens vers des sites web
+    % pdftitle={Puissance Quatre},% On définit un titre pour le document pdf
+    % pdfpagemode=FullScreen,% On fixe l'affichage par défaut à plein écran
+    }
 
 % Extensions tikz supplémentaires pour marquage des angles
 \usetikzlibrary{angles,quotes}

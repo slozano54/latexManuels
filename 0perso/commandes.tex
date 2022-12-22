@@ -104,11 +104,12 @@
 %==========================================
 % Gestion des liens
 %==========================================
+\newcommand{\myUrlColorStyle}[1]{\textcolor{blue}{\underline{\bfseries #1}}}
 % Pour le lien vers un exo interactif mathalea
 % #1 --> Texte par défaut
 % Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
 % #2 --> url
-\newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} S'entraîner sur le site \mathaleaLogo]{
+\newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
     \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1}
 }
 
@@ -118,15 +119,16 @@
 % #2 --> url
 % #3 --> texte
 \newcommand{\hrefConstruction}[3][\emoji{triangular-ruler} \emoji{straight-ruler} \emoji{link}]{
-    \href{#2}{#1 #3} 
+    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}} 
 }
 
 % Pour le lien vers youtube
-% #1 --> Texte par défaut
-% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #1 --> emojis par défaut
+% Par défaut #1 est le movie-camera + link mais on peut le remplacer par la ref mathalea
 % #2 --> url
-\newcommand{\hrefVideo}[2][\emoji{movie-camera} \emoji{link} Visionner la vidéo]{
-    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1}
+% #3 --> texte
+\newcommand{\hrefVideo}[3][\emoji{movie-camera} \emoji{link}]{
+    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
 }
 
 % Pour les liens de révision
@@ -135,7 +137,7 @@
 % #2 --> url
 % #3 --> texte
 \newcommand{\hrefRevision}[3][\emoji{check-mark-button} \emoji{link}]{
-    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1 #3}
+    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
 }
 %==========================================
 % Gestion des boxs
