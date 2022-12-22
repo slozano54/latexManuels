@@ -129,6 +129,14 @@
     \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1}
 }
 
+% Pour les liens de révision
+% #1 --> emojis par defaut
+% Par défaut #1 est emoji check-mark-button + link mais cela peut être modifié
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefRevision}[3][\emoji{check-mark-button} \emoji{link}]{
+    \qrcode[hyperlink,height=0.5in]{#2}\hspace*{2mm}\href{#2}{#1 #3}
+}
 %==========================================
 % Gestion des boxs
 %==========================================
