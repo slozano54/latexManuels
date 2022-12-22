@@ -2605,7 +2605,8 @@
 \newcommand\StringDEBAT{D\'EBAT}
 \newcommand\StringACTIVITE{ACTIVIT\'E}
 \newcommand\StringTP{TP}
-\newcommand*\StringExemple{Exemple}
+\newcommand*\StringExemple{Exemple}% AjoutSeb
+\newcommand*\StringExemples{Exemples}
 \newcommand*\StringCorrection{Correction}
 \newcommand*\StringMETHODE{M\'ETHODE}
 \newcommand*\StringPREUVE{PREUVE}
@@ -3498,6 +3499,22 @@
     }
   \end{pspicture}%
 }
+% AjoutSeb
+\newcommand*\smc@cartoucheexemples{%
+  \begin{pspicture}(-\ExempleVRuleWidthFrame,0)
+                 (\ExempleWidthFrame,\ExempleHeightFrame)
+    \psframe*[linewidth=0pt,linecolor=ExempleEdgeFrameColor]
+             (-\ExempleVRuleWidthFrame,-\ExempleHRuleWidthFrame)
+             (\ExempleWidthFrame,\ExempleHeightFrame)
+    \psframe*[linewidth=0pt,linecolor=ExempleBkgFrameColor]
+             (0mm,-0mm)(\ExempleWidthFrame,\ExempleHeightFrame)
+    \rput[B](\dimexpr\ExempleWidthFrame/2,0){%
+      \ExempleTitleFont
+      \textcolor{ExempleTitleColor}{\StringExemples}%
+    }
+  \end{pspicture}%
+}
+% Fin AjoutSeb
 \newcommand*\smc@cartouchecorrection{%
   \begin{pspicture}(-\ExempleVRuleWidthFrame,0)
                    (\ExempleWidthFrame,\ExempleHeightFrame)
@@ -3576,6 +3593,40 @@
   \endminipage
   \par
 }
+% AjoutSeb
+  \newenvironment{exemples*1}[1][]{%
+    \par\addvspace{\BeforeExempleVSpace}
+    \let\correction\smc@one@exemplecorrection
+    \let\itemize\smc@exempleitemize
+    \let\enditemize\endsmc@exempleitemize
+    \let\colitemize\smc@exemplecolitemize
+    \let\endcolitemize\endsmc@exemplecolitemize
+    \let\enumerate\smc@exempleenumerate
+    \let\endenumerate\endsmc@exempleenumerate
+    \let\colenumerate\smc@exemplecolenumerate
+    \let\endcolenumerate\endsmc@exemplecolenumerate
+    \let\partie\smc@nopartie
+    \let\exercice\smc@noexercice
+    \let\endexercice\endsmc@noexercice
+    \let\corrige\smc@nocorrige
+    \let\endcorrige\endsmc@nocorrige
+    \def\smc@currpart{Exemples}%
+    \hspace*{\dimexpr \SquareWidth*3}%
+    \color{ExempleRuleColor}%
+    \vrule width \RuleWidth
+    \hspace*{\dimexpr \SquareWidth-\RuleWidth}%
+    \minipage[t]{\dimexpr\linewidth-\SquareWidth*4-\ExtraMarginRight}
+      \smc@cartoucheexemples
+      \space
+      \color{Noir}%
+      \ignorespaces
+  }
+  {%
+    \strut
+    \endminipage
+    \par
+  }
+% Fin AjoutSeb
 \newcommand*\smc@nocorrection{%
   \ClassError{sesamanuel}{Vous ne pouvez pas utilisez la macro
     \string\correction\space ici}{Reportez-vous à la documentation
