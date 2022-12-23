@@ -1,11 +1,48 @@
-\begin{exercice*}[Titre]
-    Contenu
-
+\begin{exercice*}
+    \begin{enumerate}
+        \item Poser la division de $1$ par $7$, en donnant six décimales.
+        \item Donner les six décimales suivantes sans aucun calcul supplémentaires.
+        \begin{myBox}{\emoji{light-bulb} Définition}
+            Cette suite de chiffres qui se répètent dans la partie décimale, s'appelle période.
+        \end{myBox}
+        \item Déterminer la période de :
+        \begin{multicols}{2}
+            \begin{spacing}{1.5}
+                \begin{enumerate}
+                    \item $\dfrac{2}{7}$
+                    \item $\dfrac{5}{7}$
+                    \item $\dfrac{1}{13}$
+                    \item $\dfrac{3}{13}$
+                \end{enumerate}
+            \end{spacing}
+        \end{multicols}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    Contenu correction
-
+    \begin{enumerate}
+        \item Poser la division de $1$ par $7$, en donnant six décimales.
+        
+        % \opset{voperator=bottom,decimalsepsymbol={,}}
+        {\red \opdiv[displayintermediary=all, shiftdecimalsep=both, period, decimalsepsymbol={,}, voperator=bottom]{1}{7}}
+        \item Donner les six décimales suivantes sans aucun calcul supplémentaires.
+        
+        {\red $142857$}
+        \begin{myBox}{\emoji{light-bulb} Définition}
+            Cette suite de chiffres qui se répètent dans la partie décimale, s'appelle période.
+        \end{myBox}
+        \item Déterminer la période de :
+        \begin{multicols}{2}
+            \begin{spacing}{1.5}
+                \begin{enumerate}
+                    \item $\dfrac{2}{7}  {\red \Leftarrow 258714}$
+                    \item $\dfrac{5}{7}  {\red \Leftarrow 714285}$
+                    \item $\dfrac{1}{13} {\red \Leftarrow 076923}$
+                    \item $\dfrac{3}{13} {\red \Leftarrow 230769}$
+                \end{enumerate}
+            \end{spacing}
+        \end{multicols}
+    \end{enumerate}
 \end{corrige}
 
