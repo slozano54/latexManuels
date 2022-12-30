@@ -1,6 +1,38 @@
-\begin{exercice}[Titre][\tice]
-    Contenu
+\begin{exercice}
+    La \textbf{machine $\boldsymbol{f}$} renvoie le \textbf{périmètre} \footnote{\textbf{Rappel :} Le périmètre d'un polygone est égal à la somme des longueurs de ses côtés} d'un carré de côté $x$.
+    \begin{center}
+        \scalebox{0.7}{
+            \machineMaths{$\boldsymbol{f}$}{Périmètre\\d'un carré}{carré de\\côté \Lg[cm]{54}}{Périmètre \\ ??? \Lg[cm]{}}
+        }
+    \end{center}
+    \vspace*{-5mm} 
+  \begin{enumerate}
+    \item Que renvoie la machine si le côté vaut  \Lg[cm]{54} ? Formuler la réponse avec le mot \textbf{image}.
+    \item Combien vaut le côté si la machine renvoie  \Lg[cm]{144} ? Formuler la réponse avec le mot \textbf{antécédent}.
+    \item Quelle est l'image de $35$ par la \textbf{fonction $\boldsymbol{f}$ } ? Écrire la réponse sous la forme $\boldsymbol{f(35)=\ldots}$.
+    \item Que renvoie la machine si le côté vaut $x$ cm ? Écrire la réponse sous la forme $\boldsymbol{f(x)=\ldots}$.
+    \item Comme dans l'exemple ci-dessous, écrire le diagramme de la fonction $\boldsymbol{f}$.
+        \begin{exemple*1}
+            Voici le diagramme d'une machine qui triple.
+            
+            \medskip
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=2pt,color=J1] (-10,0.5) -- (-9,0.5) -- (-9,-0.5) -- (-10,-0.5) -- cycle;
+                \node[text width=3cm,text centered, scale=1] at(-9.5,0){$x$};            
+                \draw [line width=2pt,color=J1] (-9,0) -- (-8.5,0);
+                \draw [line width=2pt,color=J1] (-8,0) circle(0.5);
+                \node [text width=3cm,text centered, scale=1] at(-8,0){$\times 3$};
+                \draw [->,line width=2pt,color=J1] (-7.5,0) -- (-6.5,0);
+                \draw [line width=2pt,color=J1] (-6.5,0.5) -- (-4,0.5) -- (-4,-0.5) -- (-6.5,-0.5) -- cycle;
+                \node [text width=3cm,text centered, scale=1] at(-5.25,0){$t(x)=3x$};                    
+            \end{tikzpicture}
+        \end{exemple*1}
+
+        \medskip
+    \item Écrire maintenant la fonction $f$ en utilisant la forme $\boldsymbol{f:x} \longmapsto \ldots$
+\end{enumerate}
+
 \end{exercice}
-\begin{corrige}
-    Contenu correction
-\end{corrige}
+% \begin{corrige}
+%     Contenu correction
+% \end{corrige}

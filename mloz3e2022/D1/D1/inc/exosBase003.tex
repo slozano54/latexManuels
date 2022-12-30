@@ -1,6 +1,44 @@
-\begin{exercice}[Titre][\tice]
-    Contenu
+\begin{exercice}
+    La \textbf{machine $\boldsymbol{h}$} renvoie la somme du triple du nombre de départ et de 1.
+    \begin{center}
+        \scalebox{0.7}{
+            \machineMaths{$\boldsymbol{h}$}{Multiplier par $3$\\Ajouter $1$}{Nombre\\entrant : $10$}{Nombre associé\\au nombre entrant ???}
+        }
+    \end{center}
+    \vspace*{-5mm} 
+  \begin{enumerate}
+    \item Que renvoie la machine si le nombre entrant vaut $10$ ? Formuler la réponse avec le mot \textbf{image}.
+    \item Combien vaut le nombre entrant si la machine renvoie  $265$ ? Formuler la réponse avec le mot \textbf{antécédent}.
+    \item Quelle est l'image de $-42$ par la \textbf{fonction $\boldsymbol{h}$} ? Écrire la réponse sous la forme $\boldsymbol{h(-42)=\ldots}$.
+    \item Que renvoie la machine si le nombre entrant vaut $x$ ? Écrire la réponse sous la forme $\boldsymbol{h(x)=\ldots}$.
+    \item Comme dans l'exemple ci-dessous, écrire le diagramme de la fonction $\boldsymbol{h}$.
+        \begin{exemple*1}
+            Voici le diagramme d'une machine qui double puis qui ajoute $5$.
+            
+            \medskip
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=2pt,color=J1] (-10,0.5) -- (-9,0.5) -- (-9,-0.5) -- (-10,-0.5) -- cycle;
+                \node[text width=3cm,text centered, scale=1] at(-9.5,0){$x$};                
+                \draw [line width=2pt,color=J1] (-9,0) -- (-8.5,0);
+                \draw [line width=2pt,color=J1] (-8,0) circle(0.5);
+                \node [text width=3cm,text centered, scale=1] at(-8,0){$\times 2$};
+                \draw [->,line width=2pt,color=J1] (-7.5,0) -- (-6.5,0);
+                \draw [line width=2pt,color=J1] (-6.5,0.5) -- (-5.5,0.5) -- (-5.5,-0.5) -- (-6.5,-0.5) -- cycle;
+                \node [text width=3cm,text centered, scale=1] at(-6,0){$2x$};                
+                \draw [line width=2pt,color=J1] (-5.5,0) -- (-5,0);
+                \draw [line width=2pt,color=J1] (-4.5,0) circle(0.5);
+                \node [text width=3cm,text centered, scale=1] at(-4.5,0){$+5$};
+                \draw [->,line width=2pt,color=J1] (-4,0) -- (-3,0);
+                \draw [line width=2pt,color=J1] (-3,0.5) -- (0,0.5) -- (0,-0.5) -- (-3,-0.5) -- cycle;
+                \node [text width=3cm,text centered, scale=1] at(-1.5,0){$dc(x)=2x+5$};                      
+            \end{tikzpicture}
+        \end{exemple*1}
+
+        \medskip
+    \item Écrire maintenant la fonction $h$ en utilisant la forme $\boldsymbol{h:x} \longmapsto \ldots$
+\end{enumerate}
+
 \end{exercice}
-\begin{corrige}
-    Contenu correction
-\end{corrige}
+% \begin{corrige}
+%     Contenu correction
+% \end{corrige}
