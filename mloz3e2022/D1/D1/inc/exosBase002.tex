@@ -33,6 +33,42 @@
 \end{enumerate}
 
 \end{exercice}
-% \begin{corrige}
-%     Contenu correction
-% \end{corrige}
+\begin{corrige}
+    La \textbf{machine $\boldsymbol{g}$} renvoie \textbf{l'aire} d'un carré de côté $x$.
+
+    \hspace*{-13mm}
+    \scalebox{0.5}{
+        \machineMaths{$\boldsymbol{g}$}{Aire\\d'un carré}{carré de\\côté \Lg[cm]{9}}{Aire \\ ??? \Aire[cm]{}}
+    }
+    
+    \begin{enumerate}
+        \item Que renvoie la machine si le côté vaut  \Lg[cm]{9} ? Formuler la réponse avec le mot \textbf{image}.
+        
+        {\red $9\times 9 = 81$ donc $9$ a pour image 81 par la fonction $g$.}
+        \item Combien vaut le côté si la machine renvoie  \Aire[cm]{169} ? Formuler la réponse avec le mot \textbf{antécédent}.
+        
+        {\red $13\times 13 = 169$ donc un antécédent de $169$ par la fonction $g$ vaut $13$.}
+        \item Quelle est l'image de $22$ par la \textbf{fonction $\boldsymbol{g}$} ? Écrire la réponse sous la forme $\boldsymbol{g(22)=\ldots}$.
+        
+        {\red $22\times 22 = 484$ donc $g(22)=484$.}
+        \item Que renvoie la machine si le côté vaut $x$ cm ? Écrire la réponse sous la forme $\boldsymbol{g(x)=\ldots}$.
+        
+        {\red $x\times x = x^2$ donc $g(x)=x^2$.}
+        \item Comme dans l'exemple ci-dessous, écrire le diagramme de la fonction $\boldsymbol{g}$.
+        \medskip
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \draw [line width=2pt,color=J1] (-10,0.5) -- (-9,0.5) -- (-9,-0.5) -- (-10,-0.5) -- cycle;
+            \node[text width=3cm,text centered, scale=1] at(-9.5,0){{\red $x$}};            
+            \draw [line width=2pt,color=J1] (-9,0) -- (-8.5,0);
+            \draw [line width=2pt,color=J1] (-8,0) circle(0.5);
+            \node [text width=3cm,text centered, scale=1] at(-8,0){{\red $\times~x$}};
+            \draw [->,line width=2pt,color=J1] (-7.5,0) -- (-6.5,0);
+            \draw [line width=2pt,color=J1] (-6.5,0.5) -- (-4,0.5) -- (-4,-0.5) -- (-6.5,-0.5) -- cycle;
+            \node [text width=3cm,text centered, scale=1] at(-5.25,0){{\red $g(x)=x^2$}};                    
+        \end{tikzpicture}
+        \medskip
+        \item Écrire maintenant la fonction $g$ en utilisant la forme $\boldsymbol{g:x} \longmapsto \ldots$
+        
+        {\red $g : x \longmapsto x^2$.}
+    \end{enumerate}
+\end{corrige}
