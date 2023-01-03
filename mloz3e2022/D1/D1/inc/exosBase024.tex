@@ -1,0 +1,46 @@
+\begin{exercice}
+    Soit ce programme de calcul.
+    \begin{myBox}{Programme de calcul}
+        \begin{itemize}
+            \item Choisir un nombre.
+            \item Lui ajouter $5$.
+            \item Multiplier cette somme par $3$.
+            \item Soustraire $6$ à ce produit.
+        \end{itemize}
+    \end{myBox}
+    \begin{enumerate}
+        \item Tester ce programme avec $2$.
+        \item En notant $x$ le nombre choisi au départ, déterminer la fonction $g$ correspondant à ce programme.
+        \item Déterminer $g(0)$.
+        \item Déterminer le nombre de départ pour obtenir $18$.
+    \end{enumerate}
+\end{exercice}
+\begin{corrige}
+    Soit ce programme de calcul.
+    \begin{myBox}{Programme de calcul}
+        \noindent
+        \begin{itemize}
+            \item Choisir un nombre.
+            \item Lui ajouter $5$.
+            \item Multiplier cette somme par $3$.
+            \item Soustraire $6$ à ce produit.
+        \end{itemize}
+    \end{myBox}
+    \begin{enumerate}
+        \item Tester ce programme avec $2$.
+        
+        {\red \ProgCalcul{2,+5 *3 -6}}
+        \item En notant $x$ le nombre choisi au départ, déterminer la fonction $g$ correspondant à ce programme.
+        
+        {\red \ProgCalcul[SansCalcul]{x,+5 *3 -6, x+5 (x+5)\times3 (x+5)\times3-6}
+        
+        $(x+5)\times3-6=3x+15-6$\\$\phantom{(x+5)\times3-6}=3x+9$\\ D'où $g(x)=3x+9$.
+        }
+        \item Déterminer $g(0)$.
+        
+        {\red $g(0)=3\times0+ 9$\\$g(0)=9$}
+        \item Déterminer le nombre de départ pour obtenir $18$.
+        
+        {\red $g(x)=18$\\$3x+9=18$\\$3x=9$\\$x=3$}
+    \end{enumerate}
+\end{corrige}

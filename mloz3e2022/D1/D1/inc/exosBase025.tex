@@ -1,0 +1,42 @@
+\begin{exercice}
+    Durant les soldes, un magasin pratique une remise de $15~\%$ sour tous les articles.
+    \begin{enumerate}
+        \item Déterminer le nouveau prix d'un article qui coûtait \Prix[0]{28} avant les soldes.
+        \item On note $f$ la fonction qui au prix de départ $p$ associe le prix soldé. Déterminer son expression algébrique.
+        \item À l'aide de la fonction $f$, déterminer le prix soldé d'un article qui coûtait \Prix[0]{45} avant les soldes.
+        \item À l'aide de la fonction $f$, déterminer le prix avant les soldes d'un article soldé à \Prix{31.79}.
+    \end{enumerate}
+\end{exercice}
+\begin{corrige}
+    Durant les soldes, un magasin pratique une remise de $15~\%$ sour tous les articles.
+
+    \begin{enumerate}
+        \item Déterminer le nouveau prix d'un article qui coûtait \Prix[0]{28} avant les soldes.
+        
+        {\red 
+        $\text{Nouveau prix} = \Prix[0]{28}\times (100~\% - 15~\%)$\\
+        $\text{Nouveau prix} = \Prix[0]{28}\times 85~\%$\\
+        $\text{Nouveau prix} = \Prix[0]{28}\times \num{0.85}$\\
+        $\text{Nouveau prix} = \Prix{23.80}$
+        }
+        \item On note $f$ la fonction qui au prix de départ $p$ associe le prix soldé. Déterminer son expression algébrique.
+        
+        {\red $100~\% - 15~\% = 85~\%$, donc le prix soldé représente $85~\%$ du prix initial d'où $f(p)=p\times\num{0.85}$ soit $f(p)=\num{0.85}p$.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item À l'aide de la fonction $f$, déterminer le prix soldé d'un article qui coûtait \Prix[0]{45} avant les soldes.
+        
+        {\red $f(45)=\num{0.85}\times 45$ soit $f(45)=\num{38.25}$\\
+        Le prix soldé est de \Prix{38.25}.
+        }
+        \item À l'aide de la fonction $f$, déterminer le prix avant les soldes d'un article soldé à \Prix{31.79}.
+        
+        {\red
+        $f(p)=\num{0.85}p$ soit $f(p)=\num{31.79}$ donc $\num{0.85}p=\num{31.79}$\\
+        Donc $p=\num{31.79}\div\num{0.85}$ soit $p=\num{37.40}$\\
+        Le prix avant soldes était de \Prix{37.40}.
+        }
+    \end{enumerate}
+\end{corrige}
