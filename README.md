@@ -127,4 +127,4 @@ Distributed under the CC BY-NC-SA 4.0 License. See `LICENSE` for more informatio
 [issues-shield]: https://img.shields.io/github/issues/slozano54/latexManuels.svg?style=for-the-badge
 [issues-url]: https://github.com/slozano54/latexManuels/issues
 [license-shield]: https://img.shields.io/github/license/slozano54/latexManuels?style=for-the-badge
-[license-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
+[license-url]: https://github.com/slozano54/latexManuels/blob/master/LICENSE.txt
