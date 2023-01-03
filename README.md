@@ -114,7 +114,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the CC BY-NC-SA 4.0 License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -127,4 +127,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/slozano54/latexManuels.svg?style=for-the-badge
 [issues-url]: https://github.com/slozano54/latexManuels/issues
 [license-shield]: https://img.shields.io/github/license/slozano54/latexManuels?style=for-the-badge
-[license-url]: https://github.com/slozano54/latexManuels/blob/master/LICENSE.txt
+[license-url]: https://github.com/slozano54/latexManuels/blob/master/LICENSE.md
