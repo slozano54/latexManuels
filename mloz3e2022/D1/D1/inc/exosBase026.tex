@@ -1,0 +1,98 @@
+\begin{exercice}
+    La vitesse d'un train en \Vitesse{}, $t$ minutes après le départ, vaut $3t^2$ pour $0 \leq t \leq 10$.
+
+    On appelle $v$ la fonction qui, au temps écoulé depuis le départ exprimé en minutes, associe la vitesse du train en \Vitesse{}.
+    \begin{enumerate}
+        \item Calculer $v(5)$.
+        \item Donner une interprétation du résultat précédent.
+        \item Déterminer l'antécédent de \num{168.75} par $v$.
+        \item Donner une interprétation du résultat précédent.
+        \item Le graphique ci-dessous représente l'évolution de la vitesse, en \Vitesse{}, du train en fonction du temps
+        écoulé, en minutes, depuis son départ.
+
+        \medskip
+        \scalebox{0.7}{
+        \Fonction[%
+            Calcul=3*(x**2),
+            Trace,CouleurTrace=bleu,
+            Xmin=0,Xmax=10,Xstep=2.5,
+            Ymin=0,Ymax=5.8,Ystep=60,
+            Origine={(1,.5)},
+            Grille,PasGrilleX=1,PasGrilleY=0.5,
+            Graduations,PasGradY=30,PasGradX=5,
+            Bornea=0,Borneb=10,
+            LabelX={\bf Temps (en min)},
+            LabelY={\bf Vitesse (en km/h)},
+            Traces={
+                draw placepoint(10,300)--placepoint(20,300) withcolor bleu;
+            }            
+            ]{}
+        }
+
+        \item Déterminer le temps, environ, que met le train pour atteindre \Vitesse{120}.
+        \item Déterminer la vitesse maximale du train.
+        \item Déterminer au bout de combien de temps cette vitesse maximale est atteinte.
+        \item Préciser une expression de la fonction $v$\\pour $0 \leq x \leq 20$.
+    \end{enumerate}
+\end{exercice}
+\begin{corrige}
+    La vitesse d'un train en \Vitesse{}, $t$ minutes après le départ, vaut $3t^2$ pour $0 \leq t \leq 10$.
+
+    On appelle $v$ la fonction qui, au temps écoulé depuis le départ exprimé en minutes, associe la vitesse du train en \Vitesse{}.
+
+    \begin{enumerate}
+        \item Calculer $v(5)$.
+        
+        {\red $v(5)=3\times 5^2=3\times 25 = 75$.}
+        \item Donner une interprétation du résultat précédent.
+        
+        {\red Après 5minutes, le train roule à \Vitesse{75}.}
+        \item Déterminer l'antécédent de \num{168.75} par $v$.
+        
+        {\red $3t^2=\num{168.75}$ soit $t^2=\num{56.25}$. Puisque $t$ est une durée, c'est un nombre positif, donc $t=\num{7.5}$.}
+        \item Donner une interprétation du résultat précédent.
+        
+        {\red Le train roule à \Vitesse{168.75} \num{7.5} min après le départ, donc \Temps{;;;;7;30}.}
+        \item Le graphique ci-dessous représente l'évolution de la vitesse, en \Vitesse{}, du train en fonction du temps
+        écoulé, en minutes, depuis son départ.
+
+        \medskip
+        \hspace*{-10mm}
+        \scalebox{0.7}{
+        \Fonction[%
+            Calcul=3*(x**2),
+            Trace,CouleurTrace=bleu,
+            Xmin=0,Xmax=10,Xstep=2.5,
+            Ymin=0,Ymax=5.8,Ystep=60,
+            Origine={(1,.5)},
+            Grille,PasGrilleX=1,PasGrilleY=0.5,
+            Graduations,PasGradY=30,PasGradX=5,
+            Bornea=0,Borneb=10,
+            LabelX={\bf\footnotesize Temps (min)},
+            LabelY={\bf\footnotesize Vitesse (en km/h)},
+            Traces={
+                draw placepoint(10,300)--placepoint(20,300) withcolor bleu;
+            }            
+            ]{}
+        }
+
+        \item Déterminer le temps, environ, que met le train pour atteindre \Vitesse{120}.
+        
+        {\red Le train met environ \Temps{;;;;7;} pour atteindre \Vitesse{120}.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{6}
+        \item Déterminer la vitesse maximale du train.
+        
+        {\red La vitesse maximale est de \Vitesse{300}.}
+        \item Déterminer au bout de combien de temps cette vitesse maximale est atteinte.
+        
+        {\red La vitesse maximale est atteinte au bout de \Temps{;;;;10;}.}
+        \item Préciser une expression de la fonction $v$\\pour $0 \leq x \leq 20$.
+        
+        {\red $v(x)=3x^2$ pour $0 \leq x \leq 10$
+        
+        $v(x)=30$ pour $10 \leq x \leq 20$}
+    \end{enumerate}
+\end{corrige}
