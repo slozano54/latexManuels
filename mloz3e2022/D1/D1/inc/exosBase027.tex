@@ -1,5 +1,73 @@
 \begin{exercice}
+    Une entreprise fabrique chaque jour un produit. On appelle $x$ la masse journalière produite en kg. $x$ peut varier
+    entre $0$ et $45$. Le coût de production de ces $x$ kg de produit exprimé en euros est donné par la formule : $C(x) = x^2-20x+200$.
+    Le prix de vente de ce produit est de \Prix[0]{34} le kg. On suppose que tous les objets fabriqués sont vendus.
+    \begin{enumerate}
+        \item Déterminer le coût de production de \Masse[kg]{10} de produit.
+        \item Déterminer la recette liée à la vente de ces \Masse[kg]{10}.
+        \item Déterminer le bénéfice réalisé.
+        \item Déterminer la recette $R(x)$ réalisée lorsque l'entreprise fabrique et vend $x$ kg de produit.
+        \item Déterminer le bénéfice $B(x)$ correspondant.
+        \item Tracer dans un repère de ce type, la représentation graphique de la fonction $B$.
+        
+        \scalebox{0.68}{
+        \Fonction[%
+        Calcul=-x*x+54*x-200,
+        Trace,CouleurTrace=rouge,
+        Xmin=-0.95,Xmax=9,Xstep=5,
+        Ymin=-0.5,Ymax=6.5,Ystep=100,
+        Origine={(0.95,0.5)},
+        Grille,PasGrilleX=1,PasGrilleY=1,
+        Graduations,PasGradX=5,PasGradY=100,
+        Bornea=45.5,Borneb=45.6,
+        LabelC=0.95,NomCourbe=$B(x)$
+        ]{}
+        }
+        \item Déterminer la valeur de $x$ pour laquelle le bénéfice est maximal. Donner le bénéfice correspondant.
+    \end{enumerate}
 \end{exercice}
 \begin{corrige}
- 
+    Une entreprise fabrique chaque jour un produit. On appelle $x$ la masse journalière produite en kg. $x$ peut varier
+    entre $0$ et $45$. Le coût de production de ces $x$ kg de produit exprimé en euros est donné par la formule : $C(x) = x^2-20x+200$.
+    Le prix de vente de ce produit est de \Prix[0]{34} le kg. On suppose que tous les objets fabriqués sont vendus.
+
+    \begin{enumerate}
+        \item Déterminer le coût de production de \Masse[kg]{10} de produit.
+        
+        {\red $C(10)=10^2-20\times 10 + 200 = 100$, donc le coût de production de \Masse[kg]{10} de produit est de \Prix[0]{100}.}
+        \item Déterminer la recette liée à la vente de ces \Masse[kg]{10}.
+        
+        {\red $34\times 10 = 340$, donc la recette est de \Prix[0]{340}.}
+        \item Déterminer le bénéfice réalisé.
+        
+        {\red $340-100 = 240$, donc le bénéfice est de \Prix[0]{240}.}
+        \item Déterminer la recette $R(x)$ réalisée lorsque l'entreprise fabrique et vend $x$ kg de produit.
+        
+        {\red $R(x)=34\times x = 34x$ \Prix[0]{}.}
+        \item Déterminer le bénéfice $B(x)$ correspondant.
+        
+        {\red $B(x)=R(x)-C(x)$\\$B(x)=34x-(x^2-20x+200)$\\$B(x)=3x-x^2+20x-200$\\$B(x)=-x^2+54x-200$\\}
+        \item Tracer dans un repère de ce type, la représentation graphique de la fonction $B$.
+        
+        \scalebox{0.6}{
+        \Fonction[%
+        Calcul=-x*x+54*x-200,
+        Trace,CouleurTrace=rouge,
+        Xmin=-0.95,Xmax=9,Xstep=5,
+        Ymin=-0.5,Ymax=6.5,Ystep=100,
+        Origine={(0.95,0.5)},
+        Grille,PasGrilleX=1,PasGrilleY=1,
+        Graduations,PasGradX=5,PasGradY=100,
+        Bornea=4,Borneb=45,
+        LabelC=0.95,NomCourbe=$B(x)$
+        ]{}
+        }
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+    \setcounter{enumi}{6}
+        \item Déterminer la valeur de $x$ pour laquelle le bénéfice est maximal. Donner le bénéfice correspondant.
+        
+        {\red Le bénéfice semble maximal lorsque $x$ est environ égal à $27$ et il est d'environ \Prix[0]{530}.}
+    \end{enumerate} 
 \end{corrige}
