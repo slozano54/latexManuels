@@ -64,14 +64,22 @@
     \end{minipage}
     \begin{minipage}{0.4\linewidth}
         \begin{center}
-            \psset{unit=7mm}
-            \begin{pspicture}(-1,-3.5)(5,3.5)
-               \psaxes{->}(0,0)(-1,-3)(5,3)    
-               \psgrid[subgriddiv=1,subgriddots=10,griddots=5,gridlabels=0](-1,-3)(5,3)
-               \psplot[linecolor=red]{-0.4}{4.4}{x x mul 4 x mul sub 1 add}
-               \psline[linecolor=blue]{->}(1,0)(1,-2)
-               \psline[linecolor=blue]{->}(1,-2)(0,-2)
-            \end{pspicture}
+            \scalebox{0.8}{
+                \Fonction[%
+                    Calcul=(x-2)*(x-2)-3,
+                    Trace,
+                    Grille,PasGrilleX=1,PasGrilleY=1,
+                    Origine={(1,3.25)},Graduations,
+                    CouleurTrace=red,                
+                    Bornea=-1,Borneb=4.5,
+                    Xmin=-1,Xmax=4.8,
+                    Ymin=-3.25,Ymax=2.8,                
+                    Traces={%
+                        drawarrow placepoint(1,0)--placepoint(1,-2) withcolor bleu;
+                        drawarrow placepoint(1,-2)--placepoint(0,-2) withcolor bleu;
+                    }
+                ]{}
+            }
          \end{center}
     \end{minipage}
 \end{methode*1}
@@ -97,16 +105,24 @@
     \end{minipage}
     \hfill
     \begin{minipage}{0.35\linewidth}
-        \begin{center}
-            \psset{unit=9mm}
-            \begin{pspicture}(-1,-3.5)(5,3.5)
-                \psaxes{->}(0,0)(-1,-3)(5,3)
-                \psgrid[subgriddiv=1,subgriddots=10,griddots=5,gridlabels=0](-1,-3)(5,3)
-                \psplot[linecolor=red]{-0.4}{4.4}{x x mul 4 x mul sub 1 add}
-                \psline[linecolor=blue]{-}(-1,1)(5,1)
-                \psline[linecolor=blue]{->}(0,1)(0,0)
-                \psline[linecolor=blue]{->}(4,1)(4,0)
-            \end{pspicture}
+        \begin{center} 
+            \scalebox{1}{
+                \Fonction[%
+                    Calcul=(x-2)*(x-2)-3,
+                    Trace,
+                    Grille,PasGrilleX=1,PasGrilleY=1,
+                    Origine={(1,3.25)},Graduations,
+                    CouleurTrace=red,                
+                    Bornea=-1,Borneb=4.5,
+                    Xmin=-1,Xmax=4.8,
+                    Ymin=-3.25,Ymax=2.8,                
+                    Traces={%
+                        draw placepoint(-1,1)--placepoint(5,1) withcolor bleu;
+                        drawarrow placepoint(0,1)--placepoint(0,0) withcolor bleu;
+                        drawarrow placepoint(4,1)--placepoint(4,0) withcolor bleu;
+                    }
+                ]{}
+            }
          \end{center}
     \end{minipage}
 \end{methode*1}
