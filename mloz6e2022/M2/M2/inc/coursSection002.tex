@@ -1,3 +1,71 @@
-\section{...}
+\section{Quelques remarques}
 
-...
+\begin{remarques}
+    \begin{itemize}
+        \item Deux figures non superposables peuvent avoir le \textbf{même périmètre}.
+        \item Deux figures non superposables peuvent avoir la \textbf{même aire}.
+        \item Deux figures peuvent avoir la même aire mais des \textbf{périmètres différents}.
+        \item Deux figures peuvent avoir le même périmètre mais des \textbf{aires différentes}.
+    \end{itemize}
+\end{remarques}
+
+\begin{exemple*1}
+    \phantom{rrr}\\
+
+    \begin{minipage}{0.55\linewidth}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+                \draw [color=gray!30, xstep=0.6cm,ystep=0.6cm] (-8,-10) grid (4,1);                
+                \fill[line width=2pt,color=gray,fill=gray,fill opacity=0.1] (-2,-8) -- (-1,-8) -- (-1,-7) -- (-2,-7) -- cycle;
+                \fill[line width=2pt,color=brown,fill=brown,fill opacity=0.1] (-7,-6) -- (-7,0) -- (-4,0) -- (-4,-1) -- (-6,-1) -- (-6,-6) -- cycle;
+                \fill[line width=2pt,color=mygreen,fill=mygreen,fill opacity=0.1] (-4,-6) -- (-2,-6) -- (-2,-2) -- (-4,-2) -- cycle;
+                \fill[line width=2pt,color=blue,fill=blue,fill opacity=0.1] (-1,-6) -- (-1,-1) -- (0,-1) -- (0,-3) -- (1,-3) -- (1,-4) -- (2,-4) -- (2,-5) -- (3,-5) -- (3,-6) -- cycle;
+                \draw [line width=2pt,color=red] (-7,-8)-- (-6,-8);
+                \draw [color=red](-9.2,-8) node[anchor=north west] {\parbox{3.72 cm}{\begin{center}{\small unité de longueur \par u.l.}\end{center}}};
+                \draw [line width=2pt,color=gray] (-2,-8)-- (-1,-8);
+                \draw [line width=2pt,color=gray] (-1,-8)-- (-1,-7);
+                \draw [line width=2pt,color=gray] (-1,-7)-- (-2,-7);
+                \draw [line width=2pt,color=gray] (-2,-7)-- (-2,-8);
+                \draw [color=gray](-4,-8) node[anchor=north west] {\parbox{2.92 cm}{\begin{center}unité d'aire \par u.a. \end{center}}};
+                \draw [line width=2pt,color=brown] (-7,-6)-- (-7,0);
+                \draw [line width=2pt,color=brown] (-7,0)-- (-4,0);
+                \draw [line width=2pt,color=brown] (-4,0)-- (-4,-1);
+                \draw [line width=2pt,color=brown] (-4,-1)-- (-6,-1);
+                \draw [line width=2pt,color=brown] (-6,-1)-- (-6,-6);
+                \draw [line width=2pt,color=brown] (-6,-6)-- (-7,-6);
+                \draw [line width=2pt,color=mygreen] (-4,-6)-- (-2,-6);
+                \draw [line width=2pt,color=mygreen] (-2,-6)-- (-2,-2);
+                \draw [line width=2pt,color=mygreen] (-2,-2)-- (-4,-2);
+                \draw [line width=2pt,color=mygreen] (-4,-2)-- (-4,-6);
+                \draw [line width=2pt,color=blue] (-1,-6)-- (-1,-1);
+                \draw [line width=2pt,color=blue] (-1,-1)-- (0,-1);
+                \draw [line width=2pt,color=blue] (0,-1)-- (0,-3);
+                \draw [line width=2pt,color=blue] (0,-3)-- (1,-3);
+                \draw [line width=2pt,color=blue] (1,-3)-- (1,-4);
+                \draw [line width=2pt,color=blue] (1,-4)-- (2,-4);
+                \draw [line width=2pt,color=blue] (2,-4)-- (2,-5);
+                \draw [line width=2pt,color=blue] (2,-5)-- (3,-5);
+                \draw [line width=2pt,color=blue] (3,-5)-- (3,-6);
+                \draw [line width=2pt,color=blue] (3,-6)-- (-1,-6);
+                \begin{Large}
+                    \draw[color=brown] (-5.58,-0.52) node {\small Fig1};
+                    \draw[color=mygreen] (-3.08,-3.42) node {\small Fig2};
+                    \draw[color=blue] (0.22,-4.4) node {\small Fig3};
+                \end{Large}
+            \end{tikzpicture}
+    \end{minipage}
+    \hspace*{5mm}
+    \begin{minipage}{0.45\linewidth}
+        \begin{itemize}
+            \item Fig1 et Fig2 ont la \textbf{même aire} mais pas le même périmètre.
+            \item Fig1 et Fig3 ont le \textbf{même périmètre} mais pas la même aire.
+        \end{itemize}
+    \end{minipage}
+    
+    \smallskip
+    \begin{tabular}{|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
+        \cline{2-4}
+        \multicolumn{1}{c|}{}&\cellcolor{brown!30}Fig1&\cellcolor{green!30}Fig2&\cellcolor{blue!30}Fig3 \cr \hline
+        Périmètre& 18 u.l. & 12 u.l. & 18 u.l. \cr \hline
+        Aire& 8 u.a.&8 u.a.&11 u.a. \cr \hline 
+    \end{tabular}
+\end{exemple*1}
