@@ -119,4 +119,9 @@
 \DeclareDefLike{convention}{\StringCONVENTION}
 
 % Un environnement pour vocabulaire et notations
-\DeclareRemLike{vocabulaireNotations}{Vocabulaire et notations}
+\newcommand{\StringVOCABULAIRENOTATIONS}{Vocabulaire et notations}
+\DeclareRemLike{vocabulaireNotations}{\StringVOCABULAIRENOTATIONS}
+
+% Un environnement pour vocabulaire
+\newcommand{\StringVOCABULAIRE}{VOCABULAIRE}
+\DeclareDefLike{myvocabulaire}{\StringVOCABULAIRE}
