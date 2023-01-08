@@ -1,0 +1,18 @@
+\begin{exercice}
+    Quelle est l'aire, en \ucmq{}, de la figure grisée sachant que \begin{pspicture}(3,2)(4,3)
+          \psframe[fillstyle=solid,fillcolor=lightgray](3,2)(4,3)
+          \psline(3,2)(4,3)
+          \psline(3,3)(4,2)
+       \end{pspicture} vaut \ucmq{1} ? Expliquer.
+    \begin{center}
+       \begin{pspicture*}(5,0)(10,5)
+          \pspolygon[fillstyle=solid,fillcolor=lightgray](6,0)(9,0)(9,1)(10,2)(8,4)(9,4)(8,5)(7,5)(6,4)(7,4)(5,2)(6,1)
+          \pspolygon[fillstyle=solid,fillcolor=white](6.5,0.5)(7.5,1.5)(8.5,0.5)(9,1)(9,2)(8,2)(7.5,2.5)(8,3)(7.5,3.5)(8,4)(7,4)(7.5,3.5)(7,3)(7.5,2.5)(7,2)(6,2)(6,1)
+          \psgrid[subgriddiv=1](5,0)(10,5)
+          \multido{\i=10+-1}{10}{%
+        \FPeval{a}{\i+5}
+        \psline(\i,0)(\a,5)
+        \psline(\i,5)(\a,0)}
+       \end{pspicture*}
+    \end{center}
+ \end{exercice}
