@@ -1,7 +1,37 @@
 \section{Calculer avec des formules}
 \subsection{Quadilatères}
-\Formule[Aire,Surface=triangle,Ancre={([xshift=3cm,yshift=-3cm]current page.west)}]
-\Formule[Aire,Surface=losange,Ancre={([xshift=5cm,yshift=7cm]current page.south west)},Angle=-20,Largeur=6cm]
+
+\scalebox{0.8}{
+\begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(5u,5.5u)}]    
+    pair A,B,C,D;
+    A=u*(0.75,0.75);
+    B=u*(4.25,0.75);
+    C=rotation(A,B,-90);
+    D-A=C-B;
+    trace A--B--C--D--cycle;
+    trace cotationmil(D,C,5mm,5,btex $c$ etex) withcolor red;
+    trace codeperp(A,B,C,5);
+    trace codeperp(B,C,D,5);
+    trace codeperp(C,D,A,5);
+    trace codesegments(A,B,B,C,2);
+    trace codesegments(C,D,D,A,2);
+\end{Geometrie}
+}
+\begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(5u,5.5u)}]    
+    pair A,B,C,D;
+    A=u*(0.75,0.75);
+    B=u*(4.25,0.75);
+    C=rotation(A,B,-90);
+    D-A=C-B;
+    trace A--B--C--D--cycle;
+    trace cotationmil(D,C,5mm,5,btex $c$ etex) withcolor red;
+    trace codeperp(A,B,C,5);
+    trace codeperp(B,C,D,5);
+    trace codeperp(C,D,A,5);
+    trace codesegments(A,B,B,C,2);
+    trace codesegments(C,D,D,A,2);
+\end{Geometrie}
+
 % \begin{center}
 % \begin{tabular}{|m{8cm}|m{4.25cm}|c|}
 % \hline
