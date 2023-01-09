@@ -1,8 +1,32 @@
 %pre-001
+\vspace*{-9mm}
 \input{\currentpath/inc/prerequis001.tex}
 %pre-002
+\vspace*{-4mm}
 \input{\currentpath/inc/prerequis002.tex}
-\vfill
-\begin{debat}[...] 
-   ...
+\vspace*{-7mm}
+\begin{debat}[Géométrie euclidienne VS géométrie sphérique]
+   \og Un ours part de sa caverne et parcourt 10 km vers le sud, puis 10 km vers l'est et enfin 10 km vers le nord. Il se retrouve alors juste devant l'entrée de sa caverne. Quelle est la couleur de l'ours ? \fg \\
+   La {\bf géométrie sphérique} n'a pas les même propriétés que la {\bf géométrie euclidienne} utilisée au collège et au lycée. Cette dernière est la géométrie initiée par {\it Euclide}, mathématicien grec né vers 330 av. J.-C., il est connu pour avoir recensé une grande partie des mathématiques de l'époque dans ses {\it Éléments} : une série de treize livres utilisée pendant près de 2\,000 ans qui fut l'ouvrage le plus édité au monde après la Bible.\\
+   \begin{minipage}{5cm}
+      \scalebox{0.8}{
+      \begin{pspicture}(-1,0.5)(4,3)
+         \pspolygon[linecolor=C1](1,0)(4,0)(3,3.25)
+      \end{pspicture}
+      }
+   \end{minipage}
+   \textcolor{B1}{
+   \begin{minipage}{5cm}
+      \flushright Un triangle \og sphérique \fg{} $\Longrightarrow$ \\
+      \flushleft $\Longleftarrow$ Un triangle \og plat \fg \\     
+   \end{minipage}}
+   \begin{minipage}{5cm}
+      \Reperage[Espace,Sphere,EchelleEspace=50,AnglePhi=30]{70/90/A,0/90/B}
+   \end{minipage} 
+  \bigskip
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         \hrefVideo{https://leblob.fr/videos/les-triangles-et-astronomie}{\bf Les triangles et l'astronomie}, {\it Le blob} : série {\it Math.ing}.
+      \end{center}
+   \end{cadre}
 \end{debat}
