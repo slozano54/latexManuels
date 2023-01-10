@@ -1,3 +1,36 @@
-\begin{activite}[...]
-    ...
- \end{activite}
+\begin{activite}[Des angles mouvants]
+    {\bf Objectif :} faire découvrir la propriété de la somme des angles d'un triangle.
+    \partie[construction du triangle]
+       \begin{enumerate}
+          \item Sur une feuille, tracer un triangle ABC quelconque puis le découper.
+          \item Colorier les trois angles de trois couleurs différentes des deux côtés du triangle (une couleur par angle). \\
+          {\psset{unit=1}
+          \begin{pspicture}(-2,0.2)(10,5.8)
+             \rput(8.3,4.8){$\leftarrow$ colorier des deux côtés}
+             \psline[linestyle=dashed](6,5)(6,1)(6.3,1)
+             \psframe(6,1)(6.25,1.25)
+             \pswedge[fillstyle=solid,fillcolor=B1,linecolor=B1](1,1){1}{0}{38.5}
+             \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](6,5){1}{218.8}{306.8}
+             \pswedge[fillstyle=solid,fillcolor=J1,linecolor=J1](9,1){1}{127}{180}
+             \pspolygon(1,1)(9,1)(6,5)
+             \rput(0.7,1){B}
+             \rput(9.3,1){C}
+             \rput(6,5.3){A}
+             \rput(6,0.7){H}     
+          \end{pspicture}}
+          \item Tracer la hauteur issue du sommet A et nommer le pied de cette hauteur H.
+          \item Plier le triangle ABC de manière à placer le point A sur le point H.
+          \item Plier le triangle ABC de manière à placer le point B sur le point H.
+          \item Plier le triangle ABC de manière à placer le point C sur le point H.
+       \end{enumerate}
+    \partie[observations]
+       \begin{enumerate}
+          \item Que forment les trois angles obtenus en H ? \\ [5mm]
+          \makebox[\linewidth]{\dotfill}
+          \item Formuler cette observation en utilisant les angles $\widehat{\text A}, \widehat{\text B}$ et $\widehat{\text C}$. \\ [5mm]
+          \makebox[\linewidth]{\dotfill}
+          \item Formuler cette observation par une phrase simple et générale sans utiliser le nom des angles. \\ [5mm]
+          \makebox[\linewidth]{\dotfill} \\ [5mm]
+          \makebox[\linewidth]{\dotfill}
+       \end{enumerate}
+\end{activite}
