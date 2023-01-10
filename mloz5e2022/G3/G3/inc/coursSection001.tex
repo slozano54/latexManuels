@@ -1,1 +1,90 @@
-\section{...}
+\section{Somme des angles dans un triangle}
+
+\begin{propriete}
+   Dans un triangle, la somme de la mesure de ses trois angles est égale à \udeg{180}.
+\end{propriete}
+
+\medskip
+
+Par conséquent, pour qu'un triangle soit constructible, il est nécessaire que la somme de ses angles fasse \udeg{180}.
+   
+\begin{center}
+   {\psset{unit=0.7}
+   \begin{pspicture}(-1,0.5)(9,5.6)
+      \pswedge[fillstyle=solid,fillcolor=B1,linecolor=B1](1,1){1}{0}{38.5}
+      \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](6,5){1}{218.8}{306.8}
+      \pswedge[fillstyle=solid,fillcolor=J1,linecolor=J1](9,1){1}{127}{180}
+      \pspolygon(1,1)(9,1)(6,5)
+      \rput(0.7,1){B}
+      \rput(9.3,1){C}
+      \rput(6,5.3){A} 
+      \rput(5.5,2.5){$\widehat{A}+\widehat{B}+\widehat{C} =\ang{180}$}
+      \pswedge[fillstyle=solid,fillcolor=B1,linecolor=B1](0,3){1}{141}{180}
+      \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,3){1}{53}{141}
+      \pswedge[fillstyle=solid,fillcolor=J1,linecolor=J1](0,3){1}{0}{53}
+      \rput(-0.7,3.2){\white B}
+      \rput(-0.1,3.6){\white A}
+      \rput(0.6,3.3){\white C}
+   \end{pspicture}}
+\end{center}
+
+{\renewcommand{\StringPREUVE}{CONJECUTRE}
+\begin{preuve}
+    {\titrePreuve{en mesurant les angles}}
+    
+    \bigskip
+    \hrefLien{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_033.html}{Somme des angles d'un triangle (par mesure des angles)}
+    \creditInstrumentPoche    
+\end{preuve}
+}
+\begin{preuve}
+
+    \begin{minipage}{0.55\linewidth}
+        \begin{center}
+            \begin{tikzpicture}[line width=1pt,line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+                \clip (-5.92,-3) rectangle (2.9,4);        
+                \draw [shift={(-5,-2)},color=mygreen,fill=mygreen,fill opacity=0.4] (0,0) -- (9.46:0.6) arc (9.46:53.13:0.6) -- cycle;
+                \draw [shift={(1,-1)},color=red,fill=red,fill opacity=0.4] (0,0) -- (135:0.6) arc (135:189.46:0.6) -- cycle;
+                \draw [shift={(-2,2)},color=black,fill=black,fill opacity=0.4] (0,0) -- (-126.87:0.6) arc (-126.87:-45:0.6) -- cycle;
+                \draw [shift={(-2,2)},color=red,fill=red,fill opacity=0.4] (0,0) -- (-45:0.6) arc (-45:9.46:0.6) -- cycle;
+                \draw [shift={(-2,2)},color=mygreen,fill=mygreen,fill opacity=0.4] (0,0) -- (-170.54:0.6) arc (-170.54:-126.87:0.6) -- cycle;
+                \draw [dash pattern=on 1pt off 1pt on 1pt off 4pt,domain=-5.92:3.92] plot(\x,{(-14-4*\x)/-3});
+                \draw [dash pattern=on 1pt off 1pt on 1pt off 4pt,domain=-5.92:3.92] plot(\x,{(-7--1*\x)/6});
+                \draw [dash pattern=on 1pt off 1pt on 1pt off 4pt,domain=-5.92:3.92] plot(\x,{(-0--3*\x)/-3});
+                \draw [dash pattern=on 1pt off 1pt on 1pt off 4pt,domain=-5.92:3.92] plot(\x,{(--14--1*\x)/6});
+                \draw (-2,2)-- (-5,-2);
+                \draw (-5,-2)-- (1,-1);
+                \draw (1,-1)-- (-2,2);
+                \coordinate[label=above :$A$,yshift=2] (A) at (-2,2);
+                \coordinate[label=below :$B$] (B) at (-5,-2);
+                \coordinate[label=below left :$C$] (C) at (1,-1);
+                \coordinate[label=above :$I$] (I) at (-4.76,1.54);
+                \tkzDrawPoint[shape=cross out](I);
+                \coordinate[label=above :$J$] (J) at (1.25,2.54);
+                \tkzDrawPoint[shape=cross out](J);
+            \end{tikzpicture}
+        \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.6\linewidth}
+            Pour fixer les idées, considérons un triangle ABC  et : 
+            \begin{itemize}
+                \item  traçons la droite $(d)$ parallèle à $(BC)$ passant par $A$.
+                \item  plaçons $I$ et $J$ sur $(d)$ de part et d'autre de $A$.
+            \end{itemize}
+            \medskip
+            Les droites parallèles $(d)$ et $(BC)$ sont coupées par la sécante$(AC)$ donc forment des angles alternes-internes égaux donc \textcolor{red}{$\widehat{BCA}=\widehat{CAJ}$}.
+            \\\medskip
+            Les droites parallèles $(d)$ et $(BC)$ sont coupées par la sécante $(BA)$ donc forment des angles alternes-internes égaux donc \textcolor{mygreen}{$\widehat{CBA}=\widehat{IAB}$}.
+            \\\medskip
+            D'où $\textcolor{mygreen}{\widehat{CBA}}+\textcolor{black}{\widehat{BAC}}+\textcolor{red}{\widehat{BCA}}=\textcolor{mygreen}{\widehat{IAB}}+\textcolor{black}{\widehat{BAC}}+\textcolor{red}{\widehat{CAJ}}=\widehat{IAJ}$.\\
+            Or $I$,$A$ et $J$ sont alignés donc $\widehat{IAJ}=180$\degre $\square$
+        \end{minipage}
+\end{preuve}
+\begin{exemple}
+   \SommeAngles[FigureSeule,Rectangle,Echelle=7mm]{CBA}{}{55} \\ [1mm]
+   Calculer la mesure de l'angle $\widehat{BCA}$.
+   \correction
+      D'après le codage, l'angle $\widehat{ABC}$ est droit, donc $\widehat{ABC} =\udeg{90}$.
+      \SommeAngles[Perso]{CBA}{90}{55}
+\end{exemple}

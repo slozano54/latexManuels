@@ -1,2 +1,75 @@
-\section{...}
+\section{Triangles particuliers}
 
+\begin{propriete}[du triangle isocèle]
+    \begin{minipage}{0.4\linewidth}
+        \begin{pspicture}(-.5,0.5)(4,3)
+            \pstTriangle[PointSymbol=none](0,1){I}(4,1){O}(2,2.5){S}
+            \pstSegmentMark[SegmentSymbol=MarkHashh,MarkAngle=90]{I}{S} 
+            \pstSegmentMark[SegmentSymbol=MarkHashh,MarkAngle=90]{S}{O}
+            \pstLineAB{I}{O}
+            \psset{linecolor=J1,fillstyle=solid,fillcolor=J1}
+            \pstMarkAngle{S}{O}{I}{}
+            \pstMarkAngle{O}{I}{S}{}            
+        \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}        
+        Dans un triangle isocèle, les angles à la base ont la même mesure.     
+    \end{minipage}   
+\end{propriete}
+
+\begin{preuve}
+    Dans un triangle isocèle, la médiatrice de la base principale est un axe de symétrie, les angles à la base sont donc égaux.
+\end{preuve}
+
+\begin{propriete}[du triangle rectangle]
+    \begin{minipage}{0.4\linewidth}
+        \begin{pspicture}(-0.5,-0.5)(4.5,2.5)
+            \pstTriangle[PointSymbol=none](0,0){E}(4,0){C}(0,2){R}
+            \psset{fillstyle=solid}
+            \pstRightAngle[fillcolor=black,linecolor=black]{R}{E}{C}
+            \pstMarkAngle[fillcolor=red,linecolor=red]{R}{C}{E}{}
+            \pstMarkAngle[fillcolor=mygreen,linecolor=mygreen]{E}{R}{C}{}            
+         \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}        
+        Dans un triangle rectangle, les deux angles aigus sont complémentaire, leur somme est égale à \ang{90}.
+    \end{minipage}   
+\end{propriete}
+
+\begin{preuve}
+    Pour fixer les idées, supposons que le triangle se nomme $REC$\\ et qu'il est rectangle en $E$.
+    \\\medskip
+    Or la somme des angles d'un triangle vaut \ang{180}, donc $\widehat{CER}+\textcolor{mygreen}{\widehat{ERC}}+\textcolor{red}{\widehat{RCE}}=\ang{180}$\\
+or $\widehat{CER}=\ang{90}$ d'où $90+\textcolor{mygreen}{\widehat{ERC}}+\textcolor{red}{\widehat{RCE}}=\ang{180}$\\
+d'où $\textcolor{mygreen}{\widehat{ERC}}+\textcolor{red}{\widehat{RCE}}=\ang{90} \square$
+\end{preuve}
+
+\begin{remarque}
+    Si un triangle est isocèle et rectangle, les angles de la base mesurent \ang{45}
+\end{remarque}
+
+\begin{propriete}[du triangle rectangle]
+    \begin{minipage}{0.4\linewidth}
+        \begin{pspicture}(-.5,-.5)(3.5,3)
+            \pstTriangle[PointSymbol=none](0,0){E}(3,0){I}(1.5,2.55){Q}
+            \psset{SegmentSymbol=MarkHash,MarkAngle=90}
+            \pstSegmentMark{E}{Q} 
+            \pstSegmentMark{I}{Q}
+            \pstSegmentMark{I}{E}
+            \psset{linecolor=J1,fillstyle=solid,fillcolor=J1,LabelSep=.75}
+            \pstMarkAngle{Q}{I}{E}{\small \ang{60}}
+            \pstMarkAngle{I}{E}{Q}{\small \ang{60}}
+            \pstMarkAngle{E}{Q}{I}{\small \ang{60}}
+         \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}        
+        Dans un triangle équilatéral, les trois angles mesurent \ang{60} chacun.
+    \end{minipage}   
+\end{propriete}
+
+\begin{preuve}
+    Pour fixer les idées on considère un triangle équilatéral $ABC$, il est isocèle à la fois en $A$ et en $B$ 
+    donc $\widehat{ABC}=\widehat{ACB}$ et $\widehat{BAC}=\widehat{ACB}$ donc les trois angles sont égaux.
+    \\\medskip
+    Or leur somme vaut \ang{180}, c'est donc que chacun vaut \ang{60}. $\square$
+\end{preuve}

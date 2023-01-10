@@ -122,7 +122,7 @@
     \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}} 
 }
 
-% Pour le lien vers youtube
+% Pour les liens vers youtube
 % #1 --> emojis par défaut
 % Par défaut #1 est le movie-camera + link mais on peut le remplacer par la ref mathalea
 % #2 --> url
@@ -137,6 +137,15 @@
 % #2 --> url
 % #3 --> texte
 \newcommand{\hrefRevision}[3][\emoji{check-mark-button} \emoji{link}]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
+}
+
+% Pour les liens lambda
+% #1 --> emojis par défaut
+% Par défaut #1 est le movie-camera + link mais on peut le remplacer par la ref mathalea
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefLien}[3][\emoji{link}]{
     \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
 }
 %==========================================
@@ -213,13 +222,17 @@
 %==========================================
 
 %==========================================
-% Gestion des exemples et remarques
+% Gestion des exemples, remarques, preuves
 %==========================================
 \newcommand{\titreExemple}[1]{
     {\color{red}\bfseries #1}
 }
 \newcommand{\titreRemarque}[1]{
     {\color{RemTitleColor}\bfseries #1}
+}
+
+\newcommand{\titrePreuve}[1]{
+    {\color{ProofTitleColor}\bfseries #1}
 }
 
 %==========================================
