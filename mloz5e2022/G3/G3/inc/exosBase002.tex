@@ -1,4 +1,53 @@
 \begin{exercice}
-   ...
- \end{exercice}
- 
+  Les figures suivantes ne sont pas en vraie grandeur. Pour chacune d'elles, indiquer si elles sont constructibles ou non en justifiant la réponse. \\
+  {\psset{unit=0.85}
+  \small
+  \begin{pspicture}(-0.5,0)(4,3.5)
+     \pstTriangle[PointSymbol=none](0,0){A}(3,0){B}(2,3){C}
+     \psset{LabelSep=.8}
+     \pstMarkAngle{B}{A}{C}{\udeg{70}}
+     \pstMarkAngle{C}{B}{A}{\udeg{75}} 
+     \pstMarkAngle{A}{C}{B}{\udeg{40}} 
+  \end{pspicture}
+  \begin{pspicture}(-0.5,-0.5)(4,3.5)
+     \pstTriangle[PointSymbol=none](0,2){F}(3.5,2){U}(2.2,0){O}
+     \psset{LabelSep=.85}
+     \pstMarkAngle{O}{F}{U}{\udeg{10}}
+     \pstMarkAngle{U}{O}{F}{\udeg{95}} 
+     \pstMarkAngle{F}{U}{O}{\udeg{85}} 
+  \end{pspicture}   
+
+  \begin{pspicture}(-1,-0.5)(4,4)
+     \pstTriangle[PointSymbol=none](0,2){B}(0,0){O}(3,0){F}
+     \pstMarkAngle{O}{B}{F}{\udeg{57,3}}
+     \pstMarkAngle[LabelSep=1.2]{B}{F}{O}{\udeg{32,7}} 
+     \pstRightAngle{F}{O}{B}
+  \end{pspicture}
+  \begin{pspicture}(-0.5,-0.5)(3.5,3.5)
+     \pstTriangle[PointSymbol=none](1,0){P}(0,3){I}(3,2){C}
+     \pstMarkAngle{P}{I}{C}{\udeg{35,1}}
+     \pstMarkAngle[LabelSep=0.9]{C}{P}{I}{\udeg{72,4}}
+     \psset{SegmentSymbol=MarkHashh,MarkAngle=90}
+     \pstSegmentMark{P}{I}
+     \pstSegmentMark{I}{C}
+  \end{pspicture}}
+
+  \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G31-1,s=1,n=3&v=l}
+\end{exercice}
+
+\begin{corrige}
+  \begin{itemize}
+     \item Dans le triangle $BAC$ : \\
+        $\udeg{40}+\udeg{70}+\udeg{75} =\udeg{185} \neq \udeg{180}$. \\
+        {\red Le triangle $BAC$ n'est pas constructible}.
+     \item Dans le triangle $FOU$ : \\
+        $\udeg{10}+\udeg{95}+\udeg{85} =\udeg{190} \neq \udeg{180}$. \\
+        {\red Le triangle $FOU$ n'est pas constructible}.
+     \item Dans le triangle $BOF$ : \\
+        $\udeg{57,3}+\udeg{32,7}+\udeg{90} =\udeg{180}$. \\
+        {\red Le triangle $BOF$ est constructible}.
+     \item Dans le triangle $PIC$ : \\
+        $\udeg{35,1}+\udeg{72,4}+\udeg{72,4} =\udeg{179,9} \neq \udeg{180}$. \\
+        {\red Le triangle $PIC$ n'est pas constructible}.
+  \end{itemize}
+\end{corrige}

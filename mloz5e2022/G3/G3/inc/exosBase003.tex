@@ -1,4 +1,54 @@
 \begin{exercice}
-   ...
- \end{exercice}
- 
+  Calculer, pour chaque triangle, la mesure de l'angle marqué d'un point d'interrogation. \\
+  {\psset{unit=0.85}
+  \small
+  \begin{pspicture}(-1,0)(3.5,3.7)
+     \pstTriangle[PointSymbol=none](0,0){R}(3,0){E}(1.5,2.6){P}
+     \psset{SegmentSymbol=MarkHash,MarkAngle=90,LabelSep=0.8}
+     \pstSegmentMark{R}{E}
+     \pstSegmentMark{R}{P}
+     \pstSegmentMark{P}{E}
+     \pstMarkAngle{P}{E}{R}{?} 
+  \end{pspicture}
+  \begin{pspicture}(0,-0.5)(4,3.2)
+     \pstTriangle[PointSymbol=none](0,2.3){R}(4,2.3){P}(2,0.3){A}
+     \psset{SegmentSymbol=MarkHashh,MarkAngle=90}
+     \pstSegmentMark{R}{A}
+     \pstSegmentMark{P}{A}
+     \pstMarkAngle[LabelSep=0.75]{P}{A}{R}{?} 
+     \pstMarkAngle[LabelSep=0.9]{A}{R}{P}{\udeg{38}}
+  \end{pspicture}
+  
+  \begin{pspicture}(-1,0)(3.5,3.3)
+     \pstTriangle[PointSymbol=none](0,2){Y}(0,0){E}(3,0){S}
+     \pstMarkAngle[LabelSep=1.1]{E}{Y}{S}{\small \udeg{50,36}}
+     \pstRightAngle{S}{E}{Y}
+     \pstMarkAngle[LabelSep=0.8]{Y}{S}{E}{?}
+  \end{pspicture}
+  \begin{pspicture}(-1,0)(3.5,3.8)
+     \pstTriangle[PointSymbol=none](1,0){H}(0,3){W}(3,2){Y}
+     \pstMarkAngle{H}{W}{Y}{\udeg{42,6}}
+     \psset{SegmentSymbol=MarkHashh,MarkAngle=90}
+     \pstSegmentMark{W}{H}
+     \pstSegmentMark{W}{Y}
+     \pstMarkAngle[LabelSep=0.8]{Y}{H}{W}{?}
+  \end{pspicture}}
+
+  \medskip
+  \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G31,s=1,n=5,cd=1&v=l}
+\end{exercice}
+
+\begin{corrige}
+     \begin{itemize}
+     \item Le triangle $REP$ est équilatéral donc, tous ses angles ont la même mesure. La somme faisant \udeg{180}, un angle mesure $\udeg{180}\div3 =\udeg{60}$. \\
+        Conclusion : {\red $\widehat{REP} =\udeg{60}$}.
+     \item Le triangle $RAP$ est isocèle en $A$ dont les angles à sa base principale mesurent \udeg{38}. \\
+     $\udeg{38}+\udeg{38} =\udeg{76}$ d'où $\widehat{RAP} =\udeg{180}-\udeg{76} =\udeg{104}$. \\
+     Conclusion : {\red $\widehat{RAP} =\udeg{104}$}. 
+     \item Le triangle $YES$ est rectangle en $E$ et $\udeg{90}+\udeg{50,36} =\udeg{140,36}$ d'où, $\widehat{ESY} =\udeg{180}-\udeg{140,36} =\udeg{39,64}$. \\
+        Conclusion : {\red $\widehat{ESY} =\udeg{39,64}$}. 
+     \item Le triangle $WHY$ est isocèle en $W$ dont l'angle à son sommet principal vaut \udeg{42,6}. \\
+        $\udeg{180}-\udeg{42,6} =\udeg{137,4}$ ; $\widehat{WHY} =\udeg{137,4}\div2 =\udeg{68,7}$. \\
+        Conclusion : {\red $\widehat{WHY} =\udeg{68,7}$}.
+  \end{itemize}
+\end{corrige}

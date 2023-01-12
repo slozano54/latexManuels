@@ -1,28 +1,7 @@
-\begin{exercice}
-  On considère le polygone croisé $SOANE$ suivant : \\
-  \begin{pspicture}(-0.5,0)(8,5)
-     \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={90,225,45,-45}](1.9,3.9){O}(0.5,1){S}(7,4){E}(5.2,0.9){N}
-     \pstGeonode[PointSymbol=none,PosAngle=90](3.55,2.4){A}
-     \pstLineAB{A}{S}
-     \pstLineAB{S}{O}
-     \pstLineAB{O}{N}
-     \pstSegmentMark{N}{E}
-     \pstSegmentMark{A}{E}
-     \pstMarkAngle{E}{S}{O}{\udeg{38}}
-     \pstMarkAngle{S}{E}{N}{\udeg{38}}
-  \end{pspicture}
-  \begin{enumerate}
-     \item Démontrer que les droites $(OS)$ et $(EN)$ sont parallèles entre elles.
-     \item Démontrer que les angles $\widehat{ENA}$ et $\widehat{EAN}$ ont la même mesure. La calculer.
-     \item Quelle est la nature du triangle $AOS$ ? Justifier.
-  \end{enumerate}
-\end{exercice}
-
-\begin{corrige}
  \ \\ [-5mm]
   \begin{enumerate}
      \item Les angles $\widehat{OSA} =\widehat{OSE}$ et $\widehat{AEN} =\widehat{SEN}$ sont alternes-internes et de même mesure, \udeg{38} donc : \\
-        {\red les droites $(OS)$ et $(EN)$ sont parallèles entre elles}.      
+        {\red les droites $(OS)$ et $(EN)$ sont parallèles entre elles}.
      \item Le triangle $ANE$ est isocèle en $E$, les angles à sa base principale sont donc égaux d'où : {\red $\widehat{ENA} =\widehat{EAN}$}. \\
         On calcule leur mesure : \\
         $\udeg{180}-\udeg{38} =\udeg{142}$ et $\udeg{142}\div2 =\udeg{71}$. \\
@@ -32,4 +11,3 @@
         Les angles $\widehat{SOA} =\widehat{SON}$ et $\widehat{ENA}+\widehat{ENO}$ sont alternes-internes et les droites $(OS)$ et $(EN)$ sont parallèles entre elles. Les mesures des angles sont donc égales soit : $\widehat{SOA} =\widehat{ANE} =\udeg{71}$. \\
        Conclusion : {\red le triangle $AOS$ est isocèle en $S$}.
   \end{enumerate}
-\end{corrige}

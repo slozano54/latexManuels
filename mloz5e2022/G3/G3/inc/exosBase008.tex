@@ -1,0 +1,59 @@
+\begin{exercice}
+   La figure n'est pas en vraie grandeur. Toutes les réponses devront être justifiées.
+   \begin{enumerate}
+      \item Déterminer la mesure de l'angle $\widehat{VIY}$.
+      \item En déduire la mesure de l'angle $\widehat{IYV}$.
+      \item Déterminer si les droites $(VY)$ et $(BT)$ sont parallèles.
+      \item Si on considère que les segments $[VY]$ et $[BT]$ sont de même longueur, Déterminer la nature du quadrilatère $VYTB$.\\
+      \begin{tikzpicture}[baseline,scale = 0.5]
+      
+         \tikzset{
+            point/.style={
+            thick,
+            draw,
+            cross out,
+            inner sep=0pt,
+            minimum width=5pt,
+            minimum height=5pt,
+            },
+         }
+         \clip (-1,-8.47540858631423) rectangle (10.002523868443198,7.758232599524377);
+      
+      
+         \draw[color={black}] (-34.7101600139545,-35.98895374702736)--(40.26378561618722,41.747186346551736);
+         \draw[color={black}] (-48.52242820752611,12.065403467993738)--(56.52495207596931,-14.05528078456301);
+         \draw[color={black}] (-6.399110541081897,-49.904693419137125)--(16.05104293395127,54.64385655344088);
+         \draw[color={black}] (-31.998250300976313,-43.46436233334158)--(42.7126838823977,33.99907643045808);
+         \draw [color={black},fill opacity = 1] (1.5377394308806753,0.4419925821942914) node[anchor = center,scale=1] {60°};
+         \draw  [color={black},line width = 2,preaction={fill,color = {black},opacity = 0.2}] (0.6942032002790899,0.719779074940547) -- (0,0) -- (0.9704485641505219,-0.24130806935987473) arc (-13.96:46.04:0.9999999999999999) ;
+         \draw [color={red},fill opacity = 1] (5.455765365204915,-0.17213014134252091) node[anchor = center,scale=1] {92°};
+         \draw  [color={red},line width = 2,preaction={fill,color = {red},opacity = 0.2}] (5.068774014788482,-1.2603024788133754) -- (4.098306790636651,-1.0190694652206238) -- (4.308255137271022,-0.04135698614229366) arc (77.88:-13.960000000000008:1) ;
+         \draw [color={blue},fill opacity = 1] (3.464033661200263,-6.0632083290876455) node[anchor = center,scale=1] {32°};
+         \draw  [color={blue},line width = 2,preaction={fill,color = {blue},opacity = 0.2}] (3.406057243056901,-6.755575823454954) -- (2.7119097129781857,-7.475408586314232) -- (2.9218580596125565,-6.497696107235901) arc (77.88:46.03999999999999:1) ;
+         \draw  [color={gray},line width = 2,preaction={fill,color = {gray},opacity = 0.2}] (4.308330753483859,-0.041373226591286144) -- (4.098306790636651,-1.0190694652206238) -- (3.127858226486129,-0.7777613958607491) arc (166.04:77.88:1) ;
+         \draw  [color={mygreen},line width = 2,preaction={fill,color = {mygreen},opacity = 0.2}] (5.343601639385512,4.78053636089504) -- (5.55362560223272,5.758232599524377) -- (4.85942240195363,5.03845352458383) arc (-133.96:-102.12:1) ;
+         \draw  [color={rgb,255:red,241;mygreen,89;blue,41},line width = 2,preaction={fill,color = {rgb,255:red,241;mygreen,89;blue,41},opacity = 0.2}] (3.8882828277894435,-1.9967657038499613) -- (4.098306790636651,-1.0190694652206238) -- (5.068755354787173,-1.2603775345804986) arc (-13.96:-102.12:1) ;
+         \draw  [color={pink},line width = 2,preaction={fill,color = {pink},opacity = 0.2}] (7.032075304292675,-1.7485692472093974) -- (8.002523868443198,-1.9898773165692725) -- (7.308320668164108,-2.7096563915098195) arc (-133.96:-193.96:1) ;
+         \draw (0,0) node[above left] {$V$};
+         \draw (8.002523868443198,-1.9898773165692725) node[right] {$T$};
+         \draw (5.55362560223272,5.758232599524377) node[above left] {$Y$};
+         \draw (4.098306790636651,-1.0190694652206238) node[below] {$I$};
+         \draw (2.7119097129781857,-7.475408586314232) node[below right] {$B$};
+      \end{tikzpicture}
+   \end{enumerate}
+
+   \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G30-1,s=2,n=1&v=l}
+\end{exercice}
+
+\begin{corrige}
+   \begin{enumerate}
+   \item Les angles $\widehat{VIY}$ et $\widehat{YIT}$ sont adjacents supplémentaires, donc $\widehat{VIY}$ mesure $\ang{180}-\ang{92}=\ang{88}$.\\
+   \item Dans un triangle, la somme des angles vaut $\ang{180}$ donc $\widehat{VYI}=180-\widehat{IVY}-\widehat{VIY}=\ang{180}-\ang{60}-\ang{88}=\ang{32}$.\\
+   \item Pour les droites $(VY)$ et $(BT)$ coupées par la sécante $(YB)$ les angles $\widehat{VYI}$ et $\widehat{TBI}$ sont des angles alternes-internes.\\
+   Or, si des angles alternes-internes sont égaux, alors cela signifie que les droites coupées par la sécante sont parallèles.\\
+   Les droites $(VY)$ et $(BT)$ sont donc parallèles.\\
+   \item Les droites $(VY)$ et $(BT)$ sont parallèles et les segments $[VY]$ et $[BT]$ sont de même longueur.\\
+   Or, un quadrilatère qui possède des côtés opposés parallèles et de même longueur est un parallèlogramme.\\
+   Donc $VYTB$ est un parallèlogramme et $I$ est son centre.
+   \end{enumerate}
+\end{corrige}

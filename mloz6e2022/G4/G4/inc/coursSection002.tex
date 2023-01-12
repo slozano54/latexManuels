@@ -38,6 +38,9 @@
    \end{pspicture}
    \begin{pspicture}(0,-1.5)(2,3.5)
       \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={225,90,-45}](0,0){A}(2.5,2){C}(3.5,0){B}
+      \pstLineAB{A}{B}
+      \pstLineAB{B}{C}
+      \pstLineAB{C}{A}
    \end{pspicture}
 
    \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_046.html}{Construire un triangle connaissant trois côtés}

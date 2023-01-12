@@ -1,31 +1,10 @@
-\begin{exercice}
-  Sachant que les droites $(DA)$ et $(MI)$ sont parallèles, calculer la mesure de chacun des angles du quadrilatère $MADI$ en justifiant. \\
-  {\psset{unit=0.9}
-  \small
-  \begin{pspicture}(-3,0)(5,4.5)
-     \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={90,-90,-45}](3,4){H}(0,0){M}(5,0){I}
-     \pstGeonode[PointSymbol=none,PosAngle={0,180}](4,2){D}(1.48,2){A}
-     \pstLineAB{A}{D}
-     \pstLineAB{I}{M}
-     \pstLineAB{M}{H}
-     \pstLineAB{H}{I}
-     \pstMarkAngle[LabelSep=0.8]{A}{H}{D}{\udeg{64}}
-     \psline(-2,0)(0,0)
-     \rput(-1.8,0.3){$x$}
-     \psarc(0,0){0.3}{53}{180}
-     \rput(-0.2,0.6){\udeg{127}}
-  \end{pspicture}}
-\end{exercice}
-
-\begin{corrige}
   \begin{itemize}
      \item L'angle $\widehat{AMI}$ est le supplémentaire de l'angle $\widehat{xMA}$ de mesure $\udeg{127}$, donc il mesure $\udeg{180}-\udeg{127} =\udeg{53}$. Soit : {\red $\widehat{AMI} =\udeg{53}$}.
      \item Les angles $\widehat{xMA}$ et $\widehat{MAD}$ sont alternes-internes et les droites $(DA)$ et $(MI)$ sont parallèles donc, ces deux angles sont égaux. Soit {\red $\widehat{MAD} =\udeg{127}$}.
      \item Les angles $\widehat{AMI}$ et $\widehat{DAH}$ sont correspondants et les droites $(DA)$ et $(MI)$ sont parallèles, ils sont donc égaux et $\widehat{DAH} =\udeg{53}$. \\
         Dans le triangle $ADH$ : \\
-        $\widehat{DAH}+\widehat{DHA}+\widehat{ADH} =\udeg{180}$. \\ 
+        $\widehat{DAH}+\widehat{DHA}+\widehat{ADH} =\udeg{180}$. \\
         Donc, $\udeg{53}+\udeg{64}+\widehat{ADH} =\udeg{180}$ soit $\widehat{ADH} =\udeg{180}-\udeg{53}-\udeg{64} =\udeg{63}$. \\
          Les angles $\widehat{ADH}$ et $\widehat{ADI}$ sont supplémentaires donc, $\widehat{ADI} =\udeg{180}-\udeg{63} =\udeg{117}$. {\red $\widehat{ADI} =\udeg{117}$}.
      \item Les angles $\widehat{ADH}$ et $\widehat{MID}$ sont correspondants et les droites $(DA)$ et $(MI)$ sont parallèles donc, ces deux angles sont égaux. Soit : {\red $\widehat{MID} =\udeg{63}$}.
   \end{itemize}
-\end{corrige}
