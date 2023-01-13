@@ -1,3 +1,76 @@
-\begin{activite}[Théorème direct]
-    ...
+\begin{activite}[Prérequis - Connaissances antérieures]
+    \vspace*{-10mm}
+    \begin{spacing}{1.5}
+        \begin{enumerate}
+            \item Calculer l'aire du carré $ABCD$ de côté \Lg{8}.
+            \item Déterminer la valeur de $8^2$.
+            \item $IJKL$ est un carré d'aire \Aire{25}. Déterminer la longueur $IJ$.
+            \item Déterminer les nombres dont le carré vaut $25$.
+            \item Exprimer l'aire du carré $EFGH$ en fonction de $c$.
+            
+            \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(6u,6u)}]
+                u:=0.4cm;
+                pair E,F,G,H;
+                E=u*(1,1);
+                F=u*(5,1);
+                G=1[F,rotation(E,F,-90)];
+                H=1[E,rotation(F,E,90)];
+                label.llft(btex E etex,E);
+                label.lrt(btex  F etex,F);
+                label.urt(btex  G etex,G);
+                label.ulft(btex H etex,H);
+                trace E--F--G--H--cycle;
+                trace codeperp(E,F,G,5);
+                trace codeperp(F,G,H,5);
+                trace codeperp(G,H,E,5);
+                marque_s:=marque_s/3;
+                trace codesegments(E,F,F,G,2);
+                trace codesegments(G,H,H,E,2);
+                trace cotation(E,F,-4mm,-4mm,btex $c$ etex);
+            \end{Geometrie}
+            \item Exprimer l'aire du carré $EFGH$ en fonction de $EF$.
+            
+            \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(6u,6u)}]
+                u:=0.4cm;
+                pair E,F,G,H;
+                E=u*(1,4);
+                F=u*(4,1);
+                G=1[F,rotation(E,F,-90)];
+                H=1[E,rotation(F,E,90)];
+                label.llft(btex E etex,E);
+                label.lrt(btex  F etex,F);
+                label.urt(btex  G etex,G);
+                label.ulft(btex H etex,H);
+                trace E--F--G--H--cycle;
+                trace codeperp(E,F,G,5);
+                trace codeperp(F,G,H,5);
+                trace codeperp(G,H,E,5);
+                marque_s:=marque_s/3;
+                trace codesegments(E,F,F,G,2);
+                trace codesegments(G,H,H,E,2);            
+            \end{Geometrie}
+            \item Dans le triangle $IJK$ rectangle en $I$, déterminer le côté opposé à l'angle droit $\widehat{JIK}$.
+            
+            \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(8u,4u)}]
+                u:=0.4cm;
+                pair I,J,K;
+                I=u*(1,1);
+                J=u*(7,1);            
+                K=3/5[I,rotation(J,I,90)];
+                label.llft(btex I etex,I);
+                label.lrt(btex  J etex,J);
+                label.ulft(btex  K etex,K);
+                trace I--J--K--cycle;
+                trace codeperp(K,I,J,5);
+            \end{Geometrie}       
+            \item Dans le triangle $ABC$ rectangle en $A$ :
+            \begin{enumerate}
+                \item Déterminer le côté le plus long.
+                \item Déterminer le côté opposé à l'angle droit.
+                \item Rappeler comment s'appelle ce côté de manière générale.
+            \end{enumerate}
+            \item Déterminer le type d'opération permettant de trouver le nombre manquant dans $48 + \dots = 57$.
+            \item Nommer tous les triangles rectangles de cette figure et indiquer leur hypoténuse. FIGURE A FAIRE.
+        \end{enumerate}
+    \end{spacing}
 \end{activite}
