@@ -7,69 +7,47 @@
         \hrefLien{http://plus.maths.org/issue16/features/perigal/}{Pour les curieux, un article en anglais.}
     \end{myBox}
 
-    Sur les figures ci dessous, le triangle $ABC$ rectangle en $A$. On a construit les carrés à partir de carrés sur chacun des côtés du triangle $ABC$.
+    Sur la figure ci dessous, le triangle $ABC$ rectangle en $A$. On a construit les carrés sur chacun des côtés du triangle $ABC$.
     Nous allons construire de quoi découper ces carrés et établir une preuve par dissection du théorème de Pythagore.
 
     \begin{minipage}{0.4\linewidth}
-        Sur la figure ci-contre, coller les pièces obtenues puis découpées en suivant les consignes.
+        \begin{enumerate}
+            \item Sur la figure ci-contre, coller les pièces \Circled{1} \Circled{2} \Circled{3} \Circled{4} \Circled{5}
+            obtenues puis découpées en suivant les consignes de la page suivante afin de recouvrir la surface du carré $BCIJ$.
+            \item Exprimer l'aire du carré $AGHC$ en fonction de $AC$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Exprimer l'aire du carré $BEFA$ en fonction de $AB$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Exprimer l'aire du carré $CIJB$ en fonction de $BC$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Écrire une égalité liant les aires des trois carrés.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Énoncer le théorème de Pythagore à l'aide d'une phrase conditionnelle.\smallskip\\\makebox[1.7\linewidth]{\dotfill}\medskip\\\makebox[1.7\linewidth]{\dotfill}\medskip\\\makebox[1.7\linewidth]{\dotfill}
+        \end{enumerate}
     \end{minipage}
+    \hfill
     \begin{minipage}{0.55\linewidth}
         \begin{tikzpicture}[baseline,scale=0.75]
-            \draw[help lines, color=black!30, dashed] (0,0) grid (12,13);
-            \coordinate[label=above left:$A$] (A) at (4,8);
-            \coordinate[label=above right:$B$] (B) at (8,8);
-            \coordinate[label=below left:$C$] (C) at (4,5);
-            \draw (A)--(B)--(C)--cycle;
-            \tkzMarkRightAngles[size=0.3](C,A,B);
-            \coordinate[label=above right:$E$] (E) at (8,12);
-            \coordinate[label=above left:$F$] (F) at (4,12);
-            \draw (B)--(E)--(F)--(A);
-            \coordinate[label=above left:$G$] (G) at (1,8);
-            \coordinate[label=below left:$H$] (H) at (1,5);
-            \draw (A)--(G)--(H)--(C);
-            \tkzDefPointBy[rotation=center C angle -90](B);
-            \tkzGetPoint{I};
-            \tkzDefPointBy[rotation=center B angle 90](C);
-            \tkzGetPoint{J};
-            \tkzLabelPoint[below left](I){$I$};
-            \tkzLabelPoint[below right](J){$J$};
-            \draw (C)--(I)--(J)--(B);
-        \end{tikzpicture}    
-    \end{minipage}
-
-    \begin{minipage}{0.4\linewidth}
-        Sur la figure ci-contre : 
-        \begin{itemize}
-            \item Construire le point $O$ à l'intersection des diagonales du carré $ABEF$.
-            \item Construire la perpenduiculaire à $(BC)$ passant par $O$. Elle coupe $[AB]$ en $K$ et $[FE]$ en $L$.
-            \item Construire la perpendiculaire à $(KL)$ passant par $O$. Elle coupe $[AF]$ en $M$ et $[EB]$ en $N$.
-        \end{itemize}
-    \end{minipage}
-    \begin{minipage}{0.55\linewidth}
-        \begin{tikzpicture}[baseline,scale=0.75]
-            \draw[help lines, color=black!30, dashed] (0,-3) grid (15,16);
+            % \draw[help lines, color=black!30, dashed] (0,-3) grid (15,16);
+            % On définit les points
             \coordinate[label=above left:$A$] (A) at (4,8);
             \coordinate[label=above right:$B$] (B) at (11,8);
             \coordinate[label=below left:$C$] (C) at (4,5);
-            \draw (A)--(B)--(C)--cycle;
+            % \draw (A)--(B)--(C)--cycle;
             \tkzMarkRightAngles[size=0.3](C,A,B);
             \coordinate[label=above right:$E$] (E) at (11,15);
             \coordinate[label=above left:$F$] (F) at (4,15);
-            \draw (B)--(E)--(F)--(A);
+            % \draw (B)--(E)--(F)--(A);
             \coordinate[label=above left:$G$] (G) at (1,8);
             \coordinate[label=below left:$H$] (H) at (1,5);
-            \draw (A)--(G)--(H)--(C);
+            % \draw (A)--(G)--(H)--(C);
             \tkzDefPointBy[rotation=center C angle -90](B);
             \tkzGetPoint{I};
             \tkzDefPointBy[rotation=center B angle 90](C);
             \tkzGetPoint{J};
             \tkzLabelPoint[below left](I){$I$};
             \tkzLabelPoint[below right](J){$J$};
-            \draw (C)--(I)--(J)--(B);
+            % Tracés
+            \draw (C)--(I)--(J)--(B)--cycle;
             % Construction demandée
             \tkzInterLL(F,B)(A,E);
-            \tkzGetPoint{O};
-            \tkzLabelPoint[below right,xshift=2mm](O){$O$};
+            \tkzGetPoint{O};            
             \tkzDefPointBy[projection=onto B--C](O);
             \tkzGetPoint{O1};
             \tkzInterLL(A,B)(O,O1);
@@ -85,19 +63,64 @@
             \tkzInterLL(M,O)(E,B);
             \tkzGetPoint{N};
             \tkzLabelPoint[below right](N){$N$};
-            \draw (M)--(N);
+            \draw (M)--(N);                        
+            % Coloriage
+            \draw[ultra thick,color=blue,fill=blue!10] (A)--(G)--(H)--(C)--cycle;
+            \draw[ultra thick,color=red,fill=red!10] (F)--(L)--(O)--(M)--cycle;
+            \draw[ultra thick,color=red,fill=red!10] (M)--(O)--(K)--(A)--cycle;
+            \draw[ultra thick,color=red,fill=red!10] (K)--(O)--(N)--(B)--cycle;
+            \draw[ultra thick,color=red,fill=red!10] (L)--(O)--(N)--(E)--cycle;
+            \tkzLabelPoint[below right,xshift=2mm](O){$O$};            
             \tkzMarkRightAngles[size=0.3](L,O,M);
-            % \draw[ultra thick,color=mygreen,fill=mygreen!10] (0,3) rectangle (-3,0);
-            % \draw[ultra thick,color=red,fill=red!10] (4,0) rectangle (0,-4);
-            % \draw[ultra thick,color=red] (3.5,0) -- (0.5,-4);
-            % \draw[ultra thick,color=red] (0,-0.5) -- (4,-3.5);
-            % \draw[ultra thick,color=blue,fill=blue!10] (4,0) -- (7,4) -- (3,7) -- (0,3) -- cycle;
-            % %\tffi{(0,0)}
-            % \draw[ultra thick,color=blue] (2,2) rectangle (5,5);
-            % \draw[ultra thick,color=blue] (2,2) -- (2,1.5);
-            % \draw[ultra thick,color=blue] (2,5) -- (1.5,5);
-            % \draw[ultra thick,color=blue] (5,5) -- (5,5.5);
-            % \draw[ultra thick,color=blue] (5,2) -- (5.5,2);
+            % Marquage des pièces
+            \tkzDefMidPoint(A,H);
+            \tkzGetPoint{Un};
+            \tkzLabelPoint[below, yshift=3mm](Un){\Circled{1}}
+            \coordinate[label=below:\Circled{2}, yshift=3mm] (Deux) at (5.5,12.5);
+            \coordinate[label=below:\Circled{3}, yshift=3mm] (Trois) at (6.5,9.5);
+            \coordinate[label=below:\Circled{4}, yshift=3mm] (Quatre) at (8.5,13.5);
+            \coordinate[label=below:\Circled{5}, yshift=3mm] (Cinq) at (9.5,10.5);
         \end{tikzpicture}    
     \end{minipage}
+    
+    \pagebreak
+    \vspace*{-15mm}
+    Sur la figure ci-dessous : 
+    \begin{itemize}
+        \item Construire le point $O$ à l'intersection des diagonales du carré $ABEF$.\\ ATTENTION : NE PAS TRACER LES DIAGONALES ENTIÈREMENT.
+        \item Construire la perpenduiculaire à $(BC)$ passant par $O$. Elle coupe $[AB]$ en $K$ et $[FE]$ en $L$.
+        \item Construire la perpendiculaire à $(KL)$ passant par $O$. Elle coupe $[AF]$ en $M$ et $[EB]$ en $N$.
+        \item Numéroter le quadrilatère $AGHC$ \Circled{1}.
+        \item Numéroter le quadrilatère $FLOM$ \Circled{2}.
+        \item Numéroter le quadrilatère $MOKA$ \Circled{3}.
+        \item Numéroter le quadrilatère $LONE$ \Circled{4}.
+        \item Numéroter le quadrilatère $KONB$ \Circled{5}.
+        \item Découper les cinq pièces et finir l'activité.
+    \end{itemize}
+    \begin{tikzpicture}[baseline,scale=0.75]
+        % \draw[help lines, color=black!30, dashed] (0,-3) grid (15,16);
+        \coordinate[label=above left:$A$] (A) at (4,8);
+        \coordinate[label=above right:$B$] (B) at (11,8);
+        \coordinate[label=below left:$C$] (C) at (4,5);
+        \draw (A)--(B)--(C)--cycle;
+        \tkzMarkRightAngles[size=0.3](C,A,B);
+        \coordinate[label=above right:$E$] (E) at (11,15);
+        \coordinate[label=above left:$F$] (F) at (4,15);
+        \draw (B)--(E)--(F)--(A);
+        \coordinate[label=above left:$G$] (G) at (1,8);
+        \coordinate[label=below left:$H$] (H) at (1,5);
+        \draw (A)--(G)--(H)--(C);
+        \tkzDefPointBy[rotation=center C angle -90](B);
+        \tkzGetPoint{I};
+        \tkzDefPointBy[rotation=center B angle 90](C);
+        \tkzGetPoint{J};
+        \tkzLabelPoint[below left](I){$I$};
+        \tkzLabelPoint[below right](J){$J$};
+        \draw (C)--(I)--(J)--(B);
+    \end{tikzpicture}
+    
+    \begin{remarque}
+        $O$ est un centre de symétrie de la figure obtenue dans le carré $ABEF$. De plus $(MC)$//$(NB)$ et $(MN)$//$(BC)$ donc $MNBC$ est un parallélogramme. 
+        Par conséquent, $MN=BC$.\\ On en déduit donc que $OM=ON=OK=OL=\dfrac{BC}{2}$.
+    \end{remarque}
 \end{activite}
