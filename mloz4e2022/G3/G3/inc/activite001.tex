@@ -1,11 +1,10 @@
-\begin{activite}[Prérequis - Connaissances antérieures]
-    \vspace*{-10mm}
+\begin{activite}[Prérequis - Connaissances antérieures]    
     \begin{spacing}{1.5}
         \begin{enumerate}
-            \item Calculer l'aire du carré $ABCD$ de côté \Lg{8}.
-            \item Déterminer la valeur de $8^2$.
-            \item $IJKL$ est un carré d'aire \Aire{25}. Déterminer la longueur $IJ$.
-            \item Déterminer les nombres dont le carré vaut $25$.
+            \item Calculer l'aire du carré $ABCD$ de côté \Lg{8}.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Déterminer la valeur de $8^2$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item $IJKL$ est un carré d'aire \Aire{25}. Déterminer la longueur $IJ$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Déterminer les nombres dont le carré vaut $25$.\smallskip\\\makebox[\linewidth]{\dotfill}
             \item Exprimer l'aire du carré $EFGH$ en fonction de $c$.
             
             \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(6u,6u)}]
@@ -28,6 +27,7 @@
                 trace codesegments(G,H,H,E,2);
                 trace cotation(E,F,-4mm,-4mm,btex $c$ etex);
             \end{Geometrie}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
             \item Exprimer l'aire du carré $EFGH$ en fonction de $EF$.
             
             \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(6u,6u)}]
@@ -49,6 +49,7 @@
                 trace codesegments(E,F,F,G,2);
                 trace codesegments(G,H,H,E,2);            
             \end{Geometrie}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
             \item Dans le triangle $IJK$ rectangle en $I$, déterminer le côté opposé à l'angle droit $\widehat{JIK}$.
             
             \begin{Geometrie}[CoinBG={(-u,-u)},CoinHD={(8u,4u)}]
@@ -62,15 +63,44 @@
                 label.ulft(btex  K etex,K);
                 trace I--J--K--cycle;
                 trace codeperp(K,I,J,5);
-            \end{Geometrie}       
+            \end{Geometrie}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
+            \pagebreak
             \item Dans le triangle $ABC$ rectangle en $A$ :
             \begin{enumerate}
-                \item Déterminer le côté le plus long.
-                \item Déterminer le côté opposé à l'angle droit.
-                \item Rappeler comment s'appelle ce côté de manière générale.
+                \item Déterminer le côté le plus long.\smallskip\\\makebox[\linewidth]{\dotfill}
+                \item Déterminer le côté opposé à l'angle droit.\smallskip\\\makebox[\linewidth]{\dotfill}
+                \item Rappeler comment s'appelle ce côté de manière générale.\smallskip\\\makebox[\linewidth]{\dotfill}
             \end{enumerate}
-            \item Déterminer le type d'opération permettant de trouver le nombre manquant dans $48 + \dots = 57$.
-            \item Nommer tous les triangles rectangles de cette figure et indiquer leur hypoténuse. FIGURE A FAIRE.
+            \item Indiquer le type d'opération permettant de trouver le nombre manquant dans $48 + \dots = 57$.\smallskip\\\makebox[\linewidth]{\dotfill}
+            \item Nommer tous les triangles rectangles de cette figure et indiquer leur hypoténuse.
+            
+            \begin{tikzpicture}        
+                % \draw[help lines, color=black!30, dashed] (0,0) grid (8,7);        
+                \coordinate[label=below:$F$] (F) at (1,1);
+                \coordinate[label=below:$D$] (D) at (6,1);
+                \coordinate[label=above:$A$] (A) at (1,4);
+                \coordinate (A1) at (6.5,3.5);
+                \tkzDefPointBy[projection=onto A--A1](D)
+                \tkzGetPoint{C}
+                \tkzLabelPoint[right](C){$C$};
+                \tkzDefPointBy[projection=onto A--D](C)
+                \tkzGetPoint{E}
+                \tkzLabelPoint[below left](E){$E$};
+                \coordinate (A2) at (6,7);
+                \tkzDefPointBy[projection=onto A--A2](C)
+                \tkzGetPoint{B}
+                \tkzLabelPoint[above](B){$B$};
+                \draw (F)--(D)--(A)--cycle;
+                \draw (A)--(C)--(D);
+                \draw (C)--(E);
+                \draw (A)--(B)--(C);
+                \tkzMarkRightAngles[size=0.3](D,F,A D,E,C A,C,D A,B,C);
+            \end{tikzpicture}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
+            \smallskip\\\makebox[\linewidth]{\dotfill}
         \end{enumerate}
     \end{spacing}
 \end{activite}
