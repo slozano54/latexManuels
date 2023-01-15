@@ -1,3 +1,103 @@
 \begin{activite}[Théorème direct - Puzzle de Henry PÉRIGAL]
-    ...
+    \begin{myBox}{Henry Perigal (1801-1898)}
+        Henry Perigal était un mathématicien amateur qui est principalement connu pour une élégante preuve du théorème de Pythagore.
+        Son schéma a été gravé, sur sa pierre tombale.
+        
+        \smallskip
+        \hrefLien{http://plus.maths.org/issue16/features/perigal/}{Pour les curieux, un article en anglais.}
+    \end{myBox}
+
+    Sur les figures ci dessous, le triangle $ABC$ rectangle en $A$. On a construit les carrés à partir de carrés sur chacun des côtés du triangle $ABC$.
+    Nous allons construire de quoi découper ces carrés et établir une preuve par dissection du théorème de Pythagore.
+
+    \begin{minipage}{0.4\linewidth}
+        Sur la figure ci-contre, coller les pièces obtenues puis découpées en suivant les consignes.
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \begin{tikzpicture}[baseline,scale=0.75]
+            \draw[help lines, color=black!30, dashed] (0,0) grid (12,13);
+            \coordinate[label=above left:$A$] (A) at (4,8);
+            \coordinate[label=above right:$B$] (B) at (8,8);
+            \coordinate[label=below left:$C$] (C) at (4,5);
+            \draw (A)--(B)--(C)--cycle;
+            \tkzMarkRightAngles[size=0.3](C,A,B);
+            \coordinate[label=above right:$E$] (E) at (8,12);
+            \coordinate[label=above left:$F$] (F) at (4,12);
+            \draw (B)--(E)--(F)--(A);
+            \coordinate[label=above left:$G$] (G) at (1,8);
+            \coordinate[label=below left:$H$] (H) at (1,5);
+            \draw (A)--(G)--(H)--(C);
+            \tkzDefPointBy[rotation=center C angle -90](B);
+            \tkzGetPoint{I};
+            \tkzDefPointBy[rotation=center B angle 90](C);
+            \tkzGetPoint{J};
+            \tkzLabelPoint[below left](I){$I$};
+            \tkzLabelPoint[below right](J){$J$};
+            \draw (C)--(I)--(J)--(B);
+        \end{tikzpicture}    
+    \end{minipage}
+
+    \begin{minipage}{0.4\linewidth}
+        Sur la figure ci-contre : 
+        \begin{itemize}
+            \item Construire le point $O$ à l'intersection des diagonales du carré $ABEF$.
+            \item Construire la perpenduiculaire à $(BC)$ passant par $O$. Elle coupe $[AB]$ en $K$ et $[FE]$ en $L$.
+            \item Construire la perpendiculaire à $(KL)$ passant par $O$. Elle coupe $[AF]$ en $M$ et $[EB]$ en $N$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \begin{tikzpicture}[baseline,scale=0.75]
+            \draw[help lines, color=black!30, dashed] (0,-3) grid (15,16);
+            \coordinate[label=above left:$A$] (A) at (4,8);
+            \coordinate[label=above right:$B$] (B) at (11,8);
+            \coordinate[label=below left:$C$] (C) at (4,5);
+            \draw (A)--(B)--(C)--cycle;
+            \tkzMarkRightAngles[size=0.3](C,A,B);
+            \coordinate[label=above right:$E$] (E) at (11,15);
+            \coordinate[label=above left:$F$] (F) at (4,15);
+            \draw (B)--(E)--(F)--(A);
+            \coordinate[label=above left:$G$] (G) at (1,8);
+            \coordinate[label=below left:$H$] (H) at (1,5);
+            \draw (A)--(G)--(H)--(C);
+            \tkzDefPointBy[rotation=center C angle -90](B);
+            \tkzGetPoint{I};
+            \tkzDefPointBy[rotation=center B angle 90](C);
+            \tkzGetPoint{J};
+            \tkzLabelPoint[below left](I){$I$};
+            \tkzLabelPoint[below right](J){$J$};
+            \draw (C)--(I)--(J)--(B);
+            % Construction demandée
+            \tkzInterLL(F,B)(A,E);
+            \tkzGetPoint{O};
+            \tkzLabelPoint[below right,xshift=2mm](O){$O$};
+            \tkzDefPointBy[projection=onto B--C](O);
+            \tkzGetPoint{O1};
+            \tkzInterLL(A,B)(O,O1);
+            \tkzGetPoint{K};
+            \tkzLabelPoint[below left](K){$K$};
+            \tkzInterLL(E,F)(O,O1);
+            \tkzGetPoint{L};
+            \tkzLabelPoint[above right](L){$L$};
+            \draw (K)--(L);
+            \tkzDefPointBy[rotation=center O angle 90](L);
+            \tkzGetPoint{M};
+            \tkzLabelPoint[above left](M){$M$};
+            \tkzInterLL(M,O)(E,B);
+            \tkzGetPoint{N};
+            \tkzLabelPoint[below right](N){$N$};
+            \draw (M)--(N);
+            \tkzMarkRightAngles[size=0.3](L,O,M);
+            % \draw[ultra thick,color=mygreen,fill=mygreen!10] (0,3) rectangle (-3,0);
+            % \draw[ultra thick,color=red,fill=red!10] (4,0) rectangle (0,-4);
+            % \draw[ultra thick,color=red] (3.5,0) -- (0.5,-4);
+            % \draw[ultra thick,color=red] (0,-0.5) -- (4,-3.5);
+            % \draw[ultra thick,color=blue,fill=blue!10] (4,0) -- (7,4) -- (3,7) -- (0,3) -- cycle;
+            % %\tffi{(0,0)}
+            % \draw[ultra thick,color=blue] (2,2) rectangle (5,5);
+            % \draw[ultra thick,color=blue] (2,2) -- (2,1.5);
+            % \draw[ultra thick,color=blue] (2,5) -- (1.5,5);
+            % \draw[ultra thick,color=blue] (5,5) -- (5,5.5);
+            % \draw[ultra thick,color=blue] (5,2) -- (5.5,2);
+        \end{tikzpicture}    
+    \end{minipage}
 \end{activite}
