@@ -1,1 +1,53 @@
-\section{...}
+\section{Théorème direct}
+
+\begin{definition}
+    Le {\bfseries carré}  d'un nombre est le produit du nombre par lui-même.
+    $$a^2=a\times a$$
+\end{definition}
+
+\begin{definition}
+    La {\bfseries racine carrée} d'un nombre positif $a$ est le nombre positif, noté $\sqrt{a}$, dont le carré vaut $a$.
+    $$\left(\sqrt{a}\right)^2=a\kern20mm(a>0)$$
+\end{definition}
+
+\begin{propriete}
+    Si un \textbf{triangle est rectangle} alors, le carré de l'hypoténuse est égal à la somme des carrés des deux côtés de l'angle droit.
+\end{propriete}
+
+\begin{preuve}
+    Voir Activité 4
+\end{preuve}
+
+\begin{propriete}[Relation de Pythagore]
+    \begin{minipage}{0.5\linewidth}
+        \begin{tikzpicture}[scale=1]
+            \coordinate[label=below left:$A$] (A) at (1,1);
+            \coordinate[label=above:$B$] (B) at (4,5);
+            \tkzDefPointWith[orthogonal normed,K=3](B,A);
+            \tkzGetPoint{C};
+            \tkzLabelPoint[below right](C){$C$};
+            \draw (A)--(B)--(C)--cycle;
+            \tkzMarkRightAngles[size=0.3](A,B,C);
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        Dans le triangle $ABC$ rectangle en $B$,\\le théorème de Pythagore permet d'écrire\\ une \textbf{relation de Pythagore} :
+        $$AC^2=AB^2+BC^2$$
+    \end{minipage}
+\end{propriete}
+
+\begin{methode*1}[Calculer l'hypoténuse]
+    Texte commun Penser à utiliser le paquet ProfCollege
+    \exercice
+    Exo
+    \correction
+    Corr
+\end{methode*1}
+
+\begin{methode*1}[Calculer un côté de l'angle droit]
+    Texte commun
+    \exercice
+    Exo
+    \correction
+    Corr
+\end{methode*1}
