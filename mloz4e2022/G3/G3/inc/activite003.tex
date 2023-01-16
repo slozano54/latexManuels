@@ -1,5 +1,51 @@
 \begin{activite}[Réciproque du théorème direct]
-    Sur mathix www.mathix.org/iufm\_ecrits/gr/essaie activité.pdf
+    % Sur mathix www.mathix.org/iufm\_ecrits/gr/essaie activité.pdf
 
-    et captures iparcours 2016
+    % et captures iparcours 2016
+    \begin{myBox}{Réciproque}
+        En mathématiques , on appelle réciproque d'une proposition , la proposition obtenue en inversant son
+        sens logique.\medskip
+
+        Par exemple, pour la proposition \og Si un nombre est pair alors il est divisible par deux. \fg, la
+        réciproque s'écrit : \og Si un nombre est divisible par deux alors il est pair. \fg.\medskip
+
+        Attention ! La réciproque d'une proposition n'est pas toujours vraie.\smallskip
+
+        Par exemple , la proposition réciproque de \og Si M est le milieu de [AB] alors MA=MB. \fg{}
+        s'écrit \og Si MA=MB alors M est le milieu de [AB] \fg{} ce qui n'est pas toujours vrai.\smallskip
+
+        Ci-dessous, $M$ est à la même distance de $A$ et de $B$ mais ce n'est pas le milieu de $[AB]$.\smallskip
+
+        \begin{tikzpicture}[scale=0.5]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (10,6);
+            \coordinate[label=below:$A$] (A) at (1,1);
+            \coordinate[label=below:$B$] (B) at (9,1);
+            \coordinate[label=above:$M$] (M) at (5,5);
+            \draw (B)--(M)--(A);
+            \tkzMarkSegments[mark=oo,size=6pt](M,A M,B);
+            \draw[dashed] (A)--(B);
+        \end{tikzpicture}
+    \end{myBox}
+
+    \begin{enumerate}
+        \item Soit la proposition : \og Si $\underbrace{\text{un triangle a deux côtés égaux}}_{\text{Conditions}}$ alors $\underbrace{\text{le triangle est isocèle}}_{\text{Conclusions}}$.\\
+        Cette proposition est vraie.
+        \begin{enumerate}
+            \item Écrire la proposition réciproque de cette proposition.
+            \item Expliquer comment obtenir une propostion réciproque de manière générale.
+            \item Dire si cette proposition réciproque est vraie.
+        \end{enumerate}
+        \item Pour chaque proposition suivante :
+        \begin{enumerate}
+            \item Préciser si elle est vraie ou fausse.
+            \item Écrie la proposition réciproque.
+            \item Préciser si cette proposition réciproque est vraie ou fausse.
+        \end{enumerate}
+        \begin{itemize}
+            \item[{\bfseries P.1 : }]\mbox{Si un quadrilatère est un rectangle, alors deux côtés du quadrilatère sont perpendiculaires.}
+            \item[{\bfseries P.2 : }]\mbox{Si deux points $A$ et $B$ sont symétriques par rapport à un point $O$, alors $O$ est le milieu du segment $[AB]$.}
+            \item[{\bfseries P.2 : }]\mbox{Si un nombre entier a $5$ pour chiffre des unités, alors il est divisible par $5$.}
+            \item[{\bfseries P.4 : }]\mbox{Si un quadrilatère est un parallélogramme, alors les diagonales du quadrilatère se coupent en leur milieu.}
+        \end{itemize}
+    \end{enumerate}
 \end{activite}
