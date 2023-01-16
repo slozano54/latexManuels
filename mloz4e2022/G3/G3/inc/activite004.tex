@@ -1,0 +1,57 @@
+\begin{activite}[Réciproque du théorème direct]
+    \partie[Énoncé de la réciproque du théorème de Pythagore]
+    \begin{enumerate}
+        \item Écrire le théorème de Pythagore sous la forme : \og Si \makebox[0.1\linewidth]{\dotfill} alors, \makebox[0.1\linewidth]{\dotfill} \fg
+        \item Écrire la réciproque du théorème de Pythoagore.
+        
+        Pour le moment, on n'est pas sûrs que la réciproque du théorème de Pythagore est vraie.
+        \item Énumérer les conditions de cette réciproque.
+        \item Énumérer les conclusions de cette réciproque.
+    \end{enumerate}
+
+    \partie[Conjecture]
+    Pour chacun des triangles ci-après :
+    \begin{itemize}
+        \item Triangle ABC tel que $AB=\Lg{3}$, $AC=\Lg{4}$ et $BC=\Lg{5}$.
+        \item Triangle GTP tel que $GT=\Lg{5}$, $TP=\Lg{13}$ et $GP=\Lg{12}$.
+        \item Triangle XMZ tel que $XM=\Lg{6}$, $XZ=\Lg{6.8}$ et $MZ=\Lg{3.2}$.
+    \end{itemize}
+    \begin{enumerate}
+        \item Construire le triangle.
+        \item Vérifier par le calcul que le triangle vérifie les conditions de la réciproque du théorème de Pythagore.
+        \item Dire si la nature du triangle semble correspondre aux conclusions attendues dans la réciproque du théorème de Pythagore.
+    \end{enumerate}
+
+    \partie[Démonstration]
+    $ABC$ est un triangle particulier dont les côtés vérifient les conditions de la réciproque du théorème de Pythagore, c'est à dire que $AC^2=AB^2+BC^2$.
+
+    On constuit un triangle $BCD$ rectangle en $B$ tel que $AB=BD$.
+
+    \begin{minipage}{0.3\linewidth}
+        \begin{tikzpicture}[scale=0.7]
+            % \draw[help lines, color=black!30, dashed] (0,0) grid (8,6);        
+            \coordinate[label=left:$B$] (B) at (1,4);
+            \coordinate[label=right:$C$] (C) at (5,4);
+            \coordinate[label=left:$D$] (D) at (1,1);
+            \draw (B)--(C)--(D)--cycle;
+            \tkzMarkRightAngles[size=0.3](D,B,C);
+            \tkzDefPointBy[rotation=center B angle 170](D);
+            \tkzGetPoint{A};
+            \tkzLabelPoint[above](A){$A$};
+            \draw (B)--(A)--(C);
+            \tkzMarkSegments[mark=oo,size=6pt](B,A B,D);        
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.7\linewidth}        
+        \begin{enumerate}
+            \item À l'aide du théorème de Pythagore, montrer que $DC=AC$.
+            
+            \emoji{light-bulb} \mbox{Si $DC^2=AC^2$ et que $DC$ et $AC$ sont des longueurs, alors $DC=AC$.}
+            \item En déduire que $(BC)$ est la médiatrice de $[AD]$.
+            \item En déduire que $(AB)$ est perpendiculaire à $(BC)$.
+            \item En déduire que le triangle $ABC$ est rectangle en $B$.
+        \end{enumerate}
+    \end{minipage}
+
+
+\end{activite}
