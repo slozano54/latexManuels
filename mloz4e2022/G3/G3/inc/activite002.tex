@@ -29,14 +29,11 @@
             \coordinate[label=above left:$A$] (A) at (4,8);
             \coordinate[label=above right:$B$] (B) at (11,8);
             \coordinate[label=below left:$C$] (C) at (4,5);
-            % \draw (A)--(B)--(C)--cycle;
             \tkzMarkRightAngles[size=0.3](C,A,B);
             \coordinate[label=above right:$E$] (E) at (11,15);
             \coordinate[label=above left:$F$] (F) at (4,15);
-            % \draw (B)--(E)--(F)--(A);
             \coordinate[label=above left:$G$] (G) at (1,8);
             \coordinate[label=below left:$H$] (H) at (1,5);
-            % \draw (A)--(G)--(H)--(C);
             \tkzDefPointBy[rotation=center C angle -90](B);
             \tkzGetPoint{I};
             \tkzDefPointBy[rotation=center B angle 90](C);
