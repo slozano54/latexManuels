@@ -19,8 +19,8 @@
 \end{preuve}
 
 \begin{propriete}[Relation de Pythagore]
-    \begin{minipage}{0.5\linewidth}
-        \begin{tikzpicture}[scale=1]
+    \begin{minipage}{0.3\linewidth}
+        \begin{tikzpicture}[scale=0.5]
             \coordinate[label=below left:$A$] (A) at (1,1);
             \coordinate[label=above:$B$] (B) at (4,5);
             \tkzDefPointWith[orthogonal normed,K=3](B,A);
@@ -30,24 +30,32 @@
             \tkzMarkRightAngles[size=0.3](A,B,C);
         \end{tikzpicture}
     \end{minipage}
-    \begin{minipage}{0.5\linewidth}
-        Dans le triangle $ABC$ rectangle en $B$,\\le théorème de Pythagore permet d'écrire\\ une \textbf{relation de Pythagore} :
+    \begin{minipage}{0.7\linewidth}
+        Dans le triangle $ABC$ rectangle en $B$, le théorème de Pythagore permet d'écrire une \textbf{relation de Pythagore} :
         $$AC^2=AB^2+BC^2$$
     \end{minipage}
 \end{propriete}
 
-\begin{methode*1}[Calculer l'hypoténuse]
-    Texte commun Penser à utiliser le paquet ProfCollege
+\begin{methode}[Calculer l'hypoténuse]    
     \exercice
-    Exo
-    \correction
-    Corr
-\end{methode*1}
 
-\begin{methode*1}[Calculer un côté de l'angle droit]
-    Texte commun
-    \exercice
-    Exo
+    {\it La figure est donnée à titre indicatif.\\ Les mesures indiquées sont en \Lg{}.}
+    
+    \vspace*{10mm}
+    \Pythagore[FigureSeule,Angle=15]{EFG}{6}{8}{}
     \correction
-    Corr
-\end{methode*1}
+    \Pythagore[Entier,Exact]{EFG}{6}{8}{}
+    La longueur $EG$ est égale à \Lg{\ResultatPytha}.
+\end{methode}
+
+\begin{methode}[Calculer un côté de l'angle droit]    
+    \exercice
+    
+    {\it La figure est donnée à titre indicatif.\\ Les mesures indiquées sont en \Lg{}.}
+    
+    \vspace*{10mm}
+    \Pythagore[FigureSeule,Angle=215]{SRT}{9}{7}{}
+    \correction
+    \Pythagore{SRT}{9}{7}{}
+    La longueur $RT$ est environ égale à \Lg{\ResultatPytha}.
+\end{methode}
