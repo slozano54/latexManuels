@@ -493,3 +493,39 @@
         \node[text width=3cm,text centered, scale=1.5] at (6,2.5) {#4};
     \end{tikzpicture}
 }
+
+% Figure avec carrés périphériques théorème de Pythagore
+
+\newcommand{\figCarresPythagore}[7]{%
+    % #1 scale
+    % #2 PetiteLongueur
+    % #3 MoyenneLongueur
+    % #4 GrandeLongueur
+    % #5 PetiteAire
+    % #6 MoyenneAire
+    % #7 GrandeAire
+    \begin{tikzpicture}[scale=#1]
+        % On crée le triangle
+        \coordinate (A) at (1,1);
+        \coordinate (B) at (6,1);
+        \tkzInterCC[R](A,4)(B,3);
+        \tkzGetFirstPoint{C};
+        \draw[fill=gray!30] (A)--(B)--(C)--cycle;
+        \tkzMarkRightAngles[size=0.3](A,C,B);
+        % On construit les carrés sur les côtés
+        \tkzDefSquare(B,A)\tkzGetPoints{E}{F};
+        \tkzDrawPolygon(B,A,E,F);
+        \tkzDefSquare(C,B)\tkzGetPoints{G}{H};
+        \tkzDrawPolygon(C,B,G,H);
+        \tkzDefSquare(A,C)\tkzGetPoints{I}{J};
+        \tkzDrawPolygon(A,C,I,J);
+        % On ajoute les labels de longueurs
+        \tkzLabelSegment[auto,sloped,below](A,B){#4};
+        \tkzLabelSegment[auto,sloped](B,C){#2};
+        \tkzLabelSegment[auto,sloped](C,A){#3};
+        % On ajoute les aires
+        \tkzLabelSegment[yshift=3mm](A,F){#7};
+        \tkzLabelSegment[yshift=5mm](B,H){#5};
+        \tkzLabelSegment[xshift=-3mm,yshift=3mm](C,J){#6};
+    \end{tikzpicture}
+}
