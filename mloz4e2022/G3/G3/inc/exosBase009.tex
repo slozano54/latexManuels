@@ -1,9 +1,63 @@
 \begin{exercice*}
-    \dots
+    Pour chaque triangle :
+    \begin{itemize}
+        \item préciser le sommet de l'angle droit
+        \item indiquer l'hypoténuse
+        \item donner la relation de Pythagore
+    \end{itemize}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item 
+            \begin{tikzpicture}[baseline={([yshift={-\ht\strutbox}]current bounding box.north)}, execute at end picture={baseline=(current bounding box.east)},scale=0.5,rotate=-175]
+                \coordinate[label=above:$I$] (A) at (1,1);
+                \coordinate[label=above:$J$] (B) at (5,1);
+                \coordinate[label=below:$K$] (C) at (1,4);
+                \draw (A)--(B)--(C)--cycle;
+                \tkzMarkRightAngles[size=0.3](B,A,C);
+            \end{tikzpicture}
+            \item 
+            \begin{tikzpicture}[baseline={([yshift={-\ht\strutbox}]current bounding box.north)}, execute at end picture={baseline=(current bounding box.east)},scale=0.5,rotate=35]
+                \coordinate[label=below:$L$] (D) at (1,1);
+                \coordinate[label=below:$M$] (E) at (5,1);
+                \coordinate[label=above:$O$] (F) at (1,4);
+                \draw (D)--(E)--(F)--cycle;
+                \tkzMarkRightAngles[size=0.3](E,D,F);
+            \end{tikzpicture}
+        \end{enumerate}
+    \end{multicols}
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=4G20-1,s=1,s2=3,n=3,video=M9sceJ8gzNc,i=0&v=l}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-    \dots
+    Pour chaque triangle :
+    \begin{itemize}
+        \item préciser le sommet de l'angle droit
+        \item indiquer l'hypoténuse
+        \item donner la relation de Pythagore
+    \end{itemize}
+
+    \begin{enumerate}
+        \item 
+        \begin{tikzpicture}[baseline={([yshift={-\ht\strutbox}]current bounding box.north)}, execute at end picture={baseline=(current bounding box.east)},scale=0.5,rotate=-175]
+            \coordinate[label=above:$I$] (A) at (1,1);
+            \coordinate[label=above:$J$] (B) at (5,1);
+            \coordinate[label=below:$K$] (C) at (1,4);
+            \draw (A)--(B)--(C)--cycle;
+            \tkzMarkRightAngles[size=0.3](B,A,C);
+        \end{tikzpicture}
+
+        {\red $I$ est le sommet de l'angle droit.\\$[JK]$ est l'hypoténuse.\\$JK^2=JI^2+IK^2$}
+        \item 
+        \begin{tikzpicture}[baseline={([yshift={-\ht\strutbox}]current bounding box.north)}, execute at end picture={baseline=(current bounding box.east)},scale=0.5,rotate=35]
+            \coordinate[label=below:$L$] (D) at (1,1);
+            \coordinate[label=below:$M$] (E) at (5,1);
+            \coordinate[label=above:$O$] (F) at (1,4);
+            \draw (D)--(E)--(F)--cycle;
+            \tkzMarkRightAngles[size=0.3](E,D,F);
+        \end{tikzpicture}
+
+        {\red $L$ est le sommet de l'angle droit.\\$[MO]$ est l'hypoténuse.\\$MO^2=ML^2+LO^2$}
+    \end{enumerate}
 \end{corrige}
 

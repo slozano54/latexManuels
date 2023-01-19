@@ -1,3 +1,30 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-    \dots
+    Écrire le plus de relations de Pythagore possible, en précisant chaque fois le triangle rectangle utilisé.
+
+    \begin{tikzpicture}
+        \coordinate[label=below:$Q$] (Q) at (1,1);
+        \coordinate[label=below:$R$] (R) at (6,1);
+        \tkzInterCC[R](Q,4)(R,3);
+        \tkzGetFirstPoint{P};
+        \tkzLabelPoints[above](P);
+        \tkzDefPointBy[projection=onto Q--R](P);
+        \tkzGetPoint{S};
+        \tkzLabelPoints[below](S);
+        \tkzDefPointBy[projection=onto Q--P](S);
+        \tkzGetPoint{T};
+        \tkzLabelPoints[above left](T);
+        \draw (P)--(Q)--(R)--cycle;
+        \draw (P)--(S)--(T);
+        \tkzMarkRightAngles[size=0.3](Q,T,S R,S,P Q,P,R);
+    \end{tikzpicture}
+
+    {\red
+    \begin{itemize}
+        \item Dans le triangle $PQR$, rectangle en $P$, le théorème de Pythagore permet d'écrire $QR^2=QP^2+PR^2$.
+        \item Dans le triangle $QTS$, rectangle en $T$, le théorème de Pythagore permet d'écrire $QS^2=QT^2+TS^2$.
+        \item Dans le triangle $PTS$, rectangle en $T$, le théorème de Pythagore permet d'écrire $PS^2=PT^2+TS^2$.
+        \item Dans le triangle $PSR$, rectangle en $S$, le théorème de Pythagore permet d'écrire $PR^2=PS^2+SR^2$.
+        \item Dans le triangle $PSQ$, rectangle en $S$, le théorème de Pythagore permet d'écrire $PQ^2=PS^2+SQ^2$.
+    \end{itemize}
+    }
