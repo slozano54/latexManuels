@@ -1,10 +1,63 @@
 \begin{exercice*}
-        \dots
-    \end{exercice*}
-    \begin{corrige}
-        %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-        % \phantom{rrr}
-        \dots
-    \end{corrige}
+    \begin{enumerate}
+        \item Compléter la figure sachant que :
+        \begin{itemize}
+            \item $TOC$ est un triangle.
+            \item $TO=\Lg[mm]{77}$, $OC=\Lg[mm]{35}$ et $CT=\Lg[mm]{85}$.
+        \end{itemize}
+
+        \medskip
+        \begin{tikzpicture}
+            \coordinate[label=above left:$\ldots$] (O) at (1,3);
+            \coordinate[label=below left:$\ldots$] (C) at (1,1);
+            \coordinate[label=above right:$\ldots$] (T) at (5,3);
+            \draw (T)--(O)--(C)--cycle;
+        \end{tikzpicture}
+        \item En supposant que $TOC$ soit un triangle rectangle, dire quel serait son hypoténuse.
+        \item Recopier et compléter après avoir calculer $CT^2$ et $CO^2+OT^2$.
+            $$\left.\begin{array}{l}
+            CT^2=\makebox[0.1\linewidth]{\dotfill}\\
+            \\
+            \ldots^2+\ldots^2=\makebox[0.1\linewidth]{\dotfill}\\
+            \end{array}
+            \right\rbrace CT^2\neq \ldots^2+\ldots^2$$
+        \item Conclure.
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    \begin{enumerate}
+        \item Compléter la figure sachant que :
+        \begin{itemize}
+            \item $TOC$ est un triangle.
+            \item $TO=\Lg[mm]{77}$, $OC=\Lg[mm]{35}$ et $CT=\Lg[mm]{85}$.
+        \end{itemize}
+
+        \medskip
+        \begin{tikzpicture}
+            \coordinate[label=above left: {\red $O$}] (O) at (1,3);
+            \coordinate[label=below left: {\red $C$}] (C) at (1,1);
+            \coordinate[label=above right:{\red $T$}] (T) at (5,3);
+            \draw (T)--(O)--(C)--cycle;
+        \end{tikzpicture}
+        \item En supposant que $TOC$ soit un triangle rectangle, dire quel serait son hypoténuse.
+        
+        {\red Ce serait son plus grand côt, c'est à dire $[CT]$.}
+        \item Recopier et compléter après avoir calculer $CT^2$ et $CO^2+OT^2$.
+            $$\left.\begin{array}{l}
+            CT^2={\red 85^2 = \num{7225}}\\
+            \\
+            {\red CO}^2+{\red OT}^2={\red 35^2 + 77^2}\\
+            {\red CO}^2+{\red OT}^2={\red \num{1225} + \num{5929}}\\
+            {\red CO}^2+{\red OT}^2={\red \num{7154}}\\
+            \end{array}
+            \right\rbrace CT^2\neq {\red CO}^2+{\red OT}^2$$
+        \item Conclure.
+        
+        {\red Si le triangle $TOC$ était rectangle, il le serait en $O$ et d'après la théorème de Pythagore, on aurait $CT^2=CO^2+OT^2$.\\
+        La contraposée du théorème de Pythagore permet donc de conclure que le triangle $TOC$ n'est pas rectangle.}
+    \end{enumerate}
+\end{corrige}
     
     
