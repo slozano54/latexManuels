@@ -1,9 +1,47 @@
 \begin{exercice*}
-    \ldots
+    Calculer en respectant les priorités opératoires.
+        \begin{multicols}{2}
+            \begin{spacing}{1.5}
+                \begin{list}{}{}
+                    \item $A=\left(\dfrac{1}{2}-\dfrac{3}{4}\right)\times\dfrac{16}{9}$
+                    \item $B=\dfrac{1}{2}-\dfrac{3}{4}\times\dfrac{16}{9}$
+                    \item $C=\dfrac{1}{5}-\dfrac{3}{10}\times\dfrac{1}{6}+\dfrac{1}{2}$
+                    \item $D=\left(\dfrac{1}{5}-\dfrac{3}{10}\right)\times\left(\dfrac{1}{6}+\dfrac{1}{2}\right)$
+                \end{list}
+            \end{spacing}
+        \end{multicols}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \ldots
+    Calculer en respectant les priorités opératoires.
+    % \begin{minipage}{1.1\linewidth}
+    %     \begin{multicols}{2}
+            \begin{spacing}{1.5}
+                \begin{itemize}
+                    \def\item{}
+                    \item $A=\left(\dfrac{1}{2}-\dfrac{3}{4}\right)\times\dfrac{16}{9}$\\
+                    {\red $A=\left(\dfrac{2}{4}-\dfrac{3}{4}\right)\times\dfrac{16}{9}$}\\
+                    {\red $A=-\dfrac{1}{4}\times\dfrac{4\times 4}{9}$}\\
+                    {\red $A=-\dfrac{4}{9}$}\\
+                    \item $B=\dfrac{1}{2}-\dfrac{3}{4}\times\dfrac{16}{9}$\\
+                    {\red $B=\dfrac{1}{2}-\dfrac{3}{4}\times\dfrac{4\times 4}{9}$}\\
+                    {\red $B=\dfrac{1}{2}-\dfrac{4}{3}$}\\
+                    {\red $B=\dfrac{3}{6}-\dfrac{8}{6}$}\\
+                    {\red $B=-\dfrac{5}{6}$}\\
+                    \item $C=\dfrac{1}{5}-\dfrac{3}{10}\times\dfrac{1}{6}+\dfrac{1}{2}$\\
+                    {\red $C=\dfrac{1}{5}-\dfrac{3}{10}\times\dfrac{1}{3\times 2}+\dfrac{1}{2}$}\\
+                    {\red $C=\dfrac{1}{5}-\dfrac{1}{20}+\dfrac{1}{2}$}\\
+                    {\red $C=\dfrac{4}{20}-\dfrac{1}{20}+\dfrac{10}{20}$}\\
+                    {\red $C=\dfrac{13}{20}$}\\
+                    \item $D=\left(\dfrac{1}{5}-\dfrac{3}{10}\right)\times\left(\dfrac{1}{6}+\dfrac{1}{2}\right)$\\
+                    {\red $D=\left(\dfrac{2}{10}-\dfrac{3}{10}\right)\times\left(\dfrac{1}{6}+\dfrac{3}{6}\right)$}\\
+                    {\red $D=-\dfrac{1}{10}\times\dfrac{4}{6}$}\\
+                    {\red $D=-\dfrac{1}{2\times 5}\times\dfrac{2}{3}$}\\
+                    {\red $D=-\dfrac{1}{15}$}
+                \end{itemize}
+            \end{spacing}
+    %     \end{multicols}
+    % \end{minipage}
 \end{corrige}
 
