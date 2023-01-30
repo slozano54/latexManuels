@@ -1,0 +1,167 @@
+\section{Rotation}
+\begin{definition}
+    $A’$ est l’image de $A$ par la rotation de \textbf{centre $\mathbf{O}$} et d’\textbf{angle $\mathbf{\alpha}$} dans le sens positif signifie que : 
+    \begin{itemize}
+        \item $\widehat{MOM'}=\mathbf{\alpha}$ de A vers A’ dans le sens positif.
+        \item $MO = OM’$
+    \end{itemize}
+\end{definition}
+
+\begin{definition}
+    Le \textbf{sens postif} est le sens inverse des aiguilles d'une montre.
+    
+    On dit aussi \textbf{sens direct}.
+\end{definition}
+
+\begin{remarque}
+    Le \textbf{sens indirect} est donc le sens des aiguilles d'une montre.
+    
+    On dit aussi \textbf{sens négatif}.
+\end{remarque}
+
+\begin{center}
+    \begin{minipage}{0.45\linewidth}
+        \includegraphics[scale=0.5]{\currentpath/images/coursRotationTux.png}
+    \end{minipage}
+    \begin{minipage}{0.45\linewidth}        
+        \begin{tikzpicture}[scale=1.25,>=triangle 45]
+            % Points
+            \coordinate (A) at (2,3);
+            \coordinate (B) at (4.5,3);
+            \tkzDefMidPoint(A,B);
+            \tkzGetPoint{I};
+            \coordinate (C) at (4,4);
+            \tkzDefMidPoint(A,C);
+            \tkzGetPoint{K};
+            \coordinate (O) at (2,0);
+            \tkzDrawPoints[shape=cross out](O);
+            \tkzLabelPoints(O);
+            % Tracés
+            \tkzDrawSegment[style=red, dim={$~r~$,-5pt,midway,font=\scriptsize,sloped}](I,B);
+            \draw (A)--(B)--(C)--(A);
+            \draw (K)--(I);
+            \tkzDrawPoints[shape=cross out](I);        
+            \tkzLabelPoints[below right](B);
+            \tkzLabelPoints[below left](A,I);
+            \tkzLabelPoints[above](C,K);
+            \tkzMarkRightAngles[size=0.1](A,K,I A,C,B);
+            \tkzDrawCircle(I,A);
+            % Images
+            \tkzDefPointBy[rotation=center O angle 100](A);\tkzGetPoint{A'};
+            \tkzDefPointBy[rotation=center O angle 100](B);\tkzGetPoint{B'};
+            \tkzDefPointBy[rotation=center O angle 100](C);\tkzGetPoint{C'};
+            \tkzDefPointBy[rotation=center O angle 100](K);\tkzGetPoint{K'};
+            \tkzDefPointBy[rotation=center O angle 100](I);\tkzGetPoint{I'};
+            % Tracés
+            \tkzDrawSegment[style=red, dim={$~r~$,-5pt,midway,font=\scriptsize,sloped}](I',B');
+            \draw (A')--(B')--(C')--(A');
+            \draw (K')--(I');
+            \tkzDrawPoints[shape=cross out](I');        
+            \tkzLabelPoints[above left](B');
+            \tkzLabelPoints[below right](A',I');
+            \tkzLabelPoints[above left](C');
+            \tkzLabelPoints(K');
+            \tkzMarkRightAngles[size=0.1](A',K',I' A',C',B');
+            \tkzDrawCircle(I',A');
+            % Traits de construction
+            \tkzDrawArc[dashed,color=orange,->](O,A)(A');
+            \tkzDrawArc[dashed,color=orange,->](O,C)(C');
+            \tkzDrawArc[dashed,color=orange,->](O,K)(K');
+            \tkzDrawArc[dashed,color=orange,->](O,I)(I');
+            \draw[dashed, color=orange](O)--(A);
+            \draw[dashed, color=orange](O)--(I);
+            \draw[dashed, color=orange](O)--(C);
+            \draw[dashed, color=orange](O)--(A');
+            \draw[dashed, color=orange](O)--(I');
+            \draw[dashed, color=orange](O)--(C');
+            \tkzMarkAngle[size=0.5](A,O,A');
+            \tkzLabelAngle[pos=0.8](A,O,A'){$\ang{100}$};
+            % Sens de rotation
+            \coordinate (sens) at (2,5);
+            \tkzDefPointBy[rotation= center O angle 15](sens);\tkzGetPoint{sens'};
+            \tkzDrawArc[->](O,sens)(sens');
+            \tkzLabelArc[above](O,sens,sens'){Sens positif};
+        \end{tikzpicture}
+    \end{minipage}
+\end{center}
+
+\begin{remarque}
+    Une rotation fait tourner une figure autour d’un point selon un angle.
+\end{remarque}
+
+\begin{myBox}{\infoComplementsNumeriques{pluriel}}
+    \begin{minipage}{\linewidth}
+        \hrefConstruction{https://www.geogebra.org/classic/ga6b2key}{Animation Geogebra Tux}
+        \creditGeogebra{David Evéquoz}
+    \end{minipage}
+
+    \begin{minipage}{\linewidth}
+        \hrefConstruction{https://www.geogebra.org/classic/g7cj6udr}{Animation Geogebra triangle}
+        \creditGeogebra{Élise Marchand}
+    \end{minipage}
+\end{myBox}
+
+\begin{methode*1}[Construction de l'image d'un point par rotation]    
+    \exercice
+    \begin{enumerate}
+        \item Construire l'image $M_1$ de $M$ par la rotation de centre $O$ et d'angle $\ang{140}$ dans le sens direct.
+        \item Construire l'image $M_2$ de $M$ par la rotation de centre $O$ et d'angle $\ang{60}$ dans le sens indirect.
+    \end{enumerate}
+    \correction
+    \begin{minipage}{0.45\linewidth}
+        \begin{tikzpicture}[scale=1,>=triangle 45]
+            % Points
+            \coordinate (M) at (4,0);
+            \coordinate (O) at (2,2);                
+            \tkzLabelPoints[left](O);
+            \tkzDefPointBy[rotation=center O angle 140](M);\tkzGetPoint{M1};
+            \tkzDefPointBy[rotation=center O angle -60](M);\tkzGetPoint{M2};
+            \tkzDrawPoints[shape=cross out,size=3pt](O,M1,M2);
+            \tkzDrawPoints[shape=cross,size=3pt](M);
+            \tkzLabelPoints[yshift=-0.2](M);
+            \tkzLabelPoint[left](M1){$M_1$};
+            \tkzLabelPoint[left](M2){$M_2$};
+            % Tracés
+            \tkzDrawLine[add = 0 and .3](O,M);
+            \tkzDrawLine[add = 0 and .3](O,M1);
+            \tkzDrawLine[add = 0 and .3](O,M2);
+            \tkzLabelLine[pos=1.25,right](O,M1){$x$}
+            \tkzLabelLine[pos=1.25,right](O,M2){$y$}
+            \tkzDrawArc[dashed,color=orange,->](O,M)(M1);
+            \tkzDrawArc[dashed,color=orange,<-](O,M2)(M);
+            \tkzMarkAngle[size=0.4](M,O,M1);
+            \tkzMarkAngle[size=0.6](M2,O,M);
+            \tkzLabelAngle[pos=0.8](M,O,M1){$\ang{140}$};
+            \tkzLabelAngle[pos=0.8](M2,O,M){$\ang{60}$};
+            \tkzMarkSegments[mark=||,size=3pt](O,M O,M1 O,M2);
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \textbf{Programme de construction}
+        \begin{enumerate}
+            \item Avec le rapporteur, en faisant attention au sens :
+            \begin{itemize}
+                \item Tracer la demi-droite $\left[Ox\right)$ pour construire $M_1$.
+                \item Tracer la demi-droite $\left[Oy\right)$ pour construire $M_2$.
+            \end{itemize}
+            \item Avec le compas pointé en $O$ :
+            \begin{itemize}
+                \item Reporter la longueur $OM$ sur $\left[Ox\right)$ pour $M_1$.
+                \item Reporter la longueur $OM$ sur $\left[Oy\right)$ pour $M_2$.
+            \end{itemize}
+            \item Le point d'intersection est l'image $M_1$ ou $M_2$ selon la question.
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+        \begin{minipage}{\linewidth}
+            \textbf{Construction de l'image :}
+
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_106.html}{d'un point sens direct}
+
+            \medskip
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_144.html}{d'un polygone par report au compas}
+            \creditInstrumentPoche
+        \end{minipage}
+    \end{myBox}
+\end{methode*1}
