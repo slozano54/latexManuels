@@ -1,9 +1,158 @@
 \begin{exercice*}
-    \dots
+    On considère l'hexagone régulier ci-dessous.\\
+    \begin{tikzpicture}[scale=1]
+        \coordinate (O) at (4,4);
+        \tkzLabelPoint[below,shift={(0,-0.2)}](O){$O$};
+        \coordinate[label=right:$A$] (A) at (7,4);
+        \tkzDefPointBy[rotation=center O angle 60](A);
+        \tkzGetPoint{B};
+        \tkzLabelPoint[above right](B){$B$};
+        \tkzDefPointBy[rotation=center O angle 60](B);
+        \tkzGetPoint{C};
+        \tkzLabelPoint[above left](C){$C$};
+        \tkzDefPointBy[rotation=center O angle 60](C);
+        \tkzGetPoint{D};
+        \tkzLabelPoint[left](D){$D$};
+        \tkzDefPointBy[rotation=center O angle 60](D);
+        \tkzGetPoint{E};
+        \tkzLabelPoint[below left](E){$E$};
+        \tkzDefPointBy[rotation=center O angle 60](E);
+        \tkzGetPoint{F};
+        \tkzLabelPoint[below right](F){$F$};
+        % \tkzCalcLength(O,A) \tkzGetLength{rOA}
+        % \tkzDefCircle[R](O,\rOA)
+        \draw (A)--(B)--(E)--(D)--(A)--(F)--(C)--(D);
+        \draw (C)--(B);
+        \draw (E)--(F);
+        \tkzDrawCircle(O,A)
+        \tkzMarkSegments[color=red,pos=0.5, mark=oo](A,B B,C C,D D,E E,F F,A A,O B,O C,O D,O E,O F,O);
+    \end{tikzpicture}
+    \begin{enumerate}
+        \item Par la rotation de centre $O$, d'angle \ang{60} et de sens anti-horaire, déterminer les images :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item du point $A$,
+                \item du point $F$,
+                \item du triangle $OBA$,
+                \item du losange $ODEF$.
+            \end{itemize}
+        \end{multicols}
+        \item Par la rotation de centre $C$, d'angle \ang{60} et de sens horaire, déterminer les images :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item du point $B$,
+                \item du point $A$,
+                \item du triangle $OBA$,
+                \item du losange $OABC$.
+            \end{itemize}
+        \end{multicols}
+        \item Déterminer les caractéristiques des rotations de centre $O$ telles que :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item $E$ est l'image de $A$,
+                \item $A$ est l'image de $D$,
+                \item $F$ est l'image de $E$,
+                \item $E$ est l'image de $F$.
+            \end{itemize}
+        \end{multicols}
+        \item Placer le point $G$, image du point $B$ par la rotation de centre $A$, d'angle \ang{60} dans le sens horaire.
+        \item Tracer l'image du losange $ODEF$ par la rotation de centre $F$, d'angle \ang{120} dans le sens horaire.
+        \item Placer le point $H$, image du point $B$ par la rotation de centre $O$, d'angle \ang{30} dans le sens anti-horaire.
+        \item Placer le point $I$, image du point $C$ par la rotation de centre $O$, d'angle \ang{150} dans le sens anti-horaire.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    On considère l'hexagone régulier ci-dessous.\\
+    \begin{tikzpicture}[scale=0.8]
+        \coordinate (O) at (4,4);
+        \tkzLabelPoint[below,shift={(0,-0.2)}](O){$O$};
+        \coordinate[label=right:$A$] (A) at (7,4);
+        \tkzDefPointBy[rotation=center O angle 60](A);
+        \tkzGetPoint{B};
+        \tkzLabelPoint[above right](B){$B$};
+        \tkzDefPointBy[rotation=center O angle 60](B);
+        \tkzGetPoint{C};
+        \tkzLabelPoint[above left](C){$C$};
+        \tkzDefPointBy[rotation=center O angle 60](C);
+        \tkzGetPoint{D};
+        \tkzLabelPoint[left](D){$D$};
+        \tkzDefPointBy[rotation=center O angle 60](D);
+        \tkzGetPoint{E};
+        \tkzLabelPoint[below left](E){$E$};
+        \tkzDefPointBy[rotation=center O angle 60](E);
+        \tkzGetPoint{F};
+        \tkzLabelPoint[below right](F){$F$};
+        \draw (A)--(B)--(E)--(D)--(A)--(F)--(C)--(D);
+        \draw (C)--(B);
+        \draw (E)--(F);
+        \tkzDrawCircle(O,A)
+        \tkzMarkSegments[color=red,pos=0.5, mark=oo](A,B B,C C,D D,E E,F F,A A,O B,O C,O D,O E,O F,O);
+        % Construction
+        \tkzDefPointBy[rotation=center A angle -60](B);
+        \tkzGetPoint{G};
+        \tkzLabelPoint[above right](G){$G$};
+        \draw[red] (B)--(G)--(A);
+        \tkzPicAngle["{\red $\ang{60}$}",draw=red,<-,angle eccentricity=1.4,angle radius=0.7cm](G,A,B);
+        \tkzMarkSegments[color=red,pos=0.5, mark=oo](B,G G,A);
+        %%%%
+        \tkzDefPointBy[rotation=center F angle -120](O);
+        \tkzGetPoint{O'};
+        \tkzDefPointBy[rotation=center F angle -120](D);
+        \tkzGetPoint{D'};
+        \draw[red] (O')--(D')--(A)--(F)--cycle;
+        \tkzPicAngle["{\red $\ang{120}$}",draw=red,<-,angle eccentricity=1.4,angle radius=0.7cm](A,F,E);
+        %%%%
+        \tkzDefPointBy[rotation=center O angle 30](B);
+        \tkzGetPoint{H};
+        \tkzLabelPoint[above](H){{\red $H$}};
+        \draw[dashed,color=red] (O)--(H);
+        \tkzPicAngle["{\red $\ang{30}$}",draw=red,->,angle eccentricity=1.4,angle radius=1cm](B,O,H);
+        %%%%
+        \tkzDefPointBy[rotation=center O angle 150](C);
+        \tkzGetPoint{I};
+        \tkzLabelPoint[below](I){{\red $I$}};
+        \draw[dashed,color=red] (O)--(I);
+        \tkzPicAngle["{\red $\ang{150}$}",draw=red,->,angle eccentricity=1.4,angle radius=1cm](C,O,I);
+    \end{tikzpicture}
+
+    \begin{enumerate}
+        \item Par la rotation de centre $O$, d'angle \ang{60} et de sens anti-horaire, déterminer les images :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item du point $A$ : {\red $B$}.
+                \item du point $F$ : {\red $A$}.
+                \item du triangle $OBA$ : {\red $OCB$}.
+                \item du losange $ODEF$ : {\red $OEFA$}.
+            \end{itemize}
+        \end{multicols}
+        \item Par la rotation de centre $C$, d'angle \ang{60} et de sens horaire, déterminer les images :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item du point $B$ : {\red $O$}
+                \item du point $A$ : {\red $E$}
+                \item du triangle $OBA$ : {\red $DOE$},
+                \item du losange $OABC$ : {\red $DEOC$}.
+            \end{itemize}
+        \end{multicols}
+        \item Déterminer les caractéristiques des rotations de centre $O$ telles que :
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item $E$ est l'image de $A$ : {\red \ang{120} dans le sens horaire.}
+                \item $A$ est l'image de $D$ : {\red \ang{180} dans le sens horaire ou anti-horaire.}
+                \item $F$ est l'image de $E$ : {\red \ang{60} dans le sens anti-horaire.}
+                \item $E$ est l'image de $F$ : {\red \ang{60} dans le sens anti-horaire.}
+            \end{itemize}
+        \end{multicols}
+        \item Placer le point $G$, image du point $B$ par la rotation de centre $A$, d'angle \ang{60} dans le sens horaire. {\red cf figure.}
+        \item Tracer l'image du losange $ODEF$ par la rotation de centre $F$, d'angle \ang{120} dans le sens horaire. {\red cf figure.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item Placer le point $H$, image du point $B$ par la rotation de centre $O$, d'angle \ang{30} dans le sens anti-horaire. {\red cf figure.}
+        \item Placer le point $I$, image du point $C$ par la rotation de centre $O$, d'angle \ang{150} dans le sens anti-horaire. {\red cf figure.}
+    \end{enumerate}
 \end{corrige}
 
