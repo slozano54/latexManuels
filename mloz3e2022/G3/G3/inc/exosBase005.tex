@@ -1,5 +1,36 @@
 \begin{exercice*}
-    sesa-ex5
+    Dans cet exercice, toutes les rotations sont de centre $A$.\\
+    \begin{tikzpicture}[scale=1]
+        \coordinate (A) at (4,4);
+        \tkzLabelPoint[below,shift={(0,-0.2)}](A){$A$};
+        \coordinate[label=above left:$C$] (C) at (4,6);
+        \coordinate[label=above:$B$] (B) at (4,7);        
+        \tkzDrawCircle(A,B);
+        \tkzDrawCircle(A,C);
+        % \coordinate[label=right:$A$] (A) at (7,4);
+        % \tkzDefPointBy[rotation=center O angle 60](A);
+        % \tkzGetPoint{B};
+        % \tkzLabelPoint[above right](B){$B$};
+        % \tkzDefPointBy[rotation=center O angle 60](B);
+        % \tkzGetPoint{C};
+        % \tkzLabelPoint[above left](C){$C$};
+        % \tkzDefPointBy[rotation=center O angle 60](C);
+        % \tkzGetPoint{D};
+        % \tkzLabelPoint[left](D){$D$};
+        % \tkzDefPointBy[rotation=center O angle 60](D);
+        % \tkzGetPoint{E};
+        % \tkzLabelPoint[below left](E){$E$};
+        % \tkzDefPointBy[rotation=center O angle 60](E);
+        % \tkzGetPoint{F};
+        % \tkzLabelPoint[below right](F){$F$};
+        % % \tkzCalcLength(O,A) \tkzGetLength{rOA}
+        % % \tkzDefCircle[R](O,\rOA)
+        % \draw (A)--(B)--(E)--(D)--(A)--(F)--(C)--(D);
+        % \draw (C)--(B);
+        % \draw (E)--(F);
+        % \tkzDrawCircle(O,A)
+        % \tkzMarkSegments[color=red,pos=0.5, mark=oo](A,B B,C C,D D,E E,F F,A A,O B,O C,O D,O E,O F,O);
+    \end{tikzpicture}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
