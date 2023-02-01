@@ -117,7 +117,8 @@
             \tkzDefPointBy[rotation=center O angle 140](M);\tkzGetPoint{M1};
             \tkzDefPointBy[rotation=center O angle -60](M);\tkzGetPoint{M2};
             \tkzDrawPoints[shape=cross out,size=3pt](O,M1,M2);
-            \tkzDrawPoints[shape=cross,size=3pt](M);
+            %\tkzDrawPoint[shape=cross,size=3pt](M);
+            \tkzDrawPoint[shape=cross out,size=3pt](M); % La commande ci-dessus plante depuis maj v5
             \tkzLabelPoints[yshift=-0.2](M);
             \tkzLabelPoint[left](M1){$M_1$};
             \tkzLabelPoint[left](M2){$M_2$};

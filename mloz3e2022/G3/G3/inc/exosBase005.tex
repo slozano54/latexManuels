@@ -7,29 +7,35 @@
         \coordinate[label=above:$B$] (B) at (4,7);        
         \tkzDrawCircle(A,B);
         \tkzDrawCircle(A,C);
-        % \coordinate[label=right:$A$] (A) at (7,4);
-        % \tkzDefPointBy[rotation=center O angle 60](A);
-        % \tkzGetPoint{B};
-        % \tkzLabelPoint[above right](B){$B$};
-        % \tkzDefPointBy[rotation=center O angle 60](B);
-        % \tkzGetPoint{C};
-        % \tkzLabelPoint[above left](C){$C$};
-        % \tkzDefPointBy[rotation=center O angle 60](C);
-        % \tkzGetPoint{D};
-        % \tkzLabelPoint[left](D){$D$};
-        % \tkzDefPointBy[rotation=center O angle 60](D);
-        % \tkzGetPoint{E};
-        % \tkzLabelPoint[below left](E){$E$};
-        % \tkzDefPointBy[rotation=center O angle 60](E);
-        % \tkzGetPoint{F};
-        % \tkzLabelPoint[below right](F){$F$};
-        % % \tkzCalcLength(O,A) \tkzGetLength{rOA}
-        % % \tkzDefCircle[R](O,\rOA)
-        % \draw (A)--(B)--(E)--(D)--(A)--(F)--(C)--(D);
-        % \draw (C)--(B);
-        % \draw (E)--(F);
-        % \tkzDrawCircle(O,A)
-        % \tkzMarkSegments[color=red,pos=0.5, mark=oo](A,B B,C C,D D,E E,F F,A A,O B,O C,O D,O E,O F,O);
+        %%%%
+        \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
+        \tkzLabelPoint[above left](T){$T$};
+        \tkzLabelPoint[above](U){$U$};
+        %%%%
+        \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
+        \tkzLabelPoint[left](R){$R$};
+        \tkzLabelPoint[above](S){$S$};   
+        %%%%
+        \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
+        \tkzLabelPoint[left](P){$P$};
+        \tkzLabelPoint[above left](Q){$Q$};
+        %%%%
+        \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
+        \tkzLabelPoint[below left](N){$N$};
+        \tkzLabelPoint[below left](O){$O$};
+        %%%
+        \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
+        \tkzLabelPoint[below](L){$L$};
+        \tkzLabelPoint[below left](M){$M$};
+        \tkzLabelPoint[below right](J){$J$};
+        \tkzLabelPoint[below right](K){$K$};
+        \tkzLabelPoint[right](H){$H$};
+        \tkzLabelPoint[right](I){$I$};
+        \tkzLabelPoint[right](G){$G$};
+        \tkzLabelPoint[right](F){$F$};
+        \tkzLabelPoint[above right](D){$D$};
+        \tkzLabelPoint[above right](E){$E$};
+        \tkzDrawSegments(B,L T,J R,H P,F N,D);
     \end{tikzpicture}
 \end{exercice*}
 \begin{corrige}
