@@ -1,46 +1,134 @@
 \begin{exercice*}
     Dans cet exercice, toutes les rotations sont de centre $A$.\\
-    \begin{tikzpicture}[scale=1]
-        \coordinate (A) at (4,4);
-        \tkzLabelPoint[below,shift={(0,-0.2)}](A){$A$};
-        \coordinate[label=above left:$C$] (C) at (4,6);
-        \coordinate[label=above:$B$] (B) at (4,7);        
-        \tkzDrawCircle(A,B);
-        \tkzDrawCircle(A,C);
-        %%%%
-        \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
-        \tkzLabelPoint[above left](T){$T$};
-        \tkzLabelPoint[above](U){$U$};
-        %%%%
-        \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
-        \tkzLabelPoint[left](R){$R$};
-        \tkzLabelPoint[above](S){$S$};   
-        %%%%
-        \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
-        \tkzLabelPoint[left](P){$P$};
-        \tkzLabelPoint[above left](Q){$Q$};
-        %%%%
-        \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
-        \tkzLabelPoint[below left](N){$N$};
-        \tkzLabelPoint[below left](O){$O$};
-        %%%
-        \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
-        \tkzLabelPoint[below](L){$L$};
-        \tkzLabelPoint[below left](M){$M$};
-        \tkzLabelPoint[below right](J){$J$};
-        \tkzLabelPoint[below right](K){$K$};
-        \tkzLabelPoint[right](H){$H$};
-        \tkzLabelPoint[right](I){$I$};
-        \tkzLabelPoint[right](G){$G$};
-        \tkzLabelPoint[right](F){$F$};
-        \tkzLabelPoint[above right](D){$D$};
-        \tkzLabelPoint[above right](E){$E$};
-        \tkzDrawSegments(B,L T,J R,H P,F N,D);
-    \end{tikzpicture}
+    \begin{minipage}{0.6\linewidth}
+        \scalebox{0.7}{
+            \begin{tikzpicture}
+                \coordinate (A) at (4,4);
+                \tkzLabelPoint[below,shift={(0.1,-0.2)}](A){$A$};
+                \coordinate[label=above left:$C$] (C) at (4,6);
+                \coordinate[label=above:$B$] (B) at (4,7);        
+                \tkzDrawCircle(A,B);
+                \tkzDrawCircle(A,C);
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
+                \tkzLabelPoint[above left](T){$T$};
+                \tkzLabelPoint[above,shift={(0.1,0.1)}](U){$U$};
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
+                \tkzLabelPoint[left](R){$R$};
+                \tkzLabelPoint[above,shift={(-0.1,0.1)}](S){$S$};   
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
+                \tkzLabelPoint[left](P){$P$};
+                \tkzLabelPoint[below,shift={(-0.1,0)}](Q){$Q$};
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
+                \tkzLabelPoint[below left,shift={(0.1,0.1)}](N){$N$};
+                \tkzLabelPoint[below](O){$O$};
+                %%%
+                \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
+                \tkzLabelPoint[below](L){$L$};
+                \tkzLabelPoint[below left](M){$M$};
+                \tkzLabelPoint[below](J){$J$};
+                \tkzLabelPoint[below,shift={(-0.1,-0.1)}](K){$K$};
+                \tkzLabelPoint[right](H){$H$};
+                \tkzLabelPoint[below](I){$I$};
+                \tkzLabelPoint[above,shift={(0.1,0.1)}](G){$G$};
+                \tkzLabelPoint[right](F){$F$};
+                \tkzLabelPoint[above](D){$D$};
+                \tkzLabelPoint[above,shift={(0,0.1)}](E){$E$};
+                \tkzDrawSegments(B,L T,J R,H P,F N,D);
+            \end{tikzpicture}
+        }
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        Sens horaire : {\Large $\circlearrowright$}\\
+        Sens anti-horaire : {\Large $\circlearrowleft$}
+    \end{minipage}
+
+    Compléter le tableau.
+    
+    \medskip
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|*{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
+        \hline
+        \rowcolor{gray!20} Triangle&Angle&Sens de rotation&Image\\\hline
+        $ASU$&\ang{36}&{\Large $\circlearrowright$}&\\\hline
+        &\ang{72}&{\Large $\circlearrowleft$}&$ANL$\\\hline
+        $ATR$&&{\Large $\circlearrowleft$}&$ALJ$\\\hline
+        $AUE$&\ang{72}&&$AEI$\\\hline
+        $ASG$&\ang{180}&{\Large $\circlearrowleft$} ou {\Large $\circlearrowright$}&\\\hline
+        $APN$&&{\Large $\circlearrowleft$}&$AJH$\\\hline
+    \end{tabular}
+    }
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    Dans cet exercice, toutes les rotations sont de centre $A$.\\    
+    \begin{minipage}{0.5\linewidth}
+        \hspace*{-10mm}
+        \scalebox{0.7}{
+            \begin{tikzpicture}
+                \coordinate (A) at (4,4);
+                \tkzLabelPoint[below,shift={(0.1,-0.2)}](A){$A$};
+                \coordinate[label=above left:$C$] (C) at (4,6);
+                \coordinate[label=above:$B$] (B) at (4,7);        
+                \tkzDrawCircle(A,B);
+                \tkzDrawCircle(A,C);
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
+                \tkzLabelPoint[above left](T){$T$};
+                \tkzLabelPoint[above,shift={(0.1,0.1)}](U){$U$};
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
+                \tkzLabelPoint[left](R){$R$};
+                \tkzLabelPoint[above,shift={(-0.1,0.1)}](S){$S$};   
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
+                \tkzLabelPoint[left](P){$P$};
+                \tkzLabelPoint[below,shift={(-0.1,0)}](Q){$Q$};
+                %%%%
+                \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
+                \tkzLabelPoint[below left,shift={(0.1,0.1)}](N){$N$};
+                \tkzLabelPoint[below](O){$O$};
+                %%%
+                \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
+                \tkzLabelPoint[below](L){$L$};
+                \tkzLabelPoint[below left](M){$M$};
+                \tkzLabelPoint[below](J){$J$};
+                \tkzLabelPoint[below,shift={(-0.1,-0.1)}](K){$K$};
+                \tkzLabelPoint[right](H){$H$};
+                \tkzLabelPoint[below](I){$I$};
+                \tkzLabelPoint[above,shift={(0.1,0.1)}](G){$G$};
+                \tkzLabelPoint[right](F){$F$};
+                \tkzLabelPoint[above](D){$D$};
+                \tkzLabelPoint[above,shift={(0,0.1)}](E){$E$};
+                \tkzDrawSegments(B,L T,J R,H P,F N,D);
+            \end{tikzpicture}
+        }
+    \end{minipage}
+    \begin{minipage}{0.45\linewidth}
+        Sens horaire : {\Large $\circlearrowright$}\\
+        Sens anti-horaire : {\Large $\circlearrowleft$}
+    \end{minipage}
+
+    \Coupe
+
+    Compléter le tableau.
+    
+    \medskip
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|*{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
+        \hline
+        \rowcolor{gray!20} Triangle&Angle&Sens de rotation&Image\\\hline
+        $ASU$&\ang{36}&{\Large $\circlearrowright$}&{\red $AUC$}\\\hline
+        {\red $APR$}&\ang{72}&{\Large $\circlearrowleft$}&$ANL$\\\hline
+        $ATR$&{\red \ang{144}}&{\Large $\circlearrowleft$}&$ALJ$\\\hline
+        $AUE$&\ang{72}&{\red $H$}&$AEI$\\\hline
+        $ASG$&\ang{180}&{\Large $\circlearrowleft$} ou {\Large $\circlearrowright$}&{\red $AIQ$}\\\hline
+        $APN$&{\red \ang{108}}&{\Large $\circlearrowleft$}&$AJH$\\\hline
+    \end{tabular}
+    }
 \end{corrige}
 
