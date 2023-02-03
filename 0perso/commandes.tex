@@ -547,3 +547,40 @@
         \coordinate[label=below:{\fontsize{60}{60}\selectfont\bfseries $\pi$}] (pi) at (-0.3,0.3);
     \end{tikzpicture}
 }
+
+% Grid isometrique
+% #1 -> nombre d'unités en abscisse
+% #2 -> nombre de double-unités en ordonnée
+\newcommand{\isometricGrid}[3][black!30]{%
+    \def\nx{#2}
+    \pgfmathsetmacro\nxx{\nx-1}
+    \def\ny{#3} 
+
+    \draw[color=#1] (0,0) -- (\nx +1,0);
+    \foreach \j in {0,...,\ny} {
+        \foreach \i in {0,...,\nx} {
+            \draw[color=#1](0:\i)++(60:\j) ++(120:\j)--++(60:2)--++(-1,0)--++(-60:1)--++(-60:1);
+        }
+        \foreach \i in {0,...,\nxx} {
+            \draw[color=#1](0:\i+0.5)++(90:{(1+2*\j)*sin(60)})--++(1,0);
+        }
+    }
+}
+
+% Grid pointée isometrique
+% #1 -> nombre d'unités en abscisse
+% #2 -> nombre de double-unités en ordonnée
+\newcommand{\isometricPointGrid}[2]{%
+    \def\nx{#1}
+    \pgfmathsetmacro\nxx{\nx-1}
+    \def\ny{#2} 
+
+    \foreach \j in {0,...,\ny} {
+        \foreach \i in {0,...,\nx} {
+            \fill(0:\i)++(60:\j) ++(120:\j)  circle (0.05) node {} ++(60:2) circle (0.05) node {} ++(-1,0) circle (0.05) node {} ++(-60:1) circle (0.05) node {} ++(-60:1) circle (0.05) node {};
+        }
+        \foreach \i in {0,...,\nxx} {
+            \fill(0:\i+0.5)++(90:{(1+2*\j)*sin(60)})++(1,0);
+        }
+    }
+}
