@@ -32,7 +32,17 @@
             \coordinate[label=left:$M$] (M) at (2.5,0.865);
             \coordinate[label=left:$L$] (L) at (2,3.46);
             \tkzDrawPoints[shape=cross out,size=3pt](L,M);
-        \end{tikzpicture} 
+        \end{tikzpicture}
+        \begin{Geometrie}
+            trace papiertriangle withcolor gris;
+            pair L,M;
+            L=pptri(0,4);
+            M=pptri(2,1);
+            marque_p:="croix";
+            pointe(M,L);
+            label.lft(btex $M$ etex,M);
+            label.lft(btex $L$ etex,L);	
+        \end{Geometrie} 
     \end{enumerate}
 \end{exercice*}
 \begin{corrige}
