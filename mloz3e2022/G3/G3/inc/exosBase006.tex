@@ -27,13 +27,19 @@
             \tkzDrawPoints[shape=cross out,size=3pt](H,G);
         \end{tikzpicture}
         \item Construire $N$, l'image de $M$ par la rotation de centre $L$ et d'angle \ang{120}.\\
-        \begin{tikzpicture}[scale=0.6]        
-            \isometricGrid{5}{3}
-            \coordinate[label=left:$M$] (M) at (2.5,0.865);
-            \coordinate[label=left:$L$] (L) at (2,3.46);
-            \tkzDrawPoints[shape=cross out,size=3pt](L,M);
-        \end{tikzpicture}
-        \begin{Geometrie}
+        % \begin{tikzpicture}[scale=0.6]        
+        %     \isometricGrid{5}{3}
+        %     \coordinate[label=left:$M$] (M) at (2.5,0.865);
+        %     \coordinate[label=left:$L$] (L) at (2,3.46);
+        %     \tkzDrawPoints[shape=cross out,size=3pt](L,M);
+        % \end{tikzpicture}
+        \begin{Geometrie}[CoinHD={(3u,4u)}]
+            % Pour changer la taille de la Grid
+            coeff:=0.6;
+            uni:=true;
+            x.u:=coeff*cm;
+            y.u:=coeff*(sqrt(3)/2)*cm;
+            %%%   
             trace papiertriangle withcolor gris;
             pair L,M;
             L=pptri(0,4);
@@ -42,7 +48,7 @@
             pointe(M,L);
             label.lft(btex $M$ etex,M);
             label.lft(btex $L$ etex,L);	
-        \end{Geometrie} 
+        \end{Geometrie}
     \end{enumerate}
 \end{exercice*}
 \begin{corrige}
@@ -90,15 +96,38 @@
     \begin{enumerate}
         \setcounter{enumi}{3}
         \item Construire $N$, l'image de $M$ par la rotation de centre $L$ et d'angle \ang{120}.\\
-        \begin{tikzpicture}[scale=0.6]        
-            \isometricGrid{5}{3}
-            \coordinate[label=left:$M$] (M) at (2.5,0.865);
-            \coordinate[label=left:$L$] (L) at (2,3.46);
-            \tkzDrawPoints[shape=cross out,size=3pt](L,M);
+        % \begin{tikzpicture}[scale=0.6]        
+        %     \isometricGrid{5}{3}
+        %     \coordinate[label=left:$M$] (M) at (2.5,0.865);
+        %     \coordinate[label=left:$L$] (L) at (2,3.46);
+        %     \tkzDrawPoints[shape=cross out,size=3pt](L,M);
+        %     %%%
+        %     \coordinate[label=above left:{\red $N$}] (N) at (4,5.19);
+        %     \tkzDrawPoints[shape=cross out,size=3pt,color=red](N);
+        % \end{tikzpicture} 
+        \begin{Geometrie}[CoinHD={(3u,4u)}]
+            % Pour changer la taille de la Grid
+            coeff:=0.6;
+            uni:=true;
+            x.u:=coeff*cm;
+            y.u:=coeff*(sqrt(3)/2)*cm;
+            %%%            
+            trace papiertriangle withcolor gris;
+            pair L,M;
+            L=pptri(0,4);
+            M=pptri(2,1);
+            marque_p:="croix";
+            pointe(M,L);
+            label.lft(btex $M$ etex,M);
+            label.lft(btex $L$ etex,L);	
             %%%
-            \coordinate[label=above left:{\red $N$}] (N) at (4,5.19);
-            \tkzDrawPoints[shape=cross out,size=3pt,color=red](N);
-        \end{tikzpicture} 
+            pair N;
+            N=pptri(1,6);
+            drawoptions(withcolor red);
+            pointe(N);
+            label.ulft(btex $N$ etex,N);	 
+            drawoptions();
+        \end{Geometrie}
     \end{enumerate}
 \end{corrige}
 

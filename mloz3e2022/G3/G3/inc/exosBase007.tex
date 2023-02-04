@@ -2,6 +2,7 @@
     \begin{enumerate}
         \item Construire, en rouge, l'image du triangle $ABC$ par la rotation de centre $R$ et d'angle \ang{90} dans le sens indiqué sur la figure.
         \item Construire, en vert, l'image du triangle $ABC$ par la rotation de centre $R$ et d'angle \ang{270} dans le sens indiqué sur la figure.
+        \item Déterminer une autre rotation permettant d'obtenir la figure verte.
     \end{enumerate}
     \begin{tikzpicture}[scale = 0.4]
         \draw[help lines, color=black!30] (0,0) grid (18,12);        
@@ -20,6 +21,35 @@
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Construire, en rouge, l'image du triangle $ABC$ par la rotation de centre $R$ et d'angle \ang{90} dans le sens indiqué sur la figure.
+        \item Construire, en vert, l'image du triangle $ABC$ par la rotation de centre $R$ et d'angle \ang{270} dans le sens indiqué sur la figure.
+        \item Déterminer une autre rotation permettant d'obtenir la figure verte.\\
+        {\red La figure verte peut également être obtenue par la rotation de centre $R$ et d'angle \ang{90} dans le sens inverse de celui indiqué sur la figure.}
+    \end{enumerate}
+    \begin{tikzpicture}[scale = 0.4]
+        \draw[help lines, color=black!30] (0,0) grid (18,12);        
+        \coordinate[label=above left:$R$] (R) at (9,6);
+        \tkzDrawPoints[shape=cross out,size=3pt](R);
+        \coordinate[label=left:$A$] (A) at (11,8);
+        \coordinate[label=above:$B$] (B) at (13,10);
+        \coordinate[label=below:$C$] (C) at (15,5);
+        \draw (A)--(B)--(C)--cycle;
+        \coordinate (O) at (15,9);
+        \coordinate (M) at (17,9);
+        \coordinate (N) at (15,11);
+        \tkzDrawArc[thick,->](O,M)(N);
+        %%% Correction
+        \tkzDefPointsBy[rotation=center R angle 90](A,B,C){A1,B1,C1};        
+        \tkzLabelPoint[below,color=red](A1){$A_1$};
+        \tkzLabelPoint[below,color=red](B1){$B_1$};
+        \tkzLabelPoint[below right,color=red](C1){$C_1$};
+        \draw[red] (A1)--(B1)--(C1)--cycle;
+        \tkzDefPointsBy[rotation=center R angle 270](A,B,C){A2,B2,C2};        
+        \tkzLabelPoint[above,color=mygreen](A2){$A_2$};
+        \tkzLabelPoint[below,color=mygreen](B2){$B_2$};
+        \tkzLabelPoint[above left,color=mygreen](C2){$C_2$};
+        \draw[mygreen] (A2)--(B2)--(C2)--cycle;
+    \end{tikzpicture}
 \end{corrige}
 
