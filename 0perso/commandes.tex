@@ -549,8 +549,9 @@
 }
 
 % Grid isometrique
-% #1 -> nombre d'unités en abscisse
-% #2 -> nombre de double-unités en ordonnée
+% #1 -> couleur de la grid, black!30 par défaut
+% #2 -> nombre d'unités en abscisse
+% #3 -> nombre de double-unités en ordonnée
 \newcommand{\isometricGrid}[3][black!30]{%
     \def\nx{#2}
     \pgfmathsetmacro\nxx{\nx-1}
