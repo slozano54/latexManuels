@@ -1,9 +1,49 @@
 \begin{exercice*}
-    \dots
+    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
+    \hspace*{-10mm}
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoDouze
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
+
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoDouze
+        %%% Correction
+        pointe(O);
+        label.urt(btex $O$ etex,O);
+        marque_s:=2;
+        drawoptions(withcolor red);
+        trace mediatrice(C,CC);
+        trace segment(C,CC);
+        trace Codelongueur(C,milieu(C,CC),2);
+        trace Codelongueur(CC,milieu(C,CC),2);
+        trace codeperp(O,milieu(C,CC),CC,5);
+        drawoptions(withcolor blue);
+        trace mediatrice(B,BB);
+        trace segment(B,BB);
+        trace Codelongueur(B,milieu(B,BB),1);
+        trace Codelongueur(BB,milieu(B,BB),1);
+        trace codeperp(O,milieu(B,BB),BB,5);
+        drawoptions(withcolor \myMetapostGreen);
+        trace mediatrice(A,AA);
+        trace segment(A,AA);
+        trace Codelongueur(A,milieu(A,AA),3);
+        trace Codelongueur(AA,milieu(A,AA),3);
+        trace codeperp(O,milieu(A,AA),A,5);
+        drawoptions(dashed evenly withcolor (0.5,0,1));
+        trace segment(C,O);
+        trace segment(CC,O);
+        drawoptions(withcolor (0.5,0,1));
+        pair CCC;
+        CCC=milieu(O,milieu(O,C));
+        drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
+        label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
+        drawoptions();   
+    
+    \end{Geometrie}
 \end{corrige}
 

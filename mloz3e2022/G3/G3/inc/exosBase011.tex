@@ -1,9 +1,39 @@
 \begin{exercice*}
-    \dots
+    \begin{enumerate}
+        \item Construire en rouge l'image du quadrilatère $ABCD$ par la rotation de centre $B$, d'angle \ang{75}, dans le sens anti-horaire.
+        \item Construire en vert l'image du quadrilatère $ABCD$ par la rotation de centre $O$, d'angle \ang{100}, dans le sens horaire.
+    \end{enumerate}
+    \hspace*{-10mm}
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoOnze
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Construire en rouge l'image du quadrilatère $ABCD$ par la rotation de centre $B$, d'angle \ang{75}, dans le sens anti-horaire.
+        \item Construire en vert l'image du quadrilatère $ABCD$ par la rotation de centre $O$, d'angle \ang{100}, dans le sens horaire.
+    \end{enumerate}
+
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoOnze
+        %%% Correction 1
+        drawoptions(withcolor red);
+        trace rotation(quadrilatereABCD,B,75);
+        drawarrow A..rotation(A,B,37.5)..rotation(A,B,75);
+        label.top(btex $\ang{75}$ etex,rotation(A,B,37.5));
+        label.lft(btex $A_1$ etex,rotation(A,B,75));
+        %%% Correction 2
+        drawoptions(withcolor \myMetapostGreen);
+        trace rotation(quadrilatereABCD,O,-100);         
+        drawarrow A..rotation(A,O,-50)..rotation(A,O,-100);         
+        label.urt(btex $\ang{100}$ etex,rotation(A,O,-50));
+        label.bot(btex $A_2$ etex,rotation(A,O,-100));
+        drawoptions(dashed evenly withcolor \myMetapostGreen);
+        trace segment(O,A);
+        trace segment(O,rotation(A,O,-100));
+        drawoptions(); 
+    \end{Geometrie}
 \end{corrige}
 
