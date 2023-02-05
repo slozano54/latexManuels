@@ -585,3 +585,52 @@
         }
     }
 }
+
+%==========================================
+% Metapost
+%==========================================
+\newcommand{\enonceTroisiemeGTroisExoNeuf}{
+    pair O,A,L,M,N;
+    path cc;
+    L=u*(5.5,4.5);
+    cc=cercles(L,u);
+    M=pointarc(cc,0);
+    N=pointarc(cc,90);
+    O=u*(3.5,3);
+    A=u*(6,3);
+    marque_p:="croix";
+    pointe(O,A);
+    label.top(btex $O$ etex,O);
+    label.urt(btex $A$ etex,A);
+    trace cercles(O,A);
+    drawarrow arccercle(M,N,L);
+    label.llft(btex $(\mathcal{C})$ etex, pointarc(cercles(O,A),220));
+}
+
+\newcommand{\enonceTroisiemeGTroisExoDix}{
+    pair O,A,B,C,D,E;
+    O=u*(3.5,3);
+    A=u*(6,3);
+    B = rotation(A,O,75);
+    C = rotation(B,O,75);
+    D = rotation(C,O,75);
+    E = rotation(D,O,75);
+    marque_p:="croix";
+    pointe(O,A,B,C,D,E);
+    trace cercles(O,A);
+    label.lrt(btex $O$ etex, O);
+    label.urt(btex $A$ etex, A);
+    label.top(btex $B$ etex, B);
+    label.ulft(btex $C$ etex, C);
+    label.bot(btex $D$ etex, D);
+    label.lrt(btex $E$ etex, E);
+    label.lft(btex $(\mathcal{C})$ etex, pointarc(cercles(O,A),210));
+    pair AA,BB,CC,DD,EE;
+    AA = rotation(A,O,70);    
+    DD = rotation(D,O,70);
+    BB = rotation(B,O,-45);
+    CC = rotation(C,O,-45);
+    EE = rotation(E,O,-45);
+    path cc;
+    cc = cercles(O,.5*u);  
+}

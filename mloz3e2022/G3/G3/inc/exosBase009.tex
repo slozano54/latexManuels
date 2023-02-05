@@ -6,28 +6,13 @@
     \end{enumerate}
     \begin{center}
         \begin{Geometrie}[CoinHD={(7u,6u)}]
-            % trace grille(0.5) withcolor gris;
-            pair O,A,L,M,N;
-            path cc;
-            L=u*(5.5,4.5);
-            cc=cercles(L,u);
-            M=pointarc(cc,0);
-            N=pointarc(cc,90);
-            O=u*(3.5,3);
-            A=u*(6,3);
-            marque_p:="croix";
-            pointe(O,A);
-            label.top(btex $O$ etex,O);
-            label.urt(btex $A$ etex,A);
-            trace cercles(O,A);
-            drawarrow arccercle(M,N,L);
-            trace rapporteurdouble(O,A,1);
+            \enonceTroisiemeGTroisExoNeuf
         \end{Geometrie}
     \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
+    % \phantom{rrr}        
     $(\mathcal{C})$ est un cercle de centre $O$ passant par $A$.
 
     \begin{enumerate}
@@ -36,22 +21,7 @@
     \end{enumerate}
     \begin{center}
         \begin{Geometrie}[CoinHD={(7u,6u)}]
-            % trace grille(0.5) withcolor gris;
-            pair O,A,L,M,N;
-            path cc;
-            L=u*(5.5,4.5);
-            cc=cercles(L,u);
-            M=pointarc(cc,0);
-            N=pointarc(cc,90);
-            O=u*(3.5,3);
-            A=u*(6,3);
-            marque_p:="croix";
-            pointe(O,A);
-            label.top(btex $O$ etex,O);
-            label.urt(btex $A$ etex,A);
-            trace cercles(O,A);
-            drawarrow arccercle(M,N,L);
-            trace rapporteurdouble(O,A,1);
+            \enonceTroisiemeGTroisExoNeuf
             %%% Correction
             pair B,C;
             B=rotation(A,O,50);        
