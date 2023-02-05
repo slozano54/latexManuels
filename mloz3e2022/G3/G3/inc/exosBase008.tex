@@ -1,9 +1,114 @@
 \begin{exercice*}
-    \dots
+    \begin{enumerate}
+        \item Construire, en rouge, l'image de la figure par la rotation de centre $S$ et d'angle \ang{120} dans le sens indiqué sur la figure.
+        \item Construire, en bleu, l'image de la figure par la rotation de centre $S$ et d'angle \ang{240} dans le sens indiqué sur la figure.
+        \item Déterminer une autre rotation permettant d'obtenir la figure bleue.
+    \end{enumerate}
+    \begin{Geometrie}[CoinHD={(7u,6u)}]
+        % Pour changer la taille de la Grid
+        coeff:=0.6;
+        uni:=true;
+        x.u:=coeff*cm;
+        y.u:=coeff*(sqrt(3)/2)*cm;
+        %%%                
+        trace papiertriangle withcolor gris;
+        marque_p:="croix";
+        pair S;
+        S=pptri(3,5);    
+        pointe(S);
+        label.top(btex $S$ etex,S);
+        pair A,B,C,D,E,F,G,H,I,J,K,L,M,N;
+        A=pptri(3,7);
+        B=pptri(3,9);
+        C=pptri(1,9);
+        D=pptri(1,10);
+        E=pptri(0,11);
+        F=pptri(-1,11);
+        G=pptri(-1,10);
+        H=pptri(0,10);
+        I=pptri(0,9);
+        J=pptri(2,7);
+        K=pptri(-0.5,10.5);
+        L=pptri(5,9);
+        path cc;
+        cc=cercles(L,u);
+        M=pointarc(cc,0);
+        N=pointarc(cc,90);
+        picture duck;
+        duck = image ( 
+            trace polygone(A,B,C,D,E,F,G,H,I,J);         
+            marque_p:="plein";
+            pointe(K);
+        );
+        trace duck;
+        drawarrow arccercle(M,N,L);
+        % %%% Correction 1
+        % drawoptions(withcolor red);
+        % trace rotation(duck,S,120);
+        % %%% Correction 2
+        % drawoptions(withcolor blue);
+        % trace rotation(duck,S,240);
+        % drawoptions();      
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Construire, en rouge, l'image de la figure par la rotation de centre $S$ et d'angle \ang{120} dans le sens indiqué sur la figure.
+        \item Construire, en bleu, l'image de la figure par la rotation de centre $S$ et d'angle \ang{240} dans le sens indiqué sur la figure.
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Déterminer une autre rotation permettant d'obtenir la figure bleue.
+        {\red La figure bleue peut également être obtenue par la rotation de centre $S$ et d'angle \ang{120} dans le sens inverse de celui indiqué sur la figure.}
+    \end{enumerate}
+    \begin{Geometrie}[CoinHD={(7u,6u)}]
+        % Pour changer la taille de la Grid
+        coeff:=0.6;
+        uni:=true;
+        x.u:=coeff*cm;
+        y.u:=coeff*(sqrt(3)/2)*cm;
+        %%%                
+        trace papiertriangle withcolor gris;
+        marque_p:="croix";
+        pair S;
+        S=pptri(3,5);    
+        pointe(S);
+        label.top(btex $S$ etex,S);
+        pair A,B,C,D,E,F,G,H,I,J,K,L,M,N;
+        A=pptri(3,7);
+        B=pptri(3,9);
+        C=pptri(1,9);
+        D=pptri(1,10);
+        E=pptri(0,11);
+        F=pptri(-1,11);
+        G=pptri(-1,10);
+        H=pptri(0,10);
+        I=pptri(0,9);
+        J=pptri(2,7);
+        K=pptri(-0.5,10.5);
+        L=pptri(5,9);
+        path cc;
+        cc=cercles(L,u);
+        M=pointarc(cc,0);
+        N=pointarc(cc,90);
+        picture duck;
+        duck = image ( 
+            trace polygone(A,B,C,D,E,F,G,H,I,J);         
+            marque_p:="plein";
+            pointe(K);
+        );
+        trace duck;
+        drawarrow arccercle(M,N,L);
+        %%% Correction 1
+        drawoptions(withcolor red);
+        trace rotation(duck,S,120);
+        %%% Correction 2
+        drawoptions(withcolor blue);
+        trace rotation(duck,S,240);
+        drawoptions();      
+    \end{Geometrie}
 \end{corrige}
 
