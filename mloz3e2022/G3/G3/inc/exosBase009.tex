@@ -1,9 +1,71 @@
 \begin{exercice*}
-    \dots
+    $(\mathcal{C})$ est un cercle de centre $O$ passant par $A$.
+    \begin{enumerate}
+        \item Construire le point $B$, image de $A$ par la rotation de centre $O$ et d'angle \ang{50} dans le sens indiqué sur la figure.
+        \item Construire le point $C$, image de $A$ par la rotation de centre $O$ et d'angle \ang{135} dans le sens indiqué sur la figure.
+    \end{enumerate}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(7u,6u)}]
+            % trace grille(0.5) withcolor gris;
+            pair O,A,L,M,N;
+            path cc;
+            L=u*(5.5,4.5);
+            cc=cercles(L,u);
+            M=pointarc(cc,0);
+            N=pointarc(cc,90);
+            O=u*(3.5,3);
+            A=u*(6,3);
+            marque_p:="croix";
+            pointe(O,A);
+            label.top(btex $O$ etex,O);
+            label.urt(btex $A$ etex,A);
+            trace cercles(O,A);
+            drawarrow arccercle(M,N,L);
+            trace rapporteur(O,A,1);
+        \end{Geometrie}
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $(\mathcal{C})$ est un cercle de centre $O$ passant par $A$.
+
+    \begin{enumerate}
+        \item Construire le point $B$, image de $A$ par la rotation de centre $O$ et d'angle \ang{50} dans le sens indiqué sur la figure.
+        \item Construire le point $C$, image de $A$ par la rotation de centre $O$ et d'angle \ang{135} dans le sens indiqué sur la figure.
+    \end{enumerate}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(7u,6u)}]
+            % trace grille(0.5) withcolor gris;
+            pair O,A,L,M,N;
+            path cc;
+            L=u*(5.5,4.5);
+            cc=cercles(L,u);
+            M=pointarc(cc,0);
+            N=pointarc(cc,90);
+            O=u*(3.5,3);
+            A=u*(6,3);
+            marque_p:="croix";
+            pointe(O,A);
+            label.top(btex $O$ etex,O);
+            label.urt(btex $A$ etex,A);
+            trace cercles(O,A);
+            drawarrow arccercle(M,N,L);
+            trace rapporteur(O,A,1);
+            %%% Correction
+            pair B,C;
+            B=rotation(A,O,50);        
+            C=rotation(A,O,135);
+            drawoptions(withcolor red);
+            pointe(B);
+            pointe(C);
+            drawoptions(dashed evenly withcolor red);
+            trace demidroite(O,B);
+            trace demidroite(O,C);
+            label.top(btex $B$ etex,B);
+            label.top(btex $C$ etex,C);
+            drawoptions();
+        \end{Geometrie}
+    \end{center}
 \end{corrige}
 
