@@ -9,8 +9,10 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
     $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
+    {\red Rotation de centre à l'intersection des médiatrices de $AA_1$, $BB_1$ et $CC_1$, d'angle \ang{120}, dans le sensinverse des aiguilles d'une montre.}
 
-    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+    \hspace*{-10mm}
+    \begin{Geometrie}[CoinHD={(9u,7u)}]
         \enonceTroisiemeGTroisExoDouze
         %%% Correction
         pointe(O);
@@ -42,8 +44,8 @@
         CCC=milieu(O,milieu(O,C));
         drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
         label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
-        drawoptions();   
-    
+        drawoptions();    
     \end{Geometrie}
+    \vspace*{-12mm}
 \end{corrige}
 

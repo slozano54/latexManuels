@@ -1,9 +1,87 @@
 \begin{exercice*}
-    \dots
+    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(9u,7u)}]        
+            \enonceTroisiemeGTroisExoTreize
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
+        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
+        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
+        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
-    \dots
+    % \phantom{rrr}
+    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
+
+    \hspace*{-15mm}
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoTreize
+        %%% Correction
+        trace cc withcolor blue;
+        pair AA,BB,CC,DD,EE;
+        AA=rotation(A,O,60);
+        BB=rotation(B,O,60);
+        CC=rotation(C,O,60);
+        DD=rotation(D,O,60);
+        EE=rotation(E,O,60);
+        pointe(AA,BB,CC,DD,EE);        
+        label.ulft(btex $A_1$ etex,AA);
+        label.llft(btex $B_1$ etex,BB);
+        label.rt(btex $C_1$ etex,CC);
+        label.urt(btex $D_1$ etex,DD);
+        label.llft(btex $E_1$ etex,EE);
+        trace droite(C,E) dashed evenly withcolor red;
+        trace droite(CC,EE) dashed evenly withcolor red;
+        path ccc;
+        ccc = cercles(O,.5*u);
+        drawoptions(withcolor \myMetapostGreen);
+        drawarrow pointarc(ccc,60)..pointarc(ccc,90)..pointarc(ccc,120);
+        label.top(btex $\ang{60}$ etex, pointarc(ccc,90));
+        drawoptions(dashed evenly withcolor \myMetapostGreen);
+        trace segment(O,A);
+        trace segment(O,AA);
+        %%%
+        drawoptions(withcolor (0.9,0.6,0.1));
+        drawarrow pointarc(ccc,180)..pointarc(ccc,210)..pointarc(ccc,240);
+        label.llft(btex $\ang{60}$ etex, pointarc(ccc,210));
+        drawoptions(dashed evenly withcolor (0.9,0.6,0.1));
+        trace segment(O,B);
+        trace segment(O,BB);
+        %%%
+        drawoptions(withcolor (0,1,1));
+        drawarrow pointarc(ccc,270)..pointarc(ccc,300)..pointarc(ccc,330);
+        label.lrt(btex $\ang{60}$ etex, pointarc(ccc,300));
+        drawoptions(dashed evenly withcolor (0,1,1));
+        trace segment(O,C);
+        trace segment(O,CC);
+        %%%
+        drawoptions(withcolor (1,0,1));
+        drawarrow D..rotation(D,O,30)..DD;
+        label.urt(btex $\ang{60}$ etex, rotation(D,O,30));
+        drawoptions(dashed evenly withcolor (1,0,1));
+        trace segment(O,D);
+        trace segment(O,DD);
+        %%%
+        drawoptions(withcolor black);
+        drawarrow E..rotation(E,O,30)..EE;
+        label.urt(btex $\ang{60}$ etex, rotation(E,O,30));
+        drawoptions(dashed evenly withcolor black);
+        trace segment(O,E);
+        trace segment(O,EE);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item {\red Construction}%Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
+        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
+        {\red Leurs images sont sur ce même cercle.}
+        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
+        {\red Leurs images sont sur la droite $(OA_1)$, image de $(OA)$.}
+        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
+        {\red Leurs images sont également alignés.}
+    \end{enumerate}
 \end{corrige}
 

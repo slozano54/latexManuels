@@ -639,7 +639,7 @@
 }
 
 \newcommand{\enonceTroisiemeGTroisExoOnze}{
-    %trace grille(0.5) withcolor gris;
+    trace grille(0.5) withcolor white;
     marque_p:="croix";
     %labeloffset:=labeloffset*1.5;
     pair O,A,B,C,D;
@@ -654,32 +654,32 @@
     quadrilatereABCD = image ( 
         trace polygone(A,B,C,D);    
     );
-    %%% Correction 1
-    drawoptions(withcolor white);
-    trace rotation(quadrilatereABCD,B,75);
-    drawarrow A..rotation(A,B,37.5)..rotation(A,B,75);
-    label.top(btex $\ang{75}$ etex,rotation(A,B,37.5));
-    label.lft(btex $A_1$ etex,rotation(A,B,75));
-    %%% Correction 2
-    %drawoptions(withcolor \myMetapostGreen);
-    trace rotation(quadrilatereABCD,O,-100);         
-    drawarrow A..rotation(A,O,-50)..rotation(A,O,-100);         
-    label.urt(btex $\ang{100}$ etex,rotation(A,O,-50));
-    label.bot(btex $A_2$ etex,rotation(A,O,-100));
-    %drawoptions(dashed evenly withcolor \myMetapostGreen);
-    trace segment(O,A);
-    trace segment(O,rotation(A,O,-100));
-    drawoptions(); 
-    %enonce
     trace quadrilatereABCD;    
     label.urt(btex $A$ etex,A);
     label.lrt(btex $B$ etex,B);
     label.llft(btex $C$ etex,C);
     label.ulft(btex $D$ etex,D);
+    % %%% Correction 1
+    % drawoptions(withcolor white);
+    % trace rotation(quadrilatereABCD,B,75);
+    % drawarrow A..rotation(A,B,37.5)..rotation(A,B,75);
+    % label.top(btex $\ang{75}$ etex,rotation(A,B,37.5));
+    % label.lft(btex $A_1$ etex,rotation(A,B,75));
+    % %%% Correction 2
+    % %drawoptions(withcolor \myMetapostGreen);
+    % trace rotation(quadrilatereABCD,O,-100);         
+    % drawarrow A..rotation(A,O,-50)..rotation(A,O,-100);         
+    % label.urt(btex $\ang{100}$ etex,rotation(A,O,-50));
+    % label.bot(btex $A_2$ etex,rotation(A,O,-100));
+    % %drawoptions(dashed evenly withcolor \myMetapostGreen);
+    % trace segment(O,A);
+    % trace segment(O,rotation(A,O,-100));
+    % drawoptions(); 
+    % %enonce
 }
 
 \newcommand{\enonceTroisiemeGTroisExoDouze}{
-    % trace grille(0.5) withcolor gris;
+    trace grille(0.5) withcolor white;
     marque_p:="croix";
     %labeloffset:=labeloffset*1.5;
     pair O,A,B,C;
@@ -695,39 +695,6 @@
     AA=rotation(A,O,120);
     BB=rotation(B,O,120);
     CC=rotation(C,O,120);
-    %%% Correction
-    drawoptions(withcolor white);
-    pointe(O);
-    label.urt(btex $O$ etex,O);
-    marque_s:=2;
-    % drawoptions(withcolor red);
-    trace mediatrice(C,CC);
-    trace segment(C,CC);
-    trace Codelongueur(C,milieu(C,CC),2);
-    trace Codelongueur(CC,milieu(C,CC),2);
-    trace codeperp(O,milieu(C,CC),CC,5);
-    % drawoptions(withcolor blue);
-    trace mediatrice(B,BB);
-    trace segment(B,BB);
-    trace Codelongueur(B,milieu(B,BB),1);
-    trace Codelongueur(BB,milieu(B,BB),1);
-    trace codeperp(O,milieu(B,BB),BB,5);
-    % drawoptions(withcolor \myMetapostGreen);
-    trace mediatrice(A,AA);
-    trace segment(A,AA);
-    trace Codelongueur(A,milieu(A,AA),3);
-    trace Codelongueur(AA,milieu(A,AA),3);
-    trace codeperp(O,milieu(A,AA),A,5);
-    % drawoptions(dashed evenly withcolor (0.5,0,1));
-    trace segment(C,O);
-    trace segment(CC,O);
-    % drawoptions(withcolor (0.5,0,1));
-    pair CCC;
-    CCC=milieu(O,milieu(O,C));
-    drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
-    label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
-    drawoptions();   
-    %%% enonce
     trace triangleABC;    
     trace rotation(triangleABC,O,120);
     label.llft(btex $A$ etex,A);
@@ -736,4 +703,58 @@
     label.rt(btex $A_1$ etex,AA);
     label.top(btex $B_1$ etex,BB);
     label.bot(btex $C_1$ etex,CC);
+    %%% Correction
+    % drawoptions(withcolor white);
+    % pointe(O);
+    % label.urt(btex $O$ etex,O);
+    % marque_s:=2;
+    % % drawoptions(withcolor red);
+    % trace mediatrice(C,CC);
+    % trace segment(C,CC);
+    % trace Codelongueur(C,milieu(C,CC),2);
+    % trace Codelongueur(CC,milieu(C,CC),2);
+    % trace codeperp(O,milieu(C,CC),CC,5);
+    % % drawoptions(withcolor blue);
+    % trace mediatrice(B,BB);
+    % trace segment(B,BB);
+    % trace Codelongueur(B,milieu(B,BB),1);
+    % trace Codelongueur(BB,milieu(B,BB),1);
+    % trace codeperp(O,milieu(B,BB),BB,5);
+    % % drawoptions(withcolor \myMetapostGreen);
+    % trace mediatrice(A,AA);
+    % trace segment(A,AA);
+    % trace Codelongueur(A,milieu(A,AA),3);
+    % trace Codelongueur(AA,milieu(A,AA),3);
+    % trace codeperp(O,milieu(A,AA),A,5);
+    % % drawoptions(dashed evenly withcolor (0.5,0,1));
+    % trace segment(C,O);
+    % trace segment(CC,O);
+    % % drawoptions(withcolor (0.5,0,1));
+    % pair CCC;
+    % CCC=milieu(O,milieu(O,C));
+    % drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
+    % label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
+    % drawoptions();   
+    % %%% enonce
+}
+\newcommand{\enonceTroisiemeGTroisExoTreize}{
+    trace grille(0.5) withcolor white;
+    marque_p:="croix";
+    %labeloffset:=labeloffset*1.5;
+    path cc;        
+    pair O,A,B,C,D,E;
+    O=u*(4.5,2.5);
+    cc = cercles(O,1.5*u);
+    A=pointarc(cc,60);
+    B=pointarc(cc,180);
+    C=u*(4.5,1.5);
+    D=u*(6.5,3.5);
+    E=u*(7.5,4.5);
+    pointe(O,A,B,C,D,E);
+    label.rt(btex $O$ etex,O);
+    label.top(btex $A$ etex,A);
+    label.lft(btex $B$ etex,B);
+    label.bot(btex $C$ etex,C);
+    label.lrt(btex $D$ etex,D);
+    label.lrt(btex $E$ etex,E);
 }
