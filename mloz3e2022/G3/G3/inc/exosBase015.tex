@@ -1,9 +1,75 @@
 \begin{exercice*}
-    \dots
+    $EFGH$ est l'image de $ABCD$ par une rotation de centre $O$.\\
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        % trace grille(0.5) withcolor gris;
+        marque_p:="croix";
+        pair O,A,B,C,D,E,F,G,H;
+        O=u*(4.5,1);
+        A=u*(0.5,1);
+        B=u*(1.5,3);
+        C=u*(3.5,0.5);
+        D=rotation(A,B,89);
+        E=rotation(C,O,-120);
+        F=rotation(A,O,-120);
+        G=rotation(B,O,-120);
+        H=rotation(D,O,-120);
+        trace polygone(A,B,D,C);
+        trace Codeangle(A,B,D,0,btex \ang{89} etex);
+        trace appelation(A,C,-3mm,btex \Lg{5.3} etex);
+        pointe(O);
+        trace rotation(polygone(A,B,D,C),O,-120);
+        label.top(btex $O$ etex,O);
+        label.llft(btex $A$ etex,A);
+        label.ulft(btex $B$ etex,B);
+        label.lrt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.ulft(btex $E$ etex,E);
+        label.top(btex $F$ etex,F);
+        label.bot(btex $G$ etex,G);
+        label.bot(btex $H$ etex,H);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Déterminer $EF$ sachant que $AC=\Lg{5.3}$. Justifier.
+        \item Déterminer $\widehat{FGH}$ sachant que $\widehat{ABD}=\ang{89}$. Justifier.
+    \end{enumerate}    
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $EFGH$ est l'image de $ABCD$ par une rotation de centre $O$.\\
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        % trace grille(0.5) withcolor gris;
+        marque_p:="croix";
+        pair O,A,B,C,D,E,F,G,H;
+        O=u*(4.5,1);
+        A=u*(0.5,1);
+        B=u*(1.5,3);
+        C=u*(3.5,0.5);
+        D=rotation(A,B,89);
+        E=rotation(C,O,-120);
+        F=rotation(A,O,-120);
+        G=rotation(B,O,-120);
+        H=rotation(D,O,-120);
+        trace polygone(A,B,D,C);
+        trace Codeangle(A,B,D,0,btex \ang{89} etex);
+        trace appelation(A,C,-3mm,btex \Lg{5.3} etex);
+        pointe(O);
+        trace rotation(polygone(A,B,D,C),O,-120);
+        label.top(btex $O$ etex,O);
+        label.llft(btex $A$ etex,A);
+        label.ulft(btex $B$ etex,B);
+        label.lrt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.ulft(btex $E$ etex,E);
+        label.top(btex $F$ etex,F);
+        label.bot(btex $G$ etex,G);
+        label.bot(btex $H$ etex,H);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Déterminer $EF$ sachant que $AC=\Lg{5.3}$. Justifier.\\
+        {\red $[EF]$ est l'image de $[AC]$ par une rotation de centre $O$, or la rotation conserve les longueurs, donc $EF=AC=\Lg{5.3}$.}
+        \item Déterminer $\widehat{FGH}$ sachant que $\widehat{ABD}=\ang{89}$. Justifier.\\
+        {\red $\widehat{FGH}$ est l'image de $\widehat{ABD}$ par une rotation de centre $O$, or la rotation conserve les longueurs, donc $\widehat{FGH}=\widehat{ABD}=\ang{89}$.}
+    \end{enumerate}  
 \end{corrige}
 
