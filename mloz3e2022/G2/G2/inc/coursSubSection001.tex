@@ -1,13 +1,15 @@
 \subsection{Symétrie axiale}
-\begin{definition}
-    $A$ et $A’$ sont symétriques \textbf{par rapport à la droite $\mathbf{(d)}$} signifie que :
-    \begin{itemize}
-        \item $[AA’]$ est perpendiculaire à $(d)$,
-        \item $A$ et $A’$ sont à égale distance de $(d)$.
-    \end{itemize}
-\end{definition}
-
-\begin{center}
+\begin{minipage}{0.7\linewidth}
+    \begin{definition}
+        $A$ et $A’$ sont symétriques \textbf{par rapport à la droite $\mathbf{(d)}$} signifie que :
+        \begin{itemize}
+            \item $[AA’]$ est perpendiculaire à $(d)$,
+            \item $A$ et $A’$ sont à égale distance de $(d)$.
+        \end{itemize}
+    \end{definition}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \hspace*{-15mm}
     \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dimen=middle,dotstyle=x,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
     \begin{pspicture*}(-3.66,-3.88)(9.8,3.86)
         \pspolygon[linecolor=black,fillcolor=red!20,fillstyle=solid,opacity=0.4](1,2)(-1,2)(-1,0)(-3,-2)(-1,-2)(0,-1)(1,-2)(1,0)(0,1)
@@ -85,7 +87,7 @@
             \rput[bl](3.08,2.12){\black{$M$}}
         \end{scriptsize}
     \end{pspicture*}
-\end{center}
+\end{minipage}
 
 \begin{remarque}
     Deux figures symétriques par rapport à un axe se superposent par un pliage le long de cet axe.
@@ -142,9 +144,13 @@
         \end{enumerate}
     \end{minipage}
     \begin{myBox}{\infoComplementsNumeriques{pluriel}}
-        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_113.html}{Construction à l'aide de la règle et de l'équerre}
+        \begin{minipage}{\linewidth}
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_113.html}{Avec la règle et de l'équerre}
         
-        \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_111.html}{Construction à l'aide du compas}
-        \creditInstrumentPoche
+            \medskip
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_111.html}{Avec le compas}
+
+            \creditInstrumentPoche
+        \end{minipage}
     \end{myBox}
 \end{methode*1}
