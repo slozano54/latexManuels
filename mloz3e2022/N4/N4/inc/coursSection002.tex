@@ -1,1 +1,133 @@
-\section{...}
+\section{Calcul litt\'eral : Techniques de développement}
+\subsection{Distributivité simple}
+
+Penser à mettre opposé d'une somme en cas particulier.
+% \proprNum{(admise)}{$a,b,k$ sont trois nombres (connus ou inconnus)}{$$k\times(a+b)=k\times a+k\times b$$}
+
+% \CadreLampe{Remarque}{
+% $k\times(a-b)=k\times(a+(-b))$
+% $k\times(a-b)=k\times a+k\times (-b)$
+% $k\times(a-b)=ka-kb$
+% }
+% \Exemples{Développer et réduire}{
+% $A=2(3x+4)+4(5x+2)$\par
+% $B=(3x-5)-(5x+4)$\par
+% $C=2(3x-4)-3(4x+2)$\par
+% $D=7(2x+8)-3(7x-9)+(2+7x)$ \par
+% }
+% \versExos
+
+\subsection{Double distributivité}
+% \proprNum{(admise)}{$a,b,c,d$ sont 4 nombres (connus ou inconnus)}{$$(a+b)\times(c+d)=a\times c+a\times d +b\times c+ b\times d$$}
+
+% \CadreLampe{}{
+% D\'emonstration \`{a} proposer \`{a} M. LOZANO sur la base du volontariat : Note bonus \`{a} la clef !!!.
+% }
+% \Exemples{}{
+% $A=(3x+4)(5x+2)$\par
+% $B=(-4x+7)(2+3x)$\par
+% $C=(-4x+7)(2-3x) +(5x-2)(3x+3)$\par
+% $D=(2x+3)(2x+3)$
+% }
+% \versExos
+
+\subsection{Egalités remarquables}
+% \proprNumBis{\bf Carré d'une somme de deux termes}{
+% \underline{En français} : " Le carré de la somme de deux termes est égal à la somme des carrés des deux termes AUGMENT\'{E}E de leur double produit"
+% \par\vspace{0.5cm}
+% \underline{En "langue" mathématique} :\par 
+% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}} 
+% \\
+% alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}{
+% $$(a+b)^2=\underbrace{a^2}_{\begin{tabular}{c}
+% carré du\\
+% 1\ier terme
+% \end{tabular}}
+% +\underbrace{b^2}_{\begin{tabular}{c}
+% carré du\\
+% 2\ieme terme
+% \end{tabular}}
+% +\underbrace{2\times a\times b}_{\mbox{double produit ( nos deux abbés !)}}$$
+% }}}
+
+% \CadreLampe{Démonstration}{
+% $(a+b)^2=(a+b)(a+b)$\par
+% $(a+b)^2=a\times a+a\times b+b\times a+b\times b$\par
+% $(a+b)^2=a^2+ab+ba+b^2$\par
+% $(a+b)^2=a^2+b^2+2ab$ $\square$
+% }
+
+% \Exemples{}{
+% \begin{enumerate}
+% \item Développer et réduire : $A(x)=(2x+7)^2$, $B(x)=\left(x+\dfrac{1}{2}\right)^2$ et $C(x)=\left(\dfrac{4}{5}+\dfrac{3x}{2}\right)^2$.
+% \item Calculer mentalement : $101^2$ et $73^2$
+% \end{enumerate}
+% }
+
+% \newpage
+% \proprNumBis{\bf Carré d'une différence de deux termes}{
+% \par\vspace{0.5cm}
+% \underline{En français} : " Le carré de la différence de deux termes est égal à la somme des carrés des deux termes DIMINU\'{E}E de leur double produit"
+% \par\vspace{0.5cm}
+% \underline{En "langue" mathématique} :\par 
+% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}} 
+% \\alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}
+% {$$(a-b)^2=\underbrace{a^2}_{\begin{tabular}{c}
+% carré du\\
+% 1\ier terme
+% \end{tabular}}
+% +\underbrace{b^2}_{\begin{tabular}{c}
+% carré du\\
+% 2\ieme terme
+% \end{tabular}}
+% -\underbrace{2\times a\times b}_{\mbox{double produit ( nos deux abbés !)}}$$
+% }}}
+% \CadreLampe{Démonstration}{
+% Avec la double distributivité ou à l'aide de la propriété précédente.
+% $(a-b)^2=(a+(-b))^2$\par
+% $(a-b)^2=a^2+(-b)^2+2a\times(-b)$\par
+% $(a-b)^2=a^2+b^2-2ab$ $\square$
+% }
+
+% \Exemples{}{
+% \begin{enumerate}
+% \item Développer et réduire : $A(x)=(x-8)^2$, $B(x)=(5x-7)^2$ et $C(y)=\left(\dfrac{2}{3}+\dfrac{4}{7}y\right)^2$.
+% \item Calculer mentalement : $99^2$ et $18^2$
+% \end{enumerate}
+% }
+
+% \proprNumBis{\bf Produit de la somme de deux termes par leur différence}{
+% \par\vspace{0.5cm}
+% \underline{En français} : " Le produit de la somme de deux nombres par leur différence est égal à la différence de leurs carrés "
+% \par\vspace{0.5cm}
+% \underline{En "langue" mathématique} :\par 
+% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}}
+% \\
+% alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}
+% {$$(a+b)(a-b)=\underbrace{a^2}_{\begin{tabular}{c}
+% carré du\\
+% 1\ier terme
+% \end{tabular}}-\underbrace{b^2}_{\begin{tabular}{c}
+% carré du\\
+% 2\ieme terme
+% \end{tabular}}$$
+% }}}
+
+% \CadreLampe{Démonstration}{
+% Avec la double distributivité.
+% $(a+b)(a-b)=a\times a-a\times b+b\times a -b\times b$\par
+% $(a+b)(a-b)=a^2-ab+ba-b^2$\par
+% $(a+b)(a-b)=a^2-b^2$ $\square$
+% }
+
+% \Exemples{}{
+% \begin{enumerate}
+% \item Développer et réduire : $A(x)=(x+8)(x-8)$ et $B(x)=(5x-7)(5x+7)$.
+% \item Calculer mentalement : $99\times101$ et $27\times 33$
+% \end{enumerate}
+% }
+
+
+% \CadreLampe{Remarque}{
+% Ces égalités sont vraies quelles que soient les valeurs de $a$ et de $b$.
+% }
