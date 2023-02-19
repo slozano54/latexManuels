@@ -56,77 +56,119 @@ Penser à mettre opposé d'une somme en cas particulier.
     $(a+b)^2=a^2+b^2+2ab$ $\square$
 \end{preuve}
 
-% \Exemples{}{
-% \begin{enumerate}
-% \item Développer et réduire : $A(x)=(2x+7)^2$, $B(x)=\left(x+\dfrac{1}{2}\right)^2$ et $C(x)=\left(\dfrac{4}{5}+\dfrac{3x}{2}\right)^2$.
-% \item Calculer mentalement : $101^2$ et $73^2$
-% \end{enumerate}
-% }
+\begin{exemples*1}
+    Développer et réduire $A(x)=(2x+7)^2$, $B(x)=\left(x+\dfrac{1}{2}\right)^2$ et $C(x)=\left(\dfrac{4}{5}+\dfrac{3x}{2}\right)^2$
+    \correction
+    \begin{align*}
+        A(x)&=\Distri[Remarquable]{2}{7}{}{}        &B(x)&=\left(x+\dfrac{1}{2}\right)^2&C(x)&=\left(\dfrac{4}{5}+\dfrac{3x}{2}\right)^2\\
+        A(x)&=\Distri[Remarquable,Etape=2]{2}{7}{}{}&B(x)&=x^2+2\times x\times \dfrac{1}{2} + \left(\dfrac{1}{2}\right)^2&C(x)&=\left(\dfrac{4}{5}\right)^2+2\times\dfrac{4}{5}\times\dfrac{3x}{2} + \left(\dfrac{3x}{2}\right)^2\\
+        A(x)&=\Distri[Remarquable,Etape=3]{2}{7}{}{}&B(x)&=x^2+ x + \dfrac{1}{4}&C(x)&=\dfrac{16}{25}+\dfrac{6x}{5}+ \dfrac{9x^2}{4}
+    \end{align*}
+\end{exemples*1}
 
-% \newpage
-% \proprNumBis{\bf Carré d'une différence de deux termes}{
-% \par\vspace{0.5cm}
-% \underline{En français} : " Le carré de la différence de deux termes est égal à la somme des carrés des deux termes DIMINU\'{E}E de leur double produit"
-% \par\vspace{0.5cm}
-% \underline{En "langue" mathématique} :\par 
-% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}} 
-% \\alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}
-% {$$(a-b)^2=\underbrace{a^2}_{\begin{tabular}{c}
-% carré du\\
-% 1\ier terme
-% \end{tabular}}
-% +\underbrace{b^2}_{\begin{tabular}{c}
-% carré du\\
-% 2\ieme terme
-% \end{tabular}}
-% -\underbrace{2\times a\times b}_{\mbox{double produit ( nos deux abbés !)}}$$
-% }}}
-% \CadreLampe{Démonstration}{
-% Avec la double distributivité ou à l'aide de la propriété précédente.
-% $(a-b)^2=(a+(-b))^2$\par
-% $(a-b)^2=a^2+(-b)^2+2a\times(-b)$\par
-% $(a-b)^2=a^2+b^2-2ab$ $\square$
-% }
+\begin{exemples*1}
+    Expliquer comment calculer $A=101^2$ et $B=73^2$ à l'aide d'une égalité remarquable.
+    \correction
+    \begin{align*}
+        A&=101^2                            &B&=73^2\\
+        A&=(100+1)^2                        &B&=(70+3)^2\\
+        A&=100^2+2\times 100\times 1 + 1^2  &B&=70^2 + 2\times 70\times 3 + 3^2\\
+        A&=\num{10000}+200 + 1              &B&=\num{4900} + 420 + 9\\
+        A&=\num{10201}                      &B&=\num{5329}
+    \end{align*}
+\end{exemples*1}
 
-% \Exemples{}{
-% \begin{enumerate}
-% \item Développer et réduire : $A(x)=(x-8)^2$, $B(x)=(5x-7)^2$ et $C(y)=\left(\dfrac{2}{3}+\dfrac{4}{7}y\right)^2$.
-% \item Calculer mentalement : $99^2$ et $18^2$
-% \end{enumerate}
-% }
+\begin{propriete}[Carré d'une différence de deux termes]
+    \begin{itemize}
+    \item \underline{En français} : 
+    \og{}Le carré de la différence de deux termes est égal à la somme des carrés des deux termes {\bfseries diminuée} de leur double produit\fg{}
 
-% \proprNumBis{\bf Produit de la somme de deux termes par leur différence}{
-% \par\vspace{0.5cm}
-% \underline{En français} : " Le produit de la somme de deux nombres par leur différence est égal à la différence de leurs carrés "
-% \par\vspace{0.5cm}
-% \underline{En "langue" mathématique} :\par 
-% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}}
-% \\
-% alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}
-% {$$(a+b)(a-b)=\underbrace{a^2}_{\begin{tabular}{c}
-% carré du\\
-% 1\ier terme
-% \end{tabular}}-\underbrace{b^2}_{\begin{tabular}{c}
-% carré du\\
-% 2\ieme terme
-% \end{tabular}}$$
-% }}}
+    \bigskip
+    \item \underline{En \og{}langue\fg{} mathématique} :
+    Si $a$ et $b$ sont des nombres (connus ou inconnus) alors 
+    
+    $$\underbrace{\parbox{0.1\linewidth}{\centering $(a-b)^2$}}_{\parbox{0.3\linewidth}{\centering\vspace*{1mm}Carré d'une\\différence}}
+    =\underbrace{\parbox{0.1\linewidth}{\centering $a^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\1\ier terme}}
+    +\underbrace{\parbox{0.1\linewidth}{\centering $b^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\2\ieme terme}}
+    -\underbrace{\centering 2\times a\times b}_{\parbox{0.3\linewidth}{\centering\vspace*{1mm}double produit\\( nos deux abbés !)}}$$    
+    \end{itemize}
+\end{propriete}
 
-% \CadreLampe{Démonstration}{
-% Avec la double distributivité.
-% $(a+b)(a-b)=a\times a-a\times b+b\times a -b\times b$\par
-% $(a+b)(a-b)=a^2-ab+ba-b^2$\par
-% $(a+b)(a-b)=a^2-b^2$ $\square$
-% }
+\begin{preuve}
+    On peut le faire avec la double distributivité comme précédemment ou justement à l’aide de la propriété précédente.\\
+    $(a-b)^2=(a+(-b))^2$\\
+    $(a-b)^2=a^2+(-b)^2+2a\times(-b)$\par
+    $(a-b)^2=a^2+b^2-2ab$ $\square$
+\end{preuve}
 
-% \Exemples{}{
-% \begin{enumerate}
-% \item Développer et réduire : $A(x)=(x+8)(x-8)$ et $B(x)=(5x-7)(5x+7)$.
-% \item Calculer mentalement : $99\times101$ et $27\times 33$
-% \end{enumerate}
-% }
+\begin{exemples*1}
+    Développer et réduire $A(x)=(x-8)^2$, $B(x)=(5x-7)^2$ et $C(y)=\left(\dfrac{2}{3}+\dfrac{4}{7}y\right)^2$
+    \correction
+    \begin{align*}
+        A(x)&=\Distri[Remarquable]{1}{-8}{}{}        &B(x)&=\Distri[Remarquable]{5}{-7}{}{}         &C(y)&=\left(\dfrac{2}{3}+\dfrac{4}{7}y\right)^2\\
+        A(x)&=\Distri[Remarquable,Etape=2]{1}{-8}{}{}&B(x)&=\Distri[Remarquable,Etape=2]{5}{-7}{}{} &C(y)&=\left(\dfrac{2}{3}\right)^2+2\times\dfrac{2}{3}\times\dfrac{4}{7}y + \left(\dfrac{4}{7}y\right)^2\\
+        A(x)&=\Distri[Remarquable,Etape=3]{1}{-8}{}{}&B(x)&=\Distri[Remarquable,Etape=3]{5}{-7}{}{} &C(y)&=\dfrac{4}{9}+\dfrac{16}{21}y+ \dfrac{16}{49}y^2
+    \end{align*}
+\end{exemples*1}
 
+\begin{exemples*1}
+    Expliquer comment calculer $A=99^2$ et $B=18^2$ à l'aide d'une égalité remarquable.
+    \correction
+    \begin{align*}
+        A&=99^2                            &B&=18^2\\
+        A&=(100-1)^2                       &B&=(20-2)^2\\
+        A&=100^2-2\times 100\times 1 + 1^2 &B&=20^2 - 2\times 20\times 2 + 2^2\\
+        A&=\num{10000}-200 + 1             &B&=400 - 80 + 4\\
+        A&=\num{9801}                      &B&=324
+    \end{align*}
+\end{exemples*1}
 
-% \CadreLampe{Remarque}{
-% Ces égalités sont vraies quelles que soient les valeurs de $a$ et de $b$.
-% }
+\begin{propriete}[Produit de la somme de deux termes par leur différence]
+    \begin{itemize}
+    \item \underline{En français} : 
+    \og{}Le produit de la somme de deux nombres par leur différence est égal à la différence de leurs carrés\fg{}
+
+    \bigskip
+    \item \underline{En \og{}langue\fg{} mathématique} :
+    Si $a$ et $b$ sont des nombres (connus ou inconnus) alors 
+    
+    $$\underbrace{\parbox{0.2\linewidth}{\centering $(a+b)(a-b)$}}_{\parbox{0.3\linewidth}{\centering\vspace*{1mm}Produit d'une somme \\ et d'une différence \\ entre les mêmes termes}}
+    =\underbrace{\parbox{0.1\linewidth}{\centering $a^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\1\ier terme}}
+    -\underbrace{\parbox{0.1\linewidth}{\centering $b^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\2\ieme terme}}
+    $$    
+    \end{itemize}
+\end{propriete}
+
+\begin{preuve}
+    Avec la double distributivité.\\
+    $(a+b)(a-b)=a\times a-a\times b+b\times a -b\times b$\\
+    $(a+b)(a-b)=a^2-ab+ba-b^2$\\
+    $(a+b)(a-b)=a^2-b^2$ $\square$
+\end{preuve}
+
+\begin{exemples*1}
+    Développer et réduire  $A(t)=(t+8)(t-8)$ et $B(y)=(5y-7)(5y+7)$
+    \correction
+    \begin{align*}
+        A(x)&=\Distri[Lettre=t,Remarquable]{1}{8}{1}{-8}        &B(x)&=\Distri[Lettre=y,Remarquable]{5}{-7}{5}{7}\\
+        A(x)&=\Distri[Lettre=t,Remarquable,Etape=2]{1}{8}{1}{-8}&B(x)&=\Distri[Lettre=y,Remarquable]{5}{7}{5}{-7}\\
+        A(x)&=\Distri[Lettre=t,Remarquable,Etape=3]{1}{8}{1}{-8}&B(x)&=\Distri[Lettre=y,Remarquable,Etape=2]{5}{7}{5}{-7}\\
+            &                                                   &B(x)&=\Distri[Lettre=y,Remarquable,Etape=3]{5}{7}{5}{-7} 
+    \end{align*}
+\end{exemples*1}
+
+\begin{exemples*1}
+    Expliquer comment calculer $A=99\times 101$ et $B=27\times 33$ à l'aide d'une égalité remarquable.
+    \correction
+    \begin{align*}
+        A&=99\times 101 &B&=33\times 27\\
+        A&=(100-1)\times (100+1) &B&=(30+3)\times (30-3)\\
+        A&= 100^2-1^2&B&=30^2-3^2\\
+        A&= \num{10000}-1&B&=900-9\\
+        A&= \num{9999}&B&=891
+    \end{align*}
+\end{exemples*1}
+
+\begin{remarque}
+    Ces égalités sont vraies quelles que soient les valeurs de $a$ et de $b$.
+\end{remarque}
