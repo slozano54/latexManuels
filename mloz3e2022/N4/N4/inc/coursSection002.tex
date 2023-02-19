@@ -1,61 +1,60 @@
-\section{Calcul litt\'eral : Techniques de développement}
+\section{Calcul littéral : Techniques de développement}
 \subsection{Distributivité simple}
 
 Penser à mettre opposé d'une somme en cas particulier.
-% \proprNum{(admise)}{$a,b,k$ sont trois nombres (connus ou inconnus)}{$$k\times(a+b)=k\times a+k\times b$$}
+\begin{propriete}[\admise]
+    Si $a$, $b$ et $k$ sont trois nombres (connus ou inconnus) alors$$k\times(a+b)=k\times a+k\times b$$
+\end{propriete}
 
-% \CadreLampe{Remarque}{
-% $k\times(a-b)=k\times(a+(-b))$
-% $k\times(a-b)=k\times a+k\times (-b)$
-% $k\times(a-b)=ka-kb$
-% }
-% \Exemples{Développer et réduire}{
-% $A=2(3x+4)+4(5x+2)$\par
-% $B=(3x-5)-(5x+4)$\par
-% $C=2(3x-4)-3(4x+2)$\par
-% $D=7(2x+8)-3(7x-9)+(2+7x)$ \par
-% }
-% \versExos
+\begin{remarque}
+    \phantom{rrr}\\
+    $k\times(a-b)=k\times(a+(-b))$\\
+    $k\times(a-b)=k\times a+k\times (-b)$\\
+    $k\times(a-b)=ka-kb$
+\end{remarque}
+
+\begin{propriete}[Cas particulier de distributivité]
+    {\bfseries L'opposé d'une somme algébrique} est égal à la somme des {\bfseries opposés de chacun de ses termes.}
+\end{propriete}
+
+\begin{preuve}
+    L'opposé d'une somme algébrique est égale au produit de cette somme par $-1$.\\
+    La distribution de $-1$ sur chacun des termes de cette somme le transformera en son opposé.
+\end{preuve}
 
 \subsection{Double distributivité}
-% \proprNum{(admise)}{$a,b,c,d$ sont 4 nombres (connus ou inconnus)}{$$(a+b)\times(c+d)=a\times c+a\times d +b\times c+ b\times d$$}
+\begin{propriete}[\admise]
+    Si $a$, $b$, $c$ et $d$ sont 4 nombres (connus ou inconnus) alors $$ \Distri[Cours,Fleches]{2}{3}{4}{5}$$ 
+\end{propriete}
 
-% \CadreLampe{}{
-% D\'emonstration \`{a} proposer \`{a} M. LOZANO sur la base du volontariat : Note bonus \`{a} la clef !!!.
-% }
-% \Exemples{}{
-% $A=(3x+4)(5x+2)$\par
-% $B=(-4x+7)(2+3x)$\par
-% $C=(-4x+7)(2-3x) +(5x-2)(3x+3)$\par
-% $D=(2x+3)(2x+3)$
-% }
-% \versExos
+\begin{preuve}
+    à proposer à M. LOZANO sur la base du volontariat : Note bonus à la clef \emoji{shushing-face}
+\end{preuve}
 
 \subsection{Egalités remarquables}
-% \proprNumBis{\bf Carré d'une somme de deux termes}{
-% \underline{En français} : " Le carré de la somme de deux termes est égal à la somme des carrés des deux termes AUGMENT\'{E}E de leur double produit"
-% \par\vspace{0.5cm}
-% \underline{En "langue" mathématique} :\par 
-% Si \colorbox{green!30}{\parbox{\textwidth-25\fboxsep}{$a$ et $b$ sont des nombres (connus ou inconnus)}} 
-% \\
-% alors \colorbox{red!30}{\parbox{\textwidth-25\fboxsep}{
-% $$(a+b)^2=\underbrace{a^2}_{\begin{tabular}{c}
-% carré du\\
-% 1\ier terme
-% \end{tabular}}
-% +\underbrace{b^2}_{\begin{tabular}{c}
-% carré du\\
-% 2\ieme terme
-% \end{tabular}}
-% +\underbrace{2\times a\times b}_{\mbox{double produit ( nos deux abbés !)}}$$
-% }}}
+\begin{propriete}[Carré d'une somme de deux termes]
+    \begin{itemize}
+    \item \underline{En français} : 
+    \og{}Le carré de la somme de deux termes est égal à la somme des carrés des deux termes {\bfseries augmentée} de leur double produit.\fg{}
 
-% \CadreLampe{Démonstration}{
-% $(a+b)^2=(a+b)(a+b)$\par
-% $(a+b)^2=a\times a+a\times b+b\times a+b\times b$\par
-% $(a+b)^2=a^2+ab+ba+b^2$\par
-% $(a+b)^2=a^2+b^2+2ab$ $\square$
-% }
+    \bigskip
+    \item \underline{En \og{}langue\fg{} mathématique} :
+    Si $a$ et $b$ sont des nombres (connus ou inconnus) alors 
+    
+    $$\underbrace{\parbox{0.1\linewidth}{\centering $(a+b)^2$}}_{\parbox{0.3\linewidth}{\centering\vspace*{1mm}Carré d'une\\somme}}
+    =\underbrace{\parbox{0.1\linewidth}{\centering $a^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\1\ier terme}}
+    +\underbrace{\parbox{0.1\linewidth}{\centering $b^2$}}_{\parbox{0.1\linewidth}{\centering\vspace*{1mm}carré du\\2\ieme terme}}
+    +\underbrace{\centering 2\times a\times b}_{\parbox{0.3\linewidth}{\centering\vspace*{1mm}double produit\\( nos deux abbés !)}}$$    
+    \end{itemize}
+\end{propriete}
+
+\begin{preuve}
+    \phantom{rrr}\\
+    $(a+b)^2=(a+b)(a+b)$\\
+    $(a+b)^2=a\times a+a\times b+b\times a+b\times b$\\
+    $(a+b)^2=a^2+ab+ba+b^2$\\
+    $(a+b)^2=a^2+b^2+2ab$ $\square$
+\end{preuve}
 
 % \Exemples{}{
 % \begin{enumerate}
