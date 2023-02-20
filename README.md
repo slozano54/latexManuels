@@ -61,6 +61,12 @@ Dossier du manuel de 3e
 <!-- DOSSIER mloz4e2022 -->
 ## Dossier ./mloz4e2022
 Dossier du manuel de 4e
+<!-- DOSSIER mloz5e2022 -->
+## Dossier ./mloz5e2022
+Dossier du manuel de 5e
+<!-- DOSSIER mloz4e2022 -->
+## Dossier ./mloz6e2022
+Dossier du manuel de 6e
 ## Découverte de la classe sesamanuel
 
 - Je récupère le fichier de classe **sesamanuel.cls** originale de ma TexLive2022
