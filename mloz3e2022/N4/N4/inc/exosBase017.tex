@@ -1,9 +1,60 @@
 \begin{exercice*}
-    \dots
+    Développer et réduire chacune des expressions suivantes.
+    \begin{itemize}
+        \begin{spacing}{1.2}
+            \item[] $A=\Distri{1}{1}{1}{5}$
+	        \item[] $B=\Distri{4}{5}{2}{6}$
+    	    \item[] $C=\Distri[Lettre=u,Echange=2]{5}{1}{2}{-3}$
+	        \item[] $D=\Distri[Lettre=n,Echange=1]{-3}{1}{-2}{-5}$
+        \end{spacing}
+   \end{itemize}
+   \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=3L11-1,s=3,n=4,i=0&v=l}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Développer et réduire chacune des expressions suivantes.
+
+    \begin{itemize}
+        \def\item{}
+        \item $A=\Distri{1}{1}{1}{5}$\\        
+        ${\red A}{\red = \Distri[AideMul]{1}{1}{1}{5}}$\\\bigskip        
+        ${\red A}{\red =\Distri[Fleches,CouleurFH=orange,CouleurFB=black,AideMul]{1}{1}{1}{5}}$\\\bigskip
+        ${\red A}{\red =\Distri[Etape=2]{1}{1}{1}{5}}$\\
+        ${\red A}{\red =\Distri[Etape=3]{1}{1}{1}{5}}$\\
+        ${\red A}{\red =\Distri[Etape=4]{1}{1}{1}{5}}$\\\bigskip
+        \item $B=\Distri{4}{5}{2}{6}$\\        
+        ${\red B}{\red = \Distri[AideMul]{4}{5}{2}{6}}$\\\bigskip        
+        ${\red B}{\red =\Distri[Fleches,CouleurFH=orange,CouleurFB=black,AideMul]{4}{5}{2}{6}}$\\\bigskip
+        ${\red B}{\red =\Distri[Etape=2]{4}{5}{2}{6}}$\\
+        ${\red B}{\red =\Distri[Etape=3]{4}{5}{2}{6}}$\\
+        ${\red B}{\red =\Distri[Etape=4]{4}{5}{2}{6}}$\\
+    \end{itemize}
+    \Coupe
+    \begin{itemize}
+        \def\item{}
+        \item $C=\Distri[Lettre=u,Echange=2]{5}{1}{2}{-3}$\\
+        ${\red C}{\red = \Distri[AideMul,Lettre=u,Echange=2]{5}{1}{2}{-3}}$
+
+        \bigskip
+        ${\red C}{\red =\Distri[Fleches,CouleurFH=orange,CouleurFB=black,AideMul,Lettre=u,Echange=2]{5}{1}{2}{-3}}$
+        
+        \bigskip
+        ${\red C}{\red =\Distri[Etape=2,Lettre=u,Echange=2]{5}{1}{2}{-3}}$\\
+        ${\red C}{\red =\Distri[Etape=3,Lettre=u,Echange=2]{5}{1}{2}{-3}}$\\
+        ${\red C}{\red =\Distri[Etape=4,Lettre=u,Echange=2]{5}{1}{2}{-3}}$
+        
+        \bigskip
+        \item $D=\Distri[Lettre=n,Echange=1]{-3}{1}{-2}{-5}$\\
+        ${\red D}{\red = \Distri[AideMul,Lettre=n,Echange=1]{-3}{1}{-2}{-5}}$
+        
+        \bigskip        
+        ${\red D}{\red =\Distri[Fleches,CouleurFH=orange,CouleurFB=black,AideMul,Lettre=n,Echange=1]{-3}{1}{-2}{-5}}$
+        
+        \bigskip
+        ${\red D}{\red =\Distri[Etape=2,Lettre=n,Echange=1]{-3}{1}{-2}{-5}}$\\
+        ${\red D}{\red =\Distri[Etape=3,Lettre=n,Echange=1]{-3}{1}{-2}{-5}}$\\
+        ${\red D}{\red =\Distri[Etape=4,Lettre=n,Echange=1]{-3}{1}{-2}{-5}}$\\
+    \end{itemize}
 \end{corrige}
 
