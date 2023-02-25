@@ -1,9 +1,56 @@
 \begin{exercice*}
-    \dots
+   \begin{enumerate}
+        \item Développer et réduire chaque expression en complétant les méthodes directement ici.\\
+        \begin{itemize}
+            \begin{spacing}{1.2}
+                \item[] $A=\Distri[Remarquable,Lettre=t]{4}{3}{}{}$\\
+                $A=(\makebox[0.19\linewidth]{\dotfill}+\makebox[0.19\linewidth]{\dotfill})(\makebox[0.19\linewidth]{\dotfill}+\makebox[0.19\linewidth]{\dotfill})$\\
+                $A=\dotfill$\\
+                $A=\dotfill$\medskip
+                \item[] $B=\Distri[Remarquable,Lettre=u]{8}{-1}{}{}$\\
+                $B=(\makebox[0.19\linewidth]{\dotfill}+\makebox[0.19\linewidth]{\dotfill})(\makebox[0.19\linewidth]{\dotfill}+\makebox[0.19\linewidth]{\dotfill})$\\
+                $B=\dotfill$\\
+                $B=\dotfill$
+            \end{spacing}
+        \end{itemize}
+        \item Recopier, développer et réduire les expressions suivantes à l'aide des méthodes précédentes.\\
+        \begin{itemize}
+            \begin{spacing}{1.2}
+                \item[] $C=\Distri[Remarquable,Lettre=b,Echange=1]{3}{2}{}{}$
+                \item[] $D=\Distri[Remarquable,Lettre=c,Echange=1]{8}{-10}{}{}$
+            \end{spacing}
+        \end{itemize}    
+    \end{enumerate}
+    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=3L11-7,s=true,n=4,i=0&v=l}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Développer et réduire chaque expression en complétant les méthodes directement ici.\\
+        \begin{itemize}
+            \def\item{}
+            \begin{spacing}{1.2}
+                \item $A=\Distri[Remarquable,Lettre=t]{4}{3}{}{}$\\
+                $A=({\red 4t}+{\red 3})({\red 4t}+{\red 3})$\\\bigskip
+                $A={\red \Distri[Fleches,CouleurFH=orange,CouleurFB=black,AideMul,Lettre=t]{4}{3}{4}{3}}$\\\bigskip
+                $A={\red \Distri[Etape=2,Lettre=t]{4}{3}{4}{3}}$\\
+                $A={\red \Distri[Etape=3,Lettre=t]{4}{3}{4}{3}}$\\
+                $A={\red \Distri[Etape=4,Lettre=t]{4}{3}{4}{3}}$\\\medskip
+                \item $B=\Distri[Remarquable,Lettre=u]{8}{-1}{}{}$\\
+                $B=({\red 8u}+{\red 1})({\red 8u}-{\red 1})$\\
+                $B=\dotfill$\\
+                $B=\dotfill$
+            \end{spacing}
+        \end{itemize}
+        \item Recopier, développer et réduire les expressions suivantes à l'aide des méthodes précédentes.\\
+        \begin{itemize}
+            \def\item{}
+            \begin{spacing}{1.2}
+                \item $C=\Distri[Remarquable,Lettre=b,Echange=1]{3}{2}{}{}$
+                \item $D=\Distri[Remarquable,Lettre=c,Echange=1]{8}{-10}{}{}$
+            \end{spacing}
+        \end{itemize}    
+    \end{enumerate}
 \end{corrige}
 
