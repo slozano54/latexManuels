@@ -1,9 +1,110 @@
 \begin{exercice*}
-    \dots
+    \begin{enumerate}
+        \item Factoriser l'expression en complétant les étapes directement ici.
+        \begin{itemize}
+            \begin{spacing}{1.2}
+                \item[] $A = \Distri[Remarquable,Etape=1]{1}{4}{}{}-64$\\
+                $A = \Distri[Remarquable,Etape=1]{1}{4}{}{}-\makebox[0.1\linewidth]{\dotfill}^2$\\
+                $a^2-b^2$ avec $a=\makebox[0.2\linewidth]{\dotfill}$ et $b=\makebox[0.2\linewidth]{\dotfill}$\\
+                $A = [\makebox[0.25\linewidth]{\dotfill}+\makebox[0.1\linewidth]{\dotfill}]\times [\makebox[0.25\linewidth]{\dotfill}-\makebox[0.1\linewidth]{\dotfill}]$\\
+                $A = \makebox[0.9\linewidth]{\dotfill}$\\
+                $A = \makebox[0.9\linewidth]{\dotfill}$
+            \end{spacing}
+        \end{itemize}
+        \item Factoriser les expressions suivantes en appliquant la méthode précédente.
+        \begin{itemize}
+            \begin{spacing}{1.2}
+                \item[] $B= \Distri[Remarquable,Echange=3,Etape=1]{3}{-2}{}{}-4$
+                \item[] $C= 121- \Distri[Remarquable,Echange=3,Etape=1]{1}{-3}{}{}$
+                \item[] $D= \Distri[Remarquable,Etape=1]{1}{-4}{}{} - \Distri[Remarquable,Etape=1]{2}{-1}{}{}$
+                \item[] $E= \Distri[Remarquable,Etape=1]{7}{8}{}{} -   \Distri[Remarquable,Etape=1]{9}{-5}{}{}$
+                \item[] $F= \Distri[Remarquable,Etape=1]{1}{1}{}{} -   \Distri[Remarquable,Etape=1]{1}{-1}{}{}$
+            \end{spacing}
+       \end{itemize}
+       \item Grâce à la factorisation de $F$, en déduire le résultat de $\num{10001}^2-\num{9999}^2$
+    \end{enumerate}    
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Factoriser l'expression en complétant les étapes directement ici.
+        \begin{itemize}
+            \def\item{}
+            \begin{spacing}{1.2}
+                \item $A = \Distri[Remarquable,Etape=1]{1}{4}{}{}-64$\\
+                $A = \Distri[Remarquable,Etape=1]{1}{4}{}{}-{\red 8}^2$\\
+                $a^2-b^2$ avec $a={\red (x+4)}$ et $b={\red 8}$\\
+                $A = [{\red (x+4)}+{\red 8}]\times [{\red (x+4)}-{\red 8}]$\\
+                $A = {\red (x+4+8)}\times {\red (x+4-8)}$\\
+                $A = {\red (x+12)\times (x-4)}$\\
+            \end{spacing}
+        \end{itemize}
+        \item Factoriser les expressions suivantes en appliquant la méthode précédente.
+        \begin{itemize}
+            \def\item{}
+            \begin{spacing}{1.2}
+                \item $B= \Distri[Remarquable,Echange=3,Etape=1]{3}{-2}{}{}-4$\\
+                {\red 
+                $B = \Distri[Remarquable,Echange=3,Etape=1]{3}{-2}{}{}-2^2$\\
+                $a^2-b^2$ avec $a=(3-2x)$ et $b=2$\\
+                $B = [(3-2x)+2]\times [(3-2x)-2]$\\
+                $B = (3-2x+2)\times (3-2x-2)$\\
+                $B = (-2x+5)\times (-2x+1)$\\
+                }
+            \end{spacing}
+        \end{itemize}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \begin{itemize}
+            \def\item{}
+            \begin{spacing}{1.2}
+                \item $C= 121- \Distri[Remarquable,Echange=3,Etape=1]{1}{-3}{}{}$\\
+                {\red 
+                $C = 11^2- \Distri[Remarquable,Echange=3,Etape=1]{1}{-3}{}{}$\\
+                $a^2-b^2$ avec $a=11$ et $b=(1-3x)$\\
+                $C = [11+(1-3x)]\times [11-(1-3x)]$\\
+                $C = (11+1-3x)\times (11-1+3x)$\\
+                $C = (-3x+12)\times (3x+10)$
+                }
+                
+                \medskip
+                \item $D= \Distri[Remarquable,Etape=1]{1}{-4}{}{} - \Distri[Remarquable,Etape=1]{2}{-1}{}{}$\\
+                {\red                 
+                $a^2-b^2$ avec $a=(x-4)$ et $b=(2x-1)$\\
+                $D = [(x-4)+(2x-1)]\times [(x-4)-(2x-1)]$\\
+                $D = (x-4+2x-1)\times (x-4-2x+1)$\\
+                $D = (3x-5)\times (-x-3)$
+                }
+                
+                \medskip
+                \item $E= \Distri[Remarquable,Etape=1]{7}{8}{}{} -  \Distri[Remarquable,Etape=1]{9}{-5}{}{}$\\
+                {\red                 
+                $a^2-b^2$ avec $a=(7x+8)$ et $b=(9x-5)$\\
+                $E = [(7x+8)+(9x-5)]\times [(7x+8)-(9x-5)]$\\
+                $E = (7x+8+9x-5)\times (7x+8-9x+5)$\\
+                $E = (16x+3)\times (-2x+13)$
+                }
+
+                \medskip
+                \item $F= \Distri[Remarquable,Etape=1]{1}{1}{}{} -  \Distri[Remarquable,Etape=1]{1}{-1}{}{}$\\
+                {\red                 
+                $a^2-b^2$ avec $a=(x+1)$ et $b=(x-1)$\\
+                $F = [(x+1)+(x-1)]\times [(x+1)-(x-1)]$\\
+                $F = (x+1+x-1)\times (x+1-x+1)$\\
+                $F = 2x\times 2$\\
+                $F = 4x$\\
+                }
+            \end{spacing}
+       \end{itemize}
+       \item Grâce à la factorisation de $F$, en déduire le résultat de $\num{10001}^2-\num{9999}^2$\\
+       {\red 
+       $\num{10001}^2-\num{9999}^2 = (\num{10000}+1)^2-(\num{10000}-1)^2$\\
+       $\num{10001}^2-\num{9999}^2 = 4\times \num{10000}$\\
+       $\num{10001}^2-\num{9999}^2 = \num{40000}$\\
+       }
+    \end{enumerate}
 \end{corrige}
 
