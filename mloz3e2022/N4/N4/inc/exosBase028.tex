@@ -1,5 +1,70 @@
 \begin{exercice*}
-    \dots
+    Soit le programme ci-dessous, dans lequel \og{} $x$ \fg{}, \og{} Etape1 \fg{}, \og{} Etape2 \fg{} et , \og{} Resultat \fg{} sont quatre variables.
+
+    \begin{minipage}{0.6\linewidth}
+        \begin{Scratch}[Echelle=0.7]
+            Place Drapeau;
+            Place Demander("Choisir un nombre");
+            Place MettreVar("$x$",OvalCap("réponse"));
+            Place DireT("Je multiplie le nombre par $6$","2");
+            Place MettreVar("Etape1",OpMul("$6$",OvalVar("$x$")));
+            Place DireT("J'ajoute 10 au résultat","2");
+            Place MettreVar("Etape2",OpAdd(OvalVar("Etape1"),"$10$"));
+            Place DireT("Bonjour !","2");
+            Place MettreVar("Resultat",OpDiv(OvalVar("Etape2"),"$2$"));
+            Place DireT(OpRegrouper("J'obtiens finalement ",OvalVar("Resultat")),"2");
+        \end{Scratch}
+    \end{minipage}    
+    \begin{minipage}{0.35\linewidth}
+        \vspace*{-25mm}
+        % \hspace*{15mm}
+        \fbox{
+        \parbox{0.5\linewidth}{
+        \fbox{Créer une variable}        
+        
+        \smallskip
+        \raisebox{1ex}{\emoji{check-box-with-check}}
+        \begin{Scratch}[Echelle=0.7]
+            Place OvalVar("Etape1");
+        \end{Scratch}
+
+        \smallskip
+        \raisebox{1ex}{\emoji{check-box-with-check}}
+        \begin{Scratch}[Echelle=0.7]
+            Place OvalVar("Etape2");
+        \end{Scratch}
+
+        \smallskip
+        \raisebox{1ex}{\emoji{check-box-with-check}}
+        \begin{Scratch}[Echelle=0.7]
+            Place OvalVar("Resultat");
+        \end{Scratch}
+
+        \smallskip
+        \raisebox{1ex}{\emoji{check-box-with-check}}
+        \begin{Scratch}[Echelle=0.7]
+            Place OvalVar("$x$");
+        \end{Scratch}
+        }
+        }
+    \end{minipage}
+    \begin{enumerate}
+        \item Cassandra a fait fonctionner ce programme en choisissant le nombre $5$. Justifier que ce qui est dit à la fin est \og{} J'obtiens finalement $20$\fg{}.
+        \item Déterminer ce que dit le programme, si Alycia le fait fonctionner en choisissant $7$ au départ.
+        \item Clément fait fonctionner le programme. À la fin, ce qui est dit est \og{} J'obtiens finalement $8$\fg{}. Déterminer le nombre que Clément a choisi au départ.
+        \item Si on note $x$ le nombre choisi au départ, écrire en fonction de $x$ l'expression obtenue à la fin du programme, puis réduire cette expression.
+        \item Lola utilise le programme suivant :
+        
+        \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+        \ProgCalcul[Enonce,ThemePerso]{%
+            Choisir un nombre.,
+            Lui akouter $2$.,
+            Multiplier le résultat par $5$.,
+            }
+        }
+
+        Déterminer si on peut choisir un nombre pour lequel le résultat obtenu par Lola est le même que celui obtenu par le programme.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
