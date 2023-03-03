@@ -1,16 +1,7 @@
 \begin{exercice*}
-    Soit le programme ci-dessous, dans lequel \og{} $x$ \fg{}, \og{} Etape1 \fg{}, \og{} Etape2 \fg{} et , \og{} Resultat \fg{} sont quatre variables.
+    Soit le programme ci-dessous, dans lequel \og $x$ \fg{}, \og Etape1 \fg{}, \og Etape2 \fg{} et , \og Resultat \fg{} sont quatre variables.
 
-    \begin{minipage}{0.45\linewidth}
-        \begin{enumerate}
-            \item Cassandra a fait fonctionner ce programme en choisissant le nombre $5$. Justifier que ce qui est dit à la fin est \og{} J'obtiens finalement $20$\fg{}.
-            \item Déterminer ce que dit le programme, si Alycia le fait fonctionner en choisissant $7$ au départ.
-            \item Clément fait fonctionner le programme. À la fin, ce qui est dit est \og{} J'obtiens finalement $8$\fg{}. Déterminer le nombre que Clément a choisi au départ.
-            \item Si on note $x$ le nombre choisi au départ, écrire en fonction de $x$ l'expression obtenue à la fin du programme, puis réduire cette expression.
-        \end{enumerate}        
-    \end{minipage}
-    \hspace*{5mm}
-    \begin{minipage}{0.3\linewidth}        
+    \begin{minipage}{0.6\linewidth}
         \begin{Scratch}[Echelle=0.7]
             Place Drapeau;
             Place Demander("Choisir un nombre");
@@ -22,11 +13,11 @@
             Place DireT("Bonjour !","2");
             Place MettreVar("Resultat",OpDiv(OvalVar("Etape2"),"$2$"));
             Place DireT(OpRegrouper("J'obtiens finalement ",OvalVar("Resultat")),"2");
-        \end{Scratch}        
-    \end{minipage}   
+        \end{Scratch}
+    \end{minipage}    
     \begin{minipage}{0.35\linewidth}
         \vspace*{-25mm}
-        \hspace*{10mm}
+        % \hspace*{15mm}
         \fbox{
         \parbox{0.5\linewidth}{
         \fbox{Créer une variable}        
@@ -58,7 +49,10 @@
         }
     \end{minipage}
     \begin{enumerate}
-        \setcounter{enumi}{4}
+        \item Cassandra a fait fonctionner ce programme en choisissant le nombre $5$. Justifier que ce qui est dit à la fin est \og J'obtiens finalement $20$\fg{}.
+        \item Déterminer ce que dit le programme, si Alycia le fait fonctionner en choisissant $7$ au départ.
+        \item Clément fait fonctionner le programme. À la fin, ce qui est dit est \og J'obtiens finalement $8$\fg{}. Déterminer le nombre que Clément a choisi au départ.
+        \item Si on note $x$ le nombre choisi au départ, écrire en fonction de $x$ l'expression obtenue à la fin du programme, puis réduire cette expression.
         \item Lola utilise le programme suivant :
         
         \begin{minipage}{0.5\linewidth}
