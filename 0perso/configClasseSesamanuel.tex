@@ -79,7 +79,10 @@
   \href{https://mathslozano.fr}{\textcolor{U4}{\LogoURLManuelFont https://mathslozano.fr}}}
 
 % Ajout d'un logo
+% Font pour les logos
 \newcommand*\NewLogoFont{\fontsize{9}{9}\sffamily\bfseries}  
+
+% Test d'un nouveau logo
 \newcommand*\StringNEWLOGO{NEWLOGO}
 \newcommand*\newLogo{%
   \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
@@ -90,6 +93,7 @@
   }
 }
 
+% Logo mathalea
 \newcommand*\StringMATHALEA{MATHALEA}
 \colorlet{mathaleaLineColor}{J3}
 \colorlet{mathaleaBkgColor}{J1}
@@ -100,6 +104,20 @@
               fillcolor=mathaleaBkgColor, framearc=0.6]{%
     \NewLogoFont
     \textcolor{mathaleaTextColor}{\StringMATHALEA}%
+  }
+}
+
+% Logo tableur
+\newcommand*\StringTABLEUR{TABLEUR}
+\colorlet{tableurLineColor}{J3}
+\colorlet{tableurBkgColor}{J1}
+\colorlet{tableurTextColor}{Blanc}
+\newcommand*\tableurLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=tableurLineColor, fillstyle=solid,
+              fillcolor=tableurBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{tableurTextColor}{\StringTABLEUR}%
   }
 }
 % Un environnement pour mathalea
