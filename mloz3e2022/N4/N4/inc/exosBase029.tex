@@ -30,7 +30,7 @@
         \smallskip
         \begin{enumerate}
             \item Déterminer le résultat obtenu en prenant comme premier nombre impair $17$.
-            \item Montrer que le résultat précédetn est un multiple de $4$.
+            \item Montrer que le résultat de la question précédente est un multiple de $4$.
             \item Recopier les deux formules que l'on peut saisir dans la cellule D3.\\
             \textit{Auccune justification n'est attendue.}
             \begin{description}
@@ -50,6 +50,70 @@
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Melisa pense qu'en multipliant deux nombres impairs consécutifs et en ajoutant $1$, le résultat obtenu est toujours un multiple de $4$.
+
+    \begin{enumerate}
+        \item {\bfseries Étude d'un exemple : }
+        
+        $5$ et $7$ sont deux nombres impairs consécutifs.
+        \begin{enumerate}
+            \item Calculer $5\times 7 + 1$.\\
+            {\red $5\times 7 + 1 = 35+1$\\$5\times 7 + 1 = 36$}\\
+            \item Déterminer si Melisa a raison sur cet exemple.\\
+            {\red $36 = 9\times 4$, donc Melisa a raison sur cet exemple.}\\
+        \end{enumerate}
+        \setcounter{enumi}{1}
+        \item \tableurLogo Le tableau ci-dessous montre le travail de Melisa dans une feuille de calcul.
+        
+        \smallskip
+        \scalebox{0.6}{
+        \begin{Tableur}[Bandeau=false,Colonnes=5,Largeur=80pt]
+            &Nombre impair&Nombre impair suivant&Produit&Résultat obtenu\\
+            $x$&$2x+1$&$2x+3$&$(2x+1)(2x+3)$&$(2x+1)(2x+3)+1$\\
+            $0$&$1$&$3$&$3$&$4$\\
+            $1$&$3$&$5$&$15$&$16$\\
+            $2$&$5$&$7$&$35$&$36$\\
+            $3$&$7$&$9$&$63$&$64$\\
+            $4$&$9 $&$11$&$99 $&$100$\\
+            $5$&$11$&$13$&$143$&$144$\\
+            $6$&$13$&$15$&$195$&$196$\\
+            $7$&$15$&$17$&$255$&$256$\\
+            $8$&$17$&$19$&$323$&$324$\\
+            $9$&$19$&$21$&$399$&$400$\\
+        \end{Tableur}       
+        }
+        \smallskip
+        \begin{enumerate}
+            \item Déterminer le résultat obtenu en prenant comme premier nombre impair $17$.\\
+            {\red Avec $17$, on obtient : \\
+            $(2\times 17 + 1)\times (2\times 17 + 3)+1=35\times 37+1$\\
+            $(2\times 17 + 1)\times (2\times 17 + 3)+1=\num{1295}+1$\\
+            $(2\times 17 + 1)\times (2\times 17 + 3)+1=\num{1296}$\\
+            }
+            \item Montrer que le résultat de la question précédente est un multiple de $4$.\\
+            {\red $\num{1296}=324\times 4$, c'est donc bien un multiple de $4$.}\\
+            \item Recopier les deux formules que l'on peut saisir dans la cellule D3.\\
+            \textit{Auccune justification n'est attendue.}\\            
+            {\bfseries Formule 1 : } \fbox{$=(2*A3+1)*(2*A3+3)$}\\
+            {\bfseries Formule 2 : } \fbox{$=(2*B3+1)*(2*C3+3)$}\\
+            {\bfseries Formule 3 : } \fbox{$=B3*C3$}\\
+            {\bfseries Formule 4 : } \fbox{$=(2*D3+1)*(2*D3+3)$}\\
+            {\red Les formules 1 et 3 peuvent être saisies en D3.\\
+            {\bfseries Formule 1 : } \fbox{$=(2*A3+1)*(2*A3+3)$}\\
+            {\bfseries Formule 3 : } \fbox{$=B3*C3$}\\            
+            }            
+        \end{enumerate}
+        \setcounter{enumi}{2}
+        \item {\bfseries Étude algébrique : }\\        
+        \begin{enumerate}
+            \item Développer et réduire $(2x+1)(2x+3)+1$.\\
+            {\red $(2x+1)(2x+3)+1 = 4x^2+6x+2x+3+1$.\\
+            $(2x+1)(2x+3)+1 = 4x^2+8x+4$.\\
+            }
+            \item Démontrer que Melisa avait raison.\\
+            {\red Si on choisit $x$ au départ, les résultat final est $4x^2+8x+4$, or $4x^2+8x+4=(x^2+2x+1)\times 4$ qui est bien un multiple de $4$.}
+            
+        \end{enumerate}
+    \end{enumerate}
 \end{corrige}
 
