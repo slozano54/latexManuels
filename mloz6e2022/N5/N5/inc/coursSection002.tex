@@ -1,2 +1,112 @@
-\section{...} %%%%%%%%%%%%
- ...
+% \section{Différentes manière de penser les fractions}
+\section{Fraction et partages}
+% \ColCadre{Idée}{
+% Au départ l'idée de fraction correspond à une situation de partage.\\
+% Mémé Carmela fait ses succulentes pizzas et les partage pour ses enfants et petits enfants adorés.\\
+% Cela peut mener aux représentations simplifiées qui suivent. 
+% }
+
+% \newcommand{\scalePizza}{0.75}
+% \begin{center}
+% \begin{tabular}{|>{\centering}m{5cm}|>{\centering}m{4cm}|>{\centering}m{2cm}|c|}
+% \hline 
+% Descriptif & Figure & Fraction & En français on lit \\ 
+% \hline 
+% Giovani est gourmand il veut la moitié d'une pizza & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.9} & $\dfrac12$ & un \textbf{demi} \\ 
+% \hline 
+% Liliane aussi elle veut cette partie là! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.10} & $\dfrac23$ & deux \textbf{tiers} \\ 
+% \hline 
+% Angelina n'a pas trop faim! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.11} & $\dfrac14$ & un \textbf{quart} \\ 		
+% \hline 
+% Tonio est un gourmand! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.12} & $\dfrac45$ & quatre \textbf{cinquièmes} \\ 
+% \hline 
+% Adélaïde aussi est gourmande & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.13} & $\dfrac57$ & cinq \textbf{septièmes} \\ 
+% \hline 
+% C'est tellement bon tout ça hein Francesco! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.14} & $\dfrac7{10}$ & sept \textbf{dixièmes} \\ 
+% \hline 
+% Alors pas trop faim Jeanina? & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.15} & $\dfrac5{12}$ & cinq \textbf{douzièmes} \\ 
+% \hline 
+% \end{tabular} 
+% \end{center}
+
+\begin{definition}
+   Une \textbf{fraction} indique quelle partie d'un tout on doit prendre, elle peut représenter un {\bf partage}, une {\bf proportion}.
+\end{definition}
+
+\bigskip
+
+On partage une pizza en quatre parts égales.
+
+\begin{center}
+   {\small
+   \begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{4cm}}
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+         \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{90}{0}
+         \psset{linecolor=black}
+         \psline(-1,0)(1,0)
+         \psline(0,-1)(0,1)  
+      \end{pspicture}
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{180}{0}
+         \psline[linewidth=0.7mm](0,0)(0,1) 
+         \psset{linecolor=black}
+         \psline(-1,0)(1,0)
+         \psline(0,-1)(0,0)  
+      \end{pspicture}
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+         \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{-90}{0}
+         \psline[linewidth=0.7mm](-1,0)(1,0)
+         \psline[linewidth=0.7mm](0,0)(0,1)
+      \end{pspicture}
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+        \pscircle(0,0){1}
+         \psset{linewidth=0.7mm,linecolor=white}
+         \psline(-1,0)(1,0)
+         \psline(0,-1)(0,1) 
+      \end{pspicture} \\
+      {\bf une} part & \textbf{deux} parts & \textbf{trois} parts & \textbf{quatre} parts \\   
+      un {\bf quart} de pizza & deux {\bf quarts} de pizza & trois {\bf quarts} de pizza & quatre {\bf quarts} de pizza \\ [2mm]
+      $\dfrac14$ & $\dfrac24 =\dfrac14+\dfrac14 =2\times\dfrac14$ & $\dfrac34 =\dfrac14+\dfrac14+\dfrac14 =3\times\dfrac14$ & $\dfrac44 =\dfrac14+\dfrac14+\dfrac14+\dfrac14 =4\times\dfrac14$ \\ 
+   \end{tabular}}
+\end{center}
+
+\smallskip
+
+\begin{minipage}{10cm}
+   Et si on mangeait plus d'une pizza ? \\
+   Dans ce cas, on obtient une fraction supérieure à 1. \\
+   On a pris {\bf sept} parts de pizza, soit $\dfrac74$ de pizza. \\
+   On peut aussi dire {\bf une} pizza et {\bf trois} quarts de pizza, soit $1+\dfrac34$.
+\end{minipage}
+\qquad
+\begin{minipage}{6cm}
+   \begin{pspicture}(-1,-1.2)(1,1.2)
+      \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+      \pscircle(0,0){1}
+      \psset{linewidth=0.7mm,linecolor=white}
+      \psline(-1,0)(1,0)
+      \psline(0,-1)(0,1) 
+   \end{pspicture}
+   \qquad 
+   \begin{pspicture}(-1,-1.2)(1,1.2)
+      \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+      \pscircle(0,0){1}
+      \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+      \pswedge(0,0){0.98}{-90}{0}
+      \psline[linewidth=0.7mm](-1,0)(1,0)
+      \psline[linewidth=0.7mm](0,0)(0,1)
+   \end{pspicture}
+\end{minipage}
