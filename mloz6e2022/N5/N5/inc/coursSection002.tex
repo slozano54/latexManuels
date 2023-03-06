@@ -1,33 +1,129 @@
 % \section{Différentes manière de penser les fractions}
 \section{Fraction et partages}
-% \ColCadre{Idée}{
-% Au départ l'idée de fraction correspond à une situation de partage.\\
-% Mémé Carmela fait ses succulentes pizzas et les partage pour ses enfants et petits enfants adorés.\\
-% Cela peut mener aux représentations simplifiées qui suivent. 
-% }
+\begin{myBox}{\emoji{light-bulb} Idée}
+   Au départ l'idée de fraction correspond à une situation de partage.\\
+   Mémé Carmela fait ses succulentes pizzas et les partage pour ses enfants et petits enfants adorés.\\
+   Cela peut mener aux représentations simplifiées qui suivent. 
+\end{myBox}
 
-% \newcommand{\scalePizza}{0.75}
-% \begin{center}
-% \begin{tabular}{|>{\centering}m{5cm}|>{\centering}m{4cm}|>{\centering}m{2cm}|c|}
-% \hline 
-% Descriptif & Figure & Fraction & En français on lit \\ 
-% \hline 
-% Giovani est gourmand il veut la moitié d'une pizza & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.9} & $\dfrac12$ & un \textbf{demi} \\ 
-% \hline 
-% Liliane aussi elle veut cette partie là! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.10} & $\dfrac23$ & deux \textbf{tiers} \\ 
-% \hline 
-% Angelina n'a pas trop faim! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.11} & $\dfrac14$ & un \textbf{quart} \\ 		
-% \hline 
-% Tonio est un gourmand! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.12} & $\dfrac45$ & quatre \textbf{cinquièmes} \\ 
-% \hline 
-% Adélaïde aussi est gourmande & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.13} & $\dfrac57$ & cinq \textbf{septièmes} \\ 
-% \hline 
-% C'est tellement bon tout ça hein Francesco! & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.14} & $\dfrac7{10}$ & sept \textbf{dixièmes} \\ 
-% \hline 
-% Alors pas trop faim Jeanina? & \includegraphics[scale=\scalePizza]{../figures/coursecriturefractionnaire.15} & $\dfrac5{12}$ & cinq \textbf{douzièmes} \\ 
-% \hline 
-% \end{tabular} 
-% \end{center}
+\begin{center}
+   \begin{tabular}{|>{\centering}m{5cm}|>{\centering}m{4cm}|>{\centering}m{2cm}|c|}
+      \hline 
+      Descriptif & Figure & Fraction & En français on lit \\ 
+      \hline 
+      Giovani est gourmand il veut la moitié d'une pizza 
+      & 
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{180}{0}
+         \psline(-1,0)(1,0)
+      \end{pspicture}
+      & $\dfrac12$ & un \textbf{demi} \\ 
+      \hline 
+      Liliane aussi elle veut cette partie là! 
+      & 
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{240}{0}
+         \pnode(0,0){O}
+         \SpecialCoor
+         \psline(O)([angle=120,nodesep=1]O)         
+      \end{pspicture}     
+      & $\dfrac23$ & deux \textbf{tiers} \\ 
+      \hline 
+      Angelina n'a pas trop faim! 
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{90}{0}
+      \end{pspicture}     
+      & $\dfrac14$ & un \textbf{quart} \\ 		
+      \hline 
+      Tonio est un gourmand! 
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{288}{0}
+         \pnode(0,0){O}
+         \SpecialCoor
+         \psline(O)([angle=72,nodesep=1]O)
+         \psline(O)([angle=144,nodesep=1]O)
+         \psline(O)([angle=216,nodesep=1]O)
+      \end{pspicture}     
+      & $\dfrac45$ & quatre \textbf{cinquièmes} \\ 
+      \hline 
+      Adélaïde aussi est gourmande 
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{257.14}{0}
+         \pnode(0,0){O}
+         \SpecialCoor
+         \psline(O)([angle=51.43,nodesep=1]O)
+         \psline(O)([angle=102.85,nodesep=1]O)
+         \psline(O)([angle=154.28,nodesep=1]O)
+         \psline(O)([angle=205.71,nodesep=1]O)
+         \psset{linecolor=black}
+         \psline(O)([angle=308.57,nodesep=1]O)
+      \end{pspicture}          
+      & $\dfrac57$ & cinq \textbf{septièmes} \\ 
+      \hline 
+      C'est tellement bon tout ça hein Francesco! 
+      & 
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{252}{0}
+         \pnode(0,0){O}
+         \SpecialCoor
+         \psline(O)([angle=36,nodesep=1]O)
+         \psline(O)([angle=72,nodesep=1]O)
+         \psline(O)([angle=108,nodesep=1]O)
+         \psline(O)([angle=144,nodesep=1]O)
+         \psline(O)([angle=180,nodesep=1]O)
+         \psline(O)([angle=216,nodesep=1]O)
+         \psset{linecolor=black}
+         \psline(O)([angle=288,nodesep=1]O)
+         \psline(O)([angle=324,nodesep=1]O)
+      \end{pspicture}          
+      & $\dfrac7{10}$ & sept \textbf{dixièmes} \\ 
+      \hline 
+      Alors pas trop faim Jeanina? 
+      &
+      \begin{pspicture}(-1,-1.1)(1,1.1)
+         \rput(0,0){\includegraphics[width=2cm]{\currentpath/images/pizza}}
+         \pscircle(0,0){1}
+        \psset{linecolor=white,fillstyle=solid,fillcolor=white}
+         \pswedge(0,0){0.98}{150}{0}
+         \pnode(0,0){O}
+         \SpecialCoor
+         \psline(O)([angle=30,nodesep=1]O)
+         \psline(O)([angle=60,nodesep=1]O)
+         \psline(O)([angle=90,nodesep=1]O)
+         \psline(O)([angle=120,nodesep=1]O)
+         \psset{linecolor=black}
+         \psline(O)([angle=180,nodesep=1]O)
+         \psline(O)([angle=210,nodesep=1]O)
+         \psline(O)([angle=240,nodesep=1]O)
+         \psline(O)([angle=270,nodesep=1]O)
+         \psline(O)([angle=300,nodesep=1]O)
+         \psline(O)([angle=330,nodesep=1]O)
+      \end{pspicture}                
+      & $\dfrac5{12}$ & cinq \textbf{douzièmes} \\ 
+      \hline 
+   \end{tabular} 
+\end{center}
 
 \begin{definition}
    Une \textbf{fraction} indique quelle partie d'un tout on doit prendre, elle peut représenter un {\bf partage}, une {\bf proportion}.
