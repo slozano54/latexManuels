@@ -1,71 +1,136 @@
 \section{Le cerlce, le disque}
+\begin{minipage}{0.7\linewidth}
+    Les longueurs $OB$, $OT$, $OM$ et $OS$ mesurent toutes \Lg{4.5}.
+    
+    \begin{definition}
+        Lorsque des points sont à la même distance d'un point donné, on dit qu'ils sont {\bfseries équidistants} de ce point.
+    \end{definition}
+
+    \begin{remarque}
+        Sur la figure ci-contre, $B$, $T$, $M$ et $S$ sont équidistants de $O$.
+    \end{remarque}
+
+    \begin{definition}
+        \begin{itemize}
+            \item L'ensemble des points qui sont équidistants de $O$ est appelé {\red\bfseries cercle} de {\bfseries centre} $O$ et de {\bfseries rayon} la distance en question.
+            \item On peut le noter $(\mathscr C)$.
+            \item Un {\bfseries disque} est l'intérieur d'un cercle.
+        \end{itemize}
+    \end{definition}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \begin{Geometrie}[CoinHD={(5u,5u)}]
+        pair B,S,T,O,M;
+        O=u*(2.5,2.5);
+        path cc;
+        cc=cercles(O,2u);
+        trace cc withcolor red;
+        B=pointarc(cc,50);
+        T=pointarc(cc,200);
+        S=pointarc(cc,130);
+        M=pointarc(cc,260);
+        trace segment(O,T) dashed evenly;
+        trace segment(O,M) dashed evenly;
+        trace segment(O,B) dashed evenly;
+        trace segment(O,S) dashed evenly;
+        marque_s:=marque_s/3;
+        trace Codelongueur(O,T,O,M,O,B,O,S,2);
+        trace appelation(O,B,3mm,btex $\Lg{4.5}$ etex);
+        label.rt(btex $B$ etex,B);
+        label.lft(btex $T$ etex,T);
+        label.ulft(btex $S$ etex,S);
+        label.bot(btex $M$ etex,M);
+        label.lrt(btex $O$ etex,O);
+        label.ulft(btex $(\mathscr C)$ etex,pointarc(cc,160));
+    \end{Geometrie} 
+\end{minipage}
+\begin{remarque}
+    Un cercle se dessine en général à l'aide d'un compas.
+\end{remarque}
 
 \begin{definition}
-    Le \textbf{cercle} de centre O de rayon $r$ est l'ensemble des points situés à une distance $r$ du point O. \\ 
-    Le \textbf{disque} est l'intérieur du cercle.
+    \begin{itemize}
+       \item Un {\bf rayon} d'un cercle est un segment d'extrémité le centre du cercle et un point du cercle, c'est aussi la longueur de ce segment.
+       \item Une \textbf{corde} est un segment reliant deux points du cercle.
+       \item Lorsqu'une corde passe par le centre du cercle, on l'appelle un \textbf{diamètre} du cercle.
+       \item Une partie du cercle comprise entre deux points est appelée \textbf{arc} de cercle.
+    \end{itemize}
  \end{definition}
  
- {\psset{unit=0.6}
- \begin{pspicture}(-5,0.1)(10,4.9)
-    \psdots(2,2)
-    \rput(2,1.6){$O$}
-    \psarc(2,2){2}{70}{-45}
-    \psarc[linestyle=dashed](2,2){2}{-45}{70}
-    \psline[linecolor=B1,arrowsize=0.25]{<->}(0,2)(2,2)
-    \rput(1,2.3){\textcolor{B1}{$r$}}
-    \rput(10,2){\begin{minipage}{3.2cm} Un cercle se dessine en général à l'aide d'un compas. \end{minipage}}
- \end{pspicture}}
- 
-% \begin{minipage}{14.5cm}
-%     Les longueurs $OB$, $OT$, $OM$ et $OS$ mesurent toutes $4,5$ cm.
-%     \par\vspace{0.25cm}
-%     \definNum{Lorsque des points sont à la même distance d'un point donné, on dit qu'ils sont \'{E}QUIDISTANTS de ce point.}
-%     \par\vspace{0.25cm}
-%     $B,T,M$ et $S$ sont équidistants de $O$.
-%     \par\vspace{0.25cm}
-%     \definNum{L'ensemble des points qui sont équidistants de $O$ est appelé \colorbox{red!30}{CERCLE} de CENTRE $O$ et de RAYON la distance en question.\par
-%     On le note $(\mathscr C)$}
-%     \end{minipage}
-%     \begin{minipage}{5cm}
-%     \includegraphics[scale=1]{figures/courscercles.1} 
-%     \end{minipage}
-    
-%     \begin{minipage}{14.5cm}
-%     \ColCadre{Vocabulaire}{
-%     \begin{mylist}
-%     \item Le segment $[OA]$ est \underline{UN} RAYON du cercle $(\mathscr C)$.
-%     \par
-%     La distance $OA$ est \underline{LE} RAYON du cercle $(\mathscr C)$.
-%     \item Le segment $[CB]$ est \colorbox{green!30}{\underline{UN} DIAM\`{E}TRE} du cercle $(\mathscr C)$.
-%     \par
-%     La distance $CB$ est \colorbox{green!30}{\underline{LE} DIAM\`{E}TRE} du cercle $(\mathscr C)$.
-%     \par
-%     Les points $C$ et $B$ sont diamètralement opposés.
-%     \item Le segment $[DE]$ joint deux points du cercle, c'est une \colorbox{blue!30}{CORDE}.
-%     \end{mylist}
-%     }
-%     \par\vspace{0.5cm}
-%     \end{minipage}
-%     \begin{minipage}{5cm}
-%     \includegraphics[scale=1]{figures/courscercles.2} 
-%     \end{minipage}
-    
-%     \proprNum{(admise)}{le point $A$ est sur le cerlce de centre $O$ et de rayon $R$}{$OA=R$}
-%     \par
-%     \proprNum{(admise)}{$OA=R$}{le point $A$ est sur le cerlce de centre $O$ et de rayon $R$}
-    
-%     \subsection{Arc de cercle}
-%     \begin{minipage}{14.5cm}
-%     \definNum{
-%     \begin{mylist}
-%     \item Le "petit morceau" de cercle compris entre $A$ et $B$ est un \colorbox{red!30}{ARC du cercle $(\mathscr C)$}.
-%     \item son centre et son rayon sont les mêmes que ceux du cercle $(\mathscr C)$.
-%     \item "L'arc de cercle AB" se note $\widehat{AB}$, son angle $\widehat{AOB}$ vaut ici $60$\degre.
-%     \end{mylist}
-%     }
-%     \end{minipage}
-%     \begin{minipage}{5cm}
-%     \includegraphics[scale=1]{figures/courscercles.3} 
-%     \end{minipage}
-    
+ \begin{vocabulaire}
+    \phantom{rrr}
+
+    \begin{minipage}{0.35\linewidth}    
+        \psset{unit=0.9}
+        \begin{pspicture}(-0.2,0.2)(4.2,4.4)            
+            \psdots(2,2)
+            \psarc[linecolor=A1](2,2){2}{180}{240}
+            \psarc(2,2){2}{240}{180}
+            \rput(2,1.6){$O$}
+            \rput(0.4,3.7){$(\mathscr{C})$}
+            \psline[linecolor=B1](0,2)(2,2)
+            \psdots(0,2)
+            \rput(-0.3,2){$A$}
+            \psdots(3,3.7)
+            \rput(3.2,4){$B$}
+            \psdots(1,0.3)
+            \rput(0.8,-0.2){$C$}
+            \psline[linecolor=D1](1,0.3)(3,3.7)
+            \psline[linecolor=J1](0,2)(3,3.7)
+            \psdots[dotstyle=+](1,2)(2.5,2.85)(1.52,1.2)
+        \end{pspicture}
+    \end{minipage} 
+    \begin{minipage}{0.65\linewidth}        
+            \begin{itemize}
+                \item \textcolor{B1}{$[OA]$ est {\bfseries un} rayon du cercle $(\mathscr{C})$.}
+                \item La distance \textcolor{B1}{$OA$ est {\bfseries le} rayon du cercle $(\mathscr{C})$.}
+                \item \textcolor{D1}{$[BC]$ est {\bfseries un} diamètre du cercle $(\mathscr{C})$.}
+                \item La distance \textcolor{D1}{$BC$ est {\bfseries le} diamètre du cercle $(\mathscr{C})$.}
+                \item \textcolor{A1}{$\wideparen{AC}$ est {\bfseries un} arc du cercle $(\mathscr{C})$.}
+                \item \textcolor{J1}{$[AB]$ est {\bfseries une} corde du cercle $(\mathscr{C})$.}
+                \item On a $OA = OB = OC$ et $BC =2\,OC$.
+                \item Les points $C$ et $B$ sont diamètralement opposés.
+                \item $O$ est le milieu du segment $[BC]$.
+            \end{itemize}    
+    \end{minipage}
+\end{vocabulaire}
+
+\begin{propriete}[\admise]
+    Si le point $A$ est sur le cerlce de centre $O$ et de rayon $R$ alors $OA=R$.
+\end{propriete}
+
+\begin{propriete}[\admise]
+    Si $OA=R$ alors le point $A$ est sur le cerlce de centre $O$ et de rayon $R$.
+\end{propriete}
+
+\begin{minipage}{0.75\linewidth}
+    \begin{definition}
+        \begin{itemize}
+            \item Le "petit morceau" de cercle compris entre $A$ et $B$ est un
+            
+            {\red ARC du cercle $(\mathscr C)$}.
+            \item Son centre et son rayon sont les mêmes que ceux du cercle $(\mathscr C)$.
+            \item "L'arc de cercle AB" se note $\wideparen{AB}$, son angle $\widehat{AOB}$ vaut ici $60$\degre.
+        \end{itemize}
+    \end{definition}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \begin{Geometrie}[CoinHD={(5u,5u)}]
+        pair A,B,O;
+        O=u*(2.5,2.5);
+        path cc;
+        cc=cercles(O,2u);
+        trace cc;
+        A=pointarc(cc,20);
+        B=pointarc(cc,80);
+        trace segment(O,A) dashed evenly;
+        trace segment(O,B) dashed evenly;
+        trace arccercle(A,B,O) withcolor red;
+        trace Codeangle(A,O,B,0,btex $\ang{60}$ etex);
+        label.ulft(btex $O$ etex,O);
+        label.rt(  btex $A$ etex,A);
+        label.top( btex $B$ etex,B);
+        label.ulft(btex $(\mathscr C)$ etex,pointarc(cc,160));
+    \end{Geometrie} 
+\end{minipage} 
     
