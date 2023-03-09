@@ -1,3 +1,37 @@
-\section{...}
+\section{Rédiger un programme de construction}
 
-\dots
+Rédiger un programme de construction signifie écrire des instructions permettant de construire une figure.
+
+\begin{exemple*1}
+   Écrire un programme de construction permettant d'obtenir la figure ci-dessous puis la construire. \\   
+   \small\psset{unit=0.5}
+   \begin{pspicture}(0,-4)(12,4.5)
+      \pscircle(2,0){2}
+      \psarc(4,0){4}{0}{180}
+      \psarc(8,0){4}{180}{0}
+      \pscircle(10,0){2}
+      \psdots(0,0)(4,0)(8,0)(12,0)
+      \rput(0.4,-0.4){$A$}
+      \rput(4.4,-0.43){$B$}
+      \rput(8.4,-0.4){$C$}
+      \rput(12.4,-0.4){$D$}
+      \psline(0,0)(12,0)
+      \rput(2,0.7){5 cm}
+      \rput(2,0){/\!\!/}
+      \rput(6,0){/\!\!/}
+      \rput(10,0){/\!\!/}
+   \end{pspicture}
+   \correction
+   \begin{itemize}
+        \item Tracer le segment $[AD]$ de longueur $AD =15$ cm.
+        \item Placer les points $B$ et $C$ sur ce segment tels que $AB =5$ cm et $AC =10$ cm.
+        \item Tracer le cercle de diamètre $[AB]$.
+        \item Tracer le demi-cercle de diamètre $[AC]$ situé au-dessus du segment $[AD]$.
+        \item Tracer le demi-cercle de diamètre $[BD]$ situé en-dessous du segment $[AD]$.
+        \item Tracer le cercle de diamètre $[CD]$.
+   \end{itemize}
+
+   \begin{remarque}
+        {\it {\bfseries attention} un programme de construction n'est pas unique et il ne mentionne pas les instruments à utiliser.}
+    \end{remarque}
+\end{exemple*1}
