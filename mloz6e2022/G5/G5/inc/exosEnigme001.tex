@@ -2,6 +2,22 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \phantom{\numeroteEnigme}
-\begin{enigme}[...]
-...
+\begin{enigme}[Rosaces]
+    Dessiner une rosace (sur une feuille unie) puis la colorier et la découper. Elle peut par exemple ressembler à l'une des trois rosaces ci-dessous mais il est aussi possible de faire travailler son imagination !
+    \begin{center}
+        \begin{pspicture}(-4,-5)(4,5.5)
+        \pscircle(0,0){4}
+        \multido{\n=0+30,\i=120+30,\r=240+30}{12}{\psarc(4;\n){4}{\i}{\r}}
+        \end{pspicture}
+        \qquad
+        \begin{pspicture}(-4,-5)(4,6)
+        \multido{\n=0+30}{12}{\pscircle(2;\n){2}}
+        \end{pspicture}
+        \begin{pspicture}(-4,-4)(4,4)
+        \pscircle(0,0){4}
+        \pscircle(0,0){2}
+        \pscircle(0,0){3.5}
+        \multido{\n=0+60}{6}{\pscircle(2;\n){2}}
+        \end{pspicture}
+    \end{center}
 \end{enigme}
