@@ -135,8 +135,8 @@
 % Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
 % #2 --> uuid de l'exercice
 \newcommand{\hrefMathaleaVIII}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
-    \createListOfUuid{#2}
-    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid}{#1}
+	\createListOfUuid{#2}    
+    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid&v=l}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid&v=l}{#1}
 }
 
 % Pour la géométrie, voir des constructions etc ...
