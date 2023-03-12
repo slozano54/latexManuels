@@ -113,19 +113,30 @@
     \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1}
 }
 
+% On définit le séparateur pour le paquet listofitems
+\setsepchar{,}%
+
 % Une précommande pour concaténer tous les éléments d'une liste
 % #1 --> list des uuid séparés par des virgules
-\newcommand{\listOfUuid}[1]{
-    \foreach \i in {#1}{
-        
-    }
+\newcommand{\createListOfUuid}[1]{%
+	\readlist*\myTmpList{#1}%
+	\xdef\listOfUuid{uuid=\myTmpList[1]}%
+	\ifthenelse{\myTmpListlen > 1}{%
+		\foreach \i in {2,...,\myTmpListlen}{%
+			\expandafter\xdef\expandafter\listOfUuid\expandafter{\listOfUuid\&uuid=\myTmpList[\i]}%
+		}%
+		}{%
+			\xdef\listOfUuid{uuid=\myTmpList[1]}%
+		}%
 }
+
 % Pour le lien vers un exo mathaleaV3
 % #1 --> Texte par défaut
 % Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
 % #2 --> uuid de l'exercice
-\newcommand{\hrefMathaleaVIII}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{    
-    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?uuid=#2}\hspace*{2mm}\href{https://coopmaths.fr/alea/?uuid=#2}{#1}
+\newcommand{\hrefMathaleaVIII}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
+    \createListOfUuid{#2}
+    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid}{#1}
 }
 
 % Pour la géométrie, voir des constructions etc ...
