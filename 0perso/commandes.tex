@@ -755,3 +755,16 @@
         trace rotation(losange,D,-30*j);
     endfor;        
 }
+
+%==========================================
+% Probabilités
+%==========================================
+% Commande de Nathalie DAVAL
+% #1 --> 
+\newcommand{\sac}[1]{\begin{pspicture}(-0.5,-0.5)(2,2)
+    \psline(0,0)(0,1.5)
+    \psline(1.5,0)(1.5,1.5)
+    \psellipse(0.75,1.5)(0.75,0.25)
+    \psellipticarc(0.75,0)(0.75,0.4){180}{0}
+    #1
+ \end{pspicture}}

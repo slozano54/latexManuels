@@ -1,34 +1,29 @@
-\vspace*{-8mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
 %pre-002
 \input{\currentpath/inc/prerequis002.tex}
-% \vfill
-\begin{debat}[...]
-   ...
-%     \vspace*{-5mm}
-%    Des données brutes récoltées ont souvent peu de sens si elles sont utilisées ainsi, d'où la nécessité
-%    de les disposer d'une manière plus lisible à l'aide de tableaux et diagrammes.
-
-%    Avec l'avènement de l'informatique, les tableaux deviennent numériques grâce aux {\bf tableurs}.
-% %    : logiciels qui permettent de manipuler des données numériques, d'effectuer des opérations de façon automatisée,
-% %    de créer des représentations graphiques à partir des données : diagrammes , histogrammes, courbes\dots{}
-   
-%    Le premier tableur fut créé en 1978 par {\it Daniel Bricklin}, étudiant à Harvard qui devait établir des tableaux
-%    comptables pour une étude de cas sur Pepsi-Cola sans pour autant établir tous les calculs \og à la main \fg. 
-%    Son premier prototype, {\it VisiCalc} (pour Visible Calculator), pouvait manipuler un tableau de vingt
-%    lignes et cinq colonnes !   
-%    \begin{center}    
-%       \begin{Tableur}[Bandeau=false,Colonnes=5]
-%          & & & & \\
-%          & & & & \\
-%          & & & & \\
-%       \end{Tableur}
-%    \end{center}
-%    \bigskip
-%    \begin{cadre}[B2][J4]
-%       \begin{center}
-%          Vidéo : \href{https://www.ted.com/talks/dan_bricklin_meet_the_inventor_of_the_electronic_spreadsheet#t-556741}{\bf Meet the inventor of electronic spreadsheet}, site Internet de {\it Ted talks}.
-%       \end{center}
-%    \end{cadre}
+\vfill
+\begin{debat}[histoire des probabilités]
+   \hspace*{-10mm}
+   \begin{minipage}{0.8\linewidth} 
+      C’est en cherchant à résoudre des problèmes posés par les jeux de hasard que les mathématiciens donnent naissance aux {\bf probabilités}. Lors de fouilles archéologiques, on a trouvé des indices montrant que les jeux de hasard se pratiquaient déjà 5\,000 ans av. J.-C. (on utilisait des osselets). Les premiers dés connus ont été mis à jour à {\it Tepe Gawra}, au nord de l’Irak, et datent du troisième millénaire av. J.-C. Le jeu de cartes était également pratiqué dans divers pays depuis des époques reculées. Les cartes actuelles apparaissent en France au {\small XIV}\up{e} siècle et leur utilisation donne très vite lieu à des jeux d’argent. On attribue souvent la réelle naissance à la fin du {\small XVII}\up{e} siècle ce qui en fait une branche des mathématiques relativement récente.
+   \end{minipage}
+   \begin{minipage}{0.3\linewidth}
+         \scalebox{0.9}{
+         \begin{pspicture}(1,0)(8,3)
+            \rput(2,1){\psdice[linecolor=G1]{6}}
+            \rput(5,2){\psdice[linecolor=A1]{5}}
+            \rput(4,0.5){\psdice[linecolor=B1]{4}}
+            \rput(7,2.5){\psdice[linecolor=J1]{3}}
+            \rput(6,0.75){\psdice[linecolor=gray]{2}}
+            \rput(3,2.5){\psdice[linecolor=H1]{1}}
+         \end{pspicture}
+         }
+   \end{minipage}
+   \vfill   
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         \hrefVideo{https://leblob.fr/fondamental/les-probabilites}{\bf Les probabilités}, {\it Petits contes mathématiques}.
+      \end{center}
+   \end{cadre}
 \end{debat}
