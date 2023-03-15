@@ -1,44 +1,48 @@
 \section{Expériences à deux épreuves}
-\begin{exemple*1}
+\begin{exemple}[0.6]
     \titreExemple{Deux tirages avec remise}
     
     \textit{On lance un dé dont une face est rouge, deux sont bleues et trois sont jaunes.}
     \begin{enumerate}
-        \item \sout{Faire un arbre des possibilités.} Faire un tableau regroupant toutes les possibilités.
+        \item \sout{Faire un arbre des possibilités.}\\ Faire un tableau regroupant toutes les possibilités.
         \item Quelle est la probabilité de l'événement "obtenir jaune puis jaune"?
     \end{enumerate}
+    \begin{itemize}
+        \item \textbf{R} l’événement \textbf{"La face supérieure est rouge"}
+        \item \textbf{B} l’événement \textbf{"La face supérieure est bleue"}
+        \item \textbf{J} l’événement \textbf{"La face supérieure est jaune"}
+    \end{itemize}    
     \correction 
     \titreExemple{Proposition}
-    \begin{itemize}
-        \item \textbf{R} l’événement élémentaire \textbf{"La face supérieure est rouge"}
-        \item \textbf{B} l’événement élémentaire \textbf{"La face supérieure est bleue"}
-        \item \textbf{J} l’événement élémentaire \textbf{"La face supérieure est jaune"}
-    \end{itemize}    
     \begin{enumerate}
-        \item Il nous faudra une ligne ou une colonne pour chaque face bleue, idem pour les jaunes.
-        \begin{tabular}{|c|c|c|c|c|c|c|}
-            \hline
-            \backslashbox{$1^{er}$ lancer}{$2^{e}$ lancer}&\textbf{R}&\textbf{B}&\textbf{B}&\textbf{J}&\textbf{J}&\textbf{J}
-            \\\hline
-            \textbf{R}&RR&RB&RB&RJ&RJ&RJ\\\hline
-            \textbf{B}&BR&BB&BB&BJ&BJ&BJ\\\hline
-            \textbf{B}&BR&BB&BB&BJ&BJ&BJ\\\hline
-            \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
-            \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
-            \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
-        \end{tabular}
-        \item On dénombre 9 cases JJ sur 36.
-        \par\vspace{0.15cm}
-        \psshadowbox{La probabilité de l'événement "obtenir jaune puis jaune" vaut donc $\dfrac{9}{36}=\dfrac{1}{4}$}
+        \item Il faudra une ligne ou une colonne pour chaque face bleue ou jaune.
+        
+        \smallskip
+        \scalebox{0.7}{
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                \backslashbox{$1^{er}$ lancer}{$2^{e}$ lancer}&\textbf{R}&\textbf{B}&\textbf{B}&\textbf{J}&\textbf{J}&\textbf{J}
+                \\\hline
+                \textbf{R}&RR&RB&RB&RJ&RJ&RJ\\\hline
+                \textbf{B}&BR&BB&BB&BJ&BJ&BJ\\\hline
+                \textbf{B}&BR&BB&BB&BJ&BJ&BJ\\\hline
+                \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
+                \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
+                \textbf{J}&JR&JB&JB&JJ&JJ&JJ\\\hline
+            \end{tabular}
+        }
+        \smallskip
+        \item On dénombre 9 cases JJ sur 36.\\\smallskip        
+        La probabilité de l'événement "obtenir jaune puis jaune" vaut donc \psshadowbox{$\dfrac{9}{36}=\dfrac{1}{4}$}
     \end{enumerate}
-\end{exemple*1}
+\end{exemple}
 
 \begin{exemple*1}
     \titreExemple{Deux tirages sans remise}
 
     \textit{Une urne contient 3 boules rouges et 7 boules vertes. On effectue un premier tirage, puis un second, sans replacer la boule tirée.}
     \begin{enumerate}
-        \item \sout{Faire un arbre des possibilités.} Faire un tableau regroupant toutes les possibilités.
+        \item \sout{Faire un arbre des possibilités.}\\ Faire un tableau regroupant toutes les possibilités.
         \item Quelle est la probabilité de l'événement "obtenir rouge puis rouge"?
         \item Quelle est la probabilité de l'événement "obtenir rouge puis vert"?
         \item Calculer la probabilité d'autres événements.
@@ -50,7 +54,7 @@
         \item \textbf{V} l’événement élémentaire \textbf{"La boule tirée est verte"}
     \end{itemize}    
     \begin{enumerate}
-        \item Il nous faudra une ligne ou une colonne pour chaque boule rouge, idem pour les vertes.\\
+        \item Il faudra une ligne ou une colonne pour chaque boule rouge ou verte.\\
         Attention, cette fois, si on tire une couleur au premier tirage, il faut penser que l'effectif de cette couleur diminue pour le second.\\
         Cela offre un choix de moins que l'on va figurer par une case rouge dans le tableau.
         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
