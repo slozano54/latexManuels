@@ -1,2 +1,106 @@
-\section{...}
-\dots
+\section{Calculer des probabilités}
+\begin{myBox}{\emoji{light-bulb}\emoji{light-bulb} Intuitivement \emoji{light-bulb}\emoji{light-bulb}}
+    \textit{La probabilité d'un événement c'est la chance qu'on a de voir se réaliser cet événement.}
+    
+    \smallskip
+    Par exemple, on a 1 chance sur 2 d'obtenir pile lorsqu'on lance une pièce bien équilibrée, cela signifie que la probabilité de l'événement "obtenir pile" vaut $\frac12$.
+    
+    \smallskip
+    Lorsqu'on ne peut pas, a priori, déterminer le nombre de cas possibles, on \textbf{répète un grand nombre de fois} l'expérience. On approche ainsi la probabilité des événements en considérant les fréquences qui tendent à se stabiliser avec le nombre croissant d'expériences.
+\end{myBox}
+\begin{definition}
+    Dans une expérience aléatoire, la probabilité d'un événement est égale au quotient :
+    $$\dfrac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}}$$
+\end{definition}
+
+\begin{vocabulaire}
+    On dit que l'on a une situation d'\textbf{équiprobabilité} lorsque toutes les issues ont la même probabilité de se réaliser.
+    Dans ce cas, la probabilité d'un évènement vaut : 
+    $$\dfrac{\text{nombre d'issues favorables}}{\text{nombre de cas possibles}}$$
+\end{vocabulaire}
+
+\begin{propriete}[\admise]
+    Lorsqu'une expérience aléatoire est une situation d'équiprobabilité et qu'il y a $n$ issues alors la probabilité d'un événement élémentaire vaut $\dfrac{1}{n}$
+\end{propriete}
+
+\begin{remarque}
+   dans un exercice, pour signifier que l'on est dans une situation d'équiprobabilité, on a des expressions du type : \og on lance un dé \textbf{non pipé} \fg ; \og dans une urne, les boules sont \textbf{indiscernables} au toucher \fg ; \og on rencontre \textbf{au hasard} une personne parmi\dots \fg.
+\end{remarque}
+
+\begin{exemple*1}   
+    On tire une carte dans un jeu non truqué de 52 cartes.\\Quelle est la probabilité d'obtenir une tête ?
+    \correction     
+    Le jeu est non truqué, il y a donc équiprobabilité. Les issues possibles sont le valet, la dame et le roi de pique, de carreau, de trèfle et de coeur ce qui fait $4\times3$ cartes donc, $P =\dfrac{12}{52}$.
+ \end{exemple*1}
+ 
+\begin{exemples*1}   
+   \begin{itemize}
+        \item Tirer à pile ou face, la probabilité de chaque événement élémentaire vaut $\dfrac12$.
+        \item Lancer un dé à six faces, la probabilité de chaque événement élémentaire vaut $\dfrac16$.
+        \item Une urne contient 3 boules rouges et 5 boules jaunes.\\
+        Les boules sont indiscernables au toucher.\\
+        \textbf{La représentation sous forme d'arbre n'est plus au programme de cycle 4.}
+        %Arbre des possibilités :
+        \begin{tabular}{cccccccc}
+            &&&\pnode(0,0.2em){D}{}&&&&\\
+            &&&&&&&\\
+            \pnode(0,0.2em){R1}{}&\pnode(0,0.2em){R2}{}&\pnode(0,0.2em){R3}{}&\pnode(0,0.2em){J1}{}&\pnode(0,0.2em){J2}{}&\pnode(0,0.2em){J3}{}&\pnode(0,0.2em){J4}{}&\pnode(0,0.2em){J5}{}\\
+            R&R&R&J&J&J&J&J\\
+        \end{tabular}
+        \ncarc{->}{D}{R1}\ncarc{->}{D}{R2}\ncarc{->}{D}{R3}
+        \ncarc{->}{D}{J1}\ncarc{->}{D}{J2}\ncarc{->}{D}{J3}\ncarc{->}{D}{J4}\ncarc{->}{D}{J5}
+        \hfill Chaque boule a une probabilité de $\dfrac18$ d'être tirée\\
+        
+        \smallskip
+        Et l'arbre des possibilités simplifié:\hfill
+        \begin{minipage}{0.5\linewidth}        
+            \hspace{0.3\linewidth}\pnode(0,0.2em){R}{R}\par
+            \pnode(0,0.2em){D}{}\par
+            \hspace{0.3\linewidth}\pnode(0,0.2em){J}{J}\par
+            \ncarc{->}{D}{R}
+            \naput{$\dfrac38$}
+            \ncarc{->}{D}{J}
+            \nbput{$\dfrac58$}
+        \end{minipage}
+
+        \bigskip
+        \textbf{On lui préférera la présentation sous forme de tableau à double entrée :}
+        
+        \smallskip
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            &Boules rouges&Boules jaunes&Total\\\hline
+            Effectif&3&5&8\\\hline
+        \end{tabular}
+        \begin{list}{$\gtrdot$}{}
+            \item La probabilité de l'événement élémentaire "sortir une boule rouge" vaut donc : \\$\dfrac38=0,375=37,5\%$
+            \item La probabilité de l'événement élémentaire "sortir une boule jaune" vaut donc : \\$\dfrac58=0,625=62,5\%$
+        \end{list}
+
+        \smallskip
+        \psshadowbox{Cette situation n'est donc pas une situation d'équiprobabilité.}
+    \end{itemize}
+\end{exemples*1}
+
+\begin{propriete}
+    \begin{itemize}
+        \item La probabilité d'un événement est toujours comprises entre 0 et 1.
+        \item La somme des probabilités de tous les événements élémentaires possibles vaut 1.
+        \item La probabilité d'un événement certain vaut 1 et réciproquement.
+        \item La probabilité d'un événement impossible vaut 0 et réciproquement.
+    \end{itemize}
+\end{propriete}
+
+\begin{exemple*1}
+    On lance un dé classique équilibré à six faces.
+    
+    Quelle est la probabilité d'obtenir un 9 ?
+    
+    Quelle est la probabilité d'obtenir un nombre entier ?
+    \correction
+    Nous sommes dans une situation d'équiprobabilité.
+    \begin{itemize} 
+        \item On ne peut pas obtenir un 9 avec un dé à 6 faces donc, $P =\dfrac06 =0$.
+        \item Tous les nombres obtenus sont entiers donc, $P =\dfrac66 =1$.
+    \end{itemize}
+\end{exemple*1}
