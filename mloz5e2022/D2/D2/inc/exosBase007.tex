@@ -1,8 +1,43 @@
-\begin{exercice*}[...]
-  \dots
+\begin{exercice*}
+  Dans les sac suivants, il y a déjà des billes noires et des billes rouges. \\
+  Est-il possible d’ajouter un certain nombre (de ton choix) de billes bleues, de façon à satisfaire les indications données en dessous de chaque sac ? \\ [1mm]
+  \begin{minipage}{2.5cm} %cas 1
+     \sac{\psdots[linewidth=1.5mm](0.5,0)(1,0)(1.25,0.5)(1,1)
+        \psdots[linewidth=1.5mm,linecolor=red](0.25,0.5)(0.75,0.5)(0.5,1)}
+  \end{minipage}
+  \begin{minipage}{5.5cm}
+     {\bf Cas n°1 :} \\
+     La probabilité d'extraire \\ une bille bleue est $\dfrac{5}{12}$.
+  \end{minipage} \\
+  \begin{minipage}{2.5cm} %cas 2
+     \sac{\psdots[linewidth=1.5mm](0.25,0.5)(1,0)(1.25,0.5)
+        \psdots[linewidth=1.5mm,linecolor=red](0.5,0)(0.75,0.5)(1,1)}
+  \end{minipage}
+  \begin{minipage}{5.5cm}
+     {\bf Cas n°2 :} \\
+     La probabilité d'extraire \\
+     une bille bleue est $\dfrac{2}{5}$.
+  \end{minipage} \\
+  \begin{minipage}{2.5cm} %cas 3
+     \sac{\psdots[linewidth=1.5mm](0.5,0)(0.75,0.5)
+        \psdots[linewidth=1.5mm,linecolor=red](0.25,0.5)(0.5,1)(1,0)}
+  \end{minipage}
+  \begin{minipage}{5.5cm}
+     {\bf Cas n°3 :} \\
+     La probabilité d'extraire \\
+     une bille rouge ou bleue est $\dfrac{3}{4}$.
+  \end{minipage}
 \end{exercice*}
 \begin{corrige}
   %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
   %\phantom{rrr}
-  \dots
+  \ \\ [-5mm]
+  \begin{itemize}
+     \item Cas n°1 : une probabilité de $\dfrac{5}{12}$ signifie que, pour 12 billes au total, 5 sont bleues. \\
+        On a 7 billes, si on ajoute 5 billes bleues, on aura bien une chance d'obtenir une bille bleue de $\dfrac{5}{12}$.
+     \item Cas n°2 : une probabilité de $\dfrac{2}{5}$ signifie que, pour 5 billes au total, 2 sont bleues, ou encore que pour 10 billes, 4 sont bleues. \\
+        On a 6 billes, si on ajoute 4 billes bleues, on aura bien une chance d'obtenir une bille bleue de $\dfrac{2}{5}$.
+     \item Cas n°3 : une probabilité de $\dfrac{3}{4}$ signifie que, pour 4 billes au total, 3 sont rouges ou bleues, ou encore que pour 8 billes, 6 sont rouges ou bleues. \\
+        On a 3 billes rouges et 2 billes noires, si on ajoute 3 billes bleues, on aura bien une chance d'obtenir une bille rouge ou bleue de $\dfrac{3}{4}$.
+  \end{itemize}
 \end{corrige}    

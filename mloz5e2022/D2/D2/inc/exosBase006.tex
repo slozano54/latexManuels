@@ -1,8 +1,25 @@
-\begin{exercice*}[...]
-    \dots
+\begin{exercice*}
+    Trois personnes, Ali, Ben et Charles, ont chacune un sac contenant des billes. Chacune tire au hasard une bille de son sac dont le contenu est le suivant : \\ [2mm]
+    {\renewcommand{\arraystretch}{1.3}
+    \begin{ltableau}{\linewidth}{3}
+       \hline
+       Sac d'Ali & Sac de Ben & Sac de Charles \\
+       \hline
+       10 billes rouges & 97 billes rouges & 5 billes rouges \\
+       30 billes noires & 3 billes noires & \\
+       \hline
+    \end{ltableau}
+    }
+ Laquelle de ces trois personnes a-t-elle la plus grande probabilité de tirer une bille rouge ? Justifier.
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    probabilité de tirer une bille rouge :
+    \begin{itemize}
+       \item Pour Ali : $P =\dfrac{10}{40} =0,25$. \smallskip
+       \item Pour Ben : $P =\dfrac{97}{100} =0,97$. \smallskip
+       \item Pour Charles : $P =\dfrac{5}{5} =1$. \smallskip
+    \end{itemize}
+   {\red Charles a la plus grande probabilité d'obtenir une bille rouge}, ce qui est logique puisqu'il n'a QUE des billes rouges. \\
 \end{corrige}    
