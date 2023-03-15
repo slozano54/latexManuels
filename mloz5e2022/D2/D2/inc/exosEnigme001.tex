@@ -2,12 +2,77 @@
 % si on veut mettre plusieurs enigmes
 \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-   \dots
+\begin{enigme}[Vers la loi des grands nombres\dots]
+
+    {\renewcommand{\arraystretch}{1.6}
+    \begin{enumerate}
+       \item Compléter le tableau suivant : \\ [1mm] 
+       \begin{Ltableau}{0.95\linewidth}{7}{c}
+          \hline
+          Numéro sur la face visible du dé & 1 & 2 & 3 & 4 & 5 & 6 \\
+          \hline
+          Probabilité d'obtenir cette face (fraction) & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (décimal) & & & & & & \\
+          \hline
+       \end{Ltableau} \bigskip
+       Que remarque-t-on ? \dotfill \\ [3mm]
+       \hspace*{-5mm}
+       {\bf Le travail s'effectue maintenant en binôme, vous avez à votre disposition un dé classique à six faces.} \\
+       \item Lancer 10 fois le dé et noter les résultats obtenus dans le tableau suivant : \\ [1mm]
+       \begin{Ltableau}{0.95\linewidth}{7}{c}
+          \hline
+          Numéro sur la face visible du dé & 1 & 2 & 3 & 4 & 5 & 6 \\
+          \hline
+          Nombre de fois où cette face est obtenue & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (fraction) & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (décimal) & & & & & & \\
+          \hline
+       \end{Ltableau} \bigskip
+       Que remarque-t-on ? \dotfill \\
+       \item Lancer 100 fois le dé et noter les résultats obtenus dans le tableau suivant : \\ [1mm]
+       \begin{Ltableau}{0.95\linewidth}{7}{c}
+          \hline
+          Numéro sur la face visible du dé & 1 & 2 & 3 & 4 & 5 & 6 \\
+          \hline
+          Nombre de fois où cette face est obtenue & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (fraction) & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (décimal) & & & & & & \\
+          \hline
+       \end{Ltableau} \bigskip
+       Que remarque-t-on ? \dotfill \\
+       \item Répertorier les résultats de la classe entière et noter les résultats obtenus dans le tableau suivant : \\ [1mm]
+       \begin{Ltableau}{0.95\linewidth}{7}{c}
+          \hline
+          Numéro sur la face visible du dé & 1 & 2 & 3 & 4 & 5 & 6 \\
+          \hline
+          Nombre de fois où cette face est obtenue & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (fraction) & & & & & & \\
+          \hline
+          Probabilité d'obtenir cette face (décimal) & & & & & & \\
+          \hline
+       \end{Ltableau} \bigskip
+       Que remarque-t-on ? \dotfill
+    \end{enumerate}}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 \addtocounter{exercice}{-1}
 \begin{corrige}
-    \ldots
+    Pour le premier tableau, on obtient : \\
+    \begin{ltableau}{\linewidth}{7}
+       \hline
+       N° & 1 & 2 & 3 & 4 & 5 & 6 \\
+       \hline
+       \small Proba & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+       \hline
+       \small Proba & $0,17$ & $0,17$ & $0,17$ & $0,17$ & $0,17$ & $0,17$ \\
+       \hline
+    \end{ltableau}
+    Les probabilités sont, en théorie, toutes identiques.
 \end{corrige}
