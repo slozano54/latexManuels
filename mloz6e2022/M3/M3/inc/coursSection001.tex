@@ -1,28 +1,62 @@
 
 \section{Les angles}
 \begin{definition}
-    Un \textbf{angle} est une portion du plan délimitée par deux droites.
- \end{definition}
+    Un \textbf{angle} est une portion de plan délimitée par deux demi-droites ayant la même origine.\\
+    Les deux demi-droites sont appelées \textbf{côtés} de l'angle, alors que leur origine commune est appelée \textbf{sommet} de l'angle.
+\end{definition}
  
- \begin{pspicture}(-6,-0.3)(4,2.7)
-    {\psset{yunit=0.6}
-    \small
-    \rput(0,-0.3){A}
-    \rput(4,3.6){B}
-    \rput(0,2.35){C}
-    \rput(4,0.4){D}
-    \rput(1.4,1){O}
-    \psline(0,0)(4,4)
-    \psline(0,2)(4,0)
-    \psarc[linecolor=A1](1.4,1.4){1}{-20}{30}
-    \psline[linecolor=B2]{->}(-1,1.1)(1.3,1.3)
-    \rput(-1.8,1.3){\textcolor{B2}{sommet}}
-    \rput(3.5,1.7){\textcolor{A1}{angle $\widehat{BOD}$}}}
- \end{pspicture}
- 
- En général, on marque l'angle considéré par un arc de cercle. Pour nommer un angle, il suffit de connaître son sommet et un point de chacun de ses côtés.
+\tikzset{
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black!30, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+           % Define arrow style
+           pil/.style={
+                  ->,
+                  thick,
+                  shorten <=2pt,
+                  shorten >=2pt,} 
+}
+\begin{tikzpicture}    
+   \coordinate[label=below:$A$] (A) at (3,-1);
+   \coordinate[label=above:$O$] (O) at (0,0);
+   \coordinate[label=above:$C$] (C) at (2,1);
+   \pic["$\alpha$", draw=orange, -, angle eccentricity=1.2, angle radius=1cm]{angle=A--O--C};
+   \tkzDrawPoints[shape=cross out, size=5pt](A,C);
+   \tkzDefPointOnLine[pos=1.2](O,C)\tkzGetPoint{C1}
+   \tkzDefPointOnLine[pos=1.4](O,C)\tkzGetPoint{C2}
+   \tkzLabelPoint[above](C2){$x$};
+   \tkzDefPointOnLine[pos=1.2](O,A)\tkzGetPoint{A1}
+   \tkzDefPointOnLine[pos=1.4](O,A)\tkzGetPoint{A2}
+   \tkzLabelPoint[below](A2){$y$};
+   \tkzDrawLine[add=0 and 0.5](O,A);
+   \tkzDrawLine[add=0 and 0.5](O,C);
+   \node[punkt] (cotes) at (6,0) {Côtés de l'angle};
+   \node[left of=cotes] (dummy) {}
+     edge[pil, bend right=-30,color=black!30] (C1.south)
+     edge[pil, bend right=30,color=black!30] (A1.north);
+   \node[punkt] (sommet) at (-3,0) {Sommet de l'angle}
+     edge[pil, bend right=45,color=black!30] (O.west);
+\end{tikzpicture}
+
+\begin{notations}
+   Cet angle peut être noté de différentes façons :
+   \begin{itemize}
+      \item $\alpha$, \textit{lettre de l'alphabet grec, se prononçant "alpha", équivalent de notre "a"}.
+      \item $\widehat{AOC}$ ou encore $\widehat{COA}$, \textit{la lettre désignant le sommet de l'angle doit être placée au milieu}.
+      \item $\widehat{xOy}$ ou $\widehat{yOx}$, où $x$ et $y$ représentent des directions.
+   \end{itemize}
+\end{notations}
+
+ En général, on marque l'angle considéré par un arc de cercle.\\
+ Pour nommer un angle, il suffit de connaître son sommet et un point de chacun de ses côtés.
  
  \begin{exemple}
+   Nommer les trois angles du triangle ci-dessous.\\
     \begin{pspicture}(-1,-0.5)(3,2)
        \psset{unit=1.2}
        \pspolygon(0,0)(3,0)(3,1.5)

@@ -1,1 +1,45 @@
-\section{\dots}
+\section{Le degré}
+
+\begin{definition}
+   Pour mesurer l'ouverture d'un angle, on utilise au collège le {\bf degré} noté \degre.
+\end{definition}
+
+\begin{minipage}{7cm}
+   {\psset{unit=0.7}
+   \begin{pspicture}(-5,-3.5)(4,4)
+      \pscircle(0,0){3}
+      \multido{\n=0+10}{36}{\psline[linecolor=lightgray](0;\n)(3.1;\n)\rput(3.5;\n){\tiny\n}}  
+      \psline(-3,0)(3,0)
+      \psline(0,-3)(0,3)  
+   \end{pspicture}}
+\end{minipage}
+\begin{minipage}{8cm}
+   L'angle droit mesure \ang{90}. \\
+   Un angle plat, c'est deux angles droits, soit \ang{180}. \\
+   Un tour entier, c'est quatre angles droits, soit \ang{360}.
+\end{minipage}
+
+\begin{minipage}{4.5cm}
+   On peut classer les angles \\
+   selon leur mesure en degrés : 
+\end{minipage}
+\begin{minipage}{10cm}
+   \begin{center}
+      \begin{pspicture}(-4.5,-0.5)(3,2.5)
+         \rput(0,-0.3){0}
+         \rput(4,0){angle nul : \ang{0}}
+         \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0,0){1.5}{0}{90}
+         \rput(2.5,1.5){\parbox{2cm}{\textcolor{B2}{angle aigu : \\ \ang{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \hspace*{5mm} < \ang{90}}}}
+         \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,0){1.5}{90}{180}
+         \rput(-2.5,1.5){\parbox{2.5cm}{\textcolor{A1}{angle obtus : \\ \ang{90} < \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0.4,0){0.3}{90}{180} \hspace*{4mm} < \ang{180}}}}
+         \rput(0,2.5){angle droit : \ang{90}}
+         \rput(-4,0){angle plat : \ang{180}}
+         \psline(-2.5,0)(2.5,0)
+         \psline(0,2)
+      \end{pspicture}
+   \end{center}
+\end{minipage}
+
+\begin{remarque}
+   pour mesurer un angle, on utilise un {\bf rapporteur}, son utilisation sera vue dans un chapitre ultérieur. Ici, on utilisera l'équerre pour savoir si un angle est aigu, droit ou obtus.
+\end{remarque}
