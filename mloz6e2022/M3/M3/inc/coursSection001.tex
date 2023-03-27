@@ -1,1 +1,43 @@
-\section{\dots}
+
+\section{Les angles}
+\begin{definition}
+    Un \textbf{angle} est une portion du plan délimitée par deux droites.
+ \end{definition}
+ 
+ \begin{pspicture}(-6,-0.3)(4,2.7)
+    {\psset{yunit=0.6}
+    \small
+    \rput(0,-0.3){A}
+    \rput(4,3.6){B}
+    \rput(0,2.35){C}
+    \rput(4,0.4){D}
+    \rput(1.4,1){O}
+    \psline(0,0)(4,4)
+    \psline(0,2)(4,0)
+    \psarc[linecolor=A1](1.4,1.4){1}{-20}{30}
+    \psline[linecolor=B2]{->}(-1,1.1)(1.3,1.3)
+    \rput(-1.8,1.3){\textcolor{B2}{sommet}}
+    \rput(3.5,1.7){\textcolor{A1}{angle $\widehat{BOD}$}}}
+ \end{pspicture}
+ 
+ En général, on marque l'angle considéré par un arc de cercle. Pour nommer un angle, il suffit de connaître son sommet et un point de chacun de ses côtés.
+ 
+ \begin{exemple}
+    \begin{pspicture}(-1,-0.5)(3,2)
+       \psset{unit=1.2}
+       \pspolygon(0,0)(3,0)(3,1.5)
+       \rput(0,-0.3){A}
+       \rput(3,-0.3){B}
+       \rput(3,1.8){C}
+       \psarc[linecolor=A1,doubleline=true](0,0){0.7}{0}{27}
+       \psarc[linecolor=J1,linestyle=dashed](3,0){0.5}{90}{180}
+       \psarc[linecolor=B1](3,1.5){0.5}{205}{270}
+    \end{pspicture}
+    \correction
+    Dans le triangle (trois angles) ABC, on a les angles :
+    \begin{itemize}
+       \item \textcolor{A1}{$\widehat{BAC} =\widehat{CAB}$} ;
+       \item \textcolor{J1}{$\widehat{ABC} =\widehat{CBA}$} ;
+       \item \textcolor{B1}{$\widehat{BCA} =\widehat{ACB}$}.
+    \end{itemize}
+ \end{exemple}
