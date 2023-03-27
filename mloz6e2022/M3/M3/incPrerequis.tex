@@ -2,35 +2,47 @@
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
 \vspace*{-5mm}
-% \begin{debat}[le SI (Système International)]
-%     \vspace*{-7mm}
-%     En 1795, il existe en France plus de 700 {\bf unités de mesures différentes} qui varient d'une ville à l'autre. Source d'erreurs et de fraudes lors des transactions commerciales, politiques et scientifiques vont tenter de réformer cet état de fait : leur idée est d'assurer l'invariabilité des mesures en les rapportant à un étalon universel emprunté à un phénomène naturel. Le 26 mars 1791 nait le mètre (du grec {\it metron}, mesure), dont la longueur est établie comme égale à la dix-millionième partie du quart du méridien terrestre. L'unité de mesure de base étant déterminée, il suffit désormais d'établir toutes les autres unités de mesure qui en découlent : le mètre carré et le mètre cube, le litre, le gramme\dots{} Le système international des unités (SI) est né en 1960. En 2018, les unités de base sont redéfinies à partir de sept constantes physiques. \\
-%     \begin{center}
-%        {\psset{unit=0.75}
-%        \begin{pspicture}(-2.5,-2)(2.5,1.8)
-%           \pscircle*[linecolor=gray](0,0){2.5}
-%           \pswedge*[linecolor=orange](0,0){2}{0}{51}
-%           \rput(1.25;25){\large\white m}
-%           \pswedge*[linecolor=red](0,0){2}{51}{103}
-%           \rput(1.25;75){\large\white kg}
-%           \pswedge*[linecolor=magenta](0,0){2}{103}{154}
-%           \rput(1.25;126){\large\white cd}
-%           \pswedge*[linecolor=violet](0,0){2}{154}{205}
-%           \rput(1.25;176){\large\white mol}
-%           \pswedge*[linecolor=blue](0,0){2}{205}{257}
-%           \rput(1.25;228){\large\white K}
-%           \pswedge*[linecolor=cyan](0,0){2}{257}{308}
-%           \rput(1.25;280){\large\white A}
-%           \pswedge*[linecolor=green](0,0){2}{308}{360}
-%           \rput(1.25;334){\large\white s}
-%        \end{pspicture}}
-%     \end{center}
-%     \smallskip    
-%     \begin{cadre}[B2][F4]
-%        \begin{center}
-%           \hrefVideo{https://www.youtube.com/watch?time_continue=2&v=bInHclEN6zQ&feature=emb_logo}{\bf Système International d'unités. L'épopée}
+\begin{debat}[Débat : angles et perspective]
+    La {\bf perspective} est un ensemble de techniques destinées à représenter un objet ou une image en trois dimensions sur une surface plane. Il existe plusieurs sortes de perspectives, comme par exemple la perpective cavalière, la perspective isométrique, la perpective à point de fuite\dots{} Selon la perspective utilisée, on utilise des directions suivant des angles différents.
+    \begin{center}
+       \begin{pspicture}(0,-1)(4,3.5)
+          \psframe(0,0)(1.5,1.5)
+          \psline(0,1.5)(0.8,2.3)(2.3,2.3)(2.3,0.8)(1.5,0)
+          \psline(1.5,1.5)(2.3,2.3)
+          \psset{linestyle=dashed,linecolor=A1}
+          \psline(0.8,2.3)(1.6,3.1)
+          \psline(2.3,2.3)(3.1,3.1)
+          \psline(2.3,0.8)(3.1,1.6)
+          \rput(0.75,-0.75){\it cavalière}
+       \end{pspicture}
+       \begin{pspicture}(-2,-2.5)(2,2)
+          \pspolygon(1.3;-30)(1.3;30)(1.3;90)(1.3;150)(1.3;-150)(1.3;-90)
+          \psline(1.3;150)(0,0)(1.3;30)
+          \psline(0,0)(1.3;-90)
+         \psset{linestyle=dashed,linecolor=A1}
+          \psline(1.3;150)(2.3;150)
+          \psline(1.3;30)(2.3;30)
+          \psline(1.3;-90)(2;-90)
+          \rput(0,-2.25){\it isométrique}
+       \end{pspicture}
+       \begin{pspicture}(-1,-1)(3,3.5)
+          \psframe(0,0)(1.5,1.5)
+          \psline(0,1.5)(0.8,1.9)(1.9,1.9)(1.9,0.8)(1.5,0)
+          \psline(1.5,1.5)(1.9,1.9)
+          \psdot(3,3)
+          \psset{linestyle=dashed,linecolor=A1}
+          \psline(0.8,1.9)(3,3)
+          \psline(1.9,1.9)(3,3)
+          \psline(1.9,0.8)(3,3)
+          \rput(0.75,-0.75){\it un point de fuite}
+       \end{pspicture}
+    \end{center}
+    \bigskip
+    \begin{cadre}[B2][F4]
+       \begin{center}
+          \hrefVideo{https://www.youtube.com/watch?v=zCIxdOCQiZg}{\bf Dessiner des illusions d'optique 3D}
           
-%           \hfill{\it Laboratoire national de métrologie et d'essais}. 
-%        \end{center}
-%     \end{cadre}
-%  \end{debat}
+          Chaîne YouTube {\it Simple drawing tutorial}.
+       \end{center}
+    \end{cadre}
+ \end{debat}
