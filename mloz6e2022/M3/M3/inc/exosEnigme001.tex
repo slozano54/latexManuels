@@ -2,9 +2,43 @@
 % si on veut mettre plusieurs enigmes
 %\refstepcounter{exercice}
 %\numeroteEnigme
-\begin{enigme}[\dots]
-
-
+\vspace*{-10mm}
+\begin{enigme}[Le triangle de Penrose]
+    \partie[une figure impossible]
+    Le {\bf triangle de Penrose}, aussi appelé tripoutre ou tribarre est un triangle impossible à construire physiquement en 3D mais facilement modélisable en 2D. Il a été conçu par le physicien et mathématicien britannique {\bf Roger Penrose} (né à Colchester en 1931) dans les années 1950.
+    \begin{enumerate}
+       \item Observer le triangle de Penrose et en particulier ses angles sur ce quadrillage à maille triangulaire (aussi appelé isométrique en raison de l'égalité de longueur de tous ses côtés). Pourquoi est-il impossible à construire ?
+       \item Le reproduire sur le quadrillage juste à droite, puis le colorier. \\
+    \end{enumerate}
+    {\psset{unit=0.8}
+    \begin{pspicture*}(0,2)(17,11)
+        % Problème avec le moteur lualatex et la command \pstVerb{}
+        % fix from https://tex.stackexchange.com/questions/664884/pstricks-drawing-lualatex-gives-unexpected-output
+        \ifPSTlualatex
+            \pstVerb{gsave [0.866 -0.5 0 1 0 100] concat }%
+        \else
+            \pstVerb{gsave [0.866 0.5 0 1 0 -400] concat }%
+        \fi    
+       {\psset{linewidth=0.3pt,linecolor=black!40}
+          \multido{\iA=-0+1,\iB=-10+1,\iC=-25+1}{40}{
+             \psline(\iA,-4)(\iA,20)
+             \psline(-5,\iB)(20,\iB)
+             \rput(0,\iC){\psline(0,0)(!\iA\space abs dup add dup )}}}
+       \pspolygon[fillstyle=solid,fillcolor=PartieStatistique](2,2)(1,2)(1,8)(6,8)(5,7)(2,7)
+       \pspolygon[fillstyle=solid,fillcolor=PartieStatistique!66](2,2)(2,7)(3,7)(3,4)(8,9)(8,8)
+       \pspolygon[fillstyle=solid,fillcolor=PartieStatistique!33](3,4)(3,5)(6,8)(1,8)(2,9)(8,9)
+       \pstVerb{grestore}
+    \end{pspicture*}}        
+    \partie[d'autres curiosités]
+%    \ \\ [-10mm]
+    \begin{enumerate}
+       \item Le jeu {\bf Monument Valley} est un jeu de réflexion en perspective isométrique qui se passe dans un décor composé de structures aux formes géométriques impossibles basées sur ce triangle.
+       \item {\bf An impossible triangle sculpture in Perth.} \\
+          In 1997, a new landmark has been created for Perth, in a unique collaboration between a leading WA artist Brian McKay and architect Ahmad Abas. Destined to become a bold icon for Perth, the \og Impossible Triangle \fg{} has been erected in Claisebrook Square, East Perth. The sculpture is 13.5 meters height and the design striations on the polished aluminium reflects both sunlight and artificial lighting. The view of the triangle depends on where it is observed from. \hfill {\footnotesize\it Source : https://im-possible.info/english/}
+       \end{enumerate}
+       \begin{center}
+          \includegraphics[height=3.5cm]{\currentpath/images/Penrose1} \qquad \includegraphics[height=3.5cm]{\currentpath/images/Penrose2} \qquad \includegraphics[height=3.5cm]{\currentpath/images/Penrose3}
+       \end{center}
 \end{enigme}  
 % % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
