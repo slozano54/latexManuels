@@ -133,10 +133,12 @@
 % Pour le lien vers un exo mathaleaV3
 % #1 --> Texte par défaut
 % Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
-% #2 --> uuid de l'exercice
-\newcommand{\hrefMathaleaVIII}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
+% #2 --> liste d'uuid de l'exercice
+% #3 --> vue
+% #4 --> parametrage de la vue eleve
+\newcommand{\hrefMathaleaVIII}[4][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
 	\createListOfUuid{#2}    
-    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid&v=l}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid&v=l}{#1}
+    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}{#1}
 }
 
 % Pour la géométrie, voir des constructions etc ...
