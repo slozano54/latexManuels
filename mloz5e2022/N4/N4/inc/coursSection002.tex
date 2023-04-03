@@ -1,0 +1,89 @@
+\section{Critères de divisibilité}
+\begin{propriete}[\admise]	
+	\begin{itemize}
+		\item Un nombre est \textbf{divisible par 2} s'il se termine par 2, 4, 6, 8 ou 0.
+		\item Un nombre est \textbf{divisible par 3} si la somme de ses chiffres est un multiple de 3.
+		\item Un nombre est \textbf{divisible par 4} si ses deux derniers chiffres forment un multiple de 4.
+		\item Un nombre est \textbf{divisible par 5} s'il se termine par 0 ou 5.
+		\item Un nombre est \textbf{divisible par 7} si la somme de son nombre de dizaines et de cinq fois son chiffre des unités l'est.
+		\item Un nombre est \textbf{divisible par 9} si la somme de ses chiffres est un multiple de 9.
+		\item Un nombre est \textbf{divisible par 10} s'il se termine par 0.
+		\item Un nombre est \textbf{divisible par 11} si la différence entre la somme de ses chiffres de rangs pairs et
+	la somme de ses chiffres de rangs impairs est nulle ou égale à une multiple de 11.
+	\end{itemize}
+\end{propriete}
+\renewcommand{\StringPREUVE}{\textsc{Idée de la preuve du critère de divisibilité par 2}}
+\begin{preuve}
+
+	On considère un nombre à 5 chiffres qui se termine par 0;2;4;6 ou 8.
+
+	Un raisonnement analogue pourrait être mené pour davantage de chiffres.
+	
+	Notons-le $ab\;cde$ où a, b, c, d et e sont des chiffres et e est un chiffre pair, 0;2;4;6 ou 8
+	
+	Nous avons donc l'égalité suivante, $ab\;cde = ab\;cd0 + e$
+
+	Or e est pair donc $e = 2\times la\;moiti\acute{e}\;de\;e$
+
+	Et puisque $ab\;cd0$ est un multiple de 10, il est pair aussi donc $ab\;cd0 = 2\times la\;moiti\acute{e}\;de\;ab\;cd0$	
+	
+	D'où $ab\;cde = 2\times la\;moiti\acute{e}\;de\;ab\;cd0 + 2\times la\;moiti\acute{e}\;de\;e$
+		
+	Utilisons la distributivité pour factoriser cette expression
+
+	$ab\;cde = 2\times (la\;moiti\acute{e}\;de\;ab\;cd0 + la\;moiti\acute{e}\;de\;e)$
+	
+	Nous avons donc écrit $ab\;cde$ comme un multiple de 2 $\square$	
+\end{preuve}
+\renewcommand{\StringPREUVE}{PREUVE}
+
+\begin{exemple}
+	Utiliser les critères ci-dessus sur $\num{10974}$.
+	\correction
+	\begin{itemize}
+		\item $\num{10974}$ se termine par $2$ donc $\num{10974}$ est divisible par $2$.
+		\item La somme des chiffres de $\num{10974}$ vaut $21$ donc $\num{10974}$ est un multiple de $3$.
+		\item La somme des chiffres de $\num{10974}$ vaut $21$ donc $\num{10974}$ n'a pas pour diviseur $9$.
+		\item $\num{10974}$ ne se termine ni par $0$ ni par $5$ donc $5$ ne divise pas $\num{10974}$.
+		\item \dots		
+	\end{itemize}
+\end{exemple}
+
+\begin{methode}[Critère de divisibilité par 11]
+	\exercice 
+	Tester le critère de divisibilité par $11$ sur :
+	\begin{itemize}
+		\item $\num{16456}$
+		\item $\num{81829}$
+		\item $\num{81839}$
+	\end{itemize}
+	\correction
+	\begin{itemize}
+		\item $\blue{1}\red{6}\;\blue{4}\red{5}\blue{6}$ est divisible par 11 car ($\blue{1}+\blue{4}+\blue{6}$)-($\red{6}+\red{5}$)$=0$
+		\item $\blue{8}\red{1}\;\blue{8}\red{2}\blue{9}$ est divisible par 11 car ($\blue{8}+\blue{8}+\blue{9}$)-($\red{1}+\red{2}$)$=22$ est un multiple de 11.
+		\item $\blue{8}\red{1}\;\blue{8}\red{3}\blue{9}$ est divisible par 11 car ($\blue{8}+\blue{8}+\blue{9}$)-($\red{1}+\red{3}$)$=21$ n'est pas un multiple de 11.
+	\end{itemize}
+\end{methode}
+
+\begin{methode}[Lister tous les diviseurs d'un nombre]
+	À l'aide des critères de divisibilité ou des tables de multiplication, on peut lister tous les diviseurs d'un nombre
+	en écrivant tous les produits qui donnent ce nombre.
+
+	En organisant l'énumération de façon a toujours écrire le plus petit facteur en premier et en l'incrémentant petit à petit,
+	on aura un signal de fin !
+	\exercice
+	Lister tous les diviseurs de $40$.
+	\correction
+	\begin{itemize}
+		\item $40 = 1 \times 40$ 
+		\item $40 = 2 \times 20$
+		\item $40$ n'est pas divisible par $3$
+		\item $40 = 4 \times 10$
+		\item $40 = 5 \times 8$
+		\item $40$ n'est pas divisible par $6$
+		\item $40$ n'est pas divisible par $7$
+		\item $40$ est divisible par $8$ mais $40 = 8 \times 5$ or nous avons fait le choix de toujours mettre le plus petit facteur en premier donc $40 = 5 \times 8$ que nous avons déjà écrit, l'algorithme est donc fini.
+	\end{itemize}
+
+	La liste des diviseurs de 40 est donc : $1 ; 2 ; 4 ; 5 ; 8 ; 10 ; 20 ; 40$
+\end{methode}
