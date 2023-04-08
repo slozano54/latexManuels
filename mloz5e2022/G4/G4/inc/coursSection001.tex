@@ -1,0 +1,66 @@
+\section{Symétrie centrale}
+\begin{minipage}{0.5\linewidth}
+\begin{center}
+    \hrefLien{https://www.geogebra.org/m/fbfhreb8}{Geogebra d'Homer SIMPSON}
+
+    \begin{Geometrie}[CoinHD={(8.4u,4.2u)}]
+        % Echelle
+        coeff:=0.7;
+        u:=coeff*cm;        
+        %%%
+        trace grille(0.5) withcolor white;        
+        pair O,A,B,C,D,E,F,G,H,I;
+        pair A',B',C',D',E',F',G',H',I';
+        O=u*(6,3);
+        A=u*(3,5);
+        B=u*(5,5);
+        C=u*(4,4);
+        D=u*(5,3);
+        E=u*(5,1);
+        F=u*(4,2);
+        G=u*(3,1);
+        H=u*(1,1);
+        I=u*(3,3);        
+        A'=rotation(A,O,180);
+        B'=rotation(B,O,180);
+        C'=rotation(C,O,180);
+        D'=rotation(D,O,180);
+        E'=rotation(E,O,180);
+        F'=rotation(F,O,180);
+        G'=rotation(G,O,180);
+        H'=rotation(H,O,180);
+        I'=rotation(I,O,180);
+        trace polygone(A,B,C,D,E,F,G,H,I,A);
+        trace chemin(A',B',C',D',E',F',G',H',I',A') withcolor \myMetapostGreen;
+        marque_p:="croix";
+        pointe(O);
+        label.bot(btex O etex, O);
+        label.lft(btex A etex, A);
+        label.rt(btex B etex, B);
+        label.rt(btex C etex, C);
+        label.rt(btex D etex, D);
+        label.bot(btex E etex, E);  
+        label.rt(btex A' etex, A');
+        label.lft(btex B' etex, B');
+        label.lft(btex C' etex, C');
+        label.lft(btex D' etex, D');
+        label.lft(btex E' etex, E');
+    \end{Geometrie}    
+\end{center}
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+\begin{changemargin}{0mm}{-5mm}
+    \begin{vocabulaire}
+        \begin{itemize}    
+            \item La \textcolor{mygreen}{figure verte} est obtenue à partir de la \textcolor{black}{figure noire} par un \textbf{demi-tour} autour du point $O$.
+            \item On dit que La \textcolor{mygreen}{figure verte} est la \textbf{symétrique} de la \textcolor{black}{figure noire} \textbf{par rapport au point $O$}.
+            \item On peut également dire qu'elle est \textbf{l'image} de la figure noire \textbf{par la symétrie de centre $O$} .
+            \item $O$ est un \textbf{centre de symétrie}.
+        \end{itemize}
+    \end{vocabulaire}
+\end{changemargin}
+\end{minipage}
+
+\begin{definition}
+    Le point $M'$ est l'image du point $M$ par la \textbf{symétrie de centre $O$} lorsque le point $O$ est le milieu du segment $[MM']$.
+ \end{definition}

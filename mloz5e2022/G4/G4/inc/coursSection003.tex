@@ -1,0 +1,53 @@
+\section{Centre de symétrie}
+\begin{definition}
+    Si une figure $\cal F$ est transformée en elle-même par la symétrie centrale de centre $O$, alors $O$ est le \textbf{centre de symétrie} de la figure $\cal F$.
+ \end{definition}
+ 
+ \begin{exemple*1}
+    Si une figure possède un centre de symétrie, alors il est unique.
+    {\psset{unit=0.75}
+    \begin{multicols}{3}
+       \begin{center}
+          \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
+             \pstGeonode[PointName=none,PointSymbol=none,CurveType=polygon](-1.156,0){A}(1.156,0){B}(0,2){C}
+             \pstGeonode[PointName=none,PointSymbol=none,CurveType=polygon,linecolor=B1](0,-0.5){D}(0,2.5){E}
+             \psline[linecolor=B1](-1.156,0)(2;50)
+             \psline[linecolor=B1](1.156,0)(2;130)
+          \end{pspicture}
+    
+          3 axes de symétrie \\
+          0 centre de symétrie
+          \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
+             \pscircle(0,1){1}
+             \psset{linecolor=B1}
+             \psline(-1.5,1)(1.5,1)
+             \psline(0,-0.5)(0,2.5)
+             \psline(-1.5,-0.5)(1.5,2.5)
+             \psline(-1.5,2.5)(1.5,-0.5)
+             \psline(-0.5,-0.5)(0.5,2.5)
+             \psline(-0.5,2.5)(0.5,-0.5)
+             \psline(-1.5,0)(1.5,2)
+             \psline(-1.5,0.5)(1.5,1.5)
+             \psline(-1.5,2)(1.5,0)
+             \psline(-1.5,1.5)(1.5,0.5)
+             \psdot[linecolor=A1,linewidth=1mm](0,1)  
+          \end{pspicture}
+    
+          $\infty$ axes de symétrie \\
+          1 centre de symétrie  
+       \end{center}
+    
+       \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
+          \pspolygon(-1.5,0)(1.5,0)(1.5,2)(-1.5,2)
+          \psset{linecolor=B1}
+          \psline(-2,1)(2,1)
+          \psline(0,-0.5)(0,2.5)
+          \psdot[linecolor=A1,linewidth=1mm](0,1)  
+       \end{pspicture}
+    
+       \quad 2 axes de symétrie
+       
+       \quad 1 centre de symétrie
+    \end{multicols}}
+ \vspace*{-5mm}
+ \end{exemple*1}

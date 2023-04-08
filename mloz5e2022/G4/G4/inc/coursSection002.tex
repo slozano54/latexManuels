@@ -1,0 +1,297 @@
+\section{Constructions}
+% Point
+\begin{methode}[Symétrique d'un point par symétrie centrale]
+    Pour construire le symétrique d'un point $M$ par la symétrie centrale de centre $O$ :
+    \begin{itemize}
+       \item tracer la demi-droite $[MO)$ ;
+       \item reporter la longueur $MO$ de l'autre côté du point $O$ avec le compas ;
+       \item placer le point $M'$ symétrique de $M$ par rapport à $O$.
+    \end{itemize}
+    \exercice
+    Tracer le point $M'$, symétrique du point $M$ par rapport à $O$. 
+    
+    \bigskip
+    \begin{Geometrie}[CoinHD={(5u,3u)}]
+        pair M,O,M';
+        M=u*(1,2.5);
+        O=u*(2.5,1.75);
+        M'=u*(4,1);
+        marque_s:=2;
+        marque_p:="croix";        
+        pointe(M,O);
+        label.lft(btex M etex, M);
+        label.rt (btex O etex, O);
+    \end{Geometrie}
+    \correction
+    \begin{Geometrie}[CoinHD={(5u,5u)}]
+        pair M,O,M';
+        M=u*(1,2.5);
+        O=u*(2.5,1.75);
+        M'=u*(4,1);
+        marque_s:=2;
+        trace demidroite (M,O);
+        trace codesegments (M,O,O,M',2);        
+        trace compas(O,M',1);
+        marque_p:="croix";        
+        pointe(M,O,M');
+        label.lft(btex M etex, M);
+        label.bot (btex O etex, O);
+        label.bot (btex M' etex, M');
+    \end{Geometrie}
+\end{methode}
+
+\begin{remarques}
+    \begin{itemize}
+        \item $O$ est le milieu du segment $[MM']$.
+        \item $O$ est lui-même sont image !
+    \end{itemize}
+\end{remarques}
+
+% Droite
+\begin{methode*1}[Symétrique d'une droite par symétrie centrale]
+    Pour construire le symétrique d'une droite $(d)$ par la symétrie centrale de centre $O$ :
+    \begin{itemize}
+        \item Placer deux points $A$ et $B$ sur la droite $(d)$.
+        \item Construire les symétriques $A'$ et $B'$ de $A$ et $B$ par rapport à $O$.
+        \item Tracer la droite $(A'B')$.
+    \end{itemize}
+    \exercice
+    Tracer la droite $(d')$, symétrique de la droite $(d)$ par rapport à $O$. 
+    
+    \bigskip
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair A,B,O,D;
+        B=u*(5.5,3.5);
+        A=u*(1.5,3.1);
+        O=u*(4,2.5);
+        D=u*(7,3.65);
+        label.top(btex $(d)$ etex,D);
+        trace droite(A,B);
+        marque_p:="croix";
+        pointe(O);
+        label.top(btex O etex,O);
+    \end{Geometrie}    
+    \correction
+    \phantom{rrr}
+
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair A,B,C,O,A',B',C',D,D';
+        C=u*(0.5,3);
+        B=u*(5.5,3.5);
+        A=u*(1.5,3.1);
+        O=u*(4,2.5);
+        A'=u*(6.5,1.9);
+        B'=u*(2.5,1.5);
+        C'=u*(7.5,2);
+        D=u*(7,3.65);
+        D'=u*(1,1.35);
+        label.top(btex $(d)$ etex,D);
+        label.top(btex $(d')$ etex,D');
+        trace droite(B,C);
+        trace droite(B',C');
+        trace demidroite(C,O) withcolor red;
+        trace demidroite(A,O) withcolor \myMetapostGreen;
+        trace demidroite(B,O) withcolor \myMetapostGreen;
+        marque_s:=2;
+        trace codesegments (A,O,O,A',2) withcolor \myMetapostGreen;
+        trace codesegments (B,O,O,B',3) withcolor \myMetapostGreen;
+        marque_p:="croix";
+        label.top(btex C  etex, C );
+        label.top(btex A  etex, A );
+        label.top(btex B  etex, B );
+        label.top(btex O  etex, O );
+        label.bot(btex B' etex, B');
+        label.bot(btex A' etex, A');
+        label.top(btex C' etex, C');
+    \end{Geometrie}
+\end{methode*1}
+
+\begin{remarque}
+    Pour construire le symétrique d'un point $C$ de $(d)$, connaissant $(d')$ la symétrique de $(d)$ par rapport à $O$, il suffit de construire l'intersection de $(d')$ et de $[CO)$.    
+\end{remarque}
+
+\begin{propriete}[\admise]
+    Si deux droites sont symétriques par rapport à un point alors elles sont parallèles entre elles.
+\end{propriete}
+
+% Segment
+\begin{methode}[Symétrique d'un segment par symétrie centrale]
+    Pour construire le symétrique d'un segment $[AB]$ par la symétrie centrale de centre $O$ :
+    \begin{itemize}
+        \item Construire les symétriques $A'$ et $B'$ des extrémités $A$ et $B$ par rapport à $O$.
+        \item Tracer $[A'B']$.
+    \end{itemize}
+    \exercice
+    Tracer le segment $[A'B']$, symétrique du segment $[AB]$ par rapport à $O$.
+    
+    \bigskip
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair A,B,O;
+        B=u*(5.5,3.5);
+        A=u*(1.5,3.1);
+        O=u*(4,2.5);
+        trace segment(A,B);
+        trace marquesegment(A,B);
+        marque_p:="croix";
+        label.top(btex O etex, O);
+        pointe(O);
+        marque_p:="non";
+        label.lft(btex A etex, A );
+        label.rt(btex B etex, B );
+    \end{Geometrie}
+    \correction
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair A,B,O,A',B';
+        B=u*(5.5,3.5);
+        A=u*(1.5,3.1);
+        O=u*(4,2.5);
+        A'=u*(6.5,1.9);
+        B'=u*(2.5,1.5);
+        trace segment(A,B);
+        trace segment(A',B');
+        trace demidroite(A,O) withcolor \myMetapostGreen;
+        trace demidroite(B,O) withcolor \myMetapostGreen;
+        trace marquesegment(A,B);
+        trace marquesegment(A',B');
+        marque_s:=2;
+        trace codesegments (A,O,O,A',2) withcolor \myMetapostGreen;
+        trace codesegments (B,O,O,B',3) withcolor \myMetapostGreen;
+        marque_p:="croix";
+        label.top(btex O etex, O);
+        pointe(O);
+        marque_p:="non";
+        label.lft(btex A etex, A );
+        label.rt(btex B etex, B );
+        label.lrt(btex B' etex, B');
+        label.llft(btex A'etex, A');
+    \end{Geometrie}
+\end{methode}
+
+\begin{propriete}[\admise]
+    Si deux segments sont symétriques par rapport à un point alors les droites qui les portent sont parallèles et ils ont la même longueur.
+\end{propriete}
+
+% Demi-droite
+\begin{methode}[Symétrique d'une demi-droite par symétrie centrale]
+    Pour construire le symétrique d'une demi-droite $[MN)$ par la symétrie centrale de centre $O$ :
+    \begin{itemize}
+        \item Construire le symétrique $M'$ de l'origine $M$ par rapport à $O$.
+        \item Construire l'image d'un point de $[MN)$ par rapport à $O$, par exemple N.
+        \item Tracer $[M'N')$
+    \end{itemize}
+    \exercice
+    Tracer la demi-droite $[M'N')$, symétrique de la demi-droite $[MN)$ par rapport à $O$.
+    
+    \bigskip
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair N,M,O;
+        M=u*(5.5,3.5);
+        N=u*(1.5,3.1);
+        O=u*(4,2.5);
+        trace demidroite(M,N);
+        trace marquedemidroite(M,N);
+        marque_s:=2;
+        marque_p:="croix";
+        label.top(btex O etex, O);
+        pointe(O,N);
+        marque_p:="non";
+        label.top(btex N etex, N);        
+        label.rt(btex M etex, M);
+    \end{Geometrie}
+    \correction
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        pair N,M,O,N',M';
+        M=u*(5.5,3.5);
+        N=u*(1.5,3.1);
+        O=u*(4,2.5);
+        N'=u*(6.5,1.9);
+        M'=u*(2.5,1.5);
+        trace demidroite(M,N);
+        trace demidroite(M',N');
+        trace demidroite(M,O) withcolor \myMetapostGreen;
+        trace demidroite(N,O) withcolor \myMetapostGreen;
+        trace marquedemidroite(M,N);
+        trace marquedemidroite(M',N');
+        marque_s:=2;
+        trace codesegments (M,O,O,M',2) withcolor \myMetapostGreen;
+        trace codesegments (N,O,O,N',3) withcolor \myMetapostGreen;
+        marque_p:="croix";
+        label.top(btex O etex, O);
+        pointe(O,N,N');
+        marque_p:="non";
+        label.top(btex N etex, N);
+        label.rt(btex M etex, M);
+        label.lft(btex M' etex, M');
+        label.bot(btex N' etex, N');
+    \end{Geometrie}
+\end{methode}
+
+\begin{propriete}[\admise]
+    Si deux demi-droites sont symétriques par rapport à un point alors elles sont parallèles.
+\end{propriete}
+
+% Cercle
+\begin{methode}[Symétrique d'un cercle par symétrie centrale]
+    Pour construire le symétrique d'un cercle $(\mathcal{C})$ par la symétrie centrale de centre $O$ :
+    \begin{itemize}
+        \item Construire le symétrique $A'$ du centre $A$ de $(\mathcal{C})$ par rapport à $O$.
+        \item Construire le cercle $(\mathcal{C}^{'})$ de centre $A'$ et de même rayon que $(\mathcal{C})$.
+        \item {\bfseries Ou} l'image $B'$ d'un point $B$ de $(\mathcal{C})$ et tracer le cercle $(\mathcal{C}^{'})$ de centre $A'$ passant par $B'$.
+    \end{itemize}
+    \exercice
+    Tracer le cercle $(\mathcal{C}^{'})$, symétrique du cercle $(\mathcal{C})$ par rapport à $O$.
+    
+    \bigskip
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        pair A,B,O,C;
+        A=u*(1.5,3.5);
+        B=u*(3,3.5);
+        O=u*(4,2.5);
+        C=u*(1.5,2);
+        label.bot(btex $({\mathcal C})$ etex,C);        
+        path cc;
+        cc=cercles(A,1.5u);
+        trace cc;
+        marque_s:=2;
+        marque_p:="croix";
+        pointe(O,A,B);
+        label.top(btex O etex, O);
+        label.bot(btex A etex, A);
+        label.rt(btex B etex, B);
+    \end{Geometrie}
+    \correction
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        pair A,B,O,A',B',C,C';
+        A=u*(1.5,3.5);
+        B=u*(3,3.5);
+        O=u*(4,2.5);
+        A'=u*(6.5,1.5);
+        B'=u*(5,1.5);
+        C=u*(1.5,2);
+        C'=u*(6.5,3);
+        label.bot(btex $({\mathcal C})$ etex,C);
+        label.top(btex $({\mathcal C}^{'})$ etex,C') withcolor \myMetapostGreen;
+        path cc;
+        cc=cercles(A,1.5u);
+        trace cc;
+        path bb;
+        bb=cercles(A',1.5u);
+        trace bb withcolor \myMetapostGreen;
+        trace demidroite(A,O) withcolor \myMetapostGreen;
+        trace demidroite(B,O) withcolor \myMetapostGreen;
+        marque_s:=2;
+        trace codesegments (A,O,O,A',2) withcolor \myMetapostGreen;
+        trace codesegments (B,O,O,B',3) withcolor \myMetapostGreen;
+        marque_p:="croix";
+        pointe(O,A,B,A',B');
+        label.top(btex O etex, O);
+        label.bot(btex A etex, A);
+        label.rt(btex B etex, B);
+        label.llft(btex B' etex, B');
+        label.bot(btex A' etex, A'); 
+    \end{Geometrie}
+\end{methode}
+
+\begin{propriete}[\admise]
+    Si deux cercles sont symétriques par rapport à un point alors ils ont le même rayon.
+\end{propriete}
