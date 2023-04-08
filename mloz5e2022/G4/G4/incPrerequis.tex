@@ -1,12 +1,56 @@
+\begin{changemargin}{-10mm}{-10mm}
+\vspace*{-7mm}    
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
+\vspace*{-3mm}    
 %pre-002
 \input{\currentpath/inc/prerequis002.tex}
-\vspace{0.9em}
-\begin{autoeval}
-    Nada
-\begin{multicols}{2}
-%000
-\input{\currentpath/inc/autoeval000.tex}
-\end{multicols}
-\end{autoeval}
+\begin{debat}[Les pavages]
+    \vspace*{-7mm}     
+    Un {\bf pavage du plan} est un ensemble de portions du plan qui, lorsqu'on les met les unes à côté des autres, forment le plan tout entier, sans recouvrement. Par exemple, lorsque l'on pose du carrelage, on effectue un pavage de la pièce. Ce carrelage peut être de forme carrée, rectangulaire, hexagonale\dots
+    \begin{center}
+       \begin{pspicture}(-3,-3)(3,3)
+          \psset{dimen=middle,unit=0.8}          
+          \pstVerb{/aP 3 sqrt 3 div 1 mul def
+          /MajorAxis 2 aP mul 3 sqrt mul def
+          /LengthSideHexagon aP 3 sqrt 1 sub mul def
+          /HeightHexagon 3 3 sqrt sub 2 div aP mul def
+          % pentagone 0
+          /A0 { 0 aP 2 div 1 3 sqrt add mul HeightHexagon add} def
+          /B0 {aP 2 div 3 sqrt mul neg aP 2 div 3 sqrt mul HeightHexagon add} def
+          /C0 {aP 2 div 3 sqrt 1 sub mul neg HeightHexagon} def
+          /D0 {aP 2 div 3 sqrt 1 sub mul HeightHexagon} def
+          /E0 {aP 2 div 3 sqrt mul     aP 2 div 3 sqrt mul HeightHexagon add} def
+          %%%% hexagone %%%%
+          /H0 {LengthSideHexagon 0} def
+          /H1 {LengthSideHexagon 60 cos mul LengthSideHexagon 60 sin mul} def
+          /H2 {LengthSideHexagon 120 cos mul LengthSideHexagon 120 sin mul} def
+          /H3 {LengthSideHexagon neg 0} def
+          /H4 {LengthSideHexagon 240 cos mul LengthSideHexagon 240 sin mul} def
+          /H5 {LengthSideHexagon 300 cos mul LengthSideHexagon 300 sin mul} def
+          %%%% sommets grand hexagone
+          /HX0 {0 2 aP mul} def
+          /HX1 {aP 3 sqrt neg mul aP} def
+          /HX2 {aP 3 sqrt mul neg aP neg} def
+          /HX3 {0 -2 aP mul} def
+          /HX4 {aP 3 sqrt mul aP neg} def
+          /HX5  {aP 3 sqrt mul aP} def
+          }%
+          \def\pentagone{\pspolygon(!A0)(!B0)(!C0)(!D0)(!E0)}%
+          \def\hexagone{\pspolygon[linecolor=B1](!H0)(!H1)(!H2)(!H3)(!H4)(!H5)}%
+          \def\motifA{\multido{\i=0+60}{6}{\rput{\i}{\pentagone}}\hexagone}
+          \motifA\rput(!MajorAxis 0){\motifA}
+          \motifA\rput(!MajorAxis neg 0){\motifA}
+          \rput(!MajorAxis 2 div aP 3 mul){\motifA}
+          \rput(!MajorAxis 2 div aP -3 mul){\motifA}
+          \rput(!MajorAxis -2 div aP 3 mul){\motifA}
+          \rput(!MajorAxis -2 div aP -3 mul){\motifA}
+       \end{pspicture}
+    \end{center}    
+    \begin{cadre}[B2][J4]
+       \begin{center}
+          \href{http://therese.eveilleau.pagesperso-orange.fr/pages/truc_mat/textes/pavages.htm}{\bf Pavages interactifs}, site Internet {\it Mathématiques magiques} de {\it Thérèse Eveilleau}.
+       \end{center}
+    \end{cadre}
+ \end{debat}
+\end{changemargin}
