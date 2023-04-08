@@ -389,6 +389,11 @@
    \psarc(-2,1){2.24}{-26.6}{26.6}
 \end{pspicture}
 }
+
+% Hexagone regulier - commande de Nathalie DAVAL
+% #1 --> rayon
+% #2 --> couleur
+\newcommand{\hexa}[2]{\pspolygon[fillstyle=solid,fillcolor=#2](#1;0)(#1;60)(#1;120)(#1;180)(#1;-120)(#1;-60)}
 %==========================================
 % TiKz 
 %==========================================
