@@ -1,0 +1,24 @@
+\begin{exercice*}
+    Construire les points $I', K', R'$ et $A'$ symétriques respectifs de $I, K, R$ et $A$ par rapport au point $M$.
+    \begin{center}
+       {\psset{unit=0.6}
+       \begin{pspicture}(12,8)
+         \small
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=darkgray](0,0)(12,8)
+          \pstGeonode[,PosAngle=45](2,2){R}(3,5){I}(8,5){K}(6,2){A}(6,4){M}
+       \end{pspicture}}
+    \end{center} 
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    \ \\ [-3mm]
+    {\psset{unit=0.6}
+    \begin{pspicture}(0,-1)(12,8)
+      \small
+      \psgrid[subgriddiv=0,gridlabels=0,gridcolor=darkgray](0,0)(12,8)
+          \pstGeonode[,PosAngle=45](2,2){R}(3,5){I}(8,5){K}(6,2){A}(6,4){M}
+         \red
+         \pstGeonode[PosAngle=45,linecolor=red](10,6){R'}(9,3){I'}(4,3){K'}(6,6){A'}
+    \end{pspicture}}
+\end{corrige}
+
