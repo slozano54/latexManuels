@@ -1,0 +1,61 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{changemargin}{-10mm}{-10mm}
+\begin{enigme}[Le tapis mendiant]
+    \partie[kesako ?]
+       Un patchwork est une technique décorative de couture qui consiste à assembler des morceaux de tissus pour réaliser des objets divers, comme par exemple des taies d’oreillers ou des couvre-lits. \\
+       On s'intéresse ici aux couvre-lits de Cilaos, (ville de la Réunion), plus communément appelés \og tapi mendian \fg. \\
+       Le motif de base de ce tapis est un hexagone, et pour le réaliser, on assemble sept hexagones pour former une rosace, puis, on coud les rosaces entre elles.
+       \begin{center}
+          \includegraphics[height=4.5cm]{\currentpath/images/rosace}
+          \qquad
+          \includegraphics[height=4.5cm]{\currentpath/images/tapimendian}
+       \end{center}
+ 
+    \partie[construction d'un hexagone régulier]
+       \begin{minipage}{9cm}
+          \begin{enumerate}
+             \item Qu'est-ce qu'un hexagone régulier ?
+             \item Combien d'axe(s) et de centre de symétrie possède-t-il ?
+             \item Construire le plus précisément un hexagone régulier.
+          \end{enumerate}
+       \end{minipage}
+       \begin{minipage}{5cm}
+          \begin{pspicture}(-3,-1)(2,1)
+             \hexa{1.5}{White}
+          \end{pspicture}
+       \end{minipage}
+    
+    \partie[construction d'une rosace]
+    \ \\ [-10mm]
+       \begin{enumerate}
+          \item Construire une rosace, dont le diamètre du cercle circonscrit au motif de base est de \ucm{6}.
+          \item Décorer la rosace (couleurs, dessins, textes,motifs\dots), puis la découper.
+          \item Combien d'axe(s) et de centre de symétrie possède-t-elle (avant décoration et après décoration) ?
+       \end{enumerate}
+       \begin{center}
+            {\psset{unit=0.8}
+          \begin{pspicture}(-2.5,-2.75)(2.5,2.5)
+             \hexa{1}{lightgray}
+             \rput(1.73;30){\hexa{1}{yellow!70}}
+             \rput(1.73;90){\hexa{1}{orange!70}}
+             \rput(1.73;150){\hexa{1}{red!70}}
+             \rput(1.73;-30){\hexa{1}{Green!70}}
+             \rput(1.73;-90){\hexa{1}{blue!70}}
+             \rput(1.73;-150){\hexa{1}{violet!70}}
+          \end{pspicture}}
+       \end{center}
+       
+    \partie[construction du \og tapi mendian \fg]
+       Assembler toutes les rosaces de la classe afin de créer un tapis mendiant.
+ \end{enigme} 
+ \vfill\hfill{\it\small Activité inspirée de \href{https://irem.univ-reunion.fr/spip.php?article786}{\og Les patchworks de Cilaos : enseignement et ethnogéométrie au collège \fg}, IREM de la Réunion}
+\end{changemargin}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     \ldots
+% \end{corrige}
