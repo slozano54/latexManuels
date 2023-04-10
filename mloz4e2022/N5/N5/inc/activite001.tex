@@ -1,11 +1,6 @@
-\begin{changemargin}{-15mm}{-15mm}
+\begin{changemargin}{-15mm}{-15mm}   
 \begin{activite}[Le triangle de Sierpinski]
-   % {\it
-   %     La figure initiale est un triangle équilatéral.
-   %     On construit à l'intérieur de celui-ci un triangle en joignant les milieux du triangle initial.
-   %     On réitère le procédé avec chacun des triangles périphériques.
-   %     Lorsqu'on choisit d'arrêter les recursion à une étape, on colorie comme ci-dessous.
-   % }
+   \vspace*{-7mm}
    \partie[tracé de quelques états]
    \begin{minipage}{0.8\linewidth}
       \begin{description}
@@ -64,7 +59,7 @@
       \end{center}
       \item Combien y a-t-il de triangles noirs à l'étape 10 ? à l'étape 13 ? à l'étape 15 ? à l'étape 18 ?\\Écrire la réponse sous la forme d'une puissance de \num{3} puis sous forme décimale.
    \end{enumerate}
-
+   \vspace*{-10mm}
    \begin{center}
       \fbox{
          \begin{minipage}{\linewidth}
@@ -72,13 +67,13 @@
             Il s'intéresse entre autre aux fractales (une fractale est une forme géométrique qui se répète à l'identique lorsqu'on zoome ou qu'on \og dezoome\fg) dont certaines portent son nom : le triangle de Sierpiński, le tapis de Sierpiński et la courbe de Sierpiński.
             \begin{center}
                \begin{pspicture}(-0.7,0)(3,2)
-                  \psSier(0,0){3cm}{5}
+                  \psSier(0,0){2.5cm}{5}
                \end{pspicture}
                \qquad
-               \includegraphics[width=3cm]{\currentpath/images/Sierpinski_carpet}
+               \includegraphics[width=2.5cm]{\currentpath/images/Sierpinski_carpet}
                \quad
-               \begin{pspicture}(-2,-1.5)(2,1.5)
-                  \psSier[unit=0.1,n=4,fillstyle=solid,fillcolor=black] 
+               \begin{pspicture}(-2,-1.3)(2,1)
+                  \psSier[unit=0.083,n=4,fillstyle=solid,fillcolor=black] 
                \end{pspicture}
             \end{center}
             \vspace*{2mm}
