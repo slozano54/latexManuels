@@ -1,13 +1,73 @@
 \begin{exercice*}
-    \dots
+    Écrire sous la forme $10^n$.
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \begin{spacing}{1.5}
+                \item $A=(10^3)^{3}$
+                \item $B=10^6\times 10^2$
+                \item $C=\dfrac{10^1}{10^2}$
+                \item $D=10^7\times 10^4$
+                \item $E=(10^2)^{4}$
+                \item $F=\dfrac{10^5}{10^4}$
+            \end{spacing}
+        \end{enumerate}
+    \end{multicols}
+    \hrefMathalea{https://coopmaths.fr/alea/?uuid=1d078&id=4C33-0&n=4&s=1&s2=3&v=eleve&title=Exercices&es=1211}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
-    \dots
+    %\phantom{rrr}    
+    
+    \begin{enumerate}        
+            \item $A=(10^3)^{3}$\\
+            $A=\color{red}{\underbrace{\mathbf{\color{red}{(10^3)}} \times \mathbf{\color{red}{(10^3)}}\times \mathbf{\color{red}{(10^3)}}}_{3\thickspace\text{facteurs}}}$\\
+            $A=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}_{3\thickspace\text{facteurs}}}\color{red})}}}_{3\times\color{blue}{3}\thickspace\color{black}{\text{facteurs}}}}$\\
+            Il y a donc $\mathbf{\color{red}{3}~\color{black}{\times}~\color{blue}{3}}$ facteurs tous égaux à $10$.\\
+            $A=10^{3\times3} = 10^{9}$
+            \item $B=10^6\times 10^2$\\
+            $B=\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}} \times \mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}$\\
+            Il y a donc $\mathbf{\color{red}{6}~\color{black}{+}~\color{blue}{2}}$ facteurs tous égaux à $10$.\\
+            $B=10^{6+2} = 10^{8}$     
+            \end{enumerate}
+            \Coupe
+            \begin{enumerate}
+                \setcounter{enumi}{2}         
+            \item $C=\dfrac{10^1}{10^2}$
+            
+            \medskip
+            $C=\dfrac{\mathbf{\color{blue}{10}}}{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}}$
+            
+            \medskip
+            Il y a donc $\mathbf{\color{blue}{1}}$ simplifications par $10$ possibles.
+            
+            \medskip
+            $C=\dfrac{\mathbf{\color{blue}{\cancel{10}}}}{\mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}}}$
+            
+            \medskip
+            $C=\dfrac{1}{10^{2-1}}=\dfrac{1}{10^{1}}=10^{-1}$            
+            \item $D=10^7\times 10^4$\\
+            \hspace*{-5mm}$D=\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}} \times \mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}$\\
+            Il y a donc $\mathbf{\color{red}{7}~\color{black}{+}~\color{blue}{4}}$ facteurs tous égaux à $10$.\\
+            $D=10^{7+4} = 10^{11}$
+            \item $E=(10^2)^{4}$\\
+            $E=\color{red}{\underbrace{\mathbf{\color{red}{(10^2)}} \times \mathbf{\color{red}{(10^2)}}\times \mathbf{\color{red}{(10^2)}}\times \mathbf{\color{red}{(10^2)}}}_{4\thickspace\text{facteurs}}}$\\
+            $E=\color{red}{\underbrace{\mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}}_{2\thickspace\text{facteurs}}}\color{red})}} \times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}}_{2\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}}_{2\thickspace\text{facteurs}}}\color{red})}}\times \mathbf{\color{red}{(\color{blue}{\underbrace{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}}_{2\thickspace\text{facteurs}}}\color{red})}}}_{4\times\color{blue}{2}\thickspace\color{black}{\text{facteurs}}}}$\\
+            Il y a donc $\mathbf{\color{red}{4}~\color{black}{\times}~\color{blue}{2}}$ facteurs tous égaux à $10$.\\
+            $E=10^{2\times4} = 10^{8}$
+            \item $F=\dfrac{10^5}{10^4}$
+            
+            \medskip
+            $F=\dfrac{\mathbf{\color{red}{10}} \times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}\times \mathbf{\color{red}{10}}}{\mathbf{\color{blue}{10}} \times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}\times \mathbf{\color{blue}{10}}}$
+            
+            \medskip
+            Il y a donc $\mathbf{\color{blue}{4}}$ simplifications par $10$ possibles.
+            
+            \medskip
+            $F=\dfrac{\mathbf{\color{red}{\cancel{10}}} \times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times \mathbf{\color{red}{\cancel{10}}}\times\mathbf{\color{red}{10}}}{\mathbf{\color{blue}{\cancel{10}}} \times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}\times \mathbf{\color{blue}{\cancel{10}}}}$
+            
+            \medskip
+            $F=10^{5-4}=10^{1}$        
+    \end{enumerate}
 
-    {\red 
-    \dots
-    }
 \end{corrige}
 

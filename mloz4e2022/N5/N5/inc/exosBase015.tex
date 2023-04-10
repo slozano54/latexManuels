@@ -1,13 +1,57 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}    
+    Calculer les expressions suivantes en respectant les priorités opératoires.
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item[] $A=3^3+7\times 5^{-1}$
+            \item[] $B=2^{-3}+9+10^{-2}$
+            \item[] $C=10^3\times 4^{-4} + 5^4 - 8^{-1}$
+            \item[] $D=5^3+5^{-3}$            
+        \end{itemize}
+    \end{multicols}
+    
+    \hrefMathalea{https://coopmaths.fr/alea/?uuid=2d79c&id=4C34&n=5&v=eleve&title=Exercices&es=1211}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
-    \dots
+    %\phantom{rrr}    
+    Calculer les expressions suivantes en respectant les priorités opératoires.
+    \begin{itemize}
+        \def\item{}
+        \item $A=3^3+7\times 5^{-1}$\\
+        $A=3^3+{\red\boldsymbol{7\times 5^{-1}}}$\\
+        $A=3^3+{\red\boldsymbol{7\times \num{0.2}}}$\\
+        $A={\red\boldsymbol{3^3}} + \num{1.4}$\\
+        $A=27 + \num{1.4}$\\
+        $A=\num{28.4}$
 
-    {\red 
-    \dots
-    }
+        \bigskip
+        \item $B=2^{-3}+9+10^{-2}$\\
+        $B={\red\boldsymbol{2^{-3}}} +9+{\red\boldsymbol{10^{-2}}}$\\
+        $B={\red\boldsymbol{\dfrac{1}{2^3}}} +9+{\red\boldsymbol{\dfrac{1}{10^2}}}$\\
+        $B={\red\boldsymbol{\dfrac{1}{8}}} +9+{\red\boldsymbol{\dfrac{1}{100}}}$\\
+        $B=\num{0.125} + 9 + \num{0.01}$\\
+        $B=\num{9.135}$
+        
+    \end{itemize}
+    \Coupe
+    \begin{itemize}       
+        \def\item{}
+
+        \item $C=10^3\times 4^{-4} + 5^4 - 8^{-1}$\\
+        $C={\red\boldsymbol{10^3}}\times {\red\boldsymbol{4^{-4}}} + {\red\boldsymbol{5^4}} - {\red\boldsymbol{8^{-1}}}$\\
+        $C=\num{1000}\times {\red\boldsymbol{\dfrac{1}{4^4}}} + 625 - {\red\boldsymbol{\dfrac{1}{8}}}$\\
+        $C=\num{1000}\times \dfrac{1}{256} + 625 - \num{0.125}$\\
+        $C={\red\boldsymbol{\dfrac{1000}{256}}} + 625 - \num{0.125}$\\
+        $C=\num{3.90625} + 625 - \num{0.125}$\\
+        $C=\num{628.78125}$
+        
+        \bigskip
+        \item $D=5^3+5^{-3}$\\
+        $D={\red\boldsymbol{5^3}}+{\red\boldsymbol{5^{-3}}}$\\
+        $D=125+{\red\boldsymbol{\dfrac{1}{5^3}}}$\\
+        $D=125+{\red\boldsymbol{\dfrac{1}{125}}}$\\
+        $D=125+\num{0.008}$\\
+        $D=\num{125.008}$        
+    \end{itemize}
 \end{corrige}
 
