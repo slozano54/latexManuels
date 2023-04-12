@@ -1,3 +1,64 @@
 \begin{activite}[La cabine]    
-    \dots
+    La figure suivante représente le déplacement d'une cabine de téléphérique. La droite $(d)$ représente le câble porteur.
+    Le point $A$ représente le point d'attache de la cabine au câble au départ. À l'arrivée, ce point est représenté par le point $B$.
+
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(11u,5u)}]
+            trace grille(0.5) withcolor gris;
+            pair A,B,M,N,P,R,S,M',N';
+            A=u*(1.5,2.5);
+            B=u*(7.5,4);
+            labeloffset := 5bp ;
+            label.top(btex $A$ etex, A);
+            label.top(btex $B$ etex, B);
+            marque_p:="croix";
+            pointe(A,B);
+            trace droite(A,B) withcolor gris;
+            drawarrow A--B withcolor blue dashed evenly;
+            labeloffset := 3bp ;
+            label.top(btex $(d)$ etex,1.2[B,A]);
+            M=u*(1,2);
+            N=u*(2,2);
+            P=u*(2.5,1.5);
+            R=u*(2.5,0.5);
+            S=u*(1,0.5);
+            trace segment(A,projection(A,M,N));
+            trace polygone(M,N,P,R,S);
+            remplis polygone(M,N,P,R,S) withcolor gris;
+            labeloffset := 5bp ;
+            pointe(M,N,P,R,S);
+            label.llft(btex  $M$ etex, M);
+            label.urt(btex  $N$ etex, N);
+            label.urt(btex  $P$ etex, P);
+            label.lrt(btex  $R$ etex, R);
+            label.llft(btex $S$ etex, S);
+            M'=M shifted (6u,1.5u);
+            N'=N shifted (6u,1.5u);
+            trace segment(B,projection(B,M',N')) withcolor red;
+            label.lft(btex $M'$ etex, M') withcolor red;
+            label.rt(btex $N'$ etex, N') withcolor red;
+            trace segment(M',N') withcolor red dashed evenly;
+            drawoptions(withcolor red);        
+            pointe(M',N');
+        \end{Geometrie}
+    \end{center}
+        \begin{enumerate}
+        \item Reproduire la figure ci-dessus sur une feuille quadrillée.
+        \item Compléter la figure avec la cabine dans sa position d'arrivée.
+        
+        \smallskip
+        {\bfseries On notera $P'$, $R'$ et $S'$ les points d'arrivée correspondant aux points $P$, $R$ et $S$.}
+        \smallskip
+        \item Tracer le segment $[MM']$. Qu'a-t-il de particulier ?
+        \item Tracer d'autres segments ayant cette articularité.
+        \item Indiquer la nature du quadrilatère $ABM'M$.
+        \item Nommer d'autres quadrilatères ayant cette particularité.
+        
+        \smallskip
+        {\bfseries Cette transformation permettant d'amener la cabine de sa position de départ à sa position d'arrivée s'appelle translation qui transforme $A$ en $B$.}
+        \smallskip
+        \item Déterminer l'image du segment $[NP]$ par la translation qui transforme $A$ en $B$.
+        \item Faire une remarque sur ce segment et son image.
+        \item Comparer la figure $MNPRS$ et son image par la translation qui transforme $A$ en $B$.
+    \end{enumerate}
 \end{activite}
