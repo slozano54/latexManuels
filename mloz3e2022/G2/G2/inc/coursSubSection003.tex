@@ -1,32 +1,4 @@
 \subsection{Translation}
-\newcommand{\coursVecteurFigUn}[1]{
-    %line width=1pt,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,
-    \begin{tikzpicture}[scale=#1,>=triangle 45]
-        \coordinate (A) at (-6,-6);
-        \coordinate (C) at (-3,-4);
-        \coordinate (E) at (-2,-1);
-        \coordinate (G) at (-5,-3);
-        \coordinate (B) at (1,-5);
-        \tkzDefPointBy[translation= from A to B](G);
-        \tkzGetPoint{H};
-        \tkzDefPointBy[translation= from A to B](E);
-        \tkzGetPoint{F};
-        \tkzDefPointBy[translation= from A to B](C);
-        \tkzGetPoint{D};
-        \draw (A)--(C)--(E)--(G)--(A);
-        \draw (B)--(D)--(F)--(H)--(B);
-        \draw [->,color=orange] (A) -- (B);
-        \draw [->,color=orange] (G) -- (H);
-        \draw [->,color=orange] (E) -- (F);
-        \draw [->,color=orange] (C) -- (D);
-        \tkzDefMidPoint(A,B);
-        \tkzGetPoint{M};
-        \tkzLabelPoint[below](M){$\overrightarrow{AB}$}        
-        \tkzDrawPoints[shape=cross out,size=2pt](A,B,C,D,E,F,G,H);
-        \tkzLabelPoints[below](A,B,C,D);
-        \tkzLabelPoints[above](E,F,G,H);
-    \end{tikzpicture}
-}
 \begin{minipage}{0.6\linewidth}
     \begin{definition}
         $H$ est l’image de $G$ par la translation \textbf{qui transforme $\mathbf{A}$ en $\mathbf{B}$} signifie que $ABHG$ est un parallélogramme.

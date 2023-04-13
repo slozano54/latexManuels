@@ -1,2 +1,64 @@
-\section{...}
-\dots
+\section{Translation}
+
+\begin{minipage}{0.6\linewidth}
+    \begin{definition}
+        $H$ est l’image de $G$ par la translation \textbf{qui transforme $\mathbf{A}$ en $\mathbf{B}$} signifie que $ABHG$ est un parallélogramme.
+    \end{definition}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \hspace*{-10mm}
+    \coursVecteurFigUn{0.6}
+\end{minipage}
+
+\begin{remarques}
+    \begin{itemize}
+        \item Une translation fait glisser une figure dans une direction, un sens et une longueur donnés.
+        \item La translation qui transforme $A$ en $B$ se traduit par un glissement de $A$ vers $B$.
+        % \item On parle de la translation de vecteur $\overrightarrow{AB}$.
+    \end{itemize}
+    \smallskip
+    \hrefConstruction{https://www.geogebra.org/classic/efdft7qt}{Une animation Geogebra pour visualiser}
+    \creditGeogebra{Gauthier}
+\end{remarques}
+
+\begin{notation}    
+    Une translation est symbolisée par un vecteur (une flèche) qui donne la direction, le sens et la longueur de ce déplacement.
+    
+    \begin{Geometrie}[CoinHD={(11u,3u)}]
+        % trace grille(0.5) withcolor gris;
+        pair A,B;
+        A=u*(3.5,1);
+        B=u*(7.5,2);
+        labeloffset := 5bp ;
+        label.top(btex $A$ etex, A);
+        label.top(btex $B$ etex, B);
+        marque_p:="croix";
+        pointe(A,B);
+        trace droite(A,B) withcolor red;
+        trace segment(A,B) withcolor black withpen pencircle scaled 2bp;        
+        labeloffset := 6bp ;
+        label.top(btex $(d)$ direction etex,1.5[B,A]) withcolor red;
+        label.top(btex longueur etex,0.5[A,B]);
+        fill B -- rotation(0.1[B,A],B,20) -- rotation(0.1[B,A],B,-20) -- cycle withcolor \myMetapostGreen;
+        label.bot(btex sens etex,0.9[A,B]) withcolor \myMetapostGreen;
+    \end{Geometrie}    
+\end{notation}
+
+\begin{methode*1}[Construction de l'image d'un quadrilatère par translation]    
+    \exercice
+    Construire l'image de $ACEG$ par la translation qui transforme $A$ en $B$.
+    \correction
+    \begin{minipage}{0.45\linewidth}
+        \begin{center}
+            \coursVecteurFigUn{0.5}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        \textbf{Programme de construction}
+
+        Pour construire l'image de $ACEG$ par \mbox{la translation de vecteur $\overrightarrow{AB}$}, il faut reproduire ce vecteur à partir de chaque sommet de la figure.
+    \end{minipage}
+    \smallskip
+    \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_122.html}{Image d'un point à l'aide du compas}
+    \creditInstrumentPoche
+\end{methode*1}
