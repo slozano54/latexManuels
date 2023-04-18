@@ -1,6 +1,32 @@
 \begin{exercice*}
     On considère la grille ci-dessous, où les droites qui semblent parallèles le sont.
 
+    \Reseau[%
+        Colonnes=5,%
+        Lignes=8,%
+        Traces={%	
+            pair A,B,C,D,E,F,G,H; % Placement dans le quadrillage en calculant
+            A=ppreseau(0,8);
+            B=ppreseau(1,8);
+            C=ppreseau(1,7);
+            D=ppreseau(0,7);
+            E=ppreseau(2,5);
+            F=ppreseau(1,2);
+            G=ppreseau(3,2);
+            H=ppreseau(4,6);
+            marque_p:="croix";
+            drawoptions(withcolor red);
+            pointe(A,B,C,D,E,F,G,H);
+            label.urt(btex $A$ etex,A);
+            label.urt(btex $B$ etex,B);
+            label.urt(btex $C$ etex,C);
+            label.urt(btex $D$ etex,D);
+            label.urt(btex $E$ etex,E);
+            label.urt(btex $F$ etex,F);
+            label.urt(btex $G$ etex,G);
+            label.urt(btex $H$ etex,H);
+            drawoptions();
+        }]{}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
