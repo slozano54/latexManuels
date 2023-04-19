@@ -1,9 +1,135 @@
 \begin{exercice*}
-    \dots
+    On se base sur la figure de l'exercice {\bfseries 1}.
+    \begin{enumerate}
+        \item On considère la translation qui transforme $F$ en $G$. Colorier  :
+        \begin{itemize}
+            \item en rouge, l'image du motif \num{42}.
+            \item en bleu, l'image du motif \num{32}.
+            \item en vert, l'image du motif \num{9}.
+        \end{itemize}
+        \item On considère la translation qui transforme $E$ en $H$. Colorier  :
+        \begin{itemize}
+            \item en jaune, l'image du motif \num{42}.
+            \item en orange, l'image du motif \num{32}.
+            \item en gris, l'image du motif \num{9}.
+        \end{itemize}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    On se base sur la figure de l'exercice {\bfseries 1}.\\
+    \begin{enumerate}
+        \item On considère la translation qui transforme $F$ en $G$. Colorier  :
+        \begin{itemize}
+            \item en rouge, l'image du motif \num{42}.
+            \item en bleu, l'image du motif \num{32}.
+            \item en vert, l'image du motif \num{9}.
+        \end{itemize}
+        \item On considère la translation qui transforme $E$ en $H$. Colorier  :
+        \begin{itemize}
+            \item en jaune, l'image du motif \num{42}.
+            \item en orange, l'image du motif \num{32}.
+            \item en gris, l'image du motif \num{9}.
+        \end{itemize}
+    \end{enumerate}
+    \Reseau[%
+    Colonnes=5,%
+    Lignes=8,%
+    Traces={%	
+        pair A,B,C,D,E,F,G,H; % Placement dans le quadrillage en calculant
+        A=ppreseau(0,8);
+        B=ppreseau(1,8);
+        C=ppreseau(1,7);
+        D=ppreseau(0,7);
+        E=ppreseau(2,5);
+        F=ppreseau(1,2);
+        G=ppreseau(3,2);
+        H=ppreseau(4,6);
+        % Coloriages
+        alpha = 3/8; % alpha: 0=invisible, 1=opaque
+        picture bg, fgrouge, fgbleu, fgvert, fgjaune, fgorange, fggris;
+        bg = currentpicture; % save the current pic *before* filling the box
+        % par F-> G image de 42 en rouge
+        path boxrouge; boxrouge= H--ppreseau(4,5)--ppreseau(5,5)--ppreseau(5,6)--cycle;        
+        fill boxrouge withcolor Red;
+        fgrouge = image( 
+        for e within bg:
+            draw e if 5=colormodel e: withcolor alpha[colorpart e, Red] fi;
+        endfor
+        );
+        clip fgrouge to boxrouge; 
+        % par F-> G  image de 32 en bleu
+        path boxbleu; boxbleu= E--ppreseau(3,5)--ppreseau(3,4)--ppreseau(2,4)--cycle;
+        fill boxbleu withcolor LightBlue;
+        fgbleu = image( 
+            for e within bg:
+                draw e if 5=colormodel e: withcolor alpha[colorpart e, LightBlue] fi;
+            endfor
+        );
+        clip fgbleu to boxbleu;
+        % par F-> G  image de 9 en vert
+        path boxvert; boxvert= G--ppreseau(4,2)--ppreseau(4,1)--ppreseau(3,1)--cycle;
+        fill boxvert withcolor LightGreen;
+        fgvert = image( 
+            for e within bg:
+                draw e if 5=colormodel e: withcolor alpha[colorpart e, LightGreen] fi;
+            endfor
+        );
+        clip fgvert to boxvert;
+        % par E-> H image de 42 en jaune
+        path boxjaune; boxjaune= H--ppreseau(4,7)--ppreseau(5,7)--ppreseau(5,6)--cycle;        
+        fill boxrouge withcolor Yellow;
+        fgjaune = image( 
+        for e within bg:
+            draw e if 5=colormodel e: withcolor alpha[colorpart e, Yellow] fi;
+        endfor
+        );
+        clip fgjaune to boxjaune; 
+        % par E-> H  image de 32 en orange
+        path boxorange; boxorange= E--ppreseau(3,5)--ppreseau(3,6)--ppreseau(2,6)--cycle;
+        fill boxorange withcolor Orange;
+        fgorange = image( 
+            for e within bg:
+                draw e if 5=colormodel e: withcolor alpha[colorpart e, Orange] fi;
+            endfor
+        );
+        clip fgorange to boxorange;
+        % par E-> H  image de 9 en gris
+        path boxgris; boxgris= G--ppreseau(4,2)--ppreseau(4,3)--ppreseau(3,3)--cycle;
+        fill boxgris withcolor Grey;
+        fggris = image( 
+            for e within bg:
+                draw e if 5=colormodel e: withcolor alpha[colorpart e, Grey] fi;
+            endfor
+        );
+        clip fggris to boxgris;
+        % On finit
+        fill boxrouge withcolor Red;
+        fill boxbleu withcolor LightBlue;
+        fill boxvert withcolor LightGreen;
+        fill boxjaune withcolor Yellow;
+        fill boxorange withcolor Orange;
+        fill boxgris withcolor Grey;
+        draw fgrouge;
+        draw fgbleu;
+        draw fgvert;
+        draw fgjaune;
+        draw fgorange;
+        draw fggris;
+        % Les points
+        marque_p:="croix";
+        drawoptions(withcolor red);
+        pointe(A,B,C,D,E,F,G,H);
+        label.urt(btex $A$ etex,A);
+        label.urt(btex $B$ etex,B);
+        label.urt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.urt(btex $E$ etex,E);
+        label.urt(btex $F$ etex,F);
+        label.urt(btex $G$ etex,G);
+        label.urt(btex $H$ etex,H);
+        drawoptions();
+    }]{}
 \end{corrige}
 
