@@ -38,10 +38,10 @@
         trace droite(CC,EE) dashed evenly withcolor red;
         path ccc;
         ccc = cercles(O,.5*u);
-        drawoptions(withcolor \myMetapostGreen);
+        drawoptions(withcolor DarkGreen);
         drawarrow pointarc(ccc,60)..pointarc(ccc,90)..pointarc(ccc,120);
         label.top(btex $\ang{60}$ etex, pointarc(ccc,90));
-        drawoptions(dashed evenly withcolor \myMetapostGreen);
+        drawoptions(dashed evenly withcolor DarkGreen);
         trace segment(O,A);
         trace segment(O,AA);
         %%%

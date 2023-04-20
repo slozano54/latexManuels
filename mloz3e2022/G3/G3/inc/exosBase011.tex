@@ -26,12 +26,12 @@
         label.top(btex $\ang{75}$ etex,rotation(A,B,37.5));
         label.lft(btex $A_1$ etex,rotation(A,B,75));
         %%% Correction 2
-        drawoptions(withcolor \myMetapostGreen);
+        drawoptions(withcolor DarkGreen);
         trace rotation(quadrilatereABCD,O,-100);         
         drawarrow A..rotation(A,O,-50)..rotation(A,O,-100);         
         label.urt(btex $\ang{100}$ etex,rotation(A,O,-50));
         label.bot(btex $A_2$ etex,rotation(A,O,-100));
-        drawoptions(dashed evenly withcolor \myMetapostGreen);
+        drawoptions(dashed evenly withcolor DarkGreen);
         trace segment(O,A);
         trace segment(O,rotation(A,O,-100));
         drawoptions(); 
