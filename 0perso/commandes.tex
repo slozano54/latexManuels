@@ -809,33 +809,49 @@
   \ifluatex%
   \mplibforcehmode%
   \begin{mplibcode}%
+  	  %%% Maille parallélogramme  
   	  vardef parallelo(expr num)=
-      save Loz;
-      picture Loz;
-      path parallelog;
-      parallelog:=(0,0)*u--(1,0)*u--(1 + \useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u--(\useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u--cycle;
-      Loz=image(
-      trace parallelog withcolor #3;
-      pair centreparalello;
-      centreparalello=1/2[(0,0)*u,(1+\useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u];
-      label(TEX(decimal(num)), centreparalello);
-      );
-      Loz
+        save Loz;
+        picture Loz;
+        path parallelog;
+        parallelog:=(0,0)*u--(1,0)*u--(1 + \useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u--(\useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u--cycle;
+        Loz=image(
+            trace parallelog withcolor #3;
+        );
+        Loz
       enddef;
+      %%% Numérotation
+      vardef numerotation(expr num)=
+        save Loz;
+        picture Loz;
+        Loz=image(
+            pair centreparalello;
+            centreparalello=1/2[(0,0)*u,(1+\useKV[Reseau]{Decalagex},\useKV[Reseau]{Decalagey})*u];
+            label(TEX(decimal(num)), centreparalello);
+        );
+        Loz
+      enddef;
+      %%% Placer un point dans le réseau
       vardef ppreseau(expr q,r)=
-      	  save point;
-      	  pair point;
-      	  point = (0,0) shifted ((1*q*u+r*\useKV[Reseau]{Decalagex}*u,0)+r*(0,\useKV[Reseau]{Decalagey}*u));
-		  point
+        save point;
+      	pair point;
+      	point = (0,0) shifted ((1*q*u+r*\useKV[Reseau]{Decalagex}*u,0)+r*(0,\useKV[Reseau]{Decalagey}*u));
+		point
 	  enddef;
+	  %%% Construction de la figure
       for l=0 upto #1-1:
-          for k=0 upto #2-1:
-              trace parallelo(#1*l+k) shifted(u*(\useKV[Reseau]{Decalagex}*l+k,\useKV[Reseau]{Decalagey}*l));
-          endfor;
+        for k=0 upto #2-1:
+            trace parallelo(#1*l+k) shifted(u*(\useKV[Reseau]{Decalagex}*l+k,\useKV[Reseau]{Decalagey}*l));
+        endfor;
       endfor;
       if \useKV[Reseau]{TracesAAjouter}:
-          \useKV[Reseau]{Traces};
+        \useKV[Reseau]{Traces};
       fi;
+      for l=0 upto #1-1:
+        for k=0 upto #2-1:
+            trace numerotation(#1*l+k) shifted(u*(\useKV[Reseau]{Decalagex}*l+k,\useKV[Reseau]{Decalagey}*l));
+        endfor;
+      endfor;
   \end{mplibcode}
   \else%
   \begin{mpost}[mpsettings={
@@ -847,31 +863,48 @@
         decalagex:=\useKV[Reseau]{Decalagex};
         decalagey:=\useKV[Reseau]{Decalagey};
   }]%
-  	  vardef parallelo(expr num)=
-      save Loz;
-      picture Loz;
-      path parallelog;
-      parallelog:=(0,0)*u--(1,0)*u--(1+decalagex,decalagey)*u--(decalagex,decalagey)*u--cycle;
-      Loz=image(
-      trace parallelog withcolor #3;
-      pair centreparalello;
-      centreparalello=1/2[(0,0)*u,(1+decalagex,decalagey)*u];
-      label(LATEX(decimal(num)), centreparalello);
-      );
-      Loz
-      enddef;
-      vardef ppreseau(expr q,r)=
-      	  save point;
-      	  pair point;
-      	  point = (0,0) shifted ((1*q*u+r*decalagex*u,0)+r*(0,decalagey*u));
-		  point
-	  enddef;
-      for l=0 upto #1-1:
-          for k=0 upto #2:
-              trace parallelo(#1*l+k) shifted(u*(decalagex*l+k,decalagey*l));
-          endfor;
-      endfor;
-      traces;
+  	%%% Maille parallélogramme    	  
+  	vardef parallelo(expr num)=
+        save Loz;
+        picture Loz;
+        path parallelog;
+        parallelog:=(0,0)*u--(1,0)*u--(1+decalagex,decalagey)*u--(decalagex,decalagey)*u--cycle;
+        Loz=image(
+            trace parallelog withcolor #3;
+        );
+        Loz
+    enddef;
+    %%% Numérotation
+    vardef numerotation(expr num)=
+        save Loz;
+        picture Loz;
+        Loz=image(
+        trace parallelog withcolor #3;
+        pair centreparalello;
+        centreparalello=1/2[(0,0)*u,(1+decalagex,decalagey)*u];
+        label(LATEX(decimal(num)), centreparalello);
+        );
+        Loz
+    enddef;
+    %%% Placer un point dans le réseau
+    vardef ppreseau(expr q,r)=
+        save point;
+        pair point;
+        point = (0,0) shifted ((1*q*u+r*decalagex*u,0)+r*(0,decalagey*u));
+        point
+    enddef;
+    %%% Construction de la figure
+    for l=0 upto #1-1:
+        for k=0 upto #2:
+            trace parallelo(#1*l+k) shifted(u*(decalagex*l+k,decalagey*l));
+        endfor;
+    endfor;
+    traces;
+    for l=0 upto #1-1:
+        for k=0 upto #2:
+            trace numerotation(#1*l+k) shifted(u*(decalagex*l+k,decalagey*l));
+        endfor;
+    endfor;
   \end{mpost}%
   \fi%
 }
