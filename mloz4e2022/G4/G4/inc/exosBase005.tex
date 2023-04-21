@@ -97,15 +97,15 @@
                     zCD=D-C;
                     drawoptions(withcolor red);
                     draw mytriangle shifted zAB;
-                    drawarrow A[0]--B;
-                    drawarrow A[1]--A[1] shifted zAB;
-                    drawarrow A[2]--A[2] shifted zAB;
+                    drawarrow A[0]..B dashed evenly;
+                    drawarrow A[1]..A[1] shifted zAB dashed evenly;
+                    drawarrow A[2]..A[2] shifted zAB dashed evenly;
                     drawoptions(withcolor DarkGreen);
-                    drawarrow C--D;
+                    drawarrow C--D dashed evenly;
                     draw mytriangle shifted zCD;
-                    drawarrow A[0]--A[0] shifted zCD;
-                    drawarrow A[1]--A[1] shifted zCD;
-                    drawarrow A[2]--A[2] shifted zCD;
+                    drawarrow A[0]..A[0] shifted zCD dashed evenly;
+                    drawarrow A[1]..A[1] shifted zCD dashed evenly;
+                    drawarrow A[2]..A[2] shifted zCD dashed evenly;
                     drawoptions();
                     draw mytriangle withpen pencircle scaled 1.2bp;
                 \end{Geometrie}
@@ -138,15 +138,15 @@
                     zCD=D-C;
                     drawoptions(withcolor red);
                     draw mytriangle shifted zAB;
-                    drawarrow A[0]--B;
-                    drawarrow A[1]--A[1] shifted zAB;
-                    drawarrow A[2]--A[2] shifted zAB;
+                    drawarrow A[0]..B dashed evenly;
+                    drawarrow A[1]..A[1] shifted zAB dashed evenly;
+                    drawarrow A[2]..A[2] shifted zAB dashed evenly;
                     drawoptions(withcolor DarkGreen);
-                    drawarrow C--D;
+                    drawarrow C--D dashed evenly;
                     draw mytriangle shifted zCD;
-                    drawarrow A[0]--A[0] shifted zCD;
-                    drawarrow A[1]--A[1] shifted zCD;
-                    drawarrow A[2]--A[2] shifted zCD;
+                    drawarrow A[0]..A[0] shifted zCD dashed evenly;
+                    drawarrow A[1]..A[1] shifted zCD dashed evenly;
+                    drawarrow A[2]..A[2] shifted zCD dashed evenly;
                     drawoptions();
                     draw mytriangle withpen pencircle scaled 1.2bp;                                        
                 \end{Geometrie}
