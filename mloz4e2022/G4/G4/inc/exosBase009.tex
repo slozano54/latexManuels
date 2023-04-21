@@ -1,9 +1,61 @@
 \begin{exercice*}
-    \dots
+    \begin{enumerate}
+        \item Construire, en bleu, l'image du cercle de centre $O$ par la translation qui transforme $B$ en $A$.
+        \item Construire, en vert, l'image du cercle de centre $O$ par la symétrie $A$.
+    \end{enumerate}
+    \medskip
+    \begin{Geometrie}[CoinHD={(6u,7u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair O,A,B;
+        O=u*(4,1);
+        A=u*(2.5,3);
+        B=u*(4.5,2.5);
+        pair zBA;
+        zBA=A-B;
+        path cO;
+        cO=cercles(O,u);
+        draw cO;
+        marque_p:="croix";
+        pointe(O,A,B);
+        label.rt(btex $O$ etex,O);        
+        label.bot(btex $A$ etex,A);
+        label.bot(btex $B$ etex,B);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    \begin{enumerate}
+        \item Construire, en bleu, l'image du cercle de centre $O$ par la translation qui transforme $B$ en $A$.
+        \item Construire, en vert, l'image du cercle de centre $O$ par la symétrie $A$.
+    \end{enumerate}
+    \medskip
+    \begin{Geometrie}[CoinHD={(6u,7u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair O,A,B;
+        O=u*(4,1);
+        A=u*(2.5,3);
+        B=u*(4.5,2.5);
+        pair zBA;
+        zBA=A-B;
+        path cO;
+        cO=cercles(O,u);
+        draw cO;
+        marque_p:="croix";
+        pointe(O,A,B);
+        label.rt(btex $O$ etex,O);        
+        label.bot(btex $A$ etex,A);
+        label.bot(btex $B$ etex,B);
+        %%% Correction
+        drawoptions(withcolor blue);
+        draw cO shifted zBA;
+        drawarrow B--A;
+        pointe(O shifted zBA);
+        drawoptions(withcolor DarkGreen);
+        draw cO rotatedaround(A,180);
+        pointe(O rotatedaround(A,180));
+    \end{Geometrie}
 \end{corrige}
 
