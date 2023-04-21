@@ -1,9 +1,94 @@
 \begin{exercice*}
-    \dots
+    Construire :
+    \begin{itemize}
+        \item en rouge, l'image du bateau par la translation qui tranforme $K$ en $P$
+        \item en vert, l'image du bateau par la translation qui tranforme $L$ en $P$
+    \end{itemize}
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        labeloffset := 5bp ;
+        pair K[],L,P;                    
+        trace grille(0.5) withcolor Grey;
+        K[0]=u*(1.5,2);
+        L=u*(3.5,0.5);
+        P=u*(6,2);
+        K[1]=K[0] shifted (u,-u);
+        K[2]=K[1] shifted (-u,-0.5*u);
+        K[3]=K[2] shifted (-0.5*u,0);
+        K[4]=K[3] shifted (-0.5*u,0.5*u);
+        K[5]=K[4] shifted (0.5*u,u);
+        K[6]=K[5] shifted (0,-u);
+        K[7]=K[6] shifted (0.5*u,0);
+        picture bateau;
+        bateau = image( 
+            draw K[0] -- K[1] -- K[2] -- K[3] -- K[4]-- K[5]-- K[6]-- K[7] -- cycle;
+            draw K[4]-- K[6];
+            draw K[7]-- K[1];
+            draw K[6]-- K[0];
+        );
+        draw bateau;
+        marque_p:="croix";
+        pointe(L,P);
+        label.top(btex $K$ etex, K[0]);
+        label.llft(btex $L$ etex, L);
+        label.ulft(btex $P$ etex, P);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    Construire :
+    \begin{itemize}
+        \item en rouge, l'image du bateau par la translation qui tranforme $K$ en $P$
+        \item en vert, l'image du bateau par la translation qui tranforme $L$ en $P$
+    \end{itemize}
+    \smallskip
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        labeloffset := 5bp ;
+        pair K[],L,P;                    
+        trace grille(0.5) withcolor Grey;
+        K[0]=u*(1.5,2);
+        L=u*(3.5,0.5);
+        P=u*(6,2);
+        K[1]=K[0] shifted (u,-u);
+        K[2]=K[1] shifted (-u,-0.5*u);
+        K[3]=K[2] shifted (-0.5*u,0);
+        K[4]=K[3] shifted (-0.5*u,0.5*u);
+        K[5]=K[4] shifted (0.5*u,u);
+        K[6]=K[5] shifted (0,-u);
+        K[7]=K[6] shifted (0.5*u,0);
+        picture bateau;
+        bateau = image( 
+            draw K[0] -- K[1] -- K[2] -- K[3] -- K[4]-- K[5]-- K[6]-- K[7] -- cycle;
+            draw K[4]-- K[6];
+            draw K[7]-- K[1];
+            draw K[6]-- K[0];
+        );
+        draw bateau;
+        marque_p:="croix";
+        pointe(L,P);
+        label.top(btex $K$ etex, K[0]);
+        label.llft(btex $L$ etex, L);
+        label.ulft(btex $P$ etex, P);
+        %%% Correction
+        pair zKP,zLP;
+        zKP=P-K[0];
+        zLP=P-L;
+        drawoptions(withcolor red);
+        draw bateau shifted zKP;
+        drawarrow K[0]..P dashed evenly;
+        drawoptions(withcolor DarkGreen);
+        drawarrow L..P dashed evenly;
+        drawarrow K[0]--K[0] shifted zLP dashed evenly;
+        drawarrow K[1]--K[1] shifted zLP dashed evenly;
+        drawarrow K[2]--K[2] shifted zLP dashed evenly;
+        drawarrow K[3]--K[3] shifted zLP dashed evenly;
+        drawarrow K[4]--K[4] shifted zLP dashed evenly;
+        drawarrow K[5]--K[5] shifted zLP dashed evenly;
+        drawarrow K[6]--K[6] shifted zLP dashed evenly;
+        drawarrow K[7]--K[7] shifted zLP dashed evenly;
+        draw bateau shifted zLP;
+        drawoptions();
+        draw bateau withpen pencircle scaled 1.2bp;
+    \end{Geometrie}
 \end{corrige}
 

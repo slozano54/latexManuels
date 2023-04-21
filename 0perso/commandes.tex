@@ -905,7 +905,7 @@
   \end{mpost}%
   \fi%
 }
-\NewDocumentCommand\Reseau{o m}{%
+\NewDocumentCommand\Reseau{o}{%
   \useKVdefault[Reseau]% On revient aux valeurs par défaut, équivalent à restoreKV[Reseau]
   \setKV[Reseau]{#1}% On lit les arguments optionnels
   \xdef\ReseauLignes{\useKV[Reseau]{Lignes}}%
