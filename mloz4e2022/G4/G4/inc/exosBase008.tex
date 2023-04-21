@@ -1,9 +1,77 @@
 \begin{exercice*}
-    \dots
+    Construire :
+    \begin{itemize}
+        \item construire le point $R$, image de $P$ par la translation qui transforme $M$ en $N$;
+        \item construire le point $S$, tel que $Q$ soit l'image de $S$ par la translation qui transforme $M$ en $P$;
+        \item construire le point $T$, tel que $T$ soit l'image de $N$ par la translation qui transforme $T$ en $P$.
+    \end{itemize}
+    \begin{Geometrie}[CoinHD={(9u,5u)}]
+        labeloffset := 5bp ;
+        % trace grille(0.5) withcolor Grey;
+        pair M,N,P,Q;
+        M=u*(3.5,3);
+        N=u*(6.5,4);
+        P=u*(5.5,1);
+        Q=u*(2.5,2);
+        pair zMN,zMP,zTP;
+        zMN=N-M;
+        zMP=P-M;
+        zTP=P-0.5[N,P];
+        draw M--N--P--Q--cycle;
+        label.top(btex $M$ etex,M);
+        label.top(btex $N$ etex,N);
+        label.bot(btex $P$ etex,P);
+        label.bot(btex $Q$ etex,Q);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    Construire :
+    \begin{itemize}
+        \item construire le point $R$, image de $P$ par la translation qui transforme $M$ en $N$;
+        \item construire le point $S$, tel que $Q$ soit l'image de $S$ par la translation qui transforme $M$ en $P$;
+        \item construire le point $T$, tel que $T$ soit l'image de $N$ par la translation qui transforme $T$ en $P$.
+    \end{itemize}
+    \begin{Geometrie}[CoinHD={(9u,5u)}]
+        labeloffset := 5bp ;
+        % trace grille(0.5) withcolor Grey;
+        pair M,N,P,Q;
+        M=u*(3.5,3);
+        N=u*(6.5,4);
+        P=u*(5.5,1);
+        Q=u*(2.5,2);
+        pair zMN,zMP,zTP;
+        zMN=N-M;
+        zMP=P-M;
+        zTP=P-0.5[N,P];
+        draw M--N--P--Q--cycle;
+        label.top(btex $M$ etex,M);
+        label.top(btex $N$ etex,N);
+        label.bot(btex $P$ etex,P);
+        label.bot(btex $Q$ etex,Q);
+        %%% Correction        
+        pair R,S,T;
+        R=P shifted zMN;
+        S=Q shifted -zMP;
+        T=0.5[N,P];
+        marque_p:="croix";
+        drawoptions(withcolor red);
+        pointe(R);
+        drawarrow M--N dashed evenly;
+        drawarrow P--R dashed evenly;
+        label.top(btex $R$ etex,R);
+        drawoptions(withcolor blue);
+        pointe(S);        
+        drawarrow M--P dashed evenly;
+        drawarrow S--Q dashed evenly;
+        label.top(btex $S$ etex,S);
+        drawoptions(withcolor DarkGreen withpen pencircle scaled 1.1bp);
+        pointe(T);
+        drawarrow T--P dashed evenly;
+        drawarrow N--T dashed evenly;
+        label.rt(btex $T$ etex,T);
+    \end{Geometrie}
 \end{corrige}
+
 

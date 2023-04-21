@@ -1,9 +1,83 @@
 \begin{exercice*}
-    \dots
+    Construire, en rouge, l'image de la figure par la translation qui transforme $R$ en $P$.
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        labeloffset := 5bp ;
+        % Pour changer la taille de la Grid
+        coeff:=0.6;
+        uni:=true;
+        x.u:=coeff*cm;
+        y.u:=coeff*(sqrt(3)/2)*cm;        
+        trace papiertriangle withcolor LightGrey;
+        pair K[],A,R,P;
+        K[0]=pptri(3,2);
+        K[1]=pptri(4,2);        
+        K[2]=pptri(4,4);
+        K[3]=pptri(2,4);
+        K[4]=pptri(2,5);
+        K[5]=pptri(1,6);
+        K[6]=pptri(0,6);
+        K[7]=pptri(0,5);
+        K[8]=pptri(1,5);
+        K[9]=pptri(1,4);
+        A=pptri(0.5,5.5);
+        R=pptri(7,1);
+        P=pptri(10,2);
+        picture canard;
+        canard = image( 
+            draw K[0] -- K[1] -- K[2] -- K[3] -- K[4]-- K[5]-- K[6]-- K[7] -- K[8] -- K[9] -- cycle;
+            marque_p:="plein";
+            pointe(A);
+        );        
+        draw canard withpen pencircle scaled 1.2bp;
+        marque_p:="croix";
+        pointe(R,P);
+        label.top(btex $R$ etex, R);
+        label.top(btex $P$ etex, P);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    Construire, en rouge, l'image de la figure par la translation qui transforme $R$ en $P$.
+    \begin{Geometrie}[CoinHD={(8u,4u)}]
+        labeloffset := 5bp ;
+        % Pour changer la taille de la Grid
+        coeff:=0.6;
+        uni:=true;
+        x.u:=coeff*cm;
+        y.u:=coeff*(sqrt(3)/2)*cm;        
+        trace papiertriangle withcolor LightGrey;
+        pair K[],A,R,P;
+        K[0]=pptri(3,2);
+        K[1]=pptri(4,2);        
+        K[2]=pptri(4,4);
+        K[3]=pptri(2,4);
+        K[4]=pptri(2,5);
+        K[5]=pptri(1,6);
+        K[6]=pptri(0,6);
+        K[7]=pptri(0,5);
+        K[8]=pptri(1,5);
+        K[9]=pptri(1,4);
+        A=pptri(0.5,5.5);
+        R=pptri(7,1);
+        P=pptri(10,2);
+        picture canard;
+        canard = image( 
+            draw K[0] -- K[1] -- K[2] -- K[3] -- K[4]-- K[5]-- K[6]-- K[7] -- K[8] -- K[9] -- cycle;
+            marque_p:="plein";
+            pointe(A);
+        );        
+        draw canard withpen pencircle scaled 1.2bp;
+        marque_p:="croix";
+        pointe(R,P);
+        label.top(btex $R$ etex, R);
+        label.top(btex $P$ etex, P);
+        %%% Correction
+        pair zRP;
+        zRP=P-R;
+        drawoptions(withpen pencircle scaled 1.2bp withcolor red);
+        draw canard shifted zRP;
+        drawarrow R--P dashed evenly;
+    \end{Geometrie}
 \end{corrige}
 
