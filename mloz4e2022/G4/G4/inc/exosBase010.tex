@@ -1,5 +1,31 @@
 \begin{exercice*}
-    \dots
+    \begin{enumerate}
+        \item Construire, en bleu, l'image de $ABC$ par la translation qui transforme $C$ en $B$.
+        \item Construire, en vert, l'image de $ABC$ par la symétrie d'axe $(AC)$.
+    \end{enumerate}
+    \medskip
+    \begin{Geometrie}[CoinHD={(8u,7u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor Grey;
+        pair A,B,C;
+        A=u*(4.5,1);
+        B=u*(5,3);
+        C=u*(7,1.5);
+        draw A--B--C--cycle;
+        pair zCB;
+        zCB=B-C;
+        label.bot(btex $A$ etex,A);                
+        label.top(btex $B$ etex,B);
+        label.bot(btex $C$ etex,C);
+        % %%% Correction
+        % drawoptions(withcolor blue);
+        % draw cO shifted zBA;
+        % drawarrow B--A;
+        % pointe(O shifted zBA);
+        % drawoptions(withcolor DarkGreen);
+        % draw cO rotatedaround(A,180);
+        % pointe(O rotatedaround(A,180));
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
