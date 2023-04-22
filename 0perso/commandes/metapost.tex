@@ -1,0 +1,136 @@
+%========= Rotations
+\newcommand{\enonceTroisiemeGTroisExoNeuf}{
+    pair O,A,L,M,N;
+    path cc;
+    L=u*(5.5,4.5);
+    cc=cercles(L,u);
+    M=pointarc(cc,0);
+    N=pointarc(cc,90);
+    O=u*(3.5,3);
+    A=u*(6,3);
+    marque_p:="croix";
+    pointe(O,A);
+    label.top(btex $O$ etex,O);
+    label.urt(btex $A$ etex,A);
+    trace cercles(O,A);
+    drawarrow arccercle(M,N,L);
+    label.llft(btex $(\mathcal{C})$ etex, pointarc(cercles(O,A),220));
+}
+
+\newcommand{\enonceTroisiemeGTroisExoDix}{
+    pair O,A,B,C,D,E;
+    O=u*(3.5,3);
+    A=u*(6,3);
+    B = rotation(A,O,75);
+    C = rotation(B,O,75);
+    D = rotation(C,O,75);
+    E = rotation(D,O,75);
+    marque_p:="croix";
+    pointe(O,A,B,C,D,E);
+    trace cercles(O,A);
+    label.lrt(btex $O$ etex, O);
+    label.urt(btex $A$ etex, A);
+    label.top(btex $B$ etex, B);
+    label.ulft(btex $C$ etex, C);
+    label.bot(btex $D$ etex, D);
+    label.lrt(btex $E$ etex, E);
+    label.lft(btex $(\mathcal{C})$ etex, pointarc(cercles(O,A),210));
+    pair AA,BB,CC,DD,EE;
+    AA = rotation(A,O,70);    
+    DD = rotation(D,O,70);
+    BB = rotation(B,O,-45);
+    CC = rotation(C,O,-45);
+    EE = rotation(E,O,-45);
+    path cc;
+    cc = cercles(O,.5*u);  
+}
+
+\newcommand{\enonceTroisiemeGTroisExoOnze}{
+    trace grille(0.5) withcolor white;
+    marque_p:="croix";
+    %labeloffset:=labeloffset*1.5;
+    pair O,A,B,C,D;
+    O=u*(5,3);
+    pointe(O);
+    label.lrt(btex $O$ etex,O);
+    A=u*(5,5);
+    B=u*(4,3.5);
+    C=u*(2,3);
+    D=u*(1,5);        
+    picture quadrilatereABCD;
+    quadrilatereABCD = image ( 
+        trace polygone(A,B,C,D);    
+    );
+    trace quadrilatereABCD;    
+    label.urt(btex $A$ etex,A);
+    label.lrt(btex $B$ etex,B);
+    label.llft(btex $C$ etex,C);
+    label.ulft(btex $D$ etex,D);
+}
+
+\newcommand{\enonceTroisiemeGTroisExoDouze}{
+    trace grille(0.5) withcolor white;
+    marque_p:="croix";
+    %labeloffset:=labeloffset*1.5;
+    pair O,A,B,C;
+    O=u*(4,4);
+    A=u*(1,1);
+    B=u*(4,1);
+    C=u*(2,3);        
+    picture triangleABC;
+    triangleABC = image ( 
+        trace polygone(A,B,C);    
+    );
+    pair AA,BB,CC;
+    AA=rotation(A,O,120);
+    BB=rotation(B,O,120);
+    CC=rotation(C,O,120);
+    trace triangleABC;    
+    trace rotation(triangleABC,O,120);
+    label.llft(btex $A$ etex,A);
+    label.lrt(btex $B$ etex,B);
+    label.top(btex $C$ etex,C);
+    label.rt(btex $A_1$ etex,AA);
+    label.top(btex $B_1$ etex,BB);
+    label.bot(btex $C_1$ etex,CC);
+}
+\newcommand{\enonceTroisiemeGTroisExoTreize}{
+    trace grille(0.5) withcolor white;
+    marque_p:="croix";
+    %labeloffset:=labeloffset*1.5;
+    path cc;        
+    pair O,A,B,C,D,E;
+    O=u*(4.5,2.5);
+    cc = cercles(O,1.5*u);
+    A=pointarc(cc,60);
+    B=pointarc(cc,180);
+    C=u*(4.5,1.5);
+    D=u*(6.5,3.5);
+    E=u*(7.5,4.5);
+    pointe(O,A,B,C,D,E);
+    label.rt(btex $O$ etex,O);
+    label.top(btex $A$ etex,A);
+    label.lft(btex $B$ etex,B);
+    label.bot(btex $C$ etex,C);
+    label.lrt(btex $D$ etex,D);
+    label.lrt(btex $E$ etex,E);
+}
+
+\newcommand{\enonceTroisiemeGTroisExoQuatorze}{
+    %trace grille(0.5) withcolor gris;
+    %labeloffset:=labeloffset*1.5;
+    u:=0.2*u;
+    pair A,B,C,D;
+    A=u*(13,8);
+    B=u*(17,8);
+    C=rotation(A,B,-30);
+    D=rotation(B,A,150);
+    picture losange;
+    losange = image (
+        trace polygone(A,B,C,D);
+    );
+    trace losange;
+    for j:=1 step 1 until 11:
+        trace rotation(losange,D,-30*j);
+    endfor;        
+}

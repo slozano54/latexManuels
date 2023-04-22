@@ -1,0 +1,34 @@
+% Equerre - commande de Nathalie DAVAL
+% #1 --> 
+% #2 --> 
+% #3 --> 
+% #4 --> 
+\newcommand{\equerre}[4]
+   {\scalebox{#4}
+      {\rput{#3}(#1,#2)      
+         {\pspolygon[linecolor=B1](0,0)(1,0)(0,1.8)
+          \pspolygon[linecolor=B1](0.2,0.2)(0.65,0.2)(0.2,1)
+          \multido{\r=0+0.1}{17}{\psline[linecolor=red,linewidth=0.01](0,\r)(0.075,\r)}
+          }
+       }      
+   }
+% COMPAS - commande de Nathalie DAVAL
+% #1 --> 
+% #2 --> 
+% #3 --> 
+% #4 --> 
+% #5 --> 
+\newcommand{\compas}[5]%
+{\psset{fillstyle=solid,fillcolor=gray!20}
+\scalebox{#4}
+    {\rput{#3}(#1,#2)      
+        {\psframe(-0.1,3.6)(0.1,4)
+        \rput{-#5}(-0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
+                                    \psline[fillcolor=gray!60](-0.05,-2.4)(0,-3)(0.05,-2.4)}
+        \rput{#5}(0.1,3){\psframe(-0.1,-2.4)(0.1,0.1)
+                                \pspolygon[fillcolor=gray](-0.05,-2.4)(-0.05,-2.95)(0.05,-2.7)(0.05,-2.4)}
+        \psframe[fillcolor=gray!40](-0.25,3)(0.25,3.6)
+        \pscircle(0,3.3){0.1}
+        }
+    }      
+}

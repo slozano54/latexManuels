@@ -1,0 +1,35 @@
+% Piece de curvica - commande de Nathalie DAVAL
+% #1 --> 
+\def\curvica#1{
+\begin{pspicture}(-1,-0.25)(3,2.5)
+   #1
+   \psset{linewidth=0.4mm,linestyle=dotted} %Curvica vierge
+   \psframe(0,0)(2,2)
+   \psarc(1,4){2.24}{-116.6}{-63.4}
+   \psarc(1,0){2.24}{63.4}{116.6}
+   \psarc(1,2){2.24}{-116.6}{-63.4}
+   \psarc(1,-2){2.24}{63.4}{116.6}
+   \psarc(4,1){2.24}{153.4}{-153.4}
+   \psarc(0,1){2.24}{-26.6}{26.6}
+   \psarc(2,1){2.24}{153.4}{-153.4}
+   \psarc(-2,1){2.24}{-26.6}{26.6}
+\end{pspicture}
+}
+
+% Hexagone regulier - commande de Nathalie DAVAL
+% #1 --> rayon
+% #2 --> couleur
+\newcommand{\hexa}[2]{\pspolygon[fillstyle=solid,fillcolor=#2](#1;0)(#1;60)(#1;120)(#1;180)(#1;-120)(#1;-60)}
+
+%==========================================
+% Probabilités
+%==========================================
+% Commande de Nathalie DAVAL
+% #1 --> 
+\newcommand{\sac}[1]{\begin{pspicture}(-0.5,-0.5)(2,2)
+    \psline(0,0)(0,1.5)
+    \psline(1.5,0)(1.5,1.5)
+    \psellipse(0.75,1.5)(0.75,0.25)
+    \psellipticarc(0.75,0)(0.75,0.4){180}{0}
+    #1
+ \end{pspicture}}

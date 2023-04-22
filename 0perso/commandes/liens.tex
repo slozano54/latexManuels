@@ -1,0 +1,72 @@
+\newcommand{\myUrlColorStyle}[1]{\textcolor{blue}{\underline{\bfseries #1}}}
+% Pour le lien vers un exo mathaleaV2
+% #1 --> Texte par défaut
+% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #2 --> url
+\newcommand{\hrefMathalea}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1}
+}
+
+% On définit le séparateur pour le paquet listofitems
+\setsepchar{,}%
+
+% Une précommande pour concaténer tous les éléments d'une liste
+% #1 --> list des uuid séparés par des virgules
+\newcommand{\createListOfUuid}[1]{%
+	\readlist*\myTmpList{#1}%
+	\xdef\listOfUuid{uuid=\myTmpList[1]}%
+	\ifthenelse{\myTmpListlen > 1}{%
+		\foreach \i in {2,...,\myTmpListlen}{%
+			\expandafter\xdef\expandafter\listOfUuid\expandafter{\listOfUuid\&uuid=\myTmpList[\i]}%
+		}%
+		}{%
+			\xdef\listOfUuid{uuid=\myTmpList[1]}%
+		}%
+}
+
+% Pour le lien vers un exo mathaleaV3
+% #1 --> Texte par défaut
+% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #2 --> liste d'uuid de l'exercice
+% #3 --> vue
+% #4 --> parametrage de la vue eleve
+\newcommand{\hrefMathaleaVIII}[4][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner sur le site} \mathaleaLogo]{
+	\createListOfUuid{#2}    
+    \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}{#1}
+}
+
+% Pour la géométrie, voir des constructions etc ...
+% #1 --> emojis par defaut
+% Par défaut #1 est emoji equerre + emoji regle + le smiley link mais cela peut être modifié
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefConstruction}[3][\emoji{triangular-ruler} \emoji{straight-ruler} \emoji{link}]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}} 
+}
+
+% Pour les liens vers youtube
+% #1 --> emojis par défaut
+% Par défaut #1 est le movie-camera + link mais on peut le remplacer par la ref mathalea
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefVideo}[3][\emoji{movie-camera} \emoji{link}]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
+}
+
+% Pour les liens de révision
+% #1 --> emojis par defaut
+% Par défaut #1 est emoji check-mark-button + link mais cela peut être modifié
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefRevision}[3][\emoji{check-mark-button} \emoji{link}]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
+}
+
+% Pour les liens lambda
+% #1 --> emojis par défaut
+% Par défaut #1 est le movie-camera + link mais on peut le remplacer par la ref mathalea
+% #2 --> url
+% #3 --> texte
+\newcommand{\hrefLien}[3][\emoji{link}]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1 \myUrlColorStyle{#3}}
+}

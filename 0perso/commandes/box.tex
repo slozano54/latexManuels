@@ -1,0 +1,53 @@
+% Box perso, on peut l'utiliser pour les programmes de calcul
+% #1 --> Contenu
+% #2 --> Titre
+\newtcolorbox{myBox}[2][]{
+    enhanced,
+    boxsep=1mm,
+    bottom=.75mm,
+    boxrule=2pt,
+    text width=0.75\linewidth,
+    colframe=gray,
+    colback=gray!20,
+    colbacktitle=white,
+    fonttitle=\bfseries\color{black},
+    halign upper=center,
+    attach boxed title to top center={yshift=-2mm},
+    title={#2},#1
+}
+
+% Patch pour pouvoir redefinir un compteur via \setlist
+% Necessaire pour la commande \ProgCalcul du paquet profcollege
+\let\enumerateold\enumerate
+\let\endenumerateold\endenumerate
+% #1 --> titre
+\newcommand{\myTCBset}[1]{
+    \tcbset{ProgCalcul/.style={%
+    enhanced,
+    boxsep=1mm,
+    bottom=.75mm,
+    boxrule=2pt,
+    text width=0.75\linewidth,
+    colframe=gray,
+    colback=gray!20,
+    colbacktitle=white,
+    fonttitle=\bfseries\color{black},
+    halign upper=center,
+    attach boxed title to top center={yshift=-2mm},
+    title={#1},
+    }%
+    }%   
+}
+% Un programme de calcul encadré
+% #1 --> label 
+% #2 --> titre
+% #3 --> Commande \ProgCalcul du paquet ProfCollege
+\newcommand{\myProgCalcul}[3]{% label, titre, commande \ProgCalcul
+    \begingroup
+    \let\enumerate\enumerateold
+    \let\endenumerate\endenumerateold
+    \setlist[enumerate]{label=#1}
+    \myTCBset{#2}
+    #3
+    \endgroup
+}
