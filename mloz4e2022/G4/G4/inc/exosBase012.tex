@@ -1,9 +1,99 @@
 \begin{exercice*}
-    \dots
+    La figure orange est l'image de la figure verte par une translation. Recopier et comlpléter les phrases.
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair R[],S[],T[],U[],O[];
+        R[0]=u*(1,4);
+        S[0]=u*(0.5,2);
+        T[0] = R[0] rotatedaround(S[0],-90);
+        U[0] = S[0] rotatedaround(R[0],90);
+        O[0] = 0.5[R[0],U[0]];
+        marque_p:="croix";
+        path figcycle,fig,dcUR;        
+        dcUR = arccercle(U[0],R[0],O[0]);
+        figcycle=R[0]--S[0]--T[0]--U[0]--dcUR--cycle;
+        fig=R[0]--S[0]--T[0]--U[0]--dcUR--U[0];
+        fill figcycle withcolor LightGreen;
+        pointe(O[0]);
+        draw fig;
+        drawdblarrow O[0]--pointarc(dcUR,125);
+        draw appelation(O[0],pointarc(dcUR,125),-2mm,btex \small \Lg[cm]{1} etex);
+        label.lft(btex $R$ etex,R[0]);
+        label.lft(btex $S$ etex,S[0]);
+        label.rt(btex $T$ etex,T[0]);
+        label.rt(btex $U$ etex,U[0]);
+        label.bot(btex $O$ etex,O[0]);
+        label(btex \footnotesize $\mathcal{A}_{RSTU}=\Aire[cm]{4}$ etex, 0.5[S[0],U[0]]);
+        pair zz;
+        zz=(4.5u,-u);
+        fill figcycle shifted zz withcolor LightSalmon;
+        draw fig shifted zz;
+        R[1]=R[0] shifted zz;
+        S[1]=S[0] shifted zz;
+        T[1]=T[0] shifted zz;
+        U[1]=U[0] shifted zz;
+        O[1]=O[0] shifted zz;
+        pointe(O[1]);        
+        label.lft(btex $R'$ etex,R[1]);
+        label.lft(btex $S'$ etex,S[1]);
+        label.rt(btex $T'$ etex,T[1]);
+        label.rt(btex $U'$ etex,U[1]);
+        label.bot(btex $O'$ etex,O[1]);
+\end{Geometrie}
+    \begin{enumerate}
+        \item Comme \makebox[0.1\linewidth]{\dotfill} et que $\mathcal{Aire}_{RSTU}=\Aire[cm]{4}$ alors $\mathcal{Aire}_{R'S'T'U'}=$\makebox[0.1\linewidth]{\dotfill}
+        \item Comme \makebox[0.1\linewidth]{\dotfill} et que le rayon du demi-cercle de diamètre $[RU]$ vaut \Lg[cm]{1} alors le rayon du demi-cercle de diamètre $[R'U']$ vaut\makebox[0.1\linewidth]{\dotfill}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    La figure orange est l'image de la figure verte par une translation. Recopier et comlpléter les phrases.
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair R[],S[],T[],U[],O[];
+        R[0]=u*(1,4);
+        S[0]=u*(0.5,2);
+        T[0] = R[0] rotatedaround(S[0],-90);
+        U[0] = S[0] rotatedaround(R[0],90);
+        O[0] = 0.5[R[0],U[0]];
+        marque_p:="croix";
+        path figcycle,fig,dcUR;        
+        dcUR = arccercle(U[0],R[0],O[0]);
+        figcycle=R[0]--S[0]--T[0]--U[0]--dcUR--cycle;
+        fig=R[0]--S[0]--T[0]--U[0]--dcUR--U[0];
+        fill figcycle withcolor LightGreen;
+        pointe(O[0]);
+        draw fig;
+        drawdblarrow O[0]--pointarc(dcUR,125);
+        draw appelation(O[0],pointarc(dcUR,125),-2mm,btex \small \Lg[cm]{1} etex);
+        label.lft(btex $R$ etex,R[0]);
+        label.lft(btex $S$ etex,S[0]);
+        label.rt(btex $T$ etex,T[0]);
+        label.rt(btex $U$ etex,U[0]);
+        label.bot(btex $O$ etex,O[0]);
+        label(btex \footnotesize $\mathcal{A}_{RSTU}=\Aire[cm]{4}$ etex, 0.5[S[0],U[0]]);
+        pair zz;
+        zz=(4.5u,-u);
+        fill figcycle shifted zz withcolor LightSalmon;
+        draw fig shifted zz;
+        R[1]=R[0] shifted zz;
+        S[1]=S[0] shifted zz;
+        T[1]=T[0] shifted zz;
+        U[1]=U[0] shifted zz;
+        O[1]=O[0] shifted zz;
+        pointe(O[1]);        
+        label.lft(btex $R'$ etex,R[1]);
+        label.lft(btex $S'$ etex,S[1]);
+        label.rt(btex $T'$ etex,T[1]);
+        label.rt(btex $U'$ etex,U[1]);
+        label.bot(btex $O'$ etex,O[1]);
+\end{Geometrie}
+    \begin{enumerate}
+        \item Comme {\red $R'S'T'U'$ est l'image de $RSTU$ par une translation, que la translation conserve les aires} et que $\mathcal{Aire}_{RSTU}=\Aire[cm]{4}$ alors $\mathcal{Aire}_{R'S'T'U'}={\red \Aire[cm]{4}}$.
+        \item Comme {\red le demi-cercle de rayon $[R'U']$ est l'image du demi-cercle de rayon $[RU]$, que la translation conserve les longueurs,} et que le rayon du demi-cercle de diamètre $[RU]$ vaut \Lg[cm]{1} alors le rayon du demi-cercle de diamètre $[R'U']$ vaut {\red \Lg[cm]{1}}.
+    \end{enumerate}
 \end{corrige}
 
