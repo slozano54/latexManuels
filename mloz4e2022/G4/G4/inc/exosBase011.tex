@@ -1,9 +1,117 @@
 \begin{exercice*}
-    \dots
+    La figure orange est l'image de la figure verte par une translation. Recopier et comlpléter les phrases.
+    \begin{Geometrie}[CoinHD={(9u,4u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair A[],B[],C[],D[],E[],F[],G[],H[],I[];
+        A[0]=u*(8.5,3.5);
+        B[0]=A[0] shifted (-1.5u,0);
+        C[0]=B[0] shifted (0,-1.5u);
+        D[0]=C[0] shifted (-1.5u,-1.5u);
+        E[0]=D[0] shifted (1.5u,0);
+        F[0]=E[0] shifted (0.75*u,0.75*u);
+        G[0]=F[0] shifted (0.75*u,-0.75*u);
+        H[0]=G[0] shifted (0,1.5u);
+        I[0]=H[0] shifted (-0.75*u,0.75*u);
+        path cocotte;
+        cocotte = A[0]--B[0]--C[0]--D[0]--E[0]--F[0]--G[0]--H[0]--I[0]--cycle;
+        draw cocotte;
+        fill cocotte withcolor LightGreen;
+        label.top(btex $A$ etex,A[0]);
+        label.top(btex $B$ etex,B[0]);
+        label.ulft(btex $C$ etex,C[0]);
+        label.bot(btex $D$ etex,D[0]);
+        label.bot(btex $E$ etex,E[0]);
+        label.bot(btex $F$ etex,F[0]);
+        label.bot(btex $G$ etex,G[0]);
+        label.urt(btex $H$ etex,H[0]);
+        label.llft(btex $I$ etex,I[0]);
+        marque_ang := 13;
+        draw Codeangle(B[0],A[0],I[0],1,btex \ang{45} etex);        
+        draw appelation(D[0],E[0],-2mm,btex \Lg[cm]{1.5} etex);
+        draw cocotte shifted (-4.5u,0);
+        fill cocotte shifted (-4.5u,0) withcolor LightSalmon;
+        A[1]=A[0] shifted (-4.5u,0);
+        B[1]=B[0] shifted (-4.5u,0);
+        C[1]=C[0] shifted (-4.5u,0);
+        D[1]=D[0] shifted (-4.5u,0);
+        E[1]=E[0] shifted (-4.5u,0);
+        F[1]=F[0] shifted (-4.5u,0);
+        G[1]=G[0] shifted (-4.5u,0);
+        H[1]=H[0] shifted (-4.5u,0);
+        I[1]=I[0] shifted (-4.5u,0);
+        label.top(btex $A$ etex,A[1]);
+        label.top(btex $B$ etex,B[1]);
+        label.ulft(btex $C$ etex,C[1]);
+        label.bot(btex $D$ etex,D[1]);
+        label.bot(btex $E$ etex,E[1]);
+        label.bot(btex $F$ etex,F[1]);
+        label.bot(btex $G$ etex,G[1]);
+        label.urt(btex $H$ etex,H[1]);
+        label.llft(btex $I$ etex,I[1]);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Comme \makebox[0.1\linewidth]{\dotfill} et que $ED=\Lg[cm]{1.5}$ alors $E'D'=$\makebox[0.1\linewidth]{\dotfill}
+        \item Comme \makebox[0.1\linewidth]{\dotfill} et que $\widehat{BAI}=\ang{45}$ alors $\widehat{B'A'I'}=$\makebox[0.1\linewidth]{\dotfill}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    La figure orange est l'image de la figure verte par une translation. Recopier et comlpléter les phrases.
+    \begin{Geometrie}[CoinHD={(9u,4u)}]
+        labeloffset := 5bp ;
+        trace grille(0.5) withcolor white;
+        pair A[],B[],C[],D[],E[],F[],G[],H[],I[];
+        A[0]=u*(8.5,3.5);
+        B[0]=A[0] shifted (-1.5u,0);
+        C[0]=B[0] shifted (0,-1.5u);
+        D[0]=C[0] shifted (-1.5u,-1.5u);
+        E[0]=D[0] shifted (1.5u,0);
+        F[0]=E[0] shifted (0.75*u,0.75*u);
+        G[0]=F[0] shifted (0.75*u,-0.75*u);
+        H[0]=G[0] shifted (0,1.5u);
+        I[0]=H[0] shifted (-0.75*u,0.75*u);
+        path cocotte;
+        cocotte = A[0]--B[0]--C[0]--D[0]--E[0]--F[0]--G[0]--H[0]--I[0]--cycle;
+        draw cocotte;
+        fill cocotte withcolor LightGreen;
+        label.top(btex $A$ etex,A[0]);
+        label.top(btex $B$ etex,B[0]);
+        label.ulft(btex $C$ etex,C[0]);
+        label.bot(btex $D$ etex,D[0]);
+        label.bot(btex $E$ etex,E[0]);
+        label.bot(btex $F$ etex,F[0]);
+        label.bot(btex $G$ etex,G[0]);
+        label.urt(btex $H$ etex,H[0]);
+        label.llft(btex $I$ etex,I[0]);
+        marque_ang := 13;
+        draw Codeangle(B[0],A[0],I[0],1,btex \ang{45} etex);        
+        draw appelation(D[0],E[0],-2mm,btex \Lg[cm]{1.5} etex);
+        draw cocotte shifted (-4.5u,0);
+        fill cocotte shifted (-4.5u,0) withcolor LightSalmon;
+        A[1]=A[0] shifted (-4.5u,0);
+        B[1]=B[0] shifted (-4.5u,0);
+        C[1]=C[0] shifted (-4.5u,0);
+        D[1]=D[0] shifted (-4.5u,0);
+        E[1]=E[0] shifted (-4.5u,0);
+        F[1]=F[0] shifted (-4.5u,0);
+        G[1]=G[0] shifted (-4.5u,0);
+        H[1]=H[0] shifted (-4.5u,0);
+        I[1]=I[0] shifted (-4.5u,0);
+        label.top(btex $A$ etex,A[1]);
+        label.top(btex $B$ etex,B[1]);
+        label.ulft(btex $C$ etex,C[1]);
+        label.bot(btex $D$ etex,D[1]);
+        label.bot(btex $E$ etex,E[1]);
+        label.bot(btex $F$ etex,F[1]);
+        label.bot(btex $G$ etex,G[1]);
+        label.urt(btex $H$ etex,H[1]);
+        label.llft(btex $I$ etex,I[1]);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Comme {\red $[E'D']$ est l'image de $[ED]$ par une translation, que la translation conserve les mesures de longueur} et que $ED=\Lg[cm]{1.5}$ alors $E'D'={\red \Lg[cm]{1.5}}$.
+        \item Comme {\red $\widehat{B'A'I'}$ est l'image de $\widehat{BAI}$ par une translation, que la translation conserve les mesures d'angle } et que $\widehat{BAI}=\ang{45}$ alors $\widehat{B'A'I'}={\red \ang{45}}$.
+    \end{enumerate}
 \end{corrige}
 
