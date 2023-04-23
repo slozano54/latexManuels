@@ -1,9 +1,66 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Une frise]    
+    \begin{enumerate}
+        \item Constuire le symétrique du motif par la symétrie d'axe $(AE)$.
+        \item Puis construire le translaté du motif obtenu par la translation qui transforme $A$ en $E$.
+        \item Répéter l'opération avec le nouveau motif et ainsi de suite.
+    \end{enumerate}
+    \begin{Geometrie}[CoinHD={(9u,4u)}]
+        labeloffset := 5bp ;
+        trace papierpointe withcolor Grey;
+        pair A,E,M[];
+        A = u*(1,2);
+        E = u*(2.5,2);
+        marque_p:="croix";
+        pointe(A,E);
+        M0 = A;
+        M1 = M0 shifted (0.5u,u);
+        M2 = M1 shifted (-0.5u,0);
+        M3 = M2 shifted (-u,0.5u);
+        path motif[];
+        motif[0] = M0--M1--M2--M3--cycle;
+        draw motif[0];
+        fill motif[0] withcolor LightGrey;
+        label.lft(btex $A$ etex,A);
+        label.lft(btex $E$ etex,E);           
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
-\dots
+    \begin{enumerate}
+        \item Constuire le symétrique du motif par la symétrie d'axe $(AE)$.
+        \item Puis construire le translaté du motif obtenu par la translation qui transforme $A$ en $E$.
+        \item Répéter l'opération avec le nouveau motif et ainsi de suite.
+    \end{enumerate}
+    \begin{Geometrie}[CoinHD={(9u,4u)}]
+        labeloffset := 5bp ;
+        trace papierpointe withcolor Grey;
+        pair A,E,M[];
+        A = u*(1,2);
+        E = u*(2.5,2);
+        marque_p:="croix";
+        pointe(A,E);
+        M0 = A;
+        M1 = M0 shifted (0.5u,u);
+        M2 = M1 shifted (-0.5u,0);
+        M3 = M2 shifted (-u,0.5u);
+        path motif[];
+        motif[0] = M0--M1--M2--M3--cycle;
+        draw motif[0];
+        fill motif[0] withcolor LightGrey;
+        label.lft(btex $A$ etex,A);
+        label.lft(btex $E$ etex,E);
+        %%% Correction
+        motif[1] = symetrie(motif[0],A,E);
+        draw motif[1];        
+        pair zAE;
+        zAE=E-A;
+        for l=1 upto 4:
+            motif[2*l] = motif[2*l-2] shifted zAE;
+            draw motif[2*l];
+            motif[2*l+1] = motif[2*l+1-2] shifted zAE;
+            draw motif[2*l+1];
+        endfor;            
+    \end{Geometrie}
 \end{corrige}
 

@@ -42,18 +42,7 @@
                 label.urt(btex $D$ etex,D);
                 marque_p:="croix";
                 marque_s:=3;
-                pointe(C,D);            
-                %%% Correction
-                % path hexagoneEscherPath[];
-                % hexagoneEscherPath[0] = A0--A1--A2--A3--A4--A5--cycle;
-                % fill hexagoneEscherPath[0] withcolor LightPink;
-                % draw maille[0];
-                % hexagoneEscherPath[1] = hexagoneEscherPath[0] rotatedaround(A2,-120);
-                % hexagoneEscherPath[2] = hexagoneEscherPath[0] rotatedaround(A2,-240);
-                % fill hexagoneEscherPath[1] withcolor LightPink;
-                % fill hexagoneEscherPath[2] withcolor LightPink;            
-                % pointe(C);
-                % drawarrow C--D;
+                pointe(C,D);
             \end{Geometrie}
             \item On repart de la frise précédetne.
             \begin{itemize}
@@ -106,27 +95,6 @@
                     maille[l+5] = maille[5] shifted (1.5*l*u,0);
                         draw maille[l+5];
                 endfor;            
-                %%% Correction
-                % picture corr;
-                % corr = image(
-                % path hexagoneEscherPath[];            
-                % hexagoneEscherPath[0] = A0--A1--A2--A3--A4--A5--cycle;
-                % fill hexagoneEscherPath[0] withcolor LightPink;
-                % hexagoneEscherPath[1] = hexagoneEscherPath[0] shifted 1.2z;
-                % fill hexagoneEscherPath[1] withcolor LightGreen;
-                % for l=1 upto 2:
-                %         hexagoneEscherPath[2*l] = hexagoneEscherPath[0] rotatedaround(A2,-120*l);
-                %     fill hexagoneEscherPath[2*l] withcolor LightPink;
-                %     hexagoneEscherPath[2*l+1] = hexagoneEscherPath[2*l] shifted 1.2z;
-                %     fill hexagoneEscherPath[2*l+1] withcolor LightGreen;
-                % endfor;
-                % draw maille[0];
-                % draw maille[5];
-                % );
-                % for l=0 upto 4:
-                %     draw corr shifted (1.5*l*u,0);
-                % endfor;  
-                % drawarrow A5 rotatedaround(A2,-120)-- A5 rotatedaround(A2,-120) shifted 1.2z;
             \end{Geometrie}
         \end{enumerate}
     \end{changemargin}
