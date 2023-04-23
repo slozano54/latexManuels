@@ -50,6 +50,7 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}
     La figure orange est l'image de la figure verte par une translation. Recopier et comlpléter les phrases.
+    \scalebox{0.8}{
     \begin{Geometrie}[CoinHD={(8u,5u)}]
         labeloffset := 5bp ;
         trace grille(0.5) withcolor white;
@@ -90,7 +91,8 @@
         label.rt(btex $T'$ etex,T[1]);
         label.rt(btex $U'$ etex,U[1]);
         label.bot(btex $O'$ etex,O[1]);
-\end{Geometrie}
+    \end{Geometrie}
+    }
     \begin{enumerate}
         \item Comme {\red $R'S'T'U'$ est l'image de $RSTU$ par une translation, que la translation conserve les aires} et que $\mathcal{Aire}_{RSTU}=\Aire[cm]{4}$ alors $\mathcal{Aire}_{R'S'T'U'}={\red \Aire[cm]{4}}$.
         \item Comme {\red le demi-cercle de rayon $[R'U']$ est l'image du demi-cercle de rayon $[RU]$, que la translation conserve les longueurs,} et que le rayon du demi-cercle de diamètre $[RU]$ vaut \Lg[cm]{1} alors le rayon du demi-cercle de diamètre $[R'U']$ vaut {\red \Lg[cm]{1}}.
