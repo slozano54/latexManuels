@@ -1,34 +1,88 @@
 \section{Sinus d'un angle aigu}
-% \definNum{
-% Dans un triangle RECTANGLE, le \textbf{sinus} d'un angle aigu est égal au rapport du côté opposé à cet angle aigu par l'hypoténuse.}
+\begin{definition}
+    Dans un triangle {\bfseries rectangle}, le \textbf{sinus} d'un angle aigu est égal au rapport du côté opposé à cet angle aigu par l'hypoténuse.
+\end{definition}
 
-% \CadreLampe{Sinus}{
-% \compo{1}{courstrigo}{0.8}{
-% Dans le triangle $ABC$ rectangle en $A$, on a :
-% $$\sin\widehat{ABC}=\frac{\mbox{côté opposé à l'angle $\widehat{ABC}$}}{\mbox{hypoténuse}}=\frac{AC}{BC}$$
-% $$\sin\widehat{ACB}=\frac{\mbox{côté opposé à l'angle $\widehat{ACB}$}}{\mbox{hypoténuse}}=\frac{AB}{BC}$$
-% }
-% }
+\begin{remarque}
+    Pour tout angle aigu, le sinus est compris entre 0 et 1.
 
-% \proprNum{}{on calcule le sinus d'un angle aigu dans un triangle rectangle}{sa valeur est comprise entre 0 et 1}
+    {\bfseries En effet}, c'est un rapport de longueurs.\par
+    Dans un triangle rectangle le plus grand côté est l'hypoténuse !\par
+    Ici, c'est aussi le dénominateur du rapport qui est donc nécessairement plus petit que 1.$\square$
+\end{remarque}
 
-% \Preuve{
-% C'est un rapport de longueurs.\par
-% Dans un triangle rectangle le plus grand côté est l'hypoténuse !\par
-% Ici, c'est aussi le dénominateur du rapport qui est donc nécessairement plus petit que 1.$\square$
-% }
 
-% \proprNum{}{deux angles sont complémentaires ( $\sum$, leur somme, vaut 90\degre )}{le sinus de l'un est égal au cosinus de l'autre}
+\begin{exemples*1}
+    Dans le triangle $ABC$ rectangle en $A$, on a : 
+    
+    \medskip
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);
+            remplis codeperp(B,A,C,8)--A--cycle withcolor noir;
+            trace codeperp(B,A,C,8);
+            trace appelation(A,B,8mm,btex Côté opposé etex);
+            trace appelation(A,B,3mm,btex à l'angle $\widehat{ACB}$ etex);
+            trace appelation(A,C,-3mm,btex Côté adjacent etex);
+            trace appelation(A,C,-8mm,btex à l'angle $\widehat{ACB}$etex);
+            trace appelation(B,C,3mm,btex Hypoténuse etex);
+            marque_a:=marque_a*1.5;    
+            trace marqueangle(B,C,A,0);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}        
+        $$\sin\widehat{ABC}=\frac{\mbox{côté opposé à l'angle $\widehat{ABC}$}}{\mbox{hypoténuse}}=\frac{AC}{BC}$$
+        $$\sin\widehat{ACB}=\frac{\mbox{côté opposé à l'angle $\widehat{ACB}$}}{\mbox{hypoténuse}}=\frac{AB}{BC}$$
+    \end{minipage}
+\end{exemples*1}
 
-% \Preuve{
-% \compo{1}{courstrigo}{0.8}{
-% On peut considérer que ce sont les deux angles aigus dans un triangle rectangle.\\
-% Dans ce cas, le côté opposé de l'un est aussi le côté adjacent de l'autre.$\square$
-% }
-% }
+\begin{propriete}
+    Si deux angles sont complémentaires ( $\sum$, leur somme, vaut 90\degre ) alors le sinus de l'un est égal au cosinus de l'autre.
+\end{propriete}
 
-% \Remarques[Remarque]{
-% $\widehat{ABC}$ et $\widehat{ACB}$ sont complémentaires \textbf{donc} :
-% $$sin(\widehat{ABC})=cos(\widehat{ACB})$$
-% $$cos(\widehat{ABC})=sin(\widehat{ACB})$$ 
-% }
+\begin{preuve}
+    On peut considérer que ce sont les deux angles aigus dans un triangle rectangle.
+
+    \medskip
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);
+            remplis codeperp(B,A,C,8)--A--cycle withcolor noir;
+            trace codeperp(B,A,C,8);
+            trace appelation(A,B,8mm,btex Côté opposé etex);
+            trace appelation(A,B,3mm,btex à l'angle $\widehat{ACB}$ etex);
+            trace appelation(A,C,-3mm,btex Côté adjacent etex);
+            trace appelation(A,C,-8mm,btex à l'angle $\widehat{ACB}$etex);
+            trace appelation(B,C,3mm,btex Hypoténuse etex);            
+            trace marqueangle(B,C,A,0);
+            trace marqueangle(A,B,C,0);
+            marque_a:=marque_a*1.1;    
+            trace marqueangle(A,B,C,0);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        Dans ce cas, le côté opposé de l'un est aussi le côté adjacent de l'autre.$\square$
+    \end{minipage}
+\end{preuve}
+
+\begin{exemple*1}
+    Dans le triangle $ABC$, rectangle en $A$, $\widehat{ABC}$ et $\widehat{ACB}$ sont complémentaires \textbf{donc} :    
+    $$sin(\widehat{ABC})=cos(\widehat{ACB})$$
+    $$cos(\widehat{ABC})=sin(\widehat{ACB})$$ 
+\end{exemple*1}
