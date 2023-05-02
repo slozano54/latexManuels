@@ -1,27 +1,82 @@
 \section{Relations trigonométriques}
-% \subsubsection{Propriété fondamentale de la trigonométrie}
-% \proprNum{}{dans un triangle rectangle, $x$ désigne la mesure de l'un des angles aigus}{$(\sin x)^2+(\cos x)^2=1$}
+\begin{propriete}[Propriété fondamentale de la trigonométrie]
+    Si dans un triangle rectangle, $x$ désigne la mesure de l'un des angles aigus alors 
+    $$(\sin x)^2+(\cos x)^2=1$$
+\end{propriete}
 
-% \Remarques[Remarque]{On note également $(\sin x)^2=\sin^2x$ et $(\cos x)^2=\cos^2x$.}
+\begin{remarque}
+    On note également $(\sin x)^2=\sin^2x$ et $(\cos x)^2=\cos^2x$.
+\end{remarque}
 
-% \Preuve{
-% \compo{1}{courstrigo}{1}{
-% ABC est un triangle rectangle en A.\par
-% $U=(\sin \widehat{ACB})^2+(\cos \widehat{ACB})^2=(\dfrac{AB}{BC})^2+(\dfrac{AC}{BC})^2$\par
-% $U=\dfrac{AB^2}{BC^2}+\dfrac{AC^2}{BC^2}=\dfrac{AB^2+AC^2}{BC^2}$\par\vspace{0.25cm}
-% avec le théorème de Pythagore\par\vspace{0.25cm}
-% $U=\dfrac{BC^2}{BC^2}=1$ $\square$
-% }
-% }
+\begin{preuve}
 
-% \subsubsection{Propriété de la tangente}
-% \proprNum{}{dans un triangle rectangle, $x$ désigne la mesure de l'un des angles aigus}{$\tan x=\dfrac{\sin x}{\cos x}$}
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);
+            remplis codeperp(B,A,C,8)--A--cycle withcolor noir;
+            trace codeperp(B,A,C,8);
+            trace appelation(A,B,8mm,btex Côté opposé etex);
+            trace appelation(A,B,3mm,btex à l'angle $\widehat{ACB}$ etex);
+            trace appelation(A,C,-3mm,btex Côté adjacent etex);
+            trace appelation(A,C,-8mm,btex à l'angle $\widehat{ACB}$etex);
+            trace appelation(B,C,3mm,btex Hypoténuse etex);            
+            trace marqueangle(B,C,A,0);
+            trace marqueangle(A,B,C,0);
+            marque_a:=marque_a*1.1;    
+            trace marqueangle(A,B,C,0);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        ABC est un triangle rectangle en A.\\\bigskip
+        $U=(\sin \widehat{ACB})^2+(\cos \widehat{ACB})^2=(\dfrac{AB}{BC})^2+(\dfrac{AC}{BC})^2$\\\bigskip
+        $U=\dfrac{AB^2}{BC^2}+\dfrac{AC^2}{BC^2}=\dfrac{AB^2+AC^2}{BC^2}$\\\bigskip
+        avec le théorème de Pythagore\\\bigskip
+        $U=\dfrac{BC^2}{BC^2}=1$ $\square$
+    \end{minipage}
+\end{preuve}
 
-% \Preuve{
-% \compo{1}{courstrigo}{1}{
-% ABC est un triangle rectangle en A.\par
-% $\tan(\widehat{ACB})=\dfrac{AB}{AC}$ par définition\par\vspace{0.25cm}
-% $\dfrac{\sin (\widehat{ACB})}{\cos (\widehat{ACB})}=\dfrac{\dfrac{AB}{BC}}{\dfrac{AC}{BC}}=\dfrac{AB}{BC}\times \dfrac{BC}{AC}=\dfrac{AB}{AC}$ $\square$
-% }
-% }
+\begin{propriete}[Propriété de la tangente]
+    Si dans un triangle rectangle, $x$ désigne la mesure de l'un des angles aigus alors 
+    $$\tan x=\dfrac{\sin x}{\cos x}$$
+\end{propriete}
 
+\begin{preuve}
+
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);
+            remplis codeperp(B,A,C,8)--A--cycle withcolor noir;
+            trace codeperp(B,A,C,8);
+            trace appelation(A,B,8mm,btex Côté opposé etex);
+            trace appelation(A,B,3mm,btex à l'angle $\widehat{ACB}$ etex);
+            trace appelation(A,C,-3mm,btex Côté adjacent etex);
+            trace appelation(A,C,-8mm,btex à l'angle $\widehat{ACB}$etex);
+            trace appelation(B,C,3mm,btex Hypoténuse etex);            
+            trace marqueangle(B,C,A,0);
+            trace marqueangle(A,B,C,0);
+            marque_a:=marque_a*1.1;    
+            trace marqueangle(A,B,C,0);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        ABC est un triangle rectangle en A.\\\bigskip
+        $\tan(\widehat{ACB})=\dfrac{AB}{AC}$ par définition\\\bigskip
+        $\dfrac{\sin (\widehat{ACB})}{\cos (\widehat{ACB})}=\dfrac{\dfrac{AB}{BC}}{\dfrac{AC}{BC}}=\dfrac{AB}{BC}\times \dfrac{BC}{AC}=\dfrac{AB}{AC}$ $\square$
+    \end{minipage}
+\end{preuve}
