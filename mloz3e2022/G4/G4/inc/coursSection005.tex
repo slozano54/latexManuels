@@ -105,70 +105,71 @@
     }$$
 \end{methode}
 
-\begin{methode}[Tangente/Sinus - Calculer une longueur]
+\begin{methode}[Tangente - Calculer une longueur]
     \exercice
-    \begin{enumerate}    
-        \item Dans le triangle $RST$, déterminer $RT$.\\
-        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
-            pair S,R,T;
-            S=u*(1,1);
-            R-S=u*(4,0);
-            T=0.78[R,rotation(S,R,-90)];
-            trace polygone(S,R,T);
-            remplis codeperp(S,R,T,8)--R--cycle withcolor noir;
-            trace codeperp(S,R,T,8);
-            trace appelation(S,R,-3mm,btex \Lg[cm]{4} etex);             
-            marque_a:=marque_a*1.5;
-            trace Codeangle(R,S,T,0,btex \ang{30} etex);
-            label.llft(btex S etex,S);
-            label.lrt(btex R etex,R);
-            label.top(btex T etex,T);
-        \end{Geometrie}
-        \item Dans le triangle $EFG$, déterminer $EF$.\\
-        \begin{Geometrie}[CoinHD={(4u,5u)}]        
-            pair E,F,G;
-            E=u*(1,1);
-            G-E=u*(2,0);
-            F=2[E,rotation(G,E,60)];
-            trace polygone(E,F,G);
-            remplis codeperp(E,G,F,8)--G--cycle withcolor noir;
-            trace codeperp(E,G,F,8);
-            trace appelation(E,G,-3mm,btex \Lg[cm]{4.1} etex);        
-            trace cotation(E,F,2mm,3mm,btex ? etex);
-            marque_a:=marque_a*1.5;
-            trace Codeangle(E,F,G,0,btex \ang{63} etex);
-            label.llft(btex E etex,E);
-            label.lrt(btex G etex, G);
-            label.top(btex F etex, F);
-        \end{Geometrie}
-    \end{enumerate}
+    Dans le triangle $RST$, déterminer $RT$.\\
+    \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+        pair S,R,T;
+        S=u*(1,1);
+        R-S=u*(4,0);
+        T=0.78[R,rotation(S,R,-90)];
+        trace polygone(S,R,T);
+        remplis codeperp(S,R,T,8)--R--cycle withcolor noir;
+        trace codeperp(S,R,T,8);
+        trace appelation(S,R,-3mm,btex \Lg[cm]{4} etex);             
+        marque_a:=marque_a*1.5;
+        trace Codeangle(R,S,T,0,btex \ang{30} etex);
+        label.llft(btex S etex,S);
+        label.lrt(btex R etex,R);
+        label.top(btex T etex,T);
+    \end{Geometrie}
     \correction
-    \begin{enumerate}
-        \item Dans le triangle $RST$ rectangle en $R$, on a : 
-        $$\Eqalign{
-        \tan\widehat{RST}&=\frac{RT}{RS}\cr
-        \tan30&=\frac{RT}{4}\cr
-        }$$
-        \begin{center}
-            {\bf Les produits en croix sont égaux}
-        \end{center}
-        $$\Eqalign{RT&=4\times\tan30\cr
-        RT&\simeq \Lg[cm]{2.3}\cr
-        }$$
-        \item Dans le triangle $EFG$ rectangle en $G$, on a :
-        $$\Eqalign{
-        \sin\widehat{EFG}&=\frac{EG}{EF}\cr
-        \sin63&=\frac{4,1}{EF}\cr
-        }$$
-        \begin{center}
+    Dans le triangle $RST$ rectangle en $R$, on a : 
+    $$\Eqalign{
+    \tan\widehat{RST}&=\frac{RT}{RS}\cr
+    \tan30&=\frac{RT}{4}\cr
+    }$$
+    \begin{center}
         {\bf Les produits en croix sont égaux}
-        \end{center}
-        $$\Eqalign{
-        EF\times\sin63&=4,1\cr
-        EF&=\frac{4,1}{\sin63}\cr
-        EF&\simeq\Lg[cm]{4.6}\cr
-        }$$
-    \end{enumerate}
+    \end{center}
+    $$\Eqalign{RT&=4\times\tan30\cr
+    RT&\simeq \Lg[cm]{2.3}\cr
+    }$$
+\end{methode}
+
+\begin{methode}[Sinus - Calculer une longueur]
+    \exercice
+    Dans le triangle $EFG$, déterminer $EF$.\\
+    \begin{Geometrie}[CoinHD={(4u,5u)}]        
+        pair E,F,G;
+        E=u*(1,1);
+        G-E=u*(2,0);
+        F=2[E,rotation(G,E,60)];
+        trace polygone(E,F,G);
+        remplis codeperp(E,G,F,8)--G--cycle withcolor noir;
+        trace codeperp(E,G,F,8);
+        trace appelation(E,G,-3mm,btex \Lg[cm]{4.1} etex);        
+        trace cotation(E,F,2mm,3mm,btex ? etex);
+        marque_a:=marque_a*1.5;
+        trace Codeangle(E,F,G,0,btex \ang{63} etex);
+        label.llft(btex E etex,E);
+        label.lrt(btex G etex, G);
+        label.top(btex F etex, F);
+    \end{Geometrie}
+    \correction
+    Dans le triangle $EFG$ rectangle en $G$, on a :
+    $$\Eqalign{
+    \sin\widehat{EFG}&=\frac{EG}{EF}\cr
+    \sin63&=\frac{4,1}{EF}\cr
+    }$$
+    \begin{center}
+    {\bf Les produits en croix sont égaux}
+    \end{center}
+    $$\Eqalign{
+    EF\times\sin63&=4,1\cr
+    EF&=\frac{4,1}{\sin63}\cr
+    EF&\simeq\Lg[cm]{4.6}\cr
+    }$$
 \end{methode}
 
 \begin{methode}[Tangente/Sinus - Calculer un angle]
@@ -177,6 +178,7 @@
         \item Déterminer $\widehat{LAO}$ dans le triangle $LAO$.
         
         \medskip
+        \scalebox{1.2}{
         \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
             pair L,O,A;
             O=u*(3,1);
@@ -192,9 +194,11 @@
             label.rt(btex A etex,A);
             label.top(btex L etex,L);
         \end{Geometrie}
+        }
         \item Dans le triangle $IJK$, déterminer $\widehat{IJK}$.
         
         \medskip
+        \scalebox{1.2}{
         \begin{Geometrie}[CoinHD={(6.5u,5u)}]        
             pair I,J,K;
             I=u*(3,3);
@@ -210,6 +214,7 @@
             label.lrt(btex K etex, K);
             label.top(btex I etex, I);
         \end{Geometrie}
+        }
     \end{enumerate}
     \correction
     \begin{enumerate}
