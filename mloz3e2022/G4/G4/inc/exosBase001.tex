@@ -1,9 +1,115 @@
 \begin{exercice*}
-    \dots
+    Utiliser la couleur demandée pour repasser sur les côtés indiqués.
+    \begin{enumerate}
+        \item Le côté opposé à l'angle $\widehat{MNO}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair M,O,N;
+            O=u*(3,1);
+            N-O=u*(2,1.5);
+            M=0.65[O,rotation(N,O,90)];
+            trace polygone(M,O,N);
+            remplis codeperp(N,O,M,8)--O--cycle withcolor noir;
+            trace codeperp(N,O,M,8);        
+            trace marqueangle(M,N,O,0);
+            label.bot(btex O etex,O);
+            label.rt(btex N etex,N);
+            label.top(btex M etex,M);
+        \end{Geometrie}
+        \item L'hypoténuse en rouge, et le côté opposé à l'angle $\widehat{SRT}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair S,R,T;
+            S=u*(5,1);
+            R-S=u*(-0.5,2.5);
+            T=1.5[S,rotation(R,S,90)];
+            trace polygone(S,R,T);
+            remplis codeperp(R,S,T,8)--S--cycle withcolor noir;
+            trace codeperp(R,S,T,8);        
+            trace marqueangle(T,R,S,0);
+            label.bot(btex S etex,S);
+            label.rt(btex R etex,R);
+            label.lft(btex T etex,T);
+        \end{Geometrie}
+        \item L'hypoténuse en rouge, et le côté adjacent à l'angle $\widehat{WXY}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair W,X,Y;
+            W=u*(1,3);
+            X-W=u*(0.2,-2);
+            Y=1.5[W,rotation(X,W,90)];
+            trace polygone(W,X,Y);
+            remplis codeperp(X,W,Y,8)--W--cycle withcolor noir;
+            trace codeperp(X,W,Y,8);
+            label.ulft(btex W etex,W);
+            label.llft(btex X etex,X);
+            label.urt(btex Y etex,Y);
+        \end{Geometrie}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    Utiliser la couleur demandée pour repasser sur les côtés indiqués.
+    \begin{enumerate}
+        \item Le côté opposé à l'angle $\widehat{MNO}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair M,O,N;
+            O=u*(3,1);
+            N-O=u*(2,1.5);
+            M=0.65[O,rotation(N,O,90)];
+            trace polygone(M,O,N);
+            remplis codeperp(N,O,M,8)--O--cycle withcolor noir;
+            trace codeperp(N,O,M,8);        
+            trace marqueangle(M,N,O,0);
+            label.bot(btex O etex,O);
+            label.rt(btex N etex,N);
+            label.top(btex M etex,M);
+            % Correction
+            trace segment(M,O) withcolor blue withpen pencircle scaled 2bp;
+        \end{Geometrie}
+        \item L'hypoténuse en rouge, et le côté opposé à l'angle $\widehat{SRT}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair S,R,T;
+            S=u*(5,1);
+            R-S=u*(-0.5,2.5);
+            T=1.5[S,rotation(R,S,90)];
+            trace polygone(S,R,T);
+            remplis codeperp(R,S,T,8)--S--cycle withcolor noir;
+            trace codeperp(R,S,T,8);        
+            trace marqueangle(T,R,S,0);
+            label.bot(btex S etex,S);
+            label.rt(btex R etex,R);
+            label.lft(btex T etex,T);
+            % Correction
+            trace segment(R,T) withcolor red withpen pencircle scaled 2bp;
+            trace segment(S,T) withcolor blue withpen pencircle scaled 2bp;
+        \end{Geometrie}
+        \item L'hypoténuse en rouge, et le côté adjacent à l'angle $\widehat{WXY}$ en bleu.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair W,X,Y;
+            W=u*(1,3);
+            X-W=u*(0.2,-2);
+            Y=1.5[W,rotation(X,W,90)];
+            trace polygone(W,X,Y);
+            remplis codeperp(X,W,Y,8)--W--cycle withcolor noir;
+            trace codeperp(X,W,Y,8);
+            label.ulft(btex W etex,W);
+            label.llft(btex X etex,X);
+            label.urt(btex Y etex,Y);
+            % Correction
+            trace segment(X,Y) withcolor red withpen pencircle scaled 2bp;
+            trace segment(W,X) withcolor blue withpen pencircle scaled 2bp;
+        \end{Geometrie}
+    \end{enumerate}
 \end{corrige}
 

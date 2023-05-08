@@ -1,9 +1,135 @@
 \begin{exercice*}
-    \dots
+    Dans chaque cas, compléter les tableaux.
+    \begin{enumerate}
+        \item On considère un trangle $ABC$ rectangle en $A$.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair A,B,C;
+            A=u*(3,1);
+            B-A=u*(-2,1);
+            C=1.5[A,rotation(B,A,-90)];
+            trace polygone(A,B,C);            
+            trace codeperp(C,A,B,8);
+            label.bot(btex A etex,A);
+            label.lft(btex B etex,B);
+            label.urt(btex  C etex,C);
+        \end{Geometrie}
+
+        \medskip
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth} | p{0.3\linewidth} |}        
+            \hline
+            L'hypoténuse &  \\\hline
+            Côté adjacent à l'angle $\widehat{ABC}$ &  \\\hline
+            Côté adjacent à l'angle $\widehat{ACB}$ &  \\\hline
+        \end{tabular}
+        }
+        \medskip
+        \item On considère un trangle $DEF$ rectangle en $E$.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair D,E,F;
+            E=u*(3,1);
+            D-E=u*(-1.5,1);
+            F=1.2[E,rotation(D,E,-90)];
+            trace polygone(E,D,F);            
+            trace codeperp(F,E,D,8);
+            label.bot(btex  E etex,E);
+            label.lft(btex  D etex,D);
+            label.urt(btex  F etex,F);
+        \end{Geometrie}
+
+        \medskip
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth} | p{0.3\linewidth} |}        
+            \hline            
+            Côté opposé à l'angle $\widehat{EDF}$ &  \\\hline
+            L'hypoténuse &  \\\hline
+             & $[DE]$ \\\hline
+        \end{tabular}
+        }
+        \medskip
+        \item On considère un trangle $GHI$ rectangle en $H$.
+        
+        \medskip
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth} | p{0.3\linewidth} |}        
+            \hline            
+            & $[GH]$ \\\hline
+            Côté adjacent à l'angle $\widehat{HIG}$ &  \\\hline
+            & $[IG]$ \\\hline            
+        \end{tabular}
+        }
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    Dans chaque cas, compléter les tableaux.
+    
+    \begin{enumerate}
+        \item On considère un trangle $ABC$ rectangle en $A$.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair A,B,C;
+            A=u*(3,1);
+            B-A=u*(-2,1);
+            C=1.5[A,rotation(B,A,-90)];
+            trace polygone(A,B,C);            
+            trace codeperp(C,A,B,8);
+            label.bot(btex A etex,A);
+            label.lft(btex B etex,B);
+            label.urt(btex  C etex,C);
+        \end{Geometrie}
+
+        \medskip
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth}|*{1}{@{}>{\vrule width0pt height\dimexpr.65cm-.2pt\relax depth\dimexpr.35cm-.2pt\relax\centering\arraybackslash}p{\dimexpr2cm-.4pt\relax}@{}|}}        
+            \hline
+            L'hypoténuse & {\red $[BC]$} \\\hline
+            Côté adjacent à l'angle $\widehat{ABC}$ & {\red $[AB]$} \\\hline
+            Côté adjacent à l'angle $\widehat{ACB}$ & {\red $[AC]$} \\\hline
+        \end{tabular}
+        \medskip
+        \item On considère un trangle $DEF$ rectangle en $E$.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair D,E,F;
+            E=u*(3,1);
+            D-E=u*(-1.5,1);
+            F=1.2[E,rotation(D,E,-90)];
+            trace polygone(E,D,F);            
+            trace codeperp(F,E,D,8);
+            label.bot(btex  E etex,E);
+            label.lft(btex  D etex,D);
+            label.urt(btex  F etex,F);
+        \end{Geometrie}
+
+        \medskip
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth}|*{1}{@{}>{\vrule width0pt height\dimexpr.65cm-.2pt\relax depth\dimexpr.35cm-.2pt\relax\centering\arraybackslash}p{\dimexpr2cm-.4pt\relax}@{}|}}        
+            \hline            
+            Côté opposé à l'angle $\widehat{EDF}$ & {\red $[EF]$} \\\hline
+            L'hypoténuse &  {\red $[DF]$}\\\hline
+            \cellcolor{red!30}Côté opposé à l'angle $\widehat{DFE}$ & $[DE]$ \\\hline
+        \end{tabular}
+
+        \medskip
+        {\red ou Côté adjacent à l'angle $\widehat{EDF}$}
+        \item On considère un trangle $GHI$ rectangle en $H$.
+        
+        \medskip
+        \begin{tabular}{|>{\columncolor{LightGray}}p{0.6\linewidth}|*{1}{@{}>{\vrule width0pt height\dimexpr.65cm-.2pt\relax depth\dimexpr.35cm-.2pt\relax\centering\arraybackslash}p{\dimexpr2cm-.4pt\relax}@{}|}}        
+            \hline            
+            \cellcolor{red!30}Côté opposé à l'angle $\widehat{HIG}$ & $[GH]$ \\\hline
+            Côté adjacent à l'angle $\widehat{HIG}$ & {\red $[HI]$} \\\hline
+            \cellcolor{red!30}L'hypoténuse & $[IG]$ \\\hline            
+        \end{tabular}
+
+        \medskip
+        {\red ou pour la première ligne : côté adjacent à l'angle $\widehat{IGH}$}
+    \end{enumerate}
 \end{corrige}
 
