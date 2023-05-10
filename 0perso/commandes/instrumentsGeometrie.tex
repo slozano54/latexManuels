@@ -32,3 +32,17 @@
         }
     }      
 }
+
+%Règle - commande de Nathalie DAVAL
+% #1 --> 
+% #2 --> 
+% #3 --> 
+% #4 --> 
+\newcommand{\regle}[4]
+   {\scalebox{#4}
+      {\rput{#3}(#1,#2)      
+         {\pspolygon[linecolor=A1](0,0)(2,0)(2,0.3)(0,0.3)
+          \multido{\r=0+0.1}{20}{\psline[linecolor=blue,linewidth=0.01](\r,0)(\r,0.1)}
+          }
+       }      
+   }

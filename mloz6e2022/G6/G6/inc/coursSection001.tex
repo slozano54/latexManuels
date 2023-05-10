@@ -1,2 +1,74 @@
-\section{...}
-\dots
+\begin{changemargin}{-15mm}{-15mm}
+\section{Construction de droites perpendiculaires et parallèles}
+
+Pour construire des droites perpendiculaires et parallèles à une droite passant par un point, on peut utiliser le quadrillage de sa feuille ou une règle et une équerre.
+
+\begin{methode}[Construction d'une perpendiculaire avec une équerre]
+   Pour construire la perpendiculaire $(d)$ à une droite $(D)$ passant par un point $A$, on place la règle le long de la droite $(D)$, puis on place un bord de l'équerre (contenant l'angle droit) contre la règle avec l'angle droit au niveau du point $A$ et on trace la droite $(d)$.
+   \exercice
+      \begin{pspicture}(0,-0.5)(3.5,2.6)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](1,0.25)
+         \rput(0.7,0.45){$A$}
+         \rput(3.6,1.2){$(D)$}
+      \end{pspicture} 
+   \correction
+      \qquad
+      \begin{pspicture}(0,-0.5)(3.5,2.6)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](1,0.25)
+         \rput(0.7,0.45){$A$}
+         \equerre{1}{0.25}{14}{1}
+         \regle{0}{-0.29}{14}{1}
+         \rput(3.6,1.2){$(D)$}
+      \end{pspicture}      
+      \qquad
+      \begin{pspicture}(0,-0.5)(3.5,2.6)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](1,0.25)
+         \rput(0.7,0.45){$A$}
+         \psline[linecolor=A1,linewidth=0.05](1.135,-0.3)(0.34,2.9)
+         \equerre{1.02}{0.28}{14}{1}
+         \rput(3.6,1.2){$(D)$}
+         \rput(0.8,2.7){\textcolor{A1}{$(d)$}}
+      \end{pspicture}
+\end{methode}
+
+\begin{methode}[Construction d'une parallèle à la règle et à l'équerre]
+   Pour tracer la parallèle $(\Delta)$ à $(D)$ passant par $B$, on trace la perpendiculaire $(d)$ à $(D)$ passant par $B$, puis on trace la perpendiculaire $(\Delta)$ à $(d)$ passant par $B$.
+   \exercice
+      \begin{pspicture}(-0.5,-0.4)(3.5,3)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](0.65,1.69)
+         \rput(0.55,1.45){$B$}
+         \rput(3.6,1.2){$(D)$}
+      \end{pspicture}  
+   \correction   
+      \begin{pspicture}(-0.3,-0.4)(3.5,3)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](0.65,1.69)
+         \rput(0.55,1.45){$B$}
+         \psline[linecolor=A1,linewidth=0.05](1.135,-0.3)(0.34,2.9)
+         \equerre{1.02}{0.28}{14}{1}
+         \regle{0}{-0.25}{14}{1}
+         \rput(3.6,1.2){$(D)$}
+         \rput(0.6,2.5){\textcolor{A1}{$(d)$}}
+      \end{pspicture} 
+      \begin{pspicture}(-1,-0.4)(3.5,3)
+         \psline(0,0)(4,1)
+         \psdot[dotstyle=+](0.65,1.69)
+         \rput(0.55,1.45){$B$}
+         \psline[linecolor=B2,linewidth=0.05](-0.2,1.5)(3.8,2.5)
+          \equerre{0.68}{1.68}{-76}{1}
+         \psline[linecolor=A1,linewidth=0.05](1.135,-0.3)(0.34,2.9)
+         \rput(3.6,1.2){$(D)$}
+         \rput(0.8,2.5){\textcolor{A1}{$(d)$}}
+         \rput(3.5,2.85){\textcolor{B1}{$(\Delta)$}}
+         \regle{0.25}{2}{-76}{1}
+      \end{pspicture} 
+\end{methode}
+   
+\begin{remarque}
+   deux droites perpendiculaires à une même droite sont parallèles.
+\end{remarque}
+\end{changemargin}

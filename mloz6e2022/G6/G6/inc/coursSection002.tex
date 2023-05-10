@@ -1,2 +1,27 @@
-\section{...}
-\dots
+\begin{changemargin}{-15mm}{-15mm}
+\section{Distance d'un point à une droite}
+
+\begin{minipage}{0.7\linewidth}
+   \begin{definition}
+      La distance d'un point $A$ à une droite $(d)$ est la plus courte distance séparant le point A d'un point de $(d)$.
+   \end{definition}
+   \smallskip
+   \begin{propriete}
+      La distance d'un point $A$ à une droite $(d)$ est égale à la longueur du segment [AH] où H est le pied de la perpendiculaire à $(d)$ passant par $A$.
+   \end{propriete}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+    \vspace*{-15mm}
+    \begin{pspicture}(1.5,1.5)(6,6)
+      \pstGeonode[PointSymbol=+,PosAngle={90,-45}](1,5){A}(4,4){P}(2,2){N}(5,5){Q}(3,3){H}
+      \pstLineAB[nodesep=-10mm]{N}{Q}
+      \pstLineAB[linecolor=A1]{A}{N}
+      \pstLineAB[linecolor=B1]{A}{H}
+      \pstLineAB[linecolor=A1]{A}{P}
+      \pstLineAB[linecolor=A1]{A}{Q}
+      \pstRightAngle[linecolor=B1]{Q}{H}{A}
+      \rput(5.5,3){\textcolor{B1}{distance de $A$ à $(d)$ : AH}}
+      \rput(6,6){$(d)$} 
+    \end{pspicture}
+\end{minipage}
+\end{changemargin}
