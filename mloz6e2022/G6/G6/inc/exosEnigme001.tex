@@ -2,6 +2,202 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \phantom{\numeroteEnigme}
-\begin{enigme}[...]
-...
+\begin{changemargin}{-15mm}{-15mm}
+\begin{enigme}[Shikaku]
+    Le {\bf Shikaku} est un casse-tête japonais. Son nom vient du Japonais et signifie \og diviser en carrés \fg. \\
+    Le but de ce jeu est de diviser une grille donnée en plusieurs rectangles. \medskip
+    
+    \partie[règle du jeu]
+       \ \\[-11mm]
+       \begin{itemize}
+          \item Paver la grille à l'aide de rectangles.
+          \item Chaque rectangle doit contenir un nombre et un seul.
+          \item Le nombre contenu dans un rectangle indique combien de cases le constituent. \medskip
+       \end{itemize}
+
+    \partie[exemple]
+       {\psset{unit=0.6}\footnotesize
+       \begin{tabular}{*{6}{>{\centering\arraybackslash}p{2.5cm}}}
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+          \end{pspicture}
+          &
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+            \psset{linewidth=0.8mm,linecolor=PartieStatistique}
+             \psframe(2,0)(3,1)
+          \end{pspicture}
+          &
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+             \psset{linewidth=0.8mm,linecolor=PartieStatistique}
+             \psframe(2,0)(3,1)
+             \psframe(0,3)(4,4)
+          \end{pspicture}
+          &
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+             \psset{linewidth=0.8mm,linecolor=PartieStatistique}
+             \psframe(2,0)(3,1)
+             \psframe(0,3)(4,4)
+             \psframe(3,0)(4,3)
+          \end{pspicture}
+          &
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+             \psset{linewidth=0.8mm,linecolor=PartieStatistique}
+             \psframe(2,0)(3,1)
+             \psframe(0,3)(4,4)
+             \psframe(3,0)(4,3)
+             \psframe(0,1)(3,3)
+          \end{pspicture}
+          &
+          \begin{pspicture}(0,0)(4,4)
+             \psgrid[subgriddiv=0,gridlabels=0](0,0)(4,4)
+             \rput(3.5,3.5){4}
+             \rput(3.5,2.5){3}
+             \rput(2.5,2.5){6}
+             \rput(2.5,0.5){1}
+             \rput(0.5,0.5){2}
+             \psset{linewidth=0.8mm,linecolor=PartieStatistique}
+             \psframe(2,0)(3,1)
+             \psframe(0,3)(4,4)
+             \psframe(3,0)(4,3)
+             \psframe(0,1)(3,3)
+             \psframe(0,0)(2,1)
+          \end{pspicture}
+          \\
+          grille d'origine
+          &
+          un rectangle à 1 case est forcément un carré de côté 1
+          &
+          un rectangle à 4 cases est un carré de côté 2 ou un rectangle de côtés 1 et 4
+          &
+          un rectangle à 3 cases est un rectangle de côtés 1 et 3
+          &
+          un rectangle à 6 cases est un rectangle de côtés 2 et 3 ou de côtés 1 et 6
+          &
+          un rectangle à 2 cases est un rectangle de côtés 1 et 2 \\
+       \end{tabular}} \smallskip
+
+    \partie[let's go !!!]
+        {\renewcommand{\arraystretch}{1.49}
+        \scalebox{0.9}{
+        \begin{tabular}{|*{4}{>{\centering\arraybackslash}p{0.33cm}|}}
+          \hline
+          2 & 2 & 4 & \\
+          \hline
+          & & & \\
+          \hline
+          2 & 3 & & \\
+          \hline
+          & & & 3 \\
+          \hline
+       \end{tabular}
+        }        
+       \hfill
+       \scalebox{0.9}{
+       \begin{tabular}{|*{5}{>{\centering\arraybackslash}p{0.33cm}|}}
+          \hline
+          3 & & & 4 & \\
+         \hline
+          & & 2 & & \\
+          \hline
+          & & & 4 & \\
+          \hline
+          & 2 & 2 & 2 & \\
+          \hline
+          2 & & 4 & & \\
+          \hline
+       \end{tabular}
+       }
+       \hfill
+       \scalebox{0.9}{
+       \begin{tabular}{|*{6}{>{\centering\arraybackslash}p{0.33cm}|}}
+          \hline
+          4 & 5 & & & 3 & \\
+          \hline
+          & & 3 & & & \\
+          \hline
+          & & & 6 & & \\
+          \hline
+          & & & & 4 & \\
+          \hline
+          & & & 2 & 2 & \\
+          \hline
+          2 & & 5 & & & \\
+          \hline
+       \end{tabular}
+        }
+        
+       \scalebox{0.9}{
+       \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.33cm}|}}
+          \hline
+          & & & & & & 2 \\
+          \hline
+          & & & 6 & 2 & 2 & 2 \\
+          \hline
+          & 2 & & 4 & & & \\
+          \hline
+          6 & & 3 & & & & \\
+          \hline
+          & 3 & & & & 4 &  \\
+          \hline
+          & & & 4 & & 2 & 2 \\
+          \hline
+          & 2 & & & 3 & & \\
+          \hline
+       \end{tabular}
+       }
+       \hfill
+       \scalebox{0.9}{
+       \begin{tabular}{|*{9}{>{\centering\arraybackslash}p{0.33cm}|}}
+          \hline
+          2 & & & & & & & & \\
+          \hline
+          2 & & 6 & & & 3 & 2 & 4 & \\
+          \hline
+          & & & 2 & & & & 2 & \\
+          \hline
+          & & & 2 & & 2 & & & \\
+          \hline
+          5 & & 6 & & & 2 & 3 & 4 & \\
+          \hline
+          & 7 & & 3 & & & & & \\
+          \hline
+          & & & & & & & 6 & \\
+          \hline
+          & & & & 9 & & & & \\
+         \hline
+          & 3 & & & 4 & & & 2 & \\
+          \hline
+       \end{tabular}
+        }
+    }
 \end{enigme}
+\end{changemargin}
