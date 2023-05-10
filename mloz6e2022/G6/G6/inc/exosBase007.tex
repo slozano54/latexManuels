@@ -1,7 +1,29 @@
 \begin{exercice*}
-   \dots
+   Pour chaque triangle, placer $H$, point d'intersection entre la droite $(BC)$ et la droite perpendiculaire à $(BC)$ passant par $A$. En déduire la distance de $A$ à $(BC)$.
+   \begin{center}
+      \begin{pspicture}(-2,-0.3)(6,3.8)
+         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,90,0}](0,0){A}(2,3.3){B}(6,0){C}
+         \pstLineAB{A}{B}
+         \pstLineAB{B}{C}
+         \pstLineAB{C}{A}
+      \end{pspicture}
+      
+      \begin{pspicture}(0,-0.3)(6,3.8)
+         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={135,-135,0}](0,3){A}(3,0){B}(6,0){C}
+         \pstLineAB{A}{B}
+         \pstLineAB{B}{C}
+         \pstLineAB{C}{A}
+      \end{pspicture}
+      
+      \begin{pspicture}(-2,-0.3)(6,3.8)
+         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,-45,45}](1,-0.5){A}(6,1.5){B}(6,3.5){C}
+         \pstLineAB{A}{B}
+         \pstLineAB{B}{C}
+         \pstLineAB{C}{A}
+      \end{pspicture}
+   \end{center}
 \end{exercice*}
-\begin{corrige}
-   \dots
- \end{corrige}
+% \begin{corrige}
+%    \dots
+%  \end{corrige}
  

@@ -1,7 +1,32 @@
 \begin{exercice*}
-   \dots
+   $ABC$ est un triangle rectangle en $A$, et $H$ est le pied de la hauteur issue de $A$. Quelle est la distance en centimètres :
+   \begin{enumerate}
+      \item du point $A$ à la droite $(BC)$ ?
+      \item du point $B$ à la droite $(AC)$ ?
+      \item du point $B$ à la droite $(AH)$ ?
+      \item du point $C$ à la droite $(AB)$ ?
+      \item du point $C$ à la droite $(AH)$ ?
+   \end{enumerate}
+   \begin{center}
+      \psset{unit=0.9}
+      \begin{pspicture}(-0.5,-0.3)(6,5)
+         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,90,0}](0,0){A}(0,4.5){B}(6,0){C}
+         \pstGeonode[PosAngle=45,PointSymbol=none](2.15,2.9){H}
+         \pstLineAB{A}{B}
+         \pstLineAB{A}{C}
+         \pstLineAB{B}{C}
+         \pstLineAB{A}{H}
+         \pstRightAngle{B}{A}{C}
+         \pstRightAngle{A}{H}{C}
+         \rput(3,-0.3){6 cm}
+         \rput{90}(-0.3,2.25){4,5 cm}
+         \rput{53}(1,1.8){3,6 cm}
+         \rput{-37}(1.2,3.9){2,7 cm}
+         \rput{-37}(4.2,1.65){4,8 cm}
+      \end{pspicture}
+   \end{center}
 \end{exercice*}
-\begin{corrige}
-   \dots
- \end{corrige}
+% \begin{corrige}
+%    \dots
+%  \end{corrige}
  

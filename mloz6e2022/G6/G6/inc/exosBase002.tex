@@ -1,7 +1,26 @@
 \begin{exercice*}
-   \dots
+   Sur ces deux dessins, tracer en vert la droite perpendiculaires à la droite $(d)$ passant par $B$ et en rouge la droite parallèle à la droite $(d)$ passant par $A$.
+   \begin{center}
+      \psset{unit=0.6}
+      \begin{pspicture}(11,9)
+         \pstGeonode[PointSymbol=none,PointName=none](1,5){D}(10,5){E}
+         \pstGeonode[PointSymbol=x,dotscale=2](8,8){B}(3,2){A}
+         \pstLineAB{D}{E}
+         \rput(1.5,5.5){$(d)$}
+      \end{pspicture}
+   \end{center} 
+   
+   \begin{center}
+      \psset{unit=0.6}
+      \begin{pspicture}(0,-1)(11,6)
+         \pstGeonode[PointSymbol=none,PointName=none](1,1){D}(11,6){E}
+         \pstGeonode[PointSymbol=x,dotscale=2](2,5){A}(9,3){B}
+         \pstLineAB{D}{E}
+         \rput(2,1){$(d)$}
+      \end{pspicture}
+   \end{center} 
 \end{exercice*}
-\begin{corrige}
-   \dots
- \end{corrige}
+% \begin{corrige}
+%    \dots
+%  \end{corrige}
  
