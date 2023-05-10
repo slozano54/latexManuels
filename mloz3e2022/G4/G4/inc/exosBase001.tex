@@ -9,8 +9,7 @@
             O=u*(3,1);
             N-O=u*(2,1.5);
             M=0.65[O,rotation(N,O,90)];
-            trace polygone(M,O,N);
-            remplis codeperp(N,O,M,8)--O--cycle withcolor noir;
+            trace polygone(M,O,N);            
             trace codeperp(N,O,M,8);        
             trace marqueangle(M,N,O,0);
             label.bot(btex O etex,O);
@@ -25,8 +24,7 @@
             S=u*(5,1);
             R-S=u*(-0.5,2.5);
             T=1.5[S,rotation(R,S,90)];
-            trace polygone(S,R,T);
-            remplis codeperp(R,S,T,8)--S--cycle withcolor noir;
+            trace polygone(S,R,T);            
             trace codeperp(R,S,T,8);        
             trace marqueangle(T,R,S,0);
             label.bot(btex S etex,S);
@@ -41,8 +39,7 @@
             W=u*(1,3);
             X-W=u*(0.2,-2);
             Y=1.5[W,rotation(X,W,90)];
-            trace polygone(W,X,Y);
-            remplis codeperp(X,W,Y,8)--W--cycle withcolor noir;
+            trace polygone(W,X,Y);            
             trace codeperp(X,W,Y,8);
             label.ulft(btex W etex,W);
             label.llft(btex X etex,X);
@@ -63,8 +60,7 @@
             O=u*(3,1);
             N-O=u*(2,1.5);
             M=0.65[O,rotation(N,O,90)];
-            trace polygone(M,O,N);
-            remplis codeperp(N,O,M,8)--O--cycle withcolor noir;
+            trace polygone(M,O,N);            
             trace codeperp(N,O,M,8);        
             trace marqueangle(M,N,O,0);
             label.bot(btex O etex,O);
@@ -75,14 +71,14 @@
         \end{Geometrie}
         \item L'hypoténuse en rouge, et le côté opposé à l'angle $\widehat{SRT}$ en bleu.
         
-        \medskip        
+        \medskip
+        \scalebox{0.7}{        
         \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
             pair S,R,T;
             S=u*(5,1);
             R-S=u*(-0.5,2.5);
             T=1.5[S,rotation(R,S,90)];
             trace polygone(S,R,T);
-            remplis codeperp(R,S,T,8)--S--cycle withcolor noir;
             trace codeperp(R,S,T,8);        
             trace marqueangle(T,R,S,0);
             label.bot(btex S etex,S);
@@ -92,6 +88,7 @@
             trace segment(R,T) withcolor red withpen pencircle scaled 2bp;
             trace segment(S,T) withcolor blue withpen pencircle scaled 2bp;
         \end{Geometrie}
+        }
         \item L'hypoténuse en rouge, et le côté adjacent à l'angle $\widehat{WXY}$ en bleu.
         
         \medskip        
@@ -100,8 +97,7 @@
             W=u*(1,3);
             X-W=u*(0.2,-2);
             Y=1.5[W,rotation(X,W,90)];
-            trace polygone(W,X,Y);
-            remplis codeperp(X,W,Y,8)--W--cycle withcolor noir;
+            trace polygone(W,X,Y);            
             trace codeperp(X,W,Y,8);
             label.ulft(btex W etex,W);
             label.llft(btex X etex,X);

@@ -1,9 +1,78 @@
 \begin{exercice*}
-    \dots
+    On considère la figure suivante :
+
+    \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
+        pair N,K,L,M;
+        K=u*(6.5,1);
+        N-K=u*(-5,1.5);
+        L=0.5[K,rotation(N,K,-90)];
+        trace polygone(N,K,L);            
+        trace codeperp(L,K,N,8);
+        M=projection(K,N,L);
+        trace codeperp(K,M,L,8);
+        trace segment(M,K);
+        label.lft(btex N etex,N);
+        label.bot(btex  K etex,K);
+        label.urt(btex L etex,L);
+        label.top(btex M etex,M);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Dans le triangle $NKL$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse,
+            \item le côté opposé à $\widehat{NLK}$,
+            \item le côté adjacent à $\widehat{NLK}$.
+        \end{enumerate}
+        \item Dans le triangle $KMN$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse,
+            \item le côté opposé à $\widehat{MNK}$.            
+        \end{enumerate} 
+        \item Dans le triangle $KLM$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse,            
+            \item le côté adjacent à $\widehat{LKM}$.
+        \end{enumerate}             
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    On considère la figure suivante :
+
+    \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
+        pair N,K,L,M;
+        K=u*(6.5,1);
+        N-K=u*(-5,1.5);
+        L=0.5[K,rotation(N,K,-90)];
+        trace polygone(N,K,L);            
+        trace codeperp(L,K,N,8);
+        M=projection(K,N,L);
+        trace codeperp(K,M,L,8);
+        trace segment(M,K);
+        label.lft(btex N etex,N);
+        label.bot(btex  K etex,K);
+        label.urt(btex L etex,L);
+        label.top(btex M etex,M);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Dans le triangle $NKL$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse, {\red  $[NL]$}
+            \item le côté opposé à $\widehat{NLK}$, {\red  $[NK]$}
+            \item le côté adjacent à $\widehat{NLK}$. {\red  $[LK]$}
+        \end{enumerate}
+        \item Dans le triangle $KMN$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse, {\red  $[NK]$}
+            \item le côté opposé à $\widehat{MNK}$. {\red  $[MK]$}
+        \end{enumerate} 
+        \item Dans le triangle $KLM$, déterminer :
+        \begin{enumerate}
+            \item l'hypoténuse, {\red  $[LK]$}
+            \item le côté adjacent à $\widehat{LKM}$. {\red  $[MK]$}
+        \end{enumerate}             
+    \end{enumerate}
 \end{corrige}
 
