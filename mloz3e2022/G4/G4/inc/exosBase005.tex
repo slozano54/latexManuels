@@ -1,9 +1,64 @@
 \begin{exercice*}
-    \dots
+    Recopier et compléter les phrases à l'aide de la figure :
+    \begin{enumerate}
+        \item Dans le triangle $ABC$ rectangle en $C$, on a :
+        
+        $\cos(\widehat{BAC})=\dots$ \hfill $\cos(\widehat{ABC})=\dots$
+        \item Dans le triangle $BCD$ \dots{}, on a :
+        
+        $\sin(\widehat{BCD})=\dots$ \hfill $\tan(\widehat{DBC})=\dots$
+        \item Dans le triangle $ADC$ \dots{}, on a :
+        
+        $\sin(\widehat{ACD})=\dots$
+    \end{enumerate}
+
+    \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
+        pair A,B,C,D;
+        C=u*(2,4);
+        A-C=u*(-1,-2);
+        B=1.5[C,rotation(A,C,90)];
+        trace polygone(A,B,C);            
+        trace codeperp(A,C,B,8);
+        D=projection(C,A,B);
+        trace codeperp(B,D,C,8);
+        trace segment(D,C);
+        label.lft(btex A etex,A);
+        label.bot(btex B etex,B);
+        label.urt(btex C etex,C);
+        label.bot(btex D etex,D);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    Recopier et compléter les phrases à l'aide de la figure :
+    
+    \begin{enumerate}
+        \item Dans le triangle $ABC$ rectangle en $C$, on a :
+        
+        $\cos(\widehat{BAC})={\red\dfrac{AC}{AB}}$ \hfill $\cos(\widehat{ABC})={\red\dfrac{BC}{AB}}$
+        \item Dans le triangle $BCD$ {\red rectangle en $D$}, on a :
+        
+        $\sin(\widehat{BCD})={\red\dfrac{BD}{BC}}$ \hfill $\tan(\widehat{DBC})={\red\dfrac{DC}{DB}}$
+        \item Dans le triangle $ADC$ {\red rectangle en $D$}, on a :
+        
+        $\sin(\widehat{ACD})={\red\dfrac{AD}{AC}}$
+    \end{enumerate}
+
+    \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
+        pair A,B,C,D;
+        C=u*(2,4);
+        A-C=u*(-1,-2);
+        B=1.5[C,rotation(A,C,90)];
+        trace polygone(A,B,C);            
+        trace codeperp(A,C,B,8);
+        D=projection(C,A,B);
+        trace codeperp(B,D,C,8);
+        trace segment(D,C);
+        label.lft(btex A etex,A);
+        label.bot(btex B etex,B);
+        label.urt(btex C etex,C);
+        label.bot(btex D etex,D);
+    \end{Geometrie}
 \end{corrige}
 
