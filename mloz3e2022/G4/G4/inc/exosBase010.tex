@@ -1,9 +1,46 @@
 \begin{exercice*}
-    \dots
+    $ABC$ est un triangle rectangle en $A$ tel que\\ $AC=\Lg[cm]{5}$ et $\widehat{ABC}=\ang{35}$. On veut calculer $BC$.
+    \begin{itemize}
+        \item Faire un croquis avec les données.
+        \item Utiliser la trame précédente pour calculer $BC$.
+    \end{itemize}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
-    \dots
+    \phantom{rrr}\\
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);            
+            trace codeperp(B,A,C,8);
+            trace appelation(A,C,-3mm,btex \Lg[cm]{5} etex);            
+            trace appelation(B,C,3mm,btex ? etex);
+            % marque_a:=marque_a*1.5;    
+            trace Codeangle(A,B,C,0,btex \ang{35} etex);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{center}
+    {\red     
+    Dans le triangle $ABC$ rectangle en $A$, on connaît :
+    \begin{itemize}        
+        \item l'angle $\widehat{ABC}=\ang{35}$,
+        \item le côté opposé à l'angle $\widehat{ABC}$ : $AC=\Lg[cm]{5}$,
+    \end{itemize}
+    et on cherche l'hypoténuse. On utilise donc le sinus.
+    \begin{align*}
+        \sin(\widehat{ABC})&=\frac{AC}{BC}\\        
+        \sin(\ang{35})&=\frac{\num{5}}{BC}\\        
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        BC\times\sin(\ang{35})&=\num{5}\\
+        BC&=\frac{\num{5}}{\sin(\ang{35})}\\
+        BC&\simeq \Lg[cm]{8.7}
+    \end{align*}
+    }
 \end{corrige}
 

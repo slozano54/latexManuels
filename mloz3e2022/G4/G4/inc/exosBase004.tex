@@ -2,36 +2,42 @@
     \begin{enumerate}
         \item Dans le triangle $MNO$ rectangle en $O$, exprimer le cosinus de l'angle $\widehat{MNO}$.
         
-        \medskip
-        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
-            pair M,O,N;
-            O=u*(3,1);
-            N-O=u*(2,1.5);
-            M=0.65[O,rotation(N,O,90)];
-            trace polygone(M,O,N);            
-            trace codeperp(N,O,M,8);
-            label.bot(btex O etex,O);
-            label.rt(btex N etex,N);
-            label.top(btex M etex,M);
-        \end{Geometrie}
+        \begin{center}
+            \scalebox{0.7}{
+            \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+                pair M,O,N;
+                O=u*(3,1);
+                N-O=u*(2,1.5);
+                M=0.65[O,rotation(N,O,90)];
+                trace polygone(M,O,N);            
+                trace codeperp(N,O,M,8);
+                label.bot(btex O etex,O);
+                label.rt(btex N etex,N);
+                label.top(btex M etex,M);
+            \end{Geometrie}
+            }
+        \end{center}
         \item Dans le triangle $HJK$ rectangle en $K$, exprimer :
         \begin{itemize}
             \item le sinus de l'angle $\widehat{KHJ}$.
             \item le tangente de l'angle $\widehat{KHJ}$.
         \end{itemize}
         
-        \medskip
-        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
-            pair H,K,J;
-            K=u*(5,2);
-            H-K=u*(-4,-1);
-            J=0.35[K,rotation(H,K,90)];
-            trace polygone(H,K,J);            
-            trace codeperp(H,K,J,8);
-            label.lft(btex H etex,H);
-            label.top(btex  K etex,K);
-            label.lrt(btex J etex,J);
-        \end{Geometrie}
+        \begin{center}
+            \scalebox{0.7}{
+            \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+                pair H,K,J;
+                K=u*(5,2);
+                H-K=u*(-4,-1);
+                J=0.35[K,rotation(H,K,90)];
+                trace polygone(H,K,J);            
+                trace codeperp(H,K,J,8);
+                label.lft(btex H etex,H);
+                label.top(btex  K etex,K);
+                label.lrt(btex J etex,J);
+            \end{Geometrie}
+            }
+        \end{center}
     \end{enumerate}
 \end{exercice*}
 \begin{corrige}

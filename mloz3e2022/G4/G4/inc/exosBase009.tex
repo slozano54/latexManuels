@@ -1,9 +1,70 @@
 \begin{exercice*}
-    \dots
+    $MNP$ est un triangle rectangle en $M$ tel que :\\$PN=\Lg[cm]{5.4}$ et $\widehat{MPN}=\ang{42}$.\\
+    Compléter la trame pour calculer la longueur $MP$.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair M,N,P;
+            M=u*(4,4);
+            N-M=u*(1.5,-2.5);
+            P=1.2[M,rotation(N,M,-90)];
+            trace polygone(M,N,P);            
+            trace codeperp(P,M,N,8);
+            trace Codeangle(N,P,M,0,btex \ang{42} etex);
+            trace appelation(P,N,3mm,btex \Lg[cm]{5.4} etex);
+            label.lft(btex P etex,P);
+            label.top(btex M etex,M);
+            label.lrt(btex N etex,N);
+        \end{Geometrie}
+    \end{center}
+    Dans le triangle $MNP$ \makebox[0.2\linewidth]{\dotfill} en \makebox[0.1\linewidth]{\dotfill}, on connaît :
+    \begin{itemize}        
+        \item l'angle $\widehat{\phantom{M}\dots\phantom{N}}=\makebox[0.2\linewidth]{\dotfill}$,
+        \item l'hypoténuse : $PN=\makebox[0.2\linewidth]{\dotfill}$,
+    \end{itemize}
+    et on cherche le côté \makebox[0.3\linewidth]{\dotfill} à l'angle $\widehat{MPN}$. On utilise donc \makebox[0.2\linewidth]{\dotfill}.
+    \begin{align*}
+        \makebox[0.3\linewidth]{\dotfill}&=\frac{\makebox[0.2\linewidth]{\dotfill}}{\makebox[0.2\linewidth]{\dotfill}}\\
+        &\\
+        \makebox[0.3\linewidth]{\dotfill}&=\makebox[0.2\linewidth]{\dotfill}\\
+        &\\
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        \makebox[0.3\linewidth]{\dotfill}&=\makebox[0.2\linewidth]{\dotfill}\\        
+        \makebox[0.3\linewidth]{\dotfill}&\simeq\makebox[0.2\linewidth]{\dotfill}
+    \end{align*}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $MNP$ est un triangle rectangle en $M$ tel que :\\$PN=\Lg[cm]{5.4}$ et $\widehat{MPN}=\ang{42}$.\\
+    Compléter la trame pour calculer la longueur $MP$.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+            pair M,N,P;
+            M=u*(4,4);
+            N-M=u*(1.5,-2.5);
+            P=1.2[M,rotation(N,M,-90)];
+            trace polygone(M,N,P);            
+            trace codeperp(P,M,N,8);
+            trace Codeangle(N,P,M,0,btex \ang{42} etex);
+            trace appelation(P,N,3mm,btex \Lg[cm]{5.4} etex);
+            label.lft(btex P etex,P);
+            label.top(btex M etex,M);
+            label.lrt(btex N etex,N);
+        \end{Geometrie}
+    \end{center}
+    \Coupe
+    Dans le triangle $MNP$ {\red rectangle} en {\red $M$}, on connaît :
+    \begin{itemize}        
+        \item l'angle {\red $\widehat{MPN}=\ang{42}$},
+        \item l'hypoténuse : $PN={\red\Lg[cm]{5.4}}$,
+    \end{itemize}
+    et on cherche le côté {\red adjacent} à l'angle $\widehat{MPN}$. On utilise donc {\red le cosinus}.
+    \begin{align*}
+        {\red \cos(\widehat{MPN})}&=\frac{\red MP}{\red PN}\\        
+        {\red \cos(\ang{42})}&=\frac{\red MP}{\red \num{5.4}}\\        
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        {\red MP}&={\red \cos(\ang{42})\times \num{5.4}}\\        
+        {\red MP}&\simeq {\red\Lg[cm]{4}}
+    \end{align*}
 \end{corrige}
 

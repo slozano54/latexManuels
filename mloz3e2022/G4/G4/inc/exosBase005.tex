@@ -12,21 +12,25 @@
         $\sin(\widehat{ACD})=\dots$
     \end{enumerate}
 
-    \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
-        pair A,B,C,D;
-        C=u*(2,4);
-        A-C=u*(-1,-2);
-        B=1.5[C,rotation(A,C,90)];
-        trace polygone(A,B,C);            
-        trace codeperp(A,C,B,8);
-        D=projection(C,A,B);
-        trace codeperp(B,D,C,8);
-        trace segment(D,C);
-        label.lft(btex A etex,A);
-        label.bot(btex B etex,B);
-        label.urt(btex C etex,C);
-        label.bot(btex D etex,D);
-    \end{Geometrie}
+    \begin{center}
+        \scalebox{0.7}{
+        \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]        
+            pair A,B,C,D;
+            C=u*(2,4);
+            A-C=u*(-1,-2);
+            B=1.5[C,rotation(A,C,90)];
+            trace polygone(A,B,C);            
+            trace codeperp(A,C,B,8);
+            D=projection(C,A,B);
+            trace codeperp(B,D,C,8);
+            trace segment(D,C);
+            label.lft(btex A etex,A);
+            label.bot(btex B etex,B);
+            label.urt(btex C etex,C);
+            label.bot(btex D etex,D);
+        \end{Geometrie}
+        }
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
