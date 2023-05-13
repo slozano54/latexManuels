@@ -23,23 +23,25 @@
         label.top(btex T etex,T);
     \end{Geometrie}
     \correction
-    Le triangle $RST$ est rectangle en $R$ donc
-    $$\Eqalign{
-    \cos\widehat{RST}&=\frac{RS}{ST}\cr
-    {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos38}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{RS}}{\rnode{C}{6}}\cr
-    }$$
-    \begin{center}
-    {\bf Les produits en croix sont égaux}
-    \end{center}
+    Dans le triangle $RST$ est rectangle en $R$, on connaît :
+    \begin{itemize}
+        \item l'angle $\widehat{RST}=\ang{38}$,
+        \item la longueur de l'hypoténuse : $ST=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche la longueur du côté adjacent à l'angle $\widehat{RST}$.\\
+    On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{RST}&=\frac{RS}{ST}\\
+        {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos38}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{RS}}{\rnode{C}{6}}\\    
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        RS&=6\times\psframebox[linestyle=dashed]{\cos38}\\
+        RS&\simeq\Lg[cm]{4.73}
+    \end{align*}
     \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{A}{C}
     \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{B}{D}
-    $$\Eqalign{
-    RS&=6\times\psframebox[linestyle=dashed]{\cos38}\cr
-    RS&\simeq\Lg[cm]{4.73}\cr
-    }$$
 \end{methode}
 
-\begin{methode}[Cosinus - Calculer la longueur de l'hypoténuse]
+\begin{methode*1}[Cosinus - Calculer la longueur de l'hypoténuse]
     \exercice    
     Dans le triangle $EFG$, déterminer $EF$.\\
     \begin{Geometrie}[CoinHD={(4u,5u)}]        
@@ -51,30 +53,30 @@
         remplis codeperp(E,G,F,8)--G--cycle withcolor noir;
         trace codeperp(E,G,F,8);
         trace appelation(E,G,-3mm,btex \Lg[cm]{6} etex);        
-        trace cotation(E,F,2mm,3mm,btex ? etex);
-        marque_a:=marque_a*1.5;
+        trace cotation(E,F,2mm,3mm,btex ? etex);        
         trace Codeangle(G,E,F,0,btex \ang{60} etex);
         label.llft(btex E etex,E);
         label.lrt(btex G etex, G);
         label.top(btex F etex, F);
     \end{Geometrie}
     \correction
-    Le triangle $EFG$ est rectangle en $G$ donc
-    $$\Eqalign{
-    \cos\widehat{EFG}&=\frac{EG}{EF}\cr
-    {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos60}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{6}}{\rnode{C}{EF}}\cr
-    }$$
-    \begin{center}
-    {\bf Les produits en croix sont égaux}
-    \end{center}
+    Dans le triangle $EFG$ est rectangle en $G$, on connaît :
+    \begin{itemize}
+        \item l'angle $\widehat{FEG}=\ang{60}$,
+        \item le côté adjacent à l'angle $\widehat{FEG}$ : $EG=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche l'hypoténuse. On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{EFG}&=\frac{EG}{EF}\\
+        {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos60}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{6}}{\rnode{C}{EF}}\\
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        EF\times\psframebox[linestyle=dashed]{\cos60}&=6\\
+        EF&=\frac{6}{\psframebox[linestyle=dashed]{\cos60}}\\
+        EF&=\Lg[cm]{12}
+    \end{align*}
     \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{A}{C}
     \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{B}{D}
-    $$\Eqalign{
-    EF\times\psframebox[linestyle=dashed]{\cos60}&=6\cr
-    EF&=\frac{6}{\psframebox[linestyle=dashed]{\cos60}}\cr
-    EF&=\Lg[cm]{12}\cr
-    }$$
-\end{methode}
+\end{methode*1}
 
 \begin{methode}[Cosinus - Calculer un angle]
     \exercice    
@@ -88,24 +90,28 @@
         remplis codeperp(K,J,I,8)--J--cycle withcolor noir;
         trace codeperp(K,J,I,8);
         trace appelation(K,I,3mm,btex \Lg[cm]{10} etex);
-        trace appelation(I,J,3mm,btex \Lg[cm]{6} etex);        
-        marque_a:=marque_a*1.5;
+        trace appelation(I,J,3mm,btex \Lg[cm]{6} etex);                
         trace Codeangle(K,I,J,0,btex ? etex);
         label.llft(btex K etex,K);
         label.lrt(btex J etex,J);
         label.top(btex I etex,I);
     \end{Geometrie}
     \correction
-    Le triangle $IJK$ est rectangle en $J$ donc
-    $$\Eqalign{
-    \cos\widehat{KIJ}&=\frac{IJ}{IK}\cr
-    \cos\widehat{KIJ}&=\frac{6}{10}\cr
-    \widehat{KIJ}&=\cos^{-1}\left(\frac{6}{10}\right)\cr
-    \widehat{KIJ}&\simeq\ang{53}\cr
-    }$$
+    Dans le triangle $IJK$ est rectangle en $J$, on connaît :
+    \begin{itemize}        
+        \item l'hypoténuse : $IK=\Lg[cm]{10}$,
+        \item le côté adjacent à l'angle $\widehat{KIJ}$ : $EG=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche l'angle $\widehat{KIJ}$. On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{KIJ}&=\frac{IJ}{IK}\\
+        \cos\widehat{KIJ}&=\frac{6}{10}\\
+        \widehat{KIJ}&=\cos^{-1}\left(\frac{6}{10}\right)\\
+        \widehat{KIJ}&\simeq\ang{53}
+    \end{align*}
 \end{methode}
 
-\begin{methode}[Tangente - Calculer une longueur]
+\begin{methode*1}[Tangente - Calculer une longueur]
     \exercice
     Dans le triangle $RST$, déterminer $RT$.\\
     \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
@@ -116,7 +122,8 @@
         trace polygone(S,R,T);
         remplis codeperp(S,R,T,8)--R--cycle withcolor noir;
         trace codeperp(S,R,T,8);
-        trace appelation(S,R,-3mm,btex \Lg[cm]{4} etex);             
+        trace appelation(S,R,-3mm,btex \Lg[cm]{4} etex);  
+        trace cotation(T,R,2mm,3mm,btex ? etex);
         marque_a:=marque_a*1.5;
         trace Codeangle(R,S,T,0,btex \ang{30} etex);
         label.llft(btex S etex,S);
@@ -124,18 +131,51 @@
         label.top(btex T etex,T);
     \end{Geometrie}
     \correction
-    Dans le triangle $RST$ rectangle en $R$, on a : 
-    $$\Eqalign{
-    \tan\widehat{RST}&=\frac{RT}{RS}\cr
-    \tan30&=\frac{RT}{4}\cr
-    }$$
-    \begin{center}
-        {\bf Les produits en croix sont égaux}
-    \end{center}
-    $$\Eqalign{RT&=4\times\tan30\cr
-    RT&\simeq \Lg[cm]{2.3}\cr
-    }$$
-\end{methode}
+    Dans le triangle $RST$ est rectangle en $R$, on connaît :
+    \begin{itemize}        
+        \item l'angle $\widehat{RST}=\ang{30}$,        
+        \item le côté adjacent à l'angle $\widehat{RST}$ : $RS=\Lg[cm]{4}$,
+    \end{itemize}
+    et on cherche le côté opposé à l'angle $\widehat{RST}$.\\
+    On utilise donc la tangente.
+    \begin{align*}
+        \tan\widehat{RST}&=\frac{RT}{RS}\\
+        \tan30&=\frac{RT}{4}\\
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        RT&=4\times\tan30\\
+        RT&\simeq \Lg[cm]{2.3}
+    \end{align*}
+\end{methode*1}
+
+\begin{methode*1}[Tangente - Calculer un angle]
+    \exercice
+    Dans le triangle $IJK$, déterminer $\widehat{IJK}$.
+        
+        \medskip        
+        \begin{Geometrie}[CoinHD={(6.5u,5u)}]        
+            pair I,J,K;
+            I=u*(3,3);
+            J-I=u*(-1,-2);
+            K=1.5[I,rotation(J,I,90)];
+            trace polygone(I,J,K);
+            remplis codeperp(J,I,K,8)--I--cycle withcolor noir;
+            trace codeperp(J,I,K,8);
+            trace appelation(J,I,3mm,btex \Lg[cm]{2} etex);
+            trace appelation(I,K,3mm,btex \Lg[cm]{3} etex);
+            trace Codeangle(K,J,I,0,btex ? etex);
+            label.llft(btex J etex,J);
+            label.lrt(btex K etex, K);
+            label.top(btex I etex, I);
+        \end{Geometrie}
+    \correction
+     Dans le triangle $IJK$ rectangle en $I$, on a
+        \begin{align*}
+            \tan\widehat{IJK}&=\frac{IK}{IJ}\\
+            \tan\widehat{IJK}&=\frac{3}{2}\\
+            \widehat{IJK}&=tan^{-1}\left(\frac{3}{2}\right)\\
+            \widehat{IJK}&\simeq\ang{56}
+        \end{align*}
+\end{methode*1}
 
 \begin{methode}[Sinus - Calculer une longueur]
     \exercice
@@ -157,25 +197,25 @@
         label.top(btex F etex, F);
     \end{Geometrie}
     \correction
-    Dans le triangle $EFG$ rectangle en $G$, on a :
-    $$\Eqalign{
-    \sin\widehat{EFG}&=\frac{EG}{EF}\cr
-    \sin63&=\frac{4,1}{EF}\cr
-    }$$
-    \begin{center}
-    {\bf Les produits en croix sont égaux}
-    \end{center}
-    $$\Eqalign{
-    EF\times\sin63&=4,1\cr
-    EF&=\frac{4,1}{\sin63}\cr
-    EF&\simeq\Lg[cm]{4.6}\cr
-    }$$
+    Dans le triangle $EFG$ est rectangle en $G$, on connaît :
+    \begin{itemize}        
+        \item l'angle $\widehat{EFG}=\ang{63}$,        
+        \item le côté opposé à l'angle $\widehat{EFG}$ : $EG=\Lg[cm]{4.1}$,
+    \end{itemize}
+    et on cherche l'hypoténuse. On utilise donc le sinus.
+    \begin{align*}
+        \sin\widehat{EFG}&=\frac{EG}{EF}\\
+        \sin63&=\frac{4,1}{EF}\\
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        EF\times\sin63&=4,1\\
+        EF&=\frac{4,1}{\sin63}\\
+        EF&\simeq\Lg[cm]{4.6}
+    \end{align*}
 \end{methode}
 
-\begin{methode}[Tangente/Sinus - Calculer un angle]
+\begin{methode}[Sinus - Calculer un angle]
     \exercice
-    \begin{enumerate}    
-        \item Déterminer $\widehat{LAO}$ dans le triangle $LAO$.
+    Déterminer $\widehat{LAO}$ dans le triangle $LAO$.
         
         \medskip
         \scalebox{1.2}{
@@ -195,42 +235,12 @@
             label.top(btex L etex,L);
         \end{Geometrie}
         }
-        \item Dans le triangle $IJK$, déterminer $\widehat{IJK}$.
-        
-        \medskip
-        \scalebox{1.2}{
-        \begin{Geometrie}[CoinHD={(6.5u,5u)}]        
-            pair I,J,K;
-            I=u*(3,3);
-            J-I=u*(-1,-2);
-            K=1.5[I,rotation(J,I,90)];
-            trace polygone(I,J,K);
-            remplis codeperp(J,I,K,8)--I--cycle withcolor noir;
-            trace codeperp(J,I,K,8);
-            trace appelation(J,I,3mm,btex \Lg[cm]{2} etex);
-            trace appelation(I,K,3mm,btex \Lg[cm]{3} etex);
-            trace Codeangle(K,J,I,0,btex ? etex);
-            label.llft(btex J etex,J);
-            label.lrt(btex K etex, K);
-            label.top(btex I etex, I);
-        \end{Geometrie}
-        }
-    \end{enumerate}
     \correction
-    \begin{enumerate}
-        \item Dans le triangle $LOA$ rectangle en $O$, on a
-        $$\Eqalign{
-        \sin\widehat{LAO}&=\frac{OL}{AL}\cr
-        \sin\widehat{LAO}&=\frac{1,3}{2}\cr
-        \widehat{LAO}&=sin^{-1}\left(\frac{1,3}{2}\right)\cr
-        \widehat{LAO}&\simeq\ang{41}\cr
-        }$$
-        \item Dans le triangle $IJK$ rectangle en $I$, on a
-        $$\Eqalign{
-        \tan\widehat{IJK}&=\frac{IK}{IJ}\cr
-        \tan\widehat{IJK}&=\frac{3}{2}\cr
-        \widehat{IJK}&=tan^{-1}\left(\frac{3}{2}\right)\cr
-        \widehat{IJK}&\simeq\ang{56}\cr
-        }$$
-    \end{enumerate}
+    Dans le triangle $LOA$ rectangle en $O$, on a
+    \begin{align*}
+        \sin\widehat{LAO}&=\frac{OL}{AL}\\
+        \sin\widehat{LAO}&=\frac{1,3}{2}\\
+        \widehat{LAO}&=sin^{-1}\left(\frac{1,3}{2}\right)\\
+        \widehat{LAO}&\simeq\ang{41}
+    \end{align*}
 \end{methode}
