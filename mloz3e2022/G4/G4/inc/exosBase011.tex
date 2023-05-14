@@ -2,20 +2,22 @@
     $RST$ est un triangle rectangle en $S$ tel que :\\$RS=\Lg[cm]{4}$ et $ST=\Lg[cm]{7}$.\\
     Compléter la trame pour calculer l'angle $\widehat{SRT}$.
     \begin{center}
-        \begin{Geometrie}[CoinHD={(5.5u,3.5u)}]        
-            pair R,S,T;
-            S=u*(1,1);
-            R-S=u*(0,2);
-            T-S=u*(4,0);
-            trace polygone(R,S,T);
-            trace codeperp(T,S,R,8);
-            trace marqueangle(S,R,T,0);
-            trace appelation(S,T,-3mm,btex \Lg[cm]{7} etex);
-            trace appelation(S,R,3mm,btex \Lg[cm]{4} etex);
-            label.ulft(btex R etex,R);
-            label.llft(btex S etex,S);
-            label.lrt(btex T etex,T);
-        \end{Geometrie}
+        \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5.5u,3.5u)}]        
+                pair R,S,T;
+                S=u*(1,1);
+                R-S=u*(0,2);
+                T-S=u*(4,0);
+                trace polygone(R,S,T);
+                trace codeperp(T,S,R,8);
+                trace marqueangle(S,R,T,0);
+                trace appelation(S,T,-3mm,btex \Lg[cm]{7} etex);
+                trace appelation(S,R,3mm,btex \Lg[cm]{4} etex);
+                label.ulft(btex R etex,R);
+                label.llft(btex S etex,S);
+                label.lrt(btex T etex,T);
+            \end{Geometrie}
+        }
     \end{center}
     Dans le triangle $RST$ \makebox[0.4\linewidth]{\dotfill} en \makebox[0.1\linewidth]{\dotfill}, on connaît :
     \begin{itemize}        
@@ -38,6 +40,7 @@
     $RST$ est un triangle rectangle en $S$ tel que :\\$RS=\Lg[cm]{4}$ et $ST=\Lg[cm]{7}$.\\
     Compléter la trame pour calculer l'angle $\widehat{SRT}$.
     \begin{center}
+        \scalebox{0.9}{
         \begin{Geometrie}[CoinHD={(5.5u,3.5u)}]        
             pair R,S,T;
             S=u*(1,1);
@@ -52,6 +55,7 @@
             label.llft(btex S etex,S);
             label.lrt(btex T etex,T);
         \end{Geometrie}
+        }
     \end{center}
     Dans le triangle $RST$ {\red rectangle} en {\red $S$}, on connaît :
     \begin{itemize}        

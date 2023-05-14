@@ -1,0 +1,68 @@
+\begin{exercice*}[La mesure du rayon de la Terre vers 200 avant J.-C.]
+  Vers 200 Avant J.C., le mathématicien astronome grec Ératosthène avait utilisé les remarques suivantes :
+  \begin{description}
+  \item[\ding{172}] En un point $A$ de la haute vallée du Nil (Syène, aujourd'hui Assouan), le soleil éclaire un certain jour à midi le fond des puits, il est dont à la verticale du point $A$.
+  \item[\ding{173}] Au même instant, en un point $B$ du delta du Nil 
+  (Alexandrie) (c'est-à-dire situé sur le même méridien que $A$); le soleil fait avec la verticale un angle $\alpha$ qu'un observateur peut relever.
+  \item[\ding{174}] Comme le soleil est très loin, on peut considérer que les droites qui vont de $A$ au soleil et de $B$ au soleil sont pratiquement parallèles.
+  \end{description}
+  \begin{enumerate}
+  \item Explique comment, connaissant la distance de $A$ à $B$ et l'angle $\alpha$, Ératosthène a pu calculer (approximativement) le rayon de la Terre.
+  % \[\includegraphics{3trigoexo25.1}\]
+  \item Évalue à ton tour le rayon de la Terre sachant que $AB=800$~km et $\alpha=7\degres$.
+  \end{enumerate}
+  \begin{minipage}{\linewidth}
+    \begin{Geometrie}[CoinHD={(22u,10u)}]
+      pair A,O,B,P,Q,R,S,T,U;
+      O=u*(15,1);
+      P-O=u*(-7,0);
+      Q=rotation(P,O,-80);
+      path cc;
+      cc=arccercle(Q,P,O);
+      trace cc;
+      A=rotation(P,O,-23);
+      B=rotation(P,O,-41);
+      trace segment(O,A);
+      R=6.5/5[O,B];
+      trace segment(O,R);
+      trace segment(B,R) withpen pencircle scaled1.5bp;
+      T-R=u*(-3,2);
+      U-T=0.6*(O-A);
+      picture rayon;
+      rayon=image(
+        drawoptions(withcolor orange);
+        trace segment(U,iso(T,U));
+        drawarrow segment(T,iso(T,U));
+        drawoptions();
+        );
+      trace rayon;
+      trace rayon shifted(R-U);
+      trace rayon shifted(A-U);
+      trace rayon shifted(R-U+0.3*(A-R));
+      trace rayon shifted(R-U+0.55*(A-R));
+      trace rayon shifted(R-U+0.8*(A-R)+0.05*(T-A));
+      S=cc intersectionpoint parallele(T,U,R);
+      trace segment(S,R);
+      marque_a:=30;
+      trace Codeangle(B,R,S,0,btex $\alpha$ etex);
+      marque_p:="plein";
+      label.bot(btex A etex,A);
+      label.lft(btex B etex,B);
+      label.top(btex O etex,O);
+      trace codeperp(R,B,S,5);
+      trace codeperp(O,A,B,5);
+      trace appelation(T,U,2mm,btex rayons du soleil etex);
+      trace appelation(A,O,2mm,btex Verticale de A etex);
+      trace appelation(B,O,2mm,btex Verticale de B etex);
+      label.lft(btex Centre de la Terre etex,O);
+    \end{Geometrie}
+    \vspace*{10mm}
+    \creditLibre{melusine.eu.org, d'après {\sl Histoire des Mathématiques pour le collège.} {\sc CEDIC}}
+  \end{minipage}
+\end{exercice*}
+% \begin{corrige}
+%   %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+%   % \phantom{rrr}    
+%   \dots
+% \end{corrige}
+
