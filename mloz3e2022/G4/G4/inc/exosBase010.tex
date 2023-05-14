@@ -9,17 +9,17 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     \phantom{rrr}\\
     \begin{center}
-        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+        \begin{Geometrie}[CoinHD={(5u,4.5u)},TypeTrace="MainLevee"]
             u:=0.75*u;            
             pair A,B,C;
             A=u*(1.75,1.75);
             B=u*(1.75,5.25);
             C=u*(6.25,1.75);
+            drawoptions(withcolor red);
             trace polygone(A,B,C);            
             trace codeperp(B,A,C,8);
             trace appelation(A,C,-3mm,btex \Lg[cm]{5} etex);            
-            trace appelation(B,C,3mm,btex ? etex);
-            % marque_a:=marque_a*1.5;    
+            trace appelation(B,C,3mm,btex ? etex);            
             trace Codeangle(A,B,C,0,btex \ang{35} etex);
             label.llft(btex A etex,A);
             label.lrt(btex C etex,C);

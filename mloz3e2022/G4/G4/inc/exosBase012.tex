@@ -1,9 +1,52 @@
 \begin{exercice*}
-    \dots
+    $IJK$ est un triangle rectangle en $I$ tel que\\ $IJ=\Lg[cm]{3.2}$ et $JK=\Lg[cm]{5.3}$.\\
+    On veut calculer $\widehat{IKJ}$ au degré près.
+    \begin{itemize}
+        \item Faire un croquis avec les données.
+        \item Utiliser la trame précédente pour calculer $\widehat{IKJ}$.
+    \end{itemize}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $IJK$ est un triangle rectangle en $I$ tel que\\ $IJ=\Lg[cm]{3.2}$ et $JK=\Lg[cm]{5.3}$. On veut calculer $\widehat{IKJ}$ au degré près.
+    \begin{itemize}
+        \item Faire un croquis avec les données.
+        \item Utiliser la trame précédente pour calculer $\widehat{IKJ}$.
+    \end{itemize}
+    \begin{center}
+        \scalebox{0.9}{
+        \begin{Geometrie}[CoinHD={(5.5u,4u)},TypeTrace="MainLevee"]
+            pair I,J,K;
+            I=u*(5,3);
+            K-I=u*(-0.2,-1.5);
+            J=1.7[I,rotation(K,I,-90)];
+            drawoptions(withcolor red);
+            trace polygone(I,J,K);
+            trace codeperp(J,I,K,8);
+            marque_a:=marque_a/1.5;
+            trace Codeangle(I,K,J,0, btex ? etex);
+            trace appelation(J,I,3mm,btex \Lg[cm]{3.2} etex);
+            trace appelation(J,K,-3mm,btex \Lg[cm]{5.3} etex);
+            label.rt(btex I etex,I);
+            label.ulft(btex J etex,J);
+            label.bot(btex  K etex,K);
+        \end{Geometrie}
+        }
+    \end{center}
+    {\red 
+    Dans le triangle $IJK$ rectangle en $I$, on connaît :
+    \begin{itemize}        
+        \item l'hypoténuse,
+        \item le côté opposé à l'angle $\widehat{\red IKJ}$,
+    \end{itemize}
+    et on cherche la mesure de l'angle $\widehat{IKJ}$.\\ On utilise donc le sinus.
+    \begin{align*}
+        \sin(\widehat{IKJ})&=\frac{IJ}{JK}\\        
+        \sin(\widehat{IKJ})&=\frac{\num{3.2}}{\num{5.3}}\\                
+        \widehat{IKJ}&=\sin^{-1}\left(\frac{\num{3.2}}{\num{5.3}}\right)\\
+        \widehat{IKJ}&\simeq \ang{37}
+    \end{align*}
+    }
 \end{corrige}
 

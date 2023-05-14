@@ -1,9 +1,69 @@
 \begin{exercice*}
-    \dots
+    $RST$ est un triangle rectangle en $S$ tel que :\\$RS=\Lg[cm]{4}$ et $ST=\Lg[cm]{7}$.\\
+    Compléter la trame pour calculer l'angle $\widehat{SRT}$.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5.5u,3.5u)}]        
+            pair R,S,T;
+            S=u*(1,1);
+            R-S=u*(0,2);
+            T-S=u*(4,0);
+            trace polygone(R,S,T);
+            trace codeperp(T,S,R,8);
+            trace marqueangle(S,R,T,0);
+            trace appelation(S,T,-3mm,btex \Lg[cm]{7} etex);
+            trace appelation(S,R,3mm,btex \Lg[cm]{4} etex);
+            label.ulft(btex R etex,R);
+            label.llft(btex S etex,S);
+            label.lrt(btex T etex,T);
+        \end{Geometrie}
+    \end{center}
+    Dans le triangle $RST$ \makebox[0.4\linewidth]{\dotfill} en \makebox[0.1\linewidth]{\dotfill}, on connaît :
+    \begin{itemize}        
+        \item le côté \makebox[0.3\linewidth]{\dotfill} à l'angle $\widehat{SRT}$,
+        \item le côté \makebox[0.3\linewidth]{\dotfill} à l'angle $\widehat{\phantom{M}\dots\phantom{N}}$,
+    \end{itemize}
+    et on cherche la mesure de l'angle $\widehat{\phantom{M}\dots\phantom{N}}$.\\ On utilise donc \makebox[0.2\linewidth]{\dotfill}.
+    \begin{align*}
+        \makebox[0.3\linewidth]{\dotfill}&=\frac{\makebox[0.2\linewidth]{\dotfill}}{\makebox[0.2\linewidth]{\dotfill}}\\
+        &\\
+        \makebox[0.3\linewidth]{\dotfill}&=\makebox[0.2\linewidth]{\dotfill}\\
+        &\\        
+        \makebox[0.3\linewidth]{\dotfill}&=\makebox[0.2\linewidth]{\dotfill}\\        
+        \makebox[0.3\linewidth]{\dotfill}&\simeq\makebox[0.2\linewidth]{\dotfill}
+    \end{align*}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \dots
+    $RST$ est un triangle rectangle en $S$ tel que :\\$RS=\Lg[cm]{4}$ et $ST=\Lg[cm]{7}$.\\
+    Compléter la trame pour calculer l'angle $\widehat{SRT}$.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5.5u,3.5u)}]        
+            pair R,S,T;
+            S=u*(1,1);
+            R-S=u*(0,2);
+            T-S=u*(4,0);
+            trace polygone(R,S,T);
+            trace codeperp(T,S,R,8);
+            trace marqueangle(S,R,T,0);
+            trace appelation(S,T,-3mm,btex \Lg[cm]{7} etex);
+            trace appelation(S,R,3mm,btex \Lg[cm]{4} etex);
+            label.ulft(btex R etex,R);
+            label.llft(btex S etex,S);
+            label.lrt(btex T etex,T);
+        \end{Geometrie}
+    \end{center}
+    Dans le triangle $RST$ {\red rectangle} en {\red $S$}, on connaît :
+    \begin{itemize}        
+        \item le côté {\red adjacent} à l'angle $\widehat{SRT}$,
+        \item le côté {\red opposé} à l'angle $\widehat{\red SRT}$,
+    \end{itemize}
+    et on cherche la mesure de l'angle $\widehat{\red SRT}$.\\ On utilise donc {\red la tangente}.
+    \begin{align*}
+        {\red \tan(\widehat{SRT})}&=\frac{\red ST}{\red RS}\\        
+        {\red \tan(\widehat{SRT})}&=\frac{\red 7}{\red 4}\\                
+        {\red \widehat{SRT}}&={\red \tan^{-1}\left(\frac{7}{4}\right)}\\
+        {\red \widehat{SRT}}&\simeq {\red\ang{60.3}}
+    \end{align*}
 \end{corrige}
 
