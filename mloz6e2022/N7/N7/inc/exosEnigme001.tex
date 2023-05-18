@@ -3,8 +3,42 @@
 % \refstepcounter{exercice}
 % \numeroteEnigme
 \begin{changemargin}{-10mm}{-10mm}
-\begin{enigme}[...]
-    ...
+\begin{enigme}[Tableaux en fils tendus]
+    Reproduire les deux tableaux 1 et 2 suivants de sorte que chaque figure ait une dimension de \ucm{10} par \ucm{10}.
+    \begin{center}
+       {\psset{unit=0.3}      
+       \begin{pspicture}(-10,-10)(11,13)
+          %\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](-10,-10)(10,10)
+          \rput(0,12){Tableau 1}
+          \multido{\n=0+1,\i=10+-1}{11}{\psline(-10,\n)(-\i,10) %NOe
+                                                          \psline(10,\n)(\i,10) %NEe
+                                                          \psline(-10,-\n)(-\i,-10) %SOe
+                                                          \psline(10,-\n)(\i,-10) %SEe
+                                                          \psline(-\i,0)(0,\n) %NOi
+                                                          \psline(\i,0)(0,\n) %NEi
+                                                          \psline(\i,0)(0,-\n) %SEi
+                                                          \psline(-\i,0)(0,-\n) %SEi
+                                                         }
+       \end{pspicture}}
+       {\psset{unit=0.85,linecolor=PartieStatistique}
+       \begin{pspicture}(-11,0)(0,10)
+          %\psgrid[gridlabels=0,subgriddiv=0,gridcolor=lightgray](-10,-10)(10,10)
+          \rput(-5,5){\textcolor{PartieStatistique}{détail du tableau 1}}
+          \multido{\n=0+1,\i=10+-1}{11}{\psline(-10,\n)(-\i,10) %NOe
+                                                          \psline(-\i,0)(0,\n) %NOi
+                                                         }
+       \end{pspicture}} \\ [10mm]
+        {\psset{unit=0.55}
+        \begin{pspicture}(-10,-9)(10,10)
+        \psframe(-10,-10)(10,10)
+           \rput(0,-8){Tableau 2}
+           \multido{\n=0+1,\i=10+-1}{11}{\psline(-\i,-\i)(-\n,\n) %O
+                                                       \psline(\i,\i)(\n,-\n) %E
+                                                       \psline(-\i,\i)(\n,\n) %N
+                                                       \psline(-\i,-\i)(\n,-\n) %S
+                                                      }
+       \end{pspicture}}
+    \end{center}
 \end{enigme}
 \end{changemargin}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
