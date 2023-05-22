@@ -1,4 +1,40 @@
-\begin{changemargin}{-15mm}{-15mm}
-\section{...}
-...
+\begin{changemargin}{-10mm}{-15mm}
+    \section{Se déplacer}
+        \begin{methode}[Langages de déplacement]
+            Pour se déplacer dans le plan, il existe principalement deux langages de déplacement :
+            \begin{itemize}
+                \item le langage {\bf absolu} composé des mots de vocabulaire du type : \og haut \fg{}, \og bas \fg{}, \og droite \fg{} et \og gauche \fg. Le déplacement se fait comme si on se plaçait en vue du dessus ;
+                \item le langage {\bf relatif} composé des mots de vocabulaire du type : \og avancer \fg{}, \og tourner à droite \fg{} et \og tourner à gauche \fg. C'est ici le point de vue de l'observateur qui est adopté.
+            \end{itemize}
+            \exercice
+            \begin{center}
+            \psset{unit=0.7}
+            \begin{pspicture}(0,-1)(5,4)
+                \psgrid[subgriddiv=1,gridlabels=0mm](0,-1)(5,4)
+                \psset{linecolor=A1,arrowsize=3mm,linewidth=0.5mm}
+                \psdots(0.5,0.5)(3.5,2.5)     
+                \psline{->}(0.5,0.5)(2.5,0.5)(2.5,2.5)(3.5,2.5)
+            \end{pspicture}
+            \end{center}
+            \correction
+            \begin{minipage}{4cm}
+                Avec le langage absolu : \\
+                \og droite \\
+                droite \\
+                haut \\
+                haut \\
+                droite \fg
+            \end{minipage}
+            \qquad
+            \begin{minipage}{4cm}   
+                Avec le langage relatif : \\
+                \og avancer \\
+                avancer \\
+                tourner à gauche \\
+                avancer \\
+                avancer \\
+                tourner à droite \\
+                avancer \fg
+            \end{minipage}
+        \end{methode}
 \end{changemargin}
