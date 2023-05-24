@@ -1,5 +1,41 @@
 \begin{exercice*}
-   ...
+    \psset{unit=0.5}
+    On dispose des instructions suivantes : \fbox{N} \; $\uparrow$ \; \fbox{S} \; $\downarrow$ \; \fbox{E} \; $\rightarrow$ \; \fbox{O} \; $\leftarrow$. \\
+    Par exemple, la séquence NEESO donne \begin{pspicture}(-0.2,0)(2,1.5) \psline(0,0)(0,1)(2,1)(2,0)(1,0) \end{pspicture}
+    \begin{enumerate}
+       \item Écrire une séquence d'instructions permettant de tracer chacune des frises suivantes :
+       \begin{multicols}{2}
+            \begin{enumerate}
+                \item
+                \begin{pspicture}(0,0.3)(8,1.5)
+                    \psline(0,1)(0,0)(1,0)(1,1)(2,1)(2,1)(2,0)(3,0)(3,1)(4,1)(4,1)(4,0)(5,0)(5,1)(6,1)(6,1)(6,0)(7,0)(7,1)(8,1)
+                \end{pspicture} \\
+                \item
+                \begin{pspicture}(0,0.3)(8,1.5)
+                    \psline(0,0)(1,0)(1,1)(2,1)(2,0)(4,0)(4,1)(5,1)(5,0)(7,0)(7,1)(8,1)(8,0)(9,0)
+                \end{pspicture} \\
+                \columnbreak
+                \item
+                \begin{pspicture}(0,1.5)(8,2.5)
+                    \psline(0,1)(0,0)(1,0)(1,2)(2,2)(2,0)(3,0)(3,2)(4,2)(4,0)(5,0)(5,2)(6,2)(6,0)(7,0)(7,2)(8,2)(8,1)
+                \end{pspicture}
+            \end{enumerate}
+        \end{multicols} 
+        \vspace*{-5mm}       
+       \item Quand on répète une séquence d'instructions plusieurs fois, on peut utiliser une boucle \og répéter \fg.\\Effectuer le tracé correspondant aux séquences suivantes :
+       \vspace*{-2mm}       
+       \begin{multicols}{3}
+            \begin{enumerate}
+                \item \texttt{répéter \fbox{4} fois} \\
+                \hspace*{5mm} \psline(0,-0.2)(0,0.5) \; ENE
+                \item \texttt{répéter \fbox{2} fois} \\
+                \hspace*{5mm} \psline(0,-0.2)(0,0.5) \; NESSENE
+                \item \texttt{répéter \fbox{3} fois} \\
+                \hspace*{5mm} \psline(0,-0.2)(0,0.5) \; NNEESON
+            \end{enumerate}
+        \end{multicols}       
+       \item Pour chaque frise de la question 1), écrire un programme optimisé en utilisant une boucle \og Répéter \fg.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     \dots

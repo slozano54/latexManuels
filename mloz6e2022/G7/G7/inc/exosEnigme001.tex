@@ -3,7 +3,152 @@
 % \refstepcounter{exercice}
 % \phantom{\numeroteEnigme}
 \begin{changemargin}{-15mm}{-15mm}
-\begin{enigme}[...]
-...
+\begin{enigme}[Créer un jeu avec Scratch]
+    \partie[présentation du jeu]
+    L'objectif est de créer un jeu dans lequel un lutin (le chasseur) doit attraper d'autres lutins (les proies). \\
+    Les programmes pour cette première découverte de Scratch vous seront tous donnés, nous discuterons de la manière dont ils ont été constitués une fois que vous les aurez testés !
+    \begin{center}
+       \includegraphics[width=10cm]{\currentpath/images/Scratch_jeu_fini} \\
+       {\it Écran du jeu terminé}
+    \end{center}
+
+ \partie[créer les cosmétiques]
+    \begin{enumerate}
+       \item {\bf Ouverture de scratch et enregistrement} \dotfill \\ [1mm]
+          Lancer \textcolor{B1}{Scratch 3.0} en cliquant sur son logo \parbox{1cm}{\includegraphics[width=1cm]{\currentpath/images/Scratch_logo}} \\
+          Éventuellement, mettre l'interface en français en appuyant sur le \textcolor{B1}{globe} en haut à gauche \parbox{2.5cm}{\includegraphics[width=2.5cm]{\currentpath/images/Scratch_langue_fichier}} puis enregistrer le projet sous le nom \og Labyrinthe-Prenom-Nom \fg{} en utilisant le menu \textcolor{B1}{Fichier}. \\
+ 
+       \item {\bf Création du lutin chasseur et du lutin proie} \dotfill \\ 
+          \begin{minipage}{8cm}
+             Choisir un lutin pour le chasseur en cliquant sur \textcolor{B1}{Choisir un sprite} dans la fenêtre en bas à droite, le renommer à votre guise en utilisant la case \textcolor{B1}{Sprite}. \\
+             Faire de même avec le lutin proie.
+          \end{minipage}
+          \qquad
+          \begin{minipage}{7cm}
+             \includegraphics[width=7cm]{\currentpath/images/Scratch_lutins}
+          \end{minipage}
+ 
+\pagebreak
+
+       \item {\bf Création du labyrinthe} \dotfill \\ 
+          \begin{minipage}{9cm}
+             \includegraphics[width=8cm]{\currentpath/images/Scratch_labyrinthe}
+          \end{minipage}
+          \qquad
+          \begin{minipage}{6cm}
+             Créer un labyrinthe : pour cela cliquer sur \textcolor{B1}{Choisir un sprite} et sélectionner \textcolor{B1}{Peindre}. L'onglet \textcolor{B1}{Costumes} s'ouvre avec une fenêtre permettant de dessiner. \\
+             Les outils principaux à utiliser pour dessiner le labyrinthe sont le \textcolor{B1}{trait} et la \textcolor{B1}{gomme}. \\
+             Il est possible de configurer l'épaisseur du trait et sa couleur dans les options. \\
+             Renommer le dessin sous le nom de \og Labyrinthe \fg.
+          \end{minipage}
+    \end{enumerate}
+ 
+ \partie[placer et déplacer]
+    \begin{enumerate}
+    \setcounter{enumi}{3}
+       \item {\bf Placement du chasseur et de la proie dans le labyrinthe} \dotfill \\
+       En utilisant la souris, placer le chasseur sur le point de départ du labyrinthe et placer la proie dans le labyrinthe \parbox{2.5cm}{\includegraphics[width=2.5cm]{\currentpath/images/Scratch_lutins_taille}} Adapter leur \textcolor{B1}{taille} dans la fenêtre en bas à droite : \parbox{3cm}{\includegraphics[width=3cm]{\currentpath/images/Scratch_taille}} \\ \medskip
+ 
+       \item {\bf Programmation des flèches de déplacement} \dotfill \\
+    Pour déplacer le chasseur, il faut définir un programme pour chacune des quatre flèches de direction du clavier. \\
+    Cliquer sur le lutin {\it Chasseur} puis créer ces quatre programmes dans la fenêtre de script de ce lutin. \\
+    %    \begin{center}
+    %       \begin{scratch}
+    %            \blockinitclone{quand la touche \selectmenu{flèche haut} est pressée}
+    %          \blockmove{s'orienter à \ovalnum{0}}
+    %          \blockmove{avancer de \ovalnum{10} pas}
+    %       \end{scratch}
+ 
+    %       \begin{minipage}{7cm}
+    %          \begin{scratch}
+    %             \blockinitclone{quand la touche \selectmenu{flèche gauche} est pressée}
+    %             \blockmove{s'orienter à \ovalnum{-90}}
+    %             \blockmove{avancer de \ovalnum{10} pas}
+    %          \end{scratch}
+    %       \end{minipage}
+    %       \hfill
+    %       \begin{minipage}{7cm}
+    %          \begin{scratch}
+    %             \blockinitclone{quand la touche \selectmenu{flèche droite} est pressée}
+    %             \blockmove{fixer le sens de rotation \selectmenu{gauche-droite}}
+    %             \blockmove{s'orienter à \ovalnum{90}}
+    %               \blockmove{avancer de \ovalnum{10} pas}
+    %          \end{scratch}
+    %       \end{minipage}
+ 
+    %       \begin{scratch}
+    %          \blockinitclone{quand la touche \selectmenu{flèche bas} est pressée}
+    %          \blockmove{s'orienter à \ovalnum{180}}
+    %          \blockmove{avancer de \ovalnum{10} pas}
+    %       \end{scratch}
+    %    \end{center} \medskip
+       Vérifier que ces programmes fonctionnent en déplaçant le chasseur.
+ 
+% \pagebreak
+
+%        \item {\bf Création des contraintes du labyrinthe} \dotfill \\
+%        \begin{minipage}{9cm}
+%           Le chasseur ne doit pas pouvoir traverser les murs du labyrinthe, il faut donc créer un programme qui fait \og rebondir \fg{} le chasseur lorsqu'il percute un mur. \\
+%           Créer ce programme pour le lutin chasseur. \\
+%           Dans le programme, on remarque la présence du block \textcolor{B1}{aller à} qui indique les cordonnées du chasseur déjà placé sur l'écran. Cela permet de réinitialiser sa position à chaque début de partie. \\
+%        \end{minipage}
+%        \qquad
+%        \begin{minipage}{6cm}
+%           \begin{scratch}
+%              \blockinitclone{quand \greenflag est cliqué}
+%              \blockmove{aller à x : \ovalnum{-157} y : \ovalnum{133}}
+%              \blockinfloop{répéter indéfiniment}
+%                 {\blockif{si \boolsensing{touche le \ovalsensing{Labyrinthe} ?} alors}
+%                    {\blockmove{tourner \turnright{} de \ovalnum{90} degrés}
+%                    \blockmove{avancer de \ovalnum{10} pas}
+%                    }
+%                 }
+%           \end{scratch}
+%        \end{minipage}
+    \end{enumerate}
+ 
+%  \partie[créer et programmer le compteur]
+%     \begin{enumerate}
+%     \setcounter{enumi}{6}
+%        \item {\bf Création du compteur} \dotfill \\
+%           \hspace*{0.5cm}
+%           \begin{minipage}{4.5cm}
+%              {\blue \includegraphics[width=3.3cm]{Scratch_compteur}} \medskip
+%           \end{minipage}
+%           \qquad
+%           \begin{minipage}{10cm}
+%              Le chasseur va aller manger une à une les proies, un compteur doit indiquer le nombre de proies restantes tout au long du jeu. Nous allons donc créer une variable qui dénombre les proies restant en jeu. \\
+%              Trouver le bloc \textcolor{B1}{Créer une variable} puis y donner un nom, par exemple {\it Nombre de proies restantes}.
+%           \end{minipage}
+
+%        \item {\bf Programmation du compteur et de la disparition des proies} \dotfill \\
+%           \begin{minipage}{9cm}
+%              Lorsque le chasseur arrive sur sa proie, il la mange, celle-ci disparaît et le compteur est réduit de 1. \\
+%              Faire le programme suivant pour le lutin \textcolor{B1}{Proie}. \\
+%              On peut ajuster le compteur sur l'écran en le plaçant à un endroit où il ne gène pas le jeu.
+%           \end{minipage}
+%           \qquad
+%           \begin{minipage}{7cm}
+%              \begin{scratch}
+%                 \blockinitclone{quand \greenflag est cliqué}
+%                 \blockvariable{mettre \selectmenu{Nombre de cafards restants} à \ovalnum{5}}
+%                 \blocklook{montrer}
+%                 \blockinfloop{répéter indéfiniment}
+%                    {\blockif{si \boolsensing{touche le \ovalsensing{Grenouille} ?} alors}
+%                       {\blockvariable{ajouter \ovalnum{-1} à  \selectmenu{Nombre de cafards restants}}
+%                       \blocksound{jouer le son \selectmenu{pop} jusqu'au bout}
+%                       \blocklook{cacher}
+%                       }
+%                    }
+%              \end{scratch}
+%           \end{minipage}
+  
+%        \item {\bf Ajout des autres proies} \dotfill \\
+%           Nous avons fixé les proies à cinq, il faut donc les ajouter. Pour cela, il suffit de sélectionner la proie déjà créée et de la \textcolor{B1}{dupliquer} autant de fois que nécéssaire. Un clic droit sur le lutin proie permet de faire cela rapidement. \\
+%           Placer alors les quatre autres proies dans le labyrinthe.
+%     \end{enumerate}   
+  
+%  \partie[let's go !]
+%     Placer le jeu en plein écran grâce au pictogramme \parbox{1cm}{\includegraphics[width=0.7cm]{Scratch_plein_ecran}}, appuyer sur le {\textcolor{B1}{drapeau vert}} et jouer !!!
 \end{enigme}
 \end{changemargin}
