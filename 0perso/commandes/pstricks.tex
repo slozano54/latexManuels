@@ -21,6 +21,14 @@
 % #2 --> couleur
 \newcommand{\hexa}[2]{\pspolygon[fillstyle=solid,fillcolor=#2](#1;0)(#1;60)(#1;120)(#1;180)(#1;-120)(#1;-60)}
 
+%pièces du tangram  - commande de Nathalie DAVAL
+\def\pt{\psset{unit=4.24}\pspolygon(0,0)(1,0)(1,1)} 
+\def\mt{\psset{unit=6}\pspolygon(0,0)(1,0)(1,1)} 
+\def\gt{\psset{unit=8.49}\pspolygon(0,0)(1,0)(1,1)} 
+\def\ca{\psset{unit=4.24}\psframe(0,0)(1,1)}
+\def\pa{\psset{unit=3}\pspolygon(0,0)(-2,0)(-3,1)(-1,1)}
+\def\pas{\psset{unit=3}\pspolygon(0,0)(-2,0)(-3,-1)(-1,-1)}
+
 %==========================================
 % Probabilités
 %==========================================
