@@ -46,3 +46,30 @@
           }
        }      
    }
+
+%Rapporteur - commande de Nathalie DAVAL
+% #1 --> 
+% #2 --> 
+% #3 --> 
+% #4 --> 
+\newcommand{\rapporteur}[4]
+   {\scalebox{#4}
+      {\rput{#3}(#1,#2)           
+          {\psarc(0,0){3.75}{0}{180} %arc extérieur
+           \psline(-3.75,0)(-3.75,-0.75)(3.75,-0.75)(3.75,0) %trait extérieur
+           \psarc(0,0){2.5}{0}{180} %arc intérieur
+           \psline(-2.5,0)(-0.5,0) %trait intérieur gauche
+           \psarc(0,0){0.5}{0}{180} %petit arc
+           \psline(0.5,0)(2.5,0) %trait intérieur droit
+           \psline(-0.1,0)(0.1,0) % signe plus
+           \psline(0,-0.1)(0,0.1) % signe plus   
+           \multido{\i=0+1}{180}{\psline(3.55;\i)(3.75;\i)} %graduations extérieures
+           \multido{\i=0+10}{19}{\psline(3.4;\i)(3.75;\i)} %grandes graduations extérieures   
+           \multido{\i=0+5}{36}{\psline(3.45;\i)(3.75;\i)} %petites graduations extérieures              
+           \multido{\i=0+10}{19}{\psline(2.7;\i)(2.5;\i)} %grandes graduations intérieures   
+           \multido{\i=0+5}{36}{\psline(2.6;\i)(2.5;\i)} %petites graduations intérieures
+           \multido{\i=0+10}{19}{\uput[\i](2.9;\i){\tiny{\i}}} %écriture extérieure
+           \multido{\i=180+-10,\I=0+10}{19}{\uput[\i](2.5;\i){\tiny{\I}}} %écriture intérieure   
+           }
+       }      
+   }

@@ -1,2 +1,149 @@
-\section{...}
-\dots
+\section{Construire des triangles}    
+    \begin{remarque}
+        Pour construire un triangle, il faut au minimum trois données.
+    \end{remarque}
+    \begin{methode*1}[Construction d'un triangle connaissant trois longueurs]
+        Pour construire un triangle $ABC$ dont on connaît les longueurs des trois côtés :
+        \begin{itemize}
+           \item on trace à la règle graduée l'un des côtés (en général le plus grand), par exemple $[AB]$ ;
+           \item on trace un arc de cercle de centre $A$ et de rayon $AC$ ;
+           \item on trace un arc de cercle de centre $B$ et de rayon $BC$ ;
+           \item le point $C$ se situe à l'intersection des deux arcs de cercle.
+        \end{itemize}
+        % \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        %     \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_046.html}{Trois côtés connus}
+         
+        %     \creditInstrumentPoche
+        % \end{myBox}
+        \exercice
+           Tracer le triangle $ABC$ tel que : $AB =\ucm{3,5}$ ; $BC =\ucm{2,2}$ ; $CA =\ucm{3,2}$.
+        \correction
+              \ \\
+              {\small
+              \psset{unit=0.7}
+              \begin{pspicture}(-0.5,-1.5)(4.8,2.8)
+                 \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                 \pstLineAB{A}{B}
+                 \pstLabelAB[offset=-3mm]{A}{B}{\ucm{3,5}}
+              \end{pspicture}
+              \begin{pspicture}(0,-1.5)(4.8,2.8)
+                 \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                 \pstLineAB{A}{B}
+                 \psset{linecolor=A1}
+                 \psarc(0,0){3.2}{30}{60}
+                 \rput{55}(0.8,1.3){\textcolor{A1}{\ucm{3,2}}}
+                 \compas{1.5}{1.2}{55}{0.9}{34.5}
+              \end{pspicture}
+              \begin{pspicture}(0,-1.5)(4.8,2.8)
+                 \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                 \pstLineAB{A}{B}
+                 \psset{linecolor=A1}
+                 \psarc(0,0){3.2}{30}{60}
+                 \psset{linecolor=B1}
+                 \psarc[fillstyle=none](3.5,0){2.2}{90}{130}
+                 \rput{-45}(2.8,0.8){\textcolor{B1}{\ucm{2,2}}}
+                 \compas{3.3}{1.1}{130}{0.9}{23}
+              \end{pspicture}
+              \begin{pspicture}(0,-1.5)(2,2.8)
+                 \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={225,90,-45}](0,0){A}(2.5,2){C}(3.5,0){B}
+                 \pstLineAB{A}{B}
+                 \pstLineAB{B}{C}
+                 \pstLineAB{C}{A}
+              \end{pspicture}}
+    \end{methode*1}
+
+    \begin{methode*1}[Construction d'un triangle connaissant deux longueurs et un angle]
+        Pour construire un triangle $ABC$ dont on connait la longueur de deux côtés ainsi que l'angle entre ces cotés :
+        \begin{itemize}
+            \item on trace à la règle graduée l'un des côtés donnés, par exemple $[AB]$ ;
+            \item on trace au rapporteur l'angle donné à partir du segment tracé ;
+            \item on trace à la règle graduée le deuxième segment de longueur donnée le long du support de l'angle tracé juste avant ;
+            \item le point $C$ se trouve à l'extrémité de ce segment.
+        \end{itemize}
+        % \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+        %     \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_043.html}{Deux côtés et un angle aigu connus}
+
+        %     \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_045.html}{Deux côtés et un angle obtu connus}
+
+        %     \creditInstrumentPoche
+        % \end{myBox}
+        \exercice
+            Tracer le triangle $ABC$ tel que : $AB =\ucm{3,5}$ ; $\widehat{BAC} =39$\degre et $CA =\ucm{3,2}$.
+        \correction
+            \ \\
+            {\small
+            \psset{unit=0.8}
+            \begin{pspicture}(-0.5,-1.5)(4.5,3)
+                \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                \pstLineAB{A}{B}
+                \pstLabelAB[offset=-3mm]{A}{B}{\ucm{3,5}}
+            \end{pspicture}
+            \begin{pspicture}(-3,-1.5)(4.1,3)
+                \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                \pstLineAB{A}{B}  
+                \psset{linecolor=A1}
+                \rapporteur{0}{0}{0}{0.75}
+                \psline(0,0)(4;38.66)
+                \psarc(0,0){1}{0}{39}
+                \rput(1.4,0.4){\textcolor{A1}{39\degre}}
+            \end{pspicture}
+            \begin{pspicture}(-1,-1.5)(3,3)
+                \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={225,90,-45}](0,0){A}(2.5,2){C}(3.5,0){B}
+                \psline(0,0)(4;38.66) 
+                \psline[linecolor=B1,linewidth=0.8mm](0,0)(2.5,2)
+                \rput{40}(1.1,1.4){\textcolor{B1}{3,2 cm}}
+                \pstLineAB{A}{B}
+                \pstLineAB{B}{C}
+            \end{pspicture}}
+    \end{methode*1}
+
+    \begin{methode*1}[Construction d'un triangle connaissant une longueur et deux angles]
+        Pour construire un triangle $ABC$ dont on connait la longueur d'un côté ainsi que ses deux angles adjacents :
+        \begin{itemize}
+            \item on trace à la règle graduée le côté donné, par exemple $[AB]$ ;
+            \item on trace au rapporteur les deux angles donnés à partir du segment tracé ;
+            \item les deux demi-droites tracées grâce au rapporteur se coupent au point $C$.
+        \end{itemize}
+        % \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        %     \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_044.html}{Construire un triangle connaissant un côté et deux angles}
+
+        %     \creditInstrumentPoche
+        % \end{myBox}        
+        \exercice
+            Tracer le triangle $ABC$ tel que : $AB =\ucm{3,5}, \widehat{BAC} =39$\degre et $\widehat{ABC} =63$\degre
+        \correction
+            \ \\
+            {\small
+            \psset{unit=0.8}
+            \begin{pspicture}(-0.5,-1.5)(4.5,3.3)
+                \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                \pstLineAB{A}{B}
+                \rput(1.75,-0.25){3,5 cm}
+            \end{pspicture}
+            \begin{pspicture}(-3,-1.5)(4.1,3.3)
+                \pstGeonode[PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                \pstLineAB{A}{B}  
+                \psset{linecolor=A1}
+                \rapporteur{0}{0}{0}{0.75}
+                \psline(0,0)(4;38.66)
+                \psarc(0,0){1}{0}{39}
+                \rput(1.4,0.4){\textcolor{A1}{39\degre}}
+            \end{pspicture}
+            \begin{pspicture}(-1,-1.5)(3,3.3)
+                \pstGeonode[PointSymbol=none,PosAngle={225,-45}](0,0){A}(3.5,0){B}
+                \pstLineAB{A}{B}
+                \psline{->}(2.5,3.2)(2.5,2)
+                \psset{linecolor=A1}
+                \psline(0,0)(4;38.66)
+                \psset{linecolor=B1}
+                \rapporteur{4.65}{0}{0}{0.75}
+                \psline(3.5,0)(2.05,2.8)
+                \psarc(3.5,0){0.8}{117}{180}
+                \rput(2.5,0.6){\textcolor{B1}{63\degre}}
+                \rput(2.5,3.5){C}
+            \end{pspicture}}
+    \end{methode*1}
+
+    \begin{remarque}
+    pour chaque cas, on a deux choix de construction pour $C$, d'un côté ou de l'autre du segment.
+    \end{remarque}

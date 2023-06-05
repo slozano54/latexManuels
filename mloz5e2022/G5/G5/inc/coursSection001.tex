@@ -1,2 +1,37 @@
-\section{...}
-\dots
+\section{Inégalité triangulaire}
+\begin{propriete}[\admise]
+   Dans un triangle, la longueur d'un côté est toujours inférieure à la somme des longueurs des deux autres côtés.
+\end{propriete}
+
+\begin{remarque}
+     S'il y a égalité, alors les trois points sont alignés et le triangle est \og plat \fg.
+\end{remarque}
+
+\begin{exemple}
+   \begin{center}
+        \begin{Geometrie}
+            pair A,B,C;
+            A=u*(1,1);
+            B-A=u*(4,0);
+            C=cercles(A,3u) intersectionpoint cercles(B,2u);
+            trace polygone(A,B,C);
+            label.lft(btex A etex,A);
+            label.rt(btex B etex,B);
+            label.top(btex C etex,C);
+            trace appelation(A,B,-3mm,btex \Lg{3.5} etex);
+            trace appelation(A,C,3mm,btex  \Lg{3.2} etex);
+            trace appelation(C,B,3mm,btex  \Lg{2.2} etex);
+        \end{Geometrie}
+    \end{center}
+   \correction
+   Dans le triangle $ABC$, on a :
+   \begin{itemize}
+      \item $AC =\Lg{3.2}$ et $AB+BC =\Lg{5.7}$ donc $AC\leq AB+BC$ ;
+      \item $CB =\Lg{2.2}$ et $CA+AB =\Lg{6.7}$ donc $CB\leq CA+AB$ ;
+      \item $BA =\Lg{3.5}$ et $BC+CA =\Lg{5.4}$ donc $BA\leq BC+CA$.
+   \end{itemize}
+\end{exemple}
+
+\begin{propriete}[Inégalité triangulaire \admise]
+    Trois longueurs étant données, Si la plus grande longueur est inférieure ou égale à la somme des deux autres alors on peut construire un triangle avec ces trois longueurs.
+ \end{propriete}
