@@ -1,0 +1,61 @@
+\begin{exercice*}
+   Meriem veut tracer un triangle tel que son périmètre mesure \Lg[cm]{16} et deux de ses angles mesurent \ang{64} et \ang{46}.
+   \begin{enumerate}
+      \item Calculer la mesure de son troisième angle.
+      \item Tracer un segment $[DE]$ mesurant \Lg[cm]{16} et placer le point $A$ tel que $\widehat{ADE} =\ang{32}$ et $\widehat{AED} =\ang{23}$ qui sont les angles moitié de \ang{64} et \ang{46}.
+      \item Placer un point $B$ sur le segment $[DE]$ à égale distance de $A$ et de $D$, puis un point $C$ sur le segment $[DE]$ à égale distance de $A$ et $E$. 
+      \item Quelle est la nature des triangles $ABD$ et $ACE$ ?
+      \item Calculer la mesure des angles de $ABD$ et de $ACE$.
+      \item Démontrer que le périmètre du triangle $ABC$ vaut bien \Lg[cm]{16}.
+      \item Montrer que $\widehat{ABC} =\ang{46}$ et $\widehat{ACB} =\ang{64}$ puis conclure.
+   \end{enumerate}
+   \hfill {\it\footnotesize Source : Sesamath, le manuel 5\up{e}. Génération 5 - 2013}   
+\end{exercice*}
+\begin{corrige}
+   %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+   \begin{enumerate}
+      \item La somme des angles fait \ang{180} donc, le troisième angle mesure $\ang{180}-\ang{64}-\ang{46} =\red\ang{70}$.
+      \item Figure à l'échelle 1/2 en bas de page, complétée au fur et à mesure.
+      \item Pour tracer les points demandés, il suffit de construire la médiatrice de $[AD]$ qui coupe $[DE]$ en $B$, puis celle de $[AE]$ qui coupe $[DE]$ en $C$.
+      \item {\red Le triangle $ABD$ est isocèle en $B$} puisque le point $B$ est à égale distance de $A$ et $D$. \\
+         {\red Le triangle $ACE$ est isocèle en $C$} puisque le point $C$ est à égale distance de $A$ et $E$.
+%    \end{enumerate}
+   
+% \Coupe
+
+%    \begin{enumerate}
+%    \setcounter{enumi}{4}
+      \item $ABD$ est isocèle en $B$ donc, $\widehat{DAB} =\widehat{ADB} =\ang{32}$. \\
+         La somme des angles faisant \ang{180}, l'angle $\widehat{ABD}$ mesure alors $\ang{180}-2\times\ang{32} =\ang{116}$. \\
+         {\red Les angles de $ABD$ mesurent \ang{32}, \ang{32} et \ang{116}}. \\
+         $ACE$ est isocèle en $C$ donc, $\widehat{CAE} =\widehat{CEA} =\ang{23}$. \\
+         La somme des angles faisant \ang{180}, l'angle $\widehat{ACE}$ mesure $\ang{180}-2\times\ang{23} =\ang{134}$. \\
+         {\red Les angles de $ACE$ mesurent \ang{23}, \ang{23} et \ang{134}}.
+      \item $AB+BC+CA = DB+BC+CE =DE =\Lg[cm]{16}$. \\
+        {\red Le périmètre de $ABC$ vaut \Lg[cm]{16}}.
+      \item $\widehat{ABC} =\ang{180}-\ang{116} =\ang{64}$ ; \\
+         $\widehat{ACB} =\ang{180}-\ang{134} =\ang{46}$. \\
+         Conclusion : {\red le triangle $ABC$ correspond bien au triangle demandé.}
+   \end{enumerate}
+   {\psset{unit=0.5,PointSymbol=none,CodeFig=true}
+      \small
+       \begin{pspicture}(1,-2.3)(15.5,5.5)
+         \pstTriangle[PointSymbol=none](0,0){D}(16,0){E}(7.63;32){A}
+         \psline[linestyle=dashed]{<->}(0,-1.5)(16,-1.5)
+         \rput(8,-2){\Lg[cm]{16}}
+         \pstMarkAngle[MarkAngleRadius=1.5,LabelSep=2.2]{E}{D}{A}{\small \ang{32}}
+         \pstMarkAngle[MarkAngleRadius=1.5,LabelSep=2.2]{A}{E}{D}{\small \ang{23}}
+         \psset{CodeFigColor=B1,linecolor=B1}
+         \pstMediatorAB[PointName=none]{A}{D}{I}{J}
+         \pstMediatorAB[PointName=none,SegmentSymbol=pstslash]{E}{A}{K}{L}
+         \psset{PosAngle=-90,linecolor=red}
+         \pstInterLL{D}{E}{I}{J}{B}
+         \pstInterLL{D}{E}{K}{L}{C}
+         \pstLineAB{A}{B}
+         \pstLineAB{A}{C}
+         \pstLineAB{B}{C}
+         \pstMarkAngle[MarkAngleRadius=0.8,LabelSep=1.6]{C}{B}{A}{\small\red \ang{64}}
+         \pstMarkAngle[MarkAngleRadius=0.8,LabelSep=1.6]{A}{C}{B}{\small\red \ang{46}}
+      \end{pspicture}}
+\end{corrige}
+

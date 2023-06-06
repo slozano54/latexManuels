@@ -1,8 +1,46 @@
 \begin{exercice*}
-    \dots
+    Ces triangles sont-ils constructibles (ils ne sont pas tracés en vraie grandeur) ?
+    \begin{center}
+        {\small
+        \psset{unit=0.8}
+        \begin{pspicture}(-0.5,-0.5)(3,2.5)
+            \pstTriangle[PointSymbol=none](0,0){G}(3,0){L}(1,2){E}
+            \pstLabelAB[offset=-3mm]{G}{L}{\ucm{8}}
+            \pstLabelAB{G}{E}{\ucm{3}}
+            \pstLabelAB{E}{L}{\ucm{3,5}}
+        \end{pspicture}
+        \begin{pspicture}(-0.5,-1.5)(3.5,1)
+            \pstTriangle[PointSymbol=none](0,0){E}(3,0){U}(1.5,1){A}
+            \pstLabelAB[offset=-3mm]{E}{U}{\ucm{6,2}}
+            \pstLabelAB{E}{A}{\ucm{3,1}}
+            \pstSegmentMark[MarkAngle=90]{E}{A}
+            \pstSegmentMark[MarkAngle=90]{A}{U}
+        \end{pspicture} 
+
+        \psset{unit=1.5}
+        \begin{pspicture}(0,-1)(3,1.5)
+            \pstTriangle[PointSymbol=none](0,0){G}(3,0){Z}(2.7,1){A}
+            \pstLabelAB[offset=-3mm]{G}{Z}{\ucm{6,3}}
+            \pstLabelAB{A}{Z}{\ucm{2}}
+            \pstSegmentMark[MarkAngle=90]{Z}{G}
+            \pstSegmentMark[MarkAngle=90]{A}{G}
+        \end{pspicture} 
+        \begin{pspicture}(-0.5,-0.5)(3.5,1.5)
+            \pstTriangle[PointSymbol=none](0,0){A}(3,0){R}(1,1.5){I}
+            \pstLabelAB[offset=-3mm]{A}{R}{\udm{1,3}}
+            \pstLabelAB{A}{I}{\ucm{6}}
+            \pstLabelAB{I}{R}{\ucm{8}}
+        \end{pspicture}}
+    \end{center}
+    \hrefMathalea{https://coopmaths.fr/alea/?uuid=f789c&id=5G21-1&alea=ab0n&v=eleve&es=02110}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    \dots
+    \begin{itemize}
+        \item Triangle $GEL$ : le plus grand côté $GL$ mesure \ucm{8} et la somme des deux autres côtés vaut $\ucm{3}+\ucm{3,5} =\ucm{6,5}$ qui est inférieure à \ucm{8} donc, {\blue le triangle $GEL$ n'est pas constructible}. \smallskip
+        \item Triangle $EAU$ : le plus grand côté $EU$ mesure \ucm{6,2} et la somme des deux autres côtés vaut $\ucm{3,1}+\ucm{3,1} =\ucm{6,2}$ qui est égale à \ucm{6,2} donc, {\blue le triangle $EAU$ est constructible, mais il est plat}. \smallskip
+        \item Triangle $GAZ$ : le plus grand côté $GZ$ mesure \ucm{6,3} et la somme des deux autres côtés vaut $\ucm{6,3}+\ucm{2} =\ucm{8,3}$ qui est supérieure à \ucm{6,3} donc, {\blue le triangle $GAZ$ est constructible}. \smallskip
+        \item Triangle $AIR$ : le plus grand côté $AR$ mesure \ucm{13} et la somme des deux autres côtés vaut $\ucm{6}+\ucm{8} =\ucm{14}$ qui est supérieure à \ucm{13} donc, {\blue le triangle $AIR$ est constructible}.
+    \end{itemize}
 \end{corrige}
 

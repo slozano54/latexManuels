@@ -1,8 +1,43 @@
 \begin{exercice*}
-   \dots
+   Après avoir effectué les calculs nécessaires, tracer chacun des triangles suivants en vraie grandeur.
+   \begin{enumerate}
+      \item $EFG$ tel que $EF =\Lg[cm]{7,5}$, $\widehat{EFG}=\udeg{49}$ et $\widehat{EGF}=\udeg{72}$.
+      \item $RST$ isocèle en $S$ de périmètre \Lg[cm]{13} et $ST=\Lg[cm]{4}$.
+      \item $OCI$ isocèle en $I$ tel que $CO=\Lg[cm]{7}$ et $\widehat{CIO} =\udeg{100}$.
+   \end{enumerate}
+   \hrefMathalea{https://coopmaths.fr/alea/?uuid=6a1a2&id=5G20-2&alea=gaMr&uuid=36116&id=5G20-0&n=2&d=10&s=10&s2=true&alea=oydQ&cd=1&v=eleve&es=02110}
 \end{exercice*}
 \begin{corrige}
    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-   \dots
+   \begin{enumerate}
+      \psset{linecolor=red}
+         \item Pour tracer le triangle $EFG$, il faut calculer l'angle $\widehat{GEF}$ : la somme des angle d'une triangle faisant \udeg{180}, $\widehat{GEF} =\udeg{180}-\udeg{49}-\udeg{72} =\udeg{59}$. \\
+            \begin{pspicture}(0.25,-0.75)(7.5,6)
+               \pstTriangle[PointSymbol=none](0,0){E}(7.5,0){F}(5.95;59){G}
+               \pstLabelAB[offset=-3mm]{E}{F}{\small\red \Lg[cm]{7,5}}
+               \pstMarkAngle{G}{F}{E}{\small\red \udeg{49}}
+               \pstMarkAngle{E}{G}{F}{\small\red \udeg{72}}
+               \pstMarkAngle{F}{E}{G}{\small \udeg{59}}
+            \end{pspicture}
+         \item Pour tracer le triangle $RST$ isocèle en $S$, il faut calculer la mesure du troisième côté. \\
+         On a $SR =ST =\Lg[cm]{4}$ et le périmètre mesure \Lg[cm]{13} donc, $RT =\Lg[cm]{13}-2\times\Lg[cm]{4} =\Lg[cm]{5}$. \\
+      \end{enumerate}      
+            \begin{pspicture}(-1,-0.75)(5,3.75)
+               \pstTriangle[PointSymbol=none](0,0){T}(5,0){R}(2.5,3.12){S}
+               \pstLabelAB[offset=-3mm]{T}{R}{\small \Lg[cm]{5}}
+               \pstLabelAB{T}{S}{\small\red \Lg[cm]{4}}
+               \pstLabelAB{S}{R}{\small \Lg[cm]{4}}
+            \end{pspicture}  
+      \begin{enumerate}
+      \setcounter{enumi}{2}      
+         \item Pour tracer le triangle $OCI$, il faut calculer les angles à la base. La somme des angle faisant \udeg{180}, il reste $\udeg{180}-\udeg{100} =\udeg{80}$ à partager en deux angles égaux puisque le triangle est isocèle, soit \udeg{40} chacun. \\
+            \begin{pspicture}(0,0)(7,3.5)
+               \pstTriangle[PointSymbol=none](0,0){C}(7,0){O}(4.57;40){I}
+               \pstLabelAB[offset=-3mm]{C}{O}{\small\red \Lg[cm]{7}}
+               \pstMarkAngle{C}{I}{O}{\small\red \udeg{100}}
+               \pstMarkAngle{O}{C}{I}{\small \udeg{40}}
+               \pstMarkAngle{I}{O}{C}{\small \udeg{40}}
+            \end{pspicture}
+      \end{enumerate}
 \end{corrige}
 
