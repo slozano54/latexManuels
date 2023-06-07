@@ -2,11 +2,106 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-...
-\end{enigme}  
+\begin{enigme}[Le tangram]
+
+    \partie[histoire]
+       Le jeu de tangram, appelé en chinois \og qī qiǎo bǎn \fg, prononcé {\it tzi tchiao pan}, \og les sept plaques de l’habileté \fg, semble avoir été inventé au début du {\small XIX}\up{e} siècle en Chine. \\
+       Ce jeu viendrait d'une légende qui dit qu'un empereur chinois du {\small XVI}\up{e} siècle du nom de {\it Tan}, fit tomber un carreau de faïence qui se brisa en 7 morceaux. Il n'arriva jamais à rassembler les morceaux pour reconstituer le carreau mais l'homme s'aperçut qu'avec les 7 pièces il était possible de créer de formes multiples.
+       
+    \vfill
+    
+    \partie[le tangram carré]
+       \begin{minipage}{10cm}
+          Voilà le tangram. \\
+          Donner la mesure de tous les angles présents sur la figure. \\
+          {\it Matériel autorisé : équerre et compas.}
+       \end{minipage}
+       \qquad
+       \begin{minipage}{6cm}
+          \psset{unit=0.4}
+          \begin{pspicture}(-3,6)(12,10.5)
+             \rput{135}(12,0){\gt}
+             \rput{-135}(12,12){\gt}
+             \rput{-90}(0,0){\pa}
+             \rput{45}(3,3){\pt}
+             \rput{45}(6,6){\ca}
+             \rput{-45}(6,12){\pt}
+             \rput{180}(6,12){\mt}
+          \end{pspicture}
+       \end{minipage}
+       
+     \vfill
+     
+    \partie[puzzles]
+       Le bonhomme et le sapin sont deux formes constituées des sept \\
+       pièces du tangram. Tracer le contour des formes à l'intérieur. \\
+       {\it Matériel autorisé : règle non graduée et rapporteur.}
+    \begin{center}
+       \psset{unit=0.5}
+       \begin{pspicture}(-2,1)(14,25)
+          \pspolygon(1.76,0)(6,0)(6,4.24)(9,1.24)(12,4.24)(6,4.24)(6,7.75)(14.49,16.24)(8.12,16.24)(8.12,20.48)(10.24,20.48)(6,24.72)(1.76,20.48)(3.88,20.48)(3.88,16.24)(0,16.24)(-3,13.24)(3,13.24)(0,10.24)(6,4.24)
+       \end{pspicture}
+    \quad
+       \begin{pspicture}(-8,-1)(7,23)
+          \pspolygon(-2.12,0)(2.12,0)(2.12,4.24)(8.48,4.24)(4.24,8.48)(8.48,8.48)(0,17)(-8.48,8.48)(-4.24,8.48)(-8.48,4.24)(-2.12,4.24)
+       \end{pspicture}
+    \end{center}
+    \end{enigme}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
-% \begin{corrige}
-%     \ldots
-% \end{corrige}
+\begin{corrige}
+    {\psset{unit=0.4}
+       \footnotesize
+       \begin{pspicture}(-3,-1)(12,12.3)
+          \rput{135}(12,0){\gt}
+          \rput{-135}(12,12){\gt}
+          \rput{-90}(0,0){\pa}
+          \rput{45}(3,3){\pt}
+          \rput{45}(6,6){\ca}
+          \rput{-45}(6,12){\pt}
+          \rput{180}(6,12){\mt}
+          \rput(1.5,0.5){\red\udeg{45}}
+          \rput(10.5,0.5){\red\udeg{45}}
+          \rput(6,5){\red\udeg{90}}
+          \rput(11.4,1.7){\red\udeg{45}}
+          \rput(11.4,10.5){\red\udeg{45}}
+          \rput(10.8,11.5){\red\udeg{45}}
+           \rput(9.2,10){\red\udeg{90}}
+          \rput(7.5,11.5){\red\udeg{45}}
+          \rput(4.7,11.5){\red\udeg{45}}
+          \rput(0.8,11.5){\red\udeg{90}}
+          \rput(0.7,7.4){\red\udeg{45}}
+          \rput(0.8,5.8){\red\udeg{135}}
+          \rput(0.7,1.4){\red\udeg{45}}
+          \rput(2.4,7.6){\red\udeg{45}}
+          \rput(2.2,3){\red\udeg{135}}
+          \rput(3.65,4.3){\red\udeg{45}}
+          \rput(3.65,7.5){\red\udeg{45}}
+          \rput(5.1,6){\red\udeg{90}}
+          \rput(6.15,6.8){\red\udeg{90}}
+          \rput(6,11.1){\red\udeg{90}}
+          \rput(4,9){\red\udeg{90}}
+          \rput(8,9){\red\udeg{90}}
+          \rput(7.1,6){\red\udeg{90}}
+       \end{pspicture}}
+       
+       {\psset{unit=0.2}
+       \begin{pspicture}(-3,1)(15,25)
+          \rput{-135}(6,16.24){\gt}
+          \rput{180}(14.49,16.24){\gt}
+          \rput{135}(10.24,20.48){\mt}
+          \rput{0}(1.76,0){\pt}
+          \rput{-45}(6,4.24){\pt}
+          \rput{0}(3.88,16.24){\ca}
+          \rput{0}(6,16.24){\pas}
+       \end{pspicture}
+       \begin{pspicture}(-8,-2)(8,20)
+          \rput{0}(-8.49,4.24){\gt}
+          \rput{-90}(0,12.73){\gt}
+          \rput{45}(0,12.73){\pa}
+          \rput{90}(4.24,8.48){\pt}
+          \rput{0}(-2.12,0){\ca}
+          \rput{-90}(4.24,12.73){\pt}
+          \rput{135}(4.24,12.73){\mt}
+       \end{pspicture}}
+    \end{corrige}
