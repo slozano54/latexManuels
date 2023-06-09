@@ -1,5 +1,104 @@
-\begin{activite}[\dots]
-    \begin{changemargin}{-10mm}{-15mm}
-        \dots
+\begin{activite}[La pêche mystérieuse]
+    \begin{changemargin}{0mm}{-20mm}
+    {\bf Objectif :} effectuer des additions et des soustractions avec des nombres entiers relatifs.
+
+       Sept amis jouent à la fête foraine au jeu de la pêche mystérieuse, ils gagnent ou il perdent des points selon les objets qu'ils \og pêchent \fg. Voilà les points qu'ils peuvent gagner : \\
+       {\psset{unit=0.9}
+       \begin{pspicture}(0,1)(15,3.25)
+          \rput(2,2.25){\psscalebox{0.4}{\psBill}}
+          \rput(4,2.5){\it\textcolor{B1}{Billy}}
+          \rput(4,2){\it\textcolor{B1}{+150 points}}
+          \rput{-30}(6,2.4){\psscalebox{0.55}{\psBird}}
+          \rput(9.5,2.5){\it\textcolor{B1}{Birdy}}
+          \rput(9.5,2){\it\textcolor{B1}{+100 points}}
+          \rput(12.5,1.5){\psKangaroo[fillcolor=brown]{1.7}}
+          \rput(14.5,2.5){\it\textcolor{B1}{Skippy}}
+          \rput(14.5,2){\it\textcolor{B1}{+50 points}}
+       \end{pspicture} \\
+       Cependant, certains objets font perdre des points : \\
+       \begin{pspicture}(0,1)(15,3.25)
+          \rput{-30}(2.2,2.25){\psscalebox{0.4}{\psAnt}}
+          \rput(4,2.5){\it\textcolor{B1}{Antas}}
+          \rput(4,2){\it\textcolor{B1}{-25 points}}
+          \rput(6.7,1.7){\psscalebox{0.25}{\psFish[fillstyle=slope]}}         
+          \rput(9.5,2.5){\it\textcolor{B1}{Fishas}}
+          \rput(9.5,2){\it\textcolor{B1}{-75 points}}
+          \rput(12.6,2.5){\psscalebox{0.45}{\psPig[fillcolor=pink](0,0)}}
+          \rput(14.5,2.5){\it\textcolor{B1}{Pigas}}
+          \rput(14.5,2){\it\textcolor{B1}{-125 points}}
+       \end{pspicture} \\
+       Compléter le tableau suivant des gains et des pertes. En déduire le total, puis le classement.
+       \begin{center}
+          \begin{Ltableau}{0.9\linewidth}{4}{c}
+             \hline
+             Pêche & Gains & Pertes & Total \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Ismaïl}
+                \rput(2,2.25){\psscalebox{0.3}{\psBill}}
+                \rput(3.5,2.25){\psscalebox{0.3}{\psBill}}
+                \rput(5,2.25){\psscalebox{0.3}{\psBill}}
+                \rput{-30}(5.8,2.3){\psscalebox{0.4}{\psBird}}
+                \rput(8.3,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Mohamed}
+                \rput{-30}(2.2,2.25){\psscalebox{0.3}{\psAnt}}
+                \rput(3.7,2.3){\psscalebox{0.33}{\psPig[fillcolor=pink](0,0)}}
+                \rput(4.7,1.9){\psscalebox{0.2}{\psFish[fillstyle=slope]}} 
+                \rput(6.4,1.9){\psscalebox{0.2}{\psFish[fillstyle=slope]}} 
+                \rput{-30}(8.5,2.25){\psscalebox{0.3}{\psAnt}}
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Khalil}
+                \rput(2,2.25){\psscalebox{0.3}{\psBill}}
+                \rput(3.5,2.25){\psscalebox{0.3}{\psBill}}
+                \rput{-30}(4.2,2.3){\psscalebox{0.4}{\psBird}}
+                \rput(6.8,2.3){\psscalebox{0.33}{\psPig[fillcolor=pink](0,0)}}
+                \rput(7.8,1.9){\psscalebox{0.2}{\psFish[fillstyle=slope]}} 
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Emeric}
+                \rput(2,2.3){\psscalebox{0.33}{\psPig[fillcolor=pink](0,0)}}
+                \rput(3.5,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+                \rput(4.6,1.9){\psscalebox{0.2}{\psFish[fillstyle=slope]}} 
+                \rput(6.7,2.25){\psscalebox{0.3}{\psBill}}
+                \rput(8.4,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Nirina}
+                \rput{-30}(2,2.25){\psscalebox{0.3}{\psAnt}}
+                \rput(3.5,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+                \rput{-30}(5.2,2.25){\psscalebox{0.3}{\psAnt}}
+                \rput{-30}(6.8,2.25){\psscalebox{0.3}{\psAnt}}
+                \rput{-30}(8.5,2.25){\psscalebox{0.3}{\psAnt}}
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Capucine}
+                \rput{-30}(1.1,2.3){\psscalebox{0.4}{\psBird}}
+                \rput(3.5,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+                \rput(4.6,1.9){\psscalebox{0.2}{\psFish[fillstyle=slope]}}
+                \rput(6.7,2.3){\psscalebox{0.35}{\psPig[fillcolor=pink](0,0)}}
+                \rput(8.2,1.7){\psKangaroo[fillcolor=brown]{1.2}}
+             \end{pspicture} & & & \\
+             \hline
+             \begin{pspicture}(0,1.5)(9.5,3)
+                \rput[l](0,2.2){Elyana}
+                \rput(2.1,2.3){\psscalebox{0.35}{\psPig[fillcolor=pink](0,0)}}
+                \rput(3.6,2.3){\psscalebox{0.35}{\psPig[fillcolor=pink](0,0)}}
+                \rput(5.1,2.3){\psscalebox{0.35}{\psPig[fillcolor=pink](0,0)}}
+                \rput{-30}(5.8,2.3){\psscalebox{0.4}{\psBird}}
+                \rput{-30}(7.4,2.3){\psscalebox{0.4}{\psBird}}
+             \end{pspicture} & & & \\
+             \hline
+          \end{Ltableau}
+       \end{center}
+       }
+       Classement : \pointilles
     \end{changemargin}
-\end{activite}
+ \end{activite} 
