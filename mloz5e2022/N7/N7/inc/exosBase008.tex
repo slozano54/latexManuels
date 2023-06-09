@@ -1,7 +1,30 @@
-
 \begin{exercice*}
-   \dots
+   Voici un programme de calcul :
+   \begin{center}
+      \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+         \ProgCalcul[Enonce,ThemePerso,Largeur=5cm]{%
+            Choisir un nombre,
+            Ajouter \num{-3},
+            Retirer \num{-1.5},
+            Donner l'opposé du résultat
+         }
+      }      
+   \end{center}
+   \begin{enumerate}
+      \item Appliquer ce programme au nombre $-2,5$ puis 0.
+      \item Quel nombre faut-il choisir pour obtenir 6 ?
+      \item Soit $x$ le nombre de départ, donner l'expression finale en fonction de $x$.
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item $-2,5 \xrightarrow[-3]{+(-3)} -5,5 \xrightarrow[+1,5]{-(-1,5)} -4 \xrightarrow{\text{opposé}} {\blue 4}$ \\ [1mm]
+         \quad\, $0 \xrightarrow[-3]{+(-3)} -3 \xrightarrow[+1,5]{-(-1,5)} -1,5 \xrightarrow{\text{opposé}} {\blue 1,5}$ \\ [1mm]
+      \item On effectue les opérations \og à l'envers \fg. \\ [1mm]
+         \quad\, $6 \xrightarrow{\text{opposé}} -6 \xrightarrow[-1,5]{+(-1,5)} -7,5  \xrightarrow[+3]{-(-3)}{\blue -4,5}$ \\ [1mm]
+      \item $x \xrightarrow[-3]{+(-3)} x-3 \xrightarrow[+1,5]{-(-1,5)} x-3+1,5$ \\
+         \quad\; $=x-1,5 \xrightarrow{\text{opposé}}{\blue -x+1,5}$. \\ [1mm]
+   \end{enumerate}
 \end{corrige}
