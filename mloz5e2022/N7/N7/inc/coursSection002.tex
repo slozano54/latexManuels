@@ -1,5 +1,98 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
-\end{changemargin}
- 
+\section{Soustraction}
+
+\begin{definition}[Nombres opposés]
+    Deux nombres relatifs sont dits \textbf{opposés} quand leur somme vaut zéro.\\
+    On note $-a$ l'opposé du nombre $a$.
+\end{definition}
+
+\begin{remarque}
+    $-a$ peut être positif! par exemple lorsque $a$ vaut $-4$.
+\end{remarque}
+
+Plus généralement :
+
+\begin{propriete}[\admise]
+    Si un nombre relatif est positif alors son opposé est négatif.
+\end{propriete}
+
+\begin{propriete}[\admise]
+    Si un nombre relatif est négatif alors son opposé est positif.
+\end{propriete}
+
+\begin{exemples*1}
+    \begin{enumerate}
+        \item $\num{-5.28}$ est l'opposé de $+\num{5.28}$ mais $+\num{5.28}$ est aussi l'opposé de $\num{-5.28}$ \\
+        en particulier $-(\num{-5.28})=\num{5.28}$
+        \item si $a=+\num{2.14}$ alors $-a=\num{-2.14}$ et si $a=\num{-7.81}$ alors $-a=+\num{7.81}$
+    \end{enumerate}
+\end{exemples*1}
+
+\begin{propriete}[Vision géométrique \admise]
+    Si deux nombres relatifs sont opposés alors ils correspondent à des points symétriques par rapport à l'origine.
+\end{propriete}
+
+\begin{exemples*1}
+    
+    \begin{changemargin}{0mm}{-15mm}    
+        \begin{minipage}{0.55\linewidth}
+        $-7$ et $+7$ sont opposés.
+        
+        \smallskip
+        \pspicture(-4,-.5)(4,1)
+            \psline{->}(-4,.5)(4,.5)
+            \rput(0,0.5){+}
+            \uput[90](0,0.5){O} 
+            \uput[-90](0,0.5){0} 
+            \rput(-3.5,.5){+}
+            \uput[90](-3.5,0.5){A} 
+            \uput[-90](-3.5,0.5){-7} 
+            \rput(3.5,.5){+}
+            \uput[90](3.5,0.5){B} 
+            \uput[-90](3.5,0.5){+7} 
+            \psline[linecolor=red]{<->}(-3.5,-0.2)(0,-0.2)
+            \uput[-90](-1.5,-0.2){7 unités} 
+            \psline[linecolor=red]{<->}(0,-0.2)(3.5,-0.2)
+            \uput[-90](1.5,-0.2){7 unités} 
+        \endpspicture
+        
+        \bigskip
+        $A$ et $B$ sont symétriques par rapport à $O$.
+        \end{minipage}        
+        \hfill
+        \begin{minipage}{0.55\linewidth}
+        $\dfrac13$ et $-\dfrac13$ sont opposés.
+        
+        \smallskip
+        \pspicture(-4,-.5)(4,1)
+            \psline{->}(-4,.5)(4,.5)
+            \multirput(-3,0.5)(1,0){7}{+}
+            \uput[90](0,0.5){O} 
+            \uput[-90](0,0.5){0} 
+            \uput[-90](3,0.2){+1} 
+            \uput[90](-1,0.5){C} 
+            \uput[-90](-1,0.5){$-\frac13$} 
+            \uput[90](1,0.5){D} 
+            \uput[-90](1,0.5){$\frac13$} 
+            \psline[linecolor=red]{<->}(-1,-0.2)(0,-0.2)
+            \psline[linecolor=red]{<->}(0,-0.2)(1,-0.2)
+        \endpspicture
+
+        \smallskip
+        $C$ et $D$ sont symétriques par rapport à $O$.
+        \end{minipage}
+    \end{changemargin}
+\end{exemples*1}
+
+\begin{propriete}[Soustraction \admise]
+    Si on soustrait un nombre relatif alors cela revient à additionner son nombre opposé.
+\end{propriete}
+
+\begin{exemples*1}
+    \begin{itemize}
+        \item l'opposé de $+\num{8.2}$ est $\num{-8.2}$ donc soustraire $+\num{8.2}$ revient à ajouter $\num{-8.2}$.
+        $$(+14)-(+\num{8.2})=(+14)+(-\num{8.2})=+\num{5.8}$$
+        \item l'opposé de $\num{-8.2}$ est $+\num{8.2}$ donc soustraire $\num{-8.2}$ revient à ajouter $+\num{8.2}$.
+        $$(\num{-17.2})-(\num{-8.2})=(\num{-17.2})+(+\num{8.2})=-9$$
+        \item $+\dfrac54 -(+\dfrac34)=+\dfrac54 +(-\dfrac34)=-\dfrac14$
+    \end{itemize}
+\end{exemples*1}
