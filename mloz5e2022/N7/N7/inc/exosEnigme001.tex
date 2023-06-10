@@ -2,16 +2,133 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-    \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
-    \end{changemargin}
-\end{enigme}
-
+\begin{enigme}[Décryptage]
+    \bigskip
+    Décrypter les codes suivants utilisé par l'agent Zérozérossette sachant que chaque symbole correspond à un nombre entier relatif et que la somme de chaque ligne et de chaque colonne est indiquée en bout de celle-ci. \\
+    \medskip
+    \begin{center}
+       {\renewcommand{\arraystretch}{1.5}
+       \begin{tabular}{*{7}{>{\centering\arraybackslash}p{0.3cm}}}
+          \Large\ding{101} & $+$ & \Large\ding{101} & $+$ & \Large\ding{40} & $=$ & \large 16 \\
+          $+$ & & $+$ & & $+$ & & \\
+          \Large\ding{168} & + & \Large\ding{168} & + & \Large\ding{168} & $=$ & \large 9 \\
+          $+$ & & $+$ & & $+$ & & \\
+          \Large\ding{40} & + & \Large\ding{52} & + & \Large\ding{168} & $=$ & \large 18 \\
+          $=$ & & $=$ & & $=$ & & \\
+          \large 14 & & \large 17 & & \large 12 & & \\
+       \end{tabular}
+       \hspace*{4cm}
+       \begin{tabular}{*{7}{>{\centering\arraybackslash}p{0.3cm}}}
+          \Large\ding{101} & $+$ & \Large\ding{101} & $+$ & \Large\ding{101} & $=$ & \large $-3$ \\
+          $+$ & & $+$ & & $+$ & & \\
+          \Large\ding{40} & + & \Large\ding{168} & + & \Large\ding{101} & $=$ & \large $-3$ \\
+          $+$ & & $+$ & & $+$ & & \\
+          \Large\ding{52} & + & \Large\ding{52} & + & \Large\ding{168} & $=$ & \large 6 \\
+          $=$ & & $=$ & & $=$ & & \\
+          \large 6 & & \large 0 & & \large $-6$ & & \\
+       \end{tabular}
+ 
+       \ \\ [10mm]
+       
+       \begin{tabular}{|p{1.8cm}|p{1.8cm}|}
+          \hline
+          \Large\ding{101} = & \Large\ding{40} = \\
+          \hline
+          \Large\ding{168} = & \Large\ding{52} = \\
+          \hline
+       \end{tabular}
+       \hspace*{5cm}
+       \vspace*{1cm}
+       \begin{tabular}{|p{1.8cm}|p{1.8cm}|}
+          \hline
+          \Large\ding{101} = & \Large\ding{40} = \\
+          \hline
+          \Large\ding{168} = & \Large\ding{52} = \\
+          \hline
+       \end{tabular}
+ 
+       \ \\ [5mm]
+       
+       \begin{tabular}{*{9}{>{\centering\arraybackslash}p{0.3cm}}}
+          \Large\ding{101} & $+$ & \Large\ding{40} & $+$ & \Large\ding{40} & $+$ & \Large\ding{101} & $=$ & \large 2 \\
+          $+$ & & $+$ & & $+$ & & $+$ & \\
+          \Large\ding{40} & $+$ & \Large\ding{40} & $+$ & \Large\ding{40} & $+$ & \Large\ding{168} & $=$ & \large 9 \\
+          $+$ & & $+$ & & $+$ & & $+$ & \\
+          \Large\ding{40} & + & \Large\ding{168} & + & \Large\ding{52} & $+$ & \Large\ding{36} & $=$ & \large $-7$ \\
+          $=$ & & $=$ & & $=$ & & $=$ & \\
+          \large 3 & & \large 7 & & \large $-1$ & & \large $-5$ & & \\ 
+       \end{tabular}
+       \hspace*{2cm}
+       \begin{tabular}{*{9}{>{\centering\arraybackslash}p{0.3cm}}}
+          \Large\ding{52} & $+$ & \Large\ding{52} & $+$ & \Large\ding{168} & $+$ & \Large\ding{168} & $=$ & \large \!\!$-158$ \\
+          $+$ & & $+$ & & $+$ & & $+$ & \\
+          \Large\ding{40} & $+$ & \Large\ding{52} & $+$ & \Large\ding{36} & $+$ & \Large\ding{36} & $=$ & \large \!$-19$ \\
+          $+$ & & $+$ & & $+$ & & $+$ & \\
+          \Large\ding{101} & + & \Large\ding{52} & + & \Large\ding{40} & $+$ & \Large\ding{52} & $=$ & \large \!$-86$ \\
+          $=$ & & $=$ & & $=$ & & $=$ & \\
+          \large \!$-32$ & & \large \!\!$-162$ & & \large \!$-37$ & & \large \!$-32$ & & \\ 
+       \end{tabular}
+ 
+      \ \\ [10mm]
+      
+       \begin{tabular}{|p{1.8cm}|p{1.8cm}|p{1.8cm}|}
+          \hline
+          \Large\ding{101} = & \Large\ding{40} = & \Large\ding{168} = \\
+          \hline
+          \Large\ding{36} = & \Large\ding{52} = \\
+          \cline{1-2}
+       \end{tabular}
+       \hspace*{2cm}
+       \begin{tabular}{|p{1.8cm}|p{1.8cm}|p{1.8cm}|}
+          \hline
+          \Large\ding{101} = & \Large\ding{40} = & \Large\ding{168} = \\
+          \hline
+          \Large\ding{36} = & \Large\ding{52} = \\
+          \cline{1-2}
+       \end{tabular}}
+    \end{center}
+ \end{enigme}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 
 \begin{corrige}
-    Correction du binz.
-\end{corrige}
- 
+    {\renewcommand{\arraystretch}{2}
+    Premier code. \\ [2mm]
+    \begin{tabular}{|p{1.8cm}|p{1.8cm}|}
+       \hline
+       \large\ding{101} = \textcolor{red}{5} & \large\ding{40} = \textcolor{red}{6} \\
+       \hline
+       \large\ding{168} = \textcolor{red}{3} & \large\ding{52} = \textcolor{red}{9} \\
+       \hline
+    \end{tabular}
+    }
+    \Coupe
+    {\renewcommand{\arraystretch}{2}  
+    \ \\ [5mm]
+    Deuxième code. \\ [2mm]
+    \begin{tabular}{|p{1.8cm}|p{1.8cm}|}
+       \hline
+       \large\ding{101} = \textcolor{red}{$-1$} & \large\ding{40} = \textcolor{red}{2} \\
+       \hline
+       \large\ding{168} = \textcolor{red}{$-4$} & \large\ding{52} = \textcolor{red}{5}\\
+       \hline
+    \end{tabular}
+    \ \\ [5mm]
+    Troisième code. \\ [2mm]
+    \begin{tabular}{|p{1.8cm}|p{1.8cm}|p{1.8cm}|}
+       \hline
+       \large\ding{101} = \textcolor{red}{$-1$} & \large\ding{40} = \textcolor{red}{2} & \large\ding{168} = \textcolor{red}{3} \\
+       \hline
+       \large\ding{36} = \textcolor{red}{$-7$} & \large\ding{52} = \textcolor{red}{$-5$} \\
+       \cline{1-2}
+    \end{tabular}
+    \ \\ [5mm]
+    Quatrième code. \\ [2mm]
+    \begin{tabular}{|p{1.8cm}|p{1.85cm}|p{1.8cm}|}
+       \hline
+       \large\ding{101} = \textcolor{red}{81} & \large\ding{40} = \textcolor{red}{$-59$} & \large\ding{168} = \textcolor{red}{$-25$} \\
+       \hline
+       \large\ding{36} = \textcolor{red}{47} & \large\ding{52} = \textcolor{red}{$-54$} \\
+       \cline{1-2}
+    \end{tabular}}
+ \end{corrige} 
