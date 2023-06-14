@@ -1,0 +1,203 @@
+\begin{changemargin}{0mm}{-15mm}
+    \section{Additionner et soustraire des fractions} %%%
+
+   \begin{methode*2*2}[Additionner et soustraire deux fractions de même dénominateur]
+      Pour additionner ou soustraire deux fractions ayant le même dénominateur, il suffit d'additionner ou de soustraire les numérateurs tout en gardant le dénominateur commun.\\
+      Si $a, b$ et $k$ sont des nombres, $k$ étant non nul.\\ [-2mm]
+      $${a\over {\red k}}+{b\over {\red k}}={a+b\over {\red k}} \qquad \text{et} \qquad {a\over {\red k}}-{b\over {\red k}}={a-b\over {\red k}}$$
+      \exercice
+         Additionner $\dfrac36$ et $\dfrac26$. 
+      \correction
+         $\dfrac36+\dfrac26 =\dfrac{3+2}{6} =\dfrac56$ \\
+         {\psset{unit=0.5}
+         \begin{pspicture}(-7.7,-1.35)(1.75,1.25)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{180}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+            \rput(1.5,0){$+$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.35)(1.75,1.25)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{180}{300}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+            \rput(1.5,0){$=$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.35)(1,1.25)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{300}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+         \end{pspicture}}
+      \exercice
+         Soustraire $\dfrac26$ de $\dfrac36$.
+      \correction
+         $\dfrac36-\dfrac26 =\dfrac{3-2}{6} =\dfrac16$ \\
+         {\psset{unit=0.5}
+            \begin{pspicture}(-7.7,-1.35)(1.75,1.25)
+               \pscircle(0,0){1}
+               \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{180}
+               \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+               \rput(1.5,0){$-$}
+            \end{pspicture}
+            \begin{pspicture}(-1,-1.35)(1.75,1.25)
+               \pscircle(0,0){1}
+               \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{180}
+               \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+               \rput(1.5,0){$=$}
+            \end{pspicture}
+            \begin{pspicture}(-1,-1.35)(1,1.25)
+               \pscircle(0,0){1}
+               \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{60}
+               \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+            \end{pspicture}}
+   \end{methode*2*2}
+    
+   \begin{exemples*1}
+      \begin{multicols}{2}
+         \begin{itemize}
+            \item $\dfrac{5}{\textcolor{red}{3}}+\dfrac{7}{\textcolor{red}{3}} = \dfrac{5+7}{\textcolor{red}{3}} = \psshadowbox{\dfrac{12}{3}}$
+            \item $\dfrac{7,5}{\textcolor{red}{4}}-\dfrac{5,2}{\textcolor{red}{4}} = \dfrac{7,5+5,2}{\textcolor{red}{4}} = \psshadowbox{\dfrac{2,3}{4}}$
+            \item $\dfrac{37}{\textcolor{red}{12}}-\dfrac{50}{\textcolor{red}{12}}+ \dfrac{10}{\textcolor{red}{12}}= \dfrac{37-50+10}{\textcolor{red}{12}} = \psshadowbox{\dfrac{-3}{12}}$
+         \end{itemize}
+      \end{multicols}
+      \vspace*{-10mm}
+   \end{exemples*1}
+
+   \begin{methode*2*2}[Additionner et soustraire deux fractions de dénominateurs différents]
+      Pour additionner ou soustraire deux fractions ayant des dénominateurs différents, on cherche un dénominateur commun pour les écrire avec le même dénominateur.
+      \exercice
+         Additionner $\dfrac23$ et $\dfrac56$.
+      \correction
+      \begin{align*}
+         \dfrac23+\dfrac56 &=\dfrac{{\red2}\times2}{{\red2}\times3}+\dfrac56\\
+         \dfrac23+\dfrac56 &=\dfrac46+\dfrac56 =\dfrac96.
+      \end{align*}
+         {\psset{unit=0.5}
+         \begin{pspicture}(-1,-1.25)(1.45,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{-60}{180}
+            \multido{\n=180+120}{3}{\psline(0,0)(1;\n)}
+            \rput(1.3,0){$+$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.45,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{300}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+            \rput(1.3,0){$=$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.45,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{-60}{180}
+            \multido{\n=180+60}{6}{\psline[linestyle=dashed](0,0)(1;\n)}
+            \multido{\n=180+120}{3}{\psline(0,0)(1;\n)}
+            \rput(1.3,0){$+$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.45,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{300}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+            \rput(1.3,0){$=$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1,1.5)
+            \pscircle[fillstyle=solid,fillcolor=B3](0,0){1}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+         \end{pspicture}
+         \begin{pspicture}(-0.9,-1.25)(1,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{0}{180}
+            \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+         \end{pspicture}}
+      \exercice
+         Soustraire $\dfrac23$ de $\dfrac{11}{12}$.
+      \correction
+      \begin{align*}
+         \dfrac{11}{12}-\dfrac23 &=\dfrac{11}{12}-\dfrac{{\red4}\times2}{{\red4}\times3}\\
+         \dfrac{11}{12}-\dfrac23 &=\dfrac{11}{12}-\dfrac{8}{12} =\dfrac3{12}.
+      \end{align*}
+         {\psset{unit=0.5}
+         \begin{pspicture}(-1,-1.25)(1.55,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{-150}{180}
+            \multido{\n=0+30}{12}{\psline(0,0)(1;\n)}
+            \rput(1.35,0){$-$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.55,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{-60}{180}
+            \multido{\n=180+120}{3}{\psline(0,0)(1;\n)}
+            \rput(1.35,0){$=$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.55,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{-150}{180}
+            \multido{\n=0+30}{12}{\psline(0,0)(1;\n)}
+            \rput(1.35,0){$-$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1.55,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{-60}{180}
+            \multido{\n=0+30}{12}{\psline[linestyle=dashed](0,0)(1;\n)}
+            \multido{\n=180+120}{3}{\psline(0,0)(1;\n)}
+            \rput(1.35,0){$=$}
+         \end{pspicture}
+         \begin{pspicture}(-1,-1.25)(1,1.5)
+            \pscircle(0,0){1}
+            \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{-150}{-60}
+            \multido{\n=0+30}{12}{\psline(0,0)(1;\n)}
+         \end{pspicture}}
+   \end{methode*2*2}
+    
+   \begin{remarque}
+      Donc pour additionner ou soustraire des parts, il faut qu'elles soient égales.
+   \end{remarque}
+
+   \begin{exemples*1}
+      $A=\dfrac{3}{4}+\dfrac{\num{4.7}}{6}$
+
+      \medskip
+      \begin{itemize}
+      \item \textit{On cherche d'abord un nombre non nul dans la table de 4 ET de 6.}
+      \begin{itemize}
+      \item[] \underline{Table de 4} : 0 4 8 \psframebox{12} 16 20 \psframebox{24} 28 32 \psframebox{36} 40 44 \psframebox{48} 52  $\ldots$.
+      \item[] \underline{Table de 6} : 0 6 \psframebox{12} 18 \psframebox{24} 30 \psframebox{36} 42 \psframebox{48}  $\ldots$.\\
+      \textit{Il en suffit d'un !}
+      \end{itemize}
+      \item \textit{On transforme les écritures si nécessaire avec la propriéeté fondamentale.}
+      
+      \medskip
+      $\dfrac{3}{4}=\dfrac{3\times \textcolor{red}{3}}{4\times \textcolor{red}{3}}=\dfrac{9}{12}$ et $\dfrac{4,7}{6}=\dfrac{4,7\times \textcolor{red}{2}}{6\times \textcolor{red}{2}}=\dfrac{9,4}{12}$
+      \end{itemize}
+      \begin{minipage}{0.3\linewidth}
+         \begin{align*}
+            A=&\dfrac{9}{12}+\dfrac{\num{9.4}}{12}\\
+            A=&\psshadowbox{\dfrac{\num{18.4}}{12}}
+         \end{align*}
+      \end{minipage}
+      \begin{minipage}{0.3\linewidth}
+         \begin{align*}
+            B=&\dfrac{25}{49}-\dfrac{2}{7}\\
+            B=&\dfrac{25}{49}-\dfrac{2\times \textcolor{red}{7}}{7\times \textcolor{red}{7}}\\
+            B=&\dfrac{25-2\times 7}{49}\\
+            B=&\psshadowbox{\dfrac{11}{49}}
+         \end{align*}
+      \end{minipage}
+      \begin{minipage}{0.3\linewidth}
+         \begin{align*}
+            C=&\dfrac{\num{2.1}}{3}-\dfrac{1}{6}+\dfrac{3}{18}\\
+            C=&\dfrac{\num{2.1}\times \textcolor{red}{6}}{3\times \textcolor{red}{6}}-\dfrac{1\times \textcolor{red}{3}}{6\times \textcolor{red}{3}}+\dfrac{3}{18}\\
+            C=&\dfrac{\num{12.6}}{18}-\dfrac{3}{18}+\dfrac{3}{18}\\
+            C=&\dfrac{\num{12.6}-3+3}{18}\\
+            C=&\psshadowbox{\dfrac{\num{12.6}}{18}}
+         \end{align*}
+      \end{minipage}
+   \end{exemples*1}
+
+   \begin{remarque}
+      \titreRemarque{\emoji{bomb} Attention !!!}
+
+      $\dfrac{\pnode(0,0.2em){A}{9}}{\pnode(0,0.2em){C}{2}}+\dfrac{10}{8}=\dfrac{\pnode(0.4,0.2em){D}{9+10}}{\pnode(0.4,0.2em){B}{2+8}}$\ncarc{-}{A}{B} \ncarc{-}{C}{D}
+
+      \smallskip
+      En effet, $\dfrac{9}{2}=\num{4.5}$ et $\dfrac{10}{8}=\num{1.25}$ donc $\dfrac{9}{2}+\dfrac{10}{8}=\num{5.75}$ et $\dfrac{9+10}{2+8}=\dfrac{19}{10}=\num{1.9}$ !!!
+   \end{remarque}
+\end{changemargin}
+ 

@@ -1,5 +1,58 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Décomposer une fraction} %%%
+  
+    \begin{methode}[Décomposer une fraction]
+        Pour décomposer une fraction en somme ou différence d'un entier et d'une fraction inférieure à 1, on peut effectuer la division euclidienne du numérateur par le dénominateur. 
+        \exercice \smallskip
+            Décomposer $\dfrac{23}{6}$.
+        \correction \smallskip
+            \begin{minipage}{1.5cm}
+                $\opidiv{23}{6}$
+            \end{minipage}
+            \begin{minipage}{8cm}
+                {\psset{unit=0.5}
+                \begin{pspicture}(-2,-1)(1.5,-0.3)
+                   \pscircle[fillstyle=solid,fillcolor=B3](0,0){1}
+                   \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+                \end{pspicture}
+                \begin{pspicture}(-1,-1)(1.5,-0.3)
+                   \pscircle[fillstyle=solid,fillcolor=B3](0,0){1}
+                   \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+                \end{pspicture}
+                \begin{pspicture}(-1,-1)(1.5,-0.3)
+                   \pscircle[fillstyle=solid,fillcolor=B3](0,0){1}
+                   \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+                \end{pspicture}
+                \begin{pspicture}(-1,-1)(1,-0.3)
+                   \pscircle(0,0){1}
+                   \pswedge[fillstyle=solid,fillcolor=B3](0,0){1}{60}{360}
+                   \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+                \end{pspicture}} \\
+                donc, \; $23 =6\times3+5$ 
+            \end{minipage}
+
+            \bigskip
+            \begin{minipage}{0.5\linewidth}
+                \begin{center}
+                    Décomposition en somme                    
+                    \begin{align*}
+                        \dfrac{23}{6} &= \dfrac{6\times3+5}{6}\\
+                        \dfrac{23}{6} &= \dfrac{6\times3}{6}+\dfrac56\\
+                        \dfrac{23}{6} &= 3+\dfrac56
+                    \end{align*}
+                \end{center}
+            \end{minipage}
+            \vrule
+            \begin{minipage}{0.5\linewidth}
+                \begin{center}
+                    Décomposition en différence                    
+                    \begin{align*}
+                        \dfrac{23}{6} &= 3+\dfrac56\\                        
+                        \dfrac{23}{6} &= 3+1-\dfrac16\\
+                        \dfrac{23}{6} &= 4-\dfrac16
+                    \end{align*}
+                \end{center}
+            \end{minipage}
+    \end{methode}
 \end{changemargin}
  
