@@ -2,16 +2,105 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-    \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
-    \end{changemargin}
-\end{enigme}
+\begin{enigme}[Sudofractions]
+    \ \\
+       \begin{minipage}{7.5cm}
+          \begin{itemize}
+             \item Calculer la somme ou la différence proposée dans chaque case de la grille ci-dessous.
+             \item Simplifier la fraction si possible.
+             \item Choisir le numérateur de la fraction obtenue et le reporter dans la case correspondante de la grille vierge de sudoku ci-contre.
+             \item Compléter la grille selon les règles du Sudoku.
+          \end{itemize}
+          {\it Par exemple, $\dfrac96-\dfrac56 =\dfrac46 =\dfrac{\textbf{2}}{3}$ donc, \\ [1mm]
+             la troisième case de la ligne du haut comporte un 2}.
+       \end{minipage}
+       \qquad
+       \begin{minipage}{7cm}
+       {\renewcommand{\arraystretch}{1.8}
+          \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}}
+             \hline
+             & & {\bf 2} & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+             \hline
+             & & & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+             \hline
+             & & & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+             & & & & & & & & \\
+             \hline
+          \end{tabular}}
+       \end{minipage}
+      \vfill
+       \begin{center}
+       {\renewcommand{\arraystretch}{3.44}
+       \footnotesize
+          \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.9cm}|}|*{3}{>{\centering\arraybackslash}p{0.9cm}|}|*{3}{>{\centering\arraybackslash}p{0.9cm}|}}
+             \hline
+              \!$\dfrac1{13}+\dfrac5{13}$\! & $\dfrac17+\dfrac47$ & $\dfrac96-\dfrac56$ & & $\dfrac43+\dfrac43$ & $\dfrac84-\dfrac14$ & $\dfrac32+\dfrac62$ & & \!$\dfrac{15}{14}-\dfrac{7}{14}\!$ \\
+             \hline
+              $\dfrac23+\dfrac53$ & $\dfrac12+\dfrac24$ & & $\dfrac59-\dfrac19$ & & & $\dfrac57-\dfrac27$ & & \\
+             \hline
+              & & $\dfrac53+\dfrac33$ & $\dfrac56-\dfrac13$ & & & & & $\dfrac52+1$\\
+              \hline
+              \hline
+              $\dfrac{12}7-\dfrac47$ & $1-\dfrac13$ & & & $\dfrac15+\dfrac{1}{10}$ & & & & $\dfrac37+\dfrac37$ \\
+             \hline
+              $1+\dfrac23$ & & & $\dfrac59-\dfrac13$ & & & & $\dfrac12+\dfrac14$ & \\
+             \hline
+              & & & $\dfrac{14}{9}-\dfrac23$ & & & $\dfrac43+\dfrac13$ & $\dfrac52-\dfrac12$ & \\
+             \hline
+             \hline
+              & $1-\dfrac19$ & $\dfrac38+\dfrac12$ & $\dfrac32-\dfrac14$ & $\dfrac{11}3-\dfrac93$ & & $\dfrac62+\dfrac{12}4$ & $\dfrac36+\dfrac56$ & \\
+             \hline
+              \!$\dfrac{12}{11}-\dfrac{10}{11}$\! & $\dfrac72-\dfrac{25}{8}$ &  & $1-\dfrac17$ & & $\dfrac97-\dfrac17$ & & $\dfrac27+1$ & \\
+             \hline
+              $2+\dfrac52$ & & & & $\dfrac17+\dfrac37$ & & & & \\
+             \hline
+          \end{tabular}}
+       \end{center}
+    \end{enigme}
+    
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 
 \begin{corrige}
-    Correction du binz.
-\end{corrige}
+    \ \\
+    {\renewcommand{\arraystretch}{1.8}
+          \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}}
+             \hline
+             6 & 5 & {\bf 2} & \textcolor{red}{3} & 8 & 7 & 9 & \textcolor{red}{1} & 4 \\
+             \hline
+             7 & 1 & \textcolor{red}{9} & 4 & \textcolor{red}{5} & \textcolor{red}{2} & 3 & \textcolor{red}{6} & \textcolor{red}{8} \\
+             \hline
+             \textcolor{red}{3} & \textcolor{red}{4} & 8 & 1 & \textcolor{red}{9} & \textcolor{red}{6} & \textcolor{red}{2} & \textcolor{red}{5} & 7 \\
+             \hline
+             \hline
+             8 & 2 & \textcolor{red}{1} & \textcolor{red}{9} & 3 & \textcolor{red}{5} & \textcolor{red}{4} & \textcolor{red}{7} & 6 \\
+             \hline
+             5 & \textcolor{red}{9} & \textcolor{red}{6} & 2 & \textcolor{red}{7} & \textcolor{red}{4} & \textcolor{red}{8} & 3 & \textcolor{red}{1} \\
+             \hline
+             \textcolor{red}{4} & \textcolor{red}{7} & \textcolor{red}{3} & 8 & \textcolor{red}{6} & \textcolor{red}{1} & 5 & 2 & \textcolor{red}{9} \\
+             \hline
+             \hline
+             \textcolor{red}{1} & 8 & 7 & 5 & 2 & \textcolor{red}{9} & 6 & 4 & \textcolor{red}{3} \\
+             \hline
+             2 & 3 & \textcolor{red}{4} & 6 & \textcolor{red}{1} & 8 & \textcolor{red}{7} & 9 & \textcolor{red}{5} \\
+             \hline
+             9 & \textcolor{red}{6} & \textcolor{red}{5} & \textcolor{red}{7} & 4 & \textcolor{red}{3} & \textcolor{red}{1} & \textcolor{red}{8} & \textcolor{red}{2} \\
+             \hline
+          \end{tabular}}
+    \end{corrige}
+    
  
