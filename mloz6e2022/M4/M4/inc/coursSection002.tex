@@ -1,2 +1,176 @@
-\section{...}
-...
+\section{Périmètre des polygones}
+\begin{propriete}
+    Le \textbf{périmètre} d'un polygone est égal à la somme des longueurs de ses côtés.
+\end{propriete}
+
+\begin{remarque}
+    Il est possible d'établir des formules pour certains polygones particuliers.
+\end{remarque}
+
+\clearpage
+{\renewcommand*{\arraystretch}{1.5}
+      \begin{longtable}{|m{0.25\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
+        \hline
+        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
+        \hline
+        \textbf{ Losange} de côté $c$&        
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+            trace feuillet withcolor white;
+            pair A,B,C,D;
+            A=u*(0.5,1.5);
+            B-A=u*(1.5,0.5);
+            C-B=u*(1.5,-0.5);
+            D-C=u*(-1.5,-0.5);
+            trace polygone(A,B,C,D);
+            trace cotationmil(A,B,3mm,5,btex $c$ etex) withcolor red;
+            marque_s:=2;
+            trace codesegments(A,B,B,C,2);
+            trace codesegments(C,D,D,A,2);
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal P}&=c+c+c+c\cr
+        {\mathcal P}&=4\times c\cr
+        {\mathcal P}&=4c\cr
+        }$&
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.5,1.5);
+          B-A=u*(1.5,0.5);
+          C-B=u*(1.5,-0.5);
+          D-C=u*(-1.5,-0.5);
+          trace polygone(A,B,C,D);
+          trace cotationmil(A,B,3mm,15,btex \Lg{2} etex) withcolor red;
+          marque_s:=2;
+          trace codesegments(A,B,B,C,2);
+          trace codesegments(C,D,D,A,2);
+        \end{Geometrie}
+        $\Eqalign{
+        {\mathcal P}&=\Lg{2}+\Lg{2}+\Lg{2}+\Lg{2}\cr
+        {\mathcal P}&=4\times \Lg{2}\cr
+        {\mathcal P}&=\Lg{8}\cr
+        }$
+        \\
+        \hline
+        \textbf{ Rectangle} de longueur $L$ et de largeur $l$&
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.5,0.25);
+          B=u*(3.75,0.25);
+          C=3/5[B,rotation(A,B,-90)];
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          trace cotationmil(D,C,3mm,5,btex $L$ etex) withcolor red;
+          trace cotationmil(A,D,3mm,5,btex $l$ etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+      \end{Geometrie}  
+        &$\Eqalign{
+        {\mathcal P}&=l+L+l+L\cr
+        {\mathcal P}&=2\times l+2\times L\cr
+        {\mathcal P}&=2\times (l+L)\cr
+        {\mathcal P}&=2(l+L)\cr
+        }$
+        &
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.5,0.25);
+          B=u*(3.75,0.25);
+          C=3/5[B,rotation(A,B,-90)];
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          trace cotationmil(D,C,3mm,20,btex \Lg[dm]{0.3} etex) withcolor red;
+          trace cotationmil(A,D,3mm,20,btex \Lg[dm]{0.2} etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+      \end{Geometrie}  
+        $\Eqalign{
+        {\mathcal P}&=\Lg[dm]{0.2}+\Lg[dm]{0.3}+\Lg[dm]{0.2}+\Lg[dm]{0.3}\cr
+        {\mathcal P}&=2\times \Lg[dm]{0.2}+2\times \Lg[dm]{0.3}\cr
+        {\mathcal P}&=2\times (\Lg[dm]{0.2}+\Lg[dm]{0.3})\cr
+        {\mathcal P}&=2\times \Lg[dm]{0.5}\cr
+        {\mathcal P}&=\Lg[dm]{1}\cr
+        }$\\
+        \hline
+        \textbf{ Carré} de côté $c$&
+        \begin{Geometrie}[CoinHD={u*(3,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.25,0.25);
+          B=u*(2.5,0.25);
+          C=rotation(A,B,-90);
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          marque_s:=2;
+          trace cotationmil(D,C,3mm,5,btex $c$ etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+          trace codesegments(A,B,B,C,2);
+          trace codesegments(C,D,D,A,2);
+        \end{Geometrie} 
+        &$\Eqalign{
+        {\mathcal P}&=c+c+c+c\cr
+        {\mathcal P}&=4\times c\cr
+        {\mathcal P}&=4c\cr
+        }$&
+        \begin{Geometrie}[CoinHD={u*(3,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.25,0.25);
+          B=u*(2.5,0.25);
+          C=rotation(A,B,-90);
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          marque_s:=2;
+          trace cotationmil(D,C,3mm,15,btex \Lg{5} etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+          trace codesegments(A,B,B,C,2);
+          trace codesegments(C,D,D,A,2);
+        \end{Geometrie}
+        $\Eqalign{
+          {\mathcal P}&=\Lg{5}+\Lg{5}+\Lg{5}+\Lg{5}\cr
+          {\mathcal P}&=4\times \Lg{5}\cr
+          {\mathcal P}&=\Lg{20}\cr
+        }$\\
+        \hline
+        \textbf{ Triangle} de côtés $a$, $b$ et $c$&
+        \begin{Geometrie}[CoinHD={u*(4,4)}]
+          trace feuillet withcolor white;
+          pair A,B,C;
+          A=u*(0.5,0.75);
+          B=u*(3.25,1.75);
+          C=u*(3,3.75);
+          trace A--B--C--cycle;
+          trace cotationmil(A,B,-2mm,5,btex $c$ etex) withcolor red;
+          trace cotationmil(C,B,2mm,5,btex $a$ etex) withcolor red;
+          trace cotationmil(A,C,2mm,5,btex $b$ etex) withcolor red;
+        \end{Geometrie} 
+        &$\Eqalign{
+        {\mathcal P}&=a+b+c\cr
+        }$&
+        \begin{Geometrie}[CoinHD={u*(4,4)}]
+          trace feuillet withcolor white;
+          pair A,B,C;
+          A=u*(0.5,0.75);
+          B=u*(3.25,1.75);
+          C=u*(3,3.75);
+          trace A--B--C--cycle;
+          trace cotationmil(A,B,-2mm,15,btex \Lg[m]{2.7} etex) withcolor red;
+          trace cotationmil(C,B,2mm,15,btex \Lg[m]{2.8} etex) withcolor red;
+          trace cotationmil(A,C,2mm,15,btex \Lg[m]{3.9} etex) withcolor red;
+        \end{Geometrie} 
+        $\Eqalign{
+        {\mathcal P}&=\Lg[m]{2.7}+\Lg[m]{2.8}+\Lg[m]{3.9}\cr
+        {\mathcal P}&=\Lg[m]{9.4}\cr
+        }$\\
+        \hline
+      \end{longtable}
+}
+
