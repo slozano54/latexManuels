@@ -1,36 +1,31 @@
 \section{Périmètre d'un polygone}
-\begin{minipage}{0.5\linewidth}
-   \begin{definition}
-      Le \textbf{périmètre} d'une figure est la mesure du contour de cette figure.
-   \end{definition}
+\begin{definition}
+   Le \textbf{périmètre} d'une figure est la mesure du contour de cette figure.
+\end{definition}
 
-   \begin{propriete}
-      Pour calculer le périmètre d'un polygone, on additionne la mesure de chacun de ses segments.
-   \end{propriete}
-\end{minipage}
-\hspace*{-25mm}
-\begin{minipage}{0.7\linewidth}   
-   \begin{exemple}[0.5]      
-      \phantom{rrr}
+\begin{propriete}
+   Pour calculer le périmètre d'un polygone, on additionne la mesure de chacun de ses segments.
+\end{propriete}
+\begin{exemple}[0.5]      
+   \phantom{rrr}
 
-      {\psset{unit=0.4}
-      \begin{pspicture}(-0.5,0)(11,5.5)
-         \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=gray](11,5)
-         \put(1,1){\pspolygon[fillstyle=solid,fillcolor=B2,linewidth=0.1](0,0)(2,0)(2,3)(0,3)(0,2)(1,2)(1,1)(0,1)(0,0)}
-         \put(4,1){\pspolygon[fillstyle=solid,fillcolor=A2,linewidth=0.1](0,0)(2,0)(2,2)(1,2)(1,3)(0,3)(0,0)}
-         \put(7,1){\pspolygon[fillstyle=solid,fillcolor=J2,linewidth=0.1](1,0)(2,0)(2,1)(3,1)(3,2)(2,2)(2,3)(1,3)(1,2)(0,2)(0,1)(1,1)(1,0)}
-         \rput(2.5,2.4){\textbf{A}}
-         \rput(5,2.4){\textbf{B}}
-         \rput(8.5,2.4){\textbf{C}}
-         \psline[linewidth=0.4mm]{|-|}(6,4)(7,4)
-         \rput(6.5,4.6){\small$u.\ell$.}
-      \end{pspicture}}
-   \correction
-      $u.\ell$ désigne l'unité de longueur, les périmètres sont :
-      \begin{itemize}
-         \item pour la figure A : 12 $u.\ell$;   
-         \item pour la figure B : 10 $u.\ell$;
-         \item pour la figure C : 12 $u.\ell$
-      \end{itemize} 
-   \end{exemple}
-\end{minipage}
+   {\psset{unit=0.4}
+   \begin{pspicture}(-0.5,0)(11,5.5)
+      \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=gray](11,5)
+      \put(1,1){\pspolygon[fillstyle=solid,fillcolor=B2,linewidth=0.1](0,0)(2,0)(2,3)(0,3)(0,2)(1,2)(1,1)(0,1)(0,0)}
+      \put(4,1){\pspolygon[fillstyle=solid,fillcolor=A2,linewidth=0.1](0,0)(2,0)(2,2)(1,2)(1,3)(0,3)(0,0)}
+      \put(7,1){\pspolygon[fillstyle=solid,fillcolor=J2,linewidth=0.1](1,0)(2,0)(2,1)(3,1)(3,2)(2,2)(2,3)(1,3)(1,2)(0,2)(0,1)(1,1)(1,0)}
+      \rput(2.5,2.4){\textbf{A}}
+      \rput(5,2.4){\textbf{B}}
+      \rput(8.5,2.4){\textbf{C}}
+      \psline[linewidth=0.4mm]{|-|}(6,4)(7,4)
+      \rput(6.5,4.6){\small$u.\ell$.}
+   \end{pspicture}}
+\correction
+   $u.\ell$ désigne l'unité de longueur, les périmètres sont :
+   \begin{itemize}
+      \item pour la figure A : 12 $u.\ell$;   
+      \item pour la figure B : 10 $u.\ell$;
+      \item pour la figure C : 12 $u.\ell$
+   \end{itemize} 
+\end{exemple}
