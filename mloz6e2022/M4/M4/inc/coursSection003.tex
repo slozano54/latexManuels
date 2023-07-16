@@ -1,2 +1,67 @@
-\section{...}
-...
+\section{Circonférence d'un cercle}
+\begin{propriete}
+    Le \textbf{périmètre} d'un cercle est proportionnel à la longueur de son rayon.
+
+    Il est égal au produit du double de son rayon par $\pi$.
+
+    Il revient au même de calculer le produit de son diamètre par $\pi$.
+
+    $${\mathcal P} = 2\times \text{rayon} \times \pi = \text{diamètre}\times \pi$$
+\end{propriete}
+
+\begin{myvocabulaire}
+    On parle indistinctement de {\bfseries périmètre}, de \textbf{longueur} ou de \textbf{circonférence} du cercle.
+\end{myvocabulaire}
+
+\begin{remarques}
+    \begin{itemize}
+        \item Le nombre $\pi$ n'est pas un nombre décimal, il a une infinité de chiffres après la virgule mais aucune séquence de chiffres n'est périodique.
+        \item On utilise souvent \num{3.14} comme valeur approchée pour le nombre $\pi$.
+        \item On peut aussi utiliser la touche \Calculatrice{/$\pi$} de la calculatrice.
+    \end{itemize}
+\end{remarques}
+
+\begin{myBox}{\emoji{light-bulb} Moyen mnémotechnique \emoji{light-bulb}}
+    Si on note $R$ le rayon du cercle, que l'on simplifie l'expression littérale en réordonnant ses facteurs :
+    $$2\times R \times \pi = 2 \times \pi \times R = 2\pi R$$
+    L'expression $2\pi R$ se lit alors \og{} Deux pierres \fg{}.
+\end{myBox}
+
+{\renewcommand*{\arraystretch}{1.5}
+\begin{longtable}{|m{0.2\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
+  \hline
+  \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
+  \hline
+  \textbf{ Cercle} de rayon $R$&        
+  \begin{Geometrie}[CoinHD={u*(4,4)}]
+      trace feuillet withcolor white;
+      pair O,A;
+      path co;
+      O=u*(2,2);
+      co=cercles(O,2*u);
+      trace co;
+      A=pointarc(co,60);
+      trace cotationmil(O,A,0mm,5,btex $R$ etex) withcolor red;
+  \end{Geometrie}        
+  &$\Eqalign{
+  {\mathcal P}&=2\times\pi\times R\cr
+  {\mathcal P}&=2\pi R\cr
+  }$&
+  \begin{Geometrie}[CoinHD={u*(4,4.5)}]
+    trace feuillet withcolor white;
+    pair O,A;
+    path co;
+    O=u*(2,2);
+    co=cercles(O,2*u);
+    trace co;
+    A=pointarc(co,60);
+    trace cotationmil(O,A,0mm,20,btex $\Lg[km]{6400}$ etex) withcolor red;
+\end{Geometrie}        
+$\Eqalign{
+    {\mathcal P}&=2\times\pi\times \Lg[km]{6400}\cr
+    {\mathcal P}&\simeq2\times\num{3.14}\times \Lg[km]{6400}\cr
+    {\mathcal P}&\simeq\Lg[km]{40192}\cr
+}$\\
+  \hline
+\end{longtable}
+}
