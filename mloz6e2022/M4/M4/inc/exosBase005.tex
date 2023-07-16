@@ -1,3 +1,30 @@
-\begin{exercice}
-   ...
-   \end{exercice}
+\begin{exercice*} %5
+   On considère la figure suivante :
+   \begin{center}
+   {\small
+   \psset{unit=0.8}
+      \begin{pspicture}(0,-0.7)(5,2.5)
+         \pspolygon(0,0)(5,0)(2,2)(0,2)
+         \psline[linestyle=dashed](2,2)(1.5,0)
+         \psframe(0,0)(0.2,0.2)
+         \psframe(0,2)(0.2,1.8)
+         \rput(-0.3,-0.3){D}
+         \rput(-0.3,2.3){A}
+         \rput(5.3,0){C}
+         \rput(2,2.3){B}
+         \rput(1.5,-0.3){M}
+         \rput(1,2.3){2 cm}
+         \rput{90}(-0.3,1){\Lg[cm]{3}}
+         \psline{<->}(0,-0.7)(5,-0.7)
+         \rput(2.5,-1){\Lg[cm]{6}}
+         \rput{-30}(4,1){\Lg[cm]{5}}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item On suppose que $DM =\Lg[cm]{1}$, comparer le périmètre du quadrilatère $ABMD$ et celui du triangle $BCM$.
+      \item Même question si $DM =\Lg[cm]{5}$.
+      \item Déterminer la position du point $M$ pour que ces deux périmètres soient égaux.
+   \end{enumerate}
+\end{exercice*}
+
+
