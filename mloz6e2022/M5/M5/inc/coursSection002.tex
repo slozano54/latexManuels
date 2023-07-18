@@ -1,2 +1,214 @@
-\section{...}
-...
+\section{Unités de volume et de capacité}
+\begin{definition}
+    L'{\bf unité de volume usuelle} est le {\bf mètre cube}, noté \Vol[m]{}, qui représente le volume d'un cube de côté \Lg[m]{1}.
+    On utilise aussi ses multiples \Vol[km]{}, \Vol[hm]{}, \Vol[dam]{} et ses sous-multiples \Vol[dm]{}, \Vol[cm]{}, \Vol[mm]{}.
+\end{definition}
+
+\begin{remarque}
+    \titreRemarque{\Vol[mm]{1000}=\Vol[cm]{1}}
+
+    \begin{minipage}{0.6\linewidth}
+        \begin{itemize}
+            \item Un centimètre cube, \Vol[cm]{1}, est le volume d'un cube de \Lg[cm]{1} de côté.
+            \item Un millimétre cube, \Vol[mm]{1}, est le volume d'un cube de \Lg[mm]{1} de côté.\medskip
+            \item Dans \Vol[cm]{1}, il y a , \Vol[mm]{1000}.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(-0.5u,-0.5u)}]
+                u:=0.25*u;
+                pair A,B,C,D,E,F,G,H;
+                A=u*(1,1);
+                B=u*(11,1);
+                F=u*(11,11);
+                E=u*(1,11);
+                D=A shifted (5u,4u);
+                C=B shifted (5u,4u);
+                H=E shifted (5u,4u);
+                G=F shifted (5u,4u);
+                %%%
+                pair I,J,K,L,M,N,P,Q,R,S,T,U,V,W;
+                I=u*(1,2);
+                J=u*(11,2);
+                K=u*(2,11);
+                L=u*(2,1);
+                Q=u*(2,2);
+                M=I shifted (5u,4u);
+                N=J shifted (0.5u,0.4u);
+                P=B shifted (0.5u,0.4u);
+                R=Q shifted (5u,4u);
+                S=L shifted (5u,4u);
+                T=E shifted (0.5u,0.4u);
+                U=K shifted (0.5u,0.4u);
+                V=I shifted (0.5u,0.4u);
+                W=Q shifted (0.5u,0.4u);
+                %%%
+                remplis polygone(B,C,G,F) withcolor 0.8white;
+                remplis polygone(E,H,G,F) withcolor 0.9white;
+                %%%
+                trace chemin(G,H,E);
+                trace S--C dashed evenly;
+                trace M--H dashed evenly;
+                %%%
+                remplis polygone(Q,R,S,L) withcolor 0.8white;
+                remplis polygone(I,M,R,Q) withcolor 0.9white;
+                trace polygone(I,M,R,Q);
+                trace polygone(Q,R,S,L);
+                path ce;
+                ce=chemin(1/9[I,M],1/9[Q,R],1/9[L,S]);
+                for j=0 upto 8:
+                trace ce shifted (j*0.5u,j*0.4u);
+                endfor;
+                %%%
+                remplis polygone(E,K,U,T) withcolor 0.9white;
+                remplis polygone(K,U,W,Q) withcolor 0.8white;
+                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) shifted (-u,u) withcolor white;
+                remplis polygone(I,Q,u*(2,3),u*(1,3)) withcolor white;
+                trace E--K--Q--I--cycle;
+                trace polygone(K,U,W,Q);
+                trace chemin(E,T,U);
+                path cd;
+                cd=chemin(1/9[I,E],1/9[Q,K],1/9[W,U]);
+                for j=0 upto 8:
+                trace cd shifted (0,j*u);
+                endfor;
+                %%%
+                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) withcolor white;
+                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) shifted (u,0) withcolor white;
+                %%%
+                remplis polygone(Q,J,N,Q shifted(0.5u,0.4u)) withcolor 0.9white;
+                remplis polygone(B,P,N,J) withcolor 0.8white;
+                trace L--B--J--Q--cycle;
+                trace polygone(B,P,N,J);
+                trace chemin(Q,Q shifted (0.5u,0.4u),N);
+                path cc;
+                cc=chemin(1/10[A,B],1/10[I,J],1/10[V,N]);
+                for j=0 upto 9:
+                trace cc shifted (j*u,0);
+                endfor;
+                %%%
+                trace A--B--F--E--cycle;
+                trace polygone(B,C,G,F);
+                %%%
+                trace cotation(A,B,-3mm,-3mm,btex \Lg[cm]{1} etex);
+                trace cotation(B,C,-3mm,-3mm,btex \Lg[cm]{1} etex);
+                trace cotation(A,E,3mm,3mm,btex \Lg[cm]{1} etex);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+\end{remarque}
+
+\begin{definition}
+    Pour la mesure des capacités, quantité de liquide que peut contenir un solide donné, on dispose d'unités de volume spécifiques.
+    
+    L'unité de capacité de base est le \textbf{litre}, notée \Capa[L]{}, qui est la quantité de liquide que peut contenir un cube d'un décimètre de côté, et qui vaut donc \Vol[dm]{1}.
+\end{definition}
+
+\begin{remarque}
+    \mbox{Ses multiples, \Capa[kL]{}, \Capa[hL]{}, \Capa[daL]{}, et ses sous-multiples, \Capa[dL]{}, \Capa[cL]{}, \Capa[mL]{}, sont également utilisés.}
+\end{remarque}    
+
+
+\begin{methode*1}[Conversions des unités de volume - Tableau volumes et capacités]
+    Pour passer d'une unité de volume à l'unité immédiatement :
+    \begin{itemize}
+        \item {\bf inférieure}, on {\bf multiplie par 1\,000} ;
+        \item {\bf supérieure}, on {\bf divise par 1\,000} ;
+    \end{itemize}
+    \begin{changemargin}{0mm}{-27mm}
+        \begin{center}
+            \begin{footnotesize}
+                {\renewcommand*{\arraystretch}{1.2}
+                \begin{longtable}{|>{\centering\arraybackslash}m{0.115\textwidth}|*{21}{c|}}%
+                    \hline
+                    {\bf Unités} &  \multicolumn{3}{c|}{kilomètre}&\multicolumn{3}{c|}{hectomètre}&\multicolumn{3}{c|}{décamètre}&\multicolumn{3}{c|}{mètre}&\multicolumn{3}{c|}{décimètre}&\multicolumn{3}{c|}{centimètre}&\multicolumn{3}{c|}{millimètre}\\
+                    &\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}\\\hline
+                    Abréviations&\multicolumn{3}{c|}{\Vol[km]{}}&\multicolumn{3}{c|}{\Vol[hm]{}}&\multicolumn{3}{c|}{\Vol[dam]{}}&\multicolumn{3}{c|}{\Vol[m]{}}&\multicolumn{3}{c|}{\Vol[dm]{}}&\multicolumn{3}{c|}{\Vol[cm]{}}&\multicolumn{3}{c|}{\Vol[mm]{}}\\\hline
+                    {\bf Unités de capacité}&\multicolumn{11}{c|}{}&\Capa[kL]{}&\Capa[hL]{}&\Capa[daL]{}&\Capa[L]{}&\Capa[dL]{}&\Capa[cL]{}&\Capa[mL]{}&\multicolumn{3}{c|}{}\\\hline
+                    & 
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    &
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    &
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    \hline   
+                \end{longtable}
+                }
+            \end{footnotesize}
+            \vspace*{-10mm}
+        \end{center}
+    \end{changemargin}
+    \exercice
+        Convertir les volumes suivants :
+        \begin{multicols}{4}
+            \begin{enumerate}
+                \item \Vol[dam]{25} en \Vol[m]{}
+                \item \Vol[dm]{43} en \Vol[m]{}
+                \item \Vol[m]{2.4} en \Vol[cm]{}
+                \item \Vol[cm]{2100} en \Vol[dm]{}
+            \end{enumerate}
+        \end{multicols}
+    \correction
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $\Vol[dam]{25}=25\times\Vol[m]{1000}=\Vol[m]{25000}$ 
+            \item $\Vol[dm]{43}=43\div\Vol[m]{1000}=\Vol[m]{0.043}$ 
+            \item $\Vol[m]{2.4}=\num{2.4}\times\Vol[cm]{1000000}=\Vol[cm]{2400000}$ 
+            \item $\Vol[cm]{2100}=\num{2100}\div\Vol[dm]{1000}=\Vol[dm]{2.1}$
+        \end{enumerate}
+    \end{multicols}
+\end{methode*1}
+\begin{methode*1}[Conversions des unités de capacité - Tableau volumes et capacités]
+    Pour passer d'une unité de capacité à l'unité immédiatement :
+    \begin{itemize}
+        \item {\bf inférieure}, on {\bf multiplie par 10} ;
+        \item {\bf supérieure}, on {\bf divise par 10} ;
+    \end{itemize}
+    \begin{changemargin}{0mm}{-27mm}
+        \begin{center}
+            \begin{footnotesize}
+                {\renewcommand*{\arraystretch}{1.2}
+                \begin{longtable}{|>{\centering\arraybackslash}m{0.115\textwidth}|*{21}{c|}}%
+                    \hline
+                    {\bf Unités} &  \multicolumn{3}{c|}{kilomètre}&\multicolumn{3}{c|}{hectomètre}&\multicolumn{3}{c|}{décamètre}&\multicolumn{3}{c|}{mètre}&\multicolumn{3}{c|}{décimètre}&\multicolumn{3}{c|}{centimètre}&\multicolumn{3}{c|}{millimètre}\\
+                    &\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}&\multicolumn{3}{c|}{cube}\\\hline
+                    Abréviations&\multicolumn{3}{c|}{\Vol[km]{}}&\multicolumn{3}{c|}{\Vol[hm]{}}&\multicolumn{3}{c|}{\Vol[dam]{}}&\multicolumn{3}{c|}{\Vol[m]{}}&\multicolumn{3}{c|}{\Vol[dm]{}}&\multicolumn{3}{c|}{\Vol[cm]{}}&\multicolumn{3}{c|}{\Vol[mm]{}}\\\hline
+                    {\bf Unités de capacité}&\multicolumn{11}{c|}{}&\Capa[kL]{}&\Capa[hL]{}&\Capa[daL]{}&\Capa[L]{}&\Capa[dL]{}&\Capa[cL]{}&\Capa[mL]{}&\multicolumn{3}{c|}{}\\\hline
+                    & 
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    &
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    &
+                    \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm} & \hspace{2mm}  \\
+                    \hline   
+                \end{longtable}
+                }
+            \end{footnotesize}
+            \vspace*{-10mm}
+        \end{center}
+    \end{changemargin}
+    \exercice
+    Convertir les capacités suivantes :
+    \begin{enumerate}
+        \item \Capa[daL]{2} en \Capa[L]{}
+        \item \Capa[dL]{43} en \Capa[hL]{}
+        \item \Capa[L]{1.4} en \Capa[mL]{}
+        \item \Capa[cL]{25} en \Capa[L]{}
+    \end{enumerate}
+    \correction
+    \begin{itemize}
+        \item $\Capa[daL]{2}=2\times \Capa[L]{10}=\Capa[L]{20}$
+        \item $\Capa[dL]{43}=43\div \Capa[hL]{1000}=\Capa[hL]{0.043}$
+        \item $\Capa[L]{1.4}=\num{1.4}\times\Capa[mL]{1000}=\Capa[mL]{1400}$
+        \item $\Capa[cL]{25}=25\div\Capa[L]{100}=\Capa[L]{0.25}$
+    \end{itemize}
+\end{methode*1}
+
+\begin{propriete}[Équivalence entre unités de volume et unités de capacité]
+    Certaines correspondances en les unités de capacité et les unités de volume sont très couramment utilisées.
+    \begin{itemize}
+        \item \Vol[dm]{1}=\Capa[L]{1}
+        \item \Vol[cm]{1}=\Capa[mL]{1}
+    \end{itemize}
+\end{propriete}
