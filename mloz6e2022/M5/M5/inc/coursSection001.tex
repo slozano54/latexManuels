@@ -88,8 +88,9 @@
         C=B shifted (0.5u,0.4u);
         H=E shifted (0.5u,0.4u);
         G=F shifted (0.5u,0.4u);
-        remplis polygone(B,C,G,F) withcolor 0.8white;
-        remplis polygone(E,H,G,F) withcolor 0.9white;
+        remplis polygone(B,C,G,F) withcolor Cornsilk;
+        remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+        remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
         trace A--B--F--E--cycle;
         trace polygone(B,C,G,F);
         trace chemin(G,H,E);
@@ -110,8 +111,9 @@
             C=B shifted (u,0.8u);
             H=E shifted (u,0.8u);
             G=F shifted (u,0.8u);
-            remplis polygone(B,C,G,F) withcolor 0.8white;
-            remplis polygone(E,H,G,F) withcolor 0.9white;
+            remplis polygone(B,C,G,F) withcolor Cornsilk;
+            remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
             trace A--B--F--E--cycle;
             trace polygone(B,C,G,F);
             trace chemin(G,H,E);
@@ -136,9 +138,11 @@
             J=I shifted (0,u);
             K=J shifted (0.5u,0.4u);
             L=iso(C,G);
-            remplis polygone(B,D,F,G,L,E) withcolor 0.8white;
-            remplis polygone(F,G,J,K) withcolor 0.9white;
-            remplis polygone(H,E,L,I) withcolor 0.9white;
+            remplis polygone(B,D,F,G,L,E) withcolor Cornsilk;
+            remplis polygone(F,G,J,K) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(H,E,L,I) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(J,G,L,I) withcolor 0.9Cornsilk+0.1black;
+            remplis polygone(H,E,B,A) withcolor 0.9Cornsilk+0.1black;            
             trace polygone(B,D,F,G,L,E);
             trace chemin(F,K,J,G);
             trace chemin(E,H,I,L);

@@ -44,15 +44,15 @@
                 V=I shifted (0.5u,0.4u);
                 W=Q shifted (0.5u,0.4u);
                 %%%
-                remplis polygone(B,C,G,F) withcolor 0.8white;
-                remplis polygone(E,H,G,F) withcolor 0.9white;
+                remplis polygone(B,C,G,F) withcolor Cornsilk;
+                remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
                 %%%
                 trace chemin(G,H,E);
                 trace S--C dashed evenly;
                 trace M--H dashed evenly;
                 %%%
-                remplis polygone(Q,R,S,L) withcolor 0.8white;
-                remplis polygone(I,M,R,Q) withcolor 0.9white;
+                remplis polygone(Q,R,S,L) withcolor Cornsilk;
+                remplis polygone(I,M,R,Q) withcolor 0.7Cornsilk+0.3black;
                 trace polygone(I,M,R,Q);
                 trace polygone(Q,R,S,L);
                 path ce;
@@ -61,10 +61,10 @@
                 trace ce shifted (j*0.5u,j*0.4u);
                 endfor;
                 %%%
-                remplis polygone(E,K,U,T) withcolor 0.9white;
-                remplis polygone(K,U,W,Q) withcolor 0.8white;
-                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) shifted (-u,u) withcolor white;
-                remplis polygone(I,Q,u*(2,3),u*(1,3)) withcolor white;
+                remplis polygone(E,K,U,T) withcolor 0.7Cornsilk+0.3black;
+                remplis polygone(K,U,W,Q) withcolor Cornsilk;
+                remplis polygone(A,B,u*(11,2),u*(1,2)) withcolor 0.9Cornsilk+0.1black;
+                remplis polygone(E,u*(1,2),u*(2,2),u*(2,11)) withcolor 0.9Cornsilk+0.1black;
                 trace E--K--Q--I--cycle;
                 trace polygone(K,U,W,Q);
                 trace chemin(E,T,U);
@@ -74,11 +74,8 @@
                 trace cd shifted (0,j*u);
                 endfor;
                 %%%
-                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) withcolor white;
-                remplis polygone(u*(2,1),u*(3,1),u*(3,2),u*(2,2)) shifted (u,0) withcolor white;
-                %%%
-                remplis polygone(Q,J,N,Q shifted(0.5u,0.4u)) withcolor 0.9white;
-                remplis polygone(B,P,N,J) withcolor 0.8white;
+                remplis polygone(Q,J,N,Q shifted(0.5u,0.4u)) withcolor 0.7Cornsilk+0.3black;
+                remplis polygone(B,P,N,J) withcolor Cornsilk;
                 trace L--B--J--Q--cycle;
                 trace polygone(B,P,N,J);
                 trace chemin(Q,Q shifted (0.5u,0.4u),N);
