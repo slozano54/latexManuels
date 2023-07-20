@@ -1,3 +1,32 @@
 \begin{exercice*}
-   ...
+   Donner le volume de chaque solide en unités de volume. Selon les cas plusieurs vues du solide sont proposées.
+
+   \begin{center}
+   \raisebox{-0.5\totalheight}[0.5\totalheight]{\raisebox{\depth}{    
+      \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(3u,3u)}]
+          u:=0.5*u;
+          pair A,B,C,D,E,F,G,H;
+          A=u*(1,1);
+          B=u*(2,1);
+          F=u*(2,2);
+          E=u*(1,2);
+          D=A shifted (0.5u,0.4u);
+          C=B shifted (0.5u,0.4u);
+          H=E shifted (0.5u,0.4u);
+          G=F shifted (0.5u,0.4u);
+          remplis polygone(B,C,G,F) withcolor Cornsilk;
+          remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+          remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+          trace A--B--F--E--cycle;
+          trace polygone(B,C,G,F);
+          trace chemin(G,H,E);
+          pair O;
+          O=u*(1.5,0.5);
+          label(btex {\bfseries 1 unité de volume} etex,O);
+      \end{Geometrie}
+      }}
+   \end{center}
+   \begin{enumerate}
+      \item \dots
+   \end{enumerate}
 \end{exercice*}

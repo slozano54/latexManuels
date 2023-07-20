@@ -19,7 +19,7 @@
         trace chemin(G,H,E);
         pair O;
         O=u*(1.5,0.5);
-        label(btex 1 u.v. etex,O);
+        label(btex {\bfseries 1 u.v.} etex,O);
     \end{Geometrie}
     }}
     \begin{multicols}{2}
@@ -32,9 +32,10 @@
                 B=u*(2,1);
                 F=u*(2,2);
                 E=u*(1,2);
-                pair Vx,Vy;
+                pair Vx,Vy,Vz;
                 Vx=u*(1,0);
                 Vy=u*(0.5,0.4);
+                Vz=u*(0,1);
                 D=A shifted Vy;
                 C=B shifted Vy;
                 H=E shifted Vy;
@@ -55,6 +56,8 @@
                 trace cube shifted (2*Vx+Vy);
                 trace cube shifted (2*Vx);
                 trace cube shifted (3*Vx);
+                % Pour hauteur enumerate homogene.
+                trace cube shifted (2*Vz) withcolor white;
             \end{Geometrie}
             \item
             \begin{Geometrie}[CoinHD={(5u,4u)}]
@@ -151,6 +154,8 @@
                     trace chemin(G,H,E);
                 );        
                 trace cube;
+                % Pour hauteur enumerate homogene.
+                trace cube shifted (2*Vz) withcolor white;
                 for j=0 upto 2:
                     for k=0 upto 2:
                         for i=0 upto 1:
