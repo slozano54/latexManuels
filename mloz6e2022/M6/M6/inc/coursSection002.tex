@@ -1,2 +1,64 @@
-\section{...}
-...
+\section{Conversion de durées}
+
+\begin{methode*2*2}[Convertir]
+    Pour convertir des durées, on peut utiliser le schéma suivant : \\
+    {\psset{xunit=0.8,yunit=0.6}
+    \footnotesize
+    \begin{pspicture}(-2.7,-3.7)(5,3.7)
+        \ovalnode{A}{durée en heures}
+        \ovalnode{B}{durée en minutes}
+        \ovalnode{C}{durée en secondes}
+        \nccurve[angle=90,linecolor=B1]{->}{A}{B}
+        \ncput*{\textcolor{B1}{$\times 60$}}
+        \nccurve[angle=90,linecolor=B1]{->}{B}{C}
+        \ncput*{\textcolor{B1}{$\times 60$}}
+        \nccurve[angle=-90,linecolor=A1]{->}{B}{A}
+        \ncput*{\textcolor{A1}{$\div 60$}}
+        \nccurve[angle=-90,linecolor=A1]{->}{C}{B}
+        \ncput*{\textcolor{A1}{$\div 60$}}
+        \nccurve[angle=90,linecolor=B1]{->}{A}{C}
+        \ncput*{\textcolor{B1}{$\times \num{3600}$}}
+        \nccurve[angle=-90,linecolor=A1]{->}{A}{C}
+        \ncput*{\textcolor{A1}{$\div \num{3600}$} }
+    \end{pspicture}}
+    \exercice
+        170 min en heures et minutes.     
+    \correction
+        $170=2\times60+50$, donc \\
+        170 min = 2 h 50 min.
+    \exercice
+        1 h 25 min 36 s en secondes.
+    \correction
+        1 h = \num{3600} s et 1 min = 60 s donc \\
+        1 h 25 min 36 s = \num{3600} s + $25\times60$ s + 36 s = \num{5136} s.
+\end{methode*2*2}
+
+\begin{remarque}
+    Pour effectuer des additions ou soustractions, on peut effectuer une opération experte ou procéder de proche en proche.
+\end{remarque}
+
+\begin{exemple}[0.5]
+    \ \\ [-10mm]
+    \begin{itemize}
+        \item Un train part à 8 h 48.\\ La durée du trajet est de 3 h et 20 min. \\
+        Déterminer l'heure d'arrivée.
+        \item Un automobiliste part à 8 h 35 et arrive à 10 h 20. \\
+        Déterminer la durée de son trajet.
+    \end{itemize}
+    \correction
+    \ \\ [-10mm]
+    \begin{itemize}
+        \item   
+        \begin{tabular}{>{\centering\arraybackslash}p{0.5cm}ccccc}
+            & & 8 & h & 4 & 8 \\
+            & $+$ & 3 & h & 2 & 0 \\
+            \hline
+            & 1 & $\cancel{1}$ & h & $\cancel{6}$ & 8 \\
+            = & 1 & 2 & h & 0 & 8 \\
+        \end{tabular}
+        \item 8 h 35 \quad $\xrightarrow{+\text{25 minutes}}$ \quad 9 h 00 \\
+        9 h 00 \quad $\xrightarrow{+\text{1 heure}}$ \quad 10 h 00 \\
+        10 h 00\quad $\xrightarrow{+\text{20 minutes}}$ \quad 10 h 20. \\   
+        La durée totale du trajet est de 1 h 45.
+    \end{itemize}   
+\end{exemple}
