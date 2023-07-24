@@ -1,7 +1,22 @@
-\vspace*{-8mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
-\vspace*{-5mm}
-\begin{debat}[\dots]
-\dots
- \end{debat}
+\vfill
+\begin{debat}[des aires en images]
+    Dans un rectangle, on peut mettre deux triangles de même surface, son {\bf aire} correspond donc au double de l'aire de l'un de ces triangles.
+    \begin{center}
+       \begin{pspicture}(0,-0.5)(8.5,2.5)
+          \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](0.5,0)(3.5,2)
+          \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](5,0)(8.5,2)
+          \pspolygon[linecolor=B1](5,0)(8.5,0)(6,2)
+          \psline[linecolor=B1,linestyle=dashed](6,0)(6,2)
+          \psarc{<-}(5.5,1){0.3}{-45}{180}
+          \psarc{->}(7.25,1){0.3}{25}{250}
+       \end{pspicture}
+    \end{center}
+    \begin{cadre}[B2][F4]
+       \begin{center}
+          \hrefVideo{https://www.youtube.com/watch?v=5_PiZrfLghQ}{\bf Aire de figures simples}, chaîne YouTube de {\it Science silencieuse}.
+       \end{center}
+    \end{cadre}
+\end{debat}
+\vfill
