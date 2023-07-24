@@ -1,2 +1,29 @@
-\section{...}
-...
+\section{Hauteurs d'un triangles}
+\begin{definition}
+    Les \textbf{hauteurs} d'un triangle sont les hauteurs relatives aux sommets du triangle, c'est-à-dire les trois droites perpendiculaires aux côtés qui passent par le sommet opposé.
+ \end{definition}
+ 
+ \begin{pspicture}(-0.5,-0.5)(4,4)
+    \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+    \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+    \pstProjection[PointName=none,CodeFigColor=B1]{B}{C}{A}
+    \pstLabelAB[offset=-0.3,npos=0.56]{A}{A'}{\footnotesize \textcolor{B1}{hauteur issue de A}}
+    \pstLineAB[linecolor=A1,linewidth=0.5mm]{C}{B}
+    \pstLabelAB{C}{B}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de A}}
+ \end{pspicture}
+ \begin{pspicture}(-1.5,-0.5)(4,4)
+    \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+    \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+    \pstProjection[PointName=none,CodeFigColor=B1]{C}{A}{B}
+    \pstLabelAB[offset=-0.3,npos=0.4]{B'}{B}{\footnotesize \textcolor{B1}{hauteur issue de B}}
+    \pstLineAB[linecolor=A1,linewidth=0.5mm]{A}{C}
+    \pstLabelAB[offset=0.5]{A}{C}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de B}}
+ \end{pspicture}
+ \begin{pspicture}(-1.5,-0.5)(4,4)
+    \psset{CodeFig=true, PointSymbol=none,RightAngleSize=0.2}
+    \pstTriangle{A}(4.5,0){B}(1.5,3){C}
+    \pstProjection[PointName=none,CodeFigColor=B1]{B}{A}{C}
+    \pstLabelAB[offset=-0.3,npos=0.45]{C'}{C}{\footnotesize \textcolor{B1}{hauteur issue de C}}
+    \pstLineAB[linecolor=A1,linewidth=0.5mm]{A}{B}
+    \pstLabelAB[offset=-0.3]{A}{B}{\footnotesize \textcolor{A1}{base relative à la hauteur issue de C}}
+ \end{pspicture}
