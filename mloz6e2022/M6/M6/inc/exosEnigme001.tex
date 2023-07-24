@@ -3,8 +3,68 @@
 %\refstepcounter{exercice}
 %\numeroteEnigme
 \vspace*{-10mm}
-\begin{enigme}[..]
-...
+\begin{enigme}[Poids et la masse]
+   \partie[outre-Terre]
+   \vspace*{-2mm}
+      \begin{minipage}{11.5cm}
+         Pourquoi les astronautes peuvent-ils porter plus facilement des objets sur la Lune que sur la Terre ?
+
+         \vspace*{2mm}\dotfill
+         
+         Dans le langage courant on dit : \og Mon poids est de 50 kg \fg{} ou \og Je pèse 50 kg \fg{}. Ces phrases vous paraissent-elle correctes ?
+
+         \vspace*{2mm}\dotfill
+      \end{minipage}
+      \qquad
+      \begin{minipage}{4.5cm}
+         \includegraphics[width=4.5cm]{\currentpath/images/astronaute}
+      \end{minipage}
+   
+   \partie[poids d'un corps]
+      \fbox{Le poids d'un corps est la {\bf force d’attraction} exercée par un corps matériel (Terre, Lune\dots) sur ce corps.} \\ [1mm]
+      Cette force d’attraction dépend de la masse du corps et de la masse du corps céleste. La Lune ayant une masse plus petite que celle de la Terre, elle exerce une force plus faible sur un même objet. \\ [2mm]
+      Sur la Lune, notre masse change-t-elle ? \dotfill 
+      
+      \vspace*{2mm}
+
+      Notre poids change-t-il ? \dotfill
+   
+   \partie[relation entre le poids d'un corps et sa masse]
+   \vspace*{-2mm}
+      On a relevé le poids (exprimé en Newton, de symbole N) et la masse (exprimée en kg) de certains objets sur la Terre et sur la Lune que l'on a représenté dans le graphique cartésien suivant :
+      \begin{center}
+         {\psset{yunit=0.8}
+         \small
+         \begin{pspicture}(-1.8,-0.7)(14,6.5)
+            \psgrid[gridlabels=0,gridcolor=lightgray](0,0)(12,6)
+            \psaxes[dx=1,Dx=10,dy=1,Dy=200]{->}(0,0)(12,6)
+            \psline[linecolor=B1](0,0)(12,5.88)
+            \rput{26}(6,3.3){\textcolor{B1}{sur la Terre}}
+            \psline[linecolor=A1](0,0)(12,0.972)
+            \rput{7}(6,0.8){\textcolor{A1}{sur la Lune}}
+            \rput[l](12.2,0){\footnotesize\it masse en kg}
+            \rput[c](-0.8,5.9){\footnotesize\it poids en N}
+         \end{pspicture}}
+      \end{center}
+      Compléter le tableau suivant :
+      \begin{center}
+         \begin{tabular}{|p{3.5cm}|*{4}{>{\centering\arraybackslash}p{2.4cm}|}}
+            \hline
+            Objet & homme & bébé & machine à laver & rugbyman ;-) \\
+            \hline
+            Masse en kg & 80 & & & \\
+            \hline
+            Poids en N sur la Terre & & 80 & & 1\,180 \\
+            \hline
+            Poids en N sur la Lune & & & 120 & \\
+            \hline
+         \end{tabular}
+      \end{center}
+      Par combien faut-il multiplier la masse d'un objet en kg pour obtenir son poids en N sur la Terre ? Sur la Lune ?
+
+      \vspace*{2mm}\dotfill
+
+      Cette constante est appelée accélération de la pesanteur et peut être exprimée en N/kg (Newton par kilogramme).
 \end{enigme}  
 % % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
