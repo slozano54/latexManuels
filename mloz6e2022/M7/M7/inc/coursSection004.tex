@@ -4,9 +4,9 @@
 {\renewcommand*{\arraystretch}{1.5}
       \begin{longtable}{|m{0.2\textwidth}|>{\centering\arraybackslash}m{0.2\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.425\textwidth}|}%
         \hline
-        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
+        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Aire}&{\bf Exemple}\\
         \hline
-        \textbf{ Triangle} de côté $b$ et de hauteur relative à ce côté $h$&
+        {\textbf{ Triangle} de côté $b$ et de hauteur relative\par à ce côté $h$}&
         \hspace*{-10mm}
         \begin{Geometrie}[CoinHD={u*(5,4)}]
             trace feuillet withcolor white;
@@ -52,87 +52,284 @@
         \hline
       \end{longtable}
 }
-% \begin{center}
-% \begin{tabular}{|m{8cm}|m{4.25cm}|c|}
-% \hline
-% \multicolumn{1}{|c|}{\bf Nom de la figure}&\multicolumn{1}{c|}{\bf Représentation}&\multicolumn{1}{c|}{\bf P\'erim\`{e}tre et aire}\\
-% \hline
-% \textbf{ Triangle} de côté $c$ et de hauteur relative à ce côté $h$&\includegraphics{aires_vol.6}&$\Eqalign{
-% {\cal P}&=\mbox{somme des côtés}\cr
-% {\cal A}&=\dfrac{c\times h}{2}\cr
-% }$\\
-% \hline
-% \end{tabular}
-% \end{center}
 
-\subsection{Quadilat\`{e}res}
-Mettre trapèze et parallélogrgramme à la fin avec une note de justification à partir du triangle.
-
-Deux tableaux Rectangle, carré, losange puis trapèze et parallelo.
-
+\subsection{Quadilatères}
 {\renewcommand*{\arraystretch}{1.5}
-      \begin{longtable}{|m{0.25\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
+      \begin{longtable}{|m{0.2\textwidth}|>{\centering\arraybackslash}m{0.3\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
         \hline
-        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
+        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Aire}&{\bf Exemple}\\
         \hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
+        {\textbf{ Rectangle}\par de longueur $L$\par et de largeur $l$}&
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.5,0.25);
+          B=u*(3.75,0.25);
+          C=3/5[B,rotation(A,B,-90)];
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          trace cotationmil(D,C,3mm,5,btex $L$ etex) withcolor red;
+          trace cotationmil(A,D,3mm,5,btex $l$ etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+        \end{Geometrie}  
+        &$\Eqalign{
+        {\mathcal A}&=L\times l\cr
+        }$
+        &
+        \begin{Geometrie}[CoinHD={u*(4,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.5,0.25);
+          B=u*(3.75,0.25);
+          C=3/5[B,rotation(A,B,-90)];
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          trace cotationmil(D,C,3mm,20,btex \Lg[dm]{0.3} etex) withcolor red;
+          trace cotationmil(A,D,3mm,20,btex \Lg[dm]{0.2} etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+        \end{Geometrie}  
+        $\Eqalign{
+        {\mathcal A}&=\Lg[dm]{0.3}\times\Lg[dm]{0.2}\cr
+        {\mathcal A}&=\Aire[dm]{0.06}\cr
+        }$\\
+        \hline
+        \textbf{ Carré} de côté $c$&
+        \begin{Geometrie}[CoinHD={u*(3,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.25,0.25);
+          B=u*(2.5,0.25);
+          C=rotation(A,B,-90);
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          marque_s:=2;
+          trace cotationmil(D,C,3mm,5,btex $c$ etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+          trace codesegments(A,B,B,C,2);
+          trace codesegments(C,D,D,A,2);
+        \end{Geometrie} 
+        &$\Eqalign{
+        {\mathcal A}&=c\times c\cr
+        {\mathcal A}&=c^2\cr
+        }$&
+        \begin{Geometrie}[CoinHD={u*(3,3)}]
+          trace feuillet withcolor white;
+          pair A,B,C,D;
+          A=u*(0.25,0.25);
+          B=u*(2.5,0.25);
+          C=rotation(A,B,-90);
+          D-A=C-B;
+          trace A--B--C--D--cycle;
+          marque_s:=2;
+          trace cotationmil(D,C,3mm,15,btex \Lg{5} etex) withcolor red;
+          trace codeperp(A,B,C,5);
+          trace codeperp(B,C,D,5);
+          trace codeperp(C,D,A,5);
+          trace codesegments(A,B,B,C,2);
+          trace codesegments(C,D,D,A,2);
+        \end{Geometrie}
+        $\Eqalign{
+          {\mathcal A}&=\Lg{5}\times \Lg{5}\cr
+          {\mathcal A}&=(\Lg{5})^2\cr
+          {\mathcal A}&=\Aire{25}\cr
+        }$\\
+        \hline
+        \multicolumn{4}{|c|}{\emoji{light-bulb} Les aires des quadriltères suivants peuvent être obtenues en les complétant ou en les transformant en rectangles.\emoji{light-bulb}}
+        \\\hline
+        {\textbf{ Losange}\par de grande diagonale $D$\par et de petite diagonale $d$}&
+        \hspace*{-3mm}        
+        \begin{Geometrie}[CoinBG={u*(0,-0.75)},CoinHD={u*(5,2.5)}]
+            u:=0.5*u;
+            trace feuillet withcolor white;
+            pair A,B,C,D,H;
+            A=u*(0.75,0.75);
+            B=u*(5.25,0.75);
+            C=rotation(A,B,-140);
+            D=symetrie(B,A,C);
+            H=iso(A,C);
+            trace A--B--C--D--cycle;
+            trace cotationmil(A,C,-10mm,5,btex $D$ etex) withcolor red;
+            trace cotationmil(D,B,-5mm,5,btex $d$ etex) withcolor red;
+            trace codeperp(C,H,B,5) dashed evenly withcolor Grey;
+            trace A--C dashed evenly withcolor LightGrey;
+            trace B--D dashed evenly withcolor LightGrey;            
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal A}&=\dfrac{d\times D}{2}\cr
+        }$&
+        \hspace*{-3mm}        
+        \begin{Geometrie}[CoinBG={u*(0,-0.75)},CoinHD={u*(5,2.5)}]
+            u:=0.5*u;
+            trace feuillet withcolor white;
+            pair A,B,C,D,H;
+            A=u*(0.75,0.75);
+            B=u*(5.25,0.75);
+            C=rotation(A,B,-140);
+            D=symetrie(B,A,C);
+            H=iso(A,C);
+            trace A--B--C--D--cycle;
+            trace cotationmil(A,C,-10mm,15,btex $\Lg[m]{0.04}$ etex) withcolor red;
+            trace cotationmil(D,B,-5mm,15,btex $\Lg{3}$ etex) withcolor red;
+            trace codeperp(C,H,B,5) dashed evenly withcolor Grey;
+            trace A--C dashed evenly withcolor LightGrey;
+            trace B--D dashed evenly withcolor LightGrey;            
+        \end{Geometrie}        
+        $\Eqalign{
+          {\mathcal A}&=\dfrac{\Lg{3}\times \Lg[m]{0.04}}{2}\cr
+          {\mathcal A}&=\dfrac{\Lg{3}\times \Lg{4}}{2}\cr
+          {\mathcal A}&=\Aire{6}\cr
+        }$
+        \\
+        \hline
+        {\textbf{ Trapèze}\par de petite base $b$,\par de grande base $B$\par et de hauteur $h$}&
+        \begin{Geometrie}[CoinHD={u*(4,2.75)}]
+            u:=0.5*u;
+            trace feuillet withcolor white;
+            pair A,B,C,D,H;
+            A=u*(0.75,0.75);
+            B=u*(7.25,0.75);
+            C=3/5[B,rotation(A,B,-60)];
+            D-C=u*(-3,0);
+            H=projection(D,A,B);
+            trace A--B--C--D--cycle;
+            trace cotationmil(D,C,3mm,5,btex $b$ etex) withcolor red;
+            trace cotationmil(A,B,-2mm,5,btex $B$ etex) withcolor red;
+            trace cotationmil(D,H,4mm,5,btex $h$ etex) withcolor red;
+            trace D--H dashed evenly;
+            trace codeperp(C,D,H,5);
+            trace codeperp(D,H,B,5);
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal A}&=\dfrac{(b+B)\times h}{2}\cr
+        }$&
+        \begin{Geometrie}[CoinHD={u*(4,2.75)}]
+          u:=0.5*u;
+          trace feuillet withcolor white;
+          pair A,B,C,D,H;
+          A=u*(0.75,0.75);
+          B=u*(7.25,0.75);
+          C=3/5[B,rotation(A,B,-60)];
+          D-C=u*(-3,0);
+          H=projection(D,A,B);
+          trace A--B--C--D--cycle;
+          trace cotationmil(D,C,3mm,15,btex $\Lg[dm]{0.3}$ etex) withcolor red;
+          trace cotationmil(A,B,-2mm,15,btex $\Lg[m]{0.04}$ etex) withcolor red;
+          trace cotationmil(D,H,4mm,15,btex $\Lg{2}$ etex) withcolor red;
+          trace D--H dashed evenly;
+          trace codeperp(C,D,H,5);
+          trace codeperp(D,H,B,5);
+        \end{Geometrie}
+        \vspace*{5mm}
+        $\Eqalign{
+          {\mathcal A}&=\dfrac{(\Lg[dm]{0.3}+\Lg[m]{0.04})\times \Lg{2}}{2}\cr
+          {\mathcal A}&=\dfrac{(\Lg{3}+\Lg{4})\times \Lg{2}}{2}\cr
+          {\mathcal A}&=\Aire{12}\cr
+        }$
+        \\
+        \hline
+        {\textbf{ Parallélogramme}\par de côté $c$ et de hauteur\par relative à ce côté $h$}&
+        \begin{Geometrie}[CoinBG={u*(0,-0.25)},CoinHD={u*(4,2.5)}]
+          u:=0.5*u;
+          trace feuillet withcolor white;
+          pair A,B,C,D,H;
+          A=u*(0.75,0.75);
+          B=u*(7.25,0.75);
+          C=0.5[B,rotation(A,B,-100)];
+          D-C=A-B;
+          H=projection(D,A,B);
+          trace A--B--C--D--cycle;
+          trace cotationmil(A,B,-2mm,5,btex $c$ etex) withcolor red;
+          trace cotationmil(D,H,4mm,5,btex $h$ etex)withcolor red;
+          trace D--H dashed evenly;
+          trace codeperp(C,D,H,5);
+          trace codeperp(D,H,B,5);
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal A}&=c\times h\cr
+        }$&
+        \begin{Geometrie}[CoinBG={u*(0,-0.25)},CoinHD={u*(4,2.5)}]
+          u:=0.5*u;
+          trace feuillet withcolor white;
+          pair A,B,C,D,H;
+          A=u*(0.75,0.75);
+          B=u*(7.25,0.75);
+          C=0.5[B,rotation(A,B,-100)];
+          D-C=A-B;
+          H=projection(D,A,B);
+          trace A--B--C--D--cycle;
+          trace cotationmil(A,B,-2mm,15,btex $\Lg[m]{30}$ etex) withcolor red;
+          trace cotationmil(D,H,4mm,15,btex $\Lg{40}$ etex)withcolor red;
+          trace D--H dashed evenly;
+          trace codeperp(C,D,H,5);
+          trace codeperp(D,H,B,5);
+        \end{Geometrie}         
+        $\Eqalign{
+          {\mathcal A}&=\Lg[m]{30}\times \Lg{40}\cr
+          {\mathcal A}&=\Lg[m]{30}\times \Lg[m]{0.4}\cr
+          {\mathcal A}&=\Aire[m]{12}\cr
+        }$
+        \\
+        \hline
       \end{longtable}
 }
-% \begin{center}
-% \begin{tabular}{|m{8cm}|m{4.25cm}|c|}
-% \hline
-% \multicolumn{1}{|c|}{\bf Nom de la figure}&\multicolumn{1}{c|}{\bf Représentation}&\multicolumn{1}{c|}{\bf P\'erim\`{e}tre et aire}\\
-% \hline
-% \textbf{ Trapèze} de petite base $b$, de grande base $B$ et de hauteur $h$&\includegraphics{aires_vol.3}&$\Eqalign{
-% {\cal P}&=\mbox{somme des côtés}\cr
-% {\cal A}&=\frac{(B+b)\times h}{2}\cr
-% }$\\
-% \hline
-% \textbf{ Parallélogramme} de côté $c$ et de hauteur relative à ce côté $h$&\includegraphics{aires_vol.4}&$\Eqalign{
-% {\cal P}&=\mbox{somme des côtés}\cr
-% {\cal A}&=c\times h\cr
-% }$\\
-% \hline
-% \textbf{ Losange} de côté $c$, de grande diagonale $D$ et de petite diagonale $d$&\includegraphics{aires_vol.5}&$\Eqalign{
-% {\cal P}&=4c\cr
-% {\cal A}&=\dfrac{d\times D}{2}\cr
-% }$\\
-% \hline
-% \textbf{ Rectangle} de longueur $L$ et de largeur $l$&\includegraphics{aires_vol.2}&$\Eqalign{
-% {\cal P}&=2(l+L)\cr
-% {\cal A}&=L\times l\cr
-% }$\\
-% \hline
-% \textbf{ Carré} de côté $c$&\includegraphics{aires_vol.1}&$\Eqalign{
-% {\cal P}&=4c\cr
-% {\cal A}&=c^2\cr
-% }$\\
-% \hline
-% \end{tabular}
-% \end{center}
 
 \subsection{Disques}
 {\renewcommand*{\arraystretch}{1.5}
       \begin{longtable}{|m{0.25\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
         \hline
-        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
+        \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Aire}&{\bf Exemple}\\
         \hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
+        \textbf{ Disque} de rayon $R$&        
+        \begin{Geometrie}[CoinBG={u*(0,-0.5)},CoinHD={u*(4,3.5)}]
+          u:=0.5*u;
+          trace feuillet withcolor white;
+          pair A,B;
+          A=u*(4,3);
+          path cc;
+          cc=cercles(A,u*3.5);
+          B=point(0.15*length cc) of cc;
+          trace cc;
+          marque_p:="croix";
+          MarquePoint(A);
+          trace cotationmil(A,B,0,5,btex $R$ etex) withcolor red;
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal A}&=\pi\times R\times R\cr
+        {\mathcal A}&=\pi\times R^2\cr
+        }$&
+        \begin{Geometrie}[CoinBG={u*(0,-0.5)},CoinHD={u*(4,3.5)}]
+          u:=0.5*u;
+          trace feuillet withcolor white;
+          pair A,B;
+          A=u*(4,3);
+          path cc;
+          cc=cercles(A,u*3.5);
+          B=point(0.15*length cc) of cc;
+          trace cc;
+          marque_p:="croix";
+          MarquePoint(A);
+          trace cotationmil(A,B,0,15,btex $\Lg{1.2}$ etex) withcolor red;
+        \end{Geometrie}        
+        $\Eqalign{
+          {\mathcal A}&=\pi\times \Lg{1.2}\times \Lg{1.2}\cr
+          {\mathcal A}&=\pi\times (\Lg{1.2})^2\cr
+          {\mathcal A}&\simeq\Aire{4.52} \cr
+        }$
+        \\
+        \hline
       \end{longtable}
 }
-% \begin{center}
-% \begin{tabular}{|m{8cm}|m{4.25cm}|c|}
-% \hline
-% \multicolumn{1}{|c|}{\bf Nom de la figure}&\multicolumn{1}{c|}{\bf Représentation}&\multicolumn{1}{c|}{\bf P\'erim\`{e}tre et aire}\\
-% \hline
-% \textbf{ Cercle et disque} de rayon $r$&\includegraphics{aires_vol.7}&$\Eqalign{
-% {\cal P}&=2\pi r\cr
-% {\cal A}&=\pi r^2\cr
-% }$\\
-% \hline
-% \end{tabular}
-% \end{center}
+
+\begin{changemargin}{0mm}{-5mm}
+  \begin{myBox}{\emoji{light-bulb} Moyen mnémotechnique \emoji{light-bulb}}  
+    Si on note $R$ le rayon du cercle, que l'on simplifie l'expression littérale en réordonnant ses facteurs :
+    $$\pi\times R \times R = \pi \times R^2 = \pi R^2$$
+    L'expression $\pi R^2$ se lit alors \og{} Pierre carrée \fg{}.  
+  \end{myBox}
+\end{changemargin}
