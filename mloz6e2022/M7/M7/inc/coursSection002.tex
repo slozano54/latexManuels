@@ -1,37 +1,42 @@
 \section{Unités d'aire}
-\dots
-% \definNum{L'unité d'aire usuelle est le \textbf{mètre carré}, noté $m^2$, qui représente l'aire d'un carré de côté $1$ m.\\
-% On utilise aussi ses \textbf{multiples} et ses \textbf{sous-multiples}.
-% }
+\begin{changemargin}{0mm}{-20mm}
+    \begin{definition}
+        L'unité d'aire usuelle est le \textbf{mètre carré}, \Aire[m]{}, qui représente l'aire d'un carré de côté \Lg[m]{1}.\\
+        On utilise aussi ses \textbf{multiples} et ses \textbf{sous-multiples}.\\
+            \begin{center}
+                \textbf{Tableau de référence}\par\vspace{5mm}
+                \begin{tabular}{|>{\centering\arraybackslash}m{0.09\linewidth}||>{\centering\arraybackslash}m{0.09\linewidth}|>{\centering\arraybackslash}m{0.09\linewidth}|>{\centering\arraybackslash}m{0.09\linewidth}||>{\centering\arraybackslash}m{0.09\linewidth}||>{\centering\arraybackslash}m{0.09\linewidth}|>{\centering\arraybackslash}m{0.09\linewidth}|>{\centering\arraybackslash}m{0.09\linewidth}|}
+                    \hline
+                                        &\multicolumn{3}{c||}{\textbf{Multiples de l'unité}} & \multicolumn{1}{c||}{\textbf{Unité}} & \multicolumn{3}{c|}{\textbf{Sous-multiples de l'unité}} \\\hline
+                    Unités d'aire       &\Aire[km]{}   & \Aire[hm]{}  & \Aire[dam]{} & \Aire[m]{}   & \Aire[dm]{}   & \Aire[cm]{}  & \Aire[mm]{}  \\\hline
+                    Unités agraires     &$\bigotimes$  & \Aire[ha]{1} & \Aire[a]{1}  & \Aire[ca]{1} & $\bigotimes$  & $\bigotimes$ & $\bigotimes$ \\\hline
+                    Valeur en \Aire[m]{}&$\bigotimes$&\Aire[m]{10000}&\Aire[m]{100}& \Aire[m]{1}&\Aire[m]{0.01}&$\bigotimes$&$\bigotimes$ \\ \hline
+                    \rule[-2ex]{0pt}{6ex}  &$\bigotimes$& $\dfrac{1}{100}$ \Aire[km]{}    & $\dfrac{1}{100}$ \Aire[hm]{}   & $\dfrac{1}{100}$ \Aire[dam]{} & $\dfrac{1}{100}$ \Aire[m]{} & $\dfrac{1}{100}$ \Aire[dm]{}    & $\dfrac{1}{100}$ \Aire[cm]{} \\\hline
+                \end{tabular}
+            \end{center}
+    \end{definition}
+\end{changemargin}
 
-% \Methode{Convertir des longueurs}{
-% Pour convertir des longueurs, on effectue des multiplications ou des divisions par 100,10 000 ...\\
-% Pour la surface d'un terrain, de terres agricoles ou forestières, on utilise des \textbf{unités de mesure agraires}.\\
-% \begin{center}
-% \textbf{Tableau de conversion}\par\vspace{5mm}
-% \begin{small}
-% \begin{tabular}{|>{\centering}p{1.5cm}|>{\centering}p{1cm}|>{\centering}p{2cm}|>{\centering}p{2cm}||>{\centering}p{2cm}||>{\centering}p{1.5cm}|>{\centering}p{1.5cm}|>{\centering}p{1.5cm}|} \hline
-% \multicolumn{1}{|c|}{}&\multicolumn{3}{c||}{\textbf{Multiples de l'unité}} & \multicolumn{1}{c||}{\textbf{Unité}} & \multicolumn{3}{c|}{\textbf{Sous-multiples de l'unité}} \\ \hline
-% &&&&&&&\cr
-% Unités d'aire& $km^2$ & $hm^2$ & $dam^2$ & $m^2$ & $dm^2$ & $cm^2$ & $mm^2$ \cr \hline
-% Unités agraires&$\bigotimes$ & 1 ha & 1 a & 1 ca & $\bigotimes$ &$\bigotimes$  &$\bigotimes$  \cr  \hline
-% &&&&&&&\cr
-% Valeur en $m^2$& $\bigotimes$ & 10 000 $m^2$ & 100 $m^2$ & 1 $m^2$ & 0,01 $m^2$ & $\bigotimes$& $\bigotimes$\cr \hline
-% &&&&&&&\cr
-% $\bigotimes$&$\bigotimes$& $\dfrac{1}{100}$ $km^2$ & $\dfrac{1}{100}$ $hm^2$ & $\dfrac{1}{100}$ $dam^2$ & $\dfrac{1}{100}$ $m^2$ & $\dfrac{1}{100}$ $dm^2$ & $\dfrac{1}{100}$ $cm^2$ \cr 
-% &&&&&&&\cr \hline
-% \end{tabular}
-% \end{small}
-
-% \end{center}
-% }
-
-% \Exemples{}{
-% \begin{mylist}
-% \item $1$ $dam^2$ = $100$ $m^2$ donc $53$ $dam^2$ = $53 \times 100$ $m^2$ = $5\:300$ $m^2$
-% \item $1$ $dm^2$ = $0,01$ $m^2$ donc $5$ $dm^2$ = $5 \div 100$ $m^2$ = $0,05$ $m^2$
-% \item $1$ $ha$ = $10\:000$ $m^2$ donc $7,81$ $ha$ = $7,81 \times 10\:000$ $m^2$ = $78\:100$ $m^2$
-% \item $1$ $a$ = $100$ $m^2$ donc $8,5$ $a$ = $8,5 \times 100$ $m^2$ = $850$ $m^2$
-% \item $1$ $ha$ = $100$ $a$ donc $17$ $ha$ = $17 \times 100$ $a$ = $17\:000$ $a$
-% \end{mylist}
-% }
+\begin{changemargin}{0mm}{-20mm}
+\begin{methode}[Convertir des aires]
+    Pour convertir des longueurs, on effectue des multiplications ou des divisions par 100,\num{10 000} \dots \\
+    Pour la surface d'un terrain, de terres agricoles ou forestières, on utilise des \textbf{unités de mesure agraires}.
+    \exercice
+        Convertir 
+        \begin{itemize}
+            \item \Aire[dam]{1} en \Aire[m]{}.
+            \item \Aire[dm]{1} en \Aire[m]{}.
+            \item \Aire[ha]{1} en \Aire[m]{}.
+            \item \Aire[a]{1} en \Aire[m]{}.
+            \item \Aire[ha]{1} en \Aire[a]{}.
+        \end{itemize}
+    \correction
+        \begin{itemize}
+            \item $\Aire[dam]{1} = \Aire[m]{100}$   donc $\Aire[dam]{53}  = 53 \times \Aire[m]{100}           = \Aire[m]{5300}$.
+            \item $\Aire[dm]{1}  = \Aire[m]{0.01}$  donc $\Aire[dm]{5}    = 5 \div \Aire[m]{100}              = \Aire[m]{0.05}$.
+            \item $\Aire[ha]{1}  = \Aire[m]{10000}$ donc $\Aire[ha]{7.81} = \num{7.81} \times \Aire[m]{10000} = \Aire[m]{78100}$.
+            \item $\Aire[a]{1}   = \Aire[m]{100}$   donc $\Aire[a]{8.5}   = \num{8.5} \times \Aire[m]{100}    = \Aire[m]{850}$.
+            \item $\Aire[ha]{1}  = \Aire[a]{100}$   donc $\Aire[ha]{17}   = 17 \times \Aire[a]{100}           = \Aire[a]{17000}$.
+        \end{itemize}
+\end{methode}
+\end{changemargin}

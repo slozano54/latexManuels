@@ -1,82 +1,83 @@
-\section{Définitions}
-\dots
-% \subsection{Aires}
-% \definNum{L'\textbf{aire} d'une figure c'est la mesure de sa surface.}
+\section{Aire}
+\begin{definition}
+    L'\textbf{aire} d'une figure c'est la mesure de sa surface.
+\end{definition}
 
-% \Remarques[Remarque]{Une aire s'exprime avec une \textbf{unité d'aire}.}
+\begin{remarques}
+    \emoji{light-bulb}\emoji{light-bulb}\emoji{light-bulb}
+    \begin{itemize}
+        \item Une aire s'exprime avec une \textbf{unité d'aire}.
+        \item Deux figures non superposables peuvent avoir le \textbf{même périmètre}.
+        \item Deux figures non superposables peuvent avoir la \textbf{même aire}.
+        \item Deux figures peuvent avoir la même aire mais des \textbf{périmètres différents}.
+        \item Deux figures peuvent avoir le même périmètre mais des \textbf{aires différentes}.
+    \end{itemize}
 
-% \subsection{Quelques remarques}
-% \proprNumBis{}{
-% \begin{mylist}
-% \item Deux figures non superposables peuvent avoir le \textbf{même périmètre}.
-% \item Deux figures non superposables peuvent avoir la \textbf{même aire}.
-% \item Deux figures peuvent avoir la même aire mais des \textbf{périmètres différents}.
-% \item Deux figures peuvent avoir le même périmètre mais des \textbf{aires différentes}.
-% \end{mylist}
-% }
-
-% \Exemples{}{
-% \begin{minipage}{7cm}
-% \definecolor{qqqqff}{rgb}{0,0,1}
-% \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
-% \definecolor{zzttqq}{rgb}{0.6,0.2,0}
-% \definecolor{ccqqqq}{rgb}{0.8,0,0}
-% \definecolor{ffqqqq}{rgb}{1,0,0}
-% \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
-% \scalebox{0.6}{
-% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-% \draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-8,-10) grid (4,1);
-% \clip(-8,-10) rectangle (4,1);
-% \fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-2,-8) -- (-1,-8) -- (-1,-7) -- (-2,-7) -- cycle;
-% \fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-7,-6) -- (-7,0) -- (-4,0) -- (-4,-1) -- (-6,-1) -- (-6,-6) -- cycle;
-% \fill[line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (-4,-6) -- (-2,-6) -- (-2,-2) -- (-4,-2) -- cycle;
-% \fill[line width=2pt,color=qqqqff,fill=qqqqff,fill opacity=0.1] (-1,-6) -- (-1,-1) -- (0,-1) -- (0,-3) -- (1,-3) -- (1,-4) -- (2,-4) -- (2,-5) -- (3,-5) -- (3,-6) -- cycle;
-% \draw [line width=2pt,color=ffqqqq] (-7,-8)-- (-6,-8);
-% \draw [color=ccqqqq](-7.84,-7.8) node[anchor=north west] {\parbox{3.72 cm}{\begin{center}unité de longueur \par u.l. \end{center}}};
-% \draw [line width=2pt,color=zzttqq] (-2,-8)-- (-1,-8);
-% \draw [line width=2pt,color=zzttqq] (-1,-8)-- (-1,-7);
-% \draw [line width=2pt,color=zzttqq] (-1,-7)-- (-2,-7);
-% \draw [line width=2pt,color=zzttqq] (-2,-7)-- (-2,-8);
-% \draw [color=zzttqq](-2.36,-7.8) node[anchor=north west] {\parbox{2.92 cm}{\begin{center}unité d'aire \par u.a. \end{center}}};
-% \draw [line width=2pt,color=zzttqq] (-7,-6)-- (-7,0);
-% \draw [line width=2pt,color=zzttqq] (-7,0)-- (-4,0);
-% \draw [line width=2pt,color=zzttqq] (-4,0)-- (-4,-1);
-% \draw [line width=2pt,color=zzttqq] (-4,-1)-- (-6,-1);
-% \draw [line width=2pt,color=zzttqq] (-6,-1)-- (-6,-6);
-% \draw [line width=2pt,color=zzttqq] (-6,-6)-- (-7,-6);
-% \draw [line width=2pt,color=qqwuqq] (-4,-6)-- (-2,-6);
-% \draw [line width=2pt,color=qqwuqq] (-2,-6)-- (-2,-2);
-% \draw [line width=2pt,color=qqwuqq] (-2,-2)-- (-4,-2);
-% \draw [line width=2pt,color=qqwuqq] (-4,-2)-- (-4,-6);
-% \draw [line width=2pt,color=qqqqff] (-1,-6)-- (-1,-1);
-% \draw [line width=2pt,color=qqqqff] (-1,-1)-- (0,-1);
-% \draw [line width=2pt,color=qqqqff] (0,-1)-- (0,-3);
-% \draw [line width=2pt,color=qqqqff] (0,-3)-- (1,-3);
-% \draw [line width=2pt,color=qqqqff] (1,-3)-- (1,-4);
-% \draw [line width=2pt,color=qqqqff] (1,-4)-- (2,-4);
-% \draw [line width=2pt,color=qqqqff] (2,-4)-- (2,-5);
-% \draw [line width=2pt,color=qqqqff] (2,-5)-- (3,-5);
-% \draw [line width=2pt,color=qqqqff] (3,-5)-- (3,-6);
-% \draw [line width=2pt,color=qqqqff] (3,-6)-- (-1,-6);
-% \begin{Large}
-% \draw[color=zzttqq] (-5.58,-0.52) node {$Fig1$};
-% \draw[color=qqwuqq] (-3.08,-3.42) node {$Fig2$};
-% \draw[color=qqqqff] (0.22,-4.4) node {$Fig3$};
-% \end{Large}
-% \end{tikzpicture}
-% }
-% \end{minipage}
-% \begin{minipage}{9.5cm}
-% \begin{mylist}
-% \item Fig1 et Fig2 ont la \textbf{même aire} mais pas le même périmètre.
-% \item Fig1 et Fig3 ont le \textbf{même périmètre} mais pas la même aire.
-% \end{mylist}
-% \end{minipage}
-% \par\vspace{5mm}
-% \begin{tabular}{|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|>{\centering}p{3cm}|}
-% \cline{2-4}
-% \multicolumn{1}{c|}{}&\cellcolor{brown!30}Fig1&\cellcolor{green!30}Fig2&\cellcolor{blue!30}Fig3 \cr \hline
-% Périmètre& 18 u.l. & 12 u.l. & 18 u.l. \cr \hline
-% Aire& 8 u.a.&8 u.a.&11 u.a. \cr \hline 
-% \end{tabular}
-% }
+    \medskip
+    \begin{minipage}{0.45\linewidth}
+        \begin{Geometrie}[CoinHD={(6u,5.5u)}]            
+            pair A[],B[],C[];
+            % Fig1            
+            A0=u*(0.5,2);
+            A1=A0 shifted (0.5u,0);
+            A2=A1 shifted (0,2.5u);
+            A3=A2 shifted (u,0);
+            A4=A3 shifted (0,0.5u);
+            A5=A4 shifted (-1.5u,0);
+            trace polygone(A0,A1,A2,A3,A4,A5) withcolor Brown withpen pencircle scaled 2bp;
+            remplis polygone(A0,A1,A2,A3,A4,A5) withcolor BurlyWood;            
+            % Fig2
+            B0=u*(2,2);
+            B1=B0 shifted (u,0);
+            B2=B1 shifted (0,2u);
+            B3=B2 shifted (-u,0);
+            trace polygone(B0,B1,B2,B3) withcolor DarkGreen withpen pencircle scaled 2bp;
+            remplis polygone(B0,B1,B2,B3) withcolor LightGreen;            
+            % Fig3
+            C0=u*(3.5,2);
+            C1=C0 shifted (2u,0);
+            C2=C1 shifted (0,0.5u);
+            C3=C2 shifted (-0.5u,0);
+            C4=C3 shifted (0,0.5u);
+            C5=C4 shifted (-0.5u,0);
+            C6=C5 shifted (0,0.5u);
+            C7=C6 shifted (-0.5u,0);
+            C8=C7 shifted (0,u);
+            C9=C8 shifted (-0.5u,0);
+            trace polygone(C0,C1,C2,C3,C4,C5,C6,C7,C8,C9) withcolor DarkBlue withpen pencircle scaled 2bp;
+            remplis polygone(C0,C1,C2,C3,C4,C5,C6,C7,C8,C9) withcolor LightBlue;            
+            % Grille
+            trace grille(0.5) withcolor DarkGrey;
+            label(btex {\color{Brown} Fig 1} etex,(1.25u,4.75u));
+            label(btex {\color{DarkGreen} Fig 2} etex,(2.5u,3.25u));
+            label(btex {\color{DarkBlue} Fig 3} etex,(4.25u,2.75u));
+            % Unités
+            % Longueur
+            trace segment((1.5u,u),(2u,u)) withcolor red withpen pencircle scaled 2bp;
+            label(btex u.l. etex,(1.75u,0.75u));
+            label(btex unité de longueur etex,(1.75u,0.25u));
+            % Aire
+            pair D[];
+            D0=u*(4.5,1);
+            D1=D0 shifted (0.5u,0);
+            D2=D1 shifted (0,0.5u);
+            D3=D2 shifted (-0.5u,0);            
+            trace polygone (D0,D1,D2,D3) withcolor Grey withpen pencircle scaled 2bp;
+            remplis polygone(D0,D1,D2,D3) withcolor LightGrey;
+            label(btex u.a. etex,(4.75u,0.75u));
+            label(btex unité d'aire etex,(4.75u,0.25u));
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{itemize}
+            \item Fig1 et Fig2 ont la \textbf{même aire} mais pas le même périmètre.
+            \item Fig1 et Fig3 ont le \textbf{même périmètre} mais pas la même aire.
+        \end{itemize}
+        \begin{tabular}{|>{\centering\arraybackslash}p{0.3\linewidth}|*{3}{>{\centering\arraybackslash}p{0.2\linewidth}|}}
+            \cline{2-4}
+            \multicolumn{1}{c|}{}&\cellcolor{BurlyWood}Fig1&\cellcolor{LightGreen}Fig2&\cellcolor{LightBlue}Fig3 \\ \hline
+            Périmètre& 18 u.l. & 12 u.l. & 18 u.l. \\ \hline
+            Aire& 8 u.a.&8 u.a.&11 u.a. \\ \hline 
+        \end{tabular}
+    \end{minipage}
+\end{remarques}
