@@ -1,18 +1,55 @@
+\vspace*{-10mm}
 \section{Aires usuelles}
-Revoir le tableau de Nathalie et la mise en forme du chapitre sur les périmètres.
-
-On commence par les triangles car ils sont utiles ensuite pour justifier oralement pour les quadrilatères trapèze et parallélogrgramme.
-
-
 \subsection{Triangles}
 {\renewcommand*{\arraystretch}{1.5}
-      \begin{longtable}{|m{0.25\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.325\textwidth}|}%
+      \begin{longtable}{|m{0.2\textwidth}|>{\centering\arraybackslash}m{0.2\textwidth}|m{0.15\textwidth}|>{\centering\arraybackslash}m{0.425\textwidth}|}%
         \hline
         \rowcolor{gray!20}\multicolumn{1}{|c|}{\bf Nom de la figure}&{\bf Représentation}&\multicolumn{1}{|c|}{\bf Périmètre}&{\bf Exemple}\\
         \hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
-        a&b&c&d\\\hline
+        \textbf{ Triangle} de côté $b$ et de hauteur relative à ce côté $h$&
+        \hspace*{-10mm}
+        \begin{Geometrie}[CoinHD={u*(5,4)}]
+            trace feuillet withcolor white;
+            pair A,B,C,H;
+            A=u*(1,1);
+            B-A=u*(3,0);            
+            C-A=u*(1,2);
+            H=projection(C,A,B);
+            trace polygone(A,B,C);
+            trace cotationmil(C,H,3mm,5,btex $h$ etex) withcolor red;
+            trace segment(C,H) withcolor red;
+            trace segment(A,B) withcolor blue;
+            trace cotationmil(A,B,-3mm,5,btex $b$ etex) withcolor blue;
+            trace codeperp(B,H,C,5) withcolor red;
+        \end{Geometrie}        
+        &$\Eqalign{
+        {\mathcal A}&=\dfrac{b\times h}{2}\cr
+        }$&
+        \begin{minipage}{0.18\textwidth}
+          \vspace*{-10mm}\hspace*{-15mm}
+        \begin{Geometrie}[CoinHD={u*(5,4)}]
+          trace feuillet withcolor white;
+          pair A,B,C,H;
+          A=u*(1,1);
+          B-A=u*(3,0);            
+          C-A=u*(1,2);
+          H=projection(C,A,B);
+          trace polygone(A,B,C);
+          trace cotationmil(C,H,3mm,15,btex \Lg[mm]{26} etex) withcolor red;
+          trace segment(C,H) withcolor red;
+          trace segment(A,B) withcolor blue;
+          trace cotationmil(A,B,-3mm,15,btex \Lg[mm]{27} etex) withcolor blue;
+          trace codeperp(B,H,C,5) withcolor red;
+        \end{Geometrie}
+      \end{minipage}      
+      \begin{minipage}{0.124\textwidth}
+      $\Eqalign{
+        {\mathcal A}&=\dfrac{\Lg[mm]{27}\times \Lg[mm]{26}}{2}\cr
+        {\mathcal A}&=\Aire[mm]{351}\cr
+        }$
+      \end{minipage}        
+        \\
+        \hline
       \end{longtable}
 }
 % \begin{center}
