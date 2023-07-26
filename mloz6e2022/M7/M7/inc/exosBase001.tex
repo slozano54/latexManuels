@@ -1,3 +1,167 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Autour du carré]
+    \begin{Geometrie}[CoinHD={(8u,8u)}]
+        % Fig1
+        pair A[];
+        A0=u*(0.5,6.5);
+        A1=A0 shifted (u,0);
+        A2=A1 shifted (0,u);
+        A3=A2 shifted (-u,0);
+        trace polygone(A0,A1,A2,A3) withcolor Brown withpen pencircle scaled 2bp;
+        remplis polygone(A0,A1,A2,A3) withcolor BurlyWood;
+        label(btex {\bfseries Fig 1} etex,iso(A0,A1) shifted (0,0.25u));
+        % Fig2
+        pair B[];
+        B0=u*(2.5,5.5);
+        B1=B0 shifted (u,0);
+        B2=B1 shifted (0,0.5u);
+        B3=B2 shifted (-0.5u,0);
+        B4=B3 shifted (0,1.5u);
+        B5=B4 shifted (-u,0);
+        B6=B5 shifted (0,-0.5u);
+        B7=B6 shifted (0.5u,0);
+        trace polygone(B0,B1,B2,B3,B4,B5,B6,B7) withcolor DarkGreen withpen pencircle scaled 2bp;
+        remplis polygone(B0,B1,B2,B3,B4,B5,B6,B7) withcolor LightGreen;
+        label(btex {\bfseries Fig 2} etex,iso(B0,B1) shifted (0,0.25u));
+        % Fig3
+        pair C[];
+        C0=u*(4.5,5.5);
+        C1=C0 shifted (0.5u,0);
+        C2=C1 shifted (0,1.5u);
+        C3=C2 shifted (0.5u,0);
+        C4=C3 shifted (0,0.5u);
+        C5=C4 shifted (-1.5u,0);
+        C6=C5 shifted (0,-0.5u);
+        C7=C6 shifted (0.5u,0);
+        trace polygone(C0,C1,C2,C3,C4,C5,C6,C7) withcolor DarkBlue withpen pencircle scaled 2bp;
+        remplis polygone(C0,C1,C2,C3,C4,C5,C6,C7) withcolor LightBlue;            
+        label(btex {\bfseries Fig 3} etex,iso(C4,C5) shifted (0,-0.25u));
+        % Fig4
+        pair D[];
+        D0=u*(6.5,6);
+        D1=D0 shifted (0.5u,0);
+        D2=D1 shifted (0,0.5u);
+        D3=D2 shifted (0.5u,0);
+        D4=D3 shifted (0,0.5u);
+        D5=D4 shifted (-0.5u,0);
+        D6=D5 shifted (0,0.5u);
+        D7=D6  shifted (-0.5u,0);
+        D8=D7  shifted (0,-0.5u);
+        D9=D8  shifted (-0.5u,0);
+        D10=D9  shifted (0,-0.5u);
+        D11=D10 shifted (0.5u,0);        
+        trace   polygone(D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11) withcolor HotPink withpen pencircle scaled 2bp;
+        remplis polygone(D0,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11) withcolor LightPink;            
+        label(btex {\bfseries Fig 4} etex,iso(D10,D3) shifted (0,0.25u));
+        % Fig5
+        pair E[];
+        E0=u*(0.5,2.5);
+        E1 = E0  shifted (0.75u,0);
+        E2 = E1  shifted (0,0.5u);
+        E3 = E2  shifted (0.25u,0);
+        E4 = E3  shifted (0,0.25u);
+        E5 = E4  shifted (-0.25u,0);
+        E6 = E5  shifted (0,0.75u);
+        E7 = E6  shifted (0.25u,0);
+        E8 = E7  shifted (0,0.25u);
+        E9 = E8  shifted (-0.25u,0);
+        E10= E9  shifted (0,0.75u);%
+        E11= E10 shifted (-0.5u,0);
+        E12= E11  shifted (0,-0.25u);
+        E13= E12  shifted (-0.25u,0);
+        E14= E13  shifted (0,-0.25u);
+        E15= E14  shifted (0.25u,0);
+        E16= E15  shifted (0,-0.75u);
+        E17= E16  shifted (-0.25u,0);
+        E18= E17  shifted (0,-0.25u);
+        E19= E18  shifted (0.25u,0);
+        E20= E19 shifted (0,-0.75u);
+        E21= E20  shifted (-0.25u,0);
+        E22= E21 shifted (0,-0.25u);
+        trace   polygone(E0,E1,E2,E3,E4,E5,E6,E7,E8,E9,E10,E11,E12,E13,E14,E15,E16,E17,E18,E19,E20,E21,E22) withcolor OrangeRed withpen pencircle scaled 2bp;
+        remplis polygone(E0,E1,E2,E3,E4,E5,E6,E7,E8,E9,E10,E11,E12,E13,E14,E15,E16,E17,E18,E19,E20,E21,E22) withcolor LightSalmon;            
+        label(btex {\bfseries Fig 5} etex,iso(E0,E1) shifted (0,-0.25u));
+        % Fig6
+        pair F[];
+        F0=u*(2.25,2.5);
+        F1 = F0  shifted (0.25u,0);
+        F2 = F1  shifted (0,0.5u);
+        F3 = F2  shifted (1.5u,0);
+        F4 = F3  shifted (0,0.25u);
+        F5 = F4  shifted (-0.75u,0);
+        F6 = F5  shifted (0,0.5u);
+        F7 = F6  shifted (-u,0);
+        trace   polygone(F0,F1,F2,F3,F4,F5,F6,F7) withcolor Crimson withpen pencircle scaled 2bp;
+        remplis polygone(F0,F1,F2,F3,F4,F5,F6,F7) withcolor Tomato;            
+        label(btex {\bfseries Fig 6} etex,iso(F6,F7) shifted (0,-0.5u));
+        % Fig7
+        pair G[];
+        G0=u*(4.75,2.5);
+        G1 = G0  shifted (0.5u,0);
+        G2 = G1  shifted (0,0.25u);
+        G3 = G2  shifted (0.5u,0);
+        G4 = G3  shifted (0,0.25u);
+        G5 = G4  shifted (-0.25u,0);
+        G6 = G5  shifted (0,u);
+        G7 = G6  shifted (-0.5u,0);
+        G8 = G7  shifted (0,-u);
+        G9 = G8  shifted (-0.25u,0);
+        trace   polygone(G0,G1,G2,G3,G4,G5,G6,G7,G8,G9) withcolor DarkMagenta withpen pencircle scaled 2bp;
+        remplis polygone(G0,G1,G2,G3,G4,G5,G6,G7,G8,G9) withcolor Magenta;
+        label(btex {\bfseries Fig 7} etex,iso(G9,G4) shifted (0,-0.75u));
+        % Fig8
+        pair H[];
+        H0=u*(7,2.5);
+        H1  = H0  shifted (0.5u,0);
+        H2  = H1  shifted (0,0.5u);
+        H3  = H2  shifted (-0.25u,0);
+        H4  = H3  shifted (0,0.25u);
+        H5  = H4  shifted (-0.25u,0);
+        H6  = H5  shifted (0,0.25u);
+        H7  = H6  shifted (-0.5u,0);
+        H8  = H7  shifted (0,-0.5u);
+        H9  = H8  shifted (0.25u,0);
+        H10 = H9  shifted (0,-0.25u);
+        H11 = H10  shifted (0.25u,0);
+        trace   polygone(H0,H1,H2,H3,H4,H5,H6,H7,H8,H9,H10,H11) withcolor DarkOliveGreen withpen pencircle scaled 2bp;
+        remplis polygone(H0,H1,H2,H3,H4,H5,H6,H7,H8,H9,H10,H11) withcolor Olive;
+        label(btex {\bfseries Fig 8} etex,iso(H0,H1) shifted (0,-0.25u));
+        % Grille
+        trace grille(0.5) withcolor DarkGrey;                        
+        % Unités
+        %% Longueur
+        pair UL[];
+        UL[0]=u*(1.5,1);
+        UL1-UL0=u*(0.5,0);
+        trace segment(UL0,UL1) withcolor red withpen pencircle scaled 2bp;
+        %%% légende
+        label(btex {\red\bfseries u.l.} etex,iso(UL0,UL1) shifted (0,-0.25u));
+        label(btex unité de longueur etex,iso(UL0,UL1) shifted (0,-0.75u));
+        %% Aire
+        pair UA[];
+        UA0=u*(4.5,1);
+        UA1=UA0 shifted (0.5u,0);
+        UA2=UA1 shifted (0,0.5u);
+        UA3=UA2 shifted (-0.5u,0);
+        trace polygone  (UA0,UA1,UA2,UA3) withcolor Grey withpen pencircle scaled 2bp;
+        remplis polygone(UA0,UA1,UA2,UA3) withcolor LightGrey;
+        %%% légende
+        label(btex {\color{Grey}\bfseries u.a.} etex,iso(UA0,UA1) shifted (0,-0.25u));
+        label(btex unité d'aire etex,iso(UA0,UA1) shifted (0,-0.75u));
+    \end{Geometrie}
+
+    Compléter les tableaux suivants, en considérant l'unité de longueur et l'unité d'aire indiquées.
+    \begin{center}
+        \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.25\linewidth}|*{4}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+            \hline
+            \rowcolor{gray!20} Figure&{\bfseries 1}&{\bfseries 2}&{\bfseries 3}&{\bfseries 4}\\\hline
+            Périmètre exprimé en u.l.&&&&\\\hline
+            Aire exprimée en u.a.&&&&\\\hline
+        \end{tabular}
+        \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.25\linewidth}|*{4}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+            \hline
+            \rowcolor{gray!20} Figure&{\bfseries 5}&{\bfseries 6}&{\bfseries 7}&{\bfseries 8}\\\hline
+            Périmètre exprimé en u.l.&&&&\\\hline
+            Aire exprimée en u.a.&&&&\\\hline
+        \end{tabular}
+    \end{center}
 \end{exercice*}
