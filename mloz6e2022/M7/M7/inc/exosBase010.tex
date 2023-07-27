@@ -1,3 +1,35 @@
 \begin{exercice*}
-   \dots
+   Le rectangle suivant a pour longueur $AC =\Lg[cm]{30}$ et pour largeur $AG =\Lg[cm]{20}$.
+   \begin{center}
+      \begin{Geometrie}[CoinBG={(-0.5u,-0.5u)},CoinHD={(6.5u,4.5u)}]
+         pair A,B,C,D,E,F,G,H;
+         A=u*(0,4);
+         B=u*(1.8,4);
+         C=u*(6,4);
+         D=u*(6,1.8);
+         E=u*(6,0);
+         F=u*(3.8,0);
+         G=u*(0,0);
+         H=u*(0,1.4);
+         trace polygone(G,E,C,A);
+         trace polygone(H,F,D,B);
+         trace appelation(A,B,3mm,btex \Lg[cm]{9} etex);
+         trace appelation(C,D,3mm,btex \Lg[cm]{11} etex);
+         trace appelation(F,E,-3mm,btex \Lg[cm]{11} etex);
+         trace appelation(H,A,3mm,btex \Lg[cm]{13} etex);
+         label.ulft(btex A etex,A);
+         label.top(btex B etex,B);
+         label.urt(btex C etex,C);
+         label.rt(btex D etex,D);
+         label.lrt(btex E etex,E);
+         label.bot(btex F etex,F);
+         label.llft(btex G etex,G);
+         label.lft(btex H etex,H);
+      \end{Geometrie}
+   \end{center}
+   \begin{enumerate}
+      \item En utilisant les données de la figure, calculer la mesure de $BC, DE, GF$ et $GH$.
+      \item Déterminer l'aire des triangles $HAB, BCD, DEF$ et $FGH$.
+      \item En déduire l'aire du quadrilatère $BDFH$.
+   \end{enumerate}
 \end{exercice*}

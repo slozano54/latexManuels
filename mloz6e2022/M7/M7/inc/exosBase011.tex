@@ -1,3 +1,22 @@
 \begin{exercice*}
-   \dots
+   On considère la figure suivante : \\
+   {\psset{unit=0.7,linewidth=0.5mm}
+   \small
+    \begin{pspicture}(-4,-1)(8,4.5)
+      \psgrid[subgriddiv=0,gridlabels=0pt,gridcolor=lightgray](-1,-1)(8,4)
+      \psarc(3,0){3}{90}{180}
+      \psarc(3,1){2}{0}{90}
+      \psarc(4,1){1}{-90}{0}
+      \psline(0,0)(4,0)
+      \psline{<->}(6,2)(7,2)
+      \rput(6.5,1.5){\Lg[cm]{4}}
+      \psset{linewidth=0.4mm}
+      \psline(3,0)(3,3)
+      \psline(3,1)(5,1)
+      \psline(4,0)(4,1)
+   \end{pspicture}}
+   \begin{enumerate}
+      \item De quoi est composée cette figure ?
+      \item Déterminer alors son aire.
+   \end{enumerate}
 \end{exercice*}
