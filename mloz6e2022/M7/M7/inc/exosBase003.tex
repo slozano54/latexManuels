@@ -1,3 +1,211 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*}[Papier isometrique]
+   \scalebox{0.8}{
+      \begin{Geometrie}[CoinHD={(9.5u,5.5u)}]
+         % Pour changer la taille de la Grid
+         coeff:=0.7;
+         uni:=true;
+         x.u:=coeff*cm;
+         y.u:=coeff*(sqrt(3)/2)*cm;
+         %Fig1
+         pair A[];
+         A0=pptri(1,4);
+         A1-A0=pptri(0,2);
+         A2-A0=pptri(-2,4);
+         A3-A0=pptri(-2,2);
+         trace   polygone(A0,A1,A2,A3) withcolor Crimson withpen pencircle scaled 2bp;
+         remplis polygone(A0,A1,A2,A3) withcolor Tomato;  
+         %Fig2
+         pair B[];
+         B0=pptri(3,4);
+         B1-B0=pptri(2,0);
+         B2-B0=pptri(2,2);
+         B3-B0=pptri(0,4);
+         B4-B0=pptri(-2,4);
+         B5-B0=pptri(0,2);
+         trace   polygone(B0,B1,B2,B3,B4,B5) withcolor OrangeRed withpen pencircle scaled 2bp;
+         remplis polygone(B0,B1,B2,B3,B4,B5) withcolor LightSalmon;      
+         %Fig3
+         pair C[];
+         C0=pptri(8,5);
+         C1-C0=pptri(0,3);
+         C2-C0=pptri(-3,3);
+         trace   polygone(C0,C1,C2) withcolor HotPink withpen pencircle scaled 2bp;
+         remplis polygone(C0,C1,C2) withcolor LightPink;       
+         %Fig4
+         pair D[];
+         D0=pptri(4,1);
+         D1-D0=pptri(1,0);
+         D2-D0=pptri(1,1);
+         D3-D0=pptri(0,2);
+         D4-D0=pptri(-1,2);
+         D5-D0=pptri(-1,1);
+         trace   polygone(D0,D1,D2,D3,D4,D5) withcolor Brown withpen pencircle scaled 2bp;
+         remplis polygone(D0,D1,D2,D3,D4,D5) withcolor BurlyWood;
+         %Fig5
+         pair E[];
+         E0=pptri(7,1);
+         E1-E0=pptri(3,0);
+         E2-E0=pptri(3,1);
+         E3-E0=pptri(2,2);
+         E4-E0=pptri(-1,2);
+         E5-E0=pptri(0,1);
+         trace   polygone(E0,E1,E2,E3,E4,E5) withcolor DarkGreen withpen pencircle scaled 2bp;
+         remplis polygone(E0,E1,E2,E3,E4,E5) withcolor LightGreen;
+         %Fig6
+         pair F[];
+         F0=pptri(11,3);
+         F1-F0=pptri(0,1);
+         F2-F0=pptri(-1,2);
+         F3-F0=pptri(-1,1);
+         trace   polygone(F0,F1,F2,F3) withcolor DarkBlue withpen pencircle scaled 2bp;
+         remplis polygone(F0,F1,F2,F3) withcolor LightBlue;   
+         % Grille et légendes
+         trace papiertriangle withcolor DarkGrey;
+         label(btex {\bfseries Fig 1} etex,iso(A1,A3) shifted (0,0.25u));
+         label(btex {\bfseries Fig 2} etex,iso(B5,B2) shifted (0,0.25u));
+         label(btex {\bfseries Fig 3} etex,iso(C1,C2) shifted (0,-0.25u));
+         label(btex {\bfseries Fig 4} etex,iso(D0,D3) shifted (0,0.25u));
+         label(btex {\bfseries Fig 5} etex,iso(E5,E2) shifted (0,0.25u));
+         label(btex {\bfseries Fig 6} etex,iso(F1,F3) shifted (0,-u));
+         % Unités
+         %% Longueur
+         pair UL[];
+         UL[0]=pptri(0,1);
+         UL1-UL0=pptri(0,2);
+         trace segment(UL0,UL1) withcolor red withpen pencircle scaled 2bp;
+         %%% légende
+         trace appelation(UL0,UL1,3mm,btex {\red\bfseries u.l.} etex);      
+         %% Aire
+         pair UA[];
+         UA0=pptri(1,1);
+         UA1-UA0=pptri(2,0);
+         UA2-UA0=pptri(0,2);
+         trace polygone  (UA0,UA1,UA2) withcolor Grey withpen pencircle scaled 2bp;
+         remplis polygone(UA0,UA1,UA2) withcolor LightGrey;
+         %%% légende
+         label(btex {\bfseries u.a.} etex,iso(UA0,UA1,UA2));
+      \end{Geometrie}
+   }
+   \begin{center}
+      \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.35\linewidth}|*{3}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+          \hline
+          \rowcolor{gray!20} Figure&{\bfseries 1}&{\bfseries 2}&{\bfseries 3}\\\hline
+          Périmètre exprimé en u.l.&&&\\\hline
+          Aire exprimée en u.a.&&&\\\hline
+      \end{tabular}
+
+      \smallskip
+      \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.35\linewidth}|*{3}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+          \hline
+          \rowcolor{gray!20} Figure&{\bfseries 4}&{\bfseries 5}&{\bfseries 6}\\\hline
+          Périmètre exprimé en u.l.&&&\\\hline
+          Aire exprimée en u.a.&&&\\\hline
+      \end{tabular}
+  \end{center}
 \end{exercice*}
+\begin{corrige}
+   \phantom{text}
+   \scalebox{0.8}{
+      \begin{Geometrie}[CoinHD={(9.5u,5.5u)}]
+         % Pour changer la taille de la Grid
+         coeff:=0.7;
+         uni:=true;
+         x.u:=coeff*cm;
+         y.u:=coeff*(sqrt(3)/2)*cm;
+         %Fig1
+         pair A[];
+         A0=pptri(1,4);
+         A1-A0=pptri(0,2);
+         A2-A0=pptri(-2,4);
+         A3-A0=pptri(-2,2);
+         trace   polygone(A0,A1,A2,A3) withcolor Crimson withpen pencircle scaled 2bp;
+         remplis polygone(A0,A1,A2,A3) withcolor Tomato;  
+         %Fig2
+         pair B[];
+         B0=pptri(3,4);
+         B1-B0=pptri(2,0);
+         B2-B0=pptri(2,2);
+         B3-B0=pptri(0,4);
+         B4-B0=pptri(-2,4);
+         B5-B0=pptri(0,2);
+         trace   polygone(B0,B1,B2,B3,B4,B5) withcolor OrangeRed withpen pencircle scaled 2bp;
+         remplis polygone(B0,B1,B2,B3,B4,B5) withcolor LightSalmon;      
+         %Fig3
+         pair C[];
+         C0=pptri(8,5);
+         C1-C0=pptri(0,3);
+         C2-C0=pptri(-3,3);
+         trace   polygone(C0,C1,C2) withcolor HotPink withpen pencircle scaled 2bp;
+         remplis polygone(C0,C1,C2) withcolor LightPink;       
+         %Fig4
+         pair D[];
+         D0=pptri(4,1);
+         D1-D0=pptri(1,0);
+         D2-D0=pptri(1,1);
+         D3-D0=pptri(0,2);
+         D4-D0=pptri(-1,2);
+         D5-D0=pptri(-1,1);
+         trace   polygone(D0,D1,D2,D3,D4,D5) withcolor Brown withpen pencircle scaled 2bp;
+         remplis polygone(D0,D1,D2,D3,D4,D5) withcolor BurlyWood;
+         %Fig5
+         pair E[];
+         E0=pptri(7,1);
+         E1-E0=pptri(3,0);
+         E2-E0=pptri(3,1);
+         E3-E0=pptri(2,2);
+         E4-E0=pptri(-1,2);
+         E5-E0=pptri(0,1);
+         trace   polygone(E0,E1,E2,E3,E4,E5) withcolor DarkGreen withpen pencircle scaled 2bp;
+         remplis polygone(E0,E1,E2,E3,E4,E5) withcolor LightGreen;
+         %Fig6
+         pair F[];
+         F0=pptri(11,3);
+         F1-F0=pptri(0,1);
+         F2-F0=pptri(-1,2);
+         F3-F0=pptri(-1,1);
+         trace   polygone(F0,F1,F2,F3) withcolor DarkBlue withpen pencircle scaled 2bp;
+         remplis polygone(F0,F1,F2,F3) withcolor LightBlue;   
+         % Grille et légendes
+         trace papiertriangle withcolor DarkGrey;
+         label(btex {\bfseries Fig 1} etex,iso(A1,A3) shifted (0,0.25u));
+         label(btex {\bfseries Fig 2} etex,iso(B5,B2) shifted (0,0.25u));
+         label(btex {\bfseries Fig 3} etex,iso(C1,C2) shifted (0,-0.25u));
+         label(btex {\bfseries Fig 4} etex,iso(D0,D3) shifted (0,0.25u));
+         label(btex {\bfseries Fig 5} etex,iso(E5,E2) shifted (0,0.25u));
+         label(btex {\bfseries Fig 6} etex,iso(F1,F3) shifted (0,-u));
+         % Unités
+         %% Longueur
+         pair UL[];
+         UL[0]=pptri(0,1);
+         UL1-UL0=pptri(0,2);
+         trace segment(UL0,UL1) withcolor red withpen pencircle scaled 2bp;
+         %%% légende
+         trace appelation(UL0,UL1,3mm,btex {\red\bfseries u.l.} etex);      
+         %% Aire
+         pair UA[];
+         UA0=pptri(1,1);
+         UA1-UA0=pptri(2,0);
+         UA2-UA0=pptri(0,2);
+         trace polygone  (UA0,UA1,UA2) withcolor Grey withpen pencircle scaled 2bp;
+         remplis polygone(UA0,UA1,UA2) withcolor LightGrey;
+         %%% légende
+         label(btex {\bfseries u.a.} etex,iso(UA0,UA1,UA2));
+      \end{Geometrie}
+   }
+   \begin{center}
+      \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.35\linewidth}|*{3}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+          \hline
+          \rowcolor{gray!20} Figure&{\bfseries 1}&{\bfseries 2}&{\bfseries 3}\\\hline
+          Périmètre exprimé en u.l.&{\red 4}&{\red 6}&{\red \num{4.5}}\\\hline
+          Aire exprimée en u.a.&{\red 2}&{\red 4}&{\red \num{2.25}}\\\hline
+      \end{tabular}
+
+      \smallskip
+      \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.35\linewidth}|*{3}{>{\centering\arraybackslash}m{0.12\linewidth}|}}
+          \hline
+          \rowcolor{gray!20} Figure&{\bfseries 4}&{\bfseries 5}&{\bfseries 6}\\\hline
+          Périmètre exprimé en u.l.&{\red 3}&{\red 5}&{\red 2}\\\hline
+          Aire exprimée en u.a.&{\red \num{1.5}}&{\red 3}&{\red \num{0.5}}\\\hline
+      \end{tabular}
+  \end{center}
+\end{corrige}

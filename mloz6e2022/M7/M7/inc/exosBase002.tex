@@ -1,3 +1,240 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*}[Avec quelques courbures]
+    \scalebox{0.8}{
+        \begin{Geometrie}[CoinHD={(9.5u,8.5u)}]
+            % Fig1
+            pair A[];
+            A0=u*(0.5,6.5);
+            A1=A0 shifted (u,0);
+            A2=A1 shifted (0.5u,-0.5u);
+            A3=A2 shifted (0.5u,0.5u);
+            A4=A3 shifted (0.5u,0);
+            A5=A4 shifted (0,u);
+            A6=A5 shifted (-0.5u,0);
+            A7=A6 shifted (-0.5u,-0.5u);
+            A8=A7 shifted (-0.5u,0.5u);
+            A9=A8 shifted (-u,0);
+            path figUn;
+            figUn = A0--A1..A2..A3--A4--A5--A6..A7..A8--A9--cycle;
+            trace figUn withcolor Brown withpen pencircle scaled 2bp;
+            remplis figUn withcolor BurlyWood;
+            label(btex {\bfseries Fig 1} etex,iso(A1,A3) shifted (0,0.25u));
+            % Fig2
+            pair B[];
+            B0=u*(4,4.5);
+            B1=B0 shifted (u,0);
+            B2=B1 shifted (0.5u,0.5u);
+            B3=B2 shifted (0.5u,-0.5u);
+            B4=B3 shifted (u,0);
+            B5=B4 shifted (0,u);
+            B6=B5 shifted (0.5u,0.5u);
+            B7=B6 shifted (-0.5u,0.5u);
+            B8=B7 shifted (0,u);
+            B9=B8 shifted (-u,0);
+            B10=B9 shifted (-0.5u,0.5u);
+            B11=B10 shifted (-0.5u,-0.5u);
+            B12=B11 shifted (-u,0);
+            B13=B12 shifted (0,-0.75u);
+            B14=B13 shifted (0.5u,-0.5u);
+            B15=B14 shifted (-0.5u,-0.5u);
+            path figDeux;
+            figDeux = B0--B1..B2..B3--B4--B5..B6..B7--B8--B9..B10..B11--B12--B13..B14..B15--cycle;
+            trace figDeux withcolor DarkGreen withpen pencircle scaled 2bp;
+            remplis figDeux withcolor LightGreen;
+            label(btex {\bfseries Fig 2} etex,iso(B2,B10) shifted (0,-0.25u));
+            % Fig3
+            pair C[];
+            C0=u*(1,3.5);
+            C10=C0 shifted (0,-0.5u);%Centre cercle      
+            C11=pointarc(cercles(C10,C0),60);
+            C1=C0 shifted (0.5u,-0.5u);
+            C2=C1 shifted (u,0);
+            C20=C2 shifted (0.5u,0);%Centre cercle
+            C21=pointarc(cercles(C20,C2),150);
+            C3=C2 shifted (0.5u,0.5u);
+            C4=C3 shifted (0,0.5u);
+            C40=C4 shifted (0,0.5u);%Centre cercle
+            C41=pointarc(cercles(C40,C4),240);
+            C5=C4 shifted (-0.5u,0.5u);
+            C6=C5 shifted (-u,0);
+            C7=C6 shifted (-0.5u,0.5u);
+            C8=C7 shifted (-0.5u,-0.5u);
+            C9=C8 shifted (0.5u,-0.5u);      
+            path figTrois;
+            figTrois = C0..C11..C1--C2..C21..C3--C4..C41..C5--C6..C7..C8..C9--cycle;
+            trace figTrois withcolor DarkBlue withpen pencircle scaled 2bp;
+            remplis figTrois withcolor LightBlue;            
+            label(btex {\bfseries Fig 3} etex,iso(C9,C4) shifted (0,-0.25u));
+            % Fig4
+            pair D[];
+            D0=u*(3.5,3.5);
+            D1=D0 shifted (0.5u,-0.5u);
+            D10=D1 shifted (0,0.5u);%Centre cercle
+            D11=pointarc(cercles(D10,D0),240);
+            D2=D1 shifted (0,-0.5u);
+            D20=D2 shifted (0,-0.5u);%Centre cercle      
+            D21=pointarc(cercles(D20,D2),150);
+            D3=D2 shifted (-0.5u,-0.5u);
+            D4=D3 shifted (5.5u,0);
+            D40=D4 shifted (-0.5u,0);%Centre cercle      
+            D41=pointarc(cercles(D40,D4),60);
+            D5=D4 shifted (-0.5u,0.5u);
+            D6=D5 shifted (0,0.5u);
+            D60=D6 shifted (0,0.5u);%Centre cercle      
+            D61=pointarc(cercles(D60,D6),-60);
+            D7=D6 shifted (0.5u,0.5u);
+            D8=D7 shifted (-5.5u,0);      
+            path figQuatre;
+            figQuatre = D0..D11..D1--D2..D21..D3--D4..D41..D5--D6..D61..D7--D8--cycle;
+            trace figQuatre withcolor HotPink withpen pencircle scaled 2bp;
+            remplis figQuatre withcolor LightPink;            
+            path cc;
+            cc=cercles(D0 shifted (3u,-0.75u),0.5u);
+            remplis cc withcolor white;
+            label(btex {\bfseries Fig 4} etex,iso(D1,D2) shifted (u,0));
+            % Grille
+            trace grille(0.5) withcolor DarkGrey;                        
+            % Unité
+            %% Aire
+            pair UA[];
+            UA0=u*(4.5,1);
+            UA1=UA0 shifted (0.5u,0);
+            UA2=UA1 shifted (0,0.5u);
+            UA3=UA2 shifted (-0.5u,0);
+            trace polygone  (UA0,UA1,UA2,UA3) withcolor Grey withpen pencircle scaled 2bp;
+            remplis polygone(UA0,UA1,UA2,UA3) withcolor LightGrey;
+            %%% légende
+            label(btex {\color{Grey}\bfseries u.a.} etex,iso(UA0,UA1) shifted (0,-0.25u));
+            label(btex unité d'aire etex,iso(UA0,UA1) shifted (0,-0.75u));
+        \end{Geometrie}
+    }
+
+   Compléter le tableau suivant, en considérant l'unité d'aire indiquée.
+   \begin{center}
+       \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.33\linewidth}|*{4}{>{\centering\arraybackslash}m{0.1\linewidth}|}}
+           \hline
+           \rowcolor{gray!20} Figure&{\bfseries 1}&{\bfseries 2}&{\bfseries 3}&{\bfseries 4}\\\hline
+           Aire exprimée en u.a.&&&&\\\hline
+       \end{tabular}
+   \end{center}
 \end{exercice*}
+\begin{corrige}
+    \phantom{text}
+
+    \scalebox{0.8}{
+        \begin{Geometrie}[CoinHD={(9.5u,8.5u)}]
+            % Fig1
+            pair A[];
+            A0=u*(0.5,6.5);
+            A1=A0 shifted (u,0);
+            A2=A1 shifted (0.5u,-0.5u);
+            A3=A2 shifted (0.5u,0.5u);
+            A4=A3 shifted (0.5u,0);
+            A5=A4 shifted (0,u);
+            A6=A5 shifted (-0.5u,0);
+            A7=A6 shifted (-0.5u,-0.5u);
+            A8=A7 shifted (-0.5u,0.5u);
+            A9=A8 shifted (-u,0);
+            path figUn;
+            figUn = A0--A1..A2..A3--A4--A5--A6..A7..A8--A9--cycle;
+            trace figUn withcolor Brown withpen pencircle scaled 2bp;
+            remplis figUn withcolor BurlyWood;
+            label(btex {\bfseries Fig 1} etex,iso(A1,A3) shifted (0,0.25u));
+            % Fig2
+            pair B[];
+            B0=u*(4,4.5);
+            B1=B0 shifted (u,0);
+            B2=B1 shifted (0.5u,0.5u);
+            B3=B2 shifted (0.5u,-0.5u);
+            B4=B3 shifted (u,0);
+            B5=B4 shifted (0,u);
+            B6=B5 shifted (0.5u,0.5u);
+            B7=B6 shifted (-0.5u,0.5u);
+            B8=B7 shifted (0,u);
+            B9=B8 shifted (-u,0);
+            B10=B9 shifted (-0.5u,0.5u);
+            B11=B10 shifted (-0.5u,-0.5u);
+            B12=B11 shifted (-u,0);
+            B13=B12 shifted (0,-0.75u);
+            B14=B13 shifted (0.5u,-0.5u);
+            B15=B14 shifted (-0.5u,-0.5u);
+            path figDeux;
+            figDeux = B0--B1..B2..B3--B4--B5..B6..B7--B8--B9..B10..B11--B12--B13..B14..B15--cycle;
+            trace figDeux withcolor DarkGreen withpen pencircle scaled 2bp;
+            remplis figDeux withcolor LightGreen;
+            label(btex {\bfseries Fig 2} etex,iso(B2,B10) shifted (0,-0.25u));
+            % Fig3
+            pair C[];
+            C0=u*(1,3.5);
+            C10=C0 shifted (0,-0.5u);%Centre cercle      
+            C11=pointarc(cercles(C10,C0),60);
+            C1=C0 shifted (0.5u,-0.5u);
+            C2=C1 shifted (u,0);
+            C20=C2 shifted (0.5u,0);%Centre cercle
+            C21=pointarc(cercles(C20,C2),150);
+            C3=C2 shifted (0.5u,0.5u);
+            C4=C3 shifted (0,0.5u);
+            C40=C4 shifted (0,0.5u);%Centre cercle
+            C41=pointarc(cercles(C40,C4),240);
+            C5=C4 shifted (-0.5u,0.5u);
+            C6=C5 shifted (-u,0);
+            C7=C6 shifted (-0.5u,0.5u);
+            C8=C7 shifted (-0.5u,-0.5u);
+            C9=C8 shifted (0.5u,-0.5u);      
+            path figTrois;
+            figTrois = C0..C11..C1--C2..C21..C3--C4..C41..C5--C6..C7..C8..C9--cycle;
+            trace figTrois withcolor DarkBlue withpen pencircle scaled 2bp;
+            remplis figTrois withcolor LightBlue;            
+            label(btex {\bfseries Fig 3} etex,iso(C9,C4) shifted (0,-0.25u));
+            % Fig4
+            pair D[];
+            D0=u*(3.5,3.5);
+            D1=D0 shifted (0.5u,-0.5u);
+            D10=D1 shifted (0,0.5u);%Centre cercle
+            D11=pointarc(cercles(D10,D0),240);
+            D2=D1 shifted (0,-0.5u);
+            D20=D2 shifted (0,-0.5u);%Centre cercle      
+            D21=pointarc(cercles(D20,D2),150);
+            D3=D2 shifted (-0.5u,-0.5u);
+            D4=D3 shifted (5.5u,0);
+            D40=D4 shifted (-0.5u,0);%Centre cercle      
+            D41=pointarc(cercles(D40,D4),60);
+            D5=D4 shifted (-0.5u,0.5u);
+            D6=D5 shifted (0,0.5u);
+            D60=D6 shifted (0,0.5u);%Centre cercle      
+            D61=pointarc(cercles(D60,D6),-60);
+            D7=D6 shifted (0.5u,0.5u);
+            D8=D7 shifted (-5.5u,0);      
+            path figQuatre;
+            figQuatre = D0..D11..D1--D2..D21..D3--D4..D41..D5--D6..D61..D7--D8--cycle;
+            trace figQuatre withcolor HotPink withpen pencircle scaled 2bp;
+            remplis figQuatre withcolor LightPink;            
+            path cc;
+            cc=cercles(D0 shifted (3u,-0.75u),0.5u);
+            remplis cc withcolor white;
+            label(btex {\bfseries Fig 4} etex,iso(D1,D2) shifted (u,0));
+            % Grille
+            trace grille(0.5) withcolor DarkGrey;                        
+            % Unité
+            %% Aire
+            pair UA[];
+            UA0=u*(4.5,1);
+            UA1=UA0 shifted (0.5u,0);
+            UA2=UA1 shifted (0,0.5u);
+            UA3=UA2 shifted (-0.5u,0);
+            trace polygone  (UA0,UA1,UA2,UA3) withcolor Grey withpen pencircle scaled 2bp;
+            remplis polygone(UA0,UA1,UA2,UA3) withcolor LightGrey;
+            %%% légende
+            label(btex {\color{Grey}\bfseries u.a.} etex,iso(UA0,UA1) shifted (0,-0.25u));
+            label(btex unité d'aire etex,iso(UA0,UA1) shifted (0,-0.75u));
+        \end{Geometrie}
+    }
+
+   Compléter le tableau suivant, en considérant l'unité d'aire indiquée.
+   \begin{center}
+       \begin{tabular}{|>{\columncolor{gray!20}\bfseries\centering\arraybackslash}m{0.33\linewidth}|*{4}{>{\centering\arraybackslash}m{0.1\linewidth}|}}
+           \hline
+           \rowcolor{gray!20} Figure&{\bfseries 1}&{\bfseries 2}&{\bfseries 3}&{\bfseries 4}\\\hline
+           Aire exprimée en u.a.&{\red 10}&{\red 36}&{\red 12}&{\red 27}\\\hline
+       \end{tabular}
+   \end{center}
+\end{corrige}
