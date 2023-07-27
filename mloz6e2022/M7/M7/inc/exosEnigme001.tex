@@ -3,8 +3,48 @@
 %\refstepcounter{exercice}
 %\numeroteEnigme
 \vspace*{-10mm}
-\begin{enigme}[..]
-...
+\begin{enigme}[La formule de Pick]
+    On travaille dans un réseau pointé à maille carrée. On note $u.\ell.$ l'unité de longueur et $u.a.$ l'unité d'aire. \\
+    On appelle polygone de Pick, un polygone non aplati construit sur un tel réseau et dont chacun des sommets est un point du réseau. On considère la figure $FORMULES$ suivante :
+    \begin{center}
+       \small
+       {\psset{unit=0.5}
+       \begin{pspicture}(6,0)(22,11.5)
+          \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={90,135,-135,-45,-45,45,45}](9,10){R}(7,6){O}(7,1){F}(12,1){S}(12,3){E}(16,3){L}(16,6){U}(12,6){M}
+          \psline[fillstyle=solid,fillcolor=lightgray!30](9,10)(7,6)(7,1)(12,1)(12,3)(16,3)(16,6)(12,6)(9,10)
+          \psframe[fillstyle=solid,fillcolor=lightgray!30](20,5)(21,6)
+          \psgrid[griddots=1,gridlabels=0,subgriddiv=1,gridwidth=0.5mm](6,0)(22,11)
+          \rput(20.5,4.5){1 $u.a.$}
+          \psline{<->}(20,9)(21,9)
+          \rput(20.5,8.5){1 $u.\ell.$}      
+       \end{pspicture}}
+    \end{center}
+ 
+    \partie[avec les formules classiques]
+        \vspace*{-5mm}
+        \begin{enumerate}
+            \item Décomposer la figure $FORMULES$ en figures connues dont on connait les formules de calcul d'aire ? \\ [2mm]
+                \makebox[\linewidth]{\dotfill} \\
+            \item Calculer alors l'aire du polygone $FORMULES$, en unités d'aire, en détaillant les étapes du raisonnement. \\ [3mm]
+                \makebox[\linewidth]{\dotfill} \\ [3mm]
+                \makebox[\linewidth]{\dotfill} \\ [3mm]
+                \makebox[\linewidth]{\dotfill}
+        \end{enumerate}
+ 
+    \partie[avec la formule de Pick]
+        \vspace*{-5mm}
+        La formule de Pick permet de calculer l'aire $\mathcal{A}$ d'un polygone de Pick, à partir du nombre $i$ de points du réseau strictement intérieurs à ce polygone et du nombre $b$ de points du réseau sur le bord du polygone : \fbox{$\mathcal{A} =i+\dfrac{b}{2}-1$}. 
+        \begin{enumerate}
+        \setcounter{enumi}{2}
+            \item Appliquer cette formule au polygone $FORMULES$. \\ [3mm]
+                $i =\makebox[0.23\linewidth]{\dotfill} \quad b =\makebox[0.23\linewidth]{\dotfill}$ \quad donc, $\mathcal{A} = \makebox[0.23\linewidth]{\dotfill}$ \\
+            \item Appliquer la formule de Pick aux trois polygones de Pick $MOFS$, $MOR$ et $MULE$. \\
+            Vérifier que la somme des résultats obtenus est égale à l'aire totale de la figure. \\ [3mm]
+            $MOFS : \;\; i =\makebox[0.23\linewidth]{\dotfill} \quad b =\makebox[0.23\linewidth]{\dotfill}$ \quad donc, $\mathcal{A}_1 = \makebox[0.23\linewidth]{\dotfill}$ \\ [3mm]
+            $MOR : \quad i =\makebox[0.23\linewidth]{\dotfill} \quad b =\makebox[0.23\linewidth]{\dotfill}$ \quad donc, $\mathcal{A}_2 = \makebox[0.23\linewidth]{\dotfill}$ \\ [3mm]
+            $MULE : \; i =\makebox[0.23\linewidth]{\dotfill} \quad b =\makebox[0.23\linewidth]{\dotfill}$ \quad donc, $\mathcal{A}_3 = \makebox[0.23\linewidth]{\dotfill}$ \\ [3mm]
+            Aire totale : \dotfill
+        \end{enumerate}
 \end{enigme}  
 % % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
