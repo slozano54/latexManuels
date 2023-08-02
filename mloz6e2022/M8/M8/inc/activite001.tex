@@ -1,5 +1,41 @@
-\vspace*{-17mm}
-\begin{activite}[\dots]
-\dots
- \end{activite} 
+% \vspace*{-17mm}
+\begin{changemargin}{-5mm}{-20mm}
+    \begin{activite}[Degré et rapporteur\dots{} bis]
+        {\bf Objectifs :} découvrir le degré ; mesurer un angle donné. 
+        \partie[mesure en degré]
+        L'angle droit est composé de 90 petits angles comme celui-ci :
+        \begin{pspicture}(-1,0)(5,0)
+            \psline(5;0)(0,0)(5;1)
+        \end{pspicture} \\
+        cet angle sert d'unité, sa mesure est appelée un degré. 
+        On dit que l'angle droit mesure 90 degrés, et on note \ang{90}. \\
+        On a représenté un angle de \ang{90}, par \og pas \fg{} de \ang{5}. Écrire les graduations sur la figure.
+        \begin{center}
+            {\psset{unit=0.9}
+            \begin{pspicture}(-1.5,-0.5)(7,7.5)
+                \multido{\i=5+5}{17}{\psline[linewidth=0.001](0,0)(7;\i)}
+                \psarc(0,0){6.8}{0}{90}
+                \psline(7,0)(0,0)(0,7)
+                \rput(7.3,0){\ang{0}}
+                \rput(0,7.3){\ang{90}}
+            \end{pspicture}
+            }
+        \end{center}
+        
+        \partie[mesure des angles principaux]
+            \begin{enumerate}
+                \item Découper un angle aigu quelconque. Comment peut-on mesurer cet angle grâce à l'angle droit gradué ci-dessus ?
+                \par\vspace*{5mm}               
+                \dotfill \par\vspace*{5mm}
+                \dotfill 
+                \item Construire un triangle équilatéral de côté \Lg[cm]{5} puis le découper. \\ [2mm]
+                    En utilisant l'angle droit gradué, déterminer la mesure de ses angles : \dotfill 
+                \item Plier le triangle suivant une de ses hauteurs. \\ [2mm]
+                    En utilisant l'angle droit gradué, déterminer la mesure de ses angles : \dotfill 
+                \item Construire un carré de côté \Lg[cm]{5} puis le découper suivant sa diagonale. \\ [2mm]
+                    En utilisant l'angle droit gradué, déterminer la mesure de ses angles : \dotfill
+            \end{enumerate}
+            {\bf Dorénavant, on utilisera le rapporteur, un instrument permettant de mesurer un angle en degrés}.
+    \end{activite}
+\end{changemargin}
  
