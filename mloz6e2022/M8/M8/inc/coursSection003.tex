@@ -1,2 +1,151 @@
-\section{...}
-...
+\section{Différents types d'angles}
+% \definNum{
+% On peut classer les angles selon leur mesure $\alpha=\widehat{BAC}$:\\
+
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% $\alpha=0^{\circ}$ & $0^{\circ}<\alpha<90^{\circ}$ & $\alpha=90^{\circ}$ & $90^{\circ}<\alpha<180^{\circ}$ & $\alpha=180^{\circ}$ \\
+% \hline
+% Angle \textbf{nul} & Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\
+% \hline
+% & & & & \\
+% \begin{minipage}{3cm}
+% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-8,-1)(12,10)
+% \psplot{0}{12.2}{(-0-0*x)/6.37}
+% \psplot{0}{12.2}{(-0-0*x)/8.83}
+% \psdots(0,0)
+% \rput[bl](-3,0){\small{$A$}}
+% \psdots(6.37,0)
+% \rput[bl](6.5,0.4){\small{$C$}}
+% \psdots(8.83,0)
+% \rput[bl](8.97,0.4){\small{$B$}}
+% \end{pspicture*}
+% \end{minipage}
+% &
+% \begin{minipage}{3cm}
+% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-8,-1)(12,10)
+% \psplot{0}{12.2}{(-0--5.77*x)/3.9}
+% \psplot{0}{12.2}{(-0-0*x)/8.84}
+% \psdots(0,0)
+% \rput[bl](-3,0){\small{$A$}}
+% \psdots(3.9,5.77)
+% \rput[bl](1.63,6.17){\small{$C$}}
+% \psdots(8.83,0)
+% \rput[bl](8.97,0.4){\small{$B$}}
+% \end{pspicture*}
+% \end{minipage}
+% &
+% \begin{minipage}{3cm}
+% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-8,-1)(12,10)
+% \psline(0,0)(0,14.57)
+% \psplot{0}{12.2}{(-0-0*x)/8.84}
+% \psline(0,1.23)(1.17,1.23)
+% \psline(1.17,1.23)(1.17,-0.03)
+% \psdots(0,0)
+% \rput[bl](-3,-0.03){\small{$A$}}
+% \psdots(0,6.5)
+% \rput[bl](-0.27,6.9){\small{$C$}}
+% \psdots(8.83,0)
+% \rput[bl](8.97,0.4){\small{$B$}}
+% \end{pspicture*}
+% \end{minipage}
+% &
+% \begin{minipage}{3cm}
+% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-8,-1)(12,10)
+% \psplot{-8.93}{0}{(-0--4.13*x)/-4.4}
+% \psplot{0}{12.2}{(-0-0*x)/8.84}
+% \psdots(0,0)
+% \rput[bl](-3,-0.03){\small{$A$}}
+% \psdots(-4.4,4.13)
+% \rput[bl](-4.67,4.53){\small{$C$}}
+% \psdots(8.83,0)
+% \rput[bl](8.97,0.4){\small{$B$}}
+% \end{pspicture*}
+% \end{minipage}
+% &
+% \begin{minipage}{3cm}
+% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-8,-1)(12,10)
+% \psplot{-8.93}{0}{(-0-0*x)/-5}
+% \psplot{0}{12.2}{(-0-0*x)/8.84}
+% \psdots(0,0)
+% \rput[bl](0,2){\small{$A$}}
+% \psdots(-5,0)
+% \rput[bl](-5.27,0.4){\small{$C$}}
+% \psdots(8.83,0)
+% \rput[bl](8.97,0.4){\small{$B$}}
+% \end{pspicture*}
+% \end{minipage}
+% \\
+% & & & & \\
+% \hline
+% \end{tabular}
+% }
+
+% \proprNumBis{}{Soient $A$, $B$ et $C$ trois points distincts deux à deux :
+% \begin{mylist}
+% \item Dire que \textbf{les droites $\mathbf{(AB)}$ et $\mathbf{(AC)}$ sont perpendiculaires} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est un angle droit}.
+% \item Dire que \textbf{les points $\mathbf{A}$, $\mathbf{B}$ et $\mathbf{C}$ sont alignés} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est soit nul, soit plat}.
+% \end{mylist}
+% }
+
+% \definNum{
+% \begin{mylist}
+% \item Deux angles sont dits \textbf{adjacents} s'ils ont le même sommet, un côté en commun, et qu'ils sont situés de part et d'autre de ce côté commun.
+% \item Deux angles sont dits \textbf{complémentaires} si la somme de leurs mesures est égale à $90^{\circ}$.
+% \item Deux angles sont dits \textbf{supplémentaires} si la somme de leurs mesures est égale à $180^{\circ}$.
+% \end{mylist}
+
+% \begin{tabular}{c c}
+% \begin{minipage}{8.5cm}
+% \psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \scalebox{0.6}{
+% \begin{pspicture*}(-4,-1)(10,6)
+% \psplot{0}{13.97}{(-0-0*x)/8}
+% \psplot{0}{13.97}{(-0--2*x)/4}
+% \psline(0,0)(0,10.5)
+% \psarc(0,0){1.4}{0}{26.57}
+% \psarc(0,0){1.08}{26.57}{90}
+% \psdots(0,0)
+% \rput[bl](-0.9,-0.37){$A$}
+% \psdots(8,0)
+% \rput[bl](8.13,0.2){$B$}
+% \psdots(0,5)
+% \rput[bl](0.23,5){$C$}
+% \psdots(4,2)
+% \rput[bl](4.13,2.5){$D$}
+% \end{pspicture*}
+% }
+% \par
+% $\widehat{BAD}$ et $\widehat{DAC}$ sont :\par adjacents et complémentaires.
+% \end{minipage}
+% &
+% \begin{minipage}{8.5cm}
+% \psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \scalebox{0.6}{
+% \begin{pspicture*}(-6,-1)(10,6)
+% \psplot{0}{13.97}{(-0-0*x)/8}
+% \psplot{0}{13.97}{(-0--4.53*x)/1.97}
+% \psplot{-7.17}{0}{(-0-0*x)/-5}
+% \psarc(0,0){1.2}{0}{66.55}
+% \psarc(0,0){0.9}{66.55}{180}
+% \psdots(0,0)
+% \rput[bl](-0.6,-0.87){$A$}
+% \psdots(8,0)
+% \rput[bl](8.13,0.2){$B$}
+% \psdots(-5,0)
+% \rput[bl](-4.87,0.2){$C$}
+% \psdots(1.97,4.53)
+% \rput[bl](2.3,4.73){$D$}
+% \end{pspicture*}
+% }
+% \par 
+% $\widehat{BAD}$ et $\widehat{DAC}$ sont :\par adjacents et supplémentaires.
+% \end{minipage}
+% \end{tabular}
+% }
+
