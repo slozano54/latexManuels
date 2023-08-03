@@ -151,6 +151,72 @@
             trace figUn rotatedaround(A, -15);
         \end{Geometrie}
     \end{methode*2*2}
+
+    \begin{methode}[Tracer un angle à l'aide du rapporteur]
+        Pour tracer un angle $\widehat{BAC}$ de mesure donnée à partir d'un segment $[AB]$ est déjà tracé :
+        \begin{itemize}
+            \item Placer le \textbf{centre du rapporteur sur le point qui sera le sommet de l'angle}, ici le point $A$.
+            \item \textbf{Prolonger} le segment $[AB]$ en la demi-droite $[AB]$, si necessaire.
+            \item Faire \textbf{pivoter le rapporteur autour de son centre} de façon à ce que la demi-droite $[AB]$ passe par une des deux graduations "0", intérieure ou extérieure.
+            \item \textbf{En faisant bien attention à ne pas se tromper de graduation}, compter le nombre de graduations à partir du zéro pour arriver jusqu'à la mesure demandée, et faire une marque au crayon.
+            \item Ôter le rapporteur et tracer le deuxième côté de l'angle.
+        \end{itemize}
+        \exercice
+        Tracer $\widehat{BAC}$ mesurant \ang{75}. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A);
+                label.bot(btex $A$ etex, A);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1);
+                trace segment(A,B1) withpen pencircle scaled 1.5bp;
+            );
+            trace figUn shifted (-2u,0);
+        \end{Geometrie}
+        \correction
+        $\widehat{BAC}$ mesure \ang{60}. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                trace rapporteurdouble(A,B0,1);
+                pointe(A);
+                label.bot(btex $A$ etex, A);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1);
+                trace segment(A,B1) withpen pencircle scaled 1.5bp;
+                trace demidroite(A,B1) withpen pencircle scaled 1.5bp dashed evenly;
+                C0 = B0 rotatedaround(A, 75);
+                C1 = B1 rotatedaround(A, 75);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1);
+                trace demidroite(A,C1) withpen pencircle scaled 1.5bp dashed evenly;
+                trace Codeangle(B0,A,C0,0,btex \ang{75} etex);
+                B2 = B0 shifted (0.5u,u);
+                B3 = B0 shifted(-u,0);
+                drawarrow B2--B3 dashed evenly withcolor red;
+                label.top(btex {\red $0$ intérieur} etex, B2);
+                C3 = B3 shifted (0.3u,0) rotatedaround(A, 75);
+                trace segment(B3 shifted (0.2u,0) rotatedaround(A, 75),B3 shifted (0.4u,0) rotatedaround(A, 75)) withpen pencircle scaled 1.5bp withcolor blue;
+                C2 = C3 shifted (2.3u,0.3u);
+                drawarrow C2--C3 dashed evenly withcolor blue;
+                label.top(btex {\blue marquage de l'angle : \ang{75}} etex, C2);
+            );
+            trace figUn;
+        \end{Geometrie}
+    \end{methode}
 \end{changemargin}
 
 % \Methode{Tracer un angle à l'aide d'un rapporteur ?}{
