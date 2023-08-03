@@ -1,4 +1,114 @@
 \section{Différents types d'angles}
+
+\begin{changemargin}{0mm}{-25mm}
+\begin{definition}
+    On peut classer les angles selon leur mesure $\alpha=\widehat{BAC}$.
+
+    \smallskip
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|*5{c|}}
+        \hline
+        $\alpha=\ang{0}$ & $\ang{0}<\alpha<\ang{90}$ & $\alpha=\ang{90}$ & $\ang{90}<\alpha<\ang{180}$ & $\alpha=\ang{180}$ \\\hline
+        Angle \textbf{nul} & Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\\hline
+        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A,0)];
+            pointe(C);
+            label.ulft(btex $C$ etex, C);
+            % trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            % marque_a:=0.6*marque_a;
+            % trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A, 60)];
+            pointe(C);
+            label.ulft(btex $C$ etex, C);
+            trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            marque_a:=0.6*marque_a;
+            trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A, 90)];
+            pointe(C);
+            label.lft(btex $C$ etex, C);
+            trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            marque_a:=0.6*marque_a;
+            trace codeperp(B,A,C,5);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2.5u)}]            
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A, 115)];
+            pointe(C);
+            label.ulft(btex $C$ etex, C);
+            trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            marque_a:=0.6*marque_a;
+            trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2.5u)}]            
+            pair A,B,C[];
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C0 = 0.8[A,B rotatedaround(A, 180)];
+            pointe(C0);
+            label.ulft(btex $C$ etex, C0);
+            trace demidroite(A,C0) withpen pencircle scaled 1.25bp;
+            marque_a:=0.6*marque_a;
+            path cc;
+            cc=cercles(A,0.2[A,B]);
+            C1 = pointarc(cc,0);
+            C2 = pointarc(cc,90);
+            C3 = pointarc(cc,180);
+            draw C1..C2..C3;
+            label.top(btex $\alpha$ etex, C2);
+        \end{Geometrie}\\\hline
+    \end{tabular}
+    }
+\end{definition}
+\end{changemargin}
 % \definNum{
 % On peut classer les angles selon leur mesure $\alpha=\widehat{BAC}$:\\
 
