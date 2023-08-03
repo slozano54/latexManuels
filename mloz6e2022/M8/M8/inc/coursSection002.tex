@@ -1,45 +1,157 @@
 \section{Mesure d'un angle}
 
-% \definNum{
-% On peut mesurer \og l'ouverture \fg d'un angle;\\
-% L'unité de mesure que l'on utilise au collège est le \textbf{degré}.\\
-% L'instrument qui nous servira à mesurer des angles s'appelle un \textbf{rapporteur}.\\ 
-% \begin{tabular}{c c}
-% \begin{minipage}{8.5cm}
-% Voici un rapporteur, gradué en degrés; ce rapporteur a une double graduation, qui va de 0 à 180 degrés.
-% %\danger \textbf{Attention !!} Cette double graduation est source de nombreuses erreurs...
-% \end{minipage}
-% &
-% \begin{minipage}{8.5cm}
-% \begin{center}
-% \includegraphics[width=8cm]{figures/rapporteur.4}
-% \end{center}
-% \end{minipage}
-% \\
-% \end{tabular}
-% }
+\begin{changemargin}{0mm}{-20mm}
+    \begin{myvocabulaire}
+        On peut mesurer \og l'ouverture \fg d'un angle;\\
+        L'unité de mesure que l'on utilise au collège est le \textbf{degré}.\\
+        L'instrument qui nous servira à mesurer des angles s'appelle un \textbf{rapporteur}.\\ 
+        \begin{tabular}{c c}
+            \begin{minipage}{0.5\linewidth}
+                Voici un rapporteur, gradué en degrés; ce rapporteur a une double graduation, qui va de 0 à 180 degrés.\\
+                \emoji{warning} \textbf{Attention} \emoji{warning}\\ 
+                Cette double graduation est source d'erreur.
+            \end{minipage}
+            &
+            \begin{minipage}{0.5\linewidth}
+                \begin{center}
+                    \begin{Geometrie}
+                        pair A,B;
+                        A=u*(4,1);
+                        B=u*(8,1);
+                        trace rapporteurdouble(A,B,1);
+                    \end{Geometrie}
+                \end{center}
+            \end{minipage}
+        \end{tabular}
+    \end{myvocabulaire}
 
-% \Methode{Mesurer un angle à l'aide du rapporteur ?}{
-% \begin{tabular}{c c}
-% \begin{minipage}{8.5cm}
-% \includegraphics[width=7.5cm]{figures/rapporteur.5}
-% \end{minipage}
-% &
-% \begin{minipage}{8.5cm}
-% \includegraphics[width=7.5cm]{figures/rapporteur.6}
-% \end{minipage}
-% \\
-% $\widehat{BAC}=60^{\circ}$ & $\widehat{BAC}=109^{\circ}$ \\
-% \end{tabular}
-% \ \\
-
-% Pour déterminer la mesure en degrés de l'angle $\widehat{BAC}$:
-% \begin{mylist}
-% \item Placer le \textbf{centre du rapporteur sur le sommet de l'angle}, ici le point $A$.
-% \item On fait \textbf{pivoter le rapporteur autour de son centre} de façon à ce que l'un des côtés de l'angle passe par une des deux graduations "0" (intérieure ou extérieure), et que l'autre côté de l'angle passe sous une autre graduation du rapporteur.
-% \item \textbf{En faisant bien attention à ne pas se tromper de graduation}, compter le nombre de graduations à partir du zéro pour arriver jusqu'au deuxième côté de l'angle.
-% \end{mylist}
-% }
+    \begin{methode*2*2}[Mesurer un angle à l'aide du rapporteur]
+        Pour déterminer la mesure en degrés de l'angle $\widehat{BAC}$:
+        \begin{itemize}
+            \item Placer le \textbf{centre du rapporteur sur le sommet de l'angle}, ici le point $A$.
+            \item Faire \textbf{pivoter le rapporteur autour de son centre} de façon à ce que l'un des côtés de l'angle passe par une des deux graduations "0" (intérieure ou extérieure), et que l'autre côté de l'angle passe sous une autre graduation du rapporteur.
+            \item \textbf{En faisant bien attention à ne pas se tromper de graduation}, compter le nombre de graduations à partir du zéro pour arriver jusqu'au deuxième côté de l'angle.
+        \end{itemize}
+        \exercice
+        Mesurer $\widehat{BAC}$. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, 60);
+                C1 = B1 rotatedaround(A, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(B0,A,C0,0);
+            );
+            trace figUn rotatedaround(A, 10);
+        \end{Geometrie}
+        \correction
+        $\widehat{BAC}$ mesure \ang{60}. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                trace rapporteurdouble(A,B0,1);
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, 60);
+                C1 = B1 rotatedaround(A, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(B0,A,C0,0);
+                B2 = B0 shifted (0.5u,u);
+                B3 = B0 shifted(-u,0);
+                drawarrow B2--B3 dashed evenly withcolor red;
+                label.top(btex {\red $0$ intérieur} etex, B2) rotatedaround(B2, -10);
+                C3 = B3 rotatedaround(A, 60);
+                C2 = C3 shifted (2.3u,0.3u);
+                drawarrow C2--C3 dashed evenly withcolor blue;
+                label.top(btex {\blue lecture de l'angle : \ang{60}} etex, C2) rotatedaround(C2, -10);
+            );
+            trace figUn rotatedaround(A, 10);
+        \end{Geometrie}
+        \exercice
+        Mesurer $\widehat{BAC}$. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(4.5,1);
+            B0=u*(1,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, 15);
+                B1 = B0 shifted (-0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, 15);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, -109);
+                C1 = B1 rotatedaround(A, -109);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, 15);
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(C0,A,B0,0);
+            );
+            trace figUn rotatedaround(A, -15);
+        \end{Geometrie}
+        \correction
+        $\widehat{BAC}$ mesure \ang{109}. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(4.5,1);
+            B0=u*(1,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                trace rapporteurdouble(A,B0,-1);
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, 15);
+                B1 = B0 shifted (-0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, 15);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, -109);
+                C1 = B1 rotatedaround(A, -109);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, 15);
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(C0,A,B0,0);
+                B2 = B0 shifted (-0.5u,u);
+                B3 = B0 shifted(0.8u,0);
+                drawarrow B2--B3 dashed evenly withcolor red;
+                label.top(btex {\red $0$ exterieur} etex, B2) rotatedaround(B2, 15);
+                C3 = B3 rotatedaround(A, -109);
+                C2 = C3 shifted (-1.7u,0.9u);
+                drawarrow C2--C3 dashed evenly withcolor blue;
+                label.top(btex {\blue lecture de l'angle : \ang{109}} etex, C2) rotatedaround(C2, 15);
+            );
+            trace figUn rotatedaround(A, -15);
+        \end{Geometrie}
+    \end{methode*2*2}
+\end{changemargin}
 
 % \Methode{Tracer un angle à l'aide d'un rapporteur ?}{
 % \begin{tabular}{c c}
