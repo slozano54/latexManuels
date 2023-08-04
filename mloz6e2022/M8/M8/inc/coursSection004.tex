@@ -1,18 +1,18 @@
 \section{Bissectrice d'un angle}
-\begin{changemargin}{0mm}{-15mm}
+\begin{changemargin}{0mm}{-25mm}
     \begin{definition}
         \begin{minipage}{0.6\linewidth}
         La \textbf{bissectrice} d'un angle est la demi-droite qui a pour origine le sommet de l'angle, et qui partage l'angle en deux angles de même mesure.
         \end{minipage}
         \hfill
         \begin{minipage}{0.4\linewidth}
-            \begin{Geometrie}[CoinBG={(-4u,-2u)},CoinHD={(4u,4u)}]
-                u:=0.3*u;
+            \begin{Geometrie}[CoinBG={(-2u,-u)},CoinHD={(4u,3u)}]
+                u:=0.5*u;
                 pair A,B,C',D,C;
                 B=u*(3,-1);
                 A=u*(-3,0);
-                C'=rotation(B,A,70);
-                D=1.9[A,rotation(B,A,35)];
+                C'=rotation(B,A,40);
+                D=1.9[A,rotation(B,A,20)];
                 C=0.7[A,C'];
                 trace demidroite(A,B);
                 trace demidroite(A,C);
@@ -24,8 +24,10 @@
                 label.ulft(btex $C$ etex,C);
                 pointe(C);
                 trace bissectrice(B,A,C) withcolor Crimson dashed dashpattern(on12bp off6bp on3bp off6bp);
+                marque_s:=marque_s/2;
+                marque_a:=1.2*marque_a;
                 trace marqueangle(B,A,D,2);
-                marque_a:=0.6*marque_a;
+                marque_a:=1.2*marque_a;
                 trace marqueangle(D,A,C,2);
                 trace appelation(A,D,3mm,btex bissectrice de $\widehat{BAC}$ etex) withcolor Crimson;
             \end{Geometrie}
