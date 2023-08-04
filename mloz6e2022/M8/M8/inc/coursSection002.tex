@@ -182,7 +182,7 @@
         \end{Geometrie}
         \correction
         $\widehat{BAC}$ mesure \ang{60}. \par\vspace*{5mm}
-        \begin{Geometrie}[CoinHD={(8.5u,4.5u)}]
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
             trace feuillet withcolor white;
             pair A,B[],C[];
             A=u*(3.5,1);
@@ -197,12 +197,12 @@
                 pointe(B1);
                 label.bot(btex $B$ etex, B1);
                 trace segment(A,B1) withpen pencircle scaled 1.5bp;
-                trace demidroite(A,B1) withpen pencircle scaled 1.5bp dashed evenly;
+                trace demidroite(A,B1) dashed evenly;
                 C0 = B0 rotatedaround(A, 75);
                 C1 = B1 rotatedaround(A, 75);
                 pointe(C1);
                 label.rt(btex $C$ etex, C1);
-                trace demidroite(A,C1) withpen pencircle scaled 1.5bp dashed evenly;
+                trace demidroite(A,C1) dashed evenly;
                 trace Codeangle(B0,A,C0,0,btex \ang{75} etex);
                 B2 = B0 shifted (0.5u,u);
                 B3 = B0 shifted(-u,0);

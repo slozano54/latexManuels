@@ -1,81 +1,177 @@
 \section{Bissectrice d'un angle}
+\begin{changemargin}{0mm}{-15mm}
+    \begin{definition}
+        \begin{minipage}{0.6\linewidth}
+        La \textbf{bissectrice} d'un angle est la demi-droite qui a pour origine le sommet de l'angle, et qui partage l'angle en deux angles de même mesure.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+            \begin{Geometrie}[CoinBG={(-4u,-2u)},CoinHD={(4u,4u)}]
+                u:=0.3*u;
+                pair A,B,C',D,C;
+                B=u*(3,-1);
+                A=u*(-3,0);
+                C'=rotation(B,A,70);
+                D=1.9[A,rotation(B,A,35)];
+                C=0.7[A,C'];
+                trace demidroite(A,B);
+                trace demidroite(A,C);
+                marque_p:="croix";
+                label.bot(btex $A$ etex,A);
+                pointe(A);
+                label.bot(btex $B$ etex,B);
+                pointe(B);
+                label.ulft(btex $C$ etex,C);
+                pointe(C);
+                trace bissectrice(B,A,C) withcolor Crimson dashed dashpattern(on12bp off6bp on3bp off6bp);
+                trace marqueangle(B,A,D,2);
+                marque_a:=0.6*marque_a;
+                trace marqueangle(D,A,C,2);
+                trace appelation(A,D,3mm,btex bissectrice de $\widehat{BAC}$ etex) withcolor Crimson;
+            \end{Geometrie}
+        \end{minipage}
+    \end{definition}
 
-% \definNum{
-% \begin{minipage}{9cm}
-% La \textbf{bissectrice} d'un angle est la demi-droite qui a pour origine le sommet de l'angle, et qui partage l'angle en deux angles de même mesure.
-% \end{minipage}
-% \hfill
-% \begin{minipage}{6cm}
-% \includegraphics[scale=0.6]{figures/bissectrice.1}
-% \end{minipage}
-% }
+    \begin{methode}[Tracer la bissectrice avec un rapporteur]
+        Pour tracer la bissectrice d'un angle à l'aide du rapporteur :
+        \begin{itemize}
+            \item {\bfseries Mesurer} l'angle à l'aide du rapporteur.
+            \item {\bfseries Diviser} cette mesure par 2,
+            \item {\bfseries Tracer} l'angle moitié.
+        \end{itemize}
+        \exercice
+        Tracer la bissectrice de $\widehat{BAC}$ à l'aide du rapporteur. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(6.5u,5u)}]
+            labeloffset:=labeloffset*1.5;
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, 60);
+                C1 = B1 rotatedaround(A, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(B0,A,C0,0);
+            );
+            trace figUn rotatedaround(A, 10) shifted (-3u,0);
+        \end{Geometrie}
+        \correction
+        $\widehat{BAC}$ mesure \ang{60} donc il faudra marquer un angle de \ang{30}. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            labeloffset:=labeloffset*1.5;
+            marque_s:=marque_s/2;
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                trace rapporteurdouble(A,B0,1) withcolor DimGrey;
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, 60);
+                C1 = B1 rotatedaround(A, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                B2 = B0 shifted (0.5u,u);
+                B3 = B0 shifted(-u,0);
+                C3 = B3 rotatedaround(A, 60);
+                C4 = B3 rotatedaround(A, 30);
+                trace segment(B3 shifted (0.2u,0) rotatedaround(A, 30),B3 shifted (0.4u,0) rotatedaround(A, 30)) withpen pencircle scaled 1.5bp withcolor blue;
+                C2 = C3 shifted (2.3u,0.3u);
+                trace bissectrice(B0,A,C0) withcolor Crimson dashed dashpattern(on12bp off6bp on3bp off6bp);
+                trace Codeangle(B0,A,C4,2,btex \ang{30} etex);
+                marque_a:=1.3*marque_a;
+                trace Codeangle(C4,A,C0,2,btex \ang{30} etex);
+            );
+            trace figUn rotatedaround(A, 10);
+        \end{Geometrie}
+    \end{methode}
 
-% \newcommand{\scaleBissectrice}{0.65}
-% \Methode{Tracer la bissectrice avec un rapporteur}{
-% \begin{mylist}
-% \item On mesure l'angle à l'aide du rapporteur;
-% \item puis on divise cette mesure par 2,
-% \item et on trace l'angle moitié.
-% \end{mylist}
-
-% \begin{tabular}{c c}
-% \begin{minipage}{8.5cm}
-% \includegraphics[scale=\scaleBissectrice]{figures/rapporteur.9}
-% \end{minipage}
-% &
-% \hspace{-2cm}
-% \begin{minipage}{8.5cm}
-% \includegraphics[scale=\scaleBissectrice]{figures/rapporteur.10}
-% \end{minipage}
-% \end{tabular}
-% \par\vspace{1cm}
-% }
-
-
-% \Methode{Tracer la bissectrice avec un compas}{
-% \begin{mylist}
-% \item On trace deux arcs de cercle de centre $A$, de même rayon,
-% \item On nomme $I$ et $J$ les points d'intersection avec les deux côtés de l'angle aux ;
-% \item puis, en prenant pour centres ces deux points, on trace à nouveau deux arcs de même rayon que les arcs précédents,
-% \item Ils se coupent en un point $D$.
-% \item La bissectrice de l'angle $\widehat{BAC}$ est la demi-droite $[AD)$.
-% \end{mylist} 
-    
-% \begin{tabular}{c c }
-% \begin{minipage}{8.5cm}
-% \includegraphics[scale=\scaleBissectrice]{figures/rapporteur.11}
-% \end{minipage}
-% &
-% \begin{minipage}{8.5cm}
-% \includegraphics[scale=\scaleBissectrice]{figures/rapporteur.12}
-% \end{minipage}
-% \\
-% \multicolumn{2}{c}{
-% \begin{minipage}{8.5cm}
-% \includegraphics[scale=\scaleBissectrice]{figures/rapporteur.13}
-% \end{minipage}}
-% \\
-% \end{tabular}
-% }
-
-% \newpage
-% \subsection{Compléments numériques}
-
-% \begin{bclogo}[couleur=gray!20, arrondi = 0.1,logo=\bcplume]{Animations en ligne. Source :  \href{https://instrumenpoche.sesamath.net/}{https://instrumenpoche.sesamath.net/}}
-
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_154.html}{\psshadowbox{Construire un gabarit d'angle}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_005.html}{\psshadowbox{Mesure d'un angle aigu au rapporteur (1)}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_008.html}{\psshadowbox{Mesure d'un angle obtu au rapporteur(1)}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_003.html}{\psshadowbox{Mesure d'un angle aigu au rapporteur (2)}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_004.html}{\psshadowbox{Mesure d'un angle aigu au rapporteur (2)}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_173.html}{\psshadowbox{Mesure d'un angle au rapporteur}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_006.html}{\psshadowbox{Mesure d'un angle aigu au rapporteur départ 0$^{\circ}$}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_007.html}{\psshadowbox{Mesure d'un angle aigu au rapporteur départ 180$^{\circ}$}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_009.html}{\psshadowbox{Mesure d'un angle obtu au rapporteur départ 0$^{\circ}$}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_010.html}{\psshadowbox{Mesure d'un angle obtu au rapporteur départ 180$^{\circ}$}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_011.html}{\psshadowbox{Bissectrice au rapporteur}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_012.html}{\psshadowbox{Bissectrice au compas (losange)}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_013.html}{\psshadowbox{Reproduire un angle au compas}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_127.html}{\psshadowbox{Vérifier un angle droit à l'équerre}}.\par\vspace{0.25cm}
-% \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_032.html}{\psshadowbox{Bissectrice d'un triangle au compas (losange)}}.
-% \end{bclogo}
+    \begin{methode}[Tracer la bissectrice avec un compas]
+        Pour tracer la bissectrice d'un angle à l'aide du compas, on peut par exemple construire un losange.
+        \exercice
+        Tracer la bissectrice de $\widehat{BAC}$ à l'aide du compas. \par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(6.5u,5u)}]
+            labeloffset:=labeloffset*1.5;
+            trace feuillet withcolor white;
+            pair A,B[],C[];
+            A=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A);
+                label.bot(btex $A$ etex, A) rotatedaround(A, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A,B0) withpen pencircle scaled 1.5bp;
+                C0 = B0 rotatedaround(A, 60);
+                C1 = B1 rotatedaround(A, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A,C0) withpen pencircle scaled 1.5bp;
+                trace marqueangle(B0,A,C0,0);
+            );
+            trace figUn rotatedaround(A, 10) shifted (-3u,0);
+        \end{Geometrie}
+        \correction
+        $A$ sera l'un des sommets du losange, deux autres sommets seront sur les côtés de $\widehat{BAC}$. Le losange est matérialisé en bleu.\par\vspace*{5mm}
+        \begin{Geometrie}[CoinHD={(8.5u,5u)}]
+            labeloffset:=labeloffset*1.5;
+            marque_s:=marque_s/2;
+            trace feuillet withcolor white;
+            pair A[],B[],C[];
+            A0=u*(3.5,1);
+            B0=u*(7,1);
+            marque_p:="croix";
+            picture figUn;
+            figUn = image (
+                pointe(A0);
+                label.bot(btex $A$ etex, A0) rotatedaround(A0, -10);
+                B1 = B0 shifted (0.5*u,0);
+                pointe(B1);
+                label.bot(btex $B$ etex, B1)  rotatedaround(B1, -10);
+                trace demidroite(A0,B0);
+                C0 = B0 rotatedaround(A0, 60);
+                C1 = B1 rotatedaround(A0, 60);
+                pointe(C1);
+                label.rt(btex $C$ etex, C1)  rotatedaround(C1, -10);            
+                trace demidroite(A0,C0);
+                trace bissectrice(B0,A0,C0) withcolor Crimson dashed dashpattern(on12bp off6bp on3bp off6bp);
+                B2 = B0 shifted (-1.5*u,0);
+                C2 = B2 rotatedaround(A0, 60);
+                A1=rotation(B2,C2,60);
+                trace (subpath(-1,2) of cercles(A0,B2)) dashed evenly withcolor 0.7white;
+                trace coupdecompas(A0,B2,10) dashed evenly;
+                trace coupdecompas(A0,C2,10) dashed evenly;
+                trace coupdecompas(C2,A1,10) dashed evenly;
+                trace coupdecompas(B2,A1,10) dashed evenly;
+                trace polygone(A0,B2,A1,C2) withcolor blue dashed evenly withpen pencircle scaled 1.5bp;
+                trace Codelongueur(A0,B2,3) withcolor blue;
+                trace Codelongueur(A0,C2,3) withcolor blue;
+                trace Codelongueur(A1,B2,3) withcolor blue;
+                trace Codelongueur(A1,C2,3) withcolor blue;                
+                trace compas(A0,C2 rotatedaround(A0,5),1);
+            );
+            trace figUn rotatedaround(A0, 10);
+        \end{Geometrie}
+    \end{methode}
+\end{changemargin}
