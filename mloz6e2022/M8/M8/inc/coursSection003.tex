@@ -1,34 +1,15 @@
 \section{Différents types d'angles}
 
-\begin{changemargin}{0mm}{-25mm}
-\begin{definition}
-    On peut classer les angles selon leur mesure $\alpha=\widehat{BAC}$.
-
-    \smallskip
+\begin{changemargin}{0mm}{-15mm}
+\begin{definition}[Classement des angles selon leur mesure $\alpha=\widehat{BAC}$]
     {\renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{|*5{c|}}
+    \begin{tabular}{|*4{c|}}
         \hline
-        $\alpha=\ang{0}$ & $\ang{0}<\alpha<\ang{90}$ & $\alpha=\ang{90}$ & $\ang{90}<\alpha<\ang{180}$ & $\alpha=\ang{180}$ \\\hline
-        Angle \textbf{nul} & Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\\hline
-        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
-            pair A,B,C;
-            A=u*(.5,0.5);
-            B=u*(2,0.5);
-            marque_p:="croix";
-            picture fig;
-            pointe(A,B);
-            label.bot(btex $A$ etex, A);
-            label.bot(btex $B$ etex, B);
-            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
-            C = 0.8[A,B rotatedaround(A,0)];
-            pointe(C);
-            label.ulft(btex $C$ etex, C);
-            % trace demidroite(A,C) withpen pencircle scaled 1.25bp;
-            % marque_a:=0.6*marque_a;
-            % trace Codeangle(B,A,C,0,btex $\alpha$ etex);
-        \end{Geometrie}
-        &
-        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
+        \multicolumn{4}{|c|}{Angles {\bfseries saillants}}\\\hline
+        $\ang{0}<\alpha<\ang{90}$ & $\alpha=\ang{90}$ & $\ang{90}<\alpha<\ang{180}$ & $\alpha=\ang{180}$ \\\hline
+        Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\\hline
+        \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+            labeloffset:=labeloffset*1.5;
             pair A,B,C;
             A=u*(.5,0.5);
             B=u*(2,0.5);
@@ -46,7 +27,8 @@
             trace Codeangle(B,A,C,0,btex $\alpha$ etex);
         \end{Geometrie}
         &
-        \begin{Geometrie}[CoinHD={(2.5u,2.5u)}]            
+        \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+            labeloffset:=labeloffset*1.5;
             pair A,B,C;
             A=u*(.5,0.5);
             B=u*(2,0.5);
@@ -61,10 +43,11 @@
             label.lft(btex $C$ etex, C);
             trace demidroite(A,C) withpen pencircle scaled 1.25bp;
             marque_a:=0.6*marque_a;
-            trace codeperp(B,A,C,5);
+            trace codeperp(B,A,C,8);
         \end{Geometrie}
         &
-        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2.5u)}]            
+        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2u)}]            
+            labeloffset:=labeloffset*1.5;
             pair A,B,C;
             A=u*(.5,0.5);
             B=u*(2,0.5);
@@ -76,13 +59,14 @@
             trace demidroite(A,B) withpen pencircle scaled 1.25bp;
             C = 0.8[A,B rotatedaround(A, 115)];
             pointe(C);
-            label.ulft(btex $C$ etex, C);
+            label.llft(btex $C$ etex, C);
             trace demidroite(A,C) withpen pencircle scaled 1.25bp;
             marque_a:=0.6*marque_a;
             trace Codeangle(B,A,C,0,btex $\alpha$ etex);
         \end{Geometrie}
         &
-        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2.5u)}]            
+        \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2u)}]
+            labeloffset:=labeloffset*1.5;            
             pair A,B,C[];
             A=u*(.5,0.5);
             B=u*(2,0.5);
@@ -104,97 +88,92 @@
             C3 = pointarc(cc,180);
             draw C1..C2..C3;
             label.top(btex $\alpha$ etex, C2);
+        \end{Geometrie}\\\hline        
+    \end{tabular}    
+    }
+
+    \smallskip
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|*3{c|}}
+        \hline
+        $\alpha=\ang{0}$ & $\ang{180}<\alpha<\ang{360}$ & $\alpha=\ang{360}$ \\\hline
+        Angle \textbf{nul} & Angle \textbf{rentrant} & Angle \textbf{plein} \\\hline
+        \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+            labeloffset:=labeloffset*1.5;
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            label.bot(btex $A$ etex, A);
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A,0)];
+            pointe(C);
+            label.ulft(btex $C$ etex, C);
+            % trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            % marque_a:=0.6*marque_a;
+            % trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(2.5u,1.5u)}]
+            labeloffset:=labeloffset*1.5;
+            pair A,B,C;
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            labeloffset:=labeloffset*2;
+            label.bot(btex $A$ etex, A);
+            labeloffset:=labeloffset/2;
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C = 0.8[A,B rotatedaround(A,30)];
+            pointe(C);
+            label.ulft(btex $C$ etex, C);
+            trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+            marque_a:=0.4*marque_a;
+            trace Codeangle(C,A,B,0,btex $\alpha$ etex);
+        \end{Geometrie}
+        &
+        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(2.5u,1.5u)}]            
+            labeloffset:=labeloffset*1.5;
+            pair A,B,C[];
+            A=u*(.5,0.5);
+            B=u*(2,0.5);
+            marque_p:="croix";
+            picture fig;
+            pointe(A,B);
+            labeloffset:=labeloffset*2;
+            label.bot(btex $A$ etex, A);
+            labeloffset:=labeloffset/2;
+            label.bot(btex $B$ etex, B);
+            trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+            C0 = 0.8[A,B rotatedaround(A, 360)];
+            pointe(C0);
+            label.ulft(btex $C$ etex, C0);
+            trace demidroite(A,C0) withpen pencircle scaled 1.25bp;
+            marque_a:=0.6*marque_a;
+            path cc;
+            cc=cercles(A,0.15[A,B]);
+            trace cc;
+            C2 = pointarc(cc,160);
+            label.ulft(btex $\alpha$ etex, C2);
         \end{Geometrie}\\\hline
-    \end{tabular}
+    \end{tabular}    
     }
 \end{definition}
-\end{changemargin}
-% \definNum{
-% On peut classer les angles selon leur mesure $\alpha=\widehat{BAC}$:\\
 
-% \begin{tabular}{|c|c|c|c|c|}
-% \hline
-% $\alpha=0^{\circ}$ & $0^{\circ}<\alpha<90^{\circ}$ & $\alpha=90^{\circ}$ & $90^{\circ}<\alpha<180^{\circ}$ & $\alpha=180^{\circ}$ \\
-% \hline
-% Angle \textbf{nul} & Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\
-% \hline
-% & & & & \\
-% \begin{minipage}{3cm}
-% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(-8,-1)(12,10)
-% \psplot{0}{12.2}{(-0-0*x)/6.37}
-% \psplot{0}{12.2}{(-0-0*x)/8.83}
-% \psdots(0,0)
-% \rput[bl](-3,0){\small{$A$}}
-% \psdots(6.37,0)
-% \rput[bl](6.5,0.4){\small{$C$}}
-% \psdots(8.83,0)
-% \rput[bl](8.97,0.4){\small{$B$}}
-% \end{pspicture*}
-% \end{minipage}
-% &
-% \begin{minipage}{3cm}
-% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(-8,-1)(12,10)
-% \psplot{0}{12.2}{(-0--5.77*x)/3.9}
-% \psplot{0}{12.2}{(-0-0*x)/8.84}
-% \psdots(0,0)
-% \rput[bl](-3,0){\small{$A$}}
-% \psdots(3.9,5.77)
-% \rput[bl](1.63,6.17){\small{$C$}}
-% \psdots(8.83,0)
-% \rput[bl](8.97,0.4){\small{$B$}}
-% \end{pspicture*}
-% \end{minipage}
-% &
-% \begin{minipage}{3cm}
-% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(-8,-1)(12,10)
-% \psline(0,0)(0,14.57)
-% \psplot{0}{12.2}{(-0-0*x)/8.84}
-% \psline(0,1.23)(1.17,1.23)
-% \psline(1.17,1.23)(1.17,-0.03)
-% \psdots(0,0)
-% \rput[bl](-3,-0.03){\small{$A$}}
-% \psdots(0,6.5)
-% \rput[bl](-0.27,6.9){\small{$C$}}
-% \psdots(8.83,0)
-% \rput[bl](8.97,0.4){\small{$B$}}
-% \end{pspicture*}
-% \end{minipage}
-% &
-% \begin{minipage}{3cm}
-% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(-8,-1)(12,10)
-% \psplot{-8.93}{0}{(-0--4.13*x)/-4.4}
-% \psplot{0}{12.2}{(-0-0*x)/8.84}
-% \psdots(0,0)
-% \rput[bl](-3,-0.03){\small{$A$}}
-% \psdots(-4.4,4.13)
-% \rput[bl](-4.67,4.53){\small{$C$}}
-% \psdots(8.83,0)
-% \rput[bl](8.97,0.4){\small{$B$}}
-% \end{pspicture*}
-% \end{minipage}
-% &
-% \begin{minipage}{3cm}
-% \psset{xunit=0.15cm,yunit=0.15cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
-% \begin{pspicture*}(-8,-1)(12,10)
-% \psplot{-8.93}{0}{(-0-0*x)/-5}
-% \psplot{0}{12.2}{(-0-0*x)/8.84}
-% \psdots(0,0)
-% \rput[bl](0,2){\small{$A$}}
-% \psdots(-5,0)
-% \rput[bl](-5.27,0.4){\small{$C$}}
-% \psdots(8.83,0)
-% \rput[bl](8.97,0.4){\small{$B$}}
-% \end{pspicture*}
-% \end{minipage}
-% \\
-% & & & & \\
-% \hline
-% \end{tabular}
-% }
+\begin{propriete}
+    Soient $A$, $B$ et $C$ trois points distincts deux à deux :
+    \begin{itemize}
+        \item Dire que \textbf{les droites $\mathbf{(AB)}$ et $\mathbf{(AC)}$ sont perpendiculaires} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est un angle droit}.
+        \item Dire que \textbf{les points $\mathbf{A}$, $\mathbf{B}$ et $\mathbf{C}$ sont alignés} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est soit nul, soit plat}.
+    \end{itemize}
+\end{propriete}
+\end{changemargin}
 
 % \proprNumBis{}{Soient $A$, $B$ et $C$ trois points distincts deux à deux :
 % \begin{mylist}
