@@ -1,3 +1,52 @@
-\begin{exercice}
-   ...
-   \end{exercice}
+\begin{exercice*}
+   Jayzy a lu \ang{80} pour l'angle coloré.\\
+   Expliquer pourquoi c'est faux et donner la bonne mesure.\\
+
+   \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+      trace feuillet;
+      input \persopath/commandes/rapporteurs.mp
+      pair A[],B;
+      A0=u*(3.75,0.5);
+      B=u*(7.75,0.5);
+      Total:=false;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw myrapporteurdouble(A0,B,1);        
+      A1=A0 shifted (-u,0); 
+      A2=rotation(A0 shifted (-u,0),A0,-100);           
+      draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+      draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+      draw marqueangle(A2,A0,A1,0);
+      fill coloreangle(A2,A0,A1) withcolor Grey;
+   \end{Geometrie}
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+\end{exercice*}
+\begin{corrige}
+   Jayzy a lu \ang{80} pour l'angle coloré.\\
+   Expliquer pourquoi c'est faux.\\
+
+   \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+      trace feuillet;
+      input \persopath/commandes/rapporteurs.mp
+      pair A[],B[];
+      A0=u*(3.75,0.5);
+      B0=u*(7.75,0.5);
+      Total:=false;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw myrapporteurdouble(A0,B0,1);        
+      A1=A0 shifted (-u,0); 
+      A2=rotation(A0 shifted (-u,0),A0,-100);           
+      draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+      draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+      draw marqueangle(A2,A0,A1,0);
+      fill coloreangle(A2,A0,A1) withcolor Grey;
+      drawdblarrow rotation(u*(0.5,0.5),A0,-100)..u*(0.5,0.5) withcolor red withpen pencircle scaled 1.5bp;
+   \end{Geometrie}
+
+   {\red 
+   Jayzy a lu \ang{80} sur les graduations intérieures alors que le zéro du rapporteur se trouve sur les graduations extérieures.
+   L'angle mesure donc \ang{100}.
+   }
+\end{corrige}

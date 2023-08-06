@@ -1,3 +1,57 @@
-\begin{exercice}
-   ...
-   \end{exercice}
+\begin{exercice*}
+   Josette a lu \ang{123} pour l'angle coloré.\\
+   Expliquer pourquoi c'est faux et donner la bonne mesure.\\
+   \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
+      trace feuillet;
+      input \persopath/commandes/rapporteurs.mp
+      pair A[],B;
+      A0=u*(3.75,0.5);
+      B=u*(7.75,0.5);
+      Total:=true;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw rapporteuraleph(A0,B,1);        
+      A1=A0 shifted (u,0); 
+      A2=rotation(A0 shifted (u,0),A0,117);
+      draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+      draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+      draw marqueangle(A1,A0,A2,0);
+      fill coloreangle(A1,A0,A2) withcolor Grey;
+   \end{Geometrie}
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+   \par\vspace*{4mm}\dotfill
+\end{exercice*}
+\begin{corrige}
+   Josette a lu \ang{123} pour l'angle coloré.\\
+   Expliquer pourquoi c'est faux et donner la bonne mesure.\\
+   \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
+      trace feuillet;
+      input \persopath/commandes/rapporteurs.mp
+      pair A[],B;
+      A0=u*(3.75,0.5);
+      B=u*(7.75,0.5);
+      Total:=true;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw rapporteuraleph(A0,B,1);        
+      A1=A0 shifted (u,0); 
+      A2=rotation(A0 shifted (u,0),A0,117);
+      draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+      draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+      draw marqueangle(A1,A0,A2,0);
+      fill coloreangle(A1,A0,A2) withcolor Grey;
+      pair fleche,graduation;
+      fleche=0.4[A0,B]+(0,0.5u);
+      draw cercle(fleche,u) withcolor red;
+      graduation=rotation(B-(u,0),A0,117);
+      draw cercle(graduation,0.5u) withcolor red;
+      path arc;
+      arc=arccercle(B-(u,0),rotation(B-(u,0),A0,117),A0);
+      drawarrow arc withcolor red withpen pencircle scaled 1.5bp;
+   \end{Geometrie}
+
+   {\red Josette a lu sur les graduations en tournant dans le sens horaire, or le sens croissant des mesures est indiqué sur le rapporteur,c'est le sens anti-horaire.
+   L'angle mesure donc \ang{117}.}
+\end{corrige}
+   
