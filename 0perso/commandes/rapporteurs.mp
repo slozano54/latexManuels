@@ -1,6 +1,7 @@
-boolean Simple,Total;
+boolean Simple,Total,CentreCroix;
 Simple=false;
 Total=true;
+CentreCroix=false;
 % Rapporteur 180 graduation simple
 vardef myrapporteur(expr centre,segment,rr)=
     save raps;
@@ -96,8 +97,10 @@ vardef myrapporteurdouble(expr centre,segment,rr)=
         path cent;
         cent=cercle(centre,0.05*u);
         fill cent withcolor if unknown fillrap: 0.9white else: fillrap fi;
-        draw centre shifted (0,-0.1u)--centre shifted (0,0.1u) withpen pencircle scaled 1.15;
-        draw centre shifted (-0.1u,0)--centre shifted (0.1u,0) withpen pencircle scaled 1.15;
+        if CentreCroix=true:
+            draw centre shifted (0,-0.1u)--centre shifted (0,0.1u) withpen pencircle scaled 1.15;
+            draw centre shifted (-0.1u,0)--centre shifted (0.1u,0) withpen pencircle scaled 1.15;
+        fi;
     );
     rap
 enddef;
@@ -197,8 +200,10 @@ vardef rapporteuraleph(expr centre,segment,rr)=
         path cent;
         cent=cercle(centre,0.05*u);
         fill cent withcolor if unknown fillrap: 0.9white else: fillrap fi;
-        draw centre shifted (0,-0.1u)--centre shifted (0,0.1u) withpen pencircle scaled 1.15;
-        draw centre shifted (-0.1u,0)--centre shifted (0.1u,0) withpen pencircle scaled 1.15;
+        if CentreCroix=true:
+            draw centre shifted (0,-0.1u)--centre shifted (0,0.1u) withpen pencircle scaled 1.15;
+            draw centre shifted (-0.1u,0)--centre shifted (0.1u,0) withpen pencircle scaled 1.15;
+        fi;
         % fleches orientées
         path fleche[];
         fleche0=cercle(centre,0.3*abs(centre-segment));

@@ -1,3 +1,94 @@
-\begin{exercice}
-   ...
-   \end{exercice}
+\begin{exercice*}
+   Jean-Michto veut mesure l'angle coloré.
+   \begin{enumerate}
+       \item  
+       Expliquer pourquoi il a mal placé son rapporteur.\\.\\
+       \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
+         trace feuillet;
+         input \persopath/commandes/rapporteurs.mp
+         pair A[],B;
+         A0=u*(3.75,0.5);
+         B=u*(7.75,0.5);
+         Total:=false;% pour graduer de 10en 10
+         CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+         draw rapporteuraleph(A0,B,1);        
+         A1=A0 shifted (-u,0); 
+         A2=A0 shifted (-u,u);
+         A3=A0 shifted (3u,0);
+         draw demidroite(A3,A1) withpen pencircle scaled 1.5bp;
+         draw demidroite(A3,A2) withpen pencircle scaled 1.5bp;
+         draw marqueangle(A2,A3,A1,0);
+         fill coloreangle(A2,A3,A1) withcolor Grey;
+      \end{Geometrie}
+      \par\vspace*{4mm}\dotfill
+      \par\vspace*{4mm}\dotfill
+      \item Expliquer comment il peut quand même obtenir la mesure de l'angle avec le rapporteur placer ainsi.\\\smallskip
+      \begin{Geometrie}[CoinBG={(0,-3u)},CoinHD={(7.5u,4.5u)}]
+         trace feuillet;
+         input \persopath/commandes/rapporteurs.mp
+         pair A[],B;
+         A0=u*(3.75,1);
+         B=u*(7.75,1);
+         Total:=false;% pour graduer de 10en 10
+         CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+         draw rapporteuraleph(A0,B,1);
+         A1=rotation(A0 shifted (-u,0),A0,-30); 
+         A2=rotation(A0 shifted (-u,0),A0,40);           
+         draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+         draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+         draw marqueangle(A1,A0,A2,0);
+         fill coloreangle(A1,A0,A2) withcolor Grey;
+      \end{Geometrie}
+      \par\vspace*{4mm}\dotfill
+      \par\vspace*{4mm}\dotfill
+      \par\vspace*{4mm}\dotfill
+   \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+   \begin{enumerate}
+      \item Jean-Michto a mal placé son rapporteur pour faire la mesure de l'angle coloré.\\\smallskip
+      Expliquer pourquoi.\\
+      \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
+          trace feuillet;
+          input \persopath/commandes/rapporteurs.mp
+          pair A[],B;
+          A0=u*(3.75,0.5);
+          B=u*(7.75,0.5);
+          Total:=false;% pour graduer de 10en 10
+          CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+          draw rapporteuraleph(A0,B,1);        
+          A1=A0 shifted (-u,0); 
+          A2=A0 shifted (-u,u);
+          A3=A0 shifted (3u,0);
+          draw demidroite(A3,A1) withpen pencircle scaled 1.5bp;
+          draw demidroite(A3,A2) withpen pencircle scaled 1.5bp;
+          draw marqueangle(A2,A3,A1,0);
+          fill coloreangle(A2,A3,A1) withcolor Grey;
+      \end{Geometrie}
+      
+      {\red Le sommet de l'angle n'est pas positionné sur le centre du rapporteur.}
+      \item Expliquer comment il peut quand même mesurer l'angle coloré avec le rapporteur placer ainsi.\\\smallskip
+      \begin{Geometrie}[CoinBG={(0,-3u)},CoinHD={(7.5u,4.5u)}]
+          trace feuillet;
+          input \persopath/commandes/rapporteurs.mp
+          pair A[],B;
+          A0=u*(3.75,1);
+          B=u*(7.75,1);
+          Total:=false;% pour graduer de 10en 10
+          CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+          draw rapporteuraleph(A0,B,1);
+          A1=rotation(A0 shifted (-u,0),A0,-30); 
+          A2=rotation(A0 shifted (-u,0),A0,40);           
+          draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+          draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+          draw marqueangle(A1,A0,A2,0);
+          fill coloreangle(A1,A0,A2) withcolor Grey;
+      \end{Geometrie}
+
+      {\red Le sommet de l'angle est bien positionné sur le centre du rapporteur, même si aucun des côtés de l'angle n'est aligné avec
+      l'une des graduations \ang{0}, il suffit de faire la différence des mesures indiquées par les côtés de l'angle.\\
+      $\ang{220}-\ang{150}=\ang{70}$
+      }
+  \end{enumerate}
+\end{corrige}
+   

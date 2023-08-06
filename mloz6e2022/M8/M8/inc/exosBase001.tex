@@ -1,17 +1,99 @@
 \begin{exercice*}
-    \begin{Geometrie}[CoinBG={(-3u,-12u)},CoinHD={(13u,5u)}]
-        trace feuillet;
-        input \persopath/commandes/rapporteurs.mp
-        pair A,B;
-        A=u*(1,1);
-        B=u*(5,1);
-        Total:=false;
-        draw myrapporteur(A,B,1);
-        draw myrapporteur(A,B,1) shifted (8u,0);
-        draw myrapporteurdouble(A,B,-1) shifted (0,-u);
-        draw myrapporteur(A,B,-1) shifted (8u,-u);
-        draw rapporteuraleph(A,B,1) shifted (0,-9u);
-        Total:=true;
-        draw rapporteuraleph(A,B,1) shifted (8u,-9u);
-    \end{Geometrie}
+    Dans chacun des cas suivants, Clara a mal placé son rapporteur pour faire la mesure de l'angle coloré.\\
+    Expliquer pourquoi.
+
+    \begin{enumerate}
+        \item \phantom{rrr}\\
+        \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+            trace feuillet;
+            input \persopath/commandes/rapporteurs.mp
+            pair A[],B;
+            A0=u*(3.75,0.5);
+            B=u*(7.75,0.5);
+            Total:=false;% pour graduer de 10en 10
+            CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+            draw myrapporteurdouble(A0,B,1);        
+            A1=A0 shifted (-u,0); 
+            A2=A0 shifted (-u,u);
+            A3=A0 shifted (-0.5u,0);
+            draw demidroite(A3,A1) withpen pencircle scaled 1.5bp;
+            draw demidroite(A3,A2) withpen pencircle scaled 1.5bp;
+            draw marqueangle(A2,A3,A1,0);
+            fill coloreangle(A2,A3,A1) withcolor Grey;
+        \end{Geometrie}
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \item \phantom{rrr}\\
+        \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+            trace feuillet;
+            input \persopath/commandes/rapporteurs.mp
+            pair A[],B;
+            A0=u*(3.75,1);
+            B=u*(7.75,1);
+            Total:=false;% pour graduer de 10en 10
+            CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+            draw myrapporteurdouble(A0,B,1) rotatedaround(A0,-10);
+            A1=A0 shifted (-u,0); 
+            A2=A0 shifted (-u,u);
+            draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+            draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+            draw marqueangle(A2,A0,A1,0);
+            fill coloreangle(A2,A0,A1) withcolor Grey;
+        \end{Geometrie}
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+        \par\vspace*{4mm}\dotfill
+    \end{enumerate}
 \end{exercice*}
+\begin{corrige}
+    Dans chacun des cas suivants, Clara a mal placé son rapporteur pour faire la mesure de l'angle coloré.\\
+    Expliquer pourquoi.
+
+    \begin{enumerate}
+        \item \phantom{rrr}\\
+        \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+            trace feuillet;
+            input \persopath/commandes/rapporteurs.mp
+            pair A[],B;
+            A0=u*(3.75,0.5);
+            B=u*(7.75,0.5);
+            Total:=false;% pour graduer de 10en 10
+            CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+            draw myrapporteurdouble(A0,B,1);        
+            A1=A0 shifted (-u,0); 
+            A2=A0 shifted (-u,u);
+            A3=A0 shifted (-0.5u,0);
+            draw demidroite(A3,A1) withpen pencircle scaled 1.5bp;
+            draw demidroite(A3,A2) withpen pencircle scaled 1.5bp;
+            draw marqueangle(A2,A3,A1,0);
+            fill coloreangle(A2,A3,A1) withcolor Grey;
+        \end{Geometrie}
+
+        {\red Le sommet de l'angle n'est pas positionné sur le centre du rapporteur.}
+        \item \phantom{rrr}\\
+        \begin{Geometrie}[CoinHD={(7.5u,4.5u)}]
+            trace feuillet;
+            input \persopath/commandes/rapporteurs.mp
+            pair A[],B;
+            A0=u*(3.75,1);
+            B=u*(7.75,1);
+            Total:=false;% pour graduer de 10en 10
+            CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+            draw myrapporteurdouble(A0,B,1) rotatedaround(A0,-10);
+            A1=A0 shifted (-u,0); 
+            A2=A0 shifted (-u,u);
+            A3=A0 shifted (-0.5u,0);
+            draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
+            draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
+            draw marqueangle(A2,A0,A1,0);
+            fill coloreangle(A2,A0,A1) withcolor Grey;
+        \end{Geometrie}
+
+        {\red Cette fois, le sommet de l'angle est bien positionné sur le centre du rapporteur, mais aucun des côtés de l'angle n'est aligné avec l'une des graduations \ang{0}.}
+    \end{enumerate}
+\end{corrige}
+    
