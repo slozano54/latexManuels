@@ -1,3 +1,17 @@
-\begin{exercice}
-...
-\end{exercice}
+\begin{exercice*}
+    \begin{Geometrie}[CoinBG={(-3u,-12u)},CoinHD={(13u,5u)}]
+        trace feuillet;
+        input \persopath/commandes/rapporteurs.mp
+        pair A,B;
+        A=u*(1,1);
+        B=u*(5,1);
+        Total:=false;
+        draw myrapporteur(A,B,1);
+        draw myrapporteur(A,B,1) shifted (8u,0);
+        draw myrapporteurdouble(A,B,-1) shifted (0,-u);
+        draw myrapporteur(A,B,-1) shifted (8u,-u);
+        draw rapporteuraleph(A,B,1) shifted (0,-9u);
+        Total:=true;
+        draw rapporteuraleph(A,B,1) shifted (8u,-9u);
+    \end{Geometrie}
+\end{exercice*}
