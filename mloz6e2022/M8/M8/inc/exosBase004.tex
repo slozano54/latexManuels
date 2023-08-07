@@ -1,46 +1,51 @@
 \begin{exercice*}
    Josette a lu \ang{123} pour l'angle coloré.\\
-   Expliquer pourquoi c'est faux et donner la bonne mesure.\\
+   Expliquer son erreur et donner la bonne mesure.
+
    \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
       trace feuillet;
       input \persopath/commandes/rapporteurs.mp
       pair A[],B;
       A0=u*(3.75,0.5);
       B=u*(7.75,0.5);
-      Total:=true;% pour graduer de 10en 10
-      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
-      draw rapporteuraleph(A0,B,1);        
       A1=A0 shifted (u,0); 
       A2=rotation(A0 shifted (u,0),A0,117);
       draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
       draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
       draw marqueangle(A1,A0,A2,0);
       fill coloreangle(A1,A0,A2) withcolor Grey;
+      Total:=true;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw rapporteuraleph(A0,B,1);        
    \end{Geometrie}
-   \par\vspace*{4mm}\dotfill
-   \par\vspace*{4mm}\dotfill
-   \par\vspace*{4mm}\dotfill
-   \par\vspace*{4mm}\dotfill
-   \par\vspace*{4mm}\dotfill
+
+   \dotfill
+   
+   \bigskip\dotfill
+   
+   \bigskip\dotfill
+   
+   \bigskip\dotfill
 \end{exercice*}
 \begin{corrige}
    Josette a lu \ang{123} pour l'angle coloré.\\
-   Expliquer pourquoi c'est faux et donner la bonne mesure.\\
+   Expliquer son erreur et donner la bonne mesure.
+
    \begin{Geometrie}[CoinBG={(0,-3.5u)},CoinHD={(7.5u,4u)}]
       trace feuillet;
       input \persopath/commandes/rapporteurs.mp
       pair A[],B;
       A0=u*(3.75,0.5);
       B=u*(7.75,0.5);
-      Total:=true;% pour graduer de 10en 10
-      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
-      draw rapporteuraleph(A0,B,1);        
       A1=A0 shifted (u,0); 
       A2=rotation(A0 shifted (u,0),A0,117);
       draw demidroite(A0,A1) withpen pencircle scaled 1.5bp;
       draw demidroite(A0,A2) withpen pencircle scaled 1.5bp;
       draw marqueangle(A1,A0,A2,0);
       fill coloreangle(A1,A0,A2) withcolor Grey;
+      Total:=true;% pour graduer de 10en 10
+      CentreCroix:=true;%Pour avoir une croix au centre du rapporteur
+      draw rapporteuraleph(A0,B,1);        
       pair fleche,graduation;
       fleche=0.4[A0,B]+(0,0.5u);
       draw cercle(fleche,u) withcolor red;
