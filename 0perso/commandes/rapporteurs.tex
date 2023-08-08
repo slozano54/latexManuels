@@ -74,12 +74,17 @@
          draw demidroite(A0,A1) withpen pencircle scaled 1.5bp withcolor couleur;
          label.bot(btex $O$ etex,A0);
          if graduationInterieure:
-            label.bot(btex $x$ etex,B shifted(u,0));
+            label.bot(btex $x$ etex,B);
          else:
-            label.bot(btex $x$ etex,symetrie(B,A0) shifted(-u,0));
+            label.bot(btex $x$ etex,symetrie(B,A0));
          fi;
          if correction:
             draw demidroite(A0,A2) withpen pencircle scaled 1.5bp withcolor couleur;
+            if graduationInterieure:
+               label.bot(btex $y$ etex,B) rotatedaround(A0,angleRapporteur);
+	         else:
+    		      label.bot(btex $y$ etex,symetrie(B,A0)) rotatedaround(A0,-angleRapporteur);
+        		fi;
          fi;
       else:
          draw demidroite(A0,A1) withpen pencircle scaled 1.5bp withcolor couleur;
