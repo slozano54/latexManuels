@@ -4,14 +4,16 @@
    couleur=Coral,
    angleRapporteur=90,
    angleEnonce=0,
-   xencart=0,
-   yencart=0,
-   xenonce=0,
-   yenonce=0,
-   interieur=true,
+   decalagexEncart=0,
+   decalageyEncart=0,
+   decalagexEnonce=0,
+   decalageyEnonce=0,
+   graduationInterieure=true,
    rapporteurAleph=false,
-   Total=false,% pour graduer de 10en 10
-   CentreCroix=true,%Pour avoir une croix au centre du rapporteur
+   graduationTotale=false,% pour graduer de 10en 10
+   centreCroix=true,%Pour avoir une croix au centre du rapporteur
+   correction=false,%Pour affciher le correction
+   construction=false,%Pour un éoncé de type tracer ...
 }%
 
 \NewDocumentCommand\Rapporteurs{o}{%
@@ -22,14 +24,16 @@
   \xdef\Rapporteurscouleur{\useKV[Rapporteurs]{couleur}}%
   \xdef\RapporteursangleRapporteur{\useKV[Rapporteurs]{angleRapporteur}}%
   \xdef\RapporteursangleEnonce{\useKV[Rapporteurs]{angleEnonce}}%
-  \xdef\Rapporteursxencart{\useKV[Rapporteurs]{xencart}}%
-  \xdef\Rapporteursyencart{\useKV[Rapporteurs]{yencart}}%
-  \xdef\Rapporteursxenonce{\useKV[Rapporteurs]{xenonce}}%
-  \xdef\Rapporteursyenonce{\useKV[Rapporteurs]{yenonce}}%
-  \xdef\Rapporteursinterieur{\useKV[Rapporteurs]{interieur}}%
+  \xdef\RapporteursdecalagexEncart{\useKV[Rapporteurs]{decalagexEncart}}%
+  \xdef\RapporteursdecalageyEncart{\useKV[Rapporteurs]{decalageyEncart}}%
+  \xdef\RapporteursdecalagexEnonce{\useKV[Rapporteurs]{decalagexEnonce}}%
+  \xdef\RapporteursdecalageyEnonce{\useKV[Rapporteurs]{decalageyEnonce}}%
+  \xdef\RapporteursgraduationInterieure{\useKV[Rapporteurs]{graduationInterieure}}%
   \xdef\RapporteursrapporteurAleph{\useKV[Rapporteurs]{rapporteurAleph}}%
-  \xdef\RapporteursTotal{\useKV[Rapporteurs]{Total}}%
-  \xdef\RapporteursCentreCroix{\useKV[Rapporteurs]{CentreCroix}}%   
+  \xdef\RapporteursgraduationTotale{\useKV[Rapporteurs]{graduationTotale}}%
+  \xdef\RapporteurscentreCroix{\useKV[Rapporteurs]{centreCroix}}%
+  \xdef\Rapporteurscorrection{\useKV[Rapporteurs]{correction}}%
+  \xdef\Rapporteursconstruction{\useKV[Rapporteurs]{construction}}%
   \begin{Geometrie}[CoinBG=\RapporteursCoinBG,CoinHD=\RapporteursCoinHD]
     trace feuillet;
     input \persopath/commandes/rapporteurs.mp
@@ -37,25 +41,27 @@
     %%%% Paramètres
     color couleur;
     numeric angleEnonce,angleRapporteur;
-    numeric xencart,yencart,xenonce,yenonce;
-    boolean interieur,rapporteurAleph;
+    numeric decalagexEncart,decalageyEncart,decalagexEnonce,decalageyEnonce;
+    boolean graduationInterieure,rapporteurAleph,correction,construction;
     picture enonce,reponse;
     %%%%
     couleur=\Rapporteurscouleur;
     angleRapporteur:=\RapporteursangleRapporteur;
     angleEnonce:=\RapporteursangleEnonce;
-    xencart:=\Rapporteursxencart;
-    yencart:=\Rapporteursyencart;
-    xenonce:=\Rapporteursxenonce;
-    yenonce:=\Rapporteursyenonce;
-    interieur=\Rapporteursinterieur;
+    decalagexEncart:=\RapporteursdecalagexEncart;
+    decalageyEncart:=\RapporteursdecalageyEncart;
+    decalagexEnonce:=\RapporteursdecalagexEnonce;
+    decalageyEnonce:=\RapporteursdecalageyEnonce;
+    graduationInterieure=\RapporteursgraduationInterieure;
     rapporteurAleph=\RapporteursrapporteurAleph;
-    Total:=\RapporteursTotal;% pour graduer de 10en 10
-    CentreCroix:=\RapporteursCentreCroix;%Pour avoir une croix au centre du rapporteur
+    Total:=\RapporteursgraduationTotale;% pour graduer de 10en 10
+    CentreCroix:=\RapporteurscentreCroix;%Pour avoir une croix au centre du rapporteur
+    correction=\Rapporteurscorrection;
+    construction=\Rapporteursconstruction;
     %%%% Points utiles     
     A0=u*(3.75,0.5);
     B=u*(7.75,0.5);
-    if interieur:              
+    if graduationInterieure:              
        A1=A0 shifted (u,0);
        A2=rotation(A1,A0,angleRapporteur);
     else:
@@ -64,36 +70,71 @@
     fi;
     %%%% Rapporteur
     enonce=image(
-       draw demidroite(A0,A1) withpen pencircle scaled 1.5bp withcolor couleur;
-       draw demidroite(A0,A2) withpen pencircle scaled 1.5bp withcolor couleur;
-       if interieur:
-          draw marqueangle(A1,A0,A2,0);
-          fill coloreangle(A1,A0,A2) withcolor couleur;
-       else:
-          draw marqueangle(A2,A0,A1,0);
-          fill coloreangle(A2,A0,A1) withcolor couleur;
-       fi;
-       if rapporteurAleph:
-          draw rapporteuraleph(A0,B,1);
-       else:
-          draw myrapporteurdouble(A0,B,1);
-       fi;
+      if construction:
+         draw demidroite(A0,A1) withpen pencircle scaled 1.5bp withcolor couleur;
+         label.bot(btex $O$ etex,A0);
+         if graduationInterieure:
+            label.bot(btex $x$ etex,B shifted(u,0));
+         else:
+            label.bot(btex $x$ etex,symetrie(B,A0) shifted(-u,0));
+         fi;
+         if correction:
+            draw demidroite(A0,A2) withpen pencircle scaled 1.5bp withcolor couleur;
+         fi;
+      else:
+         draw demidroite(A0,A1) withpen pencircle scaled 1.5bp withcolor couleur;
+         draw demidroite(A0,A2) withpen pencircle scaled 1.5bp withcolor couleur;
+      fi;
+      if construction=false:
+         if graduationInterieure:
+            draw marqueangle(A1,A0,A2,0);
+            fill coloreangle(A1,A0,A2) withcolor couleur;
+         else:
+            draw marqueangle(A2,A0,A1,0);
+            fill coloreangle(A2,A0,A1) withcolor couleur;
+         fi;
+      else:
+         if correction:
+            if graduationInterieure:
+               draw marqueangle(A1,A0,A2,0);
+               fill coloreangle(A1,A0,A2) withcolor couleur;
+            else:
+               draw marqueangle(A2,A0,A1,0);
+               fill coloreangle(A2,A0,A1) withcolor couleur;
+            fi;
+         fi;
+      fi;
+      if rapporteurAleph:
+         draw rapporteuraleph(A0,B,1);
+      else:
+         draw myrapporteurdouble(A0,B,1);
+      fi;
     );
     %%%% Encart réponse
     reponse=image(
-       C0=u*(7,2);
-       C1=C0 + (2u,0); 
-       C2=C1 + (0,1.5u);
-       C3=C2 + (-2u,0);
-       C4=iso(C2,C3)-(0,0.5u);
-       C5=C4-(0,0.75u);
-       draw C0--C1--C2--C3--cycle;
-       label(btex Mesure etex,C4);
-       label(btex \makebox[0.2\linewidth]{\dotfill} etex,C5);      
+      C0=u*(7,2);
+      C1=C0 + (2u,0); 
+      C2=C1 + (0,1.5u);
+      C3=C2 + (-2u,0);
+      C4=iso(C2,C3)-(0,0.5u);       
+      draw C0--C1--C2--C3--cycle;
+      label(btex Mesure etex,C4);
+      if construction:
+         C5=C4-(0,0.5u);
+         label(btex \ang{\RapporteursangleRapporteur} etex,C5);      
+      else:
+         if correction:
+            C5=C4-(0,0.5u);
+            label(btex {\red \ang{\RapporteursangleRapporteur}} etex,C5);      
+         else:
+            C5=C4-(0,0.75u);
+            label(btex \makebox[0.2\linewidth]{\dotfill} etex,C5);
+         fi;
+      fi;
     );
     %%%% Tracés
-    draw enonce rotatedaround(A0,-angleEnonce) shifted (xenonce*u,yenonce*u);
-    draw reponse shifted(xencart*u,yencart*u);     
+    draw enonce rotatedaround(A0,-angleEnonce) shifted (decalagexEnonce*u,decalageyEnonce*u);
+    draw reponse shifted(decalagexEncart*u,decalageyEncart*u);     
  \end{Geometrie}
 }
 
