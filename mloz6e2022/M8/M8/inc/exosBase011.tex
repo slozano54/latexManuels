@@ -1,0 +1,105 @@
+% \newsavebox{\dangerbox}
+% \newlength{\marge}\setlength{\marge}{5.5mm}
+% \newlength{\margehaut}\setlength{\margehaut}{2mm}
+% \newlength{\margegauche}
+% \newlength{\extraline}\setlength{\extraline}{3mm}
+ 
+% \newenvironment{Infor}[1][\linewidth-3\marge-\widthof{\Huge\Info}]{%
+%   \small
+%   \setlength{\margegauche}{#1}%
+%   %\par
+%   \begin{lrbox}{\dangerbox}
+%     \begin{minipage}{\linewidth-2\marge-2\pslinewidth-\extraline}
+%       \par\vspace*{\margehaut}
+% }
+% {%
+%     \end{minipage}%
+%   \end{lrbox}
+%   \rput[tl](0,0){%
+%     \psframebox[framesep=\marge]{%
+%       \usebox{\dangerbox}%
+%     }%
+%     \setlength{\dimen0}{-\dp\dangerbox-\marge-0.5\pslinewidth}%
+%     \rput(-0.5\pslinewidth,\dimen0){\psline(\extraline,0)(0,0)(0,-\extraline)}
+%   }%
+%   \rput(\marge,0){%
+%     \rput(\margegauche,0){%
+%       \psline[linewidth=2\pslinewidth,linecolor=white](0,0)(2.4em,0)
+%     }
+%   }
+%   \rput(1.65\marge,0){\rput(\margegauche,0){\Huge\Info}}
+%   \par
+%   \setlength{\marge}{\ht\dangerbox+\dp\dangerbox+2\marge+\extraline}
+%   \vspace{\marge}
+% }
+ 
+% Trace le \og W \fg\ de Cassiopée avec la figure et les données
+% ci-dessous.
+% \par
+% \compo{1}{6anglesexo36}{1}{%
+%   \fbox{
+%     \begin{minipage}{200pt}
+%       \textbf{Données} :\par
+%       $ER=1,6$~cm;\par
+%       $RG=1,2$~cm;\par
+%       $GS=1,5$~cm;\par
+%       $SC=1,8$~cm;\par
+%       $\widehat{ERG}=121$\degres\par
+%       $\widehat{RGS}=116$\degres\par
+%       $\widehat{GSC}=80$\degres
+%     \end{minipage}
+% }}
+% \par
+% \vspace*{5mm}
+% \begin{Infor}
+%   Cassiopée est une des 88 constellations du ciel, visible dans
+%   l'hémisphère nord. \`A l'opposé de la Grande Ourse par rapport à la
+%   Petite Ourse, Cassiopée est très facilement reconnaissable grâce à
+%   sa forme de \og W\fg.
+% \par La constellation représente la reine Cassiopée dans la mythologie
+% grecque, femme de Céphée et mère d'Andromède, à côté desquels elle se
+% trouve.\\Cette constellation fait partie du groupe de constellations
+% rattachées au mythe d'Andromède.
+% \par\hfill{\small Source :
+%   \url{http://fr.wikipedia.org/wiki/Cassiopée_(constellation)}}
+% \end{Infor}
+
+%%%% METAPOST
+% verbatimtex
+% %&latex
+% \documentclass[12pt]{article}
+% \begin{document}
+% etex
+
+% input geometriesyr16
+% figure(-4u,0,10u,10u);
+% pair C,S,G,R,E;
+% marque_p:="creux";
+% C=u*(3,1);
+% S=rotation(pointarc(cercles(C,1.8u),0),C,115);
+% G=1.5/1.8[S,rotation(C,S,80)];
+% R=1.2/1.5[G,rotation(S,G,-116)];
+% E=1.6/1.2[R,rotation(G,R,121)];
+% trace chemin(C,S,G,R,E);
+% pointe(C,S,G,R,E);
+% marque_r:=7.5;
+% marque_p:="plein";
+% pointe(symetrie(cercles(C,0.9u) intersectionpoint cercles(S,2.2u),S,C));
+% pointe(symetrie(cercles(C,2.4u) intersectionpoint cercles(S,1u),S,C));
+% pointe(symetrie(cercles(C,4.5u) intersectionpoint cercles(S,3.1u),S,C));
+% pointe(cercles(S,1.6u) intersectionpoint cercles(G,2.2u));
+% pointe(symetrie(cercles(S,2.2u) intersectionpoint cercles(G,1.2u),S,C));
+% pointe(symetrie(cercles(R,2.7u) intersectionpoint cercles(G,2.7u),R,G));
+% pointe(symetrie(cercles(R,2.7u) intersectionpoint cercles(G,3u),R,G));
+% pointe(symetrie(cercles(R,3.4u) intersectionpoint cercles(G,3.4u),R,G));
+% pointe(symetrie(cercles(R,4.4u) intersectionpoint cercles(G,4.4u),R,G));
+% pointe(symetrie(cercles(R,4.4u) intersectionpoint cercles(G,4.6u),R,G));
+% pointe(symetrie(cercles(G,4.8u) intersectionpoint cercles(E,4.2u),E,G));
+% pointe(cercles(G,3.6u) intersectionpoint cercles(E,1.2u));
+% label.rt(btex Caph etex,C);
+% label.ulft(btex Schedar etex,S);
+% label.rt(btex Gam etex,G);
+% label.lft(btex Ruchbah etex,R);
+% label.rt(btex Eps etex,E);
+% fin;
+% end
