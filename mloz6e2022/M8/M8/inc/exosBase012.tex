@@ -1,24 +1,35 @@
 
 \begin{exercice*}
-    Reproduire la figure ci-contre en vraie grandeur.
-    {\small
-    \psset{unit=0.8}
-    \begin{pspicture}(-1.5,2)(8,7)
-       \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-40,45,90,180,220}](7,0.5){A}(7.5,5){B}(4,7){C}(0.5,4){D}(2,1){E}
-       \pstGeonode[PointSymbol=none,PosAngle=-100](5,3){M}
-       \pstLineAB{M}{A}
-       \pstLineAB{M}{B}
-       \pstLineAB{M}{C}
-       \pstLineAB{M}{D}
-       \pstLineAB{M}{E}
-       \pstMarkAngle{M}{B}{A}{55\degre}
-       \pstMarkAngle{A}{M}{B}{78\degre}
-       \pstMarkAngle{B}{M}{C}{75\degre}
-       \pstMarkAngle{D}{M}{E}{40\degre}
-       \rput{40}(2,5.8){6 cm}
-       \rput{283}(4.8,5.1){4 cm}
-       \rput{-12}(2.9,3.8){6,5 cm}
-       \rput{35}(3.2,2.2){5 cm}
-       \rput{39}(6.2,4.35){4 cm}
-    \end{pspicture}}
+    Reproduire cette figure en vraie grandeur.
+
+    \begin{Geometrie}
+        labeloffset:=labeloffset*1.5;
+        pair A,B,C,D,E,M;
+        A=u*(7,0.5);
+        B=u*(7.5,5);
+        C=u*(4,7);
+        D=u*(0.5,4);
+        E=u*(2,1);
+        M=u*(5,3);
+        draw A--B--C--D--E--cycle;
+        draw M--A;
+        draw M--B;
+        draw M--C;
+        draw M--D;
+        draw M--E;
+        draw Codeangle(A,M,B,0,btex \ang{78} etex);
+        draw Codeangle(B,M,C,0,btex \ang{75} etex);
+        draw Codeangle(D,M,E,0,btex \ang{40} etex);
+        draw appelation(M,B,3mm,btex \Lg{4} etex);
+        draw appelation(C,M,3mm,btex \Lg{4} etex);
+        draw appelation(D,M,3mm,btex \Lg{6.5} etex);
+        draw appelation(D,C,3mm,btex \Lg{6} etex);
+        draw appelation(E,M,3mm,btex \Lg{5} etex);
+        label.lrt(btex A etex,A);
+        label.urt(btex B etex,B);
+        label.top(btex C etex,C);
+        label.lft(btex D etex,D);
+        label.llft(btex E etex,E);
+        label.bot(btex M etex,M);
+    \end{Geometrie}
 \end{exercice*}
