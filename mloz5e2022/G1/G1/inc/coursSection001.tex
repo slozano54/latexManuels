@@ -1,27 +1,197 @@
-\section{Mesure d'angles particuliers : rappels}
+\section{Vocabulaire}
 
-\begin{minipage}{10cm}
-   \begin{pspicture}(-5,0.25)(5,2.5)
-      \rput(0,-0.3){O}
-      \rput(3.8,0){angle nul : \udeg{0}}
-      \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0,0){1.5}{0}{90}
-      \rput(2.5,1.5){\parbox{2.1cm}{\textcolor{B2}{angle aigu : \\ \udeg{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \qquad < \udeg{90}}}}
-      \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,0){1.5}{90}{180}
-      \rput(-2.5,1.5){\parbox{2.5cm}{\textcolor{A1}{angle obtus : \\ \udeg{90} < \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0.4,0){0.3}{90}{180} \quad\; < \udeg{180}}}}
-      \rput(0,2.5){angle droit : \udeg{90}}
-      \rput(-3.8,0){angle plat : \udeg{180}}
-      \psline(-2.5,0)(2.5,0)
-      \psline(0,2)
-   \end{pspicture}   
-\end{minipage}
-\begin{minipage}{5.5cm}
-   Dans cette configuration, la somme des deux angles mesure \udeg{180}, on dit que ces angles sont supplémentaires. \\
-   \begin{pspicture}(7,1.5)
-      \psline(0.5,0)(5.5,0)
-      \psline(3,0)(1.8,1.2)
-      \psarc[linecolor=B1](3,0){0.7}{135}{180}
-      \rput(2,0.4){\textcolor{B1}{\udeg{45}}}
-      \psarc[linecolor=A1](3,0){0.5}{0}{135}
-      \rput(3.6,0.7){\textcolor{A1}{\udeg{135}}}
-   \end{pspicture}
-\end{minipage}
+\begin{definition}[Angles adjacents]
+   \begin{minipage}{0.3\linewidth}
+      \begin{center}
+         \begin{Geometrie}[CoinHD={(5u,3u)}]
+            pair A,B,C,D;
+            A=u*(2,0);
+            B=u*(1,1);
+            C=u*(2,3);
+            D=u*(4,0.5);
+            trace demidroite(A,B);
+            trace demidroite(A,C);
+            trace demidroite(A,D);
+            trace marqueangle(C,A,B,0);
+            trace marqueangle(D,A,C,0);
+            fill coloreangle(C,A,B) withcolor red;
+            fill coloreangle(D,A,C) withcolor blue;
+         \end{Geometrie}
+      \end{center}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.6\linewidth}
+      Deux angles sont \textbf{\underline{adjacents}} si :
+      \begin{itemize}
+         \item  ils ont le même sommet;
+         \item  ils ont un côté commun;
+         \item  ils sont de part et d'autre de ce côté commun.
+      \end{itemize}
+   \end{minipage}
+\end{definition}
+
+\begin{remarques}
+Dans chacun des cas suivants, les angles ne sont pas adjacents.
+   \begin{changemargin}{-10mm}{-10mm}
+      \begin{minipage}{0.25\linewidth}
+         \begin{center}
+            \begin{Geometrie}[CoinHD={(4.5u,3.5u)}]
+               pair A,B,C,D,E;
+               A=u*(2,0);
+               B=u*(1,1);
+               C=u*(2,3);
+               D=u*(4,0.5);
+               E=u*(2,1);
+               trace demidroite(E,B);
+               trace demidroite(A,C);
+               trace demidroite(A,D);
+               trace marqueangle(C,E,B,0);
+               trace marqueangle(D,A,C,0);
+               fill coloreangle(C,E,B) withcolor red;
+               fill coloreangle(D,A,C) withcolor blue;
+            \end{Geometrie}
+            \par
+            Les deux angles n'ont pas le même sommet. 
+         \end{center}
+      \end{minipage}
+      \hfill
+      \begin{minipage}{0.25\linewidth}
+         \begin{center}
+            \begin{Geometrie}[CoinHD={(4.5u,3.5u)}]
+               pair A,B,C,D,E;
+               A=u*(2,0);
+               B=u*(1,1);
+               C=u*(2,3);
+               D=u*(4,0.5);
+               E=u*(4,0);
+               trace demidroite(A,B);
+               trace demidroite(A,C);
+               trace demidroite(A,D);
+               trace demidroite(A,E);
+               trace marqueangle(C,A,B,0);
+               trace marqueangle(E,A,D,0);
+               fill coloreangle(C,A,B) withcolor red;
+               fill coloreangle(E,A,D) withcolor blue;
+            \end{Geometrie}
+            \par
+            Les deux angles n'ont pas de côté commun. 
+         \end{center}
+      \end{minipage}
+      \hfill
+      \begin{minipage}{0.4\linewidth}
+         \begin{center}
+            \begin{Geometrie}[CoinHD={(5u,4.3u)}]
+               pair A,B,C,D;
+               A=u*(2,0.5);
+               B=u*(1,1.5);
+               C=u*(2,2.5);
+               D=u*(4,1);
+               trace demidroite(A,B);
+               trace demidroite(A,C);
+               trace demidroite(A,D);
+               marque_p:="croix";
+               pointe(B,C,D);            
+               label.bot(btex A etex,A);
+               label.lft(btex B etex,B);
+               label.lft(btex C etex,C);
+               label.bot(btex D etex,D);
+            \end{Geometrie}
+            \par
+            Les deux angles $\widehat{DAC}$ et $\widehat{DAB}$ ne sont pas situés de part et d'autre du côté commun. 
+         \end{center}
+      \end{minipage}
+   \end{changemargin}
+\end{remarques}
+% \definNumTitre{Angles opposés par le sommet}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1]{anglesparallelisme.5} 
+% \end{center}
+% \end{minipage}
+% \begin{minipage}{11cm}
+% Deux angles sont \textbf{\underline{opposés par le sommet}} si ils sont de part et d'autre du point d'intersection de deux droites sécantes.
+% \end{minipage}
+% }
+
+% \definNumTitre{Angles alternes-internes}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1]{anglesparallelisme.10} 
+% \end{center}
+% \end{minipage}
+% \begin{minipage}{11cm}
+% Soient deux droites $(d)$ et $(d')$, coupées par une sécante $(\Delta)$.\\
+% Deux angles sont \colorbox{red!70}{\textbf{\underline{alternes-internes}}} si :
+% \begin{mylist}
+% \item  ils sont entre les droites $(d)$ et $(d')$;
+% \item  ils sont de part et d'autre de la sécante $(\Delta)$.
+% \end{mylist}
+% \end{minipage}
+% }
+% \definNumTitre{Angles correspondants}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1]{anglesparallelisme.11} 
+% \end{center}
+% \end{minipage}
+% \begin{minipage}{11cm}
+% Soient deux droites $(d)$ et $(d')$, coupées par une sécante $(\Delta)$.\\
+% Deux angles sont \colorbox{blue!70}{\textbf{\underline{correspondants}}} si :
+% \begin{mylist}
+% \item  ils sont du même côté de la sécante $(\Delta)$;
+% \item  l'un est à l'extérieur des droites $(d)$ et $(d')$;
+% \item  l'autre est entre les droites $(d)$ et $(d')$.
+% \end{mylist}
+% \end{minipage}
+% }
+
+% \definNumTitre{Angles complémentaires}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1]{anglesparallelisme.12} 
+% \end{center}
+% \end{minipage}
+% \begin{minipage}{11cm}
+% Deux angles dont la somme vaut 90\degre sont dits \textbf{\underline{complémentaires}}
+% \end{minipage}
+% }
+
+% \definNumTitre{Angles supplémentaires}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \includegraphics[scale=1]{anglesparallelisme.13} 
+% \end{center}
+% \end{minipage}
+% \begin{minipage}{11cm}
+% Deux angles dont la somme vaut 180\degre sont dits \textbf{\underline{supplémentaires}}
+% \end{minipage}
+% }
+
+%%%%%%%%%%%%%%%%%%%%
+% \section{Mesure d'angles particuliers : rappels}
+
+% \begin{minipage}{10cm}
+%    \begin{pspicture}(-5,0.25)(5,2.5)
+%       \rput(0,-0.3){O}
+%       \rput(3.8,0){angle nul : \udeg{0}}
+%       \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0,0){1.5}{0}{90}
+%       \rput(2.5,1.5){\parbox{2.1cm}{\textcolor{B2}{angle aigu : \\ \udeg{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \qquad < \udeg{90}}}}
+%       \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,0){1.5}{90}{180}
+%       \rput(-2.5,1.5){\parbox{2.5cm}{\textcolor{A1}{angle obtus : \\ \udeg{90} < \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0.4,0){0.3}{90}{180} \quad\; < \udeg{180}}}}
+%       \rput(0,2.5){angle droit : \udeg{90}}
+%       \rput(-3.8,0){angle plat : \udeg{180}}
+%       \psline(-2.5,0)(2.5,0)
+%       \psline(0,2)
+%    \end{pspicture}   
+% \end{minipage}
+% \begin{minipage}{5.5cm}
+%    Dans cette configuration, la somme des deux angles mesure \udeg{180}, on dit que ces angles sont supplémentaires. \\
+%    \begin{pspicture}(7,1.5)
+%       \psline(0.5,0)(5.5,0)
+%       \psline(3,0)(1.8,1.2)
+%       \psarc[linecolor=B1](3,0){0.7}{135}{180}
+%       \rput(2,0.4){\textcolor{B1}{\udeg{45}}}
+%       \psarc[linecolor=A1](3,0){0.5}{0}{135}
+%       \rput(3.6,0.7){\textcolor{A1}{\udeg{135}}}
+%    \end{pspicture}
+% \end{minipage}
