@@ -1,8 +1,22 @@
-% {\em La figure donnée ci-dessous n'est pas en vraie grandeur}.
-%   \par\compo{2}{spidron}{1}{La figure ci-contre représente un {\em
-%       spidron} : elle est constitué de triangles équilatéraux et de
-%     triangles ayant deux angles égaux à 30\degres.
-%     \\Reproduis la {\em en vraie grandeur}.
-% }
+\begin{exercice*}
+    Cette figure représente un {\bfseries spidron} : elle est constitué de triangles équilatéraux et de triangles ayant deux angles égaux à \ang{30}.
+    
+    Reproduire cette figure {\bfseries en vraie grandeur}.
 
-% https://melusine.eu.org/syracuse/B/BaseCollege/Sixieme/angles/pb/exo30.tex
+    \begin{Geometrie}[TypeTrace="MainLevee",CoinBG={(-u,-15u)},CoinHD={(15u,15u)}]
+        u:=u*0.8;
+        input \persopath/commandes/spidron.mp
+        trace spidron(12,10);
+        trace appelation(M2,M1,2mm,btex \Lg[cm]{12} etex);
+        trace Codeangle(M1,M2,M3,0,btex \ang{30} etex);
+        trace Codeangle(M3,M1,M2,0,btex \ang{30} etex);
+        marque_s:=marque_s/3;
+        trace Codelongueur(M2,M3,M3,M4,M4,M2,2);
+        trace Codeangle(M3,M4,M5,0,btex \ang{30} etex);
+        trace Codeangle(M5,M3,M4,0,btex \ang{30} etex);
+        trace Codelongueur(M4,M5,M5,M6,M6,M4,4);
+        trace Codeangle(M7,M5,M6,0,btex \ang{30} etex);
+        trace Codeangle(M5,M6,M7,0,btex \ang{30} etex);
+        trace Codelongueur(M7,M8,M8,M6,M6,M7,3);
+    \end{Geometrie}
+\end{exercice*}

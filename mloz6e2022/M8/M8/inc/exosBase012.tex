@@ -3,7 +3,7 @@
     Reproduire cette figure en vraie grandeur.
 
     \begin{Geometrie}
-        labeloffset:=labeloffset*1.5;
+        u:=u*0.9;        
         pair A,B,C,D,E,M;
         A=u*(7,0.5);
         B=u*(7.5,5);
@@ -18,6 +18,7 @@
         draw M--D;
         draw M--E;
         draw Codeangle(A,M,B,0,btex \ang{78} etex);
+        marque_a:=marque_a*1.5;
         draw Codeangle(B,M,C,0,btex \ang{75} etex);
         draw Codeangle(D,M,E,0,btex \ang{40} etex);
         draw appelation(M,B,3mm,btex \Lg{4} etex);
@@ -30,6 +31,7 @@
         label.top(btex C etex,C);
         label.lft(btex D etex,D);
         label.llft(btex E etex,E);
+        labeloffset:=labeloffset*2.5;
         label.bot(btex M etex,M);
     \end{Geometrie}
 \end{exercice*}
