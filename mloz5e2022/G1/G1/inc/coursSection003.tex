@@ -1,60 +1,106 @@
 \section{Caractérisation angulaire du parallélisme}
-% $\ggg$ On les introduit à l'aide de la notion de réciproque, elles seront admises.
+\begin{remarque}
+    $\ggg$ On les introduit à l'aide de la notion de réciproque, elles seront admises.
+\end{remarque}
 
-% \begin{minipage}{3.5cm}
-% \begin{center}
-% \includegraphics[scale=0.8]{anglesparallelisme.14} 
-% \end{center}
-% \end{minipage}
-% \hfill
-% \begin{minipage}{14.5cm}
-% \proprNum{Par les angles alternes-internes}{deux angles en position d'angles alternes-internes sont égaux}{ les droites qui les déterminent sont parallèles}
-% \end{minipage}
+\begin{propriete}[Parallélisme et angles alternes-internes]
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}           
+            \begin{Geometrie}[CoinBG={(0,0.5u)},CoinHD={(6u,6u)}]
+                pair I,I',O,J,J',A,B,C,D,E;
+                path d[];
+                z1=u*(0,1)=A;
+                z2=u*(6,2)=B;
+                z3=u*(0,5)=C;
+                z4=u*(6,6)=D;
+                z5=u*(1,7);
+                z6=u*(5,0)=E;
+                d1=z1--z2;d2=z3--z4;d3=z5--z6;
+                I=d1 intersectionpoint d3;
+                I'=d2 intersectionpoint d3;
+                z7=u*(1.2,1.2)=J;
+                z8=1/2[I,I']=O;
+                label.urt (btex $I'$ etex,I');
+                label.llft(btex $I $ etex,I );
+                label.llft(btex $J $ etex,J );
+                marque_p:="croix";
+                pointe(O);
+                label.rt(btex $O$ etex,O);
+                trace d1;trace d2;trace d3;
+                fill coloreangle(C,I',I) withcolor red;
+                fill coloreangle(B,I,I') withcolor red;
+                fill coloreangle(E,I',D) withcolor blue;
+                fill coloreangle(I',I,J) withcolor blue;
+           \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\linewidth}
+        Si deux droites et une sécante forment des angles alternes-internes égaux alors les droites qui les déterminent sont parallèles.
+    \end{minipage}
+\end{propriete}
 
-% \CadreLampe{Preuve}{À préciser}
+\begin{preuve}
+    À discuter oralement.
+\end{preuve}
 
-% \begin{minipage}{4cm}
-% \begin{center}
-% \includegraphics[scale=0.8]{anglesparallelisme.15} 
-% \end{center}
-% \end{minipage}
-% \hfill
-% \begin{minipage}{14cm}
-% \proprNum{Par les angles correspondants}{deux angles en position d'angles correspondants sont égaux}{ les droites qui les déterminent sont parallèles}
-% \end{minipage}
+\begin{propriete}[Parallélisme et angles alternes-internes]
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(0,0.5u)},CoinHD={(6u,6u)}]
+                pair I,I',O,J,J',A,B,C,D,E;
+                path d[];
+                z1=u*(0,1)=A;
+                z2=u*(6,2)=B;
+                z3=u*(0,5)=C;
+                z4=u*(6,6)=D;
+                z5=u*(1,7);
+                z6=u*(5,0)=E;
+                d1=z1--z2;d2=z3--z4;d3=z5--z6;
+                I=d1 intersectionpoint d3;
+                I'=d2 intersectionpoint d3;
+                z7=u*(1.2,1.2)=J;
+                z8=1/2[I,I']=O;
+                label.urt (btex $I'$ etex,I');
+                label.llft(btex $I $ etex,I );
+                label.llft(btex $J $ etex,J );
+                marque_p:="croix";
+                pointe(O);
+                label.rt(btex $O$ etex,O);
+                trace d1;trace d2;trace d3;
+                fill coloreangle(E,I',D) withcolor blue;
+                fill coloreangle(E,I,B) withcolor blue;
+           \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\linewidth}
+        Si deux droites et une sécante forment des angles correspondants égaux alors les droites qui les déterminent sont parallèles.        
+    \end{minipage}
+\end{propriete}
 
-% \CadreLampe{Preuve}{\`{A} préciser à l'aide de la propriété précédente.}
+\begin{preuve}
+    À discuter oralement à l'aide de la propriété précédente.
+\end{preuve}
 
-
-%%%%%%%%%%%%%%
-% \section{Et si les droites sont parallèles ?}
-
-% \begin{propriete}
-%    \begin{itemize}
-%       \item Si les deux droites $(d_1)$ et $(d_2)$ sont parallèles, alors les angles alternes-internes et les angles correspondants sont égaux deux à deux.
-%       \item Si deux angles alternes-internes ou deux angles correspondants sont égaux, alors les droites $(d_1)$ et $(d_2)$ sont parallèles.
-%    \end{itemize}
-%    \ \\ [-14mm]
-% \end{propriete}
-
-% \begin{exemple}
-%    {\psset{unit=0.9}
-%    \begin{pspicture}(0,0.3)(6,3.2)
-%       \psline(1,1)(6,1)
-%       \psline(1,2.5)(6,2.5)
-%       \psline(2,0)(4,3)
-%       \rput(2.4,2.1){$\alpha =\udeg{56}$}
-%       \rput(3.5,1.5){$\beta$}
-%       \rput(1.8,0.5){$\gamma$}
-%       \psarc[linecolor=B2,doubleline=true](3.67,2.5){0.6}{182}{234}
-%       \psarc[linecolor=A1,doubleline=true](2.67,1){0.6}{2}{55}
-%       \psarc[linecolor=J1,doubleline=true](2.67,1){0.6}{182}{233}
-%       \rput(5.5,1.75){\parbox{1.5cm}{\small droites\\parallèles}}
-%    \end{pspicture}}
-%    \correction
-%    Mesures de $\beta$ et $\gamma$, sachant que les droites sont parallèles :
-%    \begin{itemize}
-%       \item $\alpha$ et $\beta$ sont des angles alternes-internes, ils ont donc même mesure. D'où : $\beta =\alpha =\udeg{56}$.
-%       \item $\alpha$ et $\gamma$ sont des angles correspondants, ils ont donc même mesure. D'où : $\gamma =\alpha =\udeg{56}$.
-%    \end{itemize}
-% \end{exemple}
+\begin{exemple}
+   {\psset{unit=0.9}
+   \begin{pspicture}(0,0.3)(6,3.2)
+      \psline(1,1)(6,1)
+      \psline(1,2.5)(6,2.5)
+      \psline(2,0)(4,3)
+      \rput(2.4,2.1){$\alpha =\udeg{56}$}
+      \rput(3.5,1.5){$\beta$}
+      \rput(1.8,0.5){$\gamma$}
+      \psarc[linecolor=B2,doubleline=true](3.67,2.5){0.6}{182}{234}
+      \psarc[linecolor=A1,doubleline=true](2.67,1){0.6}{2}{55}
+      \psarc[linecolor=J1,doubleline=true](2.67,1){0.6}{182}{233}
+      \rput(5.5,1.75){\parbox{1.5cm}{\small droites\\parallèles}}
+   \end{pspicture}}
+   \correction
+   Mesures de $\beta$ et $\gamma$, sachant que les droites sont parallèles :
+   \begin{itemize}
+      \item $\alpha$ et $\beta$ sont des angles alternes-internes, ils ont donc même mesure. D'où : $\beta =\alpha =\udeg{56}$.
+      \item $\alpha$ et $\gamma$ sont des angles correspondants, ils ont donc même mesure. D'où : $\gamma =\alpha =\udeg{56}$.
+   \end{itemize}
+\end{exemple}

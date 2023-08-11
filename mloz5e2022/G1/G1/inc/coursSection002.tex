@@ -1,93 +1,102 @@
 \section{Configurations particulières}
 
-% \proprNum{Angles opposés par le sommet}{deux angles sont opposés par le sommet}{ils ont la même mesure.}
+\begin{propriete}[Angles opposés par le sommet]
+    Si deux angles sont opposés par le sommet alors ils ont la même mesure.
+\end{propriete}
 
-% \CadreLampe{Preuve}{
-% \begin{minipage}{5cm}
-% \begin{center}
-% \includegraphics[scale=1]{anglesparallelisme.6} 
-% \end{center}
-% \end{minipage}
-% \begin{minipage}{11cm}
-% Ils sont symétriques par rapport au point d'intersection des droites sécantes qui les forment.
-% \end{minipage}
-% }
+\begin{preuve}
 
-% \proprNum{Angles alternes-internes}{deux droites \textbf{parallèles} sont coupées par une troisième}{deux angles en position d'angles alternes-internes sont égaux.}
+    \vspace*{5mm}
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinHD={(4u,3u)}]
+                    pair A,A',B,B',O;
+                    A=u*(0.5,0.5);
+                    B=u*(1,2.5);
+                    A'=u*(3.5,2.5);
+                    B'=u*(3,0.5);
+                    O=u*(2,1.5);
+                    trace droite(A,A');
+                    trace droite(B,B');
+                    marque_s:=marque_s/3;
+                    trace codesegments(A,O,O,A',2);
+                    trace codesegments(B,O,O,B',3);                
+                    trace marquesegment(A,A');
+                    trace marquesegment(B,B');
+                    trace marqueangle(B,O,A,0);
+                    trace marqueangle(B',O,A',0);
+                    fill coloreangle(B,O,A) withcolor red;
+                    fill coloreangle(B',O,A') withcolor red;
+                    marque_p:="non";
+                    label.bot(btex $O$  etex,O);
+                    label.bot(btex $B$  etex,B);
+                    label.top(btex $B'$ etex,B');
+                    label.top(btex $A$  etex,A);
+                    label.bot(btex $A'$ etex,A');
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.6\linewidth}
+        Ils sont symétriques par rapport au point d'intersection des droites sécantes qui les forment.        
+    \end{minipage}
+\end{preuve}
 
-% \CadreLampe{Preuve}{
-% \begin{minipage}{11cm}
-% On définit :
-% \begin{mylist}
-% \item  $(d_{1})$ et $(d_{2})$ les droites parallèles, $(d_{3})$ la sécante.
-% \item  $I=(d_{1})\cap(d_{3})$
-% \item  $I'=(d_{2})\cap(d_{3})$
-% \item  $O$ le milieu de $[II']$
-% \item  $J\in (d_{1})$ et $J'=(d_{2}\cap (JO)$ c'est le symétrique de J par rapport à O!
-% \end{mylist}
-% On démontre alors que des angles en position d'angles alternes-internes sont symétriques par rapport au poit O.
-% \end{minipage}
-% \begin{minipage}{7cm}
-% \begin{center}
-% \includegraphics[scale=0.8]{anglesparallelisme.8} 
-% \end{center}
-% \end{minipage}
-% }
+\begin{propriete}[Angles alternes-internes]
+    Si deux droites \textbf{parallèles} sont coupées par une troisième alors deux angles en position d'angles alternes-internes sont égaux.
+\end{propriete}
 
-% \proprNum{Angles correspondants}{deux droites \textbf{parallèles} sont coupées par une troisième}{deux angles en position d'angles correspondants sont égaux.}
+\begin{preuve}
 
-% \CadreLampe{Preuve}{
-% On reprend l'idée précédente pour définir un centre de symétrie.
-% Puis on passe par la propriété des angles opposés par le sommet puis celle des angles alternes-internes.
-% }
+    \begin{minipage}{0.6\linewidth}
+        On définit :
+        \begin{itemize}
+            \item  $(d_{1})$ et $(d_{2})$ les droites parallèles, $(d_{3})$ la sécante.
+            \item  $I=(d_{1})\cap(d_{3})$
+            \item  $I'=(d_{2})\cap(d_{3})$
+            \item  $O$ le milieu de $[II']$
+            \item  $J\in (d_{1})$ et $J'=(d_{2}\cap (JO)$ c'est le symétrique de J par rapport à O!
+        \end{itemize}
+        On démontre alors que des angles en position d'angles alternes-internes sont symétriques par rapport au poit O.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(0,u)},CoinHD={(6u,6.5u)}]
+                    pair I,I',O,J,J',A,B,C,D,E;
+                    path d[];
+                    z1=u*(0,1)=A;
+                    z2=u*(6,2)=B;
+                    z3=u*(0,5)=C;
+                    z4=u*(6,6)=D;
+                    z5=u*(1,7);
+                    z6=u*(5,0)=E;
+                    d1=z1--z2;d2=z3--z4;d3=z5--z6;
+                    I=d1 intersectionpoint d3;
+                    I'=d2 intersectionpoint d3;
+                    z7=u*(1.2,1.2)=J;
+                    z8=1/2[I,I']=O;
+                    label.urt (btex $I'$ etex,I');
+                    label.llft(btex $I $ etex,I );
+                    label.llft(btex $J $ etex,J );
+                    marque_p:="croix";
+                    label.rt(btex $O$ etex,O);
+                    trace d1;trace d2;trace d3;trace demidroite(J,O);
+                    fill coloreangle(C,I',I) withcolor red;
+                    fill coloreangle(B,I,I') withcolor red;
+                    fill coloreangle(E,I',D) withcolor blue;
+                    fill coloreangle(E,I,B) withcolor blue;
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
 
+\end{preuve}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Angles alternes-internes et correspondants}
+\begin{propriete}[Angles correspondants]
+    Si deux droites \textbf{parallèles} sont coupées par une troisième alors deux angles en position d'angles correspondants sont égaux.
+\end{propriete}
 
-% \parbox{8cm}{Lorsque deux droites sont coupées par une droite sécante $(\Delta)$, on obtient huit angles. \\
-% {\it Dans la suite du cours, on se place dans cette configuration.}}
-% \hfill
-% \parbox{6.5cm}{\psset{unit=0.7}
-%    \begin{pspicture}(-0.5,-0.25)(6,3.5)
-%       \psline(0,1.5)(6,0.5)
-%       \psline(1,3)(6,3)
-%       \psline(1,0)(5,4)
-%       \psarc[linecolor=B2,doubleline=true](4,3){0.7}{0}{45}
-%       \rput(5,3.4){\textcolor{B2}{\small $A_2$}}
-%       \psarc[linecolor=J1,doubleline=true](4,3){0.7}{180}{225}
-%       \rput(3,2.5){\textcolor{J1}{\small $A_4$}}
-%       \psarc[linecolor=A1](4,3){0.5}{45}{180}
-%       \rput(3.7,3.8){\textcolor{A1}{\small $A_1$}}
-%       \psarc[linecolor=G1](4,3){0.5}{225}{0}
-%       \rput(4.35,2.25){\textcolor{G1}{\small $A_3$}}
-%       \psarc[linecolor=B2,doubleline=true](2.15,1.15){0.7}{-10}{45}
-%       \rput(3.2,1.4){\textcolor{B2}{\small $B_2$}}
-%       \psarc[linecolor=J1,doubleline=true](2.15,1.15){0.7}{170}{225}
-%       \rput(1.1,0.7){\textcolor{J1}{\small $B_4$}}
-%       \psarc[linecolor=A1](2.15,1.15){0.5}{45}{170}
-%       \rput(1.8,1.9){\textcolor{A1}{\small $B_1$}}
-%       \psarc[linecolor=G1](2.15,1.15){0.5}{225}{-10}
-%       \rput(2.4,0.3){\textcolor{G1}{\small $B_3$}}
-%       \rput(0.7,-0.3){$(\Delta)$}
-%       \rput(-0.5,1.5){$(d_1)$}
-%       \rput(0.5,3){$(d_2)$}
-%    \end{pspicture}}
-
-% \begin{definition}
-%    Deux angles sont {\bf alternes-internes} s'ils n'ont pas le même sommet, qu'ils sont situés de part et d'autre de la sécante $(\Delta)$ et qu'ils se situent \og entre \fg{} les droites $(d_1)$ et $(d_2)$.
-% \end{definition}
-
-% \begin{exemple*1}
-% Sur la figure, il y a deux couples d'angles alternes-internes : $A_4$ et $B_2$ ; $A_3$ et $B_1$.
-% \end{exemple*1}
-
-% \bigskip
-
-% \begin{definition}
-%    Deux angles sont {\bf correspondants} s'ils n'ont pas le même sommet, qu'ils sont situés du même côté de la sécante $(\Delta)$, l'un entre les deux droites $(d_1)$ et $(d_2)$ et l'autre à l'extérieur.
-% \end{definition}
-
-% \begin{exemple*1}
-% Sur la figure, il existe quatre couples d'angles correspondants :  $A_1$ et $B_1$ ; $A_2$ et $B_2$ ; $A_3$ et $B_3$ ; $A_4$ et $B_4$.
-% \end{exemple*1}
+\begin{preuve}
+    On reprend l'idée précédente pour définir un centre de symétrie.
+    Puis on passe par la propriété des angles opposés par le sommet puis celle des angles alternes-internes.
+\end{preuve}

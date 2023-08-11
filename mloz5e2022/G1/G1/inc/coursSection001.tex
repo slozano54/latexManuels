@@ -3,11 +3,11 @@
 
    \begin{myBox}{\emoji{light-bulb} Rappels}
      \vspace*{5mm} 
-      \begin{pspicture}(-5,0.25)(5,2.5)
+      \begin{pspicture}(-5,0.25)(5.5,2.5)
          \rput(0,-0.3){O}
          \rput(3.8,0){angle nul : \ang{0}}
          \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0,0){1.5}{0}{90}
-         \rput(2.5,1.5){\parbox{2.1cm}{\textcolor{B2}{angle aigu : \\ \ang{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \qquad < \ang{90}}}}
+         \rput(2.5,1.5){\parbox{2.5cm}{\textcolor{B2}{angle aigu : \\ \ang{0} < \pswedge[fillstyle=solid,fillcolor=B2,linecolor=B2](0.2,0){0.3}{0}{90} \qquad < \ang{90}}}}
          \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0,0){1.5}{90}{180}
          \rput(-2.5,1.5){\parbox{2.5cm}{\textcolor{A1}{angle obtus : \\ \ang{90} < \pswedge[fillstyle=solid,fillcolor=A1,linecolor=A1](0.4,0){0.3}{90}{180} \quad\; < \ang{180}}}}
          \rput(0,2.5){angle droit : \ang{90}}
@@ -155,7 +155,8 @@
    \begin{definition}[Angles alternes-internes]
       \begin{minipage}{0.3\linewidth}
          \begin{center}
-            \begin{Geometrie}[CoinHD={(4u,7u)}]
+            \scalebox{0.8}{
+            \begin{Geometrie}[CoinBG={(0,2u)},CoinHD={(4u,7u)}]
                pair A,B,C,D,E,F;
                path d[];
                a:=2.75cm ;
@@ -178,6 +179,7 @@
                fill coloreangle(B,A,C) withcolor red;
                fill coloreangle(A,B,D) withcolor red;
             \end{Geometrie}
+            }
          \end{center}
       \end{minipage}
       \hfill
@@ -187,14 +189,19 @@
          \begin{itemize}
             \item  ils sont entre les droites $(d)$ et $(d')$;
             \item  ils sont de part et d'autre de la sécante $(\Delta)$.
-         \end{itemize}
+         \end{itemize}         
       \end{minipage}
    \end{definition}
+
+   \begin{remarque}
+      \emoji{light-bulb} Deux droites et une sécante forment deux couples d'angles alternes-internes.
+   \end{remarque}
 
    \begin{definition}[Angles correspondants]
       \begin{minipage}{0.3\linewidth}
          \begin{center}
-            \begin{Geometrie}[CoinHD={(4u,7u)}]
+            \scalebox{0.8}{
+            \begin{Geometrie}[CoinBG={(0,2u)},CoinHD={(4u,7u)}]
                pair A,B,C,D,E,F;
                path d[];
                a:=2.75cm ;
@@ -217,6 +224,7 @@
                fill coloreangle(C,A,F) withcolor blue;
                fill coloreangle(E,B,F) withcolor blue;
             \end{Geometrie}
+            }
          \end{center}
       \end{minipage}
       \hfill
@@ -227,14 +235,19 @@
             \item  ils sont du même côté de la sécante $(\Delta)$;
             \item  l'un est à l'extérieur des droites $(d)$ et $(d')$;
             \item  l'autre est entre les droites $(d)$ et $(d')$.
-         \end{itemize}
+         \end{itemize}   
       \end{minipage}
    \end{definition}
+
+   \begin{remarque}
+      \emoji{light-bulb} Deux droites et une sécante forment quatre couples d'angles correspondants.
+   \end{remarque}
 
    \begin{definition}[Angles complémentaires]
       \begin{minipage}{0.3\linewidth}
          \begin{center}
-            \begin{Geometrie}[CoinHD={(6u,5u)}]
+            \scalebox{0.8}{
+            \begin{Geometrie}[CoinHD={(6u,4.5u)}]
                pair A,B,C,E,F;
                A=u*(0.5,1);
                B=u*(2,1);
@@ -254,6 +267,7 @@
                label.lft(btex $E$ etex, E);
                label.lft(btex $F$ etex, F);
             \end{Geometrie}
+            }
          \end{center}
       \end{minipage}
       \hfill
@@ -265,7 +279,8 @@
    \begin{definition}[Angles supplémentaires]
       \begin{minipage}{0.3\linewidth}
          \begin{center}
-            \begin{Geometrie}[CoinHD={(6u,5u)}]
+            \scalebox{0.8}{
+            \begin{Geometrie}[CoinHD={(6u,4.5u)}]               
                pair B,C,D,G;
                B=u*(0.5,1);
                C=u*(3,1);
@@ -282,6 +297,7 @@
                label.llft(btex $D$ etex,D);
                label.lft(btex $G$ etex,G);
             \end{Geometrie}
+            }
          \end{center}
       \end{minipage}
       \hfill
