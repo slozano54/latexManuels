@@ -1,24 +1,10 @@
-\begin{exercice} %7
+\begin{exercice*}
     Nora possède un champ en forme de quadrilatère $NORA$ dont les côtés $(NO)$ et $(RA)$ sont parallèles. Elle prend la mesure de deux angles et se demande si son quadrilatère peut être un parallélogramme.
     \begin{enumerate}
        \item Écrire sur le schéma ci-dessous la mesure de tous les angles existants.
        \item Les droites $(NA)$ et $(OR)$ sont-elles parallèles ?
        \item Quelle est alors la nature du quadrilatère $NORA$ ?
     \end{enumerate}
-   %  \psset{unit=0.7}
-   %  \begin{pspicture}(-1,0)(10,6)
-   %     \pstGeonode[PointSymbol=none,PointName=none](0,1){a}(10,1){b}(0,4){c}(10,4){d}(0.33,0){f}(4,5.5){g}(6.33,0){h}(9,5){j}
-   %     \pstLineAB{a}{b}
-   %     \pstLineAB{c}{d}
-   %     \pstLineAB{f}{g}
-   %     \pstLineAB{h}{j}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none]{a}{b}{f}{g}{A}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none]{a}{b}{h}{j}{R}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none]{c}{d}{f}{g}{N}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none]{c}{d}{h}{j}{O}
-   %     \pstMarkAngle{j}{O}{N}{\udeg{121}}
-   %     \pstMarkAngle{R}{A}{N}{\udeg{49}}
-   %  \end{pspicture}
    \begin{center}    
       \begin{tikzpicture}[scale=0.8]
          \coordinate (a) at (0,1);
@@ -45,48 +31,41 @@
          \tkzLabelPoints[below right](O,R);
          \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};                 
          \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};                 
-         % \pic [draw=black, -, angle eccentricity=1.6,angle radius=0.6cm] {angle = R--S--T};        
-         % \pic [draw=black, -, "\ang{57}",angle eccentricity=1.5,angle radius=0.7cm,below] {angle = R--S--T};        
-         % \pic [draw=black, -, "?",angle eccentricity=1.6] {angle = f--T--S};        
        \end{tikzpicture}
    \end{center}
- \end{exercice}
+\end{exercice*}
  
- \begin{corrige}
+\begin{corrige}
  \ \\ [-5mm]
     \begin{enumerate}
-       \item Schéma du terrain de Nora : \\
-   %     {\psset{unit=0.7}
-   %  \begin{pspicture}(0,-0.5)(10,6)
-   %     \pstGeonode[PointSymbol=none,PointName=none](0,1){a}(10,1){b}(0,4){c}(10,4){d}(0.33,0){f}(4.5,5.5){g}(6.33,0){h}(9,5){j}
-   %     \pstLineAB{a}{b}
-   %     \pstLineAB{c}{d}
-   %     \pstLineAB{f}{g}
-   %     \pstLineAB{h}{j}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{a}{b}{f}{g}{S}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{a}{b}{h}{j}{E}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{c}{d}{f}{g}{I}
-   %     \pstInterLL[PosAngle=-45,PointSymbol=none,PointName=none]{c}{d}{h}{j}{N}
-   %     \pstMarkAngle{j}{N}{I}{\udeg{121}}
-   %     \pstMarkAngle{E}{S}{I}{\udeg{49}}
-   %     \pstMarkAngle{I}{N}{E}{\blue\udeg{59}}
-   %     \pstMarkAngle{E}{N}{d}{\blue\udeg{121}}
-   %     \pstMarkAngle{d}{N}{j}{\blue\udeg{59}}
-   %     \pstMarkAngle{b}{E}{N}{\blue\udeg{59}}
-   %     \pstMarkAngle{h}{E}{b}{\blue\udeg{121}}
-   %     \pstMarkAngle{N}{E}{S}{\blue\udeg{121}}
-   %     \pstMarkAngle{S}{E}{h}{\blue\udeg{59}}
-   %     \pstMarkAngle{f}{S}{E}{\blue\udeg{131}}
-   %     \pstMarkAngle{I}{S}{a}{\blue\udeg{131}}
-   %     \pstMarkAngle{a}{S}{f}{\blue\udeg{49}}
-   %     \pstMarkAngle{f}{S}{E}{\blue\udeg{131}}
-   %     \pstMarkAngle{I}{S}{a}{\blue\udeg{131}}
-   %     \pstMarkAngle{g}{I}{e}{\blue\udeg{131}}
-   %     \pstMarkAngle{e}{I}{f}{\blue\udeg{49}}
-   %     \pstMarkAngle{d}{I}{g}{\blue\udeg{49}}
-   %     \pstMarkAngle{f}{I}{d}{\blue\udeg{131}}
-   %  \end{pspicture}}
-       \item Si les droites $(NA)$ ET $(OR)$ étaient parallèles, les angles correspondants en $N$ et $O$ par exemple seraient égaux, ce qui n'est pas le cas ici (\udeg{131}$\neq$\udeg{121}) donc, {\blue ces droites ne sont pas parallèles}.
-       \item Dans le quadrilatère $NORA$, les droites $(NO)$ et $(RA)$ sont parallèles, mais les droites $(NA)$ et $(OR)$ ne le sont pas donc, {\blue le quadrilatère $NORA$ est un trapèze}.   
-    \end{enumerate}
- \end{corrige}
+      \item Schéma du terrain de Nora : \par
+         \begin{tikzpicture}[scale=0.8]
+            \coordinate (a) at (0,1);
+            \coordinate (b) at (10,1);
+            \coordinate (c) at (0,4);
+            \coordinate (d) at (10,4);
+            \coordinate (f) at (0.33,0);
+            \coordinate (g) at (4,5.5);
+            \coordinate (h) at (6.33,0);
+            \coordinate (j) at (9,5);
+            \tkzDrawLine(a,b);       
+            \tkzDrawLine(c,d);
+            \tkzDrawLine(f,g);
+            \tkzDrawLine(h,j);
+            \tkzInterLL(a,b)(f,g);
+            \tkzGetPoint{A};            
+            \tkzInterLL(a,b)(h,j);
+            \tkzGetPoint{R};            
+            \tkzInterLL(c,d)(f,g);
+            \tkzGetPoint{N};            
+            \tkzInterLL(c,d)(h,j);
+            \tkzGetPoint{O};            
+            \tkzLabelPoints[above left](N,A);
+            \tkzLabelPoints[below right](O,R);
+            \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};                 
+            \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};                 
+         \end{tikzpicture}
+      \item Si les droites $(NA)$ ET $(OR)$ étaient parallèles, les angles correspondants en $N$ et $O$ par exemple seraient égaux, ce qui n'est pas le cas ici (\ang{131}$\neq$\ang{121}) donc, {\red ces droites ne sont pas parallèles}.
+      \item Dans le quadrilatère $NORA$, les droites $(NO)$ et $(RA)$ sont parallèles, mais les droites $(NA)$ et $(OR)$ ne le sont pas donc, {\red le quadrilatère $NORA$ est un trapèze}.   
+   \end{enumerate}
+\end{corrige}
