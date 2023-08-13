@@ -1,4 +1,67 @@
 \begin{exercice*}
+    Sur cette figure, dire si les angles proposés sont \textbf{opposés par le sommet}. Si ce n'est pas le cas, dire pourquoi.\par
+    \begin{Geometrie}[CoinHD={(6u,3u)}]
+        pair G,H,w,r;
+        G=u*(3,1.1);
+        H=u*(4.5,1.6);
+        w=2.5[H,G];
+        r=1.9[G,H];
+        trace droite(G,H);
+        label.top(btex $G$ etex,G);
+        label.top(btex $H$ etex,H);
+        label.bot(btex $w$ etex,w);
+        label.top(btex $r$ etex,r);
+        pair x,t;
+        t=rotation(r,H,-30);
+        x=symetrie(t,H);
+        label.top(btex $t$ etex,t);
+        label.top(btex $x$ etex,x);
+        trace segment(x,t);
+        pair s,y;
+        y=w+(-0.5u,0.5u);
+        s=H+(-0.25u,-1.5u);
+        label.top(btex $s$ etex,s);
+        label.top(btex $y$ etex,y);
+        trace demidroite(G,s);
+        trace demidroite(G,y);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item $\widehat{yGw}$ et $\widehat{HGs}$
+        \item $\widehat{rHx}$ et $\widehat{tHw}$
+        \item $\widehat{rHt}$ et $\widehat{xHG}$
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
+    Sur cette figure, dire si les angles proposés sont \textbf{opposés par le sommet}. Si ce n'est pas le cas, dire pourquoi. \par
+    \begin{Geometrie}[CoinHD={(6u,3u)}]
+        pair G,H,w,r;
+        G=u*(3,1.1);
+        H=u*(4.5,1.6);
+        w=2.5[H,G];
+        r=1.9[G,H];
+        trace droite(G,H);
+        label.top(btex $G$ etex,G);
+        label.top(btex $H$ etex,H);
+        label.bot(btex $w$ etex,w);
+        label.top(btex $r$ etex,r);
+        pair x,t;
+        t=rotation(r,H,-30);
+        x=symetrie(t,H);
+        label.top(btex $t$ etex,t);
+        label.top(btex $x$ etex,x);
+        trace segment(x,t);
+        pair s,y;
+        y=w+(-0.5u,0.5u);
+        s=H+(-0.25u,-1.5u);
+        label.top(btex $s$ etex,s);
+        label.top(btex $y$ etex,y);
+        trace demidroite(G,s);
+        trace demidroite(G,y);
+    \end{Geometrie}
+    \par
+    \begin{enumerate}
+        \item $\widehat{yGw}$ et $\widehat{HGs}$ \textcolor{red}{ne sont pas formés par deux droites sécantes donc ils ne sont pas opposés par le sommet}.
+        \item $\widehat{rHx}$ et $\widehat{tHw}$ \textcolor{red}{sont opposés par le sommet}.
+        \item $\widehat{rHt}$ et $\widehat{xHG}$ \textcolor{red}{sont opposés par le sommet}.
+    \end{enumerate}
 \end{corrige}
