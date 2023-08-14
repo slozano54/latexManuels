@@ -1,4 +1,70 @@
 \begin{exercice*}
+    En considérant cettte figure, compléter le tableau en nommant \textbf{l'angle opposé par le sommet} de chaque angle proposé.\par
+    \begin{center}        
+        \begin{Geometrie}[CoinHD={(7u,3u)}]
+            pair F,x,y,w,r,s,t;
+            F=u*(3.5,1.5);
+            path cf;
+            cf=cercles(F,u);
+            x=1.8[F,pointarc(cf,155)];
+            t=1.5[F,pointarc(cf,335)];
+            y=2.2[F,pointarc(cf,175)];
+            s=3.2[F,pointarc(cf,355)];
+            w=3[F,pointarc(cf,-170)];
+            r=1.6[F,pointarc(cf,10)];
+            trace segment(x,t);
+            trace segment(y,s);
+            trace segment(w,r);
+            label.top(btex $F$ etex,F);
+            label.top(btex $x$ etex,x);
+            label.top(btex $t$ etex,t);
+            label.top(btex $y$ etex,y);
+            label.top(btex $s$ etex,s);
+            label.top(btex $w$ etex,w);
+            label.top(btex $r$ etex,r);
+        \end{Geometrie}
+    \end{center}
+    \par
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|>{\columncolor{LightGray}\arraybackslash}p{0.3\linewidth}|*{4}{>{\centering\arraybackslash}p{0.13\linewidth}|}}
+        \hline
+        Angle&$\widehat{xFr}$&$\widehat{yFt}$&$\widehat{sFr}$&$\widehat{sFw}$\\\hline
+        Angle opposé&&&&\\\hline
+    \end{tabular}
+    }
 \end{exercice*}
 \begin{corrige}
+    En considérant cettte figure, compléter le tableau en nommant \textbf{l'angle opposé par le sommet} de chaque angle proposé.\par
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(7u,3u)}]
+            pair F,x,y,w,r,s,t;
+            F=u*(3.5,1.5);
+            path cf;
+            cf=cercles(F,u);
+            x=1.8[F,pointarc(cf,155)];
+            t=1.5[F,pointarc(cf,335)];
+            y=2.2[F,pointarc(cf,175)];
+            s=3.2[F,pointarc(cf,355)];
+            w=3[F,pointarc(cf,-170)];
+            r=1.6[F,pointarc(cf,10)];
+            trace segment(x,t);
+            trace segment(y,s);
+            trace segment(w,r);
+            label.top(btex $F$ etex,F);
+            label.top(btex $x$ etex,x);
+            label.top(btex $t$ etex,t);
+            label.top(btex $y$ etex,y);
+            label.top(btex $s$ etex,s);
+            label.top(btex $w$ etex,w);
+            label.top(btex $r$ etex,r);
+        \end{Geometrie}
+    \end{center}
+    \par
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|>{\columncolor{LightGray}\arraybackslash}p{0.3\linewidth}|*{4}{>{\centering\arraybackslash}p{0.13\linewidth}|}}
+        \hline
+        Angle&$\widehat{xFr}$&$\widehat{yFt}$&$\widehat{sFr}$&$\widehat{sFw}$\\\hline
+        Angle opposé&\textcolor{red}{$\widehat{tFw}$}&\textcolor{red}{$\widehat{xFs}$}&\textcolor{red}{$\widehat{yFw}$}&\textcolor{red}{$\widehat{yFr}$}\\\hline
+    \end{tabular}
+    }
 \end{corrige}
