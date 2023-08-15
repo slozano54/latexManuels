@@ -1,4 +1,92 @@
 \begin{exercice*}
+    On considère les angles déterminés par les droites $(EG)$ et $(AD)$.
+    \begin{center}
+        \begin{Geometrie}[CoinBG={(-0.5u,-0.5u)},CoinHD={(6u,3u)}]
+            pair A,B,C,D,E,F,G,K,O,R,S,T,U;
+            S=u*(3.7,0.5);
+            O=u*(4,1.5);
+            U=u*(1.7,0.7);
+            F=u*(1,1.6);
+            T=droite(O,U) intersectionpoint droite(F,S);
+            B=2[T,O];
+            R=2[T,U];
+            C=2.4[T,S];
+            K=1.6[T,F];
+            A=2.1[S,O];
+            D=1.8[O,S];
+            G=1.9[U,F];
+            E=1.8[F,U];
+            trace droite(T,O);
+            trace droite(T,S);        
+            trace droite(F,U);
+            trace droite(O,S);
+            labeloffset:=1.5*labeloffset;
+            label.top(btex $T$ etex,T);
+            label.ulft(btex $O$ etex,O);
+            label.bot(btex $U$ etex,U);
+            label.urt(btex $S$ etex,S);
+            label.urt(btex $F$ etex,F);
+            label.top(btex $B$ etex,B);
+            label.top(btex $R$ etex,R);
+            label.top(btex $C$ etex,C);
+            label.bot(btex $K$ etex,K);
+            label.lft(btex $A$ etex,A);
+            label.rt(btex $D$ etex,D);
+            label.rt(btex $G$ etex,G);
+            label.lft(btex $E$ etex,E);
+            marque_p:="croix";
+            pointe(A,B,C,D,E,R,K,G);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Citer deux paires d'angles correspondants, déterminés par la sécante $(KC)$.
+        \item Citer deux paires d'angles alternes-internes, déterminés par la sécante $(BR)$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
+    On considère les angles déterminés par les droites $(EG)$ et $(AD)$.
+\begin{center}
+    \begin{Geometrie}[CoinBG={(-0.5u,-0.5u)},CoinHD={(6u,3u)}]
+        pair A,B,C,D,E,F,G,K,O,R,S,T,U;
+        S=u*(3.7,0.5);
+        O=u*(4,1.5);
+        U=u*(1.7,0.7);
+        F=u*(1,1.6);
+        T=droite(O,U) intersectionpoint droite(F,S);
+        B=2[T,O];
+        R=2[T,U];
+        C=2.4[T,S];
+        K=1.6[T,F];
+        A=2.1[S,O];
+        D=1.8[O,S];
+        G=1.9[U,F];
+        E=1.8[F,U];
+        trace droite(T,O);
+        trace droite(T,S);        
+        trace droite(F,U);
+        trace droite(O,S);
+        labeloffset:=1.5*labeloffset;
+        label.top(btex $T$ etex,T);
+        label.ulft(btex $O$ etex,O);
+        label.bot(btex $U$ etex,U);
+        label.urt(btex $S$ etex,S);
+        label.urt(btex $F$ etex,F);
+        label.top(btex $B$ etex,B);
+        label.top(btex $R$ etex,R);
+        label.top(btex $C$ etex,C);
+        label.bot(btex $K$ etex,K);
+        label.lft(btex $A$ etex,A);
+        label.rt(btex $D$ etex,D);
+        label.rt(btex $G$ etex,G);
+        label.lft(btex $E$ etex,E);
+        marque_p:="croix";
+        pointe(A,B,C,D,E,R,K,G);
+    \end{Geometrie}
+\end{center}
+\begin{enumerate}
+    \item Citer deux paires d'angles correspondants, déterminés par la sécante $(KC)$.
+    \par\textcolor{red}{$\widehat{AST}$ et $\widehat{GFK}$ ; $\widehat{KFU}$ et $\widehat{TSD}$.}
+    \item Citer deux paires d'angles alternes-internes, déterminés par la sécante $(BR)$.
+    \par\textcolor{red}{$\widehat{AOT}$ et $\widehat{TUE}$ ; $\widehat{SOT}$ et $\widehat{TUF}$.}
+\end{enumerate}
 \end{corrige}
