@@ -1,12 +1,13 @@
 \begin{exercice*}
-    Nora possède un champ en forme de quadrilatère $NORA$ dont les côtés $(NO)$ et $(RA)$ sont parallèles. Elle prend la mesure de deux angles et se demande si son quadrilatère peut être un parallélogramme.
-    \begin{enumerate}
-       \item Écrire sur le schéma ci-dessous la mesure de tous les angles existants.
-       \item Les droites $(NA)$ et $(OR)$ sont-elles parallèles ?
-       \item Quelle est alors la nature du quadrilatère $NORA$ ?
-    \end{enumerate}
-   \begin{center}    
-      \begin{tikzpicture}[scale=0.8]
+   Nora possède un champ en forme de quadrilatère $NORA$ dont les côtés $(NO)$ et $(RA)$ sont parallèles. Elle prend la mesure de deux angles et se demande si son quadrilatère peut être un parallélogramme.
+   \begin{enumerate}
+      \item Écrire sur le schéma ci-dessous la mesure de tous les angles existants.
+      \item Les droites $(NA)$ et $(OR)$ sont-elles parallèles ?
+      \item Quelle est alors la nature du quadrilatère $NORA$ ?
+   \end{enumerate}
+   \par\hspace*{-20mm}
+   \begin{center}      
+      \begin{tikzpicture}[scale=0.55]
          \coordinate (a) at (0,1);
          \coordinate (b) at (10,1);
          \coordinate (c) at (0,4);
@@ -29,9 +30,9 @@
          \tkzGetPoint{O};            
          \tkzLabelPoints[above left](N,A);
          \tkzLabelPoints[below right](O,R);
-         \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};                 
-         \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};                 
-       \end{tikzpicture}
+         \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};
+         \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};
+      \end{tikzpicture}
    \end{center}
 \end{exercice*}
  
@@ -39,7 +40,7 @@
  \ \\ [-5mm]
     \begin{enumerate}
       \item Schéma du terrain de Nora : \par
-         \begin{tikzpicture}[scale=0.8]
+         \begin{tikzpicture}[scale=0.55]
             \coordinate (a) at (0,1);
             \coordinate (b) at (10,1);
             \coordinate (c) at (0,4);
