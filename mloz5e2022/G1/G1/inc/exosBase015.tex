@@ -1,47 +1,54 @@
 \begin{exercice*}
-    Sur la figure ci-dessous :
-    \begin{itemize}
-       \item les droites $(ab), (cd)$ et $(ef)$ sont parallèles ;
-       \item $R$ est un point de $(ab)$, $S$ un point de $(cd)$ et $T$ un point de $(ef)$ tels que $\widehat{bRS} =\ang{20}$ et $\widehat{RST} =\ang{57}$.
-    \end{itemize}
-    Calculer la mesure de l'angle $\widehat{STf}$. \\
-    \begin{center}    
-      \begin{tikzpicture}
-         \coordinate (e) at (0,0.5);
-         \coordinate (T) at (2,0.5);
-         \coordinate (f) at (7,0.5);
-         \coordinate (c) at (0,2);
-         \coordinate (S) at (4,2);
-         \coordinate (d) at (7,2);
-         \coordinate (a) at (0,3);
-         \coordinate (R) at (2,3);
-         \coordinate (b) at (7,3);   
-         \tkzDrawSegment(a,b);       
-         \tkzDrawSegment(c,d);
-         \tkzDrawSegment(e,f);
-         \tkzDrawSegment(R,S);
-         \tkzDrawSegment(S,T);
-         \tkzLabelPoint[left](a){$a$};
-         \tkzLabelPoint[left](c){$c$};
-         \tkzLabelPoint[left](e){$e$};
-         \tkzLabelPoint[right](b){$b$};
-         \tkzLabelPoint[right](d){$d$};
-         \tkzLabelPoint[right](f){$f$};
-         \tkzLabelPoints[above](R);
-         \tkzLabelPoints[above](S);
-         \tkzLabelPoints[above](T);
-         \pic [draw=black, -, "\ang{20}",angle eccentricity=2] {angle = S--R--b};                 
-         \pic [draw=black, -, angle eccentricity=1.6,angle radius=0.6cm] {angle = R--S--T};        
-         \pic [draw=black, -, "\ang{57}",angle eccentricity=1.5,angle radius=0.7cm,below] {angle = R--S--T};        
-         \pic [draw=black, -, "?",angle eccentricity=1.6] {angle = f--T--S};        
-       \end{tikzpicture}
+    Anita pense que l'une des deux paires de droites $(d_1)$ et $(d_2)$ est parallèle. A-t-elle raison ? \\
+   \begin{center}      
+      \begin{tikzpicture}[scale=0.7]
+         \coordinate (A) at (0,2.5);
+         \coordinate (B) at (4,0);
+         \coordinate (C) at (0,1);        
+         \coordinate (D) at (3,2);
+         \coordinate (E) at (1,0);
+         \coordinate (F) at (4,1);
+         \tkzDrawLine(A,B);        
+         \tkzDrawLine(C,D);
+         \tkzDrawLine(E,F);
+         \tkzInterLL(A,B)(C,D);
+         \tkzGetPoint{H};            
+         \tkzInterLL(A,B)(E,F);
+         \tkzGetPoint{I};            
+         \pic [draw=black, -, "\ang{119}",angle eccentricity=1.6] {angle = D--H--A};        
+         \pic [draw=black, -, "\ang{61}",angle eccentricity=1.6] {angle = B--I--F};        
+         \tkzLabelLine[pos=1.5,left](C,D){$(d_1)$}
+         \tkzLabelLine[pos=1.5,left](E,F){$(d_2)$}
+      \end{tikzpicture}
+      \hfill
+      \begin{tikzpicture}[scale=0.7]
+         \coordinate (A) at (0,1.5);
+         \coordinate (B) at (3,1);
+         \coordinate (C) at (0,0);        
+         \coordinate (D) at (1.5,3);
+         \coordinate (E) at (1.5,0);
+         \coordinate (F) at (2.5,2.5);
+         \tkzDrawLine(A,B);        
+         \tkzDrawLine(C,D);
+         \tkzDrawLine(E,F);
+         \tkzInterLL(A,B)(C,D);
+         \tkzGetPoint{H};            
+         \tkzInterLL(A,B)(E,F);
+         \tkzGetPoint{I};            
+         \pic [draw=black, -, "\ang{59}",angle eccentricity=1.6] {angle = B--H--D};        
+         \pic [draw=black, -, "\ang{111}",angle eccentricity=1.6] {angle = E--I--B};        
+         \tkzLabelLine[pos=1.25,left](C,D){$(d_1)$}
+         \tkzLabelLine[pos=1.25,right](E,F){$(d_2)$}
+      \end{tikzpicture}
    \end{center}
-\end{exercice*}
+ \end{exercice*}
  
-\begin{corrige}
-   \begin{itemize}
-      \item Les angles $\widehat{bRS}$ et $\widehat{RSc}$ sont alternes-internes et les droites $(ab)$ et $(cd)$ sont parallèles donc : $\widehat{RSc} =\widehat{bRS} =\red \ang{20}$.
-      \item On décompose l'angle $\widehat{RST}$ : $\widehat{RST} =\widehat{RSc}+\widehat{cST}$ donc, $\widehat{cST} =\widehat{RST} -\widehat{RSc} =\ang{57}-\ang{20} =\red \ang{37}$.
-      \item Les angles $\widehat{cST}$ et $\widehat{STf}$ sont alternes-internes et les droites $(cd)$ et $(ef)$ sont parallèles donc : $\widehat{STf} =\widehat{cST} =\red \ang{37}$.
-   \end{itemize}
-\end{corrige}
+ \begin{corrige}
+    Oui, Anita a raison : \\
+    \begin{itemize}
+       \item Première figure : l'angle supplémentaire à \ang{119} de l'autre côté de $(d_1)$ vaut $\ang{180}-\ang{119} =\ang{61}$. \\
+       On a deux angles correspondants de même mesure donc, {\red les droites $(d_1)$ et $(d_2)$ sont parallèles}.
+       \item Deuxième figure : l'angle supplémentaire à \ang{111} de l'autre côté de $(d_2)$ vaut $\ang{180}-\ang{111} =\ang{69}$. \\
+       On a deux angles alternes-internes de mesures différentes donc, {\red $(d_1)$ et $(d_2)$ ne sont pas parallèles}.
+    \end{itemize}
+ \end{corrige}

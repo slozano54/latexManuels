@@ -1,71 +1,50 @@
 \begin{exercice*}
-    Nora possède un champ en forme de quadrilatère $NORA$ dont les côtés $(NO)$ et $(RA)$ sont parallèles. Elle prend la mesure de deux angles et se demande si son quadrilatère peut être un parallélogramme.
+    Dans la figure ci-dessous, on sait que les droites $(xy)$ et
+ $(tz)$ sont parallèles et on connaît la mesure de deux angles. En utilisant les données de la figure :
     \begin{enumerate}
-       \item Écrire sur le schéma ci-dessous la mesure de tous les angles existants.
-       \item Les droites $(NA)$ et $(OR)$ sont-elles parallèles ?
-       \item Quelle est alors la nature du quadrilatère $NORA$ ?
+        \item Donner la mesure en degrés des angles suivants : $\widehat{IJK}$, puis $\widehat{JKI}$, puis $\widehat{rIy}$, puis $\widehat{yIJ}$, puis $\widehat{xIK}$ et enfin $\widehat{KIJ}$.
+        \item En déduire la nature du triangle $IJK$?
     \end{enumerate}
-   \begin{center}    
-      \begin{tikzpicture}[scale=0.8]
-         \coordinate (a) at (0,1);
-         \coordinate (b) at (10,1);
-         \coordinate (c) at (0,4);
-         \coordinate (d) at (10,4);
-         \coordinate (f) at (0.33,0);
-         \coordinate (g) at (4,5.5);
-         \coordinate (h) at (6.33,0);
-         \coordinate (j) at (9,5);
-         \tkzDrawLine(a,b);       
-         \tkzDrawLine(c,d);
-         \tkzDrawLine(f,g);
-         \tkzDrawLine(h,j);
-         \tkzInterLL(a,b)(f,g);
-         \tkzGetPoint{A};            
-         \tkzInterLL(a,b)(h,j);
-         \tkzGetPoint{R};            
-         \tkzInterLL(c,d)(f,g);
-         \tkzGetPoint{N};            
-         \tkzInterLL(c,d)(h,j);
-         \tkzGetPoint{O};            
-         \tkzLabelPoints[above left](N,A);
-         \tkzLabelPoints[below right](O,R);
-         \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};                 
-         \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};                 
-       \end{tikzpicture}
-   \end{center}
-\end{exercice*}
+    \begin{center}    
+    \begin{tikzpicture}
+        \coordinate (z) at (-1,0);
+        \coordinate (t) at (4,0);
+        \coordinate (x) at (-1,1.73);
+        \coordinate (y) at (4,1.73);
+        \coordinate (K) at (0,0);
+        \coordinate (J) at (2,0);        
+        \coordinate (I) at (1,1.73); 
+        \tkzDrawSegment(x,y);        
+        \tkzDrawSegment(z,t);
+        \tkzDrawLine[add=0.5 and 0.5](K,I);
+        \tkzDrawLine[add=0.5 and 0.5](J,I);
+        \tkzLabelPoint[left](x){$x$};
+        \tkzLabelPoint[right](y){$y$};
+        \tkzLabelPoint[left](z){$z$};
+        \tkzLabelPoint[right](t){$t$};
+        \tkzLabelPoint[above left](K){$K$};
+        \tkzLabelPoints[xshift=-1](I);
+        \tkzLabelPoint[below left](J){$J$};
+        \tkzDefPointOnLine[pos=1.5](K,I) \tkzGetPoint{s}
+        \tkzDefPointOnLine[pos=1.5](J,I) \tkzGetPoint{r}
+        \tkzLabelPoint[above](r){$r$};
+        \tkzLabelPoint[above](s){$s$};
+        \pic [draw=black, -, "\ang{60}",angle eccentricity=1.6] {angle = y--I--s};        
+        \pic [draw=black, -, "\ang{120}",angle eccentricity=1.6] {angle = t--J--r};        
+     \end{tikzpicture}
+    \end{center}
+ \end{exercice*}
  
 \begin{corrige}
- \ \\ [-5mm]
-    \begin{enumerate}
-      \item Schéma du terrain de Nora : \par
-         \begin{tikzpicture}[scale=0.8]
-            \coordinate (a) at (0,1);
-            \coordinate (b) at (10,1);
-            \coordinate (c) at (0,4);
-            \coordinate (d) at (10,4);
-            \coordinate (f) at (0.33,0);
-            \coordinate (g) at (4,5.5);
-            \coordinate (h) at (6.33,0);
-            \coordinate (j) at (9,5);
-            \tkzDrawLine(a,b);       
-            \tkzDrawLine(c,d);
-            \tkzDrawLine(f,g);
-            \tkzDrawLine(h,j);
-            \tkzInterLL(a,b)(f,g);
-            \tkzGetPoint{A};            
-            \tkzInterLL(a,b)(h,j);
-            \tkzGetPoint{R};            
-            \tkzInterLL(c,d)(f,g);
-            \tkzGetPoint{N};            
-            \tkzInterLL(c,d)(h,j);
-            \tkzGetPoint{O};            
-            \tkzLabelPoints[above left](N,A);
-            \tkzLabelPoints[below right](O,R);
-            \pic [draw=black, -, "\ang{121}",angle eccentricity=1.6] {angle = j--O--N};                 
-            \pic [draw=black, -, "\ang{49}",angle eccentricity=1.6] {angle = R--A--N};                 
-         \end{tikzpicture}
-      \item Si les droites $(NA)$ ET $(OR)$ étaient parallèles, les angles correspondants en $N$ et $O$ par exemple seraient égaux, ce qui n'est pas le cas ici (\ang{131}$\neq$\ang{121}) donc, {\red ces droites ne sont pas parallèles}.
-      \item Dans le quadrilatère $NORA$, les droites $(NO)$ et $(RA)$ sont parallèles, mais les droites $(NA)$ et $(OR)$ ne le sont pas donc, {\red le quadrilatère $NORA$ est un trapèze}.   
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item $\bullet$ Les angles $\widehat{IJK}$ et $\widehat{IJt}$ sont supplémentaires donc, ${\red \widehat{IJK}} =180\up{\circ}-120\up{\circ}° ={\red 60\up{\circ}}$. \\
+         $\bullet$ Les angles $\widehat{JKI}$ et $\widehat{yIS}$ sont correspondants et $\widehat{yIS} =60\up{\circ}$ donc, {\red $\widehat{JKI} =60\up{\circ}$}. \\
+         $\bullet$ Les angles $\widehat{rIy}$ et $\widehat{IJt}$ sont correspondants et $\widehat{IJt} =120\up{\circ}$ donc, {\red $\widehat{rIy} =120\up{\circ}$}. \\
+         $\bullet$ Les angles $\widehat{yIJ}$ et $\widehat{rIy}$ sont supplémentaires donc, ${\red \widehat{yIJ}} =180\up{\circ}-120\up{\circ}° ={\red 60\up{\circ}}$. \\
+         $\bullet$ Les angles $\widehat{xIK}$ et $\widehat{sIy}$ sont opposés par le sommet donc, ${\red \widehat{xIK}} =\widehat{sIy} ={\red 60\up{\circ}}$. Et enfin : \\
+         ${\red \widehat{KIJ}} =180\up{\circ} -\widehat{xIK}-\widehat{yIJ} =180\up{\circ}-60\up{\circ}-60\up{\circ} ={\red 60\up{\circ}}$.
+      \item Les trois angles du triangle sont égaux, donc {\red le triangle $IJK$ est équilatéral}.
    \end{enumerate}
 \end{corrige}
+ 
