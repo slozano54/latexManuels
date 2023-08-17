@@ -2,6 +2,187 @@
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
 \vspace*{-5mm}
-\begin{debat}[\dots]
-\dots
+\begin{debat}[le Rubik's cube]
+    Le Rubik's {\bf cube} est un casse-tête inventé par l'architecte hongrois {\it Ernö Rubik} en 1974. Il prend la forme d'un cube, traditionnellement à 3 petits cubes de côté, soit 36 faces et 27 petits cubes (mais il existe de très nombreuses versions allant jusqu'à 10 petits cubes de côté ou avec des formes différentes). De nombreux concours sont organisés chaque année pour le résoudre, le record actuel est de 3,47 secondes !!!
+    \begin{center} 
+    %    \begin{pspicture}(-2,-1.8)(2,2.3)
+    %       \psSolid[viewpoint=20 30 10,a=2,object=cube,ngrid=3,fcol=0 (yellow) 1 (yellow) 2 (yellow) 3 (yellow) 4 (yellow) 5 (yellow) 6 (yellow) 7 (yellow) 8 (yellow) 9 (red) 10 (red) 11 (red) 12 (red) 13 (red) 14 (red) 15 (red) 16 (red) 17 (red) 36 (blue) 37 (blue) 38 (blue) 39 (blue) 40 (blue) 41 (blue) 42 (blue) 43 (blue) 44 (blue) ]
+    %    \end{pspicture}
+        \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+            Initialisation(1500,45,20,20);
+            numeric coeff;
+            coeff:=0.5;             
+            drawoptions();
+            picture rubik;
+            rubik=image(
+            marque_p:="plein";
+            color A[],B[],C[];            
+            A1=coeff*(2,-2,-2);
+            A2-A1=coeff*(0,4,0);
+            A3-A2=coeff*(0,0,4);
+            A4-A3=coeff*(0,-4,0);
+            fill polygone(A1,A2,A3,A4) withcolor blue;
+            trace polygone(A1,A2,A3,A4) withpen pencircle scaled 1.5bp;	
+            for i:=1 upto 3:
+                trace chemin(A1+coeff*(0,0,i),A1+coeff*(0,4,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(A1+coeff*(0,i,0),A1+coeff*(0,i,4)) withpen pencircle scaled 1.5bp;				
+            endfor;	
+            B1=coeff*(2,2,-2);
+            B2-B1=coeff*(-4,0,0);
+            B3-B2=coeff*(0,0,4);
+            B4-B3=coeff*(4,0,0);
+            fill polygone(B1,B2,B3,B4) withcolor white;
+            trace polygone(B1,B2,B3,B4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(B1+coeff*(0,0,i),B1+coeff*(-4,0,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(B1+coeff*(-i,0,0),B1+coeff*(-i,0,4)) withpen pencircle scaled 1.5bp;
+            endfor;	
+            C1=coeff*(2,-2,2);
+            C2-C1=coeff*(0,4,0);
+            C3-C2=coeff*(-4,0,0);
+            C4-C3=coeff*(0,-4,0);
+            fill polygone(C1,C2,C3,C4) withcolor red;
+            trace polygone(C1,C2,C3,C4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(C1+coeff*(-i,0,0),C1+coeff*(-i,4,0)) withpen pencircle scaled 1.5bp;
+                trace chemin(C1+coeff*(0,i,0),C1+coeff*(-4,i,0)) withpen pencircle scaled 1.5bp;
+            endfor;
+            );
+            draw rubik;	
+        \end{Geometrie}
+        \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+            Initialisation(1500,45,20,20);
+            numeric coeff;
+            coeff:=0.5;             
+            drawoptions();
+            picture rubik;
+            rubik=image(
+            marque_p:="plein";
+            color A[],B[],C[];            
+            A1=coeff*(2,-2,-2);
+            A2-A1=coeff*(0,4,0);
+            A3-A2=coeff*(0,0,4);
+            A4-A3=coeff*(0,-4,0);
+            fill polygone(A1,A2,A3,A4) withcolor Gold;
+            trace polygone(A1,A2,A3,A4) withpen pencircle scaled 1.5bp;	
+            for i:=1 upto 3:
+                trace chemin(A1+coeff*(0,0,i),A1+coeff*(0,4,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(A1+coeff*(0,i,0),A1+coeff*(0,i,4)) withpen pencircle scaled 1.5bp;				
+            endfor;	
+            B1=coeff*(2,2,-2);
+            B2-B1=coeff*(-4,0,0);
+            B3-B2=coeff*(0,0,4);
+            B4-B3=coeff*(4,0,0);
+            fill polygone(B1,B2,B3,B4) withcolor blue;
+            trace polygone(B1,B2,B3,B4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(B1+coeff*(0,0,i),B1+coeff*(-4,0,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(B1+coeff*(-i,0,0),B1+coeff*(-i,0,4)) withpen pencircle scaled 1.5bp;
+            endfor;	
+            C1=coeff*(2,-2,2);
+            C2-C1=coeff*(0,4,0);
+            C3-C2=coeff*(-4,0,0);
+            C4-C3=coeff*(0,-4,0);
+            fill polygone(C1,C2,C3,C4) withcolor red;
+            trace polygone(C1,C2,C3,C4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(C1+coeff*(-i,0,0),C1+coeff*(-i,4,0)) withpen pencircle scaled 1.5bp;
+                trace chemin(C1+coeff*(0,i,0),C1+coeff*(-4,i,0)) withpen pencircle scaled 1.5bp;
+            endfor;
+            );
+            draw rubik;	
+        \end{Geometrie}
+        \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+            Initialisation(1500,45,20,20);
+            numeric coeff;
+            coeff:=0.5;             
+            drawoptions();
+            picture rubik;
+            rubik=image(
+            marque_p:="plein";
+            color A[],B[],C[];            
+            A1=coeff*(2,-2,-2);
+            A2-A1=coeff*(0,4,0);
+            A3-A2=coeff*(0,0,4);
+            A4-A3=coeff*(0,-4,0);
+            fill polygone(A1,A2,A3,A4) withcolor Green;
+            trace polygone(A1,A2,A3,A4) withpen pencircle scaled 1.5bp;	
+            for i:=1 upto 3:
+                trace chemin(A1+coeff*(0,0,i),A1+coeff*(0,4,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(A1+coeff*(0,i,0),A1+coeff*(0,i,4)) withpen pencircle scaled 1.5bp;				
+            endfor;	
+            B1=coeff*(2,2,-2);
+            B2-B1=coeff*(-4,0,0);
+            B3-B2=coeff*(0,0,4);
+            B4-B3=coeff*(4,0,0);
+            fill polygone(B1,B2,B3,B4) withcolor Gold;
+            trace polygone(B1,B2,B3,B4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(B1+coeff*(0,0,i),B1+coeff*(-4,0,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(B1+coeff*(-i,0,0),B1+coeff*(-i,0,4)) withpen pencircle scaled 1.5bp;
+            endfor;	
+            C1=coeff*(2,-2,2);
+            C2-C1=coeff*(0,4,0);
+            C3-C2=coeff*(-4,0,0);
+            C4-C3=coeff*(0,-4,0);
+            fill polygone(C1,C2,C3,C4) withcolor red;
+            trace polygone(C1,C2,C3,C4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(C1+coeff*(-i,0,0),C1+coeff*(-i,4,0)) withpen pencircle scaled 1.5bp;
+                trace chemin(C1+coeff*(0,i,0),C1+coeff*(-4,i,0)) withpen pencircle scaled 1.5bp;
+            endfor;
+            );
+            draw rubik;	
+        \end{Geometrie}
+        \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]	        
+            Initialisation(1500,45,-20,20);
+            numeric coeff;
+            coeff:=0.5;             
+            drawoptions();
+            picture rubik;
+            rubik=image(
+            marque_p:="plein";
+            color A[],B[],C[];            
+            A1=coeff*(2,-2,-2);
+            A2-A1=coeff*(0,4,0);
+            A3-A2=coeff*(0,0,4);
+            A4-A3=coeff*(0,-4,0);
+            fill polygone(A1,A2,A3,A4) withcolor Green;
+            trace polygone(A1,A2,A3,A4) withpen pencircle scaled 1.5bp;	
+            for i:=1 upto 3:
+                trace chemin(A1+coeff*(0,0,i),A1+coeff*(0,4,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(A1+coeff*(0,i,0),A1+coeff*(0,i,4)) withpen pencircle scaled 1.5bp;				
+            endfor;	
+            B1=coeff*(2,2,-2);
+            B2-B1=coeff*(-4,0,0);
+            B3-B2=coeff*(0,0,4);
+            B4-B3=coeff*(4,0,0);
+            fill polygone(B1,B2,B3,B4) withcolor Gold;
+            trace polygone(B1,B2,B3,B4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(B1+coeff*(0,0,i),B1+coeff*(-4,0,i)) withpen pencircle scaled 1.5bp;
+                trace chemin(B1+coeff*(-i,0,0),B1+coeff*(-i,0,4)) withpen pencircle scaled 1.5bp;
+            endfor;		
+            C1=coeff*(2,-2,-2);
+            C2-C1=coeff*(0,4,0);
+            C3-C2=coeff*(-4,0,0);
+            C4-C3=coeff*(0,-4,0);
+            fill polygone(C1,C2,C3,C4) withcolor OrangeRed;
+            trace polygone(C1,C2,C3,C4) withpen pencircle scaled 1.5bp;
+            for i:=1 upto 3:
+                trace chemin(C1+coeff*(-i,0,0),C1+coeff*(-i,4,0)) withpen pencircle scaled 1.5bp;
+                trace chemin(C1+coeff*(0,i,0),C1+coeff*(-4,i,0)) withpen pencircle scaled 1.5bp;
+            endfor;
+            );
+            draw rubik;	
+        \end{Geometrie}
+    \end{center}
+    \bigskip
+    \begin{changemargin}{0mm}{-10mm}
+        \begin{cadre}[B2][F4]
+            \begin{center}
+                \hrefVideo{https://www.yout-ube.com/watch?v=cyDmtUDBYzY}{\bf Comment le Rubik’s Cube est devenu culte}, chaîne YouTube {\it Le Monde}.
+            \end{center}
+        \end{cadre}
+    \end{changemargin}
  \end{debat}
