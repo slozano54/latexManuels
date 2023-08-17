@@ -1,2 +1,45 @@
-\section{...}
-...
+\section{Volume d'un cube}
+
+\begin{propriete}
+    \begin{minipage}{0.4\linewidth}
+    Le volume d'un cube de côté $c$ vaut :
+    $${\mathcal V}=c\times c\times c =c^3$$
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\linewidth}
+    \begin{center}
+        \begin{Geometrie}[CoinBG={(0,0)},CoinHD={(4u,4u)}]
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(3,1);
+            C=u*(3.5,1.75);
+            D-A=C-B;
+            E=u*(1,3);
+            F-E=B-A;
+            G-F=C-B;
+            H-G=D-C;
+            trace A--B--C--G--H--E--cycle;
+            trace E--F--G;
+            trace F--B;
+            trace A--D--H dashed evenly;
+            trace D--C dashed evenly;
+            trace cotationmil(A,B,-3mm,5,btex $c$ etex) withcolor red;
+            trace cotationmil(B,C,-3mm,5,btex $c$ etex) withcolor red;
+            trace cotationmil(A,E,3mm,5,btex $c$ etex) withcolor red;
+        \end{Geometrie}
+    \end{center}
+\end{minipage}
+\end{propriete}
+
+
+
+\begin{remarque}
+   le volume du cube est un cas particulier du volume du pavé avec $L =\ell =h =c$.
+\end{remarque}
+
+\begin{exemple}
+   Un Rubik's Cube a pour côté \Lg[cm]{5.5}. \\
+   Déterminer son volume en \Vol[cm]{} ?
+   \correction
+      $\mathcal{V} =\Lg[cm]{5.5}\times\Lg[cm]{5.5}\times\Lg[cm]{5.5} = \Vol[cm]{166.375}$.
+\end{exemple}

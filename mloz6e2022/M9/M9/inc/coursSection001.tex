@@ -1,2 +1,52 @@
-\section{...}
-...
+\section{Volume du pavé}
+\begin{changemargin}{0mm}{-20mm}
+    \begin{propriete}
+        \begin{minipage}{0.55\linewidth}
+        Le volume d'un pavé droit, ou d'un parallélépipède rectangle de longueur $L$, de largeur $\ell$ et de hauteur $h$ vaut :
+        $${\mathcal V}=L\times \ell\times h$$
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(0,-0.5u)},CoinHD={(6u,4.5u)}]
+                pair A,B,C,D,E,F,G,H;
+                A=u*(0.75,0.75);
+                B=u*(4,0.75);
+                C=u*(4.75,1.5);
+                D-A=C-B;
+                E=u*(0.75,2);
+                F-E=B-A;
+                G-F=C-B;
+                H-G=D-C;
+                trace A--B--C--G--H--E--cycle;
+                trace E--F--G;
+                trace F--B;
+                trace A--D--H dashed evenly;
+                trace D--C dashed evenly;
+                trace cotationmil(A,B,-3mm,5,btex $L$ etex) withcolor red;
+                trace cotationmil(B,C,-3mm,5,btex $\ell$ etex) withcolor red;
+                trace cotationmil(A,E,3mm,5,btex $h$ etex) withcolor red;
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \end{propriete}
+\end{changemargin}
+
+
+\begin{remarque}
+   les dimensions doivent être exprimées dans la même unité de longueur, l'unité de volume sera alors cette unité de longueur au cube.
+   \par
+   Longueurs en \Lg[cm]{} donc volume en \Vol[cm]{}. Longueurs en \Lg[mm]{}, volume en \Vol[mm]{}.
+\end{remarque}
+
+\begin{changemargin}{0mm}{-15mm}
+    \begin{exemple}
+    Une piscine a pour dimensions \Lg[m]{9} de long, \Lg[m]{5} de large et \Lg[cm]{150} de hauteur. \\
+    Déterminer son volume en \Vol[m]{} ? \\
+    Déterminer sa capacité en \Capa[L]{} ?
+    \correction
+        $\mathcal{V} =\Lg[m]{9}\times\Lg[m]{5}\times\Lg[m]{1,5} =\Vol[m]{67.5}$. \\
+        Pour déterminer sa capacité en \Capa[L]{}, il faut convertir des \Vol[m]{} en \Vol[dm]{} puis utiliser la relation $\Vol[dm]{1} =\Capa[L]{1}$ : \\
+        $\Vol[m]{67.5} =\Vol[dm]{67500} =\Capa[L]{67500}$.
+    \end{exemple}
+\end{changemargin}
