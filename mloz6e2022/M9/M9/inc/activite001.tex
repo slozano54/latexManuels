@@ -1,5 +1,229 @@
-\vspace*{-17mm}
-\begin{activite}[\dots]
-\dots
- \end{activite} 
- 
+\begin{changemargin}{-10mm}{-25mm}
+    \begin{activite}[Des petits cubes]
+
+        {\bf Objectifs :} déterminer le volume d'un cube, d'un pavé droit par dénombrement ; analyser un solide en trois dimensions.
+        \partie[volume d'un pavé]
+        On considère ce pavé droit : \quad 
+        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(5u,4u)}]
+            u:=0.5*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(2,1);
+            F=u*(2,2);
+            E=u*(1,2);
+            pair Vx,Vy,Vz;
+            Vx=u*(1,0);
+            Vy=u*(0.5,0.4);
+            Vz=u*(0,1);
+            D=A shifted Vy;
+            C=B shifted Vy;
+            H=E shifted Vy;
+            G=F shifted Vy;
+            picture cube;
+            cube = image(
+                remplis polygone(B,C,G,F) withcolor Cornsilk;
+                remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+                remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+                trace A--B--F--E--cycle;
+                trace polygone(B,C,G,F);
+                trace chemin(G,H,E);
+            );        
+            trace cube;
+            for j=0 upto 5:
+                for k=0 upto 4:
+                    for i=0 upto 2:
+                        trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                    endfor;
+                endfor;
+            endfor;
+        \end{Geometrie}
+        composé de petits cubes identiques \quad 
+        \begin{Geometrie}
+            u:=0.5*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(2,1);
+            F=u*(2,2);
+            E=u*(1,2);
+            D=A shifted (0.5u,0.4u);
+            C=B shifted (0.5u,0.4u);
+            H=E shifted (0.5u,0.4u);
+            G=F shifted (0.5u,0.4u);
+            remplis polygone(B,C,G,F) withcolor Cornsilk;
+            remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+            trace A--B--F--E--cycle;
+            trace polygone(B,C,G,F);
+            trace chemin(G,H,E);
+        \end{Geometrie}
+        \par\smallskip
+        \begin{tabular}{>{\centering\arraybackslash}p{0.3\linewidth}|>{\centering\arraybackslash}p{0.3\linewidth}|>{\centering\arraybackslash}p{0.3\linewidth}}
+            Colorier la \og tranche \fg{} de devant de ce pavé droit
+            &
+            Colorier la \og tranche \fg{} du dessus de ce pavé droit
+            &
+            Colorier la \og tranche \fg{} de côté de ce pavé droit \\
+            \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(5u,4u)}]
+                u:=0.5*u;
+                pair A,B,C,D,E,F,G,H;
+                A=u*(1,1);
+                B=u*(2,1);
+                F=u*(2,2);
+                E=u*(1,2);
+                pair Vx,Vy,Vz;
+                Vx=u*(1,0);
+                Vy=u*(0.5,0.4);
+                Vz=u*(0,1);
+                D=A shifted Vy;
+                C=B shifted Vy;
+                H=E shifted Vy;
+                G=F shifted Vy;
+                picture cube;
+                cube = image(
+                    remplis polygone(B,C,G,F) withcolor Cornsilk;
+                    remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+                    remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+                    trace A--B--F--E--cycle;
+                    trace polygone(B,C,G,F);
+                    trace chemin(G,H,E);
+                );        
+                trace cube;
+                for j=0 upto 5:
+                    for k=0 upto 4:
+                        for i=0 upto 2:
+                            trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                        endfor;
+                    endfor;
+                endfor;
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(5u,4u)}]
+                u:=0.5*u;
+                pair A,B,C,D,E,F,G,H;
+                A=u*(1,1);
+                B=u*(2,1);
+                F=u*(2,2);
+                E=u*(1,2);
+                pair Vx,Vy,Vz;
+                Vx=u*(1,0);
+                Vy=u*(0.5,0.4);
+                Vz=u*(0,1);
+                D=A shifted Vy;
+                C=B shifted Vy;
+                H=E shifted Vy;
+                G=F shifted Vy;
+                picture cube;
+                cube = image(
+                    remplis polygone(B,C,G,F) withcolor Cornsilk;
+                    remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+                    remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+                    trace A--B--F--E--cycle;
+                    trace polygone(B,C,G,F);
+                    trace chemin(G,H,E);
+                );        
+                trace cube;
+                for j=0 upto 5:
+                    for k=0 upto 4:
+                        for i=0 upto 2:
+                            trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                        endfor;
+                    endfor;
+                endfor;
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(5u,4u)}]
+                u:=0.5*u;
+                pair A,B,C,D,E,F,G,H;
+                A=u*(1,1);
+                B=u*(2,1);
+                F=u*(2,2);
+                E=u*(1,2);
+                pair Vx,Vy,Vz;
+                Vx=u*(1,0);
+                Vy=u*(0.5,0.4);
+                Vz=u*(0,1);
+                D=A shifted Vy;
+                C=B shifted Vy;
+                H=E shifted Vy;
+                G=F shifted Vy;
+                picture cube;
+                cube = image(
+                    remplis polygone(B,C,G,F) withcolor Cornsilk;
+                    remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+                    remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+                    trace A--B--F--E--cycle;
+                    trace polygone(B,C,G,F);
+                    trace chemin(G,H,E);
+                );        
+                trace cube;
+                for j=0 upto 5:
+                    for k=0 upto 4:
+                        for i=0 upto 2:
+                            trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                        endfor;
+                    endfor;
+                endfor;
+            \end{Geometrie}
+            \\
+            Combien de petits cubes possède cette tranche ?
+            &
+            Combien de petits cubes possède cette tranche ?
+            &
+            Combien de petits cubes possède cette tranche ? \\
+            &&\\
+            \dotfill & \dotfill & \dotfill \\
+            Combien de fois cette tranche apparait-elle dans ce pavé droit ?
+            &
+            Combien de fois cette tranche apparait-elle dans ce pavé droit ?
+            &
+            Combien de fois cette tranche apparait-elle dans ce pavé droit ? \\
+            &&\\
+            \dotfill & \dotfill & \dotfill \\
+            En déduire le nombre de petits cubes dans ce pavé droit.
+            &
+            En déduire le nombre de petits cubes dans ce pavé droit.
+            &
+            En déduire le nombre de petits cubes dans ce pavé droit. \\
+            &&\\
+            \dotfill & \dotfill & \dotfill \\
+        \end{tabular}
+        \par
+        \partie[volume d'un cube]
+        Colorier dans ce pavé un cube de plus grande taille possible : 
+        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(5u,4u)}]
+            u:=0.5*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(2,1);
+            F=u*(2,2);
+            E=u*(1,2);
+            pair Vx,Vy,Vz;
+            Vx=u*(1,0);
+            Vy=u*(0.5,0.4);
+            Vz=u*(0,1);
+            D=A shifted Vy;
+            C=B shifted Vy;
+            H=E shifted Vy;
+            G=F shifted Vy;
+            picture cube;
+            cube = image(
+                remplis polygone(B,C,G,F) withcolor Cornsilk;
+                remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+                remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+                trace A--B--F--E--cycle;
+                trace polygone(B,C,G,F);
+                trace chemin(G,H,E);
+            );        
+            trace cube;
+            for j=0 upto 5:
+                for k=0 upto 4:
+                    for i=0 upto 2:
+                        trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                    endfor;
+                endfor;
+            endfor;
+        \end{Geometrie}
+        \par\medskip
+        Combien y a-t-il de petits cubes dans ce cube ? \dotfill
+    \end{activite} 
+\end{changemargin}
