@@ -92,12 +92,12 @@
     % % ======= Chapitres de la partie Gestion de données
     % % ============================================================================================ 
 
-    \themaD
-    \def\currentpath{./tocs}                            % On définit le répertoire courant    
-    \include{\currentpath/incGestionDeDonnees.tex}      % On inclut un bandeau au sommaire
+    % \themaD
+    % \def\currentpath{./tocs}                            % On définit le répertoire courant    
+    % \include{\currentpath/incGestionDeDonnees.tex}      % On inclut un bandeau au sommaire
 
-    \def\currentpath{./D1/D1}                           % On définit le répertoire courant    
-    \include{\currentpath/incChapitre.tex}              % On inclut le chapitre D1
+    % \def\currentpath{./D1/D1}                           % On définit le répertoire courant    
+    % \include{\currentpath/incChapitre.tex}              % On inclut le chapitre D1
 
     % % ============================================================================================
     % % ======= Chapitres de la partie Grandeurs et Mesures
@@ -137,7 +137,9 @@
     % % ======= Génère les solutions des exercices
     % % ============================================================================================
     
-    % \AfficheCorriges[1]
+    % Les images des corrections doivent aussi être dans le dossier images du répartoire courant
+    \def\currentpath{.}                                         % On définit le répertoire courant
+    \AfficheCorriges[2]                                         % On ajoute les corigés
   
     \backmatter                                         % Formatage des pages postliminaires
 

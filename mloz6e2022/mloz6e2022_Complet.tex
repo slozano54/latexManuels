@@ -125,8 +125,10 @@
     % % ============================================================================================
     % % ======= Génère les solutions des exercices
     % % ============================================================================================
-    
-    % \AfficheCorriges[1]
+
+    % Les images des corrections doivent aussi être dans le dossier images du répartoire courant
+    \def\currentpath{.}                                         % On définit le répertoire courant
+    \AfficheCorriges[2]                                         % On ajoute les corigés
   
     \backmatter                                         % Formatage des pages postliminaires
 
