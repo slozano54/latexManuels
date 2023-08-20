@@ -1,38 +1,58 @@
 \begin{exercice}
     La vitesse d'un train en \Vitesse{}, $t$ minutes après le départ, vaut $3t^2$ pour $0 \leq t \leq 10$.
 
-    On appelle $v$ la fonction qui, au temps écoulé depuis le départ exprimé en minutes, associe la vitesse du train en \Vitesse{}.
+    On appelle $v$ la fonction qui, au temps écoulé en minutes depuis le départ, associe la vitesse du train en \Vitesse{}.
     \begin{enumerate}
         \item Calculer $v(5)$.
         \item Donner une interprétation du résultat précédent.
         \item Déterminer l'antécédent de \num{168.75} par $v$.
         \item Donner une interprétation du résultat précédent.
         \item Le graphique ci-dessous représente l'évolution de la vitesse, en \Vitesse{}, du train en fonction du temps
-        écoulé, en minutes, depuis son départ.
-
-        \medskip
+        écoulé, en minutes, depuis son départ.\par        
+        % Pb mplibcode
+        % \scalebox{0.7}{
+        % \Fonction[%
+        %     Calcul=3*(x**2),
+        %     Trace,CouleurTrace=bleu,
+        %     Xmin=0,Xmax=10,Xstep=2.5,
+        %     Ymin=0,Ymax=5.8,Ystep=60,
+        %     Origine={(1,.5)},
+        %     Grille,PasGrilleX=1,PasGrilleY=0.5,
+        %     Graduations,PasGradY=30,PasGradX=5,
+        %     Bornea=0,Borneb=10,
+        %     LabelX={\bf Temps (en min)},
+        %     LabelY={\bf Vitesse (en km/h)},
+        %     Traces={
+        %         draw placepoint(10,300)--placepoint(20,300) withcolor bleu;
+        %     }            
+        %     ]{}
+        % }
         \scalebox{0.7}{
         \Fonction[%
-            Calcul=3*(x**2),
-            Trace,CouleurTrace=bleu,
-            Xmin=0,Xmax=10,Xstep=2.5,
-            Ymin=0,Ymax=5.8,Ystep=60,
-            Origine={(1,.5)},
-            Grille,PasGrilleX=1,PasGrilleY=0.5,
-            Graduations,PasGradY=30,PasGradX=5,
-            Bornea=0,Borneb=10,
-            LabelX={\bf Temps (en min)},
-            LabelY={\bf Vitesse (en km/h)},
+            Calcul=3*(x**2),%
+            Epaisseur=1.5,%
+            Trace,%
+            CouleurTrace=bleu,%
+            Xmin=0,Xmax=10,Xstep=2.5,%
+            Ymin=0,Ymax=5.8,Ystep=60,%
+            Origine={(1,.5)},%
+            Grille,PasGrilleX=1,PasGrilleY=0.5,%
+            Graduations,PasGradY=30,PasGradX=5,%
+            Bornea=0,Borneb=10,%
+            % Problème de compilation avec la mise en gras
+%            LabelX={{\bf Temps (en min)}},%
+%            LabelY={{\bf Vitesse (en km/h)}},%
+            LabelX={Temps (en min)},%
+            LabelY={Vitesse (en km/h)},%
             Traces={
-                draw placepoint(10,300)--placepoint(20,300) withcolor bleu;
-            }            
-            ]{}
+                draw placepoint(10,300)--placepoint(20,300) withcolor bleu withpen pencircle scaled 1.5bp;
+            },%
+        ]{}
         }
-
-        \item Déterminer le temps, environ, que met le train pour atteindre \Vitesse{120}.
+        \item Déterminer approximativement le temps mis par le train pour atteindre \Vitesse{120}.
         \item Déterminer la vitesse maximale du train.
         \item Déterminer au bout de combien de temps cette vitesse maximale est atteinte.
-        \item Préciser une expression de la fonction $v$\\pour $0 \leq x \leq 20$.
+        \item Préciser une expression de la fonction $v$, $0 \leq x \leq 20$.
     \end{enumerate}
 \end{exercice}
 \begin{corrige}
@@ -68,8 +88,11 @@
             Grille,PasGrilleX=1,PasGrilleY=0.5,
             Graduations,PasGradY=30,PasGradX=5,
             Bornea=0,Borneb=10,
-            LabelX={\bf\footnotesize Temps (min)},
-            LabelY={\bf\footnotesize Vitesse (en km/h)},
+            % Problème de compilation avec la mise en gras
+            % LabelX={\bf\footnotesize Temps (min)},%
+            % LabelY={\bf\footnotesize Vitesse (en km/h)},
+            LabelX={Temps (min)},
+            LabelY={Vitesse (en km/h)},
             Traces={
                 draw placepoint(10,300)--placepoint(20,300) withcolor bleu;
             }            
