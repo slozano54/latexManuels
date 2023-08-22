@@ -1,0 +1,67 @@
+\documentclass[12pt,french,a4paper]{article}
+\usepackage{ProfCollege}
+%===================================================
+% Modifictaion pour la compilation en mode luaLaTeX
+%===================================================
+% Font
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\setmainfont{TeX Gyre Schola}
+\setmathfont{TeX Gyre Schola Math}
+% \usepackage[math-style=french,Scale=0.98]{fourier-otf}
+% \newfontfamily\myfontScratch[Scale=0.725]{DejaVu Sans}
+
+
+% Pour gérer la géométrie de la page.
+\usepackage[a4paper,margin=1cm,noheadfoot]{geometry}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% titre
+\title{\textcolor{red}{\sc -Repères annuels de progression-\\-Cycle 3-}}
+\author{{\sc S.Lozano}}
+\date{19 septembre 2020 - mise à jour \today}
+
+% Pour utiliser les usages français grâce au <french> de l'option de classe.
+\usepackage{babel}
+
+%Liste avec petite fléches zarbi 
+\newenvironment{mylist}{\begin{list}{$\leadsto$}{}}{\end{list}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\abstract{Factorisation des repères annuels de progression pour les chapitres. Synthèse globale.}
+
+\section*{Nombres et calculs}
+\input{./c31_nombres_calculs1_nombres_entiers}
+\par\smallskip
+\input{./c31_nombres_calculs2_fractions}
+\par\smallskip
+\input{./c31_nombres_calculs3_nombres_decimaux}
+\par\smallskip
+\input{./c31_nombres_calculs4_calcul}
+\par\smallskip
+\input{./c31_nombres_calculs5_resolution_de_problemes}
+
+\section*{Grandeurs et mesures}
+\input{./c32_grandeursEtMesures1_longueurs}
+\par\smallskip
+\input{./c32_grandeursEtMesures2_durees}
+\par\smallskip
+\input{./c32_grandeursEtMesures3_aires}
+\par\smallskip
+\input{./c32_grandeursEtMesures4_volumes}
+\par\smallskip
+\input{./c32_grandeursEtMesures5_angles}
+\par\smallskip
+\input{./c32_grandeursEtMesures6_proportionnalite}
+
+\section*{Espace et géométrie}
+\input{./c33_espace_geo_partie1}
+\par\smallskip
+\input{./c33_espace_geo_partie2}
+\par\smallskip
+\input{./c33_espace_geo_partie3}
+\par\smallskip
+\input{./c33_espace_geo_partie4}
+\end{document}

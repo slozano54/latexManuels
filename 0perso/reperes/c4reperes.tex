@@ -1,0 +1,76 @@
+\documentclass[12pt,french,a4paper]{article}
+\usepackage{ProfCollege}
+%===================================================
+% Modifictaion pour la compilation en mode luaLaTeX
+%===================================================
+% Font
+\usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+\setmainfont{TeX Gyre Schola}
+\setmathfont{TeX Gyre Schola Math}
+% \usepackage[math-style=french,Scale=0.98]{fourier-otf}
+% \newfontfamily\myfontScratch[Scale=0.725]{DejaVu Sans}
+
+
+% Pour gérer la géométrie de la page.
+\usepackage[a4paper,margin=1cm,noheadfoot]{geometry}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% titre
+\title{\textcolor{red}{\sc -Repères annuels de progression-\\-Cycle 4-}}
+\author{{\sc S.Lozano}}
+\date{19 septembre 2020 - mise à jour \today}
+
+% Pour utiliser les usages français grâce au <french> de l'option de classe.
+\usepackage{babel}
+
+%Liste avec petite fléches zarbi 
+\newenvironment{mylist}{\begin{list}{$\leadsto$}{}}{\end{list}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\abstract{Factorisation des repères annuels de progression pour les chapitres. Synthèse globale.}
+
+\section*{Nombres et calculs}
+\input{./c41_nombres_calculs1_nombres_decimaux_relatifs}
+\par\smallskip
+\input{./c41_nombres_calculs2_fractions_nombres_rationnels}
+\par\smallskip
+\input{./c41_nombres_calculs3_racines_carrees}
+\par\smallskip
+\input{./c41_nombres_calculs4_puissances}
+\par\smallskip
+\input{./c41_nombres_calculs5_divisibilite_nb_premiers}
+\par\smallskip
+\input{./c41_nombres_calculs6_expressions_litterales}
+\par\smallskip
+\input{./c41_nombres_calculs7_distributivite}
+\par\smallskip
+\input{./c41_nombres_calculs8_equations}
+
+\section*{Gestion de données}
+\input{./c42_gestionDeDonnees_fonctions1_statistiques}
+\par\smallskip
+\input{./c42_gestionDeDonnees_fonctions2_probabilites}
+\par\smallskip
+\input{./c42_gestionDeDonnees_fonctions3_proportionnalite}
+\par\smallskip
+\input{./c42_gestionDeDonnees_fonctions4_fonctions}
+
+\section*{Grandeurs et mesures}
+\input{./c43_grandeursEtMesures1_calculs_sur_grandeurs}
+\par\smallskip
+\input{./c43_grandeursEtMesures2_effet_des_transformations}
+\par\smallskip
+\section*{Espace et géométrie}
+\input{./c44_espace_geo1_espace}
+\par\smallskip
+\input{./c44_espace_geo2_figures_et_configurations}
+\par\smallskip
+\input{./c44_espace_geo3_tranformations}
+
+\section*{Algorithmique et programmation}
+\input{./c45_algorithmique_programmation}
+
+\end{document}
