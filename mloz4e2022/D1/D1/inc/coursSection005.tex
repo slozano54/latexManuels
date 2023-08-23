@@ -1,50 +1,70 @@
 \section{Poucentages}
-% \subsection{Calculer le pourcentage d'un nombre}
-% \proprNum{(admise)}{on veut prendre "$t\%$" d'un nombre}{on le multiplie par $\dfrac{t}{100}$}
+\begin{methode*1}[Calculer le pourcentage d'un nombre]
+    Si on veut prendre "$t\%$" d'un nombre alors on le multiplie par $\dfrac{t}{100}$.
+    \exercice
+    \begin{enumerate}    
+        \item Dans un collège de $560$ élèves, $35\%$ des élèves sont demi-pensionnaires. Calculer le nombre de demi-pensionnaires.
+        \item Dans une classe de \num{23} élèves, $100 \%$ sont externes. Déterminer le nombre d'externes.
+        \item \textit{C'est Mardi gras et aujourd'hui on a $40\%$ sur les crêpes car la boulangère est de bonne humeur. D'ordinaire la crêpe coûte \Prix{2}.}
+        \begin{enumerate}
+            \item Déterminer le montnat de la réduction.
+            \item Calculer alors le prix d'une crêpe?
+        \end{enumerate}
+    \end{enumerate}
+    \correction
+    \begin{enumerate}    
+        \item \Pourcentage[Fractionnaire]{35}{560} 
+        \num{196} élèves sont donc demi-pensionnaires.
+        \item \Pourcentage[Fractionnaire]{100}{23}
+        Ou alors on pense que $100\%$ c'est la totalité ! \num{23} élèves sont donc externes !
+        \item \textit{C'est Mardi gras et aujourd'hui on a $40\%$ sur les crêpes car la boulangère est de bonne humeur. D'ordinaire la crêpe coûte \Prix{2}.}
+        \par\medskip
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                Montant de la réduction&$R$&\Prix{40}\\
+                \hline
+                Prix payé sans réduction&\Prix{2}&\Prix{100}\\
+                \hline
+            \end{tabular}        
+        }
+        \par\medskip
+        C'est un tableau de proportionnalité, donc les rapports $\dfrac{R}{2}$ et $\dfrac{40}{100}$ sont égaux, 
+        d'où $\dfrac{R}{2}=\dfrac{40}{100}$ d'où en les multipliant par 2, $\dfrac{R}{2} \times 2=\dfrac{40}{100} \times 2$ d'où $R=\dfrac{40}{100} \times 2=\num{0.8}$.
+        \par\medskip
+        \begin{enumerate}
+            \item Le montant de la réduction est donc de \Prix{0.8}.
+            \item La crêpe coûtera donc \Prix{1.2}.
+        \end{enumerate}
+    \end{enumerate}
+\end{methode*1}
 
-% \Exemples{}{
-% \begin{mylist}
-% \item $35\%$ des élèves d'un collège de $560$ élèves sont demi-pensionnaires, donc $560\times \dfrac{35}{100}=196$ élèves.
-% \item $100 \%$ d'une classe de $5^{eme}$ de $23$ élèves est externe, c'est à dire $23\times \dfrac{100}{100}= 23$ élèves!
-% \item \textit{C'est Mardi gras et aujourd'hui on a $40\%$ sur les crêpes car la boulangère est de bonne humeur. D'ordinaire la crêpe coûte $2$ \textgreek{\euro}.}
-% \begin{enumerate}
-% \item \`{A} combien s'élève la réduction?
-% \item Combien payera t'on alors une crêpe?
-% \end{enumerate}
-% \par\vspace{0.5cm}
-% \begin{tabular}{|c|c|c|}
-% \hline
-% Montant de la réduction&$R$&$40$ \textgreek{\euro}\\
-% \hline
-% Prix payé sans réduction&$2$ \textgreek{\euro}&$100$ \textgreek{\euro}\\
-% \hline
-% \end{tabular}
-% \par\vspace{0.5cm}
-% C'est un tableau de proportionnalité, donc les rapports $\dfrac{R}{2}$ et $\dfrac{40}{100}$ sont égaux,
-
-% d'où $\dfrac{R}{2}=\dfrac{40}{100}$ d'où en les multipliant par 2, $\dfrac{R}{2} \times 2=\dfrac{40}{100} \times 2$ d'où $R=\dfrac{40}{100} \times 2$
-% \end{mylist}
-% }
-
-% \subsection{Déterminer un pourcentage}
-% \Exemples[Exemple]{}{
-% \textit{On se demande quel est le pourcentage d'élèves de $5^{\grave{e}me}$ qui sont demi-pensionnaires. Aujourd'hui sur les \ldots \ldots \ldots présents, il y a \ldots \ldots \ldots demi-pensionnaires.}
-
-% "Si dans la classe il y avait eu $100$ présents alors combien y aurait-il de demi-pensionnaires?"
-
-% C'est une situation de proportionnalité.
-
-% \begin{center}
-% \begin{tabular}{|c|c|c|}
-% \hline
-% Nombre d'élèves présents&$100$&$n_{pr\acute{e}sents}$\\
-% \hline
-% Nombre de demi-pensionnaires&$n$&$n_{DP}$\\
-% \hline
-% \end{tabular}
-% \end{center}
-
-% Les rapports $\dfrac{n}{100}$ et $\dfrac{n_{DP}}{n_{pr\acute{e}sents}}$ sont égaux d'où
-% $n=\dfrac{n_{DP}}{n_{pr\acute{e}sents}}\times 100$
-% }
+\begin{methode*1}[Déterminer un pourcentage]    
+    \exercice
+    Dans un collège de \num{475} élèves, il y a \num{323} externes.
+    Déterminer le pourcentage d'externes.
+    \correction
+    Si dans ce collège il y avait $100$ élèves alors combien y aurait-il d'externes ?\par
+    C'est une situation de proportionnalité.
+    \par\medskip
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|>{\columncolor{LightGray}}m{0.25\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+        \hline
+        Nombre d'externes&\num{323}&{\bfseries\color{OrangeRed}$x$ ?}\\
+        \hline
+        Nombre d'élèves&\num{475}&\num{100}\\
+        \hline            
+    \end{tabular}
+    }
+    \par\medskip
+    On détermine la quatrième proportionnelle à l'aide des produits en croix.
+    \begin{align*}
+        \dfrac{323}{475}                            &=\dfrac{\color{OrangeRed} x}{100}&\\
+        475\times {\color{OrangeRed} x}             &= 323\times 100                  &\text{\bfseries \color{OrangeRed}Les produits en croix sont égaux.}\\
+        \dfrac{475\times {\color{OrangeRed} x}}{475}&= \dfrac{323\times 100}{475}     &\text{\bfseries \color{OrangeRed}On divise les deux membres par 6.}\\
+        {\color{OrangeRed} x}                       &=\num{68}                        &\text{\bfseries \color{OrangeRed}On simplifie et on calcule.}
+    \end{align*}
+    \par\medskip
+    Il y a donc $68\%$ d'externes dans ce collège.
+\end{methode*1}
 
