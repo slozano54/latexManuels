@@ -1,2 +1,116 @@
-\section{\dots}
-\dots
+\section{Quatrième proportionnelle}
+\begin{definition}
+    Connaissant trois valeurs $a$, $b$ et $c$, le nombre $x$ qui fait du tableau suivant, un tableau de proportionnalité est appelé \mbox{\textbf{une quatrième proportionnelle}.}\par\smallskip
+    {\renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|>{\columncolor{LightGray}}m{0.15\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+            \hline
+            Grandeur n° 1&$a$&$c$\\
+            \hline
+            Grandeur n° 2&$b$&{\bfseries\color{OrangeRed}$x$ ?}\\
+            \hline            
+        \end{tabular}
+    }
+\end{definition}
+
+\begin{remarque}
+    Les quatre tableaux suivants sont équivalents.\par\smallskip
+    {\renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|>{\columncolor{LightGray}}m{0.15\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+            \hline
+            Grandeur n° 1&$a$&$c$\\
+            \hline
+            Grandeur n° 2&$b$&{\bfseries\color{OrangeRed}$x$ ?}\\
+            \hline            
+        \end{tabular}
+        \hspace*{7mm}
+        \begin{tabular}{|>{\columncolor{LightGray}}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+            \hline
+            Grandeur n° 2&$b$&{\bfseries\color{OrangeRed}$x$ ?}\\
+            \hline
+            Grandeur n° 1&$a$&$c$\\            
+            \hline            
+        \end{tabular}
+        \par\smallskip
+        \begin{tabular}{|>{\columncolor{LightGray}}m{0.15\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+            \hline
+            Grandeur n° 1&$c$&$a$\\
+            \hline
+            Grandeur n° 2&{\bfseries\color{OrangeRed}$x$ ?}&$b$\\
+            \hline            
+        \end{tabular}
+        \hspace*{7mm}
+        \begin{tabular}{|>{\columncolor{LightGray}}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+            \hline
+            Grandeur n° 2&{\bfseries\color{OrangeRed}$x$ ?}&$b$\\
+            \hline
+            Grandeur n° 1&$c$&$a$\\            
+            \hline            
+        \end{tabular}
+    }
+\end{remarque}
+
+\begin{remarque}
+    \textbf{La quatrième proportionnelle} $\color{OrangeRed} x$ est donc aussi le nombre qui rend vraie l'une des égaliés suivantes.
+
+    $\dfrac{a}{b}=\dfrac{c}{\color{OrangeRed} x}$\hfill$\dfrac{b}{a}=\dfrac{\color{OrangeRed} x}{c}$\hfill$\dfrac{c}{\color{OrangeRed} x}=\dfrac{a}{b}$\hfill$\dfrac{\color{OrangeRed} x}{c}=\dfrac{b}{a}$
+\end{remarque}
+
+\begin{exemple*1}
+    Lisa lit sur sa recette de mousse au chocolat qu'il faut \Masse[g]{108} de beurre pour six personnes .
+    Déterminer la masse de beurre nécessaire pour cinq personnes.
+    \correction    
+    \begin{itemize}
+        \item On regroupe les données dans un tableau de proportionnalité.\par\smallskip
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.25\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+                \hline
+                Nombre de personnes &$6$&$5$\\
+                \hline
+                Masse de beurre en \Masse[g]{}&$108$&{\bfseries\color{OrangeRed}$x$ ?}\\
+                \hline            
+            \end{tabular}
+        }\par\smallskip
+        \item On détermine la quatrième proportionnelle à l'aide des produits en croix.
+        \begin{align*}
+            \dfrac{6}{108}                              &=\dfrac{5}{\color{OrangeRed} x}&\\
+            6\times {\color{OrangeRed} x}               &= 108\times 5                  &\text{\bfseries \color{OrangeRed}Les produits en croix sont égaux.}\\
+            \dfrac{6\times {\color{OrangeRed} x}}{6}    &= \dfrac{108\times 5}{6}       &\text{\bfseries \color{OrangeRed}On divise les deux membres par 6.}\\
+            {\color{OrangeRed} x}                       &=\num{90}                      &\text{\bfseries \color{OrangeRed}On simplifie et on calcule.}
+            \end{align*}
+        \item Il faut donc \Masse[g]{90} de beurre pour cinq personnes.
+    \end{itemize}
+\end{exemple*1}
+
+\begin{exemple*1}
+    Un fichier de \Octet[Mo]{225} est téléchargé en \Temps{;;;;54}.\par\smallskip
+    Déterminer le temps nécessaire au téléchargement d'un fichier de \Octet[Mo]{850} dans les mêmes conditions.
+    \correction
+    Pour être dans une situation de proportionnalité, il convient de supposer que le débit de la connexion est constant.
+    \begin{itemize}
+        \item On regroupe les données dans un tableau de proportionnalité.\par\smallskip
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.45\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+                \hline
+                Durée de téléchargement en secondes &$54$&{\bfseries\color{OrangeRed}$x$ ?}\\
+                \hline
+                Taille du fichier en \Octet[Mo]{}&$225$&$850$\\
+                \hline            
+            \end{tabular}
+        }\par\smallskip
+        \item On détermine la quatrième proportionnelle à l'aide des produits en croix.
+        \begin{align*}
+            \dfrac{54}{225}                             &=\dfrac{\color{OrangeRed} x}{850}&\\
+            225\times {\color{OrangeRed} x}             &= 54\times 850                   &\text{\bfseries \color{OrangeRed}Les produits en croix sont égaux.}\\
+            \dfrac{225\times {\color{OrangeRed} x}}{225}&= \dfrac{54\times 850}{225}      &\text{\bfseries \color{OrangeRed}On divise les deux membres par 6.}\\
+            {\color{OrangeRed} x}                       &=\num{204}                       &\text{\bfseries \color{OrangeRed}On simplifie et on calcule.}
+            \end{align*}
+        \item Il faut donc \Temps{;;;;204} soit \Temps{;;;;3;24} pour télécharger un fichier de \Octet[Mo]{850}.
+    \end{itemize}
+\end{exemple*1}
+
+\begin{remarque}
+    Pour le premier exemple, le calcul de la quantité de beurre pour une personne est possible et permet aussi l'obtention de la quantité pour cinq personne.\par
+    Par contre, ce calcul s'avère délicat pour le second exemple. On a alors tout intérêt à calculer une quatrième proportionnelle.
+\end{remarque}
+
+
