@@ -1,21 +1,121 @@
 \section{Grandeurs composées}
 \subsection{Vitesse moyenne}
-% \proprNum{(admise)}{l'on a parcouru une distance $d$ pendant un temps $t$}{sur ce parcours, {\bf la vitesse moyenne} $v$ est le quotient de la distance parcourue $d$ par le temps $t$ du trajet.
-% $$v=\frac{d}{t}$$
-% }
+\begin{definition}
+    Si on a parcourt une distance $d$ pendant un temps $t$, alors sur ce parcours, {\bf la vitesse moyenne} $v$ est le quotient de la distance parcourue $d$ par le temps $t$ du trajet.
+    $$v=\frac{d}{t}$$
+\end{definition}
 
-% \Remarques[Remarque]{
-% L'unit\'e de vitesse d\'epend des unit\'es choisies pour la distance et le temps.\\
-% Par exemple, si on exprime la distance en {\bf kilom\`{e}tres} et le temps en {\bf heures} on obtiendra une vitesse en {\bf kilom\`{e}tre par heure}.\\
-% Citer d'autres exemples \ldots
-% }
+\begin{remarque}
+    L'unité de vitesse dépend des unités choisies pour la distance et le temps.\\
+    Par exemple, si on exprime la distance en {\bf kilomètres} et le temps en {\bf heures} on obtiendra une vitesse en {\bf kilomètre par heure}.\\
 
-% \Exemples[Application]{}{
-% En parcourant $120\,km$ en 2 heures, la vitesse moyenne est $\dfrac{120}2=60\,km/h$ ou $60\,km.h^{-1}$.
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|*{3}{>{\centering\arraybackslash}m{0.3\linewidth}|}}
+        \hline
+        \rowcolor{LightGray}Distance en& Temps en&Vitesse en\\
+        \hline
+        \Lg[km]{}&h&\Vitesse[kmh]{}\\        
+        \hline
+        \Lg[m]{}&s&\Vitesse[ms]{}\\        
+        \hline
+        \Lg[km]{}&s&\Vitesse[kms]{}\\        
+        \hline
+        \Lg[m]{}&h&\Vitesse[mh]{}\\        
+        \hline
+    \end{tabular}
+    }
+\end{remarque}
 
-% En parcourant $30\,m$ en 5 secondes, la vitesse moyenne est $\dfrac{30}5=6\,m/s$ ou $6\,m.s^{-1}$.
-% }
+\begin{exemple}
+    Déterminer la vitesse moyenne dans les cas suivants :
+    \begin{enumerate}
+        \item On parcourt \Lg[km]{120} en 2 heures.
+        \item On parcourt \Lg[m]{30} en 5 secondes.
+    \end{enumerate}
+    \correction
+    \begin{enumerate}
+        \item En parcourant \Lg[km]{120} en 2 heures, la vitesse moyenne est $\dfrac{120}2=\Vitesse[kmh]{60}$ ou $60\,km.h^{-1}$.
+        \item En parcourant \Lg[m]{30} en 5 secondes, la vitesse moyenne est $\dfrac{30}5=\Vitesse[ms]{6}$ ou $6\,m.s^{-1}$.
+    \end{enumerate}
+\end{exemple}
 
 \subsection{Débit}
+\begin{definition}
+    On appele {\bfseries débit}, la quantité de liquide ou de gaz fournie par un appareil pendant un temps donné.    
+\end{definition}
+
+\begin{exemple*1}
+    Un robinet fuit. Le gaspillage sur une journée représente \Capa[L]{432}. Déterminer le débit de cette fuite en \Capa[L]{}/min.
+    \correction
+    Il faut calculer le rapport entre la quantité d'eau en \Capa[L]{} et le temps en min. Une journée compte \Temps{;;;24}, soit \Temps{;;;;1440}.
+    \begin{itemize}
+        \item On regroupe les données dans un tableau de proportionnalité.\par\smallskip
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.45\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+                \hline
+                Volume d'eau en \Capa[L]{} &$432$&{\bfseries\color{OrangeRed}$x$ ?}\\
+                \hline
+                Temps en min&\num{1440}&$1$\\
+                \hline            
+            \end{tabular}
+        }\par\smallskip
+        \item On détermine la quatrième proportionnelle.
+        \begin{align*}
+            \dfrac{432}{\num{1440}}                     &=\dfrac{\color{OrangeRed} x}{1}&\\
+            {\color{OrangeRed} x}                       &=\num{0.3}                       &\text{\bfseries \color{OrangeRed}On simplifie et on calcule.}
+            \end{align*}
+        \item Le débit de cette fuite est donc de \Capa[L]{0.3}/min.
+    \end{itemize}
+\end{exemple*1}
 
 \subsection{Masse volumique}
+\begin{definition}
+    On appele {\bfseries masse volumique}, la masse d'un matériau par unité de volume.
+\end{definition}
+
+\begin{exemple*1}
+    On souhaite déterminer quel métal compose un objet. Pendant l'expérience, on constate que cet objet pèse \Masse[g]{147.5} et son volume vaut \Capa[mL]{11.06}.\par
+    Déteminer le métal à l'aide de ce tableau de masses volumiques.\par\medskip
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|>{\centering\arraybackslash}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.5\linewidth}|}
+        \hline
+        \rowcolor{LightGray}Métal& Masse volumique à l'état solide en \Capa[g]{}/\Vol[cm]{}\\
+        \hline
+        Aluminium   &\num{2.7}\\\hline
+        Fer         &\num{7.86}\\\hline
+        Cuivre      &\num{8.92}\\\hline
+        Argent      &\num{10.5}\\\hline
+        Mercure     &\num{13.6}\\\hline
+        Or          &\num{19.3}\\\hline
+    \end{tabular}
+    }\par\medskip
+    \correction
+    \Capa[mL]{11.06}=\Vol[cm]{11.06}, donc la masse volumique de ce solide vaut expérimentalement $\num{147.5}\div\num{11.06}\simeq\MasseVol[gcm]{13.34}$ .
+    Les masses volumiques sont suffisamment distinctes pour dire que ce métal est du mercure.    
+\end{exemple*1}
+
+\begin{exemple*1}
+    L'or est un métal très dense. Sa masse volumique vaut \MasseVol[kgdm]{19.3}. La banque de France le conserve sous frme de lingots de \Lg[dm]{2.65} de hauteur et de base d'aire \Aire[dm]{0.244}.
+    Déteminer la masse d'un lingot.
+    \correction
+    Une masse volumique de \MasseVol[kgdm]{19.3} signifie que \Vol[dm]{1} d'or pèse \Masse[kg]{19.3}
+    \begin{itemize}
+        \item On calcule la masse d'un lingot, $\Aire[dm]{0.244}\times\Lg[dm]{2.65}=\Vol[dm]{0.6466}$ puis on regroupe les données dans un tableau de proportionnalité.\par\smallskip
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.45\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|>{\centering\arraybackslash}m{0.1\linewidth}|}
+                \hline
+                Volume d'or en \Vol[dm]{}   &$1$&$\num{0.6466}$\\
+                \hline
+                Masse en \Masse[kg]{}       &\num{19.3}&{\bfseries\color{OrangeRed}$x$ ?}\\
+                \hline            
+            \end{tabular}
+        }\par\smallskip
+        \item On détermine la quatrième proportionnelle.
+        \begin{align*}
+            \dfrac{1}{\num{19.3}}                       &=\dfrac{\num{0.6466}}{\color{OrangeRed} x}&\\
+            1\times {\color{OrangeRed} x}               &= \num{19.3}\times\num{0.6466}            &\text{\bfseries \color{OrangeRed}Les produits en croix sont égaux.}\\            
+            {\color{OrangeRed} x}                       &=\num{12.48}                       &\text{\bfseries \color{OrangeRed}On simplifie et on calcule.}
+            \end{align*}
+        \item Un lingot d'or pèse donc \Masse[kg]{12.48}.
+    \end{itemize}
+\end{exemple*1}
