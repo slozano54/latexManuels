@@ -1,9 +1,96 @@
 \begin{exercice*}
-    \dots
+    \phantom{rrr}\par
+    \begin{minipage}{0.8\linewidth}
+    Un bac à sable a \\
+    une forme triangulaire,\\
+    similaire à la figure ci-contre.\\\smallskip
+    Les dimensions réelles du terrain sont :\\ 
+    $DE = \Lg[m]{12}$, $EF = \Lg[m]{9}$, $DF = \Lg[m]{15}$.\\\smallskip
+    On veut construire ce triangle à l'échelle $\frac{1}{200}$. Compléter le tableau ci-dessous.
+    \end{minipage}
+    \begin{minipage}{0.2\linewidth}
+        \hspace*{-20mm}
+        \begin{Geometrie}
+            pair D,E,F;
+            D=u*(1,4);
+            E-D=u*(4,0);
+            F-E=u*(0,-3);
+            draw D--E--F--cycle;
+            label.ulft(btex $D$ etex,D);
+            label.urt(btex $E$ etex,E);
+            label.lrt(btex $F$ etex,F);
+        \end{Geometrie}
+    \end{minipage}
+    {\renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|l|*{3}{>{\centering\arraybackslash}m{0.1\linewidth}|}l}
+        \cline{2-4}
+        \multicolumn{1}{l|}{}&\cellcolor{LightGray}$DE$&\cellcolor{LightGray}$EF$&\cellcolor{LightGray}$DF$&\\\cline{1-4}
+        \cellcolor{LightGray}Dimensions réelles   & \Lg[m]{12} & \Lg[m]{9} & \Lg[m]{15} & \tikz[remember picture,overlay]{\coordinate[name=C,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{1-4}
+        \cellcolor{LightGray}Dimensions du dessin & \Lg[cm]{6} &           &            &\tikz[remember picture,overlay]{\coordinate[name=D,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{1-4}
+    \end{tabular}
+    \par\medskip
+    \tikzstyle{FlechePropor}=[-{Stealth[width=2mm]}]
+    \begin{tikzpicture}[remember picture,overlay]%
+        \draw[FlechePropor,out=-30,in=30] (C) to node[transform canvas={xshift=1pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,right]{$\times\dots$}(D);%
+        \coordinate[shift={(20mm,2mm)}] (n) at (D.east);
+        \coordinate[shift={(0mm,-2mm)}] (d) at (D.south);
+        \coordinate[shift={(0mm,2mm)}] (c) at (C.north);
+        \draw (d) to node[transform canvas={xshift=40pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,right]{$\times\dots$}(c);%
+        \tikzmath{  
+            \rx= 2.9;  % x radius of ellipse
+            \ry= 0.6;  % y radius of ellipse
+        };
+        \draw[FlechePropor] (d) arc[start angle=-60, end angle=60, x radius=\rx, y radius=\ry];
+    \end{tikzpicture}%
+    }
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \phantom{rrr}\par
+    \begin{minipage}{0.8\linewidth}
+    Un bac à sable a \\
+    une forme triangulaire,\\
+    similaire à la figure ci-contre.\\\smallskip
+    Les dimensions réelles du terrain sont :\\ 
+    $DE = \Lg[m]{12}$, $EF = \Lg[m]{9}$, $DF = \Lg[m]{15}$.\\\smallskip
+    On veut construire ce triangle à l'échelle $\frac{1}{200}$. Compléter le tableau ci-dessous.
+    \end{minipage}
+    \begin{minipage}{0.1\linewidth}
+        \hspace*{-20mm}
+        \begin{Geometrie}
+            pair D,E,F;
+            D=u*(1,4);
+            E-D=u*(4,0);
+            F-E=u*(0,-3);
+            draw D--E--F--cycle;
+            label.ulft(btex $D$ etex,D);
+            label.urt(btex $E$ etex,E);
+            label.lrt(btex $F$ etex,F);
+        \end{Geometrie}
+    \end{minipage}
+    {\renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|l|*{3}{>{\centering\arraybackslash}m{0.1\linewidth}|}l}
+        \cline{2-4}
+        \multicolumn{1}{l|}{}&\cellcolor{LightGray}$DE$&\cellcolor{LightGray}$EF$&\cellcolor{LightGray}$DF$&\\\cline{1-4}
+        \cellcolor{LightGray}Dimensions réelles   & \Lg[m]{12} & \Lg[m]{9} & \Lg[m]{15} & \tikz[remember picture,overlay]{\coordinate[name=C,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{1-4}
+        \cellcolor{LightGray}Dimensions du dessin & \Lg[cm]{6} & {\color{red} \Lg[cm]{4.5}}          &  {\color{red} \Lg[cm]{7.5}}         &\tikz[remember picture,overlay]{\coordinate[name=D,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{1-4}
+    \end{tabular}
+    \par\medskip
+    \tikzstyle{FlechePropor}=[-{Stealth[width=2mm]}]
+    \begin{tikzpicture}[remember picture,overlay]%
+        \draw[FlechePropor,out=-30,in=30] (C) to node[transform canvas={xshift=1pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,right]{$\times{\color{red}{\num{0.005}}}$}(D);%
+        \coordinate[shift={(20mm,2mm)}] (n) at (D.east);
+        \coordinate[shift={(0mm,-2mm)}] (d) at (D.south);
+        \coordinate[shift={(0mm,2mm)}] (c) at (C.north);
+        \draw (d) to node[transform canvas={xshift=40pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,right]{$\times{\color{red}{\num{200}}}$}(c);%
+        \tikzmath{  
+            \rx= 2.9;  % x radius of ellipse
+            \ry= 0.6;  % y radius of ellipse
+        };
+        \draw[FlechePropor] (d) arc[start angle=-60, end angle=60, x radius=\rx, y radius=\ry];
+    \end{tikzpicture}%
+    }
+    {\color{red}{{\bfseries Remarque : } $\dfrac{1}{200}=\num{0.005}$}}
 \end{corrige}
 
