@@ -1,9 +1,37 @@
 \begin{exercice*}
-    \dots
+    Pour faire des crêpes, Achille a besoin de : \Masse[g]{250} de farine, 3 \oe{}ufs et $\frac{1}{2}$ litre de lait.
+    \begin{enumerate}
+        \item Déterminer le nombre d'\oe{}ufs nécessaires pour \Masse[g]{750} de farine.
+        \item Déterminer la quantité de farine nécessaire pour $\frac{1}{4}$ de litre de lait.
+    \end{enumerate}
+    {\bfseries Remarque : }On pourra par exemple regrouper l'ensemble des données dans un tableau avant de répondre aux questions.
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Pour faire des crêpes, Achille a besoin de : \Masse[g]{250} de farine, 3 \oe{}ufs et $\frac{1}{2}$ litre de lait.\par
+    \begin{enumerate}
+        \item Déterminer le nombre d'\oe{}ufs nécessaires pour \Masse[g]{750} de farine.\par
+        {\color{red} La quantité de farine est triplée, il faut donc $3\times 3\text{\oe{}ufs}$, c'est à dire \num{9} \oe{}ufs.}        
+        \item Déterminer la quantité de farine nécessaire pour $\frac{1}{4}$ de litre de lait.\par
+        {\color{red} La quantité de lait est divisée par deux, il faut donc $\Masse[g]{250}\div 2$, c'est à dire \Masse[g]{125} de farine.}
+    \end{enumerate}
+    \medskip
+    {\color{red} Il est possible de synthétiser l'ensemble des données dans un tableau, avant de répondre aux questions.}\par\smallskip
+    {\renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{r|*{3}{>{\centering\arraybackslash}m{0.2\linewidth}|}l}
+        \cline{2-4}
+        &\cellcolor{LightGray}Farine    & \cellcolor{LightGray}\OE{}ufs & \cellcolor{LightGray}Lait &\\\cline{2-4}
+        \tikz[remember picture,overlay]{\coordinate[name=A,xshift=\tabcolsep+\arrayrulewidth,yshift=\getstrut\dp];}&\Masse[g]{250}                 & 3                             & $\frac{1}{2}$ \Capa[L]{}  &\tikz[remember picture,overlay]{\coordinate[name=C,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{2-4}
+        \tikz[remember picture,overlay]{\coordinate[name=B,xshift=\tabcolsep+\arrayrulewidth,yshift=\getstrut\dp];}&\Masse[g]{750}                 & ?                             & ?                         &\\\cline{2-4}
+        &?                              & ?                             & $\frac{1}{4}$ \Capa[L]{}  &\tikz[remember picture,overlay]{\coordinate[name=D,xshift=-\tabcolsep-\arrayrulewidth,yshift=\getstrut\dp];}\\\cline{2-4}
+    \end{tabular}
+    \par\medskip
+    \tikzstyle{FlechePropor}=[-{Stealth[width=2mm]}]
+    \begin{tikzpicture}[remember picture,overlay]%
+        \draw[FlechePropor,out=-150,in=150] (A) to node[transform canvas={xshift=-1pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,left]{$\times 3$}(B);%
+        \draw[FlechePropor,out=-30,in=30] (C) to node[transform canvas={xshift=1pt},inner sep=0pt, inner xsep=1pt,fill=white, pos=0.5,right]{$\div 2$}(D);%        
+    \end{tikzpicture}%
+    }
 \end{corrige}
 
