@@ -57,7 +57,9 @@
     On veut construire ce triangle à l'échelle $\frac{1}{200}$. Compléter le tableau ci-dessous.
     \end{minipage}
     \begin{minipage}{0.1\linewidth}
-        \hspace*{-20mm}
+        \vspace*{-5mm}
+        \hspace*{-23mm}
+        \scalebox{0.8}{
         \begin{Geometrie}
             pair D,E,F;
             D=u*(1,4);
@@ -68,7 +70,9 @@
             label.urt(btex $E$ etex,E);
             label.lrt(btex $F$ etex,F);
         \end{Geometrie}
+        }
     \end{minipage}
+    \scalebox{0.8}{
     {\renewcommand{\arraystretch}{1.4}
     \begin{tabular}{|l|*{3}{>{\centering\arraybackslash}m{0.1\linewidth}|}l}
         \cline{2-4}
@@ -91,6 +95,7 @@
         \draw[FlechePropor] (d) arc[start angle=-60, end angle=60, x radius=\rx, y radius=\ry];
     \end{tikzpicture}%
     }
+    }\par\smallskip
     {\color{red}{{\bfseries Remarque : } $\dfrac{1}{200}=\num{0.005}$}}
 \end{corrige}
 
