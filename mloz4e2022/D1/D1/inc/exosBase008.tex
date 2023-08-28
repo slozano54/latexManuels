@@ -1,9 +1,29 @@
 \begin{exercice*}
-    \dots
+    Avec \num{75} bouteilles en plastique, on fabrique trois pulls en maille polaire.\par
+    En complétant le tableau suivant, calculer le nombre de pulls fabriqués avec 825 bouteilles plastiques.
+    \begin{center}
+        \Propor[Math,Stretch=1.2,GrandeurA=Nombre de bouteilles,GrandeurB=Nombre de pulls,CouleurTab=LightGray]{/,/\textcolor{OrangeRed}{$n$ ?}}        
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Avec \num{75} bouteilles en plastique, on fabrique trois pulls en maille polaire.\par
+    En complétant le tableau suivant, calculer le nombre de pulls fabriqués avec 825 bouteilles plastiques.
+    \begin{center}
+        \Propor[Math,Stretch=1.2,GrandeurA=Nombre de bouteilles,GrandeurB=Nombre de pulls,CouleurTab=LightGray]{\textcolor{red}{$75$}/\textcolor{red}{$3$},\textcolor{red}{$825$}/\textcolor{OrangeRed}{$n$ ?}}        
+        \FlechePCB{2}{1}
+    \end{center}
+    {\color{red}
+    On détermine la quatrième proportionnelle à l'aide des produits en croix.
+        \begin{align*}
+            \dfrac{75}{3}                             &=\dfrac{825}{\color{OrangeRed} n}&\\
+            75\times {\color{OrangeRed} n}            &= 3\times 825                    &\text{\tiny\bfseries\color{red}Les produits en croix sont égaux.}\\
+            \dfrac{75\times {\color{OrangeRed} n}}{75}&= \dfrac{3\times 825}{75}        &\text{\tiny\bfseries\color{red}On divise les deux membres par 75.}\\
+            {\color{OrangeRed} n}                     &=33                              &\text{\tiny\bfseries\color{red}On simplifie et on calcule.}
+        \end{align*}
+        \par\smallskip
+        Avec 825 bouteilles, on peut donc faire 33 pulls.
+    }
 \end{corrige}
 

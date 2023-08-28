@@ -1,9 +1,30 @@
 \begin{exercice*}
-    \dots
+    Une voiture consomme en moyenne \Capa[L]{4.9} de gasoil pour \Lg[km]{100} parcourus.\par
+    À l'aide du tableau ci-dessous, déterminer la quantité de gasoil utiliséé pour parcourir \Lg[km]{196}.
+    \begin{center}
+        \Propor[Math,Stretch=1.2,GrandeurA=\phantom{Distance en \Lg[km]{}},GrandeurB=\phantom{Quantité de gasoil en \Capa[L]{}},CouleurTab=LightGray]{/,/}        
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Une voiture consomme en moyenne \Capa[L]{4.9} de gasoil pour \Lg[km]{100} parcourus.\par
+    À l'aide du tableau ci-dessous, déterminer la quantité de gasoil utiliséé pour parcourir \Lg[km]{196}.
+    \begin{center}
+        %\Propor[Math,Stretch=1.2,GrandeurA=Distance en \Lg[km]{},GrandeurB=Quantité de gasoil en \Capa[L]{},CouleurTab=LightGray]{\textcolor{red}{$100$}/\textcolor{red}{$\num{4.9}$},\textcolor{red}{$196$}/\textcolor{OrangeRed}{$v$ ?}}\Propor[Math,Stretch=1.2,GrandeurA=Nombre de bouteilles,GrandeurB=Nombre de pulls,CouleurTab=LightGray]{\textcolor{red}{$75$}/\textcolor{red}{$3$},\textcolor{red}{$825$}/\textcolor{OrangeRed}{$n$ ?}}        
+        \Propor[Math,Stretch=1.2,GrandeurA={Distance en \Lg[km]{}},GrandeurB={Quantité de gasoil en \Capa[L]{}},CouleurTab=LightGray]{\textcolor{red}{$100$}/\textcolor{red}{$\num{4.9}$},\textcolor{red}{$196$}/\textcolor{OrangeRed}{$v$ ?}}
+        \FlechePCB{2}{1}
+    \end{center}
+    {\color{red}
+    On détermine la quatrième proportionnelle à l'aide des produits en croix.
+        \begin{align*}
+            \dfrac{100}{\num{4.9}}                      &=\dfrac{196}{\color{OrangeRed} v} &\\
+            100\times {\color{OrangeRed} v}             &= \num{4.9}\times 196             &\text{\tiny\bfseries\color{red}Les produits en croix sont égaux.}\\
+            \dfrac{100\times {\color{OrangeRed} v}}{100}&= \dfrac{\num{4.9}\times 196}{100}&\text{\tiny\bfseries\color{red}On divise les deux membres par 100.}\\
+            {\color{OrangeRed} v}                       &=\num{9.604}                      &\text{\tiny\bfseries\color{red}On simplifie et on calcule.}
+        \end{align*}
+        \par\smallskip
+        Il faudra donc \Capa[L]{9.604} ! soit environ \Capa[L]{10}.
+    }
 \end{corrige}
 

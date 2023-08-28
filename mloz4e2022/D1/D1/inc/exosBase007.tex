@@ -1,9 +1,32 @@
 \begin{exercice*}
-    \dots
+    Un bouquet de cinq jonquilles coute \Prix{4.50}.\par
+    Calculer le prix d'un bouquet de sept jonquilles en utilisant le tableau ci-dessous.
+    \begin{center}
+        \Propor[Math,Stretch=1.2,GrandeurA=Nombre de jonquilles,GrandeurB=Prix en \Prix{},CouleurTab=LightGray]{5/\num{4.50},7/\textcolor{OrangeRed}{$p$ ?}}        
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Un bouquet de cinq jonquilles coute \Prix{4.50}.\par
+    Calculer le prix d'un bouquet de sept jonquilles en utilisant le tableau ci-dessous.
+    \begin{center}
+        \Propor[Math,Stretch=1.2,GrandeurA=Nombre de jonquilles,GrandeurB=Prix en \Prix{},CouleurTab=LightGray]{5/\num{4.50},7/\textcolor{OrangeRed}{$p$ ?}}
+        \FlechePCB{2}{1}
+    \end{center}
+    {\color{red}
+        On détermine la quatrième proportionnelle à l'aide des produits en croix.
+    }
+    \Coupe
+    {\color{red}
+        \begin{align*}
+            \dfrac{5}{\num{4.50}}                       &=\dfrac{7}{\color{OrangeRed} p}&\\
+            5\times {\color{OrangeRed} p}               &= \num{4.50}\times 7           &\text{\tiny\bfseries\color{red}Les produits en croix sont égaux.}\\
+            \dfrac{5\times {\color{OrangeRed} p}}{5}    &= \dfrac{\num{4.50}\times 7}{5}&\text{\tiny\bfseries\color{red}On divise les deux membres par 5.}\\
+            {\color{OrangeRed} p}                       &=\num{6.30}                    &\text{\tiny\bfseries\color{red}On simplifie et on calcule.}
+        \end{align*}
+        \par\smallskip
+        Sept jonquilles coûtent donc \Prix{6.30}.
+    }
 \end{corrige}
 
