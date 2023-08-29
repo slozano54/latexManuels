@@ -1,9 +1,56 @@
 \begin{exercice*}
-    \dots
+    Un drôle d'épicier utilise le graphique ci-dessous pour indiquer le prix des oranges à ses clients.\par
+    Déterminer le prix d'un kilogramme d'oranges.
+    \begin{center}
+    \scalebox{0.5}{
+    \Fonction[%
+        Calcul=8*x/5,%
+        Epaisseur=1.5,%
+        Trace,%
+        CouleurTrace=bleu,%
+        Xmin=0,Xmax=5,Xstep=2,%
+        Ymin=0,Ymax=5,Ystep=4,%
+        Origine={(0,0)},%
+        Grille,PasGrilleX=0.5,PasGrilleY=0.5,%
+        Graduations,PasGradY=4,PasGradX=2,%
+        Bornea=0,Borneb=11,%
+        % Pour placer les labels sur les axes
+        Traces={
+            label.rt(btex \Masse[kg]{} etex,placepoint(11,0));
+            label.top(btex \Prix{} etex,placepoint(0,22));
+        },%
+    ]{}
+    }
+    \end{center}
+    \smallskip
+    \hrefMathalea{https://coopmaths.fr/alea/?uuid=c668a&id=4P10-1&alea=Yqk1&v=eleve&es=021100}    
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Un drôle d'épicier utilise le graphique ci-dessous pour indiquer le prix des oranges à ses clients.\par
+    Déterminer le prix d'un kilogramme d'oranges.    \begin{center}
+    \scalebox{0.5}{
+    \Fonction[%
+        Calcul=8*x/5,%
+        Epaisseur=1.5,%
+        Trace,%
+        CouleurTrace=bleu,%
+        Xmin=0,Xmax=5,Xstep=2,%
+        Ymin=0,Ymax=5,Ystep=4,%
+        Origine={(0,0)},%
+        Grille,PasGrilleX=0.5,PasGrilleY=0.5,%
+        Graduations,PasGradY=4,PasGradX=2,%
+        Bornea=0,Borneb=11,%
+        % Pour placer les labels sur les axes
+        Traces={
+            label.rt(btex \Masse[kg]{} etex,placepoint(11,0));
+            label.top(btex \Prix{} etex,placepoint(0,22));
+        },%
+    ]{}
+    }
+    \end{center}
+    \smallskip
+    {\color{red} \Masse[kg]{5} d'oranges coutent \Prix{8} donc \Masse[kg]{1} coute $8\div 5= \Prix{1.60}$.}
 \end{corrige}
 
