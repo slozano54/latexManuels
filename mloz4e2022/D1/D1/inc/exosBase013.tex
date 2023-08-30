@@ -1,9 +1,178 @@
 \begin{exercice*}
-    \dots
+    Lorsqu’on fait geler de l’eau, le volume de glace obtenu est proportionnel au volume d’eau utilisé.\par 
+    En faisant geler \Capa[L]{1.5} d’eau, on obtient \Capa[L]{1.62} de glace.
+    \begin{enumerate}
+	    \item Montrer qu’en faisant geler \Capa[L]{1} d’eau, on obtient \Capa[L]{1.08} de glace.
+	    \item On souhaite compléter le tableau ci-dessous à l’aide d’un tableur.\par\medskip	    
+        \scalebox{0.7}{
+            \parbox{\linewidth}{
+                \begin{Tableur}[LargeurUn=80pt,Largeur=20pt,Colonnes=7,Cellule=B2,Colonne=2,Ligne=2,PasL=1,PasC=1]
+                    Volume d'eau initial (en \Capa[L]{})&\num{0.5}&\num{1}&\num{1.5}&\num{2}&\num{2.5}&\num{3}\\
+                    Volume de glace obtenu (en \Capa[L]{})&&&&&&\\
+                \end{Tableur}
+            }
+        }        
+		\begin{enumerate}\medskip
+			\item Proposer une formule à saisir en cellule B2 avant de la recopier vers la droite jusqu'à la cellule G2.
+			\item Compléter le tableau.
+		\end{enumerate}
+		\item Déterminer le graphique représentant le volume de glace obtenu (en \Capa[L]{}) en fonction du volume d'eau contenu au départ dans la bouteille (en \Capa[L]{}). Justifier.\par\medskip
+		\begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2,blue,very thick] plot (\x,{0.6*\x*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°1}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2.3,blue,very thick] plot (\x,{1.08*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°2}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2.5,blue,very thick] plot (\x,{0.5+0.7*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°3}
+            \end{center}
+    \end{minipage}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Lorsqu’on fait geler de l’eau, le volume de glace obtenu est proportionnel au volume d’eau utilisé.\par 
+    En faisant geler \Capa[L]{1.5} d’eau, on obtient \Capa[L]{1.62} de glace.\par
+    \begin{enumerate}
+	    \item Montrer qu’en faisant geler \Capa[L]{1} d’eau, on obtient \Capa[L]{1.08} de glace.\par
+	    \textcolor{red}{$V_\text{de glace}\div V_\text{d'eau}=\Capa[L]{1.62}\div \Capa[L]{1.5} = \num{1.08}$.}
+	    \item On souhaite compléter le tableau ci-dessous à l’aide d’un tableur.\par\medskip	    
+        \scalebox{0.65}{
+            \parbox{\linewidth}{
+                \begin{Tableur}[LargeurUn=80pt,Largeur=20pt,Colonnes=7,Cellule=B2,Colonne=2,Ligne=2,PasL=1,PasC=1]
+                    Volume d'eau initial (en \Capa[L]{})&\num{0.5}&\num{1}&\num{1.5}&\num{2}&\num{2.5}&\num{3}\\
+                    Volume de glace obtenu (en \Capa[L]{})&\textcolor{red}{\num{0.54}}&\textcolor{red}{\num{1.08}}&\textcolor{red}{\num{1.62}}&\textcolor{red}{\num{2.16}}&\textcolor{red}{\num{2.7}}&\textcolor{red}{\num{3.24}}\\
+                \end{Tableur}
+            }
+        }\par\medskip        
+		\begin{enumerate}
+			\item Proposer une formule à saisir en cellule B2 avant de la recopier vers la droite jusqu'à la cellule G2.\par
+			\textcolor{red}{Une formule possible : {\sc =1.08*B1}.}
+			\item Compléter le tableau.\par
+			\textcolor{red}{cf ci-dessus.}
+		\end{enumerate}
+        \setcounter{enumi}{2}
+		\item Déterminer le graphique représentant le volume de glace obtenu (en \Capa[L]{}) en fonction du volume d'eau contenu au départ dans la bouteille (en \Capa[L]{}). Justifier.
+    \end{enumerate}    
+    \Coupe
+		\begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2,blue,very thick] plot (\x,{0.6*\x*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°1}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2.3,blue,very thick] plot (\x,{1.08*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°2}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.7]
+                    % Axes
+                    \draw[thick,>=latex,->](0,0)--+(2.5,0);
+                    \draw[thick,>=latex,->](0,0)--+(0,2.5);
+                    \foreach \x in {0,0.5,...,2} \draw[thick] (\x,-.05) -- (\x,0.05);
+                    \foreach \y in {0,0.5,...,2} \draw[thick] (-.05,\y) -- (0.05,\y);
+                    \foreach \x in {0,...,2} \draw (\x,-0.4) node {\scriptsize\x};
+                    \foreach \y in {0,...,2} \draw (-0.4,\y) node {\scriptsize\y};
+                    % Courbe
+                    \draw [domain=0:2.5,blue,very thick] plot (\x,{0.5+0.7*\x});
+                    % Fond
+                    \begin{pgfonlayer}{background}
+                        \draw[step=5mm,very thin,brown!50] (current bounding box.south west) grid (current bounding box.north east);
+                        \draw[step=1cm,thin,brown!70] (current bounding box.south west) grid (current bounding box.north east);
+                    \end{pgfonlayer}
+                \end{tikzpicture}\par
+                {\sc\footnotesize Graphique n°3}
+            \end{center}
+    \end{minipage}
+    \par\medskip    
+    \textcolor{red}{Les graphiques n°1 et n°3 ne conviennent pas car ils ne représentent pas une situation de proportionnalité, c'est donc le graphique n°2.}
 \end{corrige}
 
