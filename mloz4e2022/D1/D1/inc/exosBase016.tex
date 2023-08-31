@@ -1,9 +1,32 @@
 \begin{exercice*}
-    \dots
+    Pour chacune des affirmations suivantes, justifier si elle est vraie ou fausse.
+    \begin{enumerate}
+        \item Un billet Paris-New York coute \Prix{400}. La compagnie Air International propose une réduction de 20\%.
+        Le billet ne coute plus que \Prix{380}.
+        \item Augmenter un prix de 30\% puis effectuer une remise de 30\% sur ce nouveau prix revient à redonner à l’article son prix initial.
+        \item Un article coûte \Prix{120}. Une fois soldé, il coute \Prix{90}. Le pourcentage de réduction est 25 \%.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Pour chacune des affirmations suivantes, justifier si elle est vraie ou fausse.\par
+    \begin{enumerate}
+        \item Un billet Paris-New York coute \Prix{400}. La compagnie Air International propose une réduction de 20\%. Le billet ne coute plus que \Prix{380}.
+        \par\textcolor{red}{%
+            \Pourcentage[Reduire,MotReduction=réduction]{20}{400}\\\smallskip
+            L'affirmation est donc fausse, le billet ne coûte plus que \Prix{320}.
+        }
+        \item Augmenter un prix de 30\% puis effectuer une remise de 30\% sur ce nouveau prix revient à redonner à l’article son prix initial.
+        \par\textcolor{red}{%
+            Pour fixer les idées, prenons un article coûtant \Prix{100}, si son prix augmente de 30\%, il coutera alors \Prix{130}, si son prix
+            baisse ensuite de 30\%, il coûtera alors $\Prix{130}-\num{0.3}\times\Prix{130}=\Prix{91}$ et non pas \Prix{100}.\\\smallskip
+            L'affirmation est donc fausse.
+        }
+        \item Un article coûte \Prix{120}. Une fois soldé, il coute \Prix{90}. Le pourcentage de réduction est 25 \%.
+        \par\textcolor{red}{%
+        $\Prix{120}-\Prix{90}=\Prix{30}$ et $30\div 120 = \num{0.25} = 25\%$ \\ donc l'affirmation est vraie.
+        }
+    \end{enumerate}
 \end{corrige}
 
