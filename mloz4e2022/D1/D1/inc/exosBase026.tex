@@ -1,9 +1,48 @@
 \begin{exercice*}
-    \dots
+    La loi d'Ohm indique que la tension U (en Volts) aux bornes d'un conducteur ohmique est égale au produit de la résistance R (en Ohms) du
+    conducteur et de l'intensité I (en Ampères) du courant qui traverse ce conducteur.\par\smallskip
+    \begin{center}
+        \begin{circuitikz}
+            \draw (2,3) -- (0,3) 
+                to [R, a=$R$, i>^=$I$] (0,0) 
+        -- (2,0);
+        \draw (2,0) 
+            to[open, *-*, v>=$U$] (2,3);
+        \end{circuitikz}
+    \end{center}
+    \begin{enumerate}
+        \item À l'aide du texte ci-dessus, indiquer la relation reliant les variables U , R et I.
+        \item On réalise un montage expérimental permettant de mesurer la tension U (à l'aide d'un voltmètre) et l'intensité I (à l'aide d'un ampèremètre).
+        \begin{enumerate}
+            \item Si on mesure U = \SI{12}{V} et I = \SI{0.24}{A}, calculer la valeur de la résistance du conducteur ohmique.
+            \item Si R = \SI{200}{\ohm} et U = \SI{220}{V}, déterminer l'intensité de courant traversant le dipôle.
+        \end{enumerate}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    La loi d'Ohm indique que la tension U (en Volts) aux bornes d'un conducteur ohmique est égale au produit de la résistance R (en Ohms) du
+    conducteur et de l'intensité I (en Ampères) du courant qui traverse ce conducteur.\par
+    \begin{center}
+        \begin{circuitikz}
+            \draw (2,3) -- (0,3) 
+                to [R, a=$R$, i>^=$I$] (0,0) 
+        -- (2,0);
+        \draw (2,0) 
+            to[open, *-*, v>=$U$] (2,3);
+        \end{circuitikz}
+    \end{center}
+    \begin{enumerate}
+        \item À l'aide du texte ci-dessus, indiquer la relation reliant les variables U , R et I.
+        \par\textcolor{red}{$U=R\times I$}
+        \item On réalise un montage expérimental permettant de mesurer la tension U (à l'aide d'un voltmètre) et l'intensité I (à l'aide d'un ampèremètre).\\
+        \begin{enumerate}
+            \item Si on mesure U = \SI{12}{V} et I = \SI{0.24}{A}, calculer la valeur de la résistance du conducteur ohmique.
+            \par\textcolor{red}{$R=\dfrac{U}{I}=\dfrac{\SI{12}{V}}{\SI{0.24}{A}}=\SI{50}{\ohm}$}
+            \item Si R = \SI{200}{\ohm} et U = \SI{220}{V}, déterminer l'intensité de courant traversant le dipôle.
+            \par\textcolor{red}{$I=\dfrac{U}{R}=\dfrac{\SI{220}{V}}{\SI{200}{\ohm}}=\SI{1.1}{A}$}
+        \end{enumerate}
+    \end{enumerate}
 \end{corrige}
 
