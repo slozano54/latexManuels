@@ -1,9 +1,58 @@
 \begin{exercice*}
-    \dots
+    Le poids d'un corps sur un astre dépend de la masse et de l'accélération de la pesanteur. On peut montrer que la relation est $P = mg$ , où :
+    \begin{itemize}
+        \item P est le poids (en Newton) d'un corps sur un astre (c'est-à-dire la force que l'astre exerce sur le corps),
+        \item m la masse (en kg) de ce corps,
+        \item g l'accélération de la pesanteur de cet astre.
+    \end{itemize}
+    \begin{enumerate}
+        \item Sur la Terre, l'accélération de la pesanteur de la Terre $g_T$ est environ de \num{9.8}. Calculer le poids (en
+        Newton) sur Terre d'un homme ayant une masse de \Masse[kg]{70}.
+        \item Sur la lune, la relation $P = mg$ est toujours valable. On donne le tableau ci-dessous de correspondance Poids-Masse sur la Lune.
+        \par\smallskip
+        \begin{tabular}{|>{\centering\arraybackslash\columncolor{LightGray}}m{0.3\linewidth}|*{5}{c|}}
+            \hline
+            Masse en \Masse[kg]{}&\num{3}&\num{10}&\num{25}&\num{40}&\num{55}\\\hline
+            Poids en N&\num{5.1}&\num{17}&\num{42.5}&\num{68}&\num{93.5}\\\hline
+        \end{tabular}
+        \par\smallskip
+        Justifier si ce tableau est un tableau de proportionnalité ou non.
+        \item Calculer l'accélération de la pesanteur sur la Lune notée $g_L$.
+        \item Justifier s'il est vrai que l'on pèse environ 6 fois moins lourd sur la Lune que sur la Terre.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Le poids d'un corps sur un astre dépend de la masse et de l'accélération de la pesanteur. On peut montrer que la relation est $P = mg$ , où :
+    \begin{itemize}
+        \def\item{}
+        \item P est le poids (en Newton) d'un corps sur un astre (c'est-à-dire la force que l'astre exerce sur le corps),
+        \item m la masse (en kg) de ce corps,
+        \item g l'accélération de la pesanteur de cet astre.
+    \end{itemize}
+    \begin{enumerate}
+        \item Sur la Terre, l'accélération de la pesanteur de la Terre $g_T$ est environ de \num{9.8}. Calculer le poids (en
+        Newton) sur Terre d'un homme ayant une masse de \Masse[kg]{70}.
+        \par\textcolor{red}{$P=mg_T=70\times\num{9.8}=686~N$, le poids de cet homme est de \num{686} N.}
+        \item Sur la lune, la relation $P = mg$ est toujours valable. On donne le tableau ci-dessous de correspondance Poids-Masse sur la Lune.
+        \par\smallskip
+        \begin{tabular}{|>{\centering\arraybackslash\columncolor{LightGray}}m{0.3\linewidth}|*{5}{c|}}
+            \hline
+            Masse en \Masse[kg]{}&\num{3}&\num{10}&\num{25}&\num{40}&\num{55}\\\hline
+            Poids en N&\num{5.1}&\num{17}&\num{42.5}&\num{68}&\num{93.5}\\\hline
+        \end{tabular}
+        \par\smallskip
+        Justifier si ce tableau est un tableau de proportionnalité ou non.
+        \par\textcolor{red}{Le poids est obtenu en multipliant la masse par \num{1.7}, c'est donc bien un tableau de proportionnalité.}
+        \item Calculer l'accélération de la pesanteur sur la Lune notée $g_L$.
+        \par\textcolor{red}{$P=mg_L$ donc $\num{5.1}=3\times g_L$ d'où $g_L=\num{1.7}$}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Justifier s'il est vrai que l'on pèse environ 6 fois moins lourd sur la Lune que sur la Terre.
+        \par\textcolor{red}{$g_L=\num{1.7}$ et $g_T=\num{9.8}$, $\dfrac{g_T}{g_L}\simeq\num{5.8}$ donc il est vrai que l'on pèse environ 6 fois moins su la Lune que sur la Terre.}
+    \end{enumerate}
 \end{corrige}
 
