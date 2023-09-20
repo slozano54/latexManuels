@@ -1,64 +1,277 @@
-\begin{activite}[La cabine]    
-    La figure suivante représente le déplacement d'une cabine de téléphérique. La droite $(d)$ représente le câble porteur.
-    Le point $A$ représente le point d'attache de la cabine au câble au départ. À l'arrivée, ce point est représenté par le point $B$.
+\begin{activite}[Construction de parallélogrammes]
+    \begin{changemargin}{-10mm}{-40mm}
+        \partie[Avec quadrillage]
+        Reproduire à l’identique les parallélogrammes \textbf{à l'aide des quadrillages} :\par\smallskip
+        %1    
+        \begin{minipage}{0.22\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(1,1);
+                B-A=u*(2,0.5);
+                D-A=u*(-0.5,1.5);
+                C-D=u*(2,0.5);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=20mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=20mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(1,1);
+                B-A=u*(2,0.5);
+                D-A=u*(-0.5,1.5);
+                C-D=u*(2,0.5);
+                trace C--D withpen pencircle scaled 1bp;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+        %2
+        \begin{minipage}{0.22\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2.5,1);
+                B-A=u*(1,0.5);
+                D-A=u*(-2,1.5);
+                C-D=u*(1,0.5);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=20mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=20mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2.5,1);
+                B-A=u*(1,0.5);
+                D-A=u*(-2,1.5);
+                C-D=u*(1,0.5);
+                trace C--D withpen pencircle scaled 1bp;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+        %3
+        \begin{minipage}{0.22\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(3,1);
+                B-A=u*(0.5,2);
+                D-A=u*(-2.5,0.5);
+                C-D=u*(0.5,2);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=20mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=20mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(3,1);
+                B-A=u*(0.5,2);
+                D-A=u*(-2.5,0.5);
+                C-D=u*(0.5,2);
+                trace A--B withpen pencircle scaled 1bp;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+        %4
+        \begin{minipage}{0.22\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2,1);
+                B-A=u*(1.5,2);
+                D-A=u*(-1.5,0.5);
+                C-D=u*(1.5,2);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=20mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=20mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(4u,4u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2,1);
+                B-A=u*(1.5,2);
+                D-A=u*(-1.5,0.5);
+                C-D=u*(1.5,2);
+                trace grille(0.5) withcolor black;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
 
-    \begin{center}
-        \begin{Geometrie}[CoinHD={(11u,5u)}]
-            trace grille(0.5) withcolor gris;
-            pair A,B,M,N,P,R,S,M',N';
-            A=u*(1.5,2.5);
-            B=u*(7.5,4);
-            labeloffset := 5bp ;
-            label.top(btex $A$ etex, A);
-            label.top(btex $B$ etex, B);
-            marque_p:="croix";
-            pointe(A,B);
-            trace droite(A,B) withcolor gris;
-            drawarrow A--B withcolor blue dashed evenly;
-            labeloffset := 3bp ;
-            label.top(btex $(d)$ etex,1.2[B,A]);
-            M=u*(1,2);
-            N=u*(2,2);
-            P=u*(2.5,1.5);
-            R=u*(2.5,0.5);
-            S=u*(1,0.5);
-            trace segment(A,projection(A,M,N));
-            trace polygone(M,N,P,R,S);
-            remplis polygone(M,N,P,R,S) withcolor gris;
-            labeloffset := 5bp ;
-            pointe(M,N,P,R,S);
-            label.llft(btex  $M$ etex, M);
-            label.urt(btex  $N$ etex, N);
-            label.urt(btex  $P$ etex, P);
-            label.lrt(btex  $R$ etex, R);
-            label.llft(btex $S$ etex, S);
-            M'=M shifted (6u,1.5u);
-            N'=N shifted (6u,1.5u);
-            trace segment(B,projection(B,M',N')) withcolor red;
-            label.lft(btex $M'$ etex, M') withcolor red;
-            label.rt(btex $N'$ etex, N') withcolor red;
-            trace segment(M',N') withcolor red dashed evenly;
-            drawoptions(withcolor red);        
-            pointe(M',N');
-        \end{Geometrie}
-    \end{center}
+        \partie[Sans quadrillage]
+        Reproduire à l’identique les parallélogrammes \textbf{à l'aide du compas} :\par\smallskip
+        %1    
+        \begin{minipage}{0.33\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2.5,1);
+                B-A=u*(2,3);
+                D-A=u*(-2,0.5);
+                C-D=u*(2,3);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=25mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=25mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(2.5,1);
+                B-A=u*(2,3);
+                D-A=u*(-2,0.5);
+                C-D=u*(2,3);
+                trace B--C--D withpen pencircle scaled 1bp;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+        %2
+        \begin{minipage}{0.33\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(4,0.5);
+                B-A=u*(0.5,2);
+                D-A=u*(-3.5,2);
+                C-D=u*(0.5,2);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=25mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=25mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+            A=u*(4,0.5);
+                B-A=u*(0.5,2);
+                D-A=u*(-3.5,2);
+                C-D=u*(0.5,2);
+                trace A--B--C withpen pencircle scaled 1bp;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+        %3
+        \begin{minipage}{0.33\linewidth}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+                A=u*(4.5,0.5);
+                B-A=u*(0,3);
+                D-A=u*(-3.5,1);
+                C-D=u*(0,3);
+                trace polygone(A,B,C,D) withpen pencircle scaled 2bp;
+                fill polygone(A,B,C,D) withcolor gris;
+            \end{Geometrie}
+            }
+            \par\vspace*{-5mm}
+            \tikz[remember picture,overlay]{\coordinate[name=A,xshift=25mm,yshift=13mm];}
+            \par
+            \tikz[remember picture,overlay]{\coordinate[name=B,xshift=25mm,yshift=1mm];}
+            \par
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace feuillet withpen pencircle scaled 2bp;
+                pair A,B,C,D;
+            A=u*(4.5,0.5);
+                B-A=u*(0,3);
+                D-A=u*(-3.5,1);
+                C-D=u*(0,3);
+                trace D--A--B withpen pencircle scaled 1bp;
+            \end{Geometrie}
+            \begin{tikzpicture}[remember picture,overlay]%
+                \draw[Gray,-{Triangle[width=25pt,length=10pt]}, line width=15pt](A) -- (B);
+            \end{tikzpicture}%
+            }
+        \end{minipage}
+
+        \partie[Une caractérisation du parallélogramme]
         \begin{enumerate}
-        \item Reproduire la figure ci-dessus sur une feuille quadrillée.
-        \item Compléter la figure avec la cabine dans sa position d'arrivée.
-        
-        \smallskip
-        {\bfseries On notera $P'$, $R'$ et $S'$ les points d'arrivée correspondant aux points $P$, $R$ et $S$.}
-        \smallskip
-        \item Tracer le segment $[MM']$. Qu'a-t-il de particulier ?
-        \item Tracer d'autres segments ayant cette articularité.
-        \item Indiquer la nature du quadrilatère $ABM'M$.
-        \item Nommer d'autres quadrilatères ayant cette particularité.
-        
-        \smallskip
-        {\bfseries Cette transformation permettant d'amener la cabine de sa position de départ à sa position d'arrivée s'appelle translation qui transforme $A$ en $B$.}
-        \smallskip
-        \item Déterminer l'image du segment $[NP]$ par la translation qui transforme $A$ en $B$.
-        \item Faire une remarque sur ce segment et son image.
-        \item Comparer la figure $MNPRS$ et son image par la translation qui transforme $A$ en $B$.
-    \end{enumerate}
+            \item Placer trois points non alignés A, B et C.
+            \item Faire une figure à main levée dans le cadre prévu à cet effet.
+            \item En utilisant la règle non graduée et le compas, construire le parallélogramme ABCD.
+        \end{enumerate}
+        \fbox{
+        \parbox{0.9\linewidth}{
+        \begin{Geometrie}[CoinHD={(6u,5u)}]
+            trace feuillet withpen pencircle scaled 2bp;
+            pair A;
+            A=u*(2.5,4.5);
+            label(btex \textbf{Figure à main levée ici.} etex,A);
+        \end{Geometrie}
+        \vspace*{65mm}        
+        }
+        }
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item En déduire une propriété \textbf{caractéristique} du parallélogramme.
+        \end{enumerate}
+        \fbox{\parbox{0.9\linewidth}{\phantom{rrr}\vspace*{45mm}}}
+    \end{changemargin}
 \end{activite}
