@@ -4,7 +4,7 @@
 
     \begin{center}
         \begin{Geometrie}[CoinHD={(11u,5u)}]
-            trace grille(0.5) withcolor gris;
+            trace grille(0.5) withcolor black;
             pair A,B,M,N,P,R,S,M',N';
             A=u*(1.5,2.5);
             B=u*(7.5,4);
@@ -13,7 +13,7 @@
             label.top(btex $B$ etex, B);
             marque_p:="croix";
             pointe(A,B);
-            trace droite(A,B) withcolor gris;
+            trace droite(A,B) withcolor black;
             drawarrow A--B withcolor blue dashed evenly;
             labeloffset := 3bp ;
             label.top(btex $(d)$ etex,1.2[B,A]);
@@ -23,7 +23,7 @@
             R=u*(2.5,0.5);
             S=u*(1,0.5);
             trace segment(A,projection(A,M,N));
-            trace polygone(M,N,P,R,S);
+            trace polygone(M,N,P,R,S) withpen pencircle scaled 1.5bp;
             remplis polygone(M,N,P,R,S) withcolor gris;
             labeloffset := 5bp ;
             pointe(M,N,P,R,S);
@@ -34,11 +34,11 @@
             label.llft(btex $S$ etex, S);
             M'=M shifted (6u,1.5u);
             N'=N shifted (6u,1.5u);
-            trace segment(B,projection(B,M',N')) withcolor red;
-            label.lft(btex $M'$ etex, M') withcolor red;
-            label.rt(btex $N'$ etex, N') withcolor red;
-            trace segment(M',N') withcolor red dashed evenly;
-            drawoptions(withcolor red);        
+            drawoptions(withcolor red);
+            trace segment(B,projection(B,M',N'));
+            label.lft(btex $M'$ etex, M');
+            label.rt(btex $N'$ etex, N');
+            trace segment(M',N');
             pointe(M',N');
         \end{Geometrie}
     \end{center}
