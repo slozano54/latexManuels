@@ -84,59 +84,54 @@
         \end{tikzpicture}
 
     \subsection{Exemple de rédaction}
-
         \begin{methode*1}[Calculer une longueur]
-            \begin{multicols}2
                 \begin{itemize}
                     \item Déterminer les droites sécantes.
-                    \item Déterminer les droites parallèles,
-                    
-                    éventuellement le justifier.
+                    \item Déterminer les droites parallèles, éventuellement le justifier.
                     \item Identifier les deux triangles.                    
                     \item Écrire l'égalité des trois rapports.
                     \item Déterminer les longueurs inconnues.
                 \end{itemize}
-            \end{multicols}
 
             \exercice
+            \begin{changemargin}{0mm}{-10mm}    
+                \begin{minipage}{0.6\linewidth}
+                    \begin{tikzpicture}[scale = 0.4]
+                        % \draw[help lines, color=black!30, dashed] (0,0) grid (18,12);                    
+                        \coordinate (J1) at (1,1);
+                        \coordinate (I1) at (6,11);
+                        \tkzDrawLine(J1,I1);
 
-            \begin{minipage}{8cm}
-                \begin{tikzpicture}[scale = 0.4]
-                    % \draw[help lines, color=black!30, dashed] (0,0) grid (18,12);                    
-                    \coordinate (J1) at (1,1);
-                    \coordinate (I1) at (6,11);
-                    \tkzDrawLine(J1,I1);
+                        \coordinate (B1) at (12,1);
+                        \coordinate (C1) at (17,11);
+                        \tkzDrawLine(B1,C1);
 
-                    \coordinate (B1) at (12,1);
-                    \coordinate (C1) at (17,11);
-                    \tkzDrawLine(B1,C1);
+                        \coordinate[label=above left:$I$] (I) at (4,7);
+                        \coordinate[label=below right:$B$] (B) at (15,7);            
+                        \tkzDrawLine(I,B);
+                        
 
-                    \coordinate[label=above left:$I$] (I) at (4,7);
-                    \coordinate[label=below right:$B$] (B) at (15,7);            
-                    \tkzDrawLine(I,B);
-                    
+                        \coordinate[label=below right:$J$] (J) at (2,3);
+                        \coordinate[label=above left:$C$] (C) at (16.66,10.33);
+                        \tkzDrawLine(J,C);
 
-                    \coordinate[label=below right:$J$] (J) at (2,3);
-                    \coordinate[label=above left:$C$] (C) at (16.66,10.33);
-                    \tkzDrawLine(J,C);
+                        \coordinate[label=above:$A$] (A) at (10,7);
+                        \draw (I) -- node[sloped,above] {\Lg{6}} (A) -- node[sloped,below] {\Lg{5}} (B);
+                        \draw (J) -- node[sloped,below] {\Lg{9}} (A);
+                        \draw (B) -- node[sloped,below] {\Lg{3}} (C);
 
-                    \coordinate[label=above:$A$] (A) at (10,7);
-                    \draw (I) -- node[sloped,above] {\Lg{6}} (A) -- node[sloped,below] {\Lg{5}} (B);
-                    \draw (J) -- node[sloped,below] {\Lg{9}} (A);
-                    \draw (B) -- node[sloped,below] {\Lg{3}} (C);
-
-                    \draw[dashed, color=red, ultra thick] (A) -- (I) -- (J) -- (A);
-                    \draw[dashed, color=blue, ultra thick] (A) -- (B) -- (C) -- (A);
-                \end{tikzpicture}
-            \end{minipage}
-            \begin{minipage}{8cm}
-                \begin{itemize}
-                    \item Les droites $(CJ)$ et $(BI)$ se coupent en $A$.
-                    \item Les droites $(BC)$ et $(IJ)$ sont parallèles.
-                \end{itemize}
-                Calculer les longueurs $AC$ et $IJ$.
-            \end{minipage}
-            
+                        \draw[dashed, color=red, ultra thick] (A) -- (I) -- (J) -- (A);
+                        \draw[dashed, color=blue, ultra thick] (A) -- (B) -- (C) -- (A);
+                    \end{tikzpicture}
+                \end{minipage}
+                \begin{minipage}{0.5\linewidth}
+                    \begin{itemize}
+                        \item Les droites $(CJ)$ et $(BI)$ se coupent en $A$.
+                        \item Les droites $(BC)$ et $(IJ)$ sont parallèles.
+                    \end{itemize}
+                    Calculer les longueurs $AC$ et $IJ$.
+                \end{minipage}
+            \end{changemargin}
             \correction
             Dans la configuration ci-dessus : 
             \begin{itemize}
@@ -165,4 +160,5 @@
                 $$IJ=\frac{6\times3}{5}=\Lg{3.6}$$                
             \end{minipage}
         \end{methode*1}
+        \vfill\phantom{rrr}
 
