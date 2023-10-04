@@ -1,2 +1,82 @@
-\section{\dots}
-\dots
+\section{Caractéristiques de position : Moyenne}
+    \begin{definition}[Moyenne arithmétique]
+        La {\bf moyenne} d'une série statistique est le quotient de la somme de toutes les valeurs par l'effectif total de cette série :
+        $${\text{moyenne} =\frac{\text{Somme de toutes les valeurs}}{\text{Effectif total de la série}}}$$
+    \end{definition}
+
+    \begin{exemple*1}
+        Dans une usine, sept employés calculent le salaire moyen (en €) des salaires de leur atelier :
+        \Prix[0]{760}; \Prix[0]{825}; \Prix[0]{915}; \Prix[0]{990}; \Prix[0]{1065}; \Prix[0]{1160}; \Prix[0]{1296}.
+        \correction
+        $$\frac{760 + 825 + 915 + 990 + 1065 + 1160 + 1296}{7}\approx 1002$$
+        \psshadowbox{Le salaire moyen des  employés de cet atelier s'élève environ à \Prix[0]{1002}}
+    \end{exemple*1}
+
+    \begin{definition}[Moyenne pondérée]
+        La {\bf moyenne pondérée} d'une série statistique est le quotient de la somme des  valeurs, affectées chacune de leur coefficient, par la somme totale des coefficients.
+    \end{definition}
+
+    \begin{exemple*1}
+        Dans une classe de 28 élèves, les notes d'un devoir se répartissent ainsi :
+
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|m{2.5cm}|c|c|c|c|c|c|c|c|c|c|c|}
+        \cline{12-12}
+        \multicolumn{11}{c|}{}&total\\
+        \hline
+        Notes&6&7&8&9&10&11&12&13&15&17&\begin{LARGE}$\otimes$\end{LARGE}\\
+        \hline
+        Effectifs& \color{red} 2&\color{red} 1&\color{red} 2&\color{red} 4&\color{red} 6&\color{red} 3&\color{red} 3&\color{red} 3&\color{red} 2&\color{red} 2&\color{red} 28\\
+        \hline
+        \end{tabular}
+        }
+
+        \smallskip
+        Pour calculer la moyenne, on effectue le calcul suivant :
+        
+        \smallskip
+        $M = \dfrac{\textcolor{red}{2}\times 6 + \textcolor{red}{1}\times 7 + \textcolor{red}{2}\times 8 + \textcolor{red}{4}\times 9 + \textcolor{red}{6}\times 10 + \textcolor{red}{3}\times 11 +
+        \textcolor{red}{3}\times 12 + \textcolor{red}{3}\times 13 + \textcolor{red}{2}\times 15 + \textcolor{red}{2}\times 17}{{\red 2}+{\red 1}+{\red 2}+{\red 4}+{\red 6}+{\red 3}+{\red 3}+{\red 3}+{\red 2}+{\red 2}}$
+
+        $M=\dfrac{303}{28}\approx10,8$
+    \end{exemple*1}
+
+    \begin{remarque}\titreRemarque{répartition en classes et moyenne}
+
+        Dans certains cas, une série statistique peut être répartie en \textbf{classes} qui sont des intervalles de valeurs.
+    \end{remarque}
+
+    \begin{exemple*1}
+        \titreExemple{Répartition de 2000 adultes suivant leur taille}
+
+        \begin{longtable}{|>{\columncolor{gray!20}\centering}m{0.3\textwidth}|*{4}{>{\centering\arraybackslash}m{0.125\textwidth}|}}
+            \hline
+            \rowcolor{gray!20}Tailles en \Lg{} &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
+            \hline
+            Effectifs&48&397&913&642\\
+            \hline
+        \end{longtable}
+        
+
+    Il est impossible, a priori, de calculer la moyenne de cette série puisqu'on ne connaît ni les valeurs des tailles et ni leurs effectifs.
+
+    On peut donc, par exemple, considèrer que la valeur au centre de la classe va représenter la classe.
+
+    On calcule alors la moyenne pondérée pour obtenir une valeur approchée de la moyenne de la série.
+
+    \begin{longtable}{|>{\columncolor{gray!20}\centering}m{0.3\textwidth}|*{4}{>{\centering\arraybackslash}m{0.125\textwidth}|}}
+        \hline
+        \rowcolor{gray!20}Tailles en \Lg{} &$\left[140\, ; 150\right[$&$\left[150\, ; 160\right[$&$\left[160\, ; 170\right[$&$\left[170\, ; 195\right[$\\
+        \hline
+        Centre de la classe&145&155&165&182,5\\
+        \hline
+        Effectifs&48&397&913&642\\
+        \hline
+    \end{longtable}
+
+    Pour calculer la taille moyenne, on effectue le calcul suivant : 
+    $$\dfrac{48\times 145 + 397\times 155 + 913\times 165 + 642\times 145}{2000}\approx168$$
+
+    \psshadowbox{La taille moyenne de ce groupe d'adultes est d'environ \Lg{168}.}
+
+    \end{exemple*1}

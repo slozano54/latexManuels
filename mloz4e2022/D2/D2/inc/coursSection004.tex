@@ -1,0 +1,102 @@
+\section{Caractéristiques de position : Médiane}
+    \begin{definition}
+        La {\bf médiane} $\mathcal{M}$ d'une série statistique dont les valeurs sont \textbf{ordonnées} est toute valeur qui partage le groupe étudié en deux sous-groupes de même effectif tels que :
+        \begin{itemize}
+            \item tous les éléments du premier groupe ont des valeurs inférieures  ou égales à $\mathcal{M}$ ;
+            \item tous les éléments du second groupe ont des valeurs supérieures ou égales à $\mathcal{M}$.
+        \end{itemize}
+    \end{definition}
+
+    \begin{remarques}
+        \begin{itemize}
+            \item Quand l'effectif est impair, par exemple 17, c'est la valeur du 9\ieme{} qui a un statut particulier (si on change l'ordre, il reste 9\ieme{} alors que le premier devient dernier !) \\ 
+            8 + 1 + 8 =17 !
+            \item Quand l'effectif est pair, par exemple 24, c'est toute valeur comprise entre celle du 12\ieme{} et celle du 13\ieme{}.\\
+            11+1+1+11=24.
+        \end{itemize}
+    \end{remarques}
+
+\begin{exemple*1}
+     Sur une population de 75 feuilles de platane, on étudie la longueur en \Lg[mm]{} de la grande nervure. On obtient le tableau  statistique suivant :\\
+    \begin{center}
+        \begin{tabular}{|m{4.5cm}|*{9}{c|}}
+        \hline 
+        Longueurs&102&112&122&132&142&152&162&172&182\\\hline 
+        Effectif&1&6&6&10&13&19&10&8&2\\\hline
+        \end{tabular}
+    \end{center}
+    \smallskip
+    $75=37+1+37$ donc la médiane est la longueur de la 38\ieme{} feuille c'est-à-dire \Lg[mm]{152}.\\
+    \smallskip
+    $$\begin{array}{l*{9}{c}}
+    \mbox{Rang :}       &1^{re}&2^{e}&\ldots&36^{e}&37^{e}&38^{e}&39^{e}&\ldots&75^{e}\\
+    \mbox{Longueur :}   &102&112&\ldots&142&152&\textcolor{red}{152}&152&\ldots&182\\&
+    \multicolumn{5}{c}{\overset{\underbrace{\quad\qquad\qquad\qquad\qquad\qquad\quad}_{{\mbox{37 feuilles}}}}{~}}&~&\multicolumn{3}{c}{\overset{\underbrace{\qquad\qquad\qquad\quad}_{\mbox{37 feuilles}}}{~}}
+    \end{array}$$ 
+    D'autre part, la longueur moyenne de ces feuilles est de : 
+    {\small
+    $$\Eqalign{
+    m&=\frac{102\times1+112\times6+122\times6+132\times10+142\times13+152\times19+162\times10+172\times8+182\times2}{75}\cr
+    m&=\frac{\num{10920}}{75}\cr
+    m&=\Lg[mm]{145,6}
+    }$$
+    }
+    donc la médiane et la moyenne sont (en général) {\bf différentes}.
+\end{exemple*1}
+
+\subsection{D'autres moyens d'obtenir une médiane}
+\begin{exemple*1}
+    \titreExemple{À partir d'un tableau d'effectifs cumulés ou de fréquences cumulées\par(Hors programme mais très pratique!)}
+
+    Lorsque les valeurs sont rangées dans l'ordre croissant (caractère quantitatif), on obtient l'effectif cumulé croissant (ou la fréquence cumulée croissante) d'une valeur en additionnant son effectif (ou sa fréquence) à ceux (ou à celles) qui lui sont inférieures.
+    \par\medskip
+    Sur une population de 75 feuilles de platane, on étudie la longueur en \Lg[mm]{} de la grande nervure. On obtient le tableau  statistique suivant :\\
+    \begin{center}\begin{tabular}{|m{4.5cm}|*{9}{c|}}
+    \hline 
+    Longueurs&102&112&122&132&142&152&162&172&182\\\hline 
+    Effectif&1&6&6&10&13&19&10&8&2\\\hline
+    Effectif cumulé croissant&1&7&13&23&36&\colorbox{LightGray}{55}&65&73&75\\\hline
+    \end{tabular}
+    \end{center}
+    \smallskip
+    Les feuilles étant rangées par longueurs croissantes, la case grisée indique que de la 37\ieme{} à la 55\ieme{}, les feuilles ont pour longueur \Lg[mm]{152}.\\
+    Or $75=37+1+37$ donc la médiane est la longueur de la 38\ieme{} feuille c'est-à-dire \Lg[mm]{152}.\\
+    $$\begin{array}{l*{9}{c}}
+        \mbox{Rang :}&1^{re}&2^{e}&\ldots&36^{e}&37^{e}&38^{e}&39^{e}&\ldots&75^{e}\\
+    \mbox{Longueur :}&102&112&\ldots&142&152&\textcolor{red}{152}&152&\ldots&182\\&
+    \multicolumn{5}{c}{\overset{\underbrace{\quad\qquad\qquad\qquad\qquad\qquad\quad}_{{\mbox{37 feuilles}}}}{~}}&~&\multicolumn{3}{c}{\overset{\underbrace{\qquad\qquad\qquad\quad}_{\mbox{37 feuilles}}}{~}}
+    \end{array}$$ 
+\end{exemple*1}
+
+\begin{exemple*1}
+    \titreExemple{À partir d'une représentation graphique (Hors programme)}
+
+    Une valeur approchée de la médiane peut être obtenue à l'aide de la courbe polygonale des effectifs cumulés croissants (ou des fréquences cumulées croissantes) en lisant la valeur correspondant à la moitié de l'effectif total (ou à une fréquence cumulée égale à 50\%).
+
+    À la question "Quelle quantité d'eau buvez-vous par jour ?", les 50 personnes interrogées ont donné des réponses qui ont permis de tracer le polygone des effectifs cumulés croissants suivant :
+    \begin{center}
+        \scalebox{0.8}{\begin{pspicture}(0,0)(13,11.5)
+        \psline{->}(0,0)(13.5,0)
+        \multido{\n=2+2}{5}{\psline(-0.08,\n)(0.08,\n)}
+        \multido{\n=2+2}{6}{\psline(\n,-0.08)(\n,0.08)}
+        \psline{->}(0,0)(0,10.5)\psline[linecolor=red](0,0)(2,2.4)(4,6.6)(6,8.4)(8,9.6)(12,10)
+        \psdots[dotscale=1.5,dotstyle=x](2,2.4)(4,6.6)(6,8.4)(8,9.6)(12,10)
+        \uput{0.2}[270](2,0){0,5}\uput{0.2}[270](3.2,0){\textcolor{red}{0,8}}
+        \uput{0.2}[270](4,0){1}\uput{0.2}[270](6,0){1,5}
+        \uput{0.2}[0](13,6){\parbox{5cm}{{\em La courbe polygonale des effectifs cumulés croissants est obtenue en joignant par des segments les points dont l'abscisse est une valeur de la série et dont l'ordonnée est l'effectif cumulé croissant correspondant à cette valeur.}}}
+        \psline[linestyle=dashed](2,0)(2,2.4)(0,2.4)\psline[linestyle=dashed,linecolor=blue](3.2,0)(3.2,5)(0,5)
+        \psline[linestyle=dashed](4,0)(4,6.6)(0,6.6)\psline[linestyle=dashed](6,0)(6,8.4)(0,8.4)
+        \psline[linestyle=dashed](8,0)(8,9.6)(0,9.6)\psline[linestyle=dashed](12,0)(12,10)(0,10)
+        \uput{0.2}[270](8,0){2}\uput{0.2}[270](10,0){2,5}\uput{0.2}[270](12,0){3}
+        \uput{0.2}[180](0,2.4){12}\uput{0.2}[180](0,5){\textcolor{red}{25}} \uput{0.2}[180](0,10){50}\uput{0.2}[180](0,6.6){33}
+        \uput{0.2}[180](0,8.4){42}\uput{0.2}[180](0,9.6){48}
+        %\uput{0.2}[270](11,0){16}\uput{0.2}[270](12,0){17}
+        \uput{0.2}[0](0,10.5){{\textit{Effectif cumulé}}}
+        \uput{0.2}[90](15,0){{\textit{Quantité d'eau (en \Capa[L]{})}}}
+        \end{pspicture}}
+    \end{center}
+    \medskip
+    \textbf{La médiane $\mathcal{M}$} est environ égal à \Capa[L]{0.8}.
+    
+    En effet, la moitié des personnes interrogées consomme moins de \Capa[L]{0.8} par jour, ce que l'on peut aussi formuler par : la moitié des personnes interrogées consomme plus de \Capa[L]{0.8} par jour.
+\end{exemple*1}
