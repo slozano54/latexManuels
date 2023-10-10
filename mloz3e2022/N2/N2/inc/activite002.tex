@@ -1,0 +1,58 @@
+\begin{activite}[Crible d'Ératosthène]
+    \vspace*{-7mm}
+    On désigne sous le nom de crible d'Eratosthène (vers 276 av.J.-C - vers 194 av.J.-C),
+    une méthode de recherche des nombres premiers plus petits qu'un entier naturel $N$ donné.
+    \smallskip
+    Pour ceci, on écrit la liste de tous les nombres jusqu'à $N$, puis on applique l'algorithme suivant.
+    \begin{changemargin}{-20mm}{-20mm}
+        \begin{center}
+            \begin{spacing}{0.5}
+                \begin{myBox}{Crible d'Eratosthène}		
+                    \begin{list}{$\bullet$}{}
+                        \item On élimine $1$, en le barrant par exemple.
+                        \item On entoure $2$ et on élimine tous les multiples de $2$.
+                        \item On recommence avec le plus petit nombre non éliminé restant dans la liste : $3$.
+                        \item On recommence avec le plus petit nombre non entouré et non éliminé : $5$.
+                        \item \dots
+                        \item On réitère le procédé jusqu'à la partie entière de la racine carrée de $N$.
+                    \end{list}
+                \end{myBox}
+                \end{spacing}
+        \end{center}
+    \end{changemargin}
+    Les nombres non éliminés sont les nombres premiers jusqu'à $N$.
+
+	En appliquant cet algorithme avec les entiers inférieurs à $100$, déterminer les nombres premiers inférieurs à $100$ du tableau suivant :
+    \begin{center}
+        {\renewcommand{\arraystretch}{2}
+        \begin{tabularx}{1.2\linewidth}{|*{10}{>{\centering\arraybackslash}X|}}
+            \hline	
+            $1 $  & $2 $  & $3 $  & $4 $  & $5 $  & $6 $  & $7 $  & $8 $  & $9 $  & $10 $\\
+            \hline
+            $11$  & $12$ & $13$  & $14$ & $15$ & $16$ & $17$  & $18$ & $19$  & $20 $\\
+            \hline
+            $21$ & $22$ & $23$  & $24$ & $25$ & $26$ & $27$ & $28$ & $29$  & $30 $\\
+            \hline
+            $31$  & $32$ & $33$ & $34$ & $35$ & $36$ & $37$  & $38$ & $39$ & $40 $\\
+            \hline
+            $41$  & $42$ & $43$  & $44$ & $45$ & $46$ & $47$  & $48$ & $49$ & $50 $\\
+            \hline
+            $51$ & $52$ & $53$  & $54$ & $55$ & $56$ & $57$ & $58$ & $59$  & $60 $\\
+            \hline
+            $61$  & $62$ & $63$ & $64$ & $65$ & $66$ & $67$  & $68$ & $69$ & $70 $\\
+            \hline
+            $71$  & $72$ & $73$  & $74$ & $75$ & $76$ & $77$ & $78$ & $79$  & $80 $\\
+            \hline
+            $81$ & $82$ & $83$  & $84$ & $85$ & $86$ & $87$ & $88$ & $89$  & $90 $\\
+            \hline
+            $91$ & $92$ & $93$ & $94$ & $95$ & $96$ & $97$  & $98$ & $99$ & $100$\\
+            \hline
+        \end{tabularx}
+        }
+    \end{center}
+    \begin{remarque}
+        Cette liste des nombres premiers à connaître par coeur.        
+    
+        \hrefLien{https://isthisprime.com/game/}{S'entraîner avec ce jeu en ligne}        
+    \end{remarque}
+\end{activite}
