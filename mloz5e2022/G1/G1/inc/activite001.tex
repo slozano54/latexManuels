@@ -1,62 +1,91 @@
 \begin{activite}[Couples d'angles]
-    \vspace*{-7mm}    
-    {\bf Objectif :} faire découvrir la notion d'angles alternes-internes et d'angles correspondants.
-    {\renewcommand{\baselinestretch}{1.15}\selectfont    
-    \vspace*{-3mm}
-    \partie[préparation]
-    \vspace*{-5mm}
-       Découper les trois bandelettes en bas de page. Ces bandes représentent deux droites $(d_1)$ et $(d_2)$ et une troisième droite $(\Delta)$ qui leur est sécante aux points $A$ et $B$. Placer une attache parisienne au niveau du point $A$ commun entre $(d_1)$ et $(\Delta)$ et une autre au niveau du point $B$ commun entre $(d_2)$ et $(\Delta)$. \\
-       Combien d'angles sont-ils matérialisés par cette configuration ?
-    \vspace*{-3mm}
-    \partie[angles alternes-internes]
-    \vspace*{-10mm}    
-       \begin{enumerate}
-          \item Prendre deux jetons, les placer sur deux angles vérifiant les conditions suivantes :
-             \begin{itemize}
-                \item les deux angles n'ont pas le même sommet ;
-                \item ils sont situés de part et d'autre de la droite $(\Delta)$ ;
-                \item ils sont situés \og entre \fg{} les droites $(d_1)$ et $(d_2)$.
-             \end{itemize}
-          Quelle est la mesure en degrés de chacun de ces deux angles ?
-          \item Combien y a-t-il de telles paires d'angles ?
+   \vspace*{-10mm}    
+   {\bf Objectif :} faire découvrir la notion d'angles alternes-internes et d'angles correspondants. Des figures Geogebra seront projetées en même temps au tableau.
+   {\renewcommand{\baselinestretch}{1.15}\selectfont        
+   \partie[préparation]
+   \vspace*{-5mm}
+      La figure ci dessous représente deux droites $(d_1)$ et $(d_2)$ et une troisième droite $(\Delta)$ qui leur est sécante aux points $A$ et $B$. Placer une attache parisienne au niveau du point $A$ commun entre $(d_1)$ et $(\Delta)$ et une autre au niveau du point $B$ commun entre $(d_2)$ et $(\Delta)$. 
+      \par\smallskip
+      \begin{minipage}{0.7\linewidth}
+         \begin{center}
+            \begin{Geometrie}[CoinHD={(8.5u,4u)}]
+               pair A[],B[];
+               A0=u*(6,2.2);
+               B0=u*(2,2);
+               A1=A0 shifted (0.5u,1.2u);               
+               A2=1.5[B0,A0];%pour le nom de (delta)  
+               A3=1.3[A0,A1];%pour le nom de (d1)  
+               B1=B0 shifted (-0.5u,1.2u);               
+               B2=1.3[B0,B1];%pour le nom de (d2)  
+               trace droite(A0,B0);
+               trace droite(A0,A1);
+               trace droite(B0,B1);
+               label.rt(btex $(d_1)$ etex,A3);
+               label.lft(btex $(d_2)$ etex,B2);
+               label.bot(btex $(\Delta)$ etex,A2);
+            \end{Geometrie}
+      \end{center}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.45\linewidth}
+      \begin{enumerate}
+         \item Compléter la figure.
+         \item Combien d'angles sont-ils matérialisés par cette configuration ?
+         \par\pointilles[\linewidth]
+         \par\pointilles[\linewidth]
+         \par\pointilles[\linewidth]
+      \end{enumerate}
+   \end{minipage}
+   \partie[angles alternes-internes]
+   \vspace*{-10mm}
+   \begin{enumerate}
+      \item Au tableau, placer les deux aimants rouges sur deux angles vérifiant les conditions suivantes :
+         \begin{itemize}
+            \item les deux angles n'ont pas le même sommet ;
+            \item ils sont situés de part et d'autre de la droite $(\Delta)$ ;
+            \item ils sont situés \og entre \fg{} les droites $(d_1)$ et $(d_2)$.
+         \end{itemize}
+      Quelle est la mesure en degrés de chacun de ces deux angles ?
+      \par\pointilles[\linewidth]
+      \par\pointilles[\linewidth]               
+      \item Combien y a-t-il de telles paires d'angles ?
+      \par\pointilles[\linewidth]
+      \begin{center}
+         \fbox{Les angles ainsi construits sont dit {\bf alternes-internes}.}
+      \end{center}
+      \item Tracer ci-dessous une figure similaire à celle ci-dessus mais de telle sorte que les droites $(d_1)$ et $(d_2)$ soient parallèles, repérer deux angles alternes-internes par deux arcs puis donner la mesure de chacun de ces deux angles.
+      \par\vspace*{30mm}
+      \item En observant les résultats de la classe, quelle conjecture peut-on faire ?
+      
+      Au tableau nous allons afficher les mesures des angles choisis et modifier la figure.
+      \par\pointilles[\linewidth]
+      \par\pointilles[\linewidth]         
+   \end{enumerate}
+   \partie[angles correspondants]
+   \vspace*{-10mm}
+      \begin{enumerate}
+         \item Au tableau, placer les deux aimants noirs sur deux angles vérifiant les conditions suivantes :
+            \begin{itemize}
+               \item les deux angles n'ont pas le même sommet ;
+               \item ils sont situés du même côté que la droite $(\Delta)$ ;
+               \item l'un est situé \og entre \fg{} les droites $(d_1)$ et $(d_2)$, l'autre à l'extérieur.
+            \end{itemize}
+         Quelle est la mesure en degrés de chacun de ces deux angles ?
+         \par\pointilles[\linewidth]
+         \par\pointilles[\linewidth]
+         \par\pointilles[\linewidth]
+         \item Combien y a-t-il de telles paires d'angles ?
+         \par\pointilles[\linewidth]
+         \begin{center}
+         \fbox{Les angles ainsi construits sont dit {\bf correspondants}.}
+         \end{center}
+         \item  Tracer ci-dessous une figure similaire à celle ci-dessus mais de telle sorte que les droites $(d_1)$ et $(d_2)$ soient parallèles, repérer deux correspondants par deux arcs puis donner la mesure de chacun de ces deux angles.
+         \par\vspace*{40mm}
+         \item En observant les résultats de la classe, quelle conjecture peut-on faire ?
           
-          Les angles ainsi construits sont dit {\bf alternes-internes}.
-          \item Placer les bandelettes de telle sorte que les droites $(d_1)$ et $(d_2)$ soient parallèles, repérer deux angles alternes-internes par deux jetons puis donner la mesure de chacun de ces deux angles.
-          \item En observant les résultats de la classe, quelle conjecture peut-on faire ?
-       \end{enumerate}
-       \vspace*{-7mm}    
-     \partie[angles correspondants]
-     \vspace*{-10mm}     
-       \begin{enumerate}
-          \item Prendre deux jetons, les placer sur deux angles vérifiant les conditions suivantes :
-             \begin{itemize}
-                \item les deux angles n'ont pas le même sommet ;
-                \item ils sont situés du même côté que la droite $(\Delta)$ ;
-                \item l'un est situé \og entre \fg{} les droites $(d_1)$ et $(d_2)$, l'autre à l'extérieur.
-             \end{itemize}
-          Quelle est la mesure en degrés de chacun de ces deux angles ?
-          \item Combien y a-t-il de telles paires d'angles ? \\
-             Les angles ainsi construits sont dit {\bf correspondants}.
-          \item Placer les bandelettes de telle sorte que les droites $(d_1)$ et $(d_2)$ soient parallèles, repérer deux angles correspondants par deux jetons puis donner la mesure de chacun de ces deux angles.
-          \item En observant les résultats de la classe, quelle conjecture peut-on faire ?
-       \end{enumerate}
-    }
-    \vspace*{-9mm}    
-    \begin{pspicture}(0.5,1)(17.5,5)
-       \psline(0.75,0.75)(17.25,0.75)
-       \rput(1,1.1){$(d_1)$}
-       \rput(12,1.25){$A$}
-       \psline(0.75,2.25)(17.25,2.25)
-       \rput(1,2.6){$(\Delta)$}
-       \rput(6,2.75){$B$}
-       \rput(12,2.75){$A$}
-       \psline(0.75,3.75)(17.25,3.75)
-       \rput(1,4.1){$(d_2)$}
-       \rput(6,4.25){$B$}
-       \psdots(12,0.75)(6,2.25)(12,2.25)(6,3.75)
-       \psset{linecolor=gray}
-       \psframe(0,0)(18,4.5)
-       \psline(0,1.5)(18,1.5)
-       \psline(0,3)(18,3)
-    \end{pspicture}
+         Au tableau nous allons afficher les mesures des angles choisis et modifier la figure.
+         \par\pointilles[\linewidth]
+         \par\pointilles[\linewidth]         
+      \end{enumerate}
+   }
  \end{activite}
