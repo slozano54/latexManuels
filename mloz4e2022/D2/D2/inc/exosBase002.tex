@@ -1,9 +1,56 @@
 \begin{exercice*}
-    \dots
+    Synthèse d'une vente de sapins de différentes tailles.
+    \par\smallskip    
+    \Stat[%        
+        Tableau,%
+        Donnee=\scantokens{%
+            \begin{minipage}{0.1\textwidth}%
+                \smallskip
+                \textbf{Nombre de}\par\textbf{sapins}%
+                \par\smallskip
+            \end{minipage}},%
+        Effectif=\scantokens{%
+        \begin{minipage}{0.1\textwidth}%
+            \smallskip
+            \textbf{Prix du}\par\textbf{sapin en \Prix{}}%
+            \par\smallskip
+        \end{minipage}},%        
+    ]{20/15,10/25,40/30,40/50,30/55}
+    \smallskip
+    \begin{enumerate}
+        \item Calculer le prix de vente moyen d'un sapin. Arrondir au centime d'euro.
+        \item Interpréter ce résultat.
+        \item Modifier une seule valeur pour que ce prix moyen soit un nombre entier d'euros.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Synthèse d'une vente de sapins de différentes tailles.
+    \par\smallskip
+    \Stat[%        
+        Tableau,%
+        Donnee=\textbf{Nombre de sapins},%
+        Effectif=\textbf{Prix du sapin en \Prix{}}%
+    ]{20/15,10/25,40/30,40/50,30/55}
+    \smallskip
+    \begin{enumerate}
+        \item Calculer le prix de vente moyen d'un sapin. Arrondir au centime d'euro.
+        \par\smallskip
+        \textcolor{red}{
+            \Stat[Moyenne,Precision=2]{20/15,10/25,40/30,40/50,30/55}
+            Le prix de vente moyen est donc de \Prix{38.57}.
+        }
+        \smallskip        
+        \item Interpréter ce résultat.
+        \par\smallskip
+        \textcolor{red}{Cela signifie que si tous les sapins étaient vendus au même prix, ils seraient vendus \Prix{38.57}.}
+        \item Modifier une seule valeur pour que ce prix moyen soit un nombre entier d'euros.
+        \par\smallskip
+        \textcolor{red}{
+            Il y a \EffectifTotal sapins. Pour que le prix moyen soit de \Prix{39}, il faut un total des ventes de $39\times 140=\Prix{5460}$
+            soit \Prix{60} de plus. Il y a plusieurs solutions, remplacer \Prix{15} par \Prix{18} ou \Prix{25} par \Prix{31} ou \Prix{55} par \Prix{57}.
+        }
+    \end{enumerate}
 \end{corrige}
 
