@@ -1,9 +1,47 @@
 \begin{exercice*}
-    \dots
+    Ce diagramme en barres donne la répartition des notes obtenues à un contrôle de matématiques d'une classe de 3\up{e}.
+    \par\smallskip
+    \Stat[%        
+        Graphique,%
+        Donnee=Note,%
+        Effectif=Effectif,%
+        Unitex=1,%
+        Unitey=0.4,Pasy=1,%
+        Grille,PasGrilley=1,LectureFine,%        
+        EpaisseurBatons=4,%
+        CouleurDefaut=Grey,
+        Origine=7
+    ]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}
+    \begin{enumerate}
+        \item Déterminer le nombre d'élèves de la classe.
+        \item Déterminer la note moyenne de ce contrôle. Interpréter cette valeur.        
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Ce diagramme en barres donne la répartition des notes obtenues à un contrôle de matématiques d'une classe de 3\up{e}.
+    \par\smallskip
+    \Stat[%        
+        Graphique,%
+        Donnee=Note,%
+        Effectif=Effectif,%
+        Unitex=1,%
+        Unitey=0.4,Pasy=1,%
+        Grille,PasGrilley=1,LectureFine,%        
+        EpaisseurBatons=4,%
+        CouleurDefaut=Grey,
+        Origine=7
+    ]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}
+    \textcolor{red}{\Stat[Moyenne]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}}
+    \begin{enumerate}
+        \item Déterminer le nombre d'élèves de la classe.
+        \par\smallskip\textcolor{red}{Le nombre d'élèves de cette classe est donc de \EffectifTotal.}
+        \item Déterminer la note moyenne de ce contrôle. Interpréter cette valeur.
+        \par\smallskip\textcolor{red}{%
+        La note moyenne de ce contrôle est donc de \num{\Moyenne}.\\        
+        Cela signifie que si tous les élèves avaient eu la même note, ils auraient eu \num{\Moyenne}.
+        }
+    \end{enumerate}
 \end{corrige}
 
