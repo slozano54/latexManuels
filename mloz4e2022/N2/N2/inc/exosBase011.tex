@@ -1,10 +1,7 @@
 \begin{exercice*}
     On désigne sous le nom de crible d'Eratosthène (vers 276 av.J.-C - vers 194 av.J.-C),
-    une méthode de recherche des nombres premiers plus petits qu'un entier naturel $N$ donné.
-
-    \smallskip
+    une méthode de recherche des nombres premiers plus petits qu'un entier naturel $N$ donné.\par\smallskip
     Pour ceci, on écrit la liste de tous les nombres jusqu'à $N$, puis on applique l'algorithme suivant.
-
     \begin{myBox}{Crible d'Eratosthène}
         \begin{itemize}
             \item On élimine $1$, en le barrant par exemple.
@@ -15,22 +12,22 @@
             \item On réitère le procédé jusqu'à la partie entière de la racine carrée de $N$.
         \end{itemize}
     \end{myBox}
-
     Les nombres non éliminés sont les nombres premiers jusqu'à $N$.    
     \begin{enumerate}
         \item Déterminons tous les nombres premiers inférieurs à $100$ avec cette algorithme. Dans le tableau ci-dessous :
-        \begin{itemize}
-            \item Barrer $1$
-            \item Barrer tous les multiples de $2$ sauf $2$ et entourer $2$ ;
-            \item Barrer tous les multiples de $3$ restant sauf $3$ et entourer $3$ ;
-            \item Barrer tous les multiples de $5$ restant sauf $5$ et entourer $5$ ;
-            \item Barrer tous les multiples de $7$ restant sauf $7$ et entourer $7$ ;
-        \end{itemize}
-
+        \begin{multicols}{2}
+            \begin{itemize}                
+                \item Barrer les multiples de $2$ sauf $2$ et entourer $2$ ;
+                \item Barrer les multiples de $3$ sauf $3$ et entourer $3$ ;
+                \columnbreak
+                \item Barrer les multiples de $5$ sauf $5$ et entourer $5$ ;
+                \item Barrer les multiples de $7$ sauf $7$ et entourer $7$ ;
+            \end{itemize}
+        \end{multicols}
         \smallskip        
         \begin{tabularx}{0.75\linewidth}{|*{10}{>{\centering\arraybackslash}X|}}
             \hline	
-            $1 $  & $2 $  & $3 $  & $4 $  & $5 $  & $6 $  & $7 $  & $8 $  & $9 $  & $10 $\\
+            \xout{$1 $}  & $2 $  & $3 $  & $4 $  & $5 $  & $6 $  & $7 $  & $8 $  & $9 $  & $10 $\\
             \hline
             $11$  & $12$  & $13$  & $14$  & $15$  & $16$  & $17$  & $18$  & $19$  & $20 $\\
             \hline
@@ -52,8 +49,8 @@
             \hline
         \end{tabularx}
         \smallskip
-        \item Expliquer pourquoi il n'est pas nécessaire de continuer.
-        \item Écrire la liste de tous les nombres premiers inférieurs à $100$.
+        \item Expliquer pourquoi il n'est pas nécessaire de continuer.\par\makebox[\linewidth]{\dotfill}
+        \item Écrire la liste de tous les nombres premiers inférieurs à $100$.\par\makebox[\linewidth]{\dotfill}
     \end{enumerate}
 \end{exercice*}
 \begin{corrige}
