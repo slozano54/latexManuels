@@ -1,10 +1,13 @@
 \section{La droite graduée}
-Si on partage l'unité d'une droite graduée en dix, on obtient des dixièmes;
-
+\begin{minipage}{0.3\linewidth}
+En partageant l'unité d'une droite graduée en dix, on obtient des dixièmes;\\
 En partageant un dixième en dix, on obtient des centièmes \dots      
+\end{minipage}
+\hfill
+\begin{minipage}{0.65\linewidth}
 \begin{center}   
    \begin{pspicture}(-2,-3)(11,1)
-   {\psset{yunit=0.7}
+   {\psset{yunit=0.5}
       \small
       \rput(0,-1){\includegraphics[width=3cm]{\currentpath/images/loupe.eps}}
       \psaxes[yAxis=false]{->}(0,0)(10.3,0)
@@ -19,3 +22,4 @@ En partageant un dixième en dix, on obtient des centièmes \dots
       \multido{\n=0.1+0.1}{9}{\psline[linewidth=0.01](\n,-3.92)(\n,-4.08)}}
    \end{pspicture}
 \end{center}
+\end{minipage}
