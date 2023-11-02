@@ -198,7 +198,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{longtable, tabularx}
 \RequirePackage{multirow}
-\RequirePackage[table,svgnames]{xcolor} % AjoutSeb option svgnames
+% \RequirePackage[table,svgnames]{xcolor} % AjoutSeb option svgnames NE SERT PLUS IL Y AVAIT CLASH
 \RequirePackage{pst-all, pstricks-add}
 \RequirePackage{fancyhdr}
 \RequirePackage{fancyvrb}
