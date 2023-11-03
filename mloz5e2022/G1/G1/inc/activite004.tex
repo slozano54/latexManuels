@@ -1,0 +1,251 @@
+\begin{changemargin}{-10mm}{-20mm}
+    \begin{activite}[Configurations particulières]
+        \begin{propriete}[Angles opposés par le sommet]
+            Si deux angles sont \textbf{opposés par le sommet} alors \pointilles
+            \par\medskip\pointilles
+            \medskip
+        \end{propriete}
+        \begin{exemple*1}
+            \phantom{rrr}\par\bigskip
+            \begin{minipage}{0.8\linewidth}
+                \pointilles[15mm] et \pointilles[15mm] sont opposés par le sommet donc
+                \par\medskip\pointilles.
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.15\linewidth}
+                \begin{center}
+                    \scalebox{0.9}{
+                        \begin{Geometrie}[CoinHD={(5u,3u)}]
+                            pair A,A',B,B',O;
+                            A=u*(0.5,0.5);
+                            O=u*(2,1.5);
+                            A'=rotation(A,O,180);
+                            %B=u*(1,2.5);
+                            B=rotation(A,O,-30);
+                            % A'=u*(3.5,2.5);
+                            %B'=u*(3,0.5);
+                            B'=rotation(B,O,180);
+                            trace droite(A,A');
+                            trace droite(B,B');
+                            marque_a:=1.25*marque_a;
+                            trace marqueangle(B,O,A,0);
+                            trace marqueangle(B',O,A',0);                            
+                            fill coloreangle(B,O,A) withcolor blue;
+                            fill coloreangle(B',O,A') withcolor blue;
+                            marque_a:=marque_a/1.25;
+                            trace marqueangle(A',O,B,0);
+                            trace marqueangle(A,O,B',0);                            
+                            fill coloreangle(A',O,B) withcolor red;
+                            fill coloreangle(A,O,B') withcolor red;
+                            labeloffset:=labeloffset*1.5;
+                            label.ulft(btex O etex,O);
+                            marque_p:="croix";
+                            pointe(A,A',B,B');
+                            label.top(btex A etex,A);
+                            label.top(btex B etex,A');
+                            label.top(btex C etex,B);
+                            label.top(btex D etex,B');
+                        \end{Geometrie}            
+                    }
+                \end{center}
+            \end{minipage}
+        \end{exemple*1}
+        %%%%%%%%%
+        % Alternes-Internes
+        %%%%%%%%%
+        \begin{propriete}[(directe) Angles alternes-internes]
+            Si deux droites \textbf{parallèles} sont coupées par une troisième alors \pointilles
+            \par\medskip\pointilles
+            \par\medskip\pointilles
+            \medskip
+        \end{propriete}
+        \begin{exemple*1}
+            \phantom{rrr}\par\bigskip
+            \begin{minipage}{0.8\linewidth}
+                Comme la sécante \pointilles[15mm] forme, avec les droites parallèles \pointilles[15mm] et \par\medskip
+                \pointilles[15mm], les angles \pointilles[30mm] et \pointilles[15mm] alors \pointilles\par\medskip\pointilles.
+            \end{minipage}            
+            \begin{minipage}{0.15\linewidth}
+                \vspace*{-15mm}
+                \begin{center}
+                    \scalebox{0.9}{
+                        \begin{Geometrie}[CoinBG={(-1.5u,-1.5u)},CoinHD={(8u,2.5u)}]
+                            pair A,B,C,D,E,F,G;
+                            C=u*(1,0);
+                            A-C=u*(1.5,0.5);
+                            G-C=u*(4.5,1.5);
+                            B=0.9[A,rotation(C,A,-80)];
+                            E=rotation(A,B,-100);
+                            D=rotation(A,B,80);
+                            F=0.6[A,rotation(C,A,100)];
+                            labeloffset:=1.2*labeloffset;
+                            label.llft(btex $B$ etex, B);
+                            label.llft(btex $A$ etex, A);
+                            labeloffset:=labeloffset/1.2;
+                            trace droite(D,E);
+                            trace droite(C,G);
+                            trace droite(A,B);
+                            marque_a:=0.7*marque_a;
+                            fill coloreangle(B,A,C) withcolor red;
+                            fill coloreangle(A,B,D) withcolor red;
+                            marque_p:="croix";
+                            pointe(C,D,E,F,G);
+                            label.lrt(btex $C$ etex, C);
+                            label.lrt(btex $D$ etex, D);
+                            label.lrt(btex $E$ etex, E);
+                            label.rt(btex $F$ etex, F);
+                            label.lrt(btex $G$ etex, G);
+                            pair H;
+                            H-F=u*(0,-1);
+                            label.lft(btex $(DE)$ et $(CG)$  sont parallèles. etex,H);
+                        \end{Geometrie}        
+                    }
+                \end{center}
+            \end{minipage}
+        \end{exemple*1}
+        \begin{propriete}[(réciproque) Angles alternes-internes]
+            Si deux droites et une sécante forment des angles alternes-internes \textbf{égaux} alors
+            \par\medskip\pointilles
+            \par\medskip\pointilles            
+            \medskip
+        \end{propriete}
+        \begin{exemple*1}
+            \phantom{rrr}\par\bigskip
+            \begin{minipage}{0.8\linewidth}
+                Comme la sécante \pointilles[15mm] forme avec les droites \pointilles[15mm] et \pointilles[15mm] \par\medskip
+                les angles \pointilles[40mm] et \pointilles[15mm] de même \pointilles[20mm] \par\medskip alors \pointilles.                
+            \end{minipage}
+            \begin{minipage}{0.15\linewidth}
+                \vspace*{-15mm}
+                \begin{center}
+                    \scalebox{0.9}{
+                        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(7u,2.5u)}]
+                            pair A,B,C,D,E,F,G;
+                            C=u*(1,0);
+                            A-C=u*(1.5,0.5);
+                            G-C=u*(4.5,1.5);
+                            B=0.9[A,rotation(C,A,-80)];
+                            E=rotation(A,B,-100);
+                            D=rotation(A,B,80);
+                            F=0.6[A,rotation(C,A,100)];
+                            labeloffset:=1.2*labeloffset;
+                            label.llft(btex $B$ etex, B);
+                            label.llft(btex $A$ etex, A);
+                            labeloffset:=labeloffset/1.2;
+                            trace droite(D,E);
+                            trace droite(C,G);
+                            trace droite(A,B);
+                            marque_a:=0.7*marque_a;
+                            fill coloreangle(B,A,C) withcolor red;
+                            fill coloreangle(A,B,D) withcolor red;
+                            trace Codeangle(B,A,C,0,btex \textcolor{red}{\ang{80}} etex);
+                            trace Codeangle(A,B,D,0,btex \textcolor{red}{\ang{80}} etex);
+                            marque_p:="croix";
+                            pointe(C,D,E,F,G);
+                            label.lrt(btex $C$ etex, C);
+                            label.lrt(btex $D$ etex, D);
+                            label.lrt(btex $E$ etex, E);
+                            label.rt(btex $F$ etex, F);
+                            label.lrt(btex $G$ etex, G);
+                         \end{Geometrie}             
+                    }
+                \end{center}    
+            \end{minipage}            
+        \end{exemple*1}
+        %%%%%%%%%
+        % Correspondants
+        %%%%%%%%%
+        \begin{propriete}[(directe) Angles correspondants]
+            Si deux droites \textbf{parallèles} sont coupées par une troisième alors \pointilles
+            \par\medskip\pointilles
+            \par\medskip\pointilles
+            \medskip
+        \end{propriete}
+        \begin{exemple*1}
+            \begin{center}
+                Comme la sécante \pointilles[15mm] forme avec les droites parallèles \pointilles[15mm] et \pointilles[15mm]\par\medskip 
+                les angles \pointilles[30mm] et \pointilles[15mm] alors \pointilles.
+                \par\bigskip
+                \scalebox{1}{
+                    \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(9u,2.5u)}]
+                        pair A,B,C,D,E,F,G;
+                        C=u*(1,0);
+                        A-C=u*(1.5,0.5);
+                        G-C=u*(4.5,1.5);
+                        B=0.9[A,rotation(C,A,-80)];
+                        E=rotation(A,B,-100);
+                        D=rotation(A,B,80);
+                        F=0.6[A,rotation(C,A,100)];
+                        labeloffset:=1.2*labeloffset;
+                        label.llft(btex $B$ etex, B);
+                        label.llft(btex $A$ etex, A);
+                        labeloffset:=labeloffset/1.2;
+                        trace droite(D,E);
+                        trace droite(C,G);
+                        trace droite(A,B);
+                        marque_a:=0.7*marque_a;
+                        fill coloreangle(E,B,A) withcolor red;
+                        fill coloreangle(C,A,F) withcolor red;
+                        marque_p:="croix";
+                        pointe(C,D,E,F,G);
+                        label.lrt(btex $C$ etex, C);
+                        label.lrt(btex $D$ etex, D);
+                        label.lrt(btex $E$ etex, E);
+                        label.rt(btex $F$ etex, F);
+                        label.lrt(btex $G$ etex, G);
+                        pair H;
+                        H-F=u*(1,0.5);
+                        label.rt(btex $(DE)$ et $(CG)$  sont parallèles. etex,H);
+                     \end{Geometrie}        
+                }
+            \end{center}            
+        \end{exemple*1}
+        \vfill
+        \begin{propriete}[(réciproque) Angles correspondants]
+            Si deux droites et une sécante forment des angles correspodants \textbf{égaux} alors
+            \par\medskip\pointilles
+            \par\medskip\pointilles            
+            \medskip
+        \end{propriete}
+        \begin{exemple*1}
+            \begin{center}
+                Comme la sécante \pointilles[15mm] forme avec les droites \pointilles[15mm] et \pointilles[15mm] \par\medskip
+                les angles \pointilles[40mm] et \pointilles[15mm] de même \pointilles[20mm] alors \par\medskip
+                \par\medskip\pointilles.
+                \par\medskip
+                \scalebox{1}{
+                    \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(7u,2.5u)}]
+                        pair A,B,C,D,E,F,G;
+                        C=u*(1,0);
+                        A-C=u*(1.5,0.5);
+                        G-C=u*(4.5,1.5);
+                        B=0.9[A,rotation(C,A,-80)];
+                        E=rotation(A,B,-100);
+                        D=rotation(A,B,80);
+                        F=0.6[A,rotation(C,A,100)];
+                        labeloffset:=1.2*labeloffset;
+                        label.llft(btex $B$ etex, B);
+                        label.llft(btex $A$ etex, A);
+                        labeloffset:=labeloffset/1.2;
+                        trace droite(D,E);
+                        trace droite(C,G);
+                        trace droite(A,B);
+                        marque_a:=0.7*marque_a;
+                        fill coloreangle(B,A,C) withcolor red;
+                        fill coloreangle(A,B,D) withcolor red;
+                        trace Codeangle(B,A,C,0,btex \textcolor{red}{\ang{80}} etex);
+                        trace Codeangle(A,B,D,0,btex \textcolor{red}{\ang{80}} etex);
+                        marque_p:="croix";
+                        pointe(C,D,E,F,G);
+                        label.lrt(btex $C$ etex, C);
+                        label.lrt(btex $D$ etex, D);
+                        label.lrt(btex $E$ etex, E);
+                        label.rt(btex $F$ etex, F);
+                        label.lrt(btex $G$ etex, G);
+                     \end{Geometrie}             
+                }
+            \end{center}
+        \end{exemple*1}
+        \vfill
+    \end{activite}
+\end{changemargin}

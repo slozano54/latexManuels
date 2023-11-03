@@ -1,5 +1,246 @@
-% \begin{changemargin}{-10mm}{-10mm}
-    \begin{activite}[...]
-        \dots
+\begin{changemargin}{-10mm}{-10mm}
+    \begin{activite}[Vocabulaire]        
+        {\renewcommand{\arraystretch}{1.5}
+            \begin{tabular}{|*{2}{>{\centering\arraybackslash}m{0.45\linewidth}|}}
+                \hline
+                \rowcolor{LightGray}\textsc{Définitions}&\textsc{Illustrations}\\\hline
+                \begin{minipage}{\linewidth}
+                    \vspace*{-5mm}                    
+                    Deux angles sont \textbf{adjacents} lorsque :
+                    \begin{itemize}
+                        \item \pointilles\par\medskip
+                        \item \pointilles\par\medskip
+                        \item \pointilles
+                    \end{itemize}                    
+                    \smallskip
+                \end{minipage}
+                    &                    
+                    %$\widehat{DAC}$ et $\widehat{CAB}$ sont adjacents.
+                    \pointilles[20mm] et \pointilles[20mm] sont adjacents.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinBG={(0,-0.5u)},CoinHD={(7u,1.5u)}]
+                            pair A,B,C,D;
+                            A=u*(1,0);
+                            D=u*(6,0);
+                            C=1[A,rotation(D,A,10)];
+                            B=0.5[A,rotation(C,A,15)];
+                            trace demidroite(A,B);
+                            trace demidroite(A,C);
+                            trace demidroite(A,D);
+                            trace marqueangle(C,A,B,0);
+                            trace marqueangle(D,A,C,0);
+                            marque_a:=1.5*marque_a;
+                            fill coloreangle(C,A,B) withcolor red;
+                            marque_a:=1.2*marque_a;
+                            fill coloreangle(D,A,C) withcolor blue;
+                            label.bot(btex A etex,A);
+                            marque_p:="croix";
+                            pointe(B,C,D);
+                            labeloffset:=1.5*labeloffset;
+                            label.ulft(btex B etex,B);
+                            label.lrt(btex C etex,C);
+                            label.bot(btex D etex,D);
+                        \end{Geometrie}
+                     }
+                \\\hline
+                \begin{minipage}{\linewidth}
+                    \vspace*{-5mm}                    
+                    Deux angles sont \textbf{complémentaires} lorsque \par\medskip
+                    \pointilles\par\medskip
+                    \pointilles\par\medskip
+                    \pointilles\par\medskip
+                \end{minipage}
+                    &                    
+                    %$\widehat{GBF}$ et $\widehat{FBE}$ sont complémentaires.
+                    \pointilles[15mm] et \pointilles[15mm] sont complémentaires.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinHD={(6u,3.5u)}]
+                            pair A,B,C,E,F,G;
+                            A=u*(0.5,1);
+                            B=u*(2,1);
+                            C=u*(3,1);
+                            E=u*(2,3);
+                            F=u*(3,3);
+                            G=u*(4.5,1);
+                            trace droite(A,B);
+                            trace demidroite(B,E);
+                            trace demidroite(B,F);
+                            trace codeperp(C,B,E,25);
+                            fill coloreangle(F,B,E) withcolor red;
+                            fill coloreangle(C,B,F) withcolor blue;
+                            labeloffset:=1.5*labeloffset;
+                            label.bot(btex $B$ etex, B);
+                            marque_p:="croix";
+                            pointe(A,E,F,G);
+                            label.bot(btex $A$ etex, A);
+                            label.lft(btex $E$ etex, E);
+                            label.lft(btex $F$ etex, F);
+                            label.bot(btex $G$ etex, G);
+                        \end{Geometrie}
+                    }
+                \\\hline
+                \begin{minipage}{\linewidth}
+                    % \vspace*{-5mm}                    
+                    Deux angles sont \textbf{supplémentaires} lorsque \par\medskip
+                    \pointilles\par\medskip
+                    \pointilles\par\medskip
+                    \pointilles\par\medskip
+                \end{minipage}
+                    &                    
+                    %$\widehat{DCG}$ et $\widehat{GCB}$ sont supplémentaires.
+                    \pointilles[15mm] et \pointilles[15mm] sont supplémentaires.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinHD={(6u,2.5u)}]               
+                            pair B,C,D,G;
+                            B=u*(0.5,1);
+                            C=u*(3,1);
+                            D=u*(5,1);
+                            G=u*(1.5,2);
+                            trace droite(B,D);
+                            trace demidroite(C,G);
+                            fill coloreangle(D,C,G) withcolor red;
+                            fill coloreangle(G,C,B) withcolor blue;
+                            labeloffset:=1.5*labeloffset;
+                            label.bot(btex $C$ etex,C);
+                            marque_p:="croix";
+                            pointe(B,D,G);
+                            label.bot(btex $B$ etex,B);               
+                            label.bot(btex $D$ etex,D);
+                            label.bot(btex $G$ etex,G);
+                        \end{Geometrie}
+                    }
+                \\\hline
+                \begin{minipage}{\linewidth}
+                    \vspace*{-5mm}                    
+                    Deux angles sont \textbf{alternes-internes} lorsque :
+                    \begin{itemize}
+                        \item \pointilles\par\medskip
+                        \item \pointilles
+                    \end{itemize} 
+                \end{minipage}
+                    &                    
+                    %$\widehat{DBA}$ et $\widehat{BAC}$ sont alternes-internes.
+                    \pointilles[15mm] et \pointilles[15mm] sont alternes-internes.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(7u,2.5u)}]
+                            pair A,B,C,D,E,F,G;
+                            C=u*(1,0);
+                            A-C=u*(1.5,0.5);
+                            G-C=u*(4.5,1.5);
+                            B=0.9[A,rotation(C,A,-80)];
+                            E=rotation(A,B,-110);
+                            D=rotation(A,B,70);
+                            F=0.6[A,rotation(C,A,100)];
+                            labeloffset:=1.2*labeloffset;
+                            label.llft(btex $B$ etex, B);
+                            label.llft(btex $A$ etex, A);
+                            labeloffset:=labeloffset/1.2;
+                            trace droite(D,E);
+                            trace droite(C,G);
+                            trace droite(A,B);
+                            marque_a:=0.7*marque_a;
+                            fill coloreangle(B,A,C) withcolor red;
+                            fill coloreangle(A,B,D) withcolor red;
+                            marque_p:="croix";
+                            pointe(C,D,E,F,G);
+                            label.lrt(btex $C$ etex, C);
+                            label.lrt(btex $D$ etex, D);
+                            label.lrt(btex $E$ etex, E);
+                            label.rt(btex $F$ etex, F);
+                            label.lrt(btex $G$ etex, G);
+                         \end{Geometrie}
+                     }
+                \\\hline
+                \begin{minipage}{\linewidth}
+                    \vspace*{-5mm}                    
+                    Deux angles sont \textbf{correspondants} lorsque :
+                    \begin{itemize}
+                        \item \pointilles\par\medskip
+                        \item \pointilles\par\medskip
+                        \item \pointilles
+                    \end{itemize} 
+                \end{minipage}
+                    &                    
+                    %$\widehat{EBA}$ et $\widehat{CAF}$ sont correspondants.
+                    \pointilles[15mm] et \pointilles[15mm] sont correspondants.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(7u,2.5u)}]
+                            pair A,B,C,D,E,F,G;
+                            C=u*(1,0);
+                            A-C=u*(1.5,0.5);
+                            G-C=u*(4.5,1.5);
+                            B=0.9[A,rotation(C,A,-80)];
+                            E=rotation(A,B,-110);
+                            D=rotation(A,B,70);
+                            F=0.6[A,rotation(C,A,100)];
+                            labeloffset:=1.2*labeloffset;
+                            label.urt(btex $B$ etex, B);
+                            label.top(btex $A$ etex, A);
+                            labeloffset:=labeloffset/1.2;
+                            trace droite(D,E);
+                            trace droite(C,G);
+                            trace droite(A,B);
+                            marque_a:=0.7*marque_a;
+                            fill coloreangle(C,A,F) withcolor blue;
+                            fill coloreangle(E,B,F) withcolor blue;
+                            marque_p:="croix";
+                            pointe(C,D,E,F,G);
+                            label.lrt(btex $C$ etex, C);
+                            label.lrt(btex $D$ etex, D);
+                            label.lrt(btex $E$ etex, E);
+                            label.rt(btex $F$ etex, F);
+                            label.lrt(btex $G$ etex, G);
+                         \end{Geometrie}
+                     }
+                \\\hline
+                \begin{minipage}{\linewidth}
+                    \vspace*{-5mm}                    
+                    Deux angles sont \textbf{opposés par le sommet} lorsque :
+                    \begin{itemize}
+                        \item \pointilles\par\medskip
+                        \item \pointilles
+                    \end{itemize} 
+                \end{minipage}
+                    &                    
+                    %$\widehat{DOB}$ et $\widehat{COA}$ sont opposés par le sommet.
+                    \pointilles[15mm] et \pointilles[15mm] \par sont opposés par le sommet.
+                    \par\bigskip
+                    \scalebox{0.65}{
+                        \begin{Geometrie}[CoinHD={(5u,3u)}]
+                            pair A,A',B,B',O;
+                            A=u*(0.5,0.5);
+                            O=u*(2,1.5);
+                            A'=rotation(A,O,180);
+                            B=rotation(A,O,-30);
+                            B'=rotation(B,O,180);
+                            trace droite(A,A');
+                            trace droite(B,B');
+                            trace marqueangle(B,O,A,0);
+                            trace marqueangle(B',O,A',0);                            
+                            fill coloreangle(B,O,A) withcolor blue;
+                            fill coloreangle(B',O,A') withcolor blue;
+                            marque_a:=1.25*marque_a;
+                            trace marqueangle(A',O,B,0);
+                            trace marqueangle(A,O,B',0);                            
+                            fill coloreangle(A',O,B) withcolor red;
+                            fill coloreangle(A,O,B') withcolor red;
+                            labeloffset:=labeloffset*1.5;
+                            label.ulft(btex O etex,O);
+                            marque_p:="croix";
+                            pointe(A,A',B,B');
+                            label.top(btex A etex,A);
+                            label.top(btex B etex,A');
+                            label.top(btex C etex,B);
+                            label.top(btex D etex,B');
+                         \end{Geometrie}
+                     }
+                \\\hline
+            \end{tabular}
+        }
     \end{activite}
-% \end{changemargin}
+\end{changemargin}
