@@ -14,7 +14,7 @@
             % \draw[help lines, color=black!30, dashed] (0,0) grid (10,8);        
             \coordinate[label=below left:$R$] (R) at (8,1);
             \coordinate (T) at (4,6);
-            \tkzLabelPoints[above, yshift=-2mm](T);
+            \tkzLabelPoints[above, yshift=2mm](T);
             \coordinate[label=below right:$V$] (V) at (1,1);
             \tkzDrawLine(R,T);
             \tkzDrawLine(R,V);
@@ -30,7 +30,7 @@
             \tkzLabelSegment[above,sloped](U,S){$\Lg{4}$};
             \begin{scope}[ dim style/.append style={red, dashed},
                 dim fence style/.style={red, dashed}]                
-                \tkzDrawSegment[dim={\(\Lg{2.5}\),-10mm,sloped,above=1mm}](R,T);
+                \tkzDrawSegment[dim={\(\Lg{4.5}\),-10mm,sloped,above=1mm}](R,T);
                 \tkzDrawSegment[dim={\(\Lg{3}\),-5mm,sloped,above=1mm}](U,R);
             \end{scope}
         \end{tikzpicture}
@@ -69,7 +69,7 @@
             \tkzLabelSegment[above,sloped](U,S){$\Lg{4}$};
             \begin{scope}[ dim style/.append style={red, dashed},
                 dim fence style/.style={red, dashed}]                
-                \tkzDrawSegment[dim={\(\Lg{2.5}\),-5mm,sloped,above=1mm}](R,T);
+                \tkzDrawSegment[dim={\(\Lg{4.5}\),-5mm,sloped,above=1mm}](R,T);
                 \tkzDrawSegment[dim={\(\Lg{3}\),-5mm,sloped,above=1mm}](U,R);
             \end{scope}
         \end{tikzpicture}
@@ -94,18 +94,18 @@
         \end{itemize}
         D'après le théorème de Thalès, on peut donc écrire l'égalité des trois rapports :
         $\dfrac{\textcolor{black}{RS}}{\textcolor{blue}{RT}}=\dfrac{\textcolor{black}{RU}}{\textcolor{blue}{RV}}=\dfrac{\textcolor{black}{SU}}{\textcolor{blue}{TV}}\qquad\mbox{c'est à dire}\qquad
-        \dfrac{\textcolor{black}{RS}}{\textcolor{blue}{\num{2.5}}}=\dfrac{\textcolor{black}{3}}{\textcolor{blue}{RV}}=\dfrac{\textcolor{black}{4}}{\textcolor{blue}{5}}$
+        \dfrac{\textcolor{black}{RS}}{\textcolor{blue}{\num{4.5}}}=\dfrac{\textcolor{black}{3}}{\textcolor{blue}{RV}}=\dfrac{\textcolor{black}{4}}{\textcolor{blue}{5}}$
     }
 
     \begin{enumerate}
         \item Justifier le calcul de $RS$.
         
         {\color{red}    
-        $\mbox{\bf Pour le calcul de $RS$, on utilise} \quad \dfrac{RS}{\num{2.5}}=\dfrac{4}{5}$
+        $\mbox{\bf Pour le calcul de $RS$, on utilise} \quad \dfrac{RS}{\num{4.5}}=\dfrac{4}{5}$
 
-        $\mbox{\bf Les produits en croix sont égaux donc }5\times RS=\num{2.5}\times4$
+        $\mbox{\bf Les produits en croix sont égaux donc }5\times RS=\num{4.5}\times4$
 
-        $\mbox{\bf On divise les deux membres par $5$ donc }RS=\dfrac{\num{2.5}\times4}{5}=\Lg{2}$
+        $\mbox{\bf On divise les deux membres par $5$ donc }RS=\dfrac{\num{4.5}\times4}{5}=\Lg{3.6}$
         }
         \item Jusitifier le calcul de $RV$.
         
