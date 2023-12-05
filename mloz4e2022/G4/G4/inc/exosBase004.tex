@@ -4,10 +4,10 @@
         \item Le point $D$, l'image de $C$ par la translation qui tranforme $A$ en $B$
         \item Le point $E$, l'image de $A$ par la translation qui tranforme $B$ en $C$
     \end{itemize}
-    \begin{changemargin}{0mm}{-15mm}
+    \begin{changemargin}{-13mm}{0mm}
         \begin{multicols}{2}
             \begin{enumerate}
-                \item \phantom{rrr}\\
+                \item \raisebox{-\height}{
                 \begin{Geometrie}[CoinHD={(4u,4u)}]
                     labeloffset := 5bp ;
                     pair A,B,C;
@@ -21,7 +21,8 @@
                     label.lrt(btex $B$ etex, B);
                     label.urt(btex $C$ etex, C);
                 \end{Geometrie}
-                \item \phantom{rrr}\\
+                }
+                \item \raisebox{-\height}{
                 \begin{Geometrie}[CoinHD={(4u,4u)}]
                     labeloffset := 5bp ;
                     pair A,B,C;
@@ -35,8 +36,9 @@
                     label.lrt(btex $B$ etex, B);
                     label.lft(btex $C$ etex, C);
                 \end{Geometrie}
+                }
                 \columnbreak
-                \item \phantom{rrr}\\
+                \item \raisebox{-\height}{
                 \begin{Geometrie}[CoinHD={(4u,4u)}]
                     labeloffset := 5bp ;
                     % Pour changer la taille de la Grid
@@ -56,7 +58,8 @@
                     label.ulft(btex $B$ etex, B);
                     label.urt(btex $C$ etex, C);
                 \end{Geometrie}
-                \item \phantom{rrr}\\
+                }
+                \item \raisebox{-\height}{
                 \begin{Geometrie}[CoinHD={(4u,4u)}]
                     labeloffset := 5bp ;
                     % Pour changer la taille de la Grid
@@ -76,6 +79,7 @@
                     label.lft(btex $B$ etex, B);
                     label.urt(btex $C$ etex, C);
                 \end{Geometrie}
+                }
             \end{enumerate}
         \end{multicols}    
     \end{changemargin}

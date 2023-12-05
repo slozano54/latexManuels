@@ -1,25 +1,56 @@
 \begin{exercice*}
-    On se base sur la figure de l'exercice {\bfseries 1}.\\ Compléter les phrases suivantes.
+    On se base sur la figure de l'exercice {\bfseries 1}.
+    
+    \Reseau[%
+    Colonnes=5,%
+    Lignes=8,%
+    Traces={%	
+        pair A,B,C,D,E,F,G,H; % Placement dans le quadrillage en calculant
+        A=ppreseau(0,8);
+        B=ppreseau(1,8);
+        C=ppreseau(1,7);
+        D=ppreseau(0,7);
+        E=ppreseau(2,5);
+        F=ppreseau(1,2);
+        G=ppreseau(3,2);
+        H=ppreseau(4,6);
+        marque_p:="croix";
+        drawoptions(withcolor red);
+        pointe(A,B,C,D,E,F,G,H);
+        label.urt(btex $A$ etex,A);
+        label.urt(btex $B$ etex,B);
+        label.urt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.urt(btex $E$ etex,E);
+        label.urt(btex $F$ etex,F);
+        label.urt(btex $G$ etex,G);
+        label.urt(btex $H$ etex,H);
+        drawoptions();
+    }]{}
+
+    Compléter les phrases suivantes.
     \begin{enumerate}
         \item On considère la translation qui transforme $B$ en $C$.
         \begin{itemize}
-            \item L'image du motif \num{51} est le motif \dotfill.
-            \item L'image du motif \num{41} est le motif \dotfill.
-            \item L'image du motif \num{32} est le motif \dotfill.
-            \item L'image du motif \num{26} est le motif \dotfill.
+            \item L'image du motif \num{51} est le motif \pointilles
+            \item L'image du motif \num{41} est le motif \pointilles
+            \item L'image du motif \num{32} est le motif \pointilles
+            \item L'image du motif \num{26} est le motif \pointilles
         \end{itemize}
         \item On considère la translation qui transforme $E$ en $G$.
         \begin{itemize}
-            \item L'image du motif \num{51} est le motif \dotfill.
-            \item L'image du motif \num{41} est le motif \dotfill.
-            \item L'image du motif \num{32} est le motif \dotfill.
-            \item L'image du motif \num{26} est le motif \dotfill.
+            \item L'image du motif \num{51} est le motif \pointilles
+            \item L'image du motif \num{41} est le motif \pointilles
+            \item L'image du motif \num{32} est le motif \pointilles
+            \item L'image du motif \num{26} est le motif \pointilles
         \end{itemize}
-        \item Déterminer la translation par laquelle le motif \num{44} est l'image du motif \num{9}.
+        \item Déterminer la translation par laquelle le motif \num{44} est l'image du motif \num{9}, c'est la translation qui 
+        
+        \pointilles
         \item En considérant la translation de la question précédente :
         \begin{itemize}
-            \item L'image du motif \num{16} est le motif \dotfill.
-            \item L'image du motif \num{1} est le motif \dotfill.
+            \item L'image du motif \num{16} est le motif \pointilles
+            \item L'image du motif \num{1} est le motif \pointilles
         \end{itemize}
     \end{enumerate}
 \end{exercice*}

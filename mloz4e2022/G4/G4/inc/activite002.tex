@@ -34,31 +34,53 @@
             label.llft(btex $S$ etex, S);
             M'=M shifted (6u,1.5u);
             N'=N shifted (6u,1.5u);
-            drawoptions(withcolor red);
+            drawoptions(withpen pencircle scaled 1.5bp withcolor black);
             trace segment(B,projection(B,M',N'));
             label.lft(btex $M'$ etex, M');
             label.rt(btex $N'$ etex, N');
             trace segment(M',N');
             pointe(M',N');
+            trace segment(A,projection(A,M,N));
+            trace segment(M,N);
         \end{Geometrie}
     \end{center}
+        Directement sur la figure ci-dessus :        
         \begin{enumerate}
-        \item Reproduire la figure ci-dessus sur une feuille quadrillée.
         \item Compléter la figure avec la cabine dans sa position d'arrivée.
         
         \smallskip
         {\bfseries On notera $P'$, $R'$ et $S'$ les points d'arrivée correspondant aux points $P$, $R$ et $S$.}
         \smallskip
         \item Tracer le segment $[MM']$. Qu'a-t-il de particulier ?
-        \item Tracer d'autres segments ayant cette articularité.
-        \item Indiquer la nature du quadrilatère $ABM'M$.
-        \item Nommer d'autres quadrilatères ayant cette particularité.
+        
+        \smallskip\pointilles
+        \item Tracer d'autres segments ayant cette particularité.
+        \item Indiquer la nature du quadrilatère $ABM'M$ : \pointilles
+        \item Nommer d'autres quadrilatères ayant cette particularité dont un avec les sommets $A$ et $B$.
+        
+        \smallskip\pointilles
         
         \smallskip
         {\bfseries Cette transformation permettant d'amener la cabine de sa position de départ à sa position d'arrivée s'appelle translation qui transforme $A$ en $B$.}
         \smallskip
-        \item Déterminer l'image du segment $[NP]$ par la translation qui transforme $A$ en $B$.
-        \item Faire une remarque sur ce segment et son image.
-        \item Comparer la figure $MNPRS$ et son image par la translation qui transforme $A$ en $B$.
+
+        \smallskip
+        \item Déterminer l'image du segment $[NP]$ par la translation qui transforme $A$ en $B$ : \pointilles
+        
+        \smallskip\pointilles
+
+        \smallskip
+        \item Faire une remarque sur ce segment et son image : \pointilles
+        
+        \smallskip\pointilles
+        \item Comparer la figure $MNPRS$ et son image par la translation qui transforme $A$ en $B$. Leurs longueurs, leurs angles \dots
+        
+        \smallskip\pointilles
+
+        \smallskip\pointilles
+
+        \smallskip
+        {\bfseries La translation revient à glisser sans tourner.}
+        \smallskip
     \end{enumerate}
 \end{activite}
