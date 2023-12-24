@@ -1,9 +1,21 @@
 \begin{exercice*}
-    \dots
+    Soit la série statistique donnant le SMIC\footnote[1]{SMIC : Salaire Minimum Interprofessionnel de Croissance} horaire brut en euros de 2017 à 2023 \textit{(source : INSEE)}
+
+    \Stat[Tableau,Donnee=SMIC,Effectif=Année,Largeur=8mm]{9.88/2018,10.03/2019,10.15/2020,10.25/2021,10.45/2021}
+
+    \Stat[Tableau,Donnee=SMIC,Effectif=Année,Largeur=8mm]{10.57/2022,10.85/2022,11.07/2022,11.27/2023,11.52/2023}
+
+    \begin{enumerate}
+        \item Déterminer le SMIC médian entre 2018 et 2023.
+        \item Interpréter cette valeur.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item Il y a 10 valeurs, donc le SMIC médian peut être la moyenne des deux SMIC centraux rangés dans l'ordre croissant.Ici, \textcolor{red}{$(\num{10.48}+\num{10.57})\div 2= \num{10.525}$}
+        \item La moitié des SMIC est inférieur à \num{10.525}, l'autre moitié est supérieure.
+    \end{enumerate}
 \end{corrige}
 
