@@ -3,19 +3,19 @@
     \par\smallskip    
     \Stat[%        
         Tableau,%
-        Donnee=\scantokens{%
+        Effectif=\scantokens{%
             \begin{minipage}{0.1\textwidth}%
                 \smallskip
                 \textbf{Nombre de}\par\textbf{sapins}%
                 \par\smallskip
             \end{minipage}},%
-        Effectif=\scantokens{%
+        Donnee=\scantokens{%
         \begin{minipage}{0.1\textwidth}%
             \smallskip
             \textbf{Prix du}\par\textbf{sapin en \Prix{}}%
             \par\smallskip
         \end{minipage}},%        
-    ]{20/15,10/25,40/30,40/50,30/55}
+    ]{15/20,25/10,30/40,50/40,55/30}
     \smallskip
     \begin{enumerate}
         \item Calculer le prix de vente moyen d'un sapin. Arrondir au centime d'euro.
@@ -28,20 +28,30 @@
     %\phantom{rrr}    
     Synthèse d'une vente de sapins de différentes tailles.
     \par\smallskip
-    \Stat[%        
+    \hspace*{-10mm}\Stat[%        
         Tableau,%
-        Donnee=\textbf{Nombre de sapins},%
-        Effectif=\textbf{Prix du sapin en \Prix{}}%
-    ]{20/15,10/25,40/30,40/50,30/55}
-    \smallskip
+        Largeur=8mm,%
+        Donnee=\textbf{Prix du sapin en \Prix{}},%
+        Effectif=\textbf{Nombre de sapins}%
+    ]{15/20,25/10,30/40}
+    \par\smallskip
+    \hspace*{-10mm}\Stat[%        
+        Tableau,%
+        Largeur=8mm,%
+        Donnee=\textbf{Prix du sapin en \Prix{}},%
+        Effectif=\textbf{Nombre de sapins}%
+    ]{50/40,55/30}
+    \par\smallskip
     \begin{enumerate}
         \item Calculer le prix de vente moyen d'un sapin. Arrondir au centime d'euro.
         \par\smallskip
         \textcolor{red}{
-            \Stat[Moyenne,Precision=2]{20/15,10/25,40/30,40/50,30/55}
+            %\Stat[Moyenne,Precision=2]{20/15,10/25,40/30,40/50,30/55}
+            La somme de la série de données est : \num{5400}\\
+            L'effectif total de la série est : \num{175}\\
+            La moyenne de la série vaut donc : $\dfrac{\num{5400}}{175}\approx \num{38.57}$\\\smallskip
             Le prix de vente moyen est donc de \Prix{38.57}.
         }
-        \smallskip        
         \item Interpréter ce résultat.
         \par\smallskip
         \textcolor{red}{Cela signifie que si tous les sapins étaient vendus au même prix, ils seraient vendus \Prix{38.57}.}

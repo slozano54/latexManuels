@@ -22,18 +22,21 @@
     %\phantom{rrr}    
     Ce diagramme en barres donne la répartition des notes obtenues à un contrôle de matématiques d'une classe de 3\up{e}.
     \par\smallskip
-    \Stat[%        
+    \hspace*{-10mm}\Stat[%        
         Graphique,%
         Donnee=Note,%
         Effectif=Effectif,%
-        Unitex=1,%
+        Unitex=0.8,%
         Unitey=0.4,Pasy=1,%
         Grille,PasGrilley=1,LectureFine,%        
         EpaisseurBatons=4,%
         CouleurDefaut=Grey,
         Origine=7
     ]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}
-    \textcolor{red}{\Stat[Moyenne]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}}
+    \textcolor{red}{\Stat[]{8/2,9/5,10/2,11/2,12/3,13/2,14/7,15/2}% Pour récupérer les résultats
+    La somme des données de la série est : $2\times 8 + 5\times 9 + \dots + 2\times 15=\num{293}$.\\
+    L'effectif total est \EffectifTotal.\\
+    }
     \begin{enumerate}
         \item Déterminer le nombre d'élèves de la classe.
         \par\smallskip\textcolor{red}{Le nombre d'élèves de cette classe est donc de \EffectifTotal.}
