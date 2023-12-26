@@ -1,9 +1,29 @@
 \begin{exercice*}
-    \dots
+    Ce diagramme donne la répartition de 36 enfants inscrits à une centre de loisir en fonction de leur âge.
+    \par\smallskip
+    \hspace*{-5mm}\Stat[%    
+        Qualitatif,%    
+        Graphique,%
+        Donnee=Âge,%
+        Effectif=Effectif,%
+        Unitex=1.2,%
+        Unitey=0.5,Pasy=1,%
+        Grille,PasGrilley=1,LectureFine,%        
+        EpaisseurBatons=7,%
+        CouleurDefaut=Grey,
+        Origine=7
+    ]{8 ans/2,9 ans/3,10 ans/9,11 ans/8,12 ans/9,13 ans/5}
+    \begin{enumerate}
+        \item Déterminer l'âge moyen des enfants. Arrondir au dixième.
+        \item Déterminer l'âge médian des enfants.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item \Stat[Moyenne,Precision=1]{8/2,9/3,10/9,11/8,12/9,13/5}
+        \item \Stat[Mediane]{8/2,9/3,10/9,11/8,12/9,13/5}
+    \end{enumerate}
 \end{corrige}
 

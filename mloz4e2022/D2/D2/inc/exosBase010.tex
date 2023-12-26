@@ -1,9 +1,92 @@
 \begin{exercice*}
-    \dots
+    Une station de ski sonde 300 skieurs. Le bilan de l'enquête est représenté sur ce graphique. Il indique la répartition en classe des skieurs en fonction de leur âge.
+
+    \Stat[%
+    Graphique,%
+    Histogramme,%
+    UniteAire=1,%
+    Pasx=1,%
+    Unitex=0.09,%
+    Unitey=0.5,%
+    Lecture,%
+    DonneesSup,%
+    Donnee=Âge,%
+    Effectif=Nombre de skieurs,%
+    ]{%
+    0/10/27,%
+    10/20/45,%
+    20/30/48,%
+    30/40/39,%
+    40/50/42,%
+    50/60/36,%
+    60/70/33,%
+    70/80/24,%
+    80/90/6
+    }
+    \begin{enumerate}
+        \item Compléter le tableau ci-dessous
+        
+        \Stat[Classes,Tableau,Donnee=Âge,ColVide={1,2,3},Stretch=1.5]{%
+        0/10/27,%
+        10/20/45,%
+        20/30/48%
+        }
+        
+        \medskip
+        \Stat[Classes,Tableau,Donnee=Âge,ColVide={1,2,3},Stretch=1.5]{%
+        30/40/39,%
+        40/50/42,%
+        50/60/36%
+        }
+        
+        \smallskip
+        \Stat[Classes,Tableau,Donnee=Âge,ColVide={1,2,3},Stretch=1.5]{%
+        60/70/33,%
+        70/80/24,%
+        80/90/6
+        }
+        
+        \smallskip
+        \item Déterminer la classe d'âge médiane.
+        \item Déterminer la fréquence, en pourcentage, de skieurs ayant un âge strictement inférieur à 20 ans.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Une station de ski sonde 300 skieurs. Le bilan de l'enquête est représenté sur ce graphique. Il indique la répartition en classe des skieurs en fonction de leur âge.
+
+    \begin{enumerate}
+        \item Compléter le tableau ci-dessous
+        
+        \hspace*{-5mm}\Stat[Classes,Tableau,Donnee=Âge]{%
+        0/10/27,%
+        10/20/45,%
+        20/30/48%
+        }
+
+        \hspace*{-5mm}\Stat[Classes,Tableau,Donnee=Âge]{%
+        30/40/39,%
+        40/50/42,%
+        50/60/36%
+        }
+
+        \hspace*{-5mm}\Stat[Classes,Tableau,Donnee=Âge]{%
+        60/70/33,%
+        70/80/24,%
+        80/90/6
+        }
+
+        \item Déterminer la classe d'âge médiane.
+        
+        L’effectif total de la série est 300. Or,300 = 150 + 150. La classe d'âge médiane est donc celle qui compte le 150e et le 151e skieur.
+
+        C'est $30\leq ... \leq 40$.
+        \item Déterminer la fréquence, en pourcentage, de skieurs ayant un âge strictement inférieur à 20 ans.
+        
+        $\dfrac{27+45}{300}=\num{0.24}=24 \%$
+    \end{enumerate}
+    
+
 \end{corrige}
 
