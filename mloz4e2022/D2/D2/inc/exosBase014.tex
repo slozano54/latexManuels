@@ -1,9 +1,87 @@
 \begin{exercice*}
-    \dots
+    Les informations suivantes concernent les salaires des hommes et des femmes d'une même entreprise.
+
+    \fbox{\parbox{\linewidth}{
+        % \setlength{\parskip}{.5cm}
+        \begin{center}
+            \textbf{Salaires des femmes}
+
+            \Prix{1200} ; \Prix{1230} ; \Prix{1250} ; \Prix{1310} ; \Prix{1370}
+
+            \Prix{1400} ; \Prix{1440} ; \Prix{1500} ; \Prix{1700} ; \Prix{2100}
+        \end{center}
+    }}
+
+    \fbox{\parbox{\linewidth}{
+        % \setlength{\parskip}{.5cm}
+        \begin{center}
+            \textbf{Salaires des hommes}
+
+            Effectif total : 20
+            
+            Moyenne : \Prix{1769} 
+            
+            Médiane : \Prix{2000}
+        \end{center}
+    }}
+
+    \begin{enumerate}
+        \item Déterminer le salaire moyen des femmes.
+        \item Déterminer le salaire moyen de tous les salariés de cette entreprise.
+        \item Déterminer le salaire médian des femmes.
+        \item Comparer les salaires moyen et médian des hommes et des femmes.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Les informations suivantes concernent les salaires des hommes et des femmes d'une même entreprise.
+
+    \fbox{\parbox{\linewidth}{
+        \setlength{\parskip}{.5cm}
+        \begin{center}
+            \textbf{Salaires des femmes}
+
+            \Prix{1200} ; \Prix{1230} ; \Prix{1250} ; \Prix{1310} ; \Prix{1370}
+
+            \Prix{1400} ; \Prix{1440} ; \Prix{1500} ; \Prix{1700} ; \Prix{2100}
+        \end{center}
+    }}
+
+    \fbox{\parbox{\linewidth}{
+        \setlength{\parskip}{.5cm}
+        \begin{center}
+            \textbf{Salaires des hommes}
+
+            Effectif total : 20
+            
+            Moyenne : \Prix{1769} 
+            
+            Médiane : \Prix{2000}
+        \end{center}
+    }}
+
+    \begin{enumerate}
+        \item Déterminer le salaire moyen des femmes.
+        
+        \textcolor{red}{\Stat[Liste,Moyenne]{1200,1230,1250,1310,1370,1400,1440,1500,1700,2100}}
+
+        \textcolor{red}{Le salaire moyen des femmes est donc de \Prix{\Moyenne}.}
+        \item Déterminer le salaire moyen de tous les salariés de cette entreprise.
+        
+        \textcolor{red}{\Stat[Moyenne,Precision=0]{1200/1,1230/1,1250/1,1310/1,1370/1,1400/1,1440/1,1500/1,1700/1,2100/1,1769/20}}
+        
+        \textcolor{red}{Le salaire moyen des salariés est donc de \Prix{1663}.}
+        \item Déterminer le salaire médian des femmes.
+        
+        Le salaire médian des femmes est la moyenne de la 5e et la 6e valeur soit \textcolor{red}{\Prix{1385}.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Comparer les salaires moyen et médian des hommes et des femmes.
+        
+        \textcolor{red}{Le salaire médian des hommes est plus élévé que celui des femmes. Globalement les hommes sont donc mieux payés.}
+    \end{enumerate}
 \end{corrige}
 

@@ -1,9 +1,54 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[DNB]
+    Au 1\up{er} janvier 2017, les effectifs du plus grnad club omnisports de la région étaient de \num{1260} adhérents.
+
+    Voici le tableau de répartition des adhérents en 2017 en fonction de leur sport de prédilection.
+    
+    {\renewcommand{\arraystretch}{1.5}
+        \hspace*{-5mm}
+        \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.25\linewidth} | *{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
+            \cline{2-4}\multicolumn{1}{c|}{}&\cellcolor{LightGray}{Effectif en 2017}&\cellcolor{LightGray}{Angle en degrés}&\cellcolor{LightGray}{Frequence en \%}\\\hline
+            Planche à voile&382&&\\\hline
+            Beach Volley&224&&\\\hline
+            Surf&&&\\\hline
+            Total&&&\\\hline
+        \end{tabular}
+    }
+    \begin{enumerate}
+        \item Compléter le tableau ci-dessus.
+        \item Construire le diagramme circulaire correspondant avec un rayon de \Lg[cm]{3}.
+        \item Déterminer le pourcentage d'adhérents ne pratiquant pas la planche à voile.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Au 1\up{er} janvier 2017, les effectifs du plus grnad club omnisports de la région étaient de \num{1260} adhérents.
+
+    Voici le tableau de répartition des adhérents en 2017 en fonction de leur sport de prédilection.
+    
+    {\renewcommand{\arraystretch}{1.5}
+        \hspace*{-5mm}
+        \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.25\linewidth} | *{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
+            \cline{2-4}\multicolumn{1}{c|}{}&\cellcolor{LightGray}{Effectif en 2017}&\cellcolor{LightGray}{Angle en degrés}&\cellcolor{LightGray}{Frequence en \%}\\\hline
+            Planche à voile &382                        &\textcolor{red}{\ang{112}}  &\textcolor{red}{$\approx 31 \%$}   \\\hline
+            Beach Volley    &224                        &\textcolor{red}{\ang{64} }  &\textcolor{red}{$\approx 18 \%$}   \\\hline
+            Surf            &\textcolor{red}{644}       &\textcolor{red}{\ang{184}}  &\textcolor{red}{$\approx 51 \%$}   \\\hline
+            Total           &\textcolor{red}{\num{1260}}&\textcolor{red}{\ang{360}}  &\textcolor{red}{$100\%$        }   \\\hline
+        \end{tabular}
+    }
+    \begin{enumerate}
+        \item Compléter le tableau ci-dessus.
+        \item Construire le diagramme circulaire correspondant avec un rayon de \Lg[cm]{3}.
+        
+        \Stat[Qualitatif,Graphique,Angle,Rayon=1.5cm,Hachures]{%
+            Planche à voile/392,%
+            Beach volley/224,%
+            Surf/644%
+        }
+
+        \item Déterminer le pourcentage d'adhérents ne pratiquant pas la planche à voile.
+        
+        \textcolor{red}{Il y a $224+644=868$ adhérents ne pratiquant pas la planche à voile, soit $\dfrac{868}{1260}\approx 69\%$}.
+    \end{enumerate}
 \end{corrige}
 

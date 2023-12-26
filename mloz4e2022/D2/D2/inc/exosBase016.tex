@@ -1,9 +1,59 @@
 \begin{exercice*}
-    \dots
+    Un jeu de fléchettes consiste à lancer trois fléchettes sur une cible. La position des fléchettes sur la cible détermine le nombre de points obtenus.
+
+    On a relevé dans ce tableau les points obtenus par Denis et Nadia lors de sept parties. Par mégarde, on a effacé le score de la 6e partie de Nadia.
+
+
+    \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.1\linewidth}|*{7}{>{\centering\arraybackslash}m{0.04\linewidth}|}*{2}{>{\centering\arraybackslash}m{0.08\linewidth}|}}        
+        \hline
+        Partie&1&2&3&4&5&6&7&Moy.&Méd.\\\hline
+        Denis&40&35&85&67&28&74&28&&\\\hline
+        Nadia&12&62&7&100&81&&30&51&\\\hline
+    \end{tabular}
+    \begin{enumerate}
+        \item Calculer le nombre moyen de points obtenus par Denis.
+        \item Sachant que Nadia a obtenu en moyenne 51 points par partie, calculer son nombre de points à la 6e parite.
+        \item Déterminer la médiane de la série de points obtenus par Denis.
+        \item Déterminer la médiane de la série de points obtenus par Nadia.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Un jeu de fléchettes consiste à lancer trois fléchettes sur une cible. La position des fléchettes sur la cible détermine le nombre de points obtenus.
+
+    On a relevé dans ce tableau les points obtenus par Denis et Nadia lors de sept parties. Par mégarde, on a effacé le score de la 6e partie de Nadia.
+
+    \hspace*{-10mm}
+    \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.12\linewidth}|*{7}{>{\centering\arraybackslash}m{0.04\linewidth}|}*{2}{>{\centering\arraybackslash}m{0.08\linewidth}|}}        
+        \hline
+        Partie&1&2&3&4&5&6&7&Moy.&Méd.\\\hline
+        Denis&40&35&85&67&28&74&28&&\\\hline
+        Nadia&12&62&7&100&81&&30&51&\\\hline
+    \end{tabular}
+    \begin{enumerate}
+        \item Calculer le nombre moyen de points obtenus par Denis.
+        
+        \textcolor{red}{\Stat[Liste,Moyenne]{40,35,85,67,28,74,28}}
+        \item Sachant que Nadia a obtenu en moyenne 51 points par partie, calculer son nombre de points à la 6e parite.
+        
+        \textcolor{red}{Notons $p$ le nombre de points de la 6e partie.}
+
+        \textcolor{red}{$12+62+7+100+81+p+30=7\times 51 = 357$}
+
+        \textcolor{red}{d'où $p=357-292=65$}
+
+        \textcolor{red}{Nadia a obtenu 65 points à la 6e partie.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Déterminer la médiane de la série de points obtenus par Denis.
+        
+        \textcolor{red}{\Stat[Liste,Mediane]{40,35,85,67,28,74,28}}
+        \item Déterminer la médiane de la série de points obtenus par Nadia.
+        
+        \textcolor{red}{\Stat[Liste,Mediane]{12,62,7,100,81,65,30}}
+    \end{enumerate}
 \end{corrige}
 
