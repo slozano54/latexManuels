@@ -1,32 +1,14 @@
-\section{Calcul en ligne et en colonnes}
+\section{Propriétés des additions et soustractions} %%%%%%%%%%%%
 
-Pour effectuer une addition ou une soustraction, on peut : calculer mentalement ; calculer en ligne en posant l'opération ; calculer en colonnes en posant l'opération ; calculer grâce à une calculatrice.
-
-\begin{methode}[Priorités opératoires dans un calcul en ligne]
-   Dans un calcul comportant des parenthèses, additions et soustractions, on effectue en priorité les calculs dans les parenthèses les plus intérieures, puis les additions/soustractions de gauche à droite. S'il n'y a que des additions, on peut faire les calculs dans l'importe quel {\small ordre}
-   \exercice
-   Calculer la valeur de $A$ :
-   $A =5+3+(15-(9+2))$ \\
-   \correction
-      $A =5+3+(15-\underline{(9+2)}) =5+3+\underline{(15-\psframebox*[fillcolor=yellow]{11})}$ \\
-      $\phantom{A} =\underline{5+3}+\psframebox*[fillcolor=yellow]{4} =\underline{\psframebox*[fillcolor=yellow]{8}+4} =\psframebox*[fillcolor=yellow]{12}$
-\end{methode}
- 
 \begin{propriete}
-   Lorsqu'on calcule une somme ou une différence en colonnes, on aligne les chiffres de même rang les uns au-dessus des autres.
+   L'addition est {\bf commutative} (on peut changer l’ordre des termes) et {\bf associative} (on peut regrouper les termes de la manière dont on veut).
 \end{propriete}
 
-\begin{exemple}
-   Calculer  : \\
-   $27,89+1\,298,7$ \\
-   $85,8-34,54$.
-   \correction
-   \opadd[voperation=center,resultstyle=\red,carrystyle=\footnotesize\blue,decimalsepsymbol={,}]{1298,7}{27,89}
-   \qquad
-   \opsub[voperation=center,resultstyle=\red,carrystyle=\footnotesize\blue,carrysub,lastcarry,columnwidth=2.5ex,offsetcarry=-0.4,decimalsepsymbol={,}]{85,8}{34,54}
-   \; ou \;
-   \opsub[voperation=center,resultstyle=\red,columnwidth=2.5ex,offsetcarry=-0.4,decimalsepsymbol={,}]{85,8}{34,54} 
-   \rput(-0.65,0.7){\textcolor{blue}{/}}
-   \rput(-0.65,1.1){\textcolor{blue}{\small 7}}
-   \rput(-0.42,0.71){\textcolor{blue}{\small 1}}
-\end{exemple}
+\begin{exemple*1}
+   $123+234 =234+123 =357$ \\
+      $12,3+(0,7+15) =(12,3+0,7)+15 =13+15 =28$.
+\end{exemple*1}
+
+\begin{remarque}
+   attention, la soustraction n'est pas commutative, par exemple $3-2 \neq2-3$, ni associative, par exemple $(3-2)+1 \neq3-(2+1)$.
+\end{remarque}
