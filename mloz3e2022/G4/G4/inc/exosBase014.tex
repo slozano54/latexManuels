@@ -1,6 +1,7 @@
 \begin{exercice*}  
   Madame Martin souhaite réaliser une terrasse en béton en face de sa baie vitrée.\\\medskip
-  Elle réalise le dessin ci-dessous.\\\smallskip    
+  Elle réalise le dessin ci-dessous.\\\smallskip
+  \scalebox{0.9}{    
   \begin{tikzpicture}[baseline = {(current bounding box.center)},x={(-158:0.46cm)},y = {(-10:0.54cm)},z = {(90:0.9cm)} ,> = stealth]
     \draw[dashed] (8,0,0) -- (0,0,0) -- (0,5,0) (0,0,0) -- (0,0,1);
     \draw (8,0,0) -- (8,5,0) -- (0,5,0) -- (0,5,0.65) -- (8,5,0.65) -- (8,0,1)--(0,0,1) -- (0,5,0.65) %terrasse
@@ -30,6 +31,7 @@
     \node at (8,0,0.65) [left] {P};
     \filldraw [fill = gray!20, draw=black] (8,5,0.65) -- (8,3.,0.65) .. controls (8,3,0.72) .. (8,3.1,0.783) -- cycle;
   \end{tikzpicture}
+  }
   
   Pour faciliter l'écoulement des eaux de pluie, le sol de la terrasse doit être incliné.\\\smallskip
   La terrasse a la forme d'un prisme droit dont la base est le quadrilatère ABCD et la hauteur est le segment [CG].\\\smallskip    
