@@ -8,22 +8,42 @@
       \item du point $C$ à la droite $(AH)$ ?
    \end{enumerate}
    \begin{center}
-      \psset{unit=0.9}
-      \begin{pspicture}(-0.5,-0.3)(6,5)
-         \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,90,0}](0,0){A}(0,4.5){B}(6,0){C}
-         \pstGeonode[PosAngle=45,PointSymbol=none](2.15,2.9){H}
-         \pstLineAB{A}{B}
-         \pstLineAB{A}{C}
-         \pstLineAB{B}{C}
-         \pstLineAB{A}{H}
-         \pstRightAngle{B}{A}{C}
-         \pstRightAngle{A}{H}{C}
-         \rput(3,-0.3){6 cm}
-         \rput{90}(-0.3,2.25){4,5 cm}
-         \rput{53}(1,1.8){3,6 cm}
-         \rput{-37}(1.2,3.9){2,7 cm}
-         \rput{-37}(4.2,1.65){4,8 cm}
-      \end{pspicture}
+      % \psset{unit=0.9}
+      % \begin{pspicture}(-0.5,-0.3)(6,5)
+      %    \pstGeonode[CurveType=polygon,PointSymbol=none,PosAngle={-135,90,0}](0,0){A}(0,4.5){B}(6,0){C}
+      %    \pstGeonode[PosAngle=45,PointSymbol=none](2.15,2.9){H}
+      %    \pstLineAB{A}{B}
+      %    \pstLineAB{A}{C}
+      %    \pstLineAB{B}{C}
+      %    \pstLineAB{A}{H}
+      %    \pstRightAngle{B}{A}{C}
+      %    \pstRightAngle{A}{H}{C}
+      %    \rput(3,-0.3){6 cm}
+      %    \rput{90}(-0.3,2.25){4,5 cm}
+      %    \rput{53}(1,1.8){3,6 cm}
+      %    \rput{-37}(1.2,3.9){2,7 cm}
+      %    \rput{-37}(4.2,1.65){4,8 cm}
+      % \end{pspicture}
+      \begin{Geometrie}
+         pair A,B,C,H;
+         A=u*(1,1);
+         B-A=u*(0,4.5);
+         C-A=u*(6,0);
+         H=projection(A,B,C);
+         trace A--B--C--A;
+         trace A--H;
+         trace codeperp(C,A,B,8);
+         trace codeperp(A,H,C,8);
+         trace appelation(A,B,3mm,btex \Lg[cm]{4.5} etex);
+         trace appelation(A,C,-3mm,btex \Lg[cm]{6} etex);
+         trace cotationmil(B,H,5mm,20,btex \Lg[cm]{2.7} etex);
+         trace cotationmil(H,C,5mm,20,btex \Lg[cm]{4.8} etex);
+         label.llft(btex A etex,A);
+         label.ulft(btex B etex,B);
+         label.lrt(btex C etex,C);
+         labeloffset:=2*labeloffset;
+         label.lft(btex H etex,H);
+      \end{Geometrie}
    \end{center}
 \end{exercice*}
 % \begin{corrige}
