@@ -7,6 +7,7 @@ Comme tous les autres nombres, on peut placer les fractions sur une droite gradu
 
    \smallskip
    \begin{center}
+    \scalebox{0.7}{
     \begin{pspicture}(0,0.2)(13,0.7)
         \psaxes[dx=1,yAxis=false,labels=none]{->}(0,0)(13,0)
         \rput(0,-0.3){0}
@@ -27,22 +28,25 @@ Comme tous les autres nombres, on peut placer les fractions sur une droite gradu
         \uput[u](11,.1){$\frac{11}{4}$}
         \uput[u](12,.1){$\frac{12}{4}$}
     \end{pspicture}
+    }
    \end{center}
 \end{exemple*1}
 
 \begin{definition}
-    On repère un point sur un axe gradué grâce à un nombre que l'on appelle son {\bfseries abscisse}.
+    On repère un point sur un axe gradué grâce à un nombre que l'on appelle son {\bfseries abscisse}.    
     \rotatebox{-7}{
-    \begin{pspicture}(0,-0.5)(10,0.7)
-        \psaxes[dx=3,yAxis=false,labels=none]{->}(0,0)(10,0)
-        \rput(0,-0.3){$0$}
-        \uput[u](0,0.1){$O$}
-        \rput(3,-0.3){$1$}
-        \rput(6,-0.3){$2$}
-        \rput(7.5,-0.3){$\num{2.5}$}
-        \uput[u](7.5,0.1){$K$}
-        \rput(9,-0.3){$3$}
-    \end{pspicture}
+        \scalebox{0.7}{
+            \begin{pspicture}(0,-0.5)(10,0.7)
+                \psaxes[dx=3,yAxis=false,labels=none]{->}(0,0)(10,0)
+                \rput(0,-0.3){$0$}
+                \uput[u](0,0.1){$O$}
+                \rput(3,-0.3){$1$}
+                \rput(6,-0.3){$2$}
+                \rput(7.5,-0.3){$\num{2.5}$}
+                \uput[u](7.5,0.1){$K$}
+                \rput(9,-0.3){$3$}
+            \end{pspicture}
+        }
     }
 \end{definition}
 
