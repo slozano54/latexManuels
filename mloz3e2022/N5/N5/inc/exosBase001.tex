@@ -1,6 +1,32 @@
 \begin{exercice*}
-    ...
+    Résoudre les équations suivantes.
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $4x+3=0$
+            \item $2x-7=0$
+            \item $64-8x=0$
+            \item $-6x-5=0$
+            \item $5x+13=4$
+            \item $10x+1=-9$
+            \item $9x-2=6$
+            \item $20-4x=-4$
+        \end{enumerate}
+    \end{multicols}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Résoudre les équations suivantes.
+    \begin{enumerate}
+        \item \ResolEquation[Decomposition,Fleches,Simplification]{4}{3}{0}{0}
+        \item \ResolEquation[Decomposition,Fleches,Simplification]{2}{-7}{0}{0}
+        \item \ResolEquation[Decomposition,Fleches,Ecart=1,Simplification,Decimal]{-8}{64}{0}{0}
+        \item \ResolEquation[Decomposition,Fleches,Simplification]{-6}{-5}{0}{0}
+    \end{enumerate}
+    \Coupe    
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item \ResolEquation[Decomposition,Fleches,Ecart=1,Simplification,Decimal]{5}{13}{0}{4}
+        \item \ResolEquation[Decomposition,Fleches,Simplification,Decimal]{10}{1}{0}{-9}
+        \item \ResolEquation[Decomposition,Fleches,Simplification]{9}{-2}{0}{6}
+        \item \ResolEquation[Decomposition,Fleches,Ecart=1,Simplification,Decimal]{-4}{20}{0}{-4}
+    \end{enumerate}        
 \end{corrige}

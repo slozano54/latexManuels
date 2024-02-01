@@ -1,6 +1,22 @@
 \begin{exercice*}
-    ...
+    \begin{itemize}
+        \item Jean Rage pense à un nombre.
+        \item Il lui soustrait \num{10}.
+        \item Il élève le tout au carré.
+        \item Il soustrait au résultat le carré du nombre auquel il a pensé.
+        \item Il obtient \num{-340}.
+    \end{itemize}
 \end{exercice*}
 \begin{corrige}
-    ...
+    \begin{itemize}
+        \item Jean Rage pense à un nombre. \textcolor{red}{$x$}
+        \item Il lui soustrait \num{10}. \textcolor{red}{$x-10$}
+        \item Il élève le tout au carré. \textcolor{red}{$(x-10)^2$}
+        \item Il soustrait au résultat le carré du nombre auquel il a pensé. \textcolor{red}{$(x-10)^2-x^2$}
+        \item Il obtient \num{-340}. \textcolor{red}{$(x-10)^2-x^2=-340$}
+    \end{itemize}    
+
+    Par exemple, on développe et on réduit pour obtenir l'équation : $-20x+100=-340$
+
+    \ResolEquation[Decomposition,Fleches,Ecart=0.85,Simplification,Decimal]{-20}{100}{0}{-340}
 \end{corrige}
