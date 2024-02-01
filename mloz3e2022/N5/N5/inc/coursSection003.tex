@@ -1,2 +1,28 @@
-\section{...}
-...
+\section{Mise en équation d'un problème}
+\begin{myBox}{Énoncé}
+    \textit{Chez Casto-Dépôt, si j'achète 3 pots de peintures et 4 paquets de parquet, je paie \Prix{98,50}. Je sais que le prix d'un paquet de parquet est moins cher de \Prix{2,50} qu'un pot de peinture.}
+
+    \textit{Quel est le prix d'un pot de peinture ?}
+\end{myBox}
+
+\begin{description}
+    \item[Choix de l'inconnue] Soit $x$ le prix d'un pot de peinture.
+    \item[Mise en équation du problème]
+    Si un pot de peinture coûte $x$ \Prix{} alors un paquet de parquet coûte $x-2,5$ \Prix{}.
+    \\Si un pot de peinture coûte $x$ \Prix{} alors 3 pots de peinture coûtent $3\times x$ \Prix{}.
+    \\Si un paquet de parquet coûte $x-2,5$ \Prix{} alors 4 paquets de parquets coûtent $4\times(x-2,5)$ \Prix{}.
+    \\On obtient alors
+    $$\underbrace{3x}_{\mbox{\begin{minipage}{2cm}\tiny prix des pots de peinture.\end{minipage}}}+\underbrace{4(x-2,5)}_{\mbox{\begin{minipage}{2cm}\tiny prix des paquets de parquet.\end{minipage}}}=98,50$$
+    \item[Résolution de l'équation]
+    $$\Eqalign{
+    3x+4(x-2,5)&=98,5\cr
+    3x+4x-4\times2,5&=98,5\cr
+    3x+4x-10&=98,5\cr
+    7x-10&=98,5\cr
+    7x-10+10&=98,5+10\cr
+    7x&=108,5\cr
+    x&=\frac{108,5}7\cr
+    x&=15,5\cr
+    }$$
+    \item[Conclusion] Le prix d'un pot de peinture est \Prix{15.5} (et le prix d'un paquet de parquet est \Prix{13}).
+\end{description}
