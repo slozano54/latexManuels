@@ -1,6 +1,32 @@
 \begin{exercice*}
-    ...
+    Jack veut construire un garage dans le fond de son jardin. Sur le schéma ci-dessous, la partie hachurée représente le garage positionné en limite de propriété.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,5.5u)}]
+            pair A,B,C,D,E;
+            A=u*(1.5,1);
+            B-A=u*(2,0);
+            C-A=u*(2,3);
+            D-A=u*(0,3);
+            E-A=u*(0,4);
+            trace A--B--C--D;
+            trace A--E;
+            trace demidroite(E,C);
+            trace hachurage(polygone(A,B,C,E),60,0.25,0);
+            trace cotation(A,D,6mm,3mm,btex ? etex);
+            trace cotation(D,E,6mm,3mm,btex \Lg[m]{1.6} etex);
+            trace appelation(A,E,3mm,btex Limite de propriété etex);
+            trace appelation(E,C,3mm,btex \hspace*{20mm}Limite de propriété etex);
+            trace cotation(A,B,-3mm,-3mm,btex \Lg[m]{3} etex);
+            remplis codeperp(B,A,D,5)--A--cycle withcolor noir;
+            remplis codeperp(C,B,A,5)--B--cycle withcolor noir;
+            remplis codeperp(D,C,B,5)--C--cycle withcolor noir;
+            remplis codeperp(A,D,C,5)--D--cycle withcolor noir;
+        \end{Geometrie}
+    \end{center}
+    Les longueurs indiquées \Lg[m]{1.6} et \Lg[m]{3} sont imposées ; la longueur marquée par un point d’interrogation est variable.
+
+    Sachant que la surface du garage ne doit pas dépasser \Aire[m]{20}, déterminer la valeur maximale que Jack peut choisir pour cette longueur variable.
 \end{exercice*}
-\begin{corrige}
-    ...
-\end{corrige}
+% \begin{corrige}
+%     ...
+% \end{corrige}

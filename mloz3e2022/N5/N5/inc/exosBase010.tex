@@ -1,6 +1,49 @@
 \begin{exercice*}
-    ...
+    Résoudre mentalement les équations suivantes.
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $x^2=25$
+            \item $x^2=-3$
+            \item $y^2=49$
+            \item $z^2=144$
+            \item $x^2-1=0$
+            \item $x^-9=0$
+            \item $x^2-36=0$
+            \item $x^2-64=0$
+        \end{enumerate}
+    \end{multicols}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Résoudre mentalement les équations suivantes.
+
+    \begin{enumerate}
+        \item $x^2=25$
+        
+        \ResolEquation[Carre,Exact]{25}{}{}{}
+        \item $x^2=-3$
+        
+        \ResolEquation[Carre,Exact,Lettre=y]{-3}{}{}{}
+        \item $y^2=49$
+        
+        \ResolEquation[Carre,Exact,Lettre=z]{49}{}{}{}
+        \item $z^2=144$
+        
+        \ResolEquation[Carre,Exact]{144}{}{}{}
+        \item $x^2-1=0$ revient à résoudre $x^2=1$
+        
+        \ResolEquation[Carre,Exact]{1}{}{}{}
+        \item $x^-9=0$ revient à résoudre $x^2=9$
+        
+        \ResolEquation[Carre,Exact]{9}{}{}{}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{6}
+        \item $x^2-36=0$ revient à résoudre $x^2=36$
+        
+        \ResolEquation[Carre,Exact]{36}{}{}{}
+        \item $x^2-64=0$ revient à résoudre $x^2=64$
+        
+        \ResolEquation[Carre,Exact]{64}{}{}{}
+    \end{enumerate}
 \end{corrige}
