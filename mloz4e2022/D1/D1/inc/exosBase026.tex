@@ -1,15 +1,41 @@
 \begin{exercice*}
     La loi d'Ohm indique que la tension U (en Volts) aux bornes d'un conducteur ohmique est égale au produit de la résistance R (en Ohms) du
-    conducteur et de l'intensité I (en Ampères) du courant qui traverse ce conducteur.\par\smallskip
+    conducteur et de l'intensité I (en Ampères) du courant qui traverse ce conducteur.\par
+    \vspace*{-5mm}
     \begin{center}
-        \begin{circuitikz}
-            \draw (2,3) -- (0,3) 
-                to [R, a=$R$, i>^=$I$] (0,0) 
-        -- (2,0);
-        \draw (2,0) 
-            to[open, *-*, v>=$U$] (2,3);
-        \end{circuitikz}
+        \begin{Geometrie}            
+            pair A[];
+            A0=u*(3,4);
+            draw A0 withpen pencircle scaled 4bp;
+            A1-A0=u*(-2,0);
+            draw A0--A1;
+            A2-A1=u*(0,-0.6);
+            A3-A2=u*(0,-0.4);
+            drawarrow A1--A2;
+            label.rt(btex \textbf{I} etex, iso(A1,A3));
+            draw A2--A3;
+            A4-A3=u*(0.2,0);
+            A5-A4=u*(0,-1);
+            A6-A5=u*(-0.4,0);
+            A7-A6=u*(0,1);
+            draw A3--A4--A5--A6--A7--A3;
+            pair B;
+            B=iso(A6,A7);
+            label.lft(btex \textbf{R} etex,B);
+            A8=iso(A5,A6);
+            A9-A8=u*(0,-1);
+            A10-A9=u*(2,0);
+            draw A8--A9--A10;
+            draw A10 withpen pencircle scaled 4bp;
+            A11-A10=u*(0,0.3);
+            A12-A0=u*(0,-0.3);
+            drawarrow A11--A12;
+            pair C;
+            C=iso(A11,A12);
+            label.rt(btex \textbf{U} etex, C);
+        \end{Geometrie}
     \end{center}
+    \vspace*{-8mm}
     \begin{enumerate}
         \item À l'aide du texte ci-dessus, indiquer la relation reliant les variables U , R et I.
         \item On réalise un montage expérimental permettant de mesurer la tension U (à l'aide d'un voltmètre) et l'intensité I (à l'aide d'un ampèremètre).
@@ -25,13 +51,37 @@
     La loi d'Ohm indique que la tension U (en Volts) aux bornes d'un conducteur ohmique est égale au produit de la résistance R (en Ohms) du
     conducteur et de l'intensité I (en Ampères) du courant qui traverse ce conducteur.\par
     \begin{center}
-        \begin{circuitikz}
-            \draw (2,3) -- (0,3) 
-                to [R, a=$R$, i>^=$I$] (0,0) 
-        -- (2,0);
-        \draw (2,0) 
-            to[open, *-*, v>=$U$] (2,3);
-        \end{circuitikz}
+        \begin{Geometrie}            
+            pair A[];
+            A0=u*(3,4);
+            draw A0 withpen pencircle scaled 4bp;
+            A1-A0=u*(-2,0);
+            draw A0--A1;
+            A2-A1=u*(0,-0.6);
+            A3-A2=u*(0,-0.4);
+            drawarrow A1--A2;
+            label.rt(btex \textbf{I} etex, iso(A1,A3));
+            draw A2--A3;
+            A4-A3=u*(0.2,0);
+            A5-A4=u*(0,-1);
+            A6-A5=u*(-0.4,0);
+            A7-A6=u*(0,1);
+            draw A3--A4--A5--A6--A7--A3;
+            pair B;
+            B=iso(A6,A7);
+            label.lft(btex \textbf{R} etex,B);
+            A8=iso(A5,A6);
+            A9-A8=u*(0,-1);
+            A10-A9=u*(2,0);
+            draw A8--A9--A10;
+            draw A10 withpen pencircle scaled 4bp;
+            A11-A10=u*(0,0.3);
+            A12-A0=u*(0,-0.3);
+            drawarrow A11--A12;
+            pair C;
+            C=iso(A11,A12);
+            label.rt(btex \textbf{U} etex, C);
+        \end{Geometrie}
     \end{center}
     \Coupe
     \begin{enumerate}
