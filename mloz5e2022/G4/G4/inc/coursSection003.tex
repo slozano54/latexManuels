@@ -8,46 +8,67 @@
     {\psset{unit=0.75}
     \begin{multicols}{3}
        \begin{center}
-          \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
-             \pstGeonode[PointName=none,PointSymbol=none,CurveType=polygon](-1.156,0){A}(1.156,0){B}(0,2){C}
-             \pstGeonode[PointName=none,PointSymbol=none,CurveType=polygon,linecolor=B1](0,-0.5){D}(0,2.5){E}
-             \psline[linecolor=B1](-1.156,0)(2;50)
-             \psline[linecolor=B1](1.156,0)(2;130)
-          \end{pspicture}
+         \begin{Geometrie}[CoinHD={u*(3,2.5)}]
+            pair A[];
+            A1=u*(0.5,0.5);
+            A2-A1=u*(2,0);
+            A3=rotation(A2,A1,60);
+            trace polygone(A1,A2,A3);
+            trace droite(A1,iso(A2,A3)) withcolor red;
+            trace droite(A2,iso(A1,A3)) withcolor red;
+            trace droite(A3,iso(A2,A1)) withcolor red;
+         \end{Geometrie}
     
           3 axes de symétrie \\
           0 centre de symétrie
-          \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
-             \pscircle(0,1){1}
-             \psset{linecolor=B1}
-             \psline(-1.5,1)(1.5,1)
-             \psline(0,-0.5)(0,2.5)
-             \psline(-1.5,-0.5)(1.5,2.5)
-             \psline(-1.5,2.5)(1.5,-0.5)
-             \psline(-0.5,-0.5)(0.5,2.5)
-             \psline(-0.5,2.5)(0.5,-0.5)
-             \psline(-1.5,0)(1.5,2)
-             \psline(-1.5,0.5)(1.5,1.5)
-             \psline(-1.5,2)(1.5,0)
-             \psline(-1.5,1.5)(1.5,0.5)
-             \psdot[linecolor=A1,linewidth=1mm](0,1)  
-          \end{pspicture}
+          \begin{Geometrie}[CoinHD={u*(3,2.5)}]
+            path co;
+            pair O,A[];
+            O=u*(1.5,1.25);
+            co=cercles(O,u);
+            trace co;
+            A1=pointarc(co,0);
+            A2=pointarc(co,20);
+            A3=pointarc(co,30);
+            A4=pointarc(co,40);
+            A5=pointarc(co,70);
+            A6=pointarc(co,90);
+            A7=pointarc(co,110);
+            A8=pointarc(co,140);
+            A9=pointarc(co,150);
+            A10=pointarc(co,160);
+            trace droite(O,A1) withcolor red;
+            trace droite(O,A2) withcolor red;
+            trace droite(O,A3) withcolor red;
+            trace droite(O,A4) withcolor red;
+            trace droite(O,A5) withcolor red;
+            trace droite(O,A6) withcolor red;
+            trace droite(O,A7) withcolor red;
+            trace droite(O,A8) withcolor red;
+            trace droite(O,A9) withcolor red;
+            trace droite(O,A10) withcolor red;
+            draw O withpen pencircle scaled 4bp withcolor blue;
+         \end{Geometrie}
     
           $\infty$ axes de symétrie \\
-          1 centre de symétrie  
-       \end{center}
+          1 centre de symétrie
+          \begin{Geometrie}[CoinHD={u*(3,2.5)}]
+            path co;
+            pair O,A[];            
+            A1=u*(0.5,0.5);
+            A2-A1=u*(2,0);
+            A3-A2=u*(0,1.2);
+            A4-A3=u*(-2,0);
+            O=iso(A1,A2,A3,A4);
+            trace polygone(A1,A2,A3,A4);
+            trace droite(iso(A1,A2),iso(A3,A4)) withcolor red;
+            trace droite(iso(A1,A4),iso(A3,A2)) withcolor red;
+            draw O withpen pencircle scaled 4bp withcolor blue;
+         \end{Geometrie}            
     
-       \begin{pspicture}(-2.5,-0.5)(2.5,2.3)
-          \pspolygon(-1.5,0)(1.5,0)(1.5,2)(-1.5,2)
-          \psset{linecolor=B1}
-          \psline(-2,1)(2,1)
-          \psline(0,-0.5)(0,2.5)
-          \psdot[linecolor=A1,linewidth=1mm](0,1)  
-       \end{pspicture}
-    
-       \quad 2 axes de symétrie
-       
-       \quad 1 centre de symétrie
+         2 axes de symétrie\\       
+         1 centre de symétrie
+      \end{center}
     \end{multicols}}
  \vspace*{-5mm}
  \end{exemple*1}
