@@ -7,41 +7,43 @@
       \item En utilisant la première question, déterminer la mesure de l'angle $\widehat{TIY}$.
       \item En déduire la mesure de l'angle $\widehat{TIB}$.
       \item En utilisant la troisième question, déterminer la mesure de l'angle $\widehat{IBV}$.
-      \item Vérifier la conjecture suivante : « La somme des angles d'un quadrilatère vaut 360°.»   
-      \begin{tikzpicture}[baseline,scale = 0.5]
-
-         \tikzset{
-            point/.style={
-            thick,
-            draw,
-            cross out,
-            inner sep=0pt,
-            minimum width=5pt,
-            minimum height=5pt,
-            },
+      \item Vérifier la conjecture suivante : « La somme des angles d'un quadrilatère vaut 360°.»         
+      \begin{center}
+         \scalebox{0.8}{
+            \begin{Geometrie}[CoinBG={(u,2u)}]
+               trace feuillet;
+               pair A,B,C,D,E;
+               A=u*(4,9);
+               B-A=u*(-1,-3);
+               D-A=u*(-2,-6);
+               C-A=u*(2,-2.1);
+               E-A=u*(4,-4.2);
+               trace droite(A,D);
+               trace droite(A,E);
+               trace droite(B,C) dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+               trace droite(D,E) dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+               labeloffset:=3*labeloffset;
+               label.rt(btex $Y$ etex,A);
+               labeloffset:=2*labeloffset/3;
+               label.ulft(btex $T$ etex,B);
+               label.ulft(btex $V$ etex,D);
+               label.urt(btex $I$ etex,C);
+               label.urt(btex $B$ etex,E);
+               %marquage des angles
+               trace Codeangle(B,A,C,0,btex \ang{69} etex) withpen pencircle scaled 2bp;
+               marque_ang:=1.5*marque_ang;
+               trace Codeangle(E,D,B,0,btex \ang{45} etex) withpen pencircle scaled 2bp;
+               marque_ang:=marque_ang/1.5;            
+               trace marqueangle(A,C,B,0) withcolor red withpen pencircle scaled 2bp;
+               trace marqueangle(C,B,A,0) withcolor Purple withpen pencircle scaled 2bp;
+               trace marqueangle(C,E,D,0) withcolor ForestGreen withpen pencircle scaled 2bp;
+               marque_a:=marque_a/1.5;
+               trace marqueangle(B,C,E,0) withcolor orange withpen pencircle scaled 2bp;            
+               trace marqueangle(D,B,C,0) withcolor blue withpen pencircle scaled 2bp;            
+               marque_a:=marque_a*1.5;
+            \end{Geometrie}
          }
-         \clip (-8,-1) rectangle (9.91136137041995,10.732661536483967);
-
-
-         \draw[color={black}] (-12.096094779983385,-48.51478631379982)--(14.273391840380395,57.247447850283784);
-         \draw[color={black}] (-38.78030515405258,37.41148335403628)--(48.86896358486953,-23.961195335525673);
-         \draw[color={rgb,255:red,241;mygreen,89;blue,41}] (-42.944392744456735,-25.60818485972507)--(50.85575411487669,30.325811341751717);
-         \draw[color={rgb,255:red,241;mygreen,89;blue,41}] (-41.97670516205807,-21.727001954621088)--(51.823441697275356,34.2069942468557);
-         \draw [color={black},fill opacity = 1] (0.9538911900960678,1.2845589116335256) node[anchor = center,scale=1] {45°};
-         \draw  [color={black},line width = 2,preaction={fill,color = {black},opacity = 0.1}] (0.24195474403776523,0.9702875356499328) -- (0,0) -- (0.8588878548891347,0.5121636971945014) arc (30.81:76:1) ;
-         \draw [color={black},fill opacity = 1] (2.7376288704121574,7.233986033686531) node[anchor = center,scale=1] {69°};
-         \draw  [color={black},line width = 2,preaction={fill,color = {black},opacity = 0.1}] (2.9964491046860005,8.15908510013292) -- (2.1772970603970094,8.732661536483967) -- (1.9353751647973416,7.762365810207971) arc (-104:-35:0.9999999999999994) ;
-         \draw  [color={blue},line width = 2,preaction={fill,color = {blue},opacity = 0.2}] (0.7257328383609055,2.9108953694540523) -- (0.9676875823986708,3.881182905103985) -- (1.8265754372878056,4.393346602298486) arc (30.81:-104:1) ;
-         \draw  [color={rgb,255:red,241;mygreen,89;blue,41},line width = 2,preaction={fill,color = {rgb,255:red,241;mygreen,89;blue,41},opacity = 0.2}] (6.182020969596496,5.9284823384778695) -- (5.3628883437430845,6.5020865062298965) -- (4.50400048885395,5.989922809035395) arc (-149.19:-35:1.0000000000000002) ;
-         \draw  [color={mygreen},line width = 2,preaction={fill,color = {mygreen},opacity = 0.2}] (7.052490854910573,4.205433708172251) -- (7.91136137041995,4.717626482026644) -- (7.092209326130958,5.291202918377689) arc (145:210.81:0.9999999999999996) ;
-         \draw  [color={pink},line width = 2,preaction={fill,color = {pink},opacity = 0.2}] (1.2096423264364364,4.851470440753917) -- (0.9676875823986708,3.881182905103985) -- (1.8265754372878056,4.393346602298486) arc (30.81:76:1) ;
-         \draw  [color={red},line width = 2,preaction={fill,color = {red},opacity = 0.2}] (4.504017828233707,5.9898937323755055) -- (5.3628883437430845,6.5020865062298965) -- (4.5437362994540935,7.075662942580943) arc (145:210.81:0.9999999999999999) ;
-         \draw (0,0) node[above left] {$V$};
-         \draw (0.9676875823986708,3.881182905103985) node[above left] {$T$};
-         \draw (2.1772970603970094,8.732661536483967) node[left] {$Y$};
-         \draw (5.3628883437430845,6.5020865062298965) node[above right] {$I$};
-         \draw (7.91136137041995,4.717626482026644) node[above right] {$B$};
-      \end{tikzpicture}
+     \end{center}
    \end{enumerate}
 
    \hrefMathalea{https://coopmaths.fr/mathalea.html?ex=5G30-1,s=1,n=1&v=l}
