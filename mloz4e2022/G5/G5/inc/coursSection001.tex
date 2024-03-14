@@ -1,2 +1,190 @@
-\section{\dots}
-\dots
+\section{Pyramide}
+\subsection{Pyramide de sommet $S$}
+\begin{minipage}{0.7\linewidth}
+    \begin{definition}
+        \begin{itemize}
+            \item une face est un polygone appelé {\bf la base};
+            \item toutes les autres faces sont des {\bf triangles} qui ont un sommet commun  
+            n'appartenant pas à la base : c'est le {\bf sommet} de la pyramide.
+        \end{itemize} 
+        (Ces faces sont appelées {\bf faces latérales}.)
+    \end{definition}
+
+    \begin{definition}
+        \begin{itemize}
+            \item La droite qui passe par le sommet de la pyramide et qui est perpendiculaire à la base est appelée {\bf hauteur} de la pyramide.
+            \item La longueur $SH$ est aussi appelée hauteur de la pyramide.
+        \end{itemize}
+    \end{definition}
+\end{minipage}
+\hspace*{-15mm}
+\begin{minipage}{0.35\linewidth}
+    \begin{Geometrie}[CoinBG={(-4.5u,-u)}]
+        u:=0.8cm;
+        z0=(-0.5,0)*u;label.bot(btex$B$etex,z0);
+        z1=(2.5,0.5)*u;label.lrt(btex$C$etex,z1);
+        z2=(4,2)*u;label.rt(btex$D$etex,z2);
+        z3=(-0.5,2.75)*u;label.bot(btex$E$etex,z3);
+        z4=(-3,1.5)*u;label.lft(btex$A$etex,z4);
+        z5=(0.5,6)*u;label.top(btex$S$etex,z5);
+        z6=(0.5,1.5)*u;label.bot(btex$H$etex,z6);
+        z7=z6 shifted (5u,0);
+        draw z4--z0--z1--z2;draw z2--z3--z4 dashed evenly;
+        draw z5--z0; draw z5--z1;draw z5--z2;draw z5--z4;draw z5--z3 dashed evenly;
+        draw z5--z6 dashed evenly; draw codeperp(z7,z6,z5,8);
+        drawarrow z5 shifted (1.5u,0)--z5; label.rt(btex$sommet$etex,z5 shifted (1.5u,0));
+        drawarrow (point 0.4*length(z5--z2)of(z5--z2)) shifted (1.5u,0)--point 0.4*length(z5--z2)of(z5--z2);label.rt(btex$ar\hat{e}te$etex,(point 0.4*length(z5--z2)of (z5--z2)) shifted (1.5u,0));
+        drawarrow (point 0.25*length(z5--z6)of(z5--z6)) shifted (-3u,0)--point 0.25*length(z5--z6)of(z5--z6);label.lft(btex$hauteur$etex,(point 0.25*length(z5--z6)of (z5--z6)) shifted (-3u,0));
+        drawarrow (1.5,-0.5)*u--(1.5,1)*u dashed evenly;label.bot(btex$base$etex,(1.5,-0.5)*u);
+        path s;s=0.5[z5,z4]--0.5[z5,z0];
+        drawarrow (point 0.2*(length s) of s) shifted (-2u,0)--point 0.2*(length s) of s;
+        label.lft(btex face latérale etex,(point 0.2*(length s) of s) shifted (-2u,0.3u));
+        label.lft(btex triangulaire etex,(point 0.2*(length s) of s) shifted (-2u,-0.3u));
+    \end{Geometrie}
+\end{minipage}
+\begin{remarques}
+    \phantom{rrr}
+
+    \begin{minipage}{0.65\linewidth}
+    \begin{itemize}
+        \item Il ne faut pas confondre la hauteur de la pyramide et une hauteur d'une face.
+        \item {\bf Cas particulier : } Une pyramide dont la base est un triangle est un {\bf tétraèdre}. Toutes les faces sont donc des triangles donc toutes les faces peuvent être considérées comme des bases.        
+    \end{itemize}
+    \end{minipage}
+    \hspace*{15mm}
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(-0.5u,-2u)}]
+                u:=1cm;
+                z0=(0,0)*u;
+                z1=(1.5,-1)*u;
+                z2=(4,0.5)*u;
+                z3=(2,2.5)*u;
+                draw z0--z1--z2;draw z2--z0 dashed evenly;
+                draw z0--z3;draw z3--z1; draw z3--z2;
+                label.bot(btex Pyramide à base triangulaire etex,(2,-1)*u);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+\end{remarques}
+
+\subsection{Pyramides régulières}
+\begin{definition}Une pyramide de sommet $S$ est dite {\bf régulière} lorsque :
+    \begin{itemize}
+        \item sa base est un polygone régulier de centre $O$ : triangle équilatéral, carré \ldots
+        \item $\left[SO\right]$ est la hauteur de la pyramide.
+    \end{itemize}
+
+    \begin{remarque}
+        Les faces latérales d'une pyramide régulière sont des triangles isocèles superposables.
+    \end{remarque}
+\end{definition}
+
+\clearpage
+\subsection{Un patron de la pyramide.}
+\begin{center}
+    \hfill
+    \begin{Geometrie}[CoinBG={(-0.5u,-2u)}]
+        u:=0.7cm;
+        z0=(0,0)*u;
+        z1=(5,0)*u;
+        z2=(7,2.75)*u;
+        z3-z0=z2-z1;
+        z4=whatever[z0,z2]=whatever[z1,z3];
+        z5=z4 shifted (0,6u);
+        draw z2--z3--z0 dashed evenly;
+        draw z0--z1--z2; draw z5--z0;draw z5--z1;draw z5--z2; draw z5--z3 dashed evenly;
+        draw z0--z2 dashed evenly; draw z1--z3 dashed evenly;
+        label.bot(btex$O$etex,z4);label.llft(btex$A$etex,z0);label.lrt(btex$B$etex,z1);
+        label.rt(btex$C$etex,z2);label.lft(btex$D$etex,z3);label.top(btex$S$etex,z5);
+        label.bot(btex $ABCD$ est un carré de centre O etex,(xpart(0.5[z0,z2]),-1u));
+    \end{Geometrie}
+    \hfill
+    \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+        u:=0.7cm;
+        z0=(0,0)*u;label.llft(btex$A$etex,z0);
+        z1=(5,0)*u;label.lrt(btex$B$etex,z1);
+        z2=z1 rotated 90;label.llft(btex$D$etex,z2);
+        z3-z2=z1-z0;label.lrt(btex$C$etex,z3);
+        z4=0.5[z0,z1] shifted (0,12.5u);label.top(btex$S$etex,z4);
+        draw z0--z1--z3--z2--cycle;draw z2--z4;draw z3--z4;
+        z5=z2 rotatedaround(z4,180-2angle(z3-z4));label.lft(btex$A_{1}$etex,z5);
+        z6=z3 rotatedaround(z4,-180+2angle(z3-z4));label.urt(btex$B_{1}$etex,z6);
+        z7=z6 rotatedaround(z4,-180+2angle(z3-z4));label.rt(btex$A_{2}$etex,z7);
+        draw z4--z5;draw z2--z5; draw z4--z6;draw z4--z7;draw z3--z6;draw z6--z7;
+        draw codeperp(z1,z0,z2,8); draw codeperp(z0,z2,z3,8);draw codeperp(z2,z3,z1,8);
+        draw codeperp(z3,z1,z0,8);
+        marque_s:=0.5*marque_s;
+        draw codemil(z0,z1,45);
+        draw codemil(z2,z3,45);draw codemil(z0,z2,45);draw codemil(z1,z3,45);
+        draw codemil(z5,z2,45);draw codemil(z3,z6,45);draw codemil(z6,z7,45);
+        draw codesegments(z4,z3,z4,z6,2);draw codesegments(z4,z3,z4,z7,2);
+        draw codesegments(z4,z5,z4,z2,2);
+    \end{Geometrie}
+    \hfill
+
+
+En découpant et en pliant, $A$, $A_{1}$, $A_{2}$ co\"{i}ncident, ainsi que $B$ et $B_{1}$.
+\end{center}
+
+\subsection{Volume d'une pyramide}
+\begin{propriete}[\admise]
+    Si une pyramide a une base $\cal B$ d'aire ${\cal A}_{\cal B}$ et une hauteur $h$ alors son volume $\cal V$ est ${\cal V}=\dfrac13\times{\cal A}_{\cal B}\times h$
+    \begin{center}
+        \begin{Geometrie}[CoinBG={(-4u,-2.5u)}]
+            u:=1cm;
+            z0=(0,0)*u;
+            z1=(3.5,-1.5)*u;
+            z2=(4,0.5)*u;
+            z3=(2,2.5)*u;z4=(2,-0.5)*u;draw z3--z4 dashed evenly;z5=z4 shifted (u,0);
+            draw codeperp(z5,z4,z3,8);
+            draw z0--z1--z2;draw z2--z0 dashed evenly;draw z0--z3;draw z3--z1; draw z3--z2;
+            drawarrow (point 0.3*length(z3--z4)of(z3--z4)) shifted (2u,0)--point 0.3*length(z3--z4)of(z3--z4);
+            label.rt(btex$hauteur$etex,(point 0.3*length(z3--z4)of (z3--z4)) shifted (2u,0));
+            label.lft(btex$h$etex,point 0.5*length(z3--z4)of (z3--z4));
+            label.lrt(btex$\mathcal{B}$etex,z4 shifted (1.1u,0.5u));
+            drawarrow z1 shifted(u,0)--z1 shifted (0,0.7u);
+            label.rt(btex aire de base etex,z1 shifted(u,0));
+            path p;p=z0--z1--z2--cycle;
+        \end{Geometrie}
+    \end{center}
+\end{propriete}
+
+
+\begin{center}
+    \begin{myBox}{\emoji{triangular-ruler} \emoji{straight-ruler} Animations en ligne}
+        \begin{flushleft}        
+            \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_130.html}{\emoji{link} Patron d'une pyramide à base carrée}
+
+            \href{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_148.html}{\emoji{link} Patron d'une pyramide à base quelconque}
+        \end{flushleft}
+    
+        \creditInstrumentPoche
+    \end{myBox}
+\end{center}
+
+\subsection{Aire latérale d'une pyramide}
+\begin{definition}
+    \begin{minipage}{0.7\linewidth}
+        \textbf{L'aire latérale} d'une pyramide, ${\cal A}_{{\cal L}at\acute erale}$ est égale à la somme des aires de ses faces latérales ( la base est donc exclue ).
+    \end{minipage}
+    \hspace*{-10mm}
+    \begin{minipage}{0.25\linewidth}
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(-4u,-2.5u)}]
+                u:=0.5cm;
+                z0=(0,0)*u;
+                z1=(5,0)*u;
+                z2=(7,2.75)*u;
+                z3-z0=z2-z1;
+                z4=whatever[z0,z2]=whatever[z1,z3];
+                z5=z4 shifted (0,6u);
+                draw z2--z3--z0 dashed evenly;
+                draw z0--z1--z2; draw z5--z0;draw z5--z1;draw z5--z2; draw z5--z3 dashed evenly;
+                draw z0--z2 dashed evenly; draw z1--z3 dashed evenly;
+                label.bot(btex$O$etex,z4);label.llft(btex$A$etex,z0);label.lrt(btex$B$etex,z1);
+                label.rt(btex$C$etex,z2);label.lft(btex$D$etex,z3);label.top(btex$S$etex,z5);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+\end{definition}

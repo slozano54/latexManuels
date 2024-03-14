@@ -1,2 +1,97 @@
-\section{\dots}
-\dots
+\section{Cône de révolution}
+\begin{definition}
+    Un cône de révolution de sommet $S$ est le solide engendré par la rotation d'un triangle $SOM$ rectangle en $O$, autour de la droite  ($SO$).
+
+    Le disque de  centre $O$ et de rayon $OM$ est la base de ce cône.
+\end{definition}
+\begin{definition}
+    La hauteur de ce cône est le segment $\left[SO\right]$ (la hauteur désigne aussi la longueur $SO$).
+
+    Le segment $\left[SO\right]$ est perpendiculaire au plan de la base.
+\end{definition}
+
+\subsection{Patron d'un cône}\begin{center}
+    \hfill
+    \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+        u:=0.7cm;
+        z0=(0,0)*u;
+        path c;
+        c=(fullcircle scaled 4cm)yscaled 0.3;draw  (subpath (0,0.5*(length c)) of c)dashed evenly;
+        draw (subpath(0.5*(length c),length c) of c)  ;z6=(0,4u);label.top(btex$S$etex,z6);
+        draw (point 0.5*(length c) of c)--z6;draw point 0 of c--z6;label.lft(btex$O$etex,z0);
+        z4=point 0.85*(length c) of c; label.bot(btex$M$etex,z4);
+        draw z6--z0 dashed evenly;draw z0--z4 dashed evenly; draw codeperp (z4,z0,z6,8);
+        draw z6--z4;drawarrow (point 0.3*(length (z6--z0)) of (z6--z0) shifted (-2u,u))--point 0.3*(length (z6--z0)) of (z6--z0);
+        label.lft(btex$ hauteur$etex,(point 0.3*(length (z6--z0)) of (z6--z0)) shifted (-2u,u));
+        drawarrow (point 0.3*(length (z6--z4)) of (z6--z4)) shifted (2u,u)--point 0.3*(length (z6--z4)) of (z6--z4);
+        label.rt(btex$ g\acute{e}n\acute{e}ratrice\ \left[SM\right]$etex,(point 0.3*(length (z6--z4)) of (z6--z4)) shifted (2u,u));
+    \end{Geometrie}
+    \hfill
+    \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+        u:=0.7cm;
+        z0=(0,0)*u;label.lrt(btex$O$etex,z0);
+        path c;
+        c=(fullcircle scaled 3u);draw c withpen pencircle scaled 1.5 bp;
+        z1= point 0.15*(length c) of c;label.rt(btex$M$etex,z1);
+        z2= z1 shifted (sqrt(20)*unitvector(z1-z0)*u);
+        label.urt(btex$S$etex,z2);
+        draw z0 shifted (-u/20,-u/20)--z0 shifted(u/20,u/20);draw z0 shifted (-u/20,u/20)--z0 shifted(u/20,-u/20);
+        draw z2 shifted (-u/20,-u/20)--z2 shifted(u/20,u/20);draw z2 shifted (-u/20,u/20)--z2 shifted(u/20,-u/20);
+        draw (z1 shifted (-u/20,-u/20)--z1 shifted(u/20,u/20)) rotatedaround(z1,45);draw (z1 shifted (-u/20,u/20)--z1 shifted(u/20,-u/20)) rotatedaround (z1,45);
+        draw z0--z2 dashed evenly;
+        path d;
+        d=cercles(z2,(sqrt(20)*u));
+        numeric q; q=length c/length d;
+        path v;v= subpath(0, arctime(arclength c) of d) of d;
+        draw v rotatedaround(z2,180) withpen pencircle scaled 1.5 bp;
+        z3= point 0 of v;z4=point (arclength v) of v;
+        draw z2--(z3 rotatedaround(z2,180));draw z2--(z4 rotatedaround(z2,180));
+        marque_s:=0.33*marque_s;
+        draw codesegments(z3 rotatedaround(z2,180),z2,z4 rotatedaround(z2,180),z2,2);
+        drawarrow (point 0.7*(length v) of v rotatedaround(z2,180)) shifted (0.9u,-u)--point 0.7*(length v) of v rotatedaround(z2,180);
+        label.bot(btex arc de cercle de même longueur etex,(point 0.7*(length v) of v rotatedaround(z2,180)) shifted (1.25u,-u));
+        label.bot(btex que le disque de base etex,(point 0.7*(length v) of v rotatedaround(z2,180)) shifted (0.5u,-1.5u));
+        draw marqueangle(z3 rotatedaround(z2,180),z2,z4 rotatedaround(z2,180),0);
+        label.lrt(btex $\alpha$etex,z1 shifted (4*unitvector(z1-z0)*u)); 
+    \end{Geometrie}
+    \hfill
+
+    Le patron d'un cône a la forme ci-dessus ;
+    
+    La longueur de l'arc de cercle doit être égale au périmètre du cercle de base.
+    
+    Il y a {\bf proportionnalité} entre la mesure de l'angle et la longueur de l'arc correspondant.
+\end{center}
+\begin{center}
+    \begin{myBox}{\emoji{triangular-ruler} \emoji{straight-ruler} Animations en ligne}
+        \begin{flushleft}        
+            \href{https://www.geogebra.org/classic/jvvsa5ea}{\emoji{link} Patron d'un cône}
+        \end{flushleft}
+    
+        \creditGeogebra{Vuillemenot}
+    \end{myBox}
+\end{center}
+\subsection{Volume d'un cône}
+\begin{propriete}[\admise]
+    Si un cône a pour base un disque de rayon $r$ et a pour hauteur $h$ alors son volume $\cal V$ est ${\cal V}=\dfrac13\times\pi\times r^2\times h$
+\end{propriete}
+
+\begin{center}
+    % \includegraphics[scale=1]{pyracone.9}
+    \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+        u:=1cm;
+        z0=(0,0)*u;
+        path c;
+        c=(fullcircle scaled 4cm)yscaled 0.25;draw  (subpath (0,0.5*(length c)) of c)dashed evenly;
+        draw (subpath(0.5*(length c),length c) of c)  ;z6=(0,3.4u);label.top(btex$S$etex,z6);
+        draw (point 0.5*(length c) of c)--z6;draw point 0 of c--z6;label.lft(btex$O$etex,z0);
+        z4=point 0.85*(length c) of c;
+        draw z6--z0 dashed evenly;draw z0--z4 dashed evenly; draw codeperp(z4,z0,z6,8);
+        drawarrow (point 0.3*(length (z6--z0)) of (z6--z0) shifted (-2u,u))--point 0.3*(length (z6--z0)) of (z6--z0);
+        label.lft(btex$ hauteur$etex,(point 0.3*(length (z6--z0)) of (z6--z0)) shifted (-2u,u));
+        label.rt(btex$h$etex,0.5[z0,z6]);
+        label.lft(btex$\mathcal{B}$etex,z0 shifted (-u,0));
+        drawarrow (u,-1u)--(0,-0.4u);label.bot(btex aire de base etex,(u,-1u));
+        label.top(btex$r$etex,0.5[z0,z4]);
+    \end{Geometrie}
+\end{center}
