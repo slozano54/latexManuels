@@ -1,9 +1,111 @@
 \begin{exercice*}
-    \dots
+    $SABCD$ est une pyramide à base rectangulaire dont les faces latérales sont des triangles isocèles.
+    \begin{enumerate}
+        \item La figure ci-dessous n'est pas en vraie grandeur
+        
+        \begin{minipage}{0.4\linewidth}
+            \Solide[%
+                Nom=pyramide,
+                Reguliere,
+                HauteurPyramide=1.7,
+                SommetsPyramide=5,
+                Sommets=false,
+                ListeSommets={S,A,B,C,D},            
+                Phi=45,
+                Traces={%
+                Label.top(btex $S$ etex,S);
+                Label.llft(btex $A$ etex,A);
+                Label.ulft(btex $D$ etex,B);
+                Label.rt(btex $C$ etex,C);
+                Label.lrt(btex $B$ etex,D);
+                Label.bot(btex $H$ etex,PiedHauteur);            
+                trace segment(B,D) dashed evenly;
+                trace segment(A,C) dashed evenly;
+                trace segment(S,PiedHauteur) dashed evenly;
+                trace codeperp(S,PiedHauteur,C,8);
+                trace appelation(A,D,-3mm,btex \Lg[m]{8} etex);
+                trace appelation(C,D,3mm,btex \Lg[m]{6} etex);
+                trace appelation(S,C,3mm,btex \Lg[m]{13} etex);
+                trace appelation(PiedHauteur,S,3mm,btex \Lg[m]{12} etex);
+                }
+            ]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\linewidth}
+            Nommer : 
+            \begin{itemize}
+                \item le sommet : \pointilles
+                \item la hauteur : \pointilles
+                \item la base : \pointilles
+            \end{itemize}
+        \end{minipage}
+        \begin{itemize}
+            \item les arêtes latérales : \pointilles
+            \item les faces latérales : \pointilles
+        \end{itemize}
+        \item En déduire les longueurs suivantes :
+        
+        $AD=\pointilles[2cm]$;\hfill$CD=\pointilles[2cm]$;
+        
+        $SH=\pointilles[2cm]$;\hfill$SA=\pointilles[2cm]$;
+        
+        $SB=\pointilles[2cm]$;\hfill$SD=\pointilles[2cm]$;
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    $SABCD$ est une pyramide à base rectangulaire dont les faces latérales sont des triangles isocèles.
+    \begin{enumerate}
+        \item La figure ci-dessous n'est pas en vraie grandeur
+        
+        \begin{minipage}{0.4\linewidth}
+            \Solide[%
+                Nom=pyramide,
+                Reguliere,
+                HauteurPyramide=1.7,
+                SommetsPyramide=5,
+                Sommets=false,
+                ListeSommets={S,A,B,C,D},            
+                Phi=45,
+                Traces={%
+                Label.top(btex $S$ etex,S);
+                Label.llft(btex $A$ etex,A);
+                Label.ulft(btex $D$ etex,B);
+                Label.rt(btex $C$ etex,C);
+                Label.lrt(btex $B$ etex,D);            
+                Label.bot(btex $H$ etex,PiedHauteur);
+                trace segment(B,D) dashed evenly;
+                trace segment(A,C) dashed evenly;
+                trace segment(S,PiedHauteur) dashed evenly;
+                trace codeperp(S,PiedHauteur,C,8);
+                trace appelation(A,D,-3mm,btex \Lg[m]{8} etex);
+                trace appelation(C,D,3mm,btex \Lg[m]{6} etex);
+                trace appelation(S,C,3mm,btex \Lg[m]{13} etex);
+                trace appelation(PiedHauteur,S,3mm,btex \Lg[m]{12} etex);
+                }
+            ]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\linewidth}
+            Nommer : 
+            \begin{itemize}
+                \item le sommet :   \textcolor{red}{$S$}
+                \item la hauteur :  \textcolor{red}{$[SH]$}
+                \item la base :     \textcolor{red}{$ABCD$}
+            \end{itemize}
+        \end{minipage}
+        \begin{itemize}
+            \item les arêtes latérales :    \textcolor{red}{$[SA]$};\textcolor{red}{$[SB]$};\textcolor{red}{$[SC]$};\textcolor{red}{$[SD]$}.
+            \item les faces latérales :     \textcolor{red}{$SAB$};\textcolor{red}{$SCB$};\textcolor{red}{$SCD$};\textcolor{red}{$SDA$}.
+        \end{itemize}
+        \item En déduire les longueurs suivantes :
+        
+        $AD=\textcolor{red}{\Lg[m]{6}}$;\hfill$CD=\textcolor{red}{\Lg[m]{8}}$;\hfill
+        
+        $SH=\textcolor{red}{\Lg[m]{12}}$;\hfill$SA=\textcolor{red}{\Lg[m]{13}}$;\hfill
+        
+        $SB=\textcolor{red}{\Lg[m]{13}}$;\hfill$SD=\textcolor{red}{\Lg[m]{13}}$;\hfill
+    \end{enumerate}
 \end{corrige}
 
