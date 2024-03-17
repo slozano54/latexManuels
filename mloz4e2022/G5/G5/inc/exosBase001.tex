@@ -1,9 +1,229 @@
 \begin{exercice*}
-    \dots
+    Pour chacune des pyramides ci-dessous,  colorier :
+    \begin{itemize}
+        \item en bleu, le sommet ;
+        \item en vert, les arêtes latérales ;
+        \item en rouge, la hauteur ; 
+        \item en jaune, le polygone représentant sa base.
+    \end{itemize}
+
+    \Solide[%
+        Nom=pyramide,
+        Reguliere,
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Phi=70,
+        Traces={%
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_1$ etex,K); 
+        trace segment(B,D) dashed evenly;
+        trace segment(C,E) dashed evenly;
+        trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(A,PiedHauteur,B,5);
+        }
+    ]
+    \Solide[%
+        Nom=pyramide,        
+        HauteurPyramide=1.2,
+        SommetsPyramide=6,
+        Sommets=false,
+        Phi=60,
+        Theta=22,
+        Traces={%        
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_2$ etex,K);         
+        trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(A,PiedHauteur,B,5);
+        }
+    ]
+    \Solide[%
+        Nom=pyramide, 
+        Phi=0,
+        Theta=22,
+        DecalageSommet={(cosd(270),sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_3$ etex,K);         
+        % trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(A,PiedHauteur,B,5);
+        }
+    ]
+    \Solide[%
+        Nom=pyramide, 
+        Phi=70,
+        Theta=22,
+        Anglex=180,
+        DecalageSommet={(cosd(270),sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=4,
+        Sommets=false,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(-0.75,-2);
+        label.bot(btex $P_4$ etex,K);         
+        % trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(C,D,A,8);
+        }
+    ]
+
+    Compléter alors le tableau suivant :
+
+    \begin{tabular}{|>{\arraybackslash}m{0.5\linewidth}|*{4}{c|}}
+        \hline
+        \rowcolor{gray!20}Nom&$P_1$&$P_2$&$P_3$&$P_4$\\\hline
+        \cellcolor{gray!20}Nombre de côté de la base&&&&\\\hline
+        \cellcolor{gray!20}Nombre de faces : \textbf{f}&&&&\\\hline
+        \cellcolor{gray!20}Nombre d'arêtes : \textbf{a}&&&&\\\hline
+        \cellcolor{gray!20}Nombre de sommets : \textbf{s}&&&&\\\hline        
+        \cellcolor{gray!20}\textbf{s+f-a}&&&&\\\hline        
+    \end{tabular}
+    
+    Faire le calcul de la dernière ligne pour un pavé droit puis faire une remarque.
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Pour chacune des pyramides ci-dessous,  colorier :
+    \begin{itemize}
+        \item en bleu, le sommet ;
+        \item en vert, les arêtes latérales ;
+        \item en rouge, la hauteur ; 
+        \item en jaune, le polygone représentant sa base.
+    \end{itemize}
+    \begin{changemargin}{-7mm}{0mm}
+    \Solide[%
+        Nom=pyramide,
+        Reguliere,
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Phi=70,
+        Traces={%
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_1$ etex,K); 
+        fill polygone(B,C,D,E) withcolor jaune;
+        trace segment(B,D) dashed evenly;
+        trace segment(C,E) dashed evenly;
+        trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(A,PiedHauteur,B,5);
+        drawoptions(withcolor blue withpen pencircle scaled 1.2bp);
+        pointe(A);        
+        drawoptions(withcolor DarkGreen withpen pencircle scaled 1.2bp);
+        trace segment(A,B);
+        trace segment(A,C) dashed evenly;
+        trace segment(A,D);
+        trace segment(A,E);
+        drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+        trace segment(A,PiedHauteur);                
+        }
+    ]
+    \Solide[%
+        Nom=pyramide,        
+        HauteurPyramide=1.2,
+        SommetsPyramide=6,
+        Sommets=false,
+        Phi=60,
+        Theta=22,
+        Traces={%        
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_2$ etex,K);         
+        fill polygone(B,C,D,E,F) withcolor jaune;
+        trace segment(A,PiedHauteur) dashed evenly;
+        trace codeperp(A,PiedHauteur,B,5);
+        drawoptions(withcolor blue withpen pencircle scaled 1.2bp);
+        pointe(A);        
+        drawoptions(withcolor DarkGreen withpen pencircle scaled 1.2bp);
+        trace segment(A,B);
+        trace segment(A,C) dashed evenly;
+        trace segment(A,D);
+        trace segment(A,E);
+        trace segment(A,F);
+        drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+        trace segment(A,PiedHauteur);
+        }
+    ]
+    \Solide[%
+        Nom=pyramide, 
+        Phi=0,
+        Theta=22,
+        DecalageSommet={(cosd(270),sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(0,-1);
+        label.bot(btex $P_3$ etex,K);            
+        fill polygone(B,C,D,E) withcolor jaune;     
+        trace codeperp(A,PiedHauteur,B,5);
+        drawoptions(withcolor blue withpen pencircle scaled 1.2bp);
+        pointe(A);        
+        drawoptions(withcolor DarkGreen withpen pencircle scaled 1.2bp);
+        trace segment(A,B);
+        trace segment(A,C) dashed evenly;
+        trace segment(A,D);
+        trace segment(A,E);
+        drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+        trace segment(A,PiedHauteur);
+        }
+    ]
+    \Solide[%
+        Nom=pyramide, 
+        Phi=70,
+        Theta=22,
+        Anglex=180,
+        DecalageSommet={(cosd(270),sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=4,
+        Sommets=true,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(-0.75,-2);
+        label.bot(btex $P_4$ etex,K);                         
+        drawoptions(withcolor blue withpen pencircle scaled 1.2bp);
+        pointe(A);        
+        fill polygone(B,C,D) withcolor jaune;
+        drawoptions(withcolor black);
+        trace codeperp(C,D,A,8);
+        drawoptions(withcolor DarkGreen withpen pencircle scaled 1.2bp);
+        trace segment(A,B);
+        trace segment(A,C);
+        trace segment(A,D);        
+        drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+        trace segment(A,D) dashed evenly;        
+        drawoptions(withcolor black);
+        trace polygone(B,C,D);
+        }
+    ]
+    \end{changemargin}
+
+    Compléter alors le tableau suivant :
+
+    \begin{tabular}{|>{\arraybackslash}m{0.5\linewidth}|*{4}{c|}}
+        \hline
+        \rowcolor{gray!20}Nom&$P_1$&$P_2$&$P_3$&$P_4$\\\hline
+        \cellcolor{gray!20}Nombre de côté de la base        &\textcolor{red}{4}&\textcolor{red}{5} &\textcolor{red}{4}&\textcolor{red}{3}\\\hline
+        \cellcolor{gray!20}Nombre de faces : \textbf{f}     &\textcolor{red}{5}&\textcolor{red}{6} &\textcolor{red}{5}&\textcolor{red}{4}\\\hline
+        \cellcolor{gray!20}Nombre d'arêtes : \textbf{a}     &\textcolor{red}{8}&\textcolor{red}{10}&\textcolor{red}{8}&\textcolor{red}{6}\\\hline
+        \cellcolor{gray!20}Nombre de sommets : \textbf{s}   &\textcolor{red}{5}&\textcolor{red}{6} &\textcolor{red}{5}&\textcolor{red}{4}\\\hline        
+        \cellcolor{gray!20}\textbf{s+f-a}                   &\textcolor{red}{2}&\textcolor{red}{2} &\textcolor{red}{2}&\textcolor{red}{2}\\\hline        
+    \end{tabular}
+    
+    \smallskip
+    Faire le calcul de la dernière ligne pour un pavé droit puis faire une remarque.
+    \textcolor{red}{Pour un pavé droit, il y a 8 sommets, 6 faces et 12 arêtes donc s+f-a vaut également 2.}
 \end{corrige}
 
