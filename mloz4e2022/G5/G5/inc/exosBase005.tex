@@ -1,9 +1,113 @@
 \begin{exercice*}
-    \dots
+    $ABCDEFGH$ est un pavé droit tel que $ABCD$ est un carré. La figure ci-dessous n'est pas en vraie grandeur.
+    \begin{center}
+        \Solide[%
+            Nom=pave,
+            Largeur=1,
+            Hauteur=1,
+            Profondeur=2.5,
+            Sommets=false,
+            ListeSommets={D,C,G,H,E,A,B,F},
+            Traces={%
+            drawoptions(withpen pencircle scaled 1.5bp);
+            trace polygone(A,B,C,D);
+            trace segment(A,E);
+            trace segment(B,E);
+            trace segment(D,E) dashed evenly;
+            trace segment(C,E) dashed evenly;
+            Label.ulft(TEX("A"),A);
+            Label.llft(TEX("B"),B);
+            Label.lrt(TEX("C"),C);
+            Label.llft(TEX("D"),D);
+            Label.ulft(TEX("E"),E);
+            Label.urt(TEX("F"),F);
+            Label.lrt(TEX("G"),G);
+            Label.lrt(TEX("H"),H);
+            }
+        ]
+    \end{center}
+    \begin{enumerate}
+        \item Indiquer la nature des faces de ce pavé droit.
+        \item En déduire la nature des triangles $EAD$ et $EAB$.
+        \item Conjecturer sur la position relative des faces $ABCD$ et $ABFE$.
+        \item En déduire la nature du triangle $EBC$.
+        \item On impose $AB=\Lg[cm]{1.5}$ et $AE=\Lg[cm]{2.7}$.\\
+        Représenter en vraie grandeur, les triangles $AED$, $BEC$ et $EDC$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    $ABCDEFGH$ est un pavé droit tel que $ABCD$ est un carré. La figure ci-dessous n'est pas en vraie grandeur.
+    \begin{center}
+        \Solide[%
+            Nom=pave,
+            Largeur=1,
+            Hauteur=1,
+            Profondeur=2.5,
+            Sommets=false,
+            ListeSommets={D,C,G,H,E,A,B,F},
+            Traces={%
+            drawoptions(withpen pencircle scaled 1.5bp);
+            trace polygone(A,B,C,D);
+            trace segment(A,E);
+            trace segment(B,E);
+            trace segment(D,E) dashed evenly;
+            trace segment(C,E) dashed evenly;
+            Label.ulft(TEX("A"),A);
+            Label.llft(TEX("B"),B);
+            Label.lrt(TEX("C"),C);
+            Label.llft(TEX("D"),D);
+            Label.ulft(TEX("E"),E);
+            Label.urt(TEX("F"),F);
+            Label.lrt(TEX("G"),G);
+            Label.lrt(TEX("H"),H);
+            }
+        ]
+    \end{center}
+    \begin{enumerate}
+        \item Indiquer la nature des faces de ce pavé droit.
+        \textcolor{red}{Les faces de ce pavé droit sont des rectangles.}
+        \item En déduire la nature des triangles $EAD$ et $EAB$.
+        \textcolor{red}{$EAD$ et $EAB$ sont donc des demi-rectangle, c'est à sire des triangles rectangles.}
+        \item Conjecturer sur la position relative des faces $ABCD$ et $ABFE$.
+        \textcolor{red}{Les faces $ABCD$ et $ABFE$ semblent perpendiculaires.}
+        \item En déduire la nature du triangle $EBC$.
+        \textcolor{red}{Le triangle $EBC$ est rectangle en $B$. Penser à une porte !}
+        \item On impose $AB=\Lg[cm]{1.5}$ et $AE=\Lg[cm]{2.7}$.\\
+        Représenter en vraie grandeur, les triangles $AED$, $BEC$ et $EDC$.
+        \begin{Geometrie}
+            pair E[],A,B,C[],D[];
+            %
+            A=u*(1,1);
+            E1-A=u*(0,2.7);
+            D1-A=u*(1.5,0);
+            label.top(TEX("E"),E1);
+            label.llft(TEX("A"),A);
+            label.lrt(TEX("D"),D1);
+            %
+            B-A=u*(2.5,0);
+            C1-B=u*(1.5,0);
+            E2-B=u*(0,3.1);
+            label.top(TEX("E"),E2);
+            label.llft(TEX("B"),B);
+            label.lrt(TEX("C"),C1);
+            %
+            D2-A=u*(5,0);
+            C2-D2=u*(1.5,0);
+            E3-D2=u*(0,3.1);
+            label.top(TEX("E"),E3);
+            label.llft(TEX("D"),D2);
+            label.lrt(TEX("C"),C2);
+            %
+            trace polygone(A,D1,E1);trace codeperp(D1,A,E1,5);
+            trace polygone(B,C1,E2);trace codeperp(C1,B,E2,5);
+            trace polygone(D2,C2,E3);trace codeperp(C2,D2,E3,5);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(A,D1,B,C1,D2,C2,1);
+            trace Codelongueur(E1,D1,B,E2,D2,E3,2);
+            trace Codelongueur(C1,E2,C2,E3,3);
+        \end{Geometrie}
+    \end{enumerate}
 \end{corrige}
 

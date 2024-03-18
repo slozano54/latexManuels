@@ -1,9 +1,114 @@
 \begin{exercice*}
-    \dots
+    On a représenté ci-dessous un cône de révolution de sommet $S$.
+    \begin{enumerate}
+        \item La figure ci-dessous n'est pas en vraie grandeur
+        \begin{center}
+            \Solide[%
+                Nom=cone,
+                HauteurCone=1.7,
+                RayonCone=1,                
+                ListeSommets={S,O},
+                Phi=0,                            
+                Traces={%
+                Label.top(btex $S$ etex,S);
+                Label.bot(btex $O$ etex,O);
+                trace segment(S,O) dashed evenly;
+                color A,B,D,E,I;
+                A-O=rayoncone*(0,-sind(90),0);
+                B-O=rayoncone*(0,sind(90),0);
+                E-O=rayoncone*(-cosd(30),-sind(30),0);
+                D-O=rayoncone*(cosd(30),sind(30),0);
+                I-O=hauteurcone*(0,0,0.65);
+                Label.rt(btex $B$ etex,B);
+                Label.lft(btex $A$ etex,A);
+                Label.lrt(btex $E$ etex,E);
+                Label.lrt(btex $D$ etex,D);
+                Label.ulft(btex $I$ etex,I);
+                trace segment(A,B) dashed evenly;
+                trace segment(A,I) dashed evenly;
+                trace segment(S,D);                
+                marque_p:="croix";
+                u:=u/2;
+                pointe(E);
+                u:=u*2;
+                trace codeperp(S,O,B,5);
+                }
+            ]
+        \end{center}
+        Nommer : 
+        \begin{itemize}
+            \item le sommet : \pointilles
+            \item le centre de la base : \pointilles
+            \item un diamètre de la base : \pointilles
+            \item la hauteur : \pointilles
+            \item trois génératrices : \pointilles
+        \end{itemize}
+        \item Déterminer la nature du triangle $SAD$.
+        \item Déterminer la nature du triangle $SOD$.
+        \item Citer toutes les longueurs égales à $OA$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+        On a représenté ci-dessous un cône de révolution de sommet $S$.
+
+    \begin{enumerate}
+        \item La figure ci-dessous n'est pas en vraie grandeur
+        
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-10mm}
+            \Solide[%
+                Nom=cone,
+                HauteurCone=1.7,
+                RayonCone=1,                
+                ListeSommets={S,O},
+                Phi=0,                            
+                Traces={%
+                Label.top(btex $S$ etex,S);
+                Label.bot(btex $O$ etex,O);
+                trace segment(S,O) dashed evenly;
+                color A,B,D,E,I;
+                A-O=rayoncone*(0,-sind(90),0);
+                B-O=rayoncone*(0,sind(90),0);
+                E-O=rayoncone*(-cosd(30),-sind(30),0);
+                D-O=rayoncone*(cosd(30),sind(30),0);
+                I-O=hauteurcone*(0,0,0.65);
+                Label.rt(btex $B$ etex,B);
+                Label.lft(btex $A$ etex,A);
+                Label.lrt(btex $E$ etex,E);
+                Label.lrt(btex $D$ etex,D);
+                Label.ulft(btex $I$ etex,I);
+                trace segment(A,B) dashed evenly;
+                trace segment(A,I) dashed evenly;
+                trace segment(S,D);                
+                marque_p:="croix";
+                u:=u/2;
+                pointe(E);
+                u:=u*2;
+                trace codeperp(S,O,B,5);
+                }
+            ]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\linewidth}
+            Nommer : 
+            \begin{itemize}
+                \item le sommet : \textcolor{red}{$S$}
+                \item le centre de la base : \textcolor{red}{$O$}
+                \item un diamètre de la base : \textcolor{red}{$[AB]$}
+                \item la hauteur : \textcolor{red}{$[SO]$}
+            \end{itemize}
+        \end{minipage}
+        \begin{itemize}
+            \item trois génératrices : \textcolor{red}{$[SD]$};\textcolor{red}{$[SB]$};\textcolor{red}{$[SE]$}.
+        \end{itemize}
+        \item Déterminer la nature du triangle $SAD$.
+        \textcolor{red}{$SA=SD$, donc $SAD$ est un triangle isocèle en $S$.}
+        \item Déterminer la nature du triangle $SOD$.
+        \textcolor{red}{$\widehat{SOD}$ est un angle droit, donc $SOD$ est un triangle rectangle en $O$.}
+        \item Citer toutes les longueurs égales à $OA$.
+        \textcolor{red}{$OA$ est le rayon de la base, donc tous les points du cercle de base sont à la même distance de $O$ que $A$, d'où $OB=OD=OE=OA$.}
+    \end{enumerate}
 \end{corrige}
 
