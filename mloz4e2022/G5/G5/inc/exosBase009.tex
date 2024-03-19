@@ -1,9 +1,424 @@
 \begin{exercice*}
-    \dots
+    Dans chaque cas, tracer la pyramide demandée :
+    \begin{itemize}
+        \item directement sur le parallélépipède rectangle ;
+        \item en perspective à côté.
+    \end{itemize}
+
+    \begin{enumerate}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-25mm}
+            \Solide[%
+                Nom=pave,
+                Largeur=2,
+                Hauteur=1,
+                Profondeur=1,            
+                Sommets=false,
+                ListeSommets={D,C,H,E,F,A,B,G},
+                Traces={%
+                Label.ulft(TEX("A"),A);
+                Label.llft(TEX("B"),B);
+                Label.lrt(TEX("C"),C);
+                Label.llft(TEX("D"),D);
+                Label.bot(TEX("E"),E);
+                Label.urt(TEX("F"),F);
+                Label.lrt(TEX("G"),G);
+                Label.lrt(TEX("H"),H);
+                % drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                % trace chemin(A,D,C,H);
+                % trace segment(A,C);
+                % trace segment(A,H) dashed evenly;
+                % trace segment(H,E) dashed evenly;
+                % trace segment(D,E) dashed evenly;
+                % trace segment(A,E) dashed evenly;
+                }
+            ]
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $ADCHE$                        
+            \phantom{
+                \hspace*{-5mm}
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    Aretes=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    Label.ulft(TEX("A"),A);
+                    % Label.llft(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    Label.bot(TEX("E"),E);
+                    % Label.urt(TEX("F"),F);
+                    % Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    drawoptions(withcolor white);
+                    pointe(B,F,G);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(A,D,C,H);
+                    trace segment(A,C);
+                    trace segment(A,H);
+                    trace segment(H,E) dashed evenly;
+                    trace segment(D,E) dashed evenly;
+                    trace segment(A,E) dashed evenly;
+                    }
+                ]
+            }
+        \end{minipage}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-25mm}
+            \Solide[%
+                Nom=pave,
+                Largeur=2,
+                Hauteur=1,
+                Profondeur=1,            
+                Sommets=false,
+                ListeSommets={D,C,H,E,F,A,B,G},
+                Traces={%
+                Label.ulft(TEX("A"),A);
+                Label.top(TEX("B"),B);
+                Label.lrt(TEX("C"),C);
+                Label.llft(TEX("D"),D);
+                Label.ulft(TEX("E"),E);
+                Label.urt(TEX("F"),F);
+                Label.lrt(TEX("G"),G);
+                Label.lrt(TEX("H"),H);
+                % drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                % trace chemin(B,D,C,H,B);            
+                % trace segment(B,C);
+                % trace segment(D,H) dashed evenly;
+                }
+            ]
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $BDCH$
+            \phantom{
+                \hspace*{-5mm}
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    Aretes=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    % Label.ulft(TEX("A"),A);
+                    Label.top(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    % Label.ulft(TEX("E"),E);
+                    % Label.urt(TEX("F"),F);
+                    % Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    drawoptions(withcolor white);
+                    pointe(E,A,F,G);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(B,D,C,H,B);
+                    trace segment(B,C);
+                    trace segment(D,H) dashed evenly;
+                    }
+                ]
+            }
+        \end{minipage}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-25mm}
+            \Solide[%
+                Nom=pave,
+                Largeur=2,
+                Hauteur=1,
+                Profondeur=1,            
+                Sommets=false,
+                ListeSommets={D,C,H,E,F,A,B,G},
+                Traces={%
+                Label.ulft(TEX("A"),A);
+                Label.lrt(TEX("B"),B);
+                Label.lrt(TEX("C"),C);
+                Label.llft(TEX("D"),D);
+                Label.bot(TEX("E"),E);
+                Label.urt(TEX("F"),F);
+                Label.lrt(TEX("G"),G);
+                Label.lrt(TEX("H"),H);
+                color O;
+                O=iso(F,B);
+                trace segment(F,B);
+                trace segment(A,G);
+                Label.top(TEX("O"),O);
+                % drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                % trace chemin(D,C,H);
+                % trace chemin(D,E,H) dashed evenly;
+                % trace segment(O,C) dashed evenly;            
+                % trace segment(O,D) dashed evenly;
+                % trace segment(O,E) dashed evenly;
+                % trace segment(O,H) dashed evenly;
+                }
+            ]
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $ODCHE$
+            \phantom{
+                \hspace*{-5mm}
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    Aretes=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    % Label.ulft(TEX("A"),A);
+                    % Label.llft(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    Label.bot(TEX("E"),E);
+                    % Label.urt(TEX("F"),F);
+                    % Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    color O;
+                    O=iso(F,B);
+                    % trace segment(F,B);
+                    % trace segment(A,G);
+                    Label.top(TEX("O"),O);
+                    drawoptions(withcolor white);
+                    pointe(A,B,F,G);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(D,C,H);
+                    trace chemin(D,E,H) dashed evenly;
+                    trace segment(O,C);
+                    trace segment(O,D);
+                    trace segment(O,E) dashed evenly;
+                    trace segment(O,H);
+                    }
+                ]
+            }
+        \end{minipage}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Dans chaque cas, tracer la pyramide demandée :
+    \begin{itemize}
+        \item directement sur le parallélépipède rectangle ;
+        \item en perspective à côté.
+    \end{itemize}
+
+    \begin{enumerate}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-10mm}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    Label.ulft(TEX("A"),A);
+                    Label.llft(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    Label.bot(TEX("E"),E);
+                    Label.urt(TEX("F"),F);
+                    Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(A,D,C,H);
+                    trace segment(A,C);
+                    trace segment(A,H) dashed evenly;
+                    trace segment(H,E) dashed evenly;
+                    trace segment(D,E) dashed evenly;
+                    trace segment(A,E) dashed evenly;
+                    }
+                ]
+            }
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $ADCHE$                        
+            % \phantom{
+                \scalebox{0.8}{
+                    \Solide[%
+                        Nom=pave,
+                        Largeur=2,
+                        Hauteur=1,
+                        Profondeur=1,            
+                        Sommets=false,
+                        Aretes=false,
+                        ListeSommets={D,C,H,E,F,A,B,G},
+                        Traces={%
+                        Label.ulft(TEX("A"),A);
+                        % Label.llft(TEX("B"),B);
+                        Label.lrt(TEX("C"),C);
+                        Label.llft(TEX("D"),D);
+                        Label.bot(TEX("E"),E);
+                        % Label.urt(TEX("F"),F);
+                        % Label.lrt(TEX("G"),G);
+                        Label.lrt(TEX("H"),H);
+                        drawoptions(withcolor white);
+                        pointe(B,F,G);
+                        drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                        trace chemin(A,D,C,H);
+                        trace segment(A,C);
+                        trace segment(A,H);
+                        trace segment(H,E) dashed evenly;
+                        trace segment(D,E) dashed evenly;
+                        trace segment(A,E) dashed evenly;
+                        }
+                    ]
+                }
+            % }
+        \end{minipage}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-10mm}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    Label.ulft(TEX("A"),A);
+                    Label.top(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    Label.ulft(TEX("E"),E);
+                    Label.urt(TEX("F"),F);
+                    Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(B,D,C,H,B);            
+                    trace segment(B,C);
+                    trace segment(D,H) dashed evenly;
+                    }
+                ]
+            }
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $BDCH$
+            % \phantom{
+                \scalebox{0.8}{
+                    \Solide[%
+                        Nom=pave,
+                        Largeur=2,
+                        Hauteur=1,
+                        Profondeur=1,            
+                        Sommets=false,
+                        Aretes=false,
+                        ListeSommets={D,C,H,E,F,A,B,G},
+                        Traces={%
+                        % Label.ulft(TEX("A"),A);
+                        Label.top(TEX("B"),B);
+                        Label.lrt(TEX("C"),C);
+                        Label.llft(TEX("D"),D);
+                        % Label.ulft(TEX("E"),E);
+                        % Label.urt(TEX("F"),F);
+                        % Label.lrt(TEX("G"),G);
+                        Label.lrt(TEX("H"),H);
+                        drawoptions(withcolor white);
+                        pointe(E,A,F,G);
+                        drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                        trace chemin(B,D,C,H,B);
+                        trace segment(B,C);
+                        trace segment(D,H) dashed evenly;
+                        }
+                    ]
+                }
+            % }
+        \end{minipage}
+        \item \phantom{rrr}
+                
+        \begin{minipage}{0.45\linewidth}
+            \hspace*{-10mm}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=pave,
+                    Largeur=2,
+                    Hauteur=1,
+                    Profondeur=1,            
+                    Sommets=false,
+                    ListeSommets={D,C,H,E,F,A,B,G},
+                    Traces={%
+                    Label.ulft(TEX("A"),A);
+                    Label.lrt(TEX("B"),B);
+                    Label.lrt(TEX("C"),C);
+                    Label.llft(TEX("D"),D);
+                    Label.bot(TEX("E"),E);
+                    Label.urt(TEX("F"),F);
+                    Label.lrt(TEX("G"),G);
+                    Label.lrt(TEX("H"),H);
+                    color O;
+                    O=iso(F,B);
+                    trace segment(F,B);
+                    trace segment(A,G);
+                    Label.top(TEX("O"),O);
+                    drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                    trace chemin(D,C,H);
+                    trace chemin(D,E,H) dashed evenly;
+                    trace segment(O,C) dashed evenly;            
+                    trace segment(O,D) dashed evenly;
+                    trace segment(O,E) dashed evenly;
+                    trace segment(O,H) dashed evenly;
+                    }
+                ]
+            }
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}            
+            Pyramide $ODCHE$
+            % \phantom{
+                \scalebox{0.8}{
+                    \Solide[%
+                        Nom=pave,
+                        Largeur=2,
+                        Hauteur=1,
+                        Profondeur=1,            
+                        Sommets=false,
+                        Aretes=false,
+                        ListeSommets={D,C,H,E,F,A,B,G},
+                        Traces={%
+                        % Label.ulft(TEX("A"),A);
+                        % Label.llft(TEX("B"),B);
+                        Label.lrt(TEX("C"),C);
+                        Label.llft(TEX("D"),D);
+                        Label.bot(TEX("E"),E);
+                        % Label.urt(TEX("F"),F);
+                        % Label.lrt(TEX("G"),G);
+                        Label.lrt(TEX("H"),H);
+                        color O;
+                        O=iso(F,B);
+                        % trace segment(F,B);
+                        % trace segment(A,G);
+                        Label.top(TEX("O"),O);
+                        drawoptions(withcolor white);
+                        pointe(A,B,F,G);
+                        drawoptions(withpen pencircle scaled 1.5bp withcolor red);                
+                        trace chemin(D,C,H);
+                        trace chemin(D,E,H) dashed evenly;
+                        trace segment(O,C);
+                        trace segment(O,D);
+                        trace segment(O,E) dashed evenly;
+                        trace segment(O,H);
+                        }
+                    ]
+                }
+            % }
+        \end{minipage}
+    \end{enumerate}
 \end{corrige}
 
