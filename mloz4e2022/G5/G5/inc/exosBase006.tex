@@ -1,9 +1,92 @@
 \begin{exercice*}
-    \dots
+    Compléter les représentations en perspective suivantes.
+    \begin{enumerate}
+        \item Perspective d'une pyramide à base triangulaire.
+        \begin{center}
+            \Solide[%
+                Nom=pyramide,
+                Reguliere,
+                HauteurPyramide=1.2,
+                SommetsPyramide=5,
+                Sommets=false,
+                Aretes=false,
+                Phi=70,
+                Traces={% 
+                trace polygone(A,B,E,D);
+                drawoptions(withcolor white);
+                pointe(C);
+                }
+            ]
+        \end{center}
+        \item Perspective d'une pyramide à base rectangulaire.
+        \begin{center}
+            \Solide[%
+                Nom=pyramide,
+                Reguliere,
+                HauteurPyramide=1.2,
+                SommetsPyramide=5,
+                Sommets=false,
+                Aretes=false,
+                Phi=70,
+                Traces={% 
+                trace polygone(A,B,E,D);
+                drawoptions(withcolor white);
+                pointe(C);
+                }
+            ]
+        \end{center}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Compléter les représentations en perspective suivantes.
+
+    \begin{enumerate}
+        \item Perspective d'une pyramide à base triangulaire.
+        
+        \Solide[%
+            Nom=pyramide,
+            Reguliere,
+            HauteurPyramide=1.2,
+            SommetsPyramide=5,
+            Sommets=false,
+            Aretes=false,
+            Phi=70,
+            Traces={% 
+            trace polygone(A,B,E,D);
+            drawoptions(withcolor white);
+            pointe(C);
+            drawoptions(withcolor red);
+            trace segment(B,D) dashed evenly;
+            trace segment(A,E);
+            }
+        ]
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Perspective d'une pyramide à base rectangulaire.
+        
+        \Solide[%
+            Nom=pyramide,
+            Reguliere,
+            HauteurPyramide=1.2,
+            SommetsPyramide=5,
+            Sommets=false,
+            Aretes=false,
+            Phi=70,
+            Traces={% 
+            trace polygone(A,B,E,D);
+            drawoptions(withcolor white);
+            pointe(C);
+            drawoptions(withcolor red);
+            trace segment(C,D) dashed evenly;
+            trace segment(C,B) dashed evenly;
+            trace segment(A,C) dashed evenly;
+            trace segment(A,E);
+            }
+        ]
+    \end{enumerate}
 \end{corrige}
 

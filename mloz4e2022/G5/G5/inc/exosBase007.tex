@@ -1,9 +1,112 @@
 \begin{exercice*}
-    \dots
+    Compléter les représentations en perspective suivantes sachant que ce sont des pyramides de sommet $S$ à base triangulaire.
+
+    \begin{Geometrie}[CoinHD={u*(10,5)}]
+        pair S[],A[],B[],C[];
+        pair legende[];
+        trace grille(0.5) withcolor Grey;
+        %
+        A1=u*(0.5,1);
+        B1-A1=u*(2.5,0);
+        C1-A1=u*(1,1.5);
+        S1-A1=u*(2.5,2.5);
+        legende1=iso(A1,B1) shifted (0,-0.75u);
+        label(TEX("Perspective 1"),legende1);
+        trace C1--A1--B1--S1 withpen pencircle scaled 1.2bp;
+        trace segment(B1,C1) withpen pencircle scaled 1.2bp dashed evenly;
+        marque_p:="croix";
+        pointe(S1);
+        label.top(TEX("S"),S1);
+        %
+        A2-A1=u*(3.5,1);
+        B2-A2=u*(2.5,2);
+        C2-A2=u*(0.5,2);
+        S2-A2=u*(1.5,-0.5);
+        legende2-legende1=(3.5u,0);
+        label(TEX("Perspective 2"),legende2);
+        trace A2--B2--C2 withpen pencircle scaled 1.2bp;
+        trace B2--S2 withpen pencircle scaled 1.2bp;
+        marque_p:="croix";        
+        pointe(S2);
+        label.bot(TEX("S"),S2);
+        %
+        A3-A1=u*(7,0);
+        B3-A3=u*(2,0.5);
+        C3-A3=u*(-0.5,2);
+        S3-A3=u*(2,2.5);
+        legende3-legende2=(3.5u,0);
+        label(TEX("Perspective 3"),legende3);
+        trace A3--B3--C3 withpen pencircle scaled 1.2bp;        
+        marque_p:="croix";        
+        pointe(S3);
+        label.top(TEX("S"),S3);
+    \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Compléter les représentations en perspective suivantes sachant que ce sont des pyramides de sommet $S$ à base triangulaire.
+
+    \hspace*{-7mm}
+    \scalebox{0.8}{
+        \begin{Geometrie}[CoinHD={u*(10,5)}]
+            pair S[],A[],B[],C[];
+            pair legende[];
+            trace grille(0.5) withcolor Grey;
+            %
+            A1=u*(0.5,1);
+            B1-A1=u*(2.5,0);
+            C1-A1=u*(1,1.5);
+            S1-A1=u*(2.5,2.5);
+            legende1=iso(A1,B1) shifted (0,-0.75u);
+            label(TEX("Perspective 1"),legende1);
+            trace C1--A1--B1--S1 withpen pencircle scaled 1.2bp;
+            trace segment(B1,C1) withpen pencircle scaled 1.2bp dashed evenly;
+            marque_p:="croix";
+            pointe(S1);
+            label.top(TEX("S"),S1);
+            %corr
+            drawoptions(withcolor red);
+            trace S1--A1 withpen pencircle scaled 1.2bp;
+            trace S1--C1 withpen pencircle scaled 1.2bp;
+            drawoptions(withcolor black);
+            %
+            A2-A1=u*(3.5,1);
+            B2-A2=u*(2.5,2);
+            C2-A2=u*(0.5,2);
+            S2-A2=u*(1.5,-0.5);
+            legende2-legende1=(3.5u,0);
+            label(TEX("Perspective 2"),legende2);
+            trace A2--B2--C2 withpen pencircle scaled 1.2bp;
+            trace B2--S2 withpen pencircle scaled 1.2bp;
+            marque_p:="croix";        
+            pointe(S2);
+            label.bot(TEX("S"),S2);
+            %corr
+            drawoptions(withcolor red);
+            trace S2--A2 withpen pencircle scaled 1.2bp;
+            trace S2--C2 withpen pencircle scaled 1.2bp dashed evenly;
+            trace C2--A2 withpen pencircle scaled 1.2bp;
+            drawoptions(withcolor black);
+            %
+            A3-A1=u*(7,0);
+            B3-A3=u*(2,0.5);
+            C3-A3=u*(-0.5,2);
+            S3-A3=u*(2,2.5);
+            legende3-legende2=(3.5u,0);
+            label(TEX("Perspective 3"),legende3);
+            trace A3--B3--C3 withpen pencircle scaled 1.2bp;        
+            marque_p:="croix";        
+            pointe(S3);
+            label.top(TEX("S"),S3);
+            %corr
+            drawoptions(withcolor red);
+            trace S3--A3 withpen pencircle scaled 1.2bp dashed evenly;
+            trace S3--B3 withpen pencircle scaled 1.2bp;
+            trace S3--C3 withpen pencircle scaled 1.2bp;
+            trace C3--A3 withpen pencircle scaled 1.2bp;
+            drawoptions(withcolor black);
+        \end{Geometrie}
+    }
 \end{corrige}
 

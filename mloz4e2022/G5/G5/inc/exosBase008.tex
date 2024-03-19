@@ -1,9 +1,69 @@
 \begin{exercice*}
-    \dots
+    Représenter, en perspective cavalière, un cône de révolution de hauteur \num{3.5} \textit{u.l.} et dont le rayon de base vaut \num{2.5} \textit{u.l.}.
+
+    On a déjà placer le centre $O$ de la base du cône.
+
+    En perspective cavalière, la base d'une cône de révolution est représentée par une ellipse.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(10u,6u)}]
+            trace grille(0.5) withcolor Grey;
+            z0=(5,1)*u;
+            marque_p:="croix";
+            pointe(z0);
+            label.lft(btex$O$etex,z0);
+            pair R[];
+            R1=u*(1,5.5);
+            R2=u*(2,5.5);
+            trace segment(R1,R2) withpen pencircle scaled 1bp;
+            label.bot(btex u.l. etex,iso(R1,R2));
+        \end{Geometrie}
+    \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Représenter, en perspective cavalière, un cône de révolution de hauteur \num{3.5} \textit{u.l.} et dont le rayon de base vaut \num{2.5} \textit{u.l.}.
+
+    On a déjà placer le centre $O$ de la base du cône.
+
+    En perspective cavalière, la base d'une cône de révolution est représentée par une ellipse.
+    \begin{center}
+        \scalebox{0.8}{
+            \Solide[%
+                Nom=cone,
+                RayonCone=1.25,
+                HauteurCone=1.75,
+                ListeSommets={S,O},
+                Phi=0,        
+                Traces={%
+                %horizontal
+                for i=-4 upto 10:
+                trace segment((0,-2.5,i*0.25),(0,2.5,i*.25)) withcolor Grey;
+                endfor;
+                %vertical
+                for i=-10 upto 10:
+                trace segment((0,i*0.25,-1),(0,i*.25,2.5)) withcolor Grey;
+                endfor;
+                Label.llft(btex O etex,O);
+                Label.urt(btex S etex,S);
+                color D;
+                D-O=rayoncone*(cosd(30),sind(30),0);
+                % Label.lrt(btex $D$ etex,D);
+                trace codeperp(S,O,D,5) withpen pencircle scaled 1bp;
+                trace segment(S,O) withpen pencircle scaled 1bp dashed evenly;
+                trace segment(D,O) withpen pencircle scaled 1bp dashed evenly;
+                marque_p:="croix";
+                u:=u*0.5;
+                pointe(O);
+                u:=u*2;
+                color R[];
+                R1=(0,-1.75,2.25);
+                R2=(0,-1.25,2.25);
+                trace segment(R1,R2) withpen pencircle scaled 1bp;
+                Label.bot(btex u.l. etex,iso(R1,R2));
+                }
+            ]
+        }
+    \end{center}
 \end{corrige}
 
