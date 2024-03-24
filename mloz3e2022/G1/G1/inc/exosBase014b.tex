@@ -1,0 +1,130 @@
+\begin{exercice*}
+    Pour chaque figure ci-dessous, qui sont données à titre indicatif, dire s’il est possible d’appliquer la réciproque du théorème de Thalès.
+
+    Justifier.
+    \begin{enumerate}
+        \item \phantom{rrr}
+        
+        \begin{Geometrie}[CoinHD={(6u,4u)},CoinBG={(-2u,0)}]
+            % trace feuillet;
+            pair A,B,C,D,E;
+            A=u*(1,2);
+            D-A=u*(3,0);
+            E-A=u*(4,0);
+            C-A=u*(4,1.5);
+            B-A=u*(-2,-0.75);
+            trace droite(B,C);
+            trace droite(A,E);
+            marque_p:="croix";
+            u:=u/2;
+            pointe(B,C,D,E);
+            u:=u*2;
+            labeloffset:=1.2*labeloffset;
+            label.top(btex $A$ etex,A);
+            label.bot(btex $B$ etex,B);
+            label.top(btex $C$ etex,C);
+            label.top(btex $D$ etex,D);
+            label.top(btex $E$ etex,E);
+            % trace appelation(A,D,-3mm,btex 3 etex);
+            trace cotationmil(A,D,-3mm,10,btex 3 etex);
+            trace appelation(A,C,3mm,btex 4 etex);
+            trace appelation(B,A,-3mm,btex 3 etex);
+            trace cotationmil(A,E,-9mm,10,btex 4 etex);
+        \end{Geometrie}
+        \item \phantom{rrr}
+        
+        \begin{Geometrie}[CoinHD={(6u,5u)},CoinBG={(0,0.5u)}]
+            % trace feuillet;
+            pair A,B,C,D,E;
+            A=u*(1,2);
+            D-A=u*(3,0);
+            E-A=u*(4,0);
+            path cAE,cAD;
+            cAE=cercles(A,E);
+            cAD=cercles(A,D);
+            B=pointarc(cAD,20);
+            C=pointarc(cAE,20);
+            trace droite(B,C);
+            trace droite(A,E);
+            marque_p:="croix";
+            u:=u/2;
+            pointe(D,E,B,C);
+            u:=u*2;
+            labeloffset:=1.2*labeloffset;
+            label.llft(btex $A$ etex,A);
+            label.bot(btex $B$ etex,B);
+            label.bot(btex $C$ etex,C);
+            label.top(btex $D$ etex,D);
+            label.top(btex $E$ etex,E);
+            trace cotationmil(A,D,-3mm,10,btex 3 etex);
+            trace cotationmil(A,E,-9mm,10,btex 4 etex);
+            trace cotationmil(A,B,3mm,10,btex 3 etex);
+            trace cotationmil(A,C,9mm,10,btex 4 etex);   
+        \end{Geometrie}
+        \pagebreak
+        \item \phantom{rrr}
+        
+        \begin{Geometrie}[CoinHD={(6u,5u)},CoinBG={(0,0.5u)}]
+            % trace feuillet;
+            pair A,B,C,D,E;
+            A=u*(1,2);
+            D-A=u*(3,0);
+            E-A=u*(4,0);
+            path cAE,cAD;
+            cAE=cercles(A,E);
+            cAD=cercles(A,D);
+            B=pointarc(cAD,20);
+            C=pointarc(cAE,20);
+            trace droite(B,C);
+            trace droite(A,E);
+            marque_p:="croix";
+            u:=u/2;
+            pointe(D,E,B,C);
+            u:=u*2;
+            labeloffset:=1.2*labeloffset;
+            label.llft(btex $A$ etex,A);
+            label.bot(btex $B$ etex,B);
+            label.bot(btex $C$ etex,C);
+            label.top(btex $D$ etex,D);
+            label.top(btex $E$ etex,E);
+            trace cotationmil(A,D,-3mm,10,btex \num{1.2} etex);
+            trace cotationmil(A,E,-9mm,10,btex \num{3.6} etex);
+            trace cotationmil(A,B,3mm,10,btex \num{1.3} etex);
+            trace cotationmil(A,C,9mm,10,btex \num{5.2} etex);            
+        \end{Geometrie}
+        \item \phantom{rrr}
+        
+        \begin{Geometrie}[CoinHD={(6u,4u)},CoinBG={(-2u,0)}]
+            % trace feuillet;
+            pair A,B,C,D,E;
+            A=u*(1,2);
+            D-A=u*(3,0);
+            E-A=u*(4,0);
+            C-A=u*(4,1.5);
+            B-A=u*(-2,-0.75);
+            trace droite(B,C);
+            trace droite(A,E);
+            marque_p:="croix";
+            u:=u/2;
+            pointe(B,C,D,E);
+            u:=u*2;
+            labeloffset:=1.2*labeloffset;
+            label.top(btex $A$ etex,A);
+            label.bot(btex $B$ etex,B);
+            label.top(btex $C$ etex,C);
+            label.top(btex $D$ etex,D);
+            label.top(btex $E$ etex,E);
+            % trace appelation(A,D,-3mm,btex 3 etex);
+            trace cotationmil(A,D,-3mm,10,btex \num{1.2} etex);
+            trace appelation(A,C,3mm,btex \num{5.2} etex);
+            trace appelation(B,A,-3mm,btex \num{1.3} etex);
+            trace cotationmil(A,E,-9mm,10,btex \num{3.6} etex);
+        \end{Geometrie}
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    % \phantom{rrr}
+    \dots
+\end{corrige}
+
