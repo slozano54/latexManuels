@@ -1,5 +1,146 @@
 \begin{exercice*}
-    \dots
+    Parmi les figures suivantes, barrer celles qui ne sont pas des patrons.
+
+    \begin{minipage}{0.45\linewidth}
+        \begin{enumerate}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                pair A[],B[];
+                u:=0.3*u;
+                A0=u*(1,4.5);
+                A1-A0=u*(2.5,0);
+                A2-A0=u*(4.5,0);
+                A3-A0=u*(7.5,0);
+                A4-A0=u*(9.5,0);
+                A5-A0=u*(12,0);
+                A6-A0=u*(4.5,-2);
+                A7-A0=u*(6,-4);
+                A8-A0=u*(7.5,-2);
+                B0-A0=u*(0,5);
+                B1-A1=u*(0,5);
+                B2-A2=u*(0,5);
+                B3-A3=u*(0,5);
+                B4-A4=u*(0,5);
+                B5-A5=u*(0,5);
+                B6-A6=u*(0,9);
+                B7-A7=u*(0,13);
+                B8-A8=u*(0,9);
+                trace polygone(A0,A5,B5,B0);
+                trace segment(B1,A1);
+                trace segment(B2,A2);
+                trace segment(B3,A3);
+                trace segment(B4,A4);
+                trace chemin(A2,A6,A7,A8,A3);
+                trace chemin(B2,B6,B7,B8,B3);
+            \end{Geometrie}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                pair A,B,C,D,E,F,G,H;
+                u:=0.3*u;
+                A=u*(5.5,5.5);
+                B-A=u*(3,0);
+                C-A=u*(3,3);
+                D-A=u*(0,3);
+                E-A=u*(3,-5);
+                F-A=u*(6,3);
+                G-A=u*(3,7);
+                H-A=u*(-5,3);
+                trace chemin(G,C,D,A,B);
+                trace polygone(H,A,E,C,F,G,D);                
+            \end{Geometrie}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                numeric pi;
+                pi = 3.141592653589793;
+                pair A[],B[];
+                path cA[];
+                u:=0.5*u;
+                B0=u*(1,2);
+                B1-B0=u*(2*pi,0);
+                B2-B0=u*(2*pi,2);
+                B3-B0=u*(0,2);
+                A0-B0=u*(2,-1);
+                A1-B0=u*(4,3);
+                trace polygone(B0,B1,B2,B3);
+                trace cercles(A0,u);
+                trace cercles(A1,u);
+            \end{Geometrie}
+        \end{enumerate}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\linewidth}        
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                pair A[],B[];
+                u:=0.3*u;
+                A0=u*(1,4.5);
+                A1-A0=u*(2.5,0);
+                A2-A0=u*(4.5,0);
+                A3-A0=u*(7.5,0);
+                A4-A0=u*(9.5,0);
+                A5-A0=u*(12,0);
+                A6-A0=u*(4.5,-2);
+                A7-A0=u*(6,-4);
+                A8-A0=u*(7.5,-2);
+                B0-A0=u*(0,5);
+                B1-A1=u*(0,5);
+                B2-A2=u*(0,5);
+                B3-A3=u*(0,5);
+                B4-A4=u*(0,5);
+                B5-A5=u*(0,5);
+                B6-A6=u*(0,9);
+                B7-A7=u*(0,13);
+                B8-A8=u*(0,9);
+                trace polygone(A0,A5,B5,B0);
+                trace segment(B1,A1);
+                trace segment(B2,A2);
+                trace segment(B3,A3);
+                trace segment(B4,A4);
+                trace chemin(A2,A6,A7,A8,A3);
+                trace chemin(B2,B6,B7,B8,B3);
+            \end{Geometrie}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                pair A,B,C,D,E,F,G,H;
+                u:=0.3*u;
+                A=u*(5.5,5.5);
+                B-A=u*(3,0);
+                C-A=u*(3,3);
+                D-A=u*(0,3);
+                E-A=u*(3,-5);
+                F-A=u*(6,3);
+                G-A=u*(3,7);
+                H-A=u*(-5,3);
+                trace chemin(G,C,D,A,B);
+                trace polygone(H,A,E,C,F,G,D);                
+            \end{Geometrie}
+            \item \phantom{rrr}
+            
+            \begin{Geometrie}
+                numeric pi;
+                pi = 3.141592653589793;
+                pair A[],B[];
+                path cA[];
+                u:=0.5*u;
+                B0=u*(1,2);
+                B1-B0=u*(2*pi,0);
+                B2-B0=u*(2*pi,2);
+                B3-B0=u*(0,2);
+                A0-B0=u*(2,-1);
+                A1-B0=u*(4,3);
+                trace polygone(B0,B1,B2,B3);
+                trace cercles(A0,u);
+                trace cercles(A1,u);
+            \end{Geometrie}
+        \end{enumerate}
+    \end{minipage}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
