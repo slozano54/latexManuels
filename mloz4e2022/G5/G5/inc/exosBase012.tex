@@ -1,9 +1,119 @@
 \begin{exercice*}
-    \dots
+    $QRSTUVWX$ est un cube de côté \Lg[cm]{2}. On considère la pyramide $WVXSQ$.
+    \begin{center}
+        % \Solide[ListeSommets={V,T,U,H,M,N,S,R},PointsSection={A,B,C,D}]
+    \Solide[%
+        ListeSommets={Q,R,S,T,U,V,W,X},
+        Traces={
+            drawoptions(withpen pencircle scaled 1.5bp withcolor blue);
+            trace segment(Q,S) dashed evenly;
+            trace chemin(Q,V,X,S,W,Q);
+            trace chemin(V,W,X);
+        }
+    ]
+    \end{center}
+    \begin{enumerate}
+        \item Nommer la base de cette pyramide.
+        \item Donner la nature de cette base.
+        \item Indiquer la nature des faces latérales de cette pyramide.
+        \item Terminer le patron de la pyramide $WVXSQ$ dans le cadre ci-dessous et finir le codage des longueurs.
+        \begin{center}
+            \begin{Geometrie}[CoinHD={u*(9,8)}]
+                trace feuillet;
+                pair W[],V,X,Q,S;
+                W1=u*(1,2+sqrt(6)+1);
+                V-W1=u*(2,0);
+                X-W1=u*(2+2*sqrt(2),0);
+                Q-W1=u*(2,-2);
+                S-X=u*(0,-2);
+                W2-X=u*(2,0);
+                W3-V=u*(sqrt(2),sqrt(2));
+                W4-W3=u*(0,-sqrt(2)-2-sqrt(6));
+                trace chemin(W1,X,S,Q,W1);                
+                trace segment(V,Q);
+                label.lft(btex $W_1$ etex,W1);
+                label.ulft(btex $V$ etex,V);
+                label.urt(btex $X$ etex,X);
+                label.lrt(btex $S$ etex,S);
+                label.llft(btex $Q$ etex,Q);                
+                trace codeperp(Q,V,X,5);
+                trace codeperp(V,X,S,5);
+                trace codeperp(X,S,Q,5);
+                trace codeperp(S,Q,V,5);
+                marque_s:=marque_s/3;
+                trace Codelongueur(W1,V,V,Q,S,X,1);
+                trace Codelongueur(V,X,Q,S,W1,Q,2);
+                % drawoptions(withcolor red);
+                % trace chemin(V,W3,X);
+                % trace chemin(S,W2,X);
+                % trace chemin(Q,W4,S);
+                % label.top(btex $W_3$ etex,W3);
+                % label.rt(btex $W_2$ etex,W2);
+                % label.bot(btex $W_4$ etex,W4);
+                % trace Codelongueur(V,W3,W3,X,X,W2,1);
+                % trace Codelongueur(Q,W4,W4,S,S,W2,2);
+            \end{Geometrie}
+        \end{center}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    $QRSTUVWX$ est un cube de côté \Lg[cm]{2}. On considère la pyramide $WVXSQ$.
+    \begin{center}
+        % \Solide[ListeSommets={V,T,U,H,M,N,S,R},PointsSection={A,B,C,D}]
+    \Solide[%
+        ListeSommets={Q,R,S,T,U,V,W,X},
+        Traces={
+            drawoptions(withpen pencircle scaled 1.5bp withcolor blue);
+            trace segment(Q,S) dashed evenly;
+            trace chemin(Q,V,X,S,W,Q);
+            trace chemin(V,W,X);
+        }
+    ]
+    \end{center}
+    \begin{enumerate}
+        \item Nommer la base de cette pyramide. \textcolor{red}{$VXSQ$.}
+        \item Donner la nature de cette base. \textcolor{red}{C'est un rectangle.}
+        \item Indiquer la nature des faces latérales de cette pyramide. \textcolor{red}{Il y a deux triangles isocèle-rectangles, un équilatéral et un isocèle.}
+        \item Terminer le patron de la pyramide $WVXSQ$ dans le cadre ci-dessous et finir le codage des longueurs.
+        \scalebox{0.8}{
+            \begin{Geometrie}[CoinHD={u*(9,8)}]
+                trace feuillet;
+                pair W[],V,X,Q,S;
+                W1=u*(1,2+sqrt(6)+1);
+                V-W1=u*(2,0);
+                X-W1=u*(2+2*sqrt(2),0);
+                Q-W1=u*(2,-2);
+                S-X=u*(0,-2);
+                W2-X=u*(2,0);
+                W3-V=u*(sqrt(2),sqrt(2));
+                W4-W3=u*(0,-sqrt(2)-2-sqrt(6));
+                trace chemin(W1,X,S,Q,W1);                
+                trace segment(V,Q);
+                label.lft(btex $W_1$ etex,W1);
+                label.ulft(btex $V$ etex,V);
+                label.urt(btex $X$ etex,X);
+                label.lrt(btex $S$ etex,S);
+                label.llft(btex $Q$ etex,Q);                
+                trace codeperp(Q,V,X,5);
+                trace codeperp(V,X,S,5);
+                trace codeperp(X,S,Q,5);
+                trace codeperp(S,Q,V,5);
+                marque_s:=marque_s/3;
+                trace Codelongueur(W1,V,V,Q,S,X,1);
+                trace Codelongueur(V,X,Q,S,W1,Q,2);
+                drawoptions(withcolor red);
+                trace chemin(V,W3,X);
+                trace chemin(S,W2,X);
+                trace chemin(Q,W4,S);
+                label.top(btex $W_3$ etex,W3);
+                label.rt(btex $W_2$ etex,W2);
+                label.bot(btex $W_4$ etex,W4);
+                trace Codelongueur(V,W3,W3,X,X,W2,1);
+                trace Codelongueur(Q,W4,W4,S,S,W2,2);
+            \end{Geometrie}
+        }
+    \end{enumerate}
 \end{corrige}
 

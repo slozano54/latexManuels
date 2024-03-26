@@ -1,9 +1,155 @@
 \begin{exercice*}
-    \dots
+    $ROSE$ est une pyramide telle que $RO=\Lg[cm]{3}$ ; $OS=\Lg[cm]{4}$ et $SE=\Lg[cm]{2}$.
+    \begin{enumerate}
+        \item Reporter les longueurs connues sur cette réprésentation en perspective cavalière.
+        
+        \begin{Geometrie}
+            pair R,O,S,E;
+            O=u*(1,2);
+            R-O=u*(0,3);
+            S-O=u*(4,0);
+            E-O=u*(3,-1);            
+            label.lft (btex O etex,O);
+            label.ulft(btex R etex,R);
+            label.urt (btex S etex,S);
+            label.rt  (btex E etex,E);
+            trace R--S--E--O--cycle;
+            trace R--E;
+            trace O--S dashed evenly;
+            trace codeperp(R,O,S,5); draw codeperp(O,S,E,5);
+        \end{Geometrie}
+        \item Sur ce patron qui n'est pas en vraie grandeur :
+        \begin{itemize}
+            \item écrire le nom des sommets de chaque triangle ;
+            \item coder les segments de même longueur ;
+            \item indiquer les longueurs connues.
+        \end{itemize}
+
+        \vspace*{-20mm}
+        \hspace*{-7mm}
+        \rotatebox{20}{
+        \scalebox{0.7}{
+        \begin{Geometrie}[CoinBG={u*(-1,-2)},CoinHD={u*(10,5.5)}]
+            % trace feuillet;
+            pair R[],O,S,E;
+            O=u*(0.5,2);            
+            S-O=u*(4,0);
+            E-O=u*(4,-2);
+            R0-O=u*(0,3);
+            R1-S=u*(5,0);
+            R2=cercles(O,3u) intersectionpoint subpath (4,6) of cercles(E,sqrt(29)*u);
+            trace polygone(R0,S,R1,E,R2,O);
+            trace polygone(O,S,E);
+            trace codeperp(R0,O,S,5);
+            trace codeperp(O,S,E,5);
+            % label.lft (btex O etex,O);            
+            % label.urt (btex S etex,S);
+            % label.lrt  (btex E etex,E);
+            % label.top(btex R etex,R0);
+            % label.rt(btex R etex,R1);
+            % label.bot(btex R etex,R2);
+        \end{Geometrie}
+        }        
+        }
+        \item sur une feuille non quadrillée, reproduire le patron en vraie grandeur.
+        % \begin{Geometrie}[CoinBG={u*(-1,-2)},CoinHD={u*(10.5,5.5)}]
+        %     trace feuillet;
+        %     pair R[],O,S,E;
+        %     O=u*(1,2);            
+        %     S-O=u*(4,0);
+        %     E-O=u*(4,-2);
+        %     R0-O=u*(0,3);
+        %     R1-S=u*(5,0);
+        %     R2=cercles(O,3u) intersectionpoint subpath (4,6) of cercles(E,sqrt(29)*u);
+        %     trace polygone(R0,S,R1,E,R2,O);
+        %     trace polygone(O,S,E);
+        %     trace codeperp(R0,O,S,5);
+        %     trace codeperp(O,S,E,5);
+        %     label.lft (btex O etex,O);            
+        %     label.urt (btex S etex,S);
+        %     label.lrt  (btex E etex,E);
+        %     label.top(btex R etex,R0);
+        %     label.rt(btex R etex,R1);
+        %     label.bot(btex R etex,R2);
+        % \end{Geometrie}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    $ROSE$ est une pyramide telle que $RO=\Lg[cm]{3}$ ; $OS=\Lg[cm]{4}$ et $SE=\Lg[cm]{2}$.
+
+    \begin{enumerate}
+        \item Reporter les longueurs connues sur cette réprésentation en perspective cavalière.
+        
+        \scalebox{0.7}{
+        \begin{Geometrie}
+            pair R,O,S,E;
+            O=u*(1,2);
+            R-O=u*(0,3);
+            S-O=u*(4,0);
+            E-O=u*(3,-1);            
+            label.lft (btex O etex,O);
+            label.ulft(btex R etex,R);
+            label.urt (btex S etex,S);
+            label.rt  (btex E etex,E);
+            trace R--S--E--O--cycle;
+            trace R--E;
+            trace O--S dashed evenly;
+            trace codeperp(R,O,S,5); draw codeperp(O,S,E,5);
+            trace appelation(O,S,3mm,btex \textcolor{red}{\Lg[cm]{4}} etex);
+            trace appelation(O,R,3mm,btex \textcolor{red}{\Lg[cm]{3}} etex);
+            trace appelation(E,S,-3mm,btex \textcolor{red}{\Lg[cm]{2}} etex);
+        \end{Geometrie}
+        }
+        \item Sur ce patron qui n'est pas en vraie grandeur :
+        \begin{itemize}
+            \item écrire le nom des sommets de chaque triangle ;
+            \item coder les segments de même longueur ;
+            \item indiquer les longueurs connues.
+        \end{itemize}
+
+        \vspace*{-15mm}
+        \hspace*{-7mm}
+        \rotatebox{20}{
+        \scalebox{0.7}{
+        \begin{Geometrie}[CoinBG={u*(-1,-2)},CoinHD={u*(10,5.5)}]
+            % trace feuillet;
+            pair R[],O,S,E;
+            O=u*(0.5,2);            
+            S-O=u*(4,0);
+            E-O=u*(4,-2);
+            R0-O=u*(0,3);
+            R1-S=u*(5,0);
+            R2=cercles(O,3u) intersectionpoint subpath (4,6) of cercles(E,sqrt(29)*u);
+            trace polygone(R0,S,R1,E,R2,O);
+            trace polygone(O,S,E);
+            trace codeperp(R0,O,S,5);
+            trace codeperp(O,S,E,5);
+            label.lft(btex \textcolor{red}{O} etex,O);            
+            label.urt(btex \textcolor{red}{S} etex,S);
+            label.lrt(btex \textcolor{red}{E} etex,E);
+            label.top(btex \textcolor{red}{R} etex,R0);
+            label.rt(btex \textcolor{red}{R} etex,R1);
+            label.bot(btex \textcolor{red}{R} etex,R2);
+            drawoptions(withcolor red);
+            marque_s:=marque_s/3;
+            trace Codelongueur(R0,O,O,R2,1);
+            trace Codelongueur(R0,S,S,R1,2);
+            trace Codelongueur(R1,E,E,R2,3);
+            trace appelation(O,S,3mm,btex \textcolor{red}{\Lg[cm]{4}} etex);
+            trace appelation(O,R0,3mm,btex \textcolor{red}{\Lg[cm]{3}} etex);
+            trace appelation(S,E,3mm,btex \textcolor{red}{\Lg[cm]{2}} etex);
+        \end{Geometrie}
+        }        
+        }
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item sur une feuille non quadrillée, reproduire le patron en vraie grandeur.
+        
+        \textcolor{red}{\dots}        
+    \end{enumerate}
 \end{corrige}
 
