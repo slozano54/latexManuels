@@ -3,6 +3,7 @@
     
     On rappelle que $\mathcal{V}_{pyramide}=\dfrac{\text{Aire de la base}\times \text{hauteur}}{3}$.
 
+    \hspace*{-15mm}
     \begin{minipage}{0.45\linewidth}
     \Solide[%
         Nom=pyramide,        
@@ -12,9 +13,11 @@
         Phi=60,
         Theta=22,
         Traces={%        
-        pair K;
+        pair K,L;
         K=u*(-1,-1);
         label.bot(btex \Aire[cm]{6} etex,K);         
+        L=u*(0,-2);
+        label.bot(btex Pyramide 1 etex,L);         
         % trace segment(A,PiedHauteur) dashed evenly;
         fill polygone(B,C,D,E) withcolor LightGray;
         trace codeperp(A,PiedHauteur,B,5);
@@ -25,7 +28,6 @@
         }
     ]
     \end{minipage}
-    \hfill
     \begin{minipage}{0.45\linewidth}
     \Solide[%
         Nom=pyramide, 
@@ -37,9 +39,11 @@
         Sommets=false,
         Reguliere,
         Traces={%
-        pair K;
+        pair K,L;
         K=u*(1,-1);
-        label.bot(btex \Aire[cm]{7} etex,K);         
+        label.bot(btex \Aire[cm]{7} etex,K); 
+        L=u*(0,-2.5);
+        label.bot(btex Pyramide 2 etex,L);                 
         fill polygone(B,C,D,E,F) withcolor LightGray;
         % trace segment(A,PiedHauteur) dashed evenly;
         % trace codeperp(A,PiedHauteur,B,5);

@@ -1,9 +1,291 @@
 \begin{exercice*}
-    \dots
+    Calculer le volume exact de chacun des cônes de révolution. Le résultat sera exprimé à l'aide de $\pi$.
+
+    Les figures sont données à titre indicatif.
+
+    \begin{enumerate}
+        \item Méthode détaillée :
+        
+        \begin{minipage}{0.45\linewidth}
+            \begin{center}
+                \Solide[%
+                    Nom=cone,
+                    HauteurCone=1.7,
+                    RayonCone=1,                
+                    ListeSommets={S,O},
+                    Phi=0,                            
+                    Traces={%
+                    % Label.top(btex $S$ etex,S);
+                    % Label.bot(btex $O$ etex,O);
+                    trace segment(S,O) dashed evenly;
+                    color A,B,D;
+                    A-O=rayoncone*(0,-sind(90),0);
+                    B-O=rayoncone*(0,sind(90),0);
+                    D-O=rayoncone*(cosd(30),sind(30),0);
+                    % Label.rt(btex $B$ etex,B);
+                    % Label.lft(btex $A$ etex,A);
+                    % Label.lrt(btex $E$ etex,E);
+                    % Label.lrt(btex $D$ etex,D);
+                    % Label.ulft(btex $I$ etex,I);
+                    trace cotationmil(O,S,3mm,15,btex \Lg[cm]{5.7} etex);
+                    trace cotationmil(S,D,13mm,15,btex \Lg[cm]{6.3} etex);
+                    trace cotationmil(A,O,-10mm,15,btex \Lg[cm]{2.8} etex);
+                    trace segment(A,B) dashed evenly;
+                    trace segment(S,D);                
+                    marque_p:="croix";
+                    trace codeperp(S,O,B,5);
+                    }
+                ]
+            \end{center}
+        \end{minipage}
+        \hspace*{5mm}
+        \begin{minipage}{0.55\linewidth}
+            Aire de la base : 
+
+            \medskip            
+            $\mathcal{A}_{\text{de la base}} = \pi\times \pointilles[10mm]{}^2$
+
+            \medskip
+            $\mathcal{A}_{\text{de la base}} = \pointilles[10mm]\times\pi{}~\Aire[cm]{}$
+
+            \bigskip
+            Volume du cône :
+
+            \medskip
+            $\mathcal{V}_{\text{cône}} = \dfrac{\pointilles[10mm]\times \pointilles[10mm]\pi}{3}$
+
+            \medskip
+            $\mathcal{V}_{\text{cône}} = \pointilles[15mm]~\Vol[cm]{}$
+        \end{minipage}
+    \end{enumerate}
+    \begin{minipage}{0.45\linewidth}        
+        \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item \phantom{rrr}
+            
+            \begin{center}
+                \Solide[%
+                    Nom=cone,
+                    HauteurCone=1.7,
+                    RayonCone=1,                
+                    ListeSommets={S,O},
+                    Phi=0,                            
+                    Traces={%
+                    Label.top(btex $S$ etex,S);
+                    Label.bot(btex $O$ etex,O);
+                    trace segment(S,O) dashed evenly;
+                    color A,B,D;
+                    A-O=rayoncone*(0,-sind(90),0);
+                    B-O=rayoncone*(0,sind(90),0);
+                    D-O=rayoncone*(cosd(30),sind(30),0);
+                    % Label.rt(btex $B$ etex,B);
+                    % Label.lft(btex $A$ etex,A);
+                    % Label.lrt(btex $E$ etex,E);
+                    % Label.lrt(btex $D$ etex,D);
+                    % Label.ulft(btex $I$ etex,I);
+                    trace cotationmil(O,S,3mm,15,btex \Lg[cm]{8.7} etex);
+                    trace cotationmil(A,B,-10mm,15,btex \Lg[cm]{6.4} etex);
+                    trace segment(A,B) dashed evenly;
+                    trace segment(S,D);                
+                    marque_p:="croix";
+                    trace codeperp(S,O,B,5);
+                    }
+                ]
+            \end{center}
+        \end{enumerate}
+    \end{minipage}
+    \hfill        
+    \begin{minipage}{0.45\linewidth}
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item \phantom{rrr}
+            
+            \begin{center}
+                \Solide[%
+                    Nom=cone,
+                    HauteurCone=1.7,
+                    RayonCone=1,                
+                    ListeSommets={S,O},
+                    Phi=0,                            
+                    Traces={%
+                    Label.top(btex $S$ etex,S);
+                    Label.bot(btex $O$ etex,O);
+                    trace segment(S,O) dashed evenly;
+                    color A,B,D;
+                    A-O=rayoncone*(0,-sind(90),0);
+                    B-O=rayoncone*(0,sind(90),0);
+                    D-O=rayoncone*(cosd(30),sind(30),0);
+                    % Label.rt(btex $B$ etex,B);
+                    % Label.lft(btex $A$ etex,A);
+                    % Label.lrt(btex $E$ etex,E);
+                    % Label.lrt(btex $D$ etex,D);
+                    % Label.ulft(btex $I$ etex,I);
+                    trace cotationmil(O,S,3mm,15,btex \Lg[cm]{7.3} etex);
+                    trace cotationmil(S,D,13mm,15,btex \Lg[cm]{7} etex);
+                    trace cotationmil(A,B,-10mm,15,btex \Lg[cm]{9} etex);
+                    trace segment(A,B) dashed evenly;
+                    trace segment(S,D);                
+                    marque_p:="croix";
+                    trace codeperp(S,O,B,5);
+                    }
+                ]
+            \end{center}
+    \end{enumerate}
+    \end{minipage}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Calculer le volume exact de chacun des cônes de révolution. Le résultat sera exprimé à l'aide de $\pi$.
+
+    Les figures sont données à titre indicatif.
+
+    \begin{enumerate}
+        \item Méthode détaillée :
+        
+       
+        \Solide[%
+            Nom=cone,
+            HauteurCone=1.7,
+            RayonCone=1,                
+            ListeSommets={S,O},
+            Phi=0,                            
+            Traces={%
+            % Label.top(btex $S$ etex,S);
+            % Label.bot(btex $O$ etex,O);
+            trace segment(S,O) dashed evenly;
+            color A,B,D;
+            A-O=rayoncone*(0,-sind(90),0);
+            B-O=rayoncone*(0,sind(90),0);
+            D-O=rayoncone*(cosd(30),sind(30),0);
+            % Label.rt(btex $B$ etex,B);
+            % Label.lft(btex $A$ etex,A);
+            % Label.lrt(btex $E$ etex,E);
+            % Label.lrt(btex $D$ etex,D);
+            % Label.ulft(btex $I$ etex,I);
+            trace cotationmil(O,S,3mm,15,btex \Lg[cm]{5.7} etex);
+            trace cotationmil(S,D,13mm,15,btex \Lg[cm]{6.3} etex);
+            trace cotationmil(A,O,-10mm,15,btex \Lg[cm]{2.8} etex);
+            trace segment(A,B) dashed evenly;
+            trace segment(S,D);                
+            marque_p:="croix";
+            trace codeperp(S,O,B,5);
+            }
+        ]
+
+        Aire de la base : 
+
+        \medskip            
+        $\mathcal{A}_{\text{de la base}} = \pi\times \textcolor{red}{\num{2.8}}^2$
+
+        \medskip
+        $\mathcal{A}_{\text{de la base}} = \textcolor{red}{\num{7.84}}\times\pi{}~\Aire[cm]{}$
+
+        \bigskip
+        Volume du cône :
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \dfrac{\textcolor{red}{\num{5.7}}\times \textcolor{red}{\num{7.84}}\pi}{3}$
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \textcolor{red}{\num{14.896}\pi~\Vol[cm]{}}$
+        \item \phantom{rrr}
+        
+        \Solide[%
+            Nom=cone,
+            HauteurCone=1.7,
+            RayonCone=1,                
+            ListeSommets={S,O},
+            Phi=0,                            
+            Traces={%
+            Label.top(btex $S$ etex,S);
+            Label.bot(btex $O$ etex,O);
+            trace segment(S,O) dashed evenly;
+            color A,B,D;
+            A-O=rayoncone*(0,-sind(90),0);
+            B-O=rayoncone*(0,sind(90),0);
+            D-O=rayoncone*(cosd(30),sind(30),0);
+            % Label.rt(btex $B$ etex,B);
+            % Label.lft(btex $A$ etex,A);
+            % Label.lrt(btex $E$ etex,E);
+            % Label.lrt(btex $D$ etex,D);
+            % Label.ulft(btex $I$ etex,I);
+            trace cotationmil(O,S,3mm,15,btex \Lg[cm]{8.7} etex);
+            trace cotationmil(A,B,-10mm,15,btex \Lg[cm]{6.4} etex);
+            trace segment(A,B) dashed evenly;
+            trace segment(S,D);                
+            marque_p:="croix";
+            trace codeperp(S,O,B,5);
+            }
+        ]
+
+        Aire de la base : 
+
+        \medskip            
+        $\mathcal{A}_{\text{de la base}} = \pi\times \textcolor{red}{\num{3.2}}^2$
+
+        \medskip
+        $\mathcal{A}_{\text{de la base}} = \textcolor{red}{\num{10.24}}\times\pi{}~\Aire[cm]{}$
+
+        \bigskip
+        Volume du cône :
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \dfrac{\textcolor{red}{\num{8.7}}\times \textcolor{red}{\num{10.24}}\pi}{3}$
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \textcolor{red}{\num{29.696}\pi~\Vol[cm]{}}$
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item \phantom{rrr}
+        
+        \Solide[%
+            Nom=cone,
+            HauteurCone=1.7,
+            RayonCone=1,                
+            ListeSommets={S,O},
+            Phi=0,                            
+            Traces={%
+            Label.top(btex $S$ etex,S);
+            Label.bot(btex $O$ etex,O);
+            trace segment(S,O) dashed evenly;
+            color A,B,D;
+            A-O=rayoncone*(0,-sind(90),0);
+            B-O=rayoncone*(0,sind(90),0);
+            D-O=rayoncone*(cosd(30),sind(30),0);
+            % Label.rt(btex $B$ etex,B);
+            % Label.lft(btex $A$ etex,A);
+            % Label.lrt(btex $E$ etex,E);
+            % Label.lrt(btex $D$ etex,D);
+            % Label.ulft(btex $I$ etex,I);
+            trace cotationmil(O,S,3mm,15,btex \Lg[cm]{7.3} etex);
+            trace cotationmil(S,D,13mm,15,btex \Lg[cm]{7} etex);
+            trace cotationmil(A,B,-10mm,15,btex \Lg[cm]{9} etex);
+            trace segment(A,B) dashed evenly;
+            trace segment(S,D);                
+            marque_p:="croix";
+            trace codeperp(S,O,B,5);
+            }
+        ]
+
+        Aire de la base : 
+
+        \medskip            
+        $\mathcal{A}_{\text{de la base}} = \pi\times \textcolor{red}{\num{4.5}}^2$
+
+        \medskip
+        $\mathcal{A}_{\text{de la base}} = \textcolor{red}{\num{20.25}}\times\pi{}~\Aire[cm]{}$
+
+        \bigskip
+        Volume du cône :
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \dfrac{\textcolor{red}{\num{7.3}}\times \textcolor{red}{\num{20.25}}\pi}{3}$
+
+        \medskip
+        $\mathcal{V}_{\text{cône}} = \textcolor{red}{\num{49.275}\pi~\Vol[cm]{}}$
+    \end{enumerate}
 \end{corrige}
 

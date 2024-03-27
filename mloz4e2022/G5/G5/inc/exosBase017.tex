@@ -1,9 +1,146 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Volume de pyramides]
+    \begin{enumerate}
+        \item $PHYSIQUE$ est un cube d'arête \Lg[cm]{9}.
+        
+        Calculer le volume exact de la pyramide $CHUTA$.
+        
+        \Solide[%
+            Nom=pave,            
+            ListeSommets={P,H,Y,S,I,Q,U,E},%
+            PointsSection={A,B,C,D},            
+            Largeur=2,
+            Hauteur=2,
+            Profondeur=2,
+            Traces={%
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(Q,iso(Q,I),iso(Q,I),I,U,iso(U,E),iso(U,E),E,H,iso(H,Y),iso(H,Y),Y,2);
+                drawoptions(withpen pencircle scaled 1.2bp);
+                trace segment(iso(U,E),iso(Q,I));
+                trace segment(U,iso(Q,I));
+                trace segment(U,iso(U,E));
+                trace segment(H,iso(Q,I));
+                trace segment(H,iso(H,Y));
+                trace segment(iso(U,E),iso(H,Y));
+                trace segment(iso(Q,I),iso(H,Y)) dashed evenly;
+                trace segment(U,H);
+                Label.lrt(btex $C$ etex,iso(H,Y));
+                Label.top(btex $T$ etex,iso(U,E));
+                Label.ulft(btex $A$ etex,iso(Q,I));
+            }
+        ]
+        \item $KHAGNEUX$ est un pavé droit tel que $EN=\Lg[cm]{5}$ ; $EU=\Lg[cm]{5.6}$ et $EK=\Lg[cm]{8.7}$.
+        
+        Calculer le volume exact de la pyramide $CHAU$.
+        
+        \Solide[%
+            Nom=pave,            
+            ListeSommets={K,H,A,G,N,E,U,X},%
+            PointsSection={Z,B,C,D},            
+            Largeur=3,
+            Hauteur=2,
+            Profondeur=1.5,
+            Sommets=false,
+            Traces={%
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(K,iso(K,H),iso(K,H),H,2);
+                drawoptions(withpen pencircle scaled 1.2bp);
+                trace chemin(U,iso(K,H),H,A,U,H);
+                trace segment(A,iso(K,H)) dashed evenly;
+                Label.bot(btex $C$ etex,iso(K,H));
+                Label.llft(btex $K$ etex,K);
+                Label.lrt(btex $H$ etex,H);
+                Label.rt(btex $A$ etex,A);
+                Label.ulft(btex $G$ etex,G);
+                Label.ulft(btex $N$ etex,N);
+                Label.lft(btex $E$ etex,E);
+                Label.top(btex $U$ etex,U);
+                Label.urt(btex $X$ etex,X);
+            }
+        ]
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \begin{enumerate}
+        \item $PHYSIQUE$ est un cube d'arête \Lg[cm]{9}.
+        
+        Calculer le volume exact de la pyramide $CHUTA$.
+        
+        \Solide[%
+            Nom=pave,            
+            ListeSommets={P,H,Y,S,I,Q,U,E},%
+            PointsSection={A,B,C,D},            
+            Largeur=2,
+            Hauteur=2,
+            Profondeur=2,
+            Traces={%
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(Q,iso(Q,I),iso(Q,I),I,U,iso(U,E),iso(U,E),E,H,iso(H,Y),iso(H,Y),Y,2);
+                drawoptions(withpen pencircle scaled 1.2bp);
+                trace segment(iso(U,E),iso(Q,I));
+                trace segment(U,iso(Q,I));
+                trace segment(U,iso(U,E));
+                trace segment(H,iso(Q,I));
+                trace segment(H,iso(H,Y));
+                trace segment(iso(U,E),iso(H,Y));
+                trace segment(iso(Q,I),iso(H,Y)) dashed evenly;
+                trace segment(U,H);
+                Label.lrt(btex $C$ etex,iso(H,Y));
+                Label.top(btex $T$ etex,iso(U,E));
+                Label.ulft(btex $A$ etex,iso(Q,I));
+            }
+        ]
+
+        \textcolor{red}{$\mathcal{V}_{CHUTA}= \dfrac{AT\times UT \times HU}{3}$}
+
+        \medskip
+        \textcolor{red}{$\mathcal{V}_{CHUTA}= \dfrac{\num{9}\times \num{4.5}\times \num{9}}{3}$}
+
+        \medskip
+        \textcolor{red}{$\mathcal{V}_{CHUTA}= \Vol[cm]{121.5}$}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item $KHAGNEUX$ est un pavé droit tel que $EN=\Lg[cm]{5}$ ; $EU=\Lg[cm]{5.6}$ et $EK=\Lg[cm]{8.7}$.
+        
+        Calculer le volume exact de la pyramide $CHAU$.
+        
+        \Solide[%
+            Nom=pave,            
+            ListeSommets={K,H,A,G,N,E,U,X},%
+            PointsSection={Z,B,C,D},            
+            Largeur=3,
+            Hauteur=2,
+            Profondeur=1.5,
+            Sommets=false,
+            Traces={%
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(K,iso(K,H),iso(K,H),H,2);
+                drawoptions(withpen pencircle scaled 1.2bp);
+                trace chemin(U,iso(K,H),H,A,U,H);
+                trace segment(A,iso(K,H)) dashed evenly;
+                Label.bot(btex $C$ etex,iso(K,H));
+                Label.llft(btex $K$ etex,K);
+                Label.lrt(btex $H$ etex,H);
+                Label.rt(btex $A$ etex,A);
+                Label.ulft(btex $G$ etex,G);
+                Label.ulft(btex $N$ etex,N);
+                Label.lft(btex $E$ etex,E);
+                Label.top(btex $U$ etex,U);
+                Label.urt(btex $X$ etex,X);
+            }
+        ]
+
+        
+        \textcolor{red}{$\mathcal{V}_{CHAU} = \dfrac{HU\times (CH \times HA \div 2)}{3}$}
+
+        \medskip
+        \textcolor{red}{$\mathcal{V}_{CHAU} = \dfrac{\num{8.7}\times (\num{2.8} \times 5 \div 2)}{3}$}
+
+        \medskip
+        \textcolor{red}{$\mathcal{V}_{CHAU} = \Vol[cm]{10.15}$}
+    \end{enumerate}
 \end{corrige}
 
