@@ -1,9 +1,161 @@
 \begin{exercice*}
-    \dots
+    Soit un cône de révolution de génératrice \Lg[cm]{2.5} et dont la base a pour rayon \Lg[cm]{1.5}.
+    \begin{enumerate}
+        \item Faire, à main levée, une représentation en perspective de ce cône de révolution en y indiquant les mesures connues.
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(-4u,-2u)},CoinHD={(5u,6u)}]
+                trace feuillet;
+                u:=1cm;
+                % z0=(0,0)*u;
+                % path c;
+                % c=(fullcircle scaled 4cm)yscaled 0.25;draw  (subpath (0,0.5*(length c)) of c)dashed evenly;
+                % draw (subpath(0.5*(length c),length c) of c)  ;z6=(0,3.4u);label.top(btex$S$etex,z6);
+                % draw (point 0.5*(length c) of c)--z6;draw point 0 of c--z6;label.lft(btex$O$etex,z0);
+                % trace cotationmil(z6,(point 1*(length c) of c),3mm,22,btex \textcolor{red}{\Lg[cm]{2.5}} etex);
+                % z4=point 0.85*(length c) of c;
+                % drawdblarrow z6--z0 dashed evenly;drawdblarrow z0--z4 dashed evenly; draw codeperp(z4,z0,z6,8);                
+                % label.rt(btex\textcolor{red}{$h$}etex,0.5[z0,z6]);                                
+                % trace appelation(z0,z4,-3mm,btex \textcolor{red}{\Lg[cm]{1.5}} etex);
+            \end{Geometrie}
+        \end{center}
+        \item Calculer la hauteur de ce cône de révolution.
+        \item Ce schéma représente un patron de ce cône. Il n'est pas en vraie grandeur.
+        
+        Compléter avec les longueurs connues.
+        \begin{center}
+            \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+                % trace feuillet;
+                pair O[],A[];
+                u:=0.45*u;
+                O1=u*(1.7,2);
+                O0-O1=u*(8,0);            
+                path c[];
+                c0=cercles(O0,5.5u);
+                A0=pointarc(c0,140);
+                A1=pointarc(c0,356);
+                trace arccercle(A0,A1,O0);
+                trace chemin(A0,O0,A1);
+                c1=cercles(O1,2.5u);
+                trace c1;
+                trace cotationmil(O1,pointarc(c1,-10),-20mm,22,btex \pointilles[5mm] \Lg[cm]{} etex);
+                trace cotationmil(pointarc(c0,180),O0,0mm,22,btex \pointilles[10mm] \Lg[cm]{} etex);
+                marque_a:=marque_a*0.5;
+                trace Codeangle(A0,O0,A1,0,btex $\alpha$ ° etex);
+                marque_p:="croix";
+                pointe(O1);
+                % label.top(btex A0 etex,A0);
+                % label.top(btex A1 etex,A1);
+                % label.top(btex O0 etex,O0);
+                % label.top(btex O1 etex,O1);
+            \end{Geometrie}
+
+            \smallskip
+            \textbf{Pour constuire ce patron, il faut déterminer la valeur de $\alpha$.}
+        \end{center}
+
+        \item Calculer le périmètre du cercle de base de ce cône.
+        \item Faire une remarque sur les longueurs du cercle de base et de l'arc de cercle.
+        \item On admet que la mesure de l'angle $\alpha$ est proportionnelle à la longueur de l'arc.
+        
+        Compléter ce tableau et déterminer la mesure de $\alpha$.
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.3\linewidth}|>{\centering\arraybackslash}m{0.3\linewidth}|>{\centering\arraybackslash}m{0.3\linewidth}|}
+                \hline
+                &Longueur&Mesure de l'angle\\
+                \hline
+                Cercle complet&&\ang{360}\\
+                \hline            
+                Arc de cercle&&$\alpha$\\
+                \hline
+            \end{tabular}
+        }        
+        \item Constuire le patron de ce cône en vraie grandeur.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Soit un cône de révolution de génératrice \Lg[cm]{2.5} et dont la base a pour rayon \Lg[cm]{1.5}.
+    \begin{enumerate}
+        \item Faire, à main levée, une représentation en perspective de ce cône de révolution en y indiquant les mesures connues.
+        \scalebox{0.7}{
+            \begin{Geometrie}[CoinBG={(-4u,-2u)},CoinHD={(5u,6u)}]
+                trace feuillet;
+                u:=1cm;
+                z0=(0,0)*u;
+                path c;
+                c=(fullcircle scaled 4cm)yscaled 0.25;draw  (subpath (0,0.5*(length c)) of c)dashed evenly;
+                draw (subpath(0.5*(length c),length c) of c)  ;z6=(0,3.4u);label.top(btex$S$etex,z6);
+                draw (point 0.5*(length c) of c)--z6;draw point 0 of c--z6;label.lft(btex$O$etex,z0);
+                trace cotationmil(z6,(point 1*(length c) of c),3mm,22,btex \textcolor{red}{\Lg[cm]{2.5}} etex);
+                z4=point 0.85*(length c) of c;
+                drawdblarrow z6--z0 dashed evenly;drawdblarrow z0--z4 dashed evenly; draw codeperp(z4,z0,z6,8);                
+                label.rt(btex\textcolor{red}{$h$}etex,0.5[z0,z6]);                                
+                trace appelation(z0,z4,-3mm,btex \textcolor{red}{\Lg[cm]{1.5}} etex);
+            \end{Geometrie}
+        }
+        \item Calculer la hauteur de ce cône de révolution.
+        
+        \textcolor{red}{Le théorème de Pythagore permet d'écrire :\\$\num{2.5}^2=h^2+\num{1.5}^2$ d'où $h^2=4$ soit $h=\Lg[cm]{2}$.}
+        \item Ce schéma représente un patron de ce cône. Il n'est pas en vraie grandeur.
+        
+        Compléter avec les longueurs connues.
+        \begin{Geometrie}[CoinBG={(-4u,-2u)}]
+            % trace feuillet;
+            pair O[],A[];
+            u:=0.45*u;
+            O1=u*(1.7,2);
+            O0-O1=u*(8,0);            
+            path c[];
+            c0=cercles(O0,5.5u);
+            A0=pointarc(c0,140);
+            A1=pointarc(c0,356);
+            trace arccercle(A0,A1,O0);
+            trace chemin(A0,O0,A1);
+            c1=cercles(O1,2.5u);
+            trace c1;
+            trace cotationmil(O1,pointarc(c1,-10),-20mm,22,btex \textcolor{red}{\Lg[cm]{1.5}} etex);
+            trace cotationmil(pointarc(c0,180),O0,0mm,22,btex \textcolor{red}{\Lg[cm]{2.5}} etex);
+            marque_a:=marque_a*0.5;
+            trace Codeangle(A0,O0,A1,0,btex $\alpha$ ° etex);
+            marque_p:="croix";
+            pointe(O1);        
+        \end{Geometrie}
+
+        \smallskip
+        \textbf{Pour constuire ce patron, il faut déterminer la valeur de $\alpha$.}
+
+        \item Calculer le périmètre du cercle de base de ce cône.
+        
+        \textcolor{red}{$\mathcal{P}=2\times\pi\times R$, or $R=\Lg[cm]{1.5}$ d'où $\mathcal{P}=3\pi$}
+        \item Faire une remarque sur les longueurs du cercle de base et de l'arc de cercle.
+        
+        \textcolor{red}{Ces deux longueurs sont égales.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item On admet que la mesure de l'angle $\alpha$ est proportionnelle à la longueur de l'arc.
+        
+        Compléter ce tableau et déterminer la mesure de $\alpha$.
+
+        {\renewcommand{\arraystretch}{1.2}
+            \begin{tabular}{|>{\columncolor{LightGray}}m{0.3\linewidth}|>{\centering\arraybackslash}m{0.2\linewidth}|>{\centering\arraybackslash}m{0.3\linewidth}|}
+                \hline
+                &Longueur&Mesure de l'angle\\
+                \hline
+                Cercle complet&\textcolor{red}{$5\pi$}&\ang{360}\\
+                \hline            
+                Arc de cercle&\textcolor{red}{$3\pi$}&$\alpha$\\
+                \hline
+            \end{tabular}
+        }        
+
+        \smallskip
+        \textcolor{red}{d'où $\alpha=\ang{360}\times 3\pi \div 5\pi = \ang{216}$, $\alpha$ mesure donc \ang{216}.}
+        \item Constuire le patron de ce cône en vraie grandeur.
+        
+        \textcolor{red}{\dots}
+    \end{enumerate}
 \end{corrige}
 
