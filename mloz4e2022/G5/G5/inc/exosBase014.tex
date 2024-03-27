@@ -1,9 +1,115 @@
 \begin{exercice*}
-    \dots
+    Calculer les volumes des pyramides. 
+    
+    On rappelle que $\mathcal{V}_{pyramide}=\dfrac{\text{Aire de la base}\times \text{hauteur}}{3}$.
+
+    \begin{minipage}{0.45\linewidth}
+    \Solide[%
+        Nom=pyramide,        
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Phi=60,
+        Theta=22,
+        Traces={%        
+        pair K;
+        K=u*(-1,-1);
+        label.bot(btex \Aire[cm]{6} etex,K);         
+        % trace segment(A,PiedHauteur) dashed evenly;
+        fill polygone(B,C,D,E) withcolor LightGray;
+        trace codeperp(A,PiedHauteur,B,5);
+        trace cotationmil(A,PiedHauteur,0mm,20,btex \Lg[cm]{7.2} etex);
+        trace segment(A,E);    
+        trace segment(A,C) dashed evenly;
+        drawarrow K--K shifted (0.5u,u);
+        }
+    ]
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\linewidth}
+    \Solide[%
+        Nom=pyramide, 
+        Phi=0,
+        Theta=22,
+        DecalageSommet={(cosd(270),1.7*sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=6,
+        Sommets=false,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(1,-1);
+        label.bot(btex \Aire[cm]{7} etex,K);         
+        fill polygone(B,C,D,E,F) withcolor LightGray;
+        % trace segment(A,PiedHauteur) dashed evenly;
+        % trace codeperp(A,PiedHauteur,B,5);
+        trace cotationmil(A,PiedHauteur,0mm,20,btex \Lg[cm]{4,8} etex);
+        trace segment(A,B);
+        trace segment(A,E);
+        trace segment(A,F);
+        drawarrow K--K shifted (-0.5u,u);
+        }
+    ]
+    \end{minipage}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Calculer les volumes des pyramides. 
+    
+    On rappelle que $\mathcal{V}_{pyramide}=\dfrac{\text{Aire de la base}\times \text{hauteur}}{3}$.
+
+    \Solide[%
+        Nom=pyramide,        
+        HauteurPyramide=1.2,
+        SommetsPyramide=5,
+        Sommets=false,
+        Phi=60,
+        Theta=22,
+        Traces={%        
+        pair K;
+        K=u*(-1,-1);
+        label.bot(btex \Aire[cm]{6} etex,K);         
+        % trace segment(A,PiedHauteur) dashed evenly;
+        fill polygone(B,C,D,E) withcolor LightGray;
+        trace codeperp(A,PiedHauteur,B,5);
+        trace cotationmil(A,PiedHauteur,0mm,20,btex \Lg[cm]{7.2} etex);
+        trace segment(A,E);    
+        trace segment(A,C) dashed evenly;
+        drawarrow K--K shifted (0.5u,u);
+        }
+    ]
+
+    \textcolor{red}{$\mathcal{V}_{pyramide}=\dfrac{\num{6}\times \num{7.2}}{3}$}
+
+    \textcolor{red}{$\mathcal{V}_{pyramide}=\Vol[cm]{14.4}$}
+
+    \Solide[%
+        Nom=pyramide, 
+        Phi=0,
+        Theta=22,
+        DecalageSommet={(cosd(270),1.7*sind(270),0)},
+        HauteurPyramide=1.2,
+        SommetsPyramide=6,
+        Sommets=false,
+        Reguliere,
+        Traces={%
+        pair K;
+        K=u*(1,-1);
+        label.bot(btex \Aire[cm]{7} etex,K);         
+        fill polygone(B,C,D,E,F) withcolor LightGray;
+        % trace segment(A,PiedHauteur) dashed evenly;
+        % trace codeperp(A,PiedHauteur,B,5);
+        trace cotationmil(A,PiedHauteur,0mm,20,btex \Lg[cm]{4,8} etex);
+        trace segment(A,B);
+        trace segment(A,E);
+        trace segment(A,F);
+        drawarrow K--K shifted (-0.5u,u);
+        }
+    ]
+
+    \textcolor{red}{$\mathcal{V}_{pyramide}=\dfrac{\num{7}\times \num{4.8}}{3}$}
+
+    \textcolor{red}{$\mathcal{V}_{pyramide}=\Vol[cm]{11.2}$}
 \end{corrige}
 

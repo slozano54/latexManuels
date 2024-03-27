@@ -1,9 +1,149 @@
 \begin{exercice*}
-    \dots
+    Pour chacune de ces pyramides, colorier la base en gris et repasser la hauteur en rouge, puis calculer le volume.
+
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item \phantom{rrr}
+            
+            \Solide[%
+                Nom=pyramide,
+                Reguliere,
+                HauteurPyramide=1.6,
+                SommetsPyramide=5,
+                Sommets=false,
+                Phi=70,
+                Traces={%
+                pair K;
+                K=u*(0,-1);
+                label.bot(btex Pyramide à base carrée etex,K); 
+                trace appelation (A,PiedHauteur,-2mm,btex \Lg[cm]{7} etex);
+                trace appelation (B,E,-3mm,btex \Lg[cm]{3.6} etex);
+                % fill polygone(B,C,D,E) withcolor LightGray;
+                trace segment(B,D) dashed evenly;
+                trace segment(C,E) dashed evenly;
+                trace segment(A,PiedHauteur) dashed evenly;
+                trace codeperp(A,PiedHauteur,B,5);
+                trace segment(A,B);
+                trace segment(A,C) dashed evenly;
+                trace segment(A,D);
+                trace segment(A,E);
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(B,C,C,D,D,E,E,B,2);
+                % drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+                % trace segment(A,PiedHauteur);            
+                }
+            ]
+            \item \phantom{rrr}
+            
+            \Solide[%            
+                Nom=pyramide, 
+                Phi=0,
+                Theta=22,
+                DecalageSommet={(cosd(270),sind(270),0)},
+                HauteurPyramide=1.2,
+                SommetsPyramide=5,
+                Sommets=false,
+                Reguliere,
+                Traces={%
+                pair K;
+                K=u*(0,-1);
+                label.bot(btex Pyramide à base rectangulaire etex,K); 
+                trace appelation (A,PiedHauteur,-2mm,btex \Lg[cm]{37} etex);
+                trace appelation (B,E,-3mm,btex \Lg[cm]{24} etex);
+                trace appelation (PiedHauteur,B,-3mm,btex \Lg[cm]{23} etex);
+                % fill polygone(B,C,D,E) withcolor LightGray;
+                trace segment(A,PiedHauteur) dashed evenly;
+                trace codeperp(A,PiedHauteur,B,5);
+                trace segment(A,B);
+                trace segment(A,C) dashed evenly;
+                trace segment(A,D);
+                trace segment(A,E);
+                marque_s:=marque_s*0.3;
+                trace Codelongueur(B,C,D,E,2);
+                trace Codelongueur(C,D,E,B,3);
+                % drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+                % trace segment(A,PiedHauteur);            
+                }
+            ]
+        \end{enumerate}
+    \end{multicols}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Pour chacune de ces pyramides, colorier la base en gris et repasser la hauteur en rouge, puis calculer le volume.
+
+    \begin{enumerate}
+        \item \phantom{rrr}
+        
+        \Solide[%
+            Nom=pyramide,
+            Reguliere,
+            HauteurPyramide=1.6,
+            SommetsPyramide=5,
+            Sommets=false,
+            Phi=70,
+            Traces={%
+            pair K;
+            K=u*(0,-1);
+            label.bot(btex Pyramide à base carrée etex,K); 
+            trace appelation (A,PiedHauteur,-2mm,btex \Lg[cm]{7} etex);
+            trace appelation (B,E,-3mm,btex \Lg[cm]{3.6} etex);
+            fill polygone(B,C,D,E) withcolor LightGray;
+            trace segment(B,D) dashed evenly;
+            trace segment(C,E) dashed evenly;
+            trace segment(A,PiedHauteur) dashed evenly;
+            trace codeperp(A,PiedHauteur,B,5);
+            trace segment(A,B);
+            trace segment(A,C) dashed evenly;
+            trace segment(A,D);
+            trace segment(A,E);
+            marque_s:=marque_s*0.3;
+            trace Codelongueur(B,C,C,D,D,E,E,B,2);
+            drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+            trace segment(A,PiedHauteur);            
+            }
+        ]
+
+        \textcolor{red}{$\mathcal{V}_{pyramide}=\dfrac{\num{3.6}\times \num{3.6}\times \num{7}}{3}$}
+
+        \textcolor{red}{$\mathcal{V}_{pyramide}=\Vol[cm]{30.24}$}
+        \item \phantom{rrr}
+        
+        \Solide[%            
+            Nom=pyramide, 
+            Phi=0,
+            Theta=22,
+            DecalageSommet={(cosd(270),sind(270),0)},
+            HauteurPyramide=1.2,
+            SommetsPyramide=5,
+            Sommets=false,
+            Reguliere,
+            Traces={%
+            pair K;
+            K=u*(0,-1);
+            label.bot(btex Pyramide à base rectangulaire etex,K); 
+            trace appelation (A,PiedHauteur,-2mm,btex \Lg[cm]{37} etex);
+            trace appelation (B,E,-3mm,btex \Lg[cm]{24} etex);
+            trace appelation (PiedHauteur,B,-3mm,btex \Lg[cm]{23} etex);
+            fill polygone(B,C,D,E) withcolor LightGray;
+            trace segment(A,PiedHauteur) dashed evenly;
+            trace codeperp(A,PiedHauteur,B,5);
+            trace segment(A,B);
+            trace segment(A,C) dashed evenly;
+            trace segment(A,D);
+            trace segment(A,E);
+            marque_s:=marque_s*0.3;
+            trace Codelongueur(B,C,D,E,2);
+            trace Codelongueur(C,D,E,B,3);
+            drawoptions(withcolor red withpen pencircle scaled 1.2bp);
+            trace segment(A,PiedHauteur);            
+            }
+        ]
+
+        \textcolor{red}{$\mathcal{V}_{pyramide}=\dfrac{\num{23}\times \num{24}\times \num{37}}{3}$}
+        
+        \textcolor{red}{$\mathcal{V}_{pyramide}=\Vol[cm]{6808}$}
+    \end{enumerate}
 \end{corrige}
 
