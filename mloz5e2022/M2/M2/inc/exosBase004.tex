@@ -1,7 +1,50 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*} %4
+   Sachant que l'unité d'aire est le carreau ($u.a.$), déterminer l'aire de chaque surface suivante.
+   \begin{center}
+      {\psset{unit=0.5}
+      \begin{pspicture}(0,-4.5)(15,10)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,-5)(15,10)
+         \psset{linewidth=0.3mm}
+         \psframe(1,1)(4,3)
+         \rput(2.5,2.5){\ding{202}}
+         \pspolygon(5,0)(11,0)(10,4)(8,4)(5,2)
+         \rput(8.5,1.5){\ding{205}}
+         \pspolygon(1,4)(1,9)(5,9)(5,8)(2,8)(2,7)(4,7)(4,6)(2,6)(2,4)
+         \rput(1.5,6.5){\ding{203}}
+         \pspolygon(6,7)(12,9)(6,9)
+         \rput(7.5,8.4){\ding{204}}
+         \pspolygon(5,4)(5,6)(12,6)(12,8)(14,8)(14,4)(13,3)(14,2)(14,1)(12,1)(11,3)(12,5)(6,5)
+         \rput(12.5,5.5){\ding{206}}
+         \psline(3,-2)(1,-2)(1,-4)(2,-4)
+         \psarc(3,-4){1}{0}{180}
+         \psline(4,-4)(6,-4)(6,-2)(5,-2)
+         \psarc(4,-2){1}{0}{180}
+         \rput(3.5,-2.5){\ding{207}} 
+         \psline(7,-1)(14,-1)
+         \psline(7,-4)(14,-4)
+         \psline(8,-2)(8,-3)
+         \psline(13,-2)(13,-3)
+         \psarc(8,-4){1}{90}{180}
+         \psarc(8,-1){1}{180}{-90}
+         \psarc(13,-4){1}{0}{90}
+         \psarc(13,-1){1}{-90}{0}
+         \pscircle(10,-2.5){1}
+         \rput(11.5,-2.5){\ding{208}}
+         \psframe[fillstyle=solid,fillcolor=gray](14,9)(15,10)
+         \rput(13.25,9.5){$u.a.$}
+      \end{pspicture}}
+   \end{center}
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
 
+\begin{corrige}
+   On peut par exemple procéder par découpage et recollement pour obtenir des unités entières. \\
+   \begin{enumerate}
+      \item La surface 1 mesure {\red 6 $u.a.$}
+      \item La surface 2 mesure  {\red 10 $u.a.$}
+      \item La surface 3 mesure {\red 6 $u.a.$}
+      \item La surface 4 mesure {\red 19 $u.a.$}
+      \item La surface 5 mesure {\red 22,5 $u.a.$}
+      \item La surface 6 mesure {\red 10 $u.a.$}
+      \item La surface 7 mesure {\red 15 $u.a.$}
+   \end{enumerate}
+\end{corrige}

@@ -2,14 +2,66 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
-\end{enigme}
+\begin{enigme}[Tel père, tel fils]
+
+   \medskip
+   
+   C’est l’histoire d’un petit rectangle de dimensions $\Lg[mm]{2}\times\Lg[mm]{3}$. \\
+      Chaque jour, il s’agrandit pour devenir un rectangle plus grand : sa nouvelle largeur est égale à son ancienne longueur ; sa nouvelle longueur est égale à la somme de ses deux anciennes dimensions. \\
+      
+      {\bf Au bout de combien de jours son aire dépassera-t-elle \Aire[m]{1,5} ?} \\
+   
+      \begin{center}
+         \includegraphics[width=10cm]{\currentpath/images/fantome}
+      \end{center}
+      
+      Par groupes, vous effectuerez les recherches, puis rendrez une fiche récapitulative où figureront votre raisonnement, la modélisation et les calculs effectués.
+        
+   \end{enigme}
+   
+   \vfill \hfill {\it\small D'après \og La résolution de problèmes mathématiques au collège \fg, MENJS, 2021}
+   
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 \begin{corrige}
-    {\red
-    \dots
-    }
- \end{corrige}
+   On peut, par exemple, calculer les aires une par une jusqu'à obtenir $\Aire[m]{1,5} = \Aire[mm]{1500000}$. \\
+   Le tableau ci-dessous récapitule la largeur et la longueur obtenue par chaque rectangle en mm ainsi que son aire en \Aire[mm]. \medskip
+   
+   \begin{tabular}{|c|c|c|c|}
+      \hline
+      Jour & Largeur & Longueur & Aire \\
+      \hline
+      0 & 2 & 3 & 6 \\
+      \hline
+      1 & 3 & 5 & 15 \\
+      \hline
+      2 & 5 & 8 & 40 \\
+      \hline
+      3 & 8 & 13 & 104 \\
+      \hline
+      4 & 13 & 22 & 286 \\
+      \hline
+      5 & 22 & 35 & 770 \\
+      \hline
+      6 & 35 & 57 & 1 995 \\
+      \hline
+      7 & 57 & 94 & 5 358 \\
+      \hline
+      8 & 94 & 151 & 14 194 \\
+      \hline
+      9 & 151 & 245 & 36 995 \\
+      \hline
+      10 & 245 & 396 & 97 020 \\
+      \hline
+      11 & 396 & 641 & 253 836 \\
+      \hline
+      12 & 641 & 1 037 & 664 717 \\
+      \hline
+      13 & 1 037 & 1 678 & 1 740 086 \\
+      \hline
+   \end{tabular}
+   \medskip
+   
+   {\red Il faudra 13 jours pour que l'aire du rectangle dépasse \Aire[m]{1,5}.}
+\end{corrige}
