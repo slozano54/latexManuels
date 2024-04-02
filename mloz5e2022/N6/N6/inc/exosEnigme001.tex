@@ -3,12 +3,67 @@
 % \refstepcounter{exercice}
 % \numeroteEnigme
 \begin{changemargin}{-10mm}{-10mm}
-\begin{enigme}[...]
-...
-\end{enigme}
+    \begin{enigme}[Un diamant littérale]
+        \begin{minipage}{9cm}
+           Découper les douze pièces du puzzle et les assembler de telle sorte que les expressions face à face soient égales. Coller le puzzle sur votre cahier. \\ [2mm]
+           La forme à obtenir est celle ci-contre.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{5cm}
+           {\psset{unit=0.5}
+           \begin{pspicture}(0,1)(6,7)      
+              \rput{-60}(2,4){\tri{}{}{}}
+              \rput(2,4){\tri{}{}{}}
+              \rput{60}(2,4){\car{}{}{}{}}
+              \rput{150}(2,4){\tri{}{}{}}
+              \rput{-150}(2,4){\car{}{}{}{}}
+              \rput{-150}(3,2.27){\tri{}{}{}}
+              \rput{-90}(3,2.27){\tri{}{}{}}
+              \rput{-120}(4,4){\car{}{}{}{}}
+              \rput{-30}(4,4){\tri{}{}{}}
+              \rput{30}(4,4){\car{}{}{}{}}
+              \rput{30}(3,5.73){\tri{}{}{}}
+              \rput{90}(3,5.73){\tri{}{}{}}
+           \end{pspicture}}
+        \end{minipage}
+        \begin{center}
+           {\psset{unit=2.5,linewidth=0.6mm}
+           \large
+           \begin{pspicture}(0,-0.5)(6,6.5)
+              \rput(0,0){\car{4x-8x+6x}{14x+35x}{13x}{}} %6
+              \rput(2,0){\car{42x}{12x}{}{8x-4x}} %3
+              \rput(4,0){\car{25x}{}{20x+8x-5x}{77x}} %5
+              \rput(0,2){\tri{}{2x}{20x+5x}} %12
+              \rput{60}(2,2){\tri{154x}{7x+70x}{x}} %2
+              \rput(2,2){\tri{}{15x}{16x-4x}} %9
+              \rput{60}(4,2){\tri{7x+35x}{14x-35x+22x}{49x}} %1
+              \rput(4,2){\tri{}{0}{2x+15x-4x}} %7
+              \rput(0,3.73){\car{14x+140x}{20x}{}{10x+5x}} %4
+              \rput(2,3.73){\tri{4x}{2x-2x}{}} %8
+              \rput{60}(4,3.73){\tri{30x}{10x+10x}{}} %10
+              \rput(4,3.73){\tri{}{23x}{10x+20x}} %11
+           \end{pspicture}}
+        \end{center}
+     \end{enigme}
+     
+     \vfill \hfill{\it\footnotesize Source : \href{https://www.monclasseurdemaths.fr/profs/puzzles/}{monclasseurdemaths.fr}}
 \end{changemargin}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
-% \addtocounter{exercice}{-1}
-% \begin{corrige}
-%     \ldots
-% \end{corrige}
+\addtocounter{exercice}{-1}
+\begin{corrige}
+    {\psset{unit=2.5}
+          \begin{pspicture}(-0.107,0)(6,8)      
+             \rput{-60}(2,4){\tri{7x+70x}{x}{154x}} %2
+             \rput(2,4){\tri{14x-35x+22x}{49x}{7x+35x}} %1
+             \rput{60}(2,4){\car{14x+35x}{13x}{}{4x-8x+6x}} %6
+             \rput{150}(2,4){\tri{2x}{20x+5x}{}} %12
+             \rput{-150}(2,4){\car{25x}{}{20x+8x-5x}{77x}} %5
+             \rput{-150}(3,2.27){\tri{23x}{10x+20x}{}} %11
+             \rput{-90}(3,2.27){\tri{30x}{10x+10x}{}} %10
+             \rput{-120}(4,4){\car{14x+140x}{20x}{}{10x+5x}} %4
+             \rput{-30}(4,4){\tri{15x}{16x-4x}{}} %9
+             \rput{30}(4,4){\car{12x}{}{8x-4x}{42x}} %3
+             \rput{30}(3,5.73){\tri{4x}{2x-2x}{}} %8
+             \rput{90}(3,5.73){\tri{0}{2x+15x-4x}{}} %7
+          \end{pspicture}}   
+    \end{corrige}

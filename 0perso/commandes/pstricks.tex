@@ -38,6 +38,10 @@
 \def\pa{\psset{unit=3}\pspolygon(0,0)(-2,0)(-3,1)(-1,1)}
 \def\pas{\psset{unit=3}\pspolygon(0,0)(-2,0)(-3,-1)(-1,-1)}
 
+% Pour la distributivité commandes de Nathalie DAVAL
+\newcommand{\tri}[3]{\pspolygon(0,0)(2,0)(2;60) \rput(1,0.25){$#1$} \rput{-120}(0.7,0.8){$#2$} \rput{120}(1.3,0.8){$#3$}}
+\newcommand{\car}[4]{\psframe(0,0)(2,2) \rput(1,0.2){$#1$} \rput{90}(1.8,1){$#2$} \rput{180}(1,1.8){$#3$} \rput{-90}(0.2,1){$#4$}}
+
 %==========================================
 % Probabilités
 %==========================================
