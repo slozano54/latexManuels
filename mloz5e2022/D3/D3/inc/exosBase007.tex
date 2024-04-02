@@ -1,7 +1,30 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*} %7
+   Reproduire sur le cahier la cocotte à l'échelle 1:2 puis à l'échelle 2:1.
+   \begin{center}
+      \psset{unit=0.5}
+      \begin{pspicture}(8,8)
+         \psgrid[subgriddiv=1,linestyle=solid,gridlabels=0,gridcolor=lightgray](0,0)(8,8)
+         \psset{linewidth=0.5mm}
+         \pspolygon(1,1)(4,1)(5.5,2.5)(7,1)(7,4)(5.5,5.5)(7,7)(4,7)(4,4)
+      \end{pspicture}
+   \end{center} 
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   Echelle $1:2$. {\red On divise les mesures par 2}. \\
+   {\psset{unit=0.5}
+      \begin{pspicture}(-5,-0.5)(5,5.5)
+         \psgrid[subgriddiv=1,linestyle=solid,gridlabels=0,gridcolor=lightgray](0,0)(5,5)
+      \psset{unit=0.5}
+         \psset{linewidth=0.5mm}
+         \pspolygon(2,2)(5,2)(6.5,3.5)(8,2)(8,5)(6.5,6.5)(8,8)(5,8)(5,5)         
+      \end{pspicture}} \\
+   Echelle $2:1$. {\red On multiplie les mesures par 2}.
+    {\psset{unit=0.5}
+        \begin{pspicture}(0,-0.5)(13,14.5)
+         \psgrid[subgriddiv=1,linestyle=solid,gridlabels=0,gridcolor=lightgray](0,0)(14,14)
+         \psset{linewidth=0.5mm}
+         \pspolygon(1,1)(7,1)(10,4)(13,1)(13,7)(10,10)(13,13)(7,13)(7,7)
+      \end{pspicture}}
 \end{corrige}
 
