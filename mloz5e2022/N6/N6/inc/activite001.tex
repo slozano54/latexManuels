@@ -1,5 +1,61 @@
 \begin{changemargin}{-10mm}{-15mm}
-\begin{activite}[...]    
-\dots
-\end{activite}
-\end{changemargin}
+    \begin{activite}[Je veux du chocolat !]
+        {\bf Objectifs :} découvrir la distributivité simple pour réduire une expression littérale de la forme $ax+bx$ où $a$ et $b$ sont des nombres décimaux.
+
+        \smallskip
+        \begin{minipage}{0.7\linewidth}
+        Un chocolatier expérimente une nouvelle tablette de chocolat pour son magasin : celle-ci est composée de rangées de chocolat dont le cacao vient de côte d'ivoire (CI) et d'un tout nouveau chocolat du Brésil (BR), un peu plus clair. Sa tablette représentée ci-dessous est composée de \ug{64} de chocolat CI et de \ug{32} de chocolat BR.
+        \end{minipage}
+        \begin{minipage}{0.3\linewidth}
+           \begin{center}
+                \scalebox{0.7}{
+                    \includegraphics[width=5.25cm]{\currentpath/images/chocolat}
+                }
+           \end{center}
+        \end{minipage}
+
+        \smallskip
+        \begin{enumerate}
+            \item Il fait un premier test sur 20 tablettes de chocolat qu'il distribue à ses amis pour la tester. \\
+                Combien a-t-il besoin de chocolat en tout : trouver deux manières de calculer la masse des 20 tablettes et écrire les deux calculs {\it (aide : on peut utiliser des parenthèses dans l'un des calculs)}. \\ [3mm]
+                Calcul 1 : \pointilles \\ [3mm]
+                Calcul 2 : \pointilles 
+            \item Ses amis trouvent qu'il n'y a pas de chocolat BR, ils proposent donc un deuxième test sur 35 tablettes de chocolat, mais en utilisant cette fois-ci \ug{56} de chocolat CI et \ug{40} de chocolat BR. \\
+                Combien a-t-il besoin de chocolat en tout ? \\ [3mm]
+                Calcul 1 : \pointilles \\ [3mm]
+                Calcul 2 : \pointilles 
+            \item Pour pouvoir effectuer ses calculs plus rapidement, il décide de trouver une formule littérale qui lui permette de calculer le nombre de carreaux de chocolat dont il aura besoin. \\
+            \begin{minipage}{8cm}
+                On note :
+                \begin{itemize}
+                \item $a$ le nombre de rangées de chocolat CI ;
+                \item $b$ le nombre de rangées de chocolat BR ;
+                \item $x$ le nombre de lignes de chocolat.
+                \end{itemize}
+            \end{minipage}
+            \qquad
+            \begin{minipage}{7cm}
+                \psset{xunit=0.75,yunit=0.525}
+                \begin{pspicture}[subgriddiv=0,gridlabels=0,gridcolor=gray](-3,-0.8)(6,4.8)
+                \psgrid(0,0)(6,4)
+                \psframe[linewidth=0.5mm](0,0)(6,4)
+                \psline[linewidth=0.5mm](4,0)(4,4)
+                \psline[linecolor=marron]{<->}(-0.3,0)(-0.3,4)
+                \rput(-0.6,1.5){\textcolor{marron}{$x$}}
+                \psline[linecolor=marron]{<->}(0,4.4)(4,4.4)
+                \rput(2,4.8){\textcolor{marron}{$a$}}
+                \psline[linecolor=marron]{<->}(4,4.4)(6,4.4)
+                    \rput(5,4.8){\textcolor{marron}{$b$}}
+                \end{pspicture}
+            \end{minipage}
+            \begin{enumerate}
+                \item Donner deux expressions littérales permettant de calculer le nombre total de carreaux de chocolat. \\ [3mm]
+                Calcul 1 : \pointilles \\ [3mm]
+                Calcul 2 : \pointilles 
+                \item Sachant que le nombre de carreaux est le même dans les deux expressions, écrire l'égalité qui résulte de ces deux calculs. \\
+                
+                \pointilles
+            \end{enumerate}
+        \end{enumerate}
+     \end{activite}
+    \end{changemargin}
