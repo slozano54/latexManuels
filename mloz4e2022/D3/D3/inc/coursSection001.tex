@@ -1,2 +1,42 @@
-\section{\dots}
-\dots
+\section{Vocabulaire et notations}
+\begin{definition}
+On appelle \textbf{expérience aléatoire}, une expérience qui vérifie les trois conditions suivantes :
+    \begin{itemize}
+        \item les résultats possibles sont parfaitement identifiables.
+        \item On ne sait pas, a priori, quelle résultat va se produire lorsqu'on réalise l'expérience.
+        \item L'expérience doit être reproductible dans les mêmes conditions, dans la mesure du possible!
+    \end{itemize}
+\end{definition}
+
+\begin{exemple*1}
+    \titreExemple{Expérience (A)}
+
+    \textit{"On lance une pièce de monnaie et on regarde sur quelle face elle tombe"}
+
+    Cette expérience est bien aléatoire car :
+    \begin{itemize}
+        \item il y a deux issues possibles : \og pile\fg{} ou \og face\fg{}.
+        \item quand on lance la pièce, on ne peut pas savoir, a priori, sur quelle face elle va tomber.
+    \end{itemize}
+\end{exemple*1}
+
+\begin{vocabulaire}
+   \begin{itemize}
+      \item Chaque résultat possible et prévisible d'une expérience aléatoire est appelé une \textbf{issue}.
+      \item L'ensemble formé par les issues est appelé \textbf{univers}, souvent noté $\Omega$.
+      \item Un \textbf{événement} de l'expérience aléatoire est une partie quelconque de l'univers, c'est donc un ensemble d'issues de l'expérience.
+   \end{itemize}
+\end{vocabulaire}
+
+\begin{exemples*1}
+   \begin{enumerate}
+      \item \titreExemple{Expérience (A)} : {\it \og Lancer d'une pièce de monnaie\fg{}} : $\Omega =\{$~pile~;~face~$\}$.
+      \item \titreExemple{Expérience (B)} : \textit{\og Lancer un dé à 6 faces numérotées de 1 à 6.\fg{}} : $\Omega =\{~1~;~2~;~3~;~4~;~5~;~6~\}$.
+      \begin{itemize}
+        \item \og Obtenir $1$\fg{}, \og Obtenir $2$\fg{}, \og Obtenir $3$\fg{} etc... sont des \textbf{événements élémentaires}, ils sont réalisés par une seule issue.
+        \item \og Obtenir un numéro pair \fg{} est un événement que l'on peut noter $A=\{~2~;~4~;~6~\}$.
+        \item \og Sortir un $7$\fg{} est un \textbf{événement impossible}.
+        \item \og Sortir un nombre compris entre $0$ et $7$\fg{} est un \textbf{événement certain} car tous les lancers donneront un nombre compris entre $0$ et $7$.
+      \end{itemize}
+   \end{enumerate}
+\end{exemples*1}
