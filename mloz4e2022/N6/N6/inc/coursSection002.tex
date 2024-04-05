@@ -1,2 +1,44 @@
-\section{\dots}
-\dots
+\section{Technique de développement : distributivité simple}
+
+\begin{propriete}[\admise]
+    Si $a$, $b$ et $k$ sont trois nombres (connus ou inconnus) alors$$k\times(a+b)=k\times a+k\times b$$
+\end{propriete}
+
+\begin{remarque}
+    \phantom{rrr}\\
+    \hfill $k\times(a-b)=k\times(a+(-b))$ \hfill ou \hfill $k\times(a-b)=k\times a+k\times (-b)$ \hfill ou\hfill $k\times(a-b)=ka-kb$
+\end{remarque}
+
+\begin{propriete}[Cas particulier de distributivité]
+    {\bfseries L'opposé d'une somme algébrique} est égal à la somme des {\bfseries opposés de chacun de ses termes.}
+\end{propriete}
+
+\begin{preuve}
+    L'opposé d'une somme algébrique est égale au produit de cette somme par $-1$.\\
+    La distribution de $-1$ sur chacun des termes de cette somme le transformera en son opposé.
+\end{preuve}
+\begin{remarque}
+    Ces différentes formes nous permettent de d'effectuer des calculs plus facilement.
+\end{remarque}
+\vspace*{-5mm}
+\begin{center}
+   \begin{pspicture}(0,0.6)(8,2.6)
+      \psset{nodesep=2mm}
+      \rput(4,1.5){\large$ka\rnode{a}+kb = k(a\rnode{b}+b)$} 
+      \nccurve[angleA=90,angleB=90,linecolor=A1]{->}{a}{b}
+      \rput(4,2.6){\textcolor{A1}{factoriser}}
+      \rput(9,1.7){\textcolor{A1}{transformer un produit en somme}}
+      \rput(9,1.3){\textcolor{A1}{(on a mis les parenthèses)}}
+      \nccurve[angleA=-90,angleB=-90,linecolor=B1]{->}{b}{a}
+      \rput(4,0.4){\textcolor{B1}{développer}}
+      \rput(-1,1.3){\textcolor{B1}{transformer une somme en produit}}
+      \rput(-1,1.7){\textcolor{B1}{(on a enlevé les parenthèses)}}
+   \end{pspicture}
+\end{center}
+\begin{exemple*1} 
+   \begin{itemize}
+      \item $\Circled{57}\times28-\Circled{57}\times18 =\Circled{57}\times(28-18) =\Circled{57}\times 10 =570$. 
+      \item $13\times102 =\Circled{13}\times(100+2) =\Circled{13}\times100+\Circled{13}\times2 =\num{1300}+26 = \num{1326}$. 
+   \end{itemize}
+   \vspace*{-10mm}
+\end{exemple*1}
