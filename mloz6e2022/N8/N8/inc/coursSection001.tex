@@ -1,5 +1,86 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Comparaions et encadrements}
+    \begin{remarque}
+        \titreRemarque{Dis moi pas qu'c'est pas vrai !}
+
+        Si il y a 25 croissants (numérateur) à partager alors :
+        \begin{itemize}
+            \item si on est plus de 25 élèves (dénominateur), on aura chacun moins de 1 croissant.
+            \item si on est exactement 25 élèves(dénominateur), on aura chacun exactement 1 croissant.
+            \item si on est moins de 25 élèves(dénominateur), on aura chacun plus de 1 croissant.
+        \end{itemize}
+        Transposées en vocabulaire des fractions, cela donne les propriétés suivantes !
+    \end{remarque}
+\begin{propriete}[\admise]
+    \begin{itemize}
+        \item Si le numérateur (nombre de croissants) est \textbf{inférieur} au dénominateur (nombre d'élèves) alors \\la \textbf{fraction est inférieure à 1.}
+        \item Si le numérateur (nombre de croissants) est \textbf{égal} au dénominateur (nombre d'élèves) alors \\la \textbf{fraction est égale à 1.}
+        \item Si le numérateur (nombre de croissants) est \textbf{supérieur} au dénominateur (nombre d'élèves) alors \\la \textbf{fraction est supéreireure à 1.}
+    \end{itemize}
+\end{propriete}
+\begin{exemples*1} 
+    \begin{itemize}
+        \item le numérateur 17 est inférieur au dénominateur 25 donc $\dfrac{17}{25}$est inférieure à $1$
+        \item le numérateur 25 est égal au dénominateur 25 donc $\dfrac{25}{25}$est égale à $1$
+        \item le numérateur 37 est supérieur au dénominateur 25 donc $\dfrac{37}{25}$ est supérieure à $1$
+    \end{itemize}
+    \vspace*{-5mm}
+\end{exemples*1} 
+
+\begin{methode*1}[Comparer une fraction à 1]
+    Pour savoir si une fraction $\dfrac{a}{b}$ est inférieure, égale ou supérieure à 1, on compare le numérateur $a$ au dénominateur $b$ :
+    \exercice \smallskip
+       Comparer $\dfrac36$, $\dfrac86$ et $\dfrac66$ à 1.
+    \correction
+       \phantom{rrr}\\ 
+       Dans $\dfrac36$, le numérateur est inférieur au dénominateur, on a $3<6$ donc, $\dfrac36<1$
+       {\psset{unit=0.6}
+       \begin{pspicture}(-3,-0.5)(1,0.2)
+          \pscircle(0,0){1}
+          \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{0}{180}
+          \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+       \end{pspicture}}
+
+       \bigskip
+       Dans $\dfrac86$, le numérateur est supérieur au dénominateur, $8>6$ donc, $\dfrac86>1$
+       {\psset{unit=0.6}
+       \begin{pspicture}(-1.5,-0.3)(1,0.8)
+          \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+          \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+       \end{pspicture}
+       \begin{pspicture}(-1.9,-0.3)(1,0.8)
+          \pscircle(0,0){1}
+          \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{180}
+          \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+       \end{pspicture}}
+
+       \bigskip
+       Dans $\dfrac66$, le numérateur est égal au dénominateur, on a $6=6$ donc, $\dfrac66=1$
+       {\psset{unit=0.6}
+       \begin{pspicture}(-3,0)(1,1)
+          \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+          \multido{\n=0+60}{6}{\psline(0,0)(0.98;\n)}
+       \end{pspicture}}
+ \end{methode*1}
+
+ \begin{methode}[Comparer des fractions de même dénominateur]
+    Pour comparer deux fractions ayant le même dénominateur, il suffit de comparer les numérateurs : la fraction ayant le plus grand numérateur est la plus grande.
+    \exercice \smallskip
+       Comparer $\dfrac26$ et $\dfrac36$.
+    \correction \smallskip
+       $2<3$ donc $\dfrac26<\dfrac36$
+       {\psset{unit=0.6}
+       \begin{pspicture}(-1.8,-0.5)(1,0.2)
+          \pscircle(0,0){1}
+          \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{180}
+          \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+          \rput(1.25,0){$<$}
+       \end{pspicture}
+       \begin{pspicture}(-1.5,-0.5)(1,0.2)
+          \pscircle(0,0){1}
+          \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{0}{180}
+          \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+       \end{pspicture}}
+ \end{methode}
 \end{changemargin}
  

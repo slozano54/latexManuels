@@ -1,5 +1,50 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Décomposition d'une fraction}
+    \begin{propriete}[\admise]
+        Pour une fraction, le quotient de la \textbf{division euclidienne} de son numérateur par son dénominateur permet d'obtenir :
+        \begin{itemize}
+            \item un encadrement à l'unité.
+            \item une décomposition comme somme d'un entier et d'une fraction inférieure à 1.
+        \end{itemize}
+    \end{propriete}
+    
+    \begin{exemples*1} 
+        Pour encadrer $\dfrac{79}{6}$ à l'unité, il suffit de poser la division euclidienne de 79 par 6.\\
+        $$\opdiv[maxdivstep=2]{79}{6}$$
+        Donc 13 est inférieur à $\dfrac{79}{6}$ qui est inférieure à 14. Soit $13<\dfrac{79}{6}<14$.\\
+        Du coup on peut écrire $\dfrac{79}{6}=13+\dfrac{1}{6}$ où 13 est un entier et $\dfrac16$ une fraction inférieure à 1.
+    \end{exemples*1} 
+    \begin{methode}[Décomposer une fraction]
+        Pour décomposer une fraction en somme d'un entier et d'une fraction inférieure à 1, on effectue la division euclidienne du numérateur par le dénominateur. Le quotient nous donne le nombre entier et la fraction inférieure à 1 s'obtient en prenant comme numérateur le reste et comme dénominateur le diviseur.
+        \exercice \smallskip
+        Décomposer $\dfrac{23}{6}$.
+        \correction \smallskip
+        $\opidiv{23}{6}$ \qquad donc, \qquad $23 =6\times3+5$ \quad et \quad $\dfrac{23}{6} =3+\dfrac56$
+     \end{methode}
+     \begin{minipage}{8cm}
+        Cette décomposition permet donc d'encadrer facilement \\
+        un nombre entre deux entiers consécutifs : \\ [2mm]
+        par exemple, $\dfrac{23}{6} =3+\dfrac56$ donc $3<\dfrac{23}{6}<4$.
+     \end{minipage}
+     \begin{minipage}{8cm}
+       {\psset{unit=0.6}
+       \begin{pspicture}(-2,-1)(1.5,1)
+           \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+           \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+        \end{pspicture}
+        \begin{pspicture}(-1,-1)(1.5,1)
+           \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+           \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+        \end{pspicture}
+        \begin{pspicture}(-1,-1)(1.5,1)
+           \pscircle[fillstyle=solid,fillcolor=B2](0,0){1}
+           \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+        \end{pspicture}
+        \begin{pspicture}(-1,-1)(1,1)
+           \pscircle(0,0){1}
+           \pswedge[fillstyle=solid,fillcolor=B2](0,0){1}{60}{360}
+           \multido{\n=0+60}{6}{\psline(0,0)(1;\n)}
+        \end{pspicture}}
+     \end{minipage}
 \end{changemargin}
  

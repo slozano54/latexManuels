@@ -2,15 +2,77 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
+\begin{enigme}[Sudofractions]
     \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
+        \vspace*{-10mm}
+        \begin{minipage}{7.5cm}
+            \begin{itemize}
+               \item Pour chaque fraction ou nombre décimal, déterminer le nombre entier immédiatement inférieur.
+               \item Placer ce nombre entier dans la grille vierge ci-contre, exactement au même endroit que sur la grille de calculs.
+               \item Compléter la grille selon les règles du Sudoku.
+            \end{itemize}
+            {\it Par exemple, $\dfrac{5}{2} =2+\dfrac{1}{2} (=2,5)$ donc, \\ [1mm]
+               la troisième case de la ligne du haut comporte un 2}.
+         \end{minipage}
+         \qquad
+         \begin{minipage}{7cm}
+        {\renewcommand{\arraystretch}{1.8}
+            \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}|*{3}{>{\centering\arraybackslash}p{0.5cm}|}}
+               \hline
+               & & {\bf 2} & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+               \hline
+               & & & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+               \hline
+               & & & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+               & & & & & & & & \\
+               \hline
+            \end{tabular}}
+         \end{minipage}
+        \vfill
+         \begin{center}
+         {\renewcommand{\arraystretch}{3.44}
+         \footnotesize
+            \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.9cm}|}|*{3}{>{\centering\arraybackslash}p{0.9cm}|}|*{3}{>{\centering\arraybackslash}p{0.9cm}|}}
+               \hline
+                \!$\dfrac{13}{2}$\! & $\dfrac{27}{5}$ & $\dfrac{5}{2}$ & & 8,73 & 7,99 & $\dfrac{39}{4}$ & & \!$\dfrac{43}{10}\!$ \\
+               \hline
+                $\dfrac{77}{10}$ & $\dfrac{7}{6}$ & & 4,5 & & & $\dfrac{25}{7}$ & & \\
+               \hline
+                & & $\dfrac{17}{2}$ & $1,001$ & & & & & $\dfrac{38}{5}$\\
+                \hline
+                \hline
+                8,25 & 2,89 & & & $\dfrac{33}{10}$ & & & & $6,7$ \\
+                \hline
+                5,55 & & & $\dfrac{21}{9}$ & & & & 3,199 & \\
+               \hline
+                & & & $\dfrac{80}{9}$ & & & 5,356 & 2,1 & \\
+               \hline
+               \hline
+                & $\dfrac{845}{100}$ & $\dfrac{60}{8}$ & 5,2 & 2,8 & & $\dfrac{13}{2}$ & $\dfrac{25}{6}$ & \\
+               \hline
+                \!$\dfrac{30}{11}$\! & $\dfrac{25}{8}$ & & 6,001 & & 8,81 & & $\dfrac{65}{7}$ & \\
+               \hline
+                $\dfrac{29}{3}$ & & & & 4,909 & & & & \\
+               \hline
+            \end{tabular}}
+         \end{center}
     \end{changemargin}
 \end{enigme}
-
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
-
 \begin{corrige}
     Correction du binz.
 \end{corrige}
