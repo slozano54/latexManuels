@@ -1,5 +1,137 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+\section{Axes de symétrie du segment}
+\begin{definition}
+    La \textbf{médiatrice} d'un segment est \textbf{l'axe de symétrie} de ce segment qui ne le porte pas.
+\end{definition}
+
+\begin{propriete}[\admise]
+    \textbf{La médiatrice} d'un segment est la droite perpendiculaire à ce segment et qui passe par son milieu.
+\end{propriete}
+
+\begin{minipage}{0.7\linewidth}
+    \begin{propriete}[\admise]
+        Si on place un point sur la médiatrice d'un segment $[AB]$ alors ce point est à égale distance de $A$ et $B$.
+    \end{propriete}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,4u)}]    
+            pair A,B,O,I,J,K;
+            path ci,cj;
+            path d;
+            A=u*(1,3);
+            B=u*(4,1);
+            O=milieu(A,B);
+            trace segment(A,B);
+            marque_s:=marque_s/3;
+            trace marquesegment(A,B);
+            trace mediatrice(A,B);
+            ci=cercles(O,u);
+            cj=cercles(O,2u);
+            d=mediatrice(A,B);
+            I= d intersectionpoint ci;
+            J= d intersectionpoint cj;
+            K= symetrie(J,O);
+            trace codeperp(A,O,I,5);
+            trace chemin(A,I,B);
+            trace chemin(A,J,B);
+            trace chemin(A,K,B);
+            trace codesegments(A,I,I,B,2);
+            trace codesegments(A,J,J,B,3);
+            trace codesegments(A,K,K,B,4);
+            trace codesegments(A,O,O,B,5);
+            label.ulft(btex $A$ etex,A);
+            label.lrt (btex $B$ etex,B);
+        \end{Geometrie}
+    \end{center}
+\end{minipage}
+
+\begin{minipage}{0.7\linewidth}
+    \begin{propriete}[\admise]
+        Si on sait qu'un point est à égale distance des extrémités d'un segment$[AB]$ alors il est situé sur la médiatrice de ce segment.
+    \end{propriete}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,5u)}]
+            pair E,F,G,O;
+            path ce;
+            path d;
+            F=u*(1,3);
+            G=u*(4,1);
+            O=milieu(F,G);
+            trace segment(F,G);
+            marque_s:=marque_s/3;
+            trace marquesegment(F,G);
+            trace mediatrice(F,G);
+            ce=cercles(O,2.5u);
+            d=mediatrice(F,G);
+            E= d intersectionpoint ce;
+            trace codeperp(F,O,E,5);
+            trace chemin(F,E,G);
+            trace codesegments(F,E,E,G,3);
+            trace codesegments(F,O,O,G,5);
+            label.ulft(btex $F$ etex, F);
+            label.lrt (btex $G$ etex, G);
+            label.top (btex $E$ etex, E);
+        \end{Geometrie}
+    \end{center}
+\end{minipage}
+
+\begin{remarque}
+
+    \begin{minipage}{0.4\linewidth}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(6u,5u)}]    
+            pair A,B,O,I,J,K;
+            path cj;
+            path d;
+            A=u*(2.5,3.5);
+            B=u*(3.5,1.5);
+            O=milieu(A,B);
+            trace segment(A,B);
+            marque_s:=marque_s/3;
+            trace marquesegment(A,B);
+            trace mediatrice(A,B) withcolor red withpen pencircle scaled 1.2bp;
+            cj=cercles(O,3u);
+            d=mediatrice(A,B);
+            J= d intersectionpoint cj;
+            K= symetrie(J,O);
+            trace codeperp(A,O,J,5);
+            trace chemin(A,J,B);
+            trace chemin(A,K,B);
+            trace codesegments(A,J,J,B,3);
+            trace codesegments(A,K,K,B,3);
+            trace codesegments(A,O,O,B,5);
+            path ca,cb;
+            ca = cercles(A,K);
+            cb = cercles(B,K);
+            draw arccercle(pointarc(cb,0),pointarc(cb,200),B) dashed evenly;
+            draw arccercle(pointarc(ca,200),pointarc(ca,20),A) dashed evenly;
+            label.ulft(btex $A$ etex,A);
+            label.lrt(btex $B$ etex,B);
+            label.top(btex $J$ etex,J);
+            label.bot(btex $K$ etex,K);
+        \end{Geometrie}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}
+    Les triangles isocèles ABH et ABG peuvent être différents.\\
+    C'est à dire que l'on peut avoir $(AH=BH) \neq (AG=GB)$.\\
+    Cela revient à prendre deux rayons différents pour le tracé de ces deux triangles isocèles.
+    \end{minipage}
+\end{remarque}
 \end{changemargin}
- 
+
+\begin{center}
+    \begin{myBox}{\infoComplementsNumeriques{pluriel}}
+        \begin{flushleft}        
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_145.html}{Construction à la règle et l'équerre}
+
+            \smallskip
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_146.html}{Construction à la règle et au compas}
+        \end{flushleft}
+    
+        \creditInstrumentPoche
+    \end{myBox}
+\end{center}
