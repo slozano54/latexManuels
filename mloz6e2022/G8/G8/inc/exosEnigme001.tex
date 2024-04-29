@@ -2,16 +2,60 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-    \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
-    \end{changemargin}
+\begin{enigme}[Les napperons]
+    % \begin{changemargin}{-10mm}{-10mm}
+            Autrefois dans l'ancienne Chine, on s'offrait à l'occasion du Nouvel An chinois des sortes de \og cartes de v\oe ux \fg{} découpées dans du papier et on en décorait les murs et les portes des maisons. Pour réaliser ces cartes, on utilisait souvent le pliage et le découpage. On appelle cela des napperons.
+            \partie[observation]
+               Observer les napperons suivants et tracer les axes de symétrie éventuels.
+               \begin{center}
+                  \includegraphics[width=16cm]{\currentpath/images/napperons}
+               \end{center}
+               
+            \partie[action !]
+               Découper dans une feuille un carré de 10 cm de côté et le plier en huit comme ci-dessous (pliage rosace).
+               \begin{center}
+                  \begin{pspicture}(-0.5,-0.1)(3.5,3)
+                     \rput(-0.3,1.5){1)}
+                     \psframe(0,0)(3,3)
+                     \psline[linestyle=dashed](1.5,0)(1.5,3)
+                     \psarc{<-}(1.5,1.5){0.75}{0}{180}
+                     \rput(3.3,1.5){$\Rightarrow$}
+                  \end{pspicture}
+                  \begin{pspicture}(0,0)(2,3)
+                     \psframe(0,0)(1.5,3)
+                  \end{pspicture}
+                  \begin{pspicture}(-0.5,0)(2,3)
+                     \rput(-0.3,1.5){2)}
+                     \psframe(0,0)(1.5,3)
+                     \psline[linestyle=dashed](0,1.5)(1.5,1.5)
+                     \psarc{->}(0.75,1.5){0.5}{90}{-90}
+                     \rput(1.8,0.75){$\Rightarrow$}
+                  \end{pspicture}
+                  \begin{pspicture}(0,0)(2,3)
+                     \psframe(0,0)(1.5,1.5)
+                  \end{pspicture}
+                  \begin{pspicture}(-0.5,0)(2,3)
+                     \rput(-0.3,1.5){3)}
+                     \psframe(0,0)(1.5,1.5)
+                     \psline[linestyle=dashed](0,1.5)(1.5,0)
+                     \psarc{->}(0.75,0.75){0.4}{45}{-135}
+                     \rput(1.8,0.75){$\Rightarrow$}
+                  \end{pspicture}
+                  \begin{pspicture}(0,0)(2,3)
+                     \pspolygon(0,0)(0,1.5)(1.5,0)
+                  \end{pspicture}
+               \end{center}
+               Découper deux figures sur les côtés du pliage obtenu puis ouvrir le napperon.
+               À quoi correspondent les lignes de pli pour la figure obtenue ?
+               Faire un schéma des deux napperons obtenus ci-dessous. \\ [6.7cm]
+         \vfill\hfill{\it\footnotesize Source : inspiré de l'article \href{https://irem.univ-grenoble-alpes.fr/medias/fichier/68n3_1555658318837-pdf}{Le napperon, un problème pour travailler la symétrie axiale}, Grand N n\degre68, Marie-Lise Peltier, 2001}.
+    % \end{changemargin}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 
-\begin{corrige}
-    Correction du binz.
-\end{corrige}
+% \begin{corrige}
+%     Correction du binz.
+% \end{corrige}
  
