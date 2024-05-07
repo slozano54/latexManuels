@@ -1,9 +1,50 @@
 \begin{exercice*}
-    \dots
+    Martin a 30 ans de plus que son fils. Dans 5 ans, Martin aura le double de l'âge de son fils.
+
+    Déterminer l'âge de Martin et de de son fils.
+    \begin{enumerate}
+        \item On désigne par $x$ l'âge du fils. Compléter le tableau avec des âges exprimés en fonction de $x$.
+        
+        \smallskip
+        {\renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|*{2}{>{\centering\arraybackslash}m{0.3\linewidth}|}}
+            \cline{2-3}
+            \multicolumn{1}{l|}{}&\cellcolor{LightGray}Martin&\cellcolor{LightGray}Fils de Martin\\\hline
+            \cellcolor{LightGray}Âge actuel         &  &  \\\hline
+            \cellcolor{LightGray}Âge dans cinq ans  &  &  \\\hline
+        \end{tabular}
+        }
+        \smallskip
+        \item Écrire une équation qui traduit le texte, la résoudre et conclure.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Martin a 30 ans de plus que son fils. Dans 5 ans, Martin aura le double de l'âge de son fils.
+
+    Déterminer l'âge de Martin et de de son fils.
+    \begin{enumerate}
+        \item On désigne par $x$ l'âge du fils. Compléter le tableau avec des âges exprimés en fonction de $x$.
+        
+        \smallskip
+        {\renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|l|*{2}{>{\centering\arraybackslash}m{0.3\linewidth}|}}
+            \cline{2-3}
+            \multicolumn{1}{l|}{}&\cellcolor{LightGray}Martin&\cellcolor{LightGray}Fils de Martin\\\hline
+            \cellcolor{LightGray}Âge actuel         & \textcolor{red}{$x+30$}   & \textcolor{red}{$x$} \\\hline
+            \cellcolor{LightGray}Âge dans cinq ans  & \textcolor{red}{$x+30+5$} & \textcolor{red}{$x+5$} \\\hline
+        \end{tabular}
+        }
+        \smallskip
+        \item Écrire une équation qui traduit le texte, la résoudre et conclure.
+        
+        {\color{red} On obitent donc l'équation $x+30+5=2\times(x+5)$ soit $x+35=2x+10$
+        
+        \ResolEquation[Decomposition]{1}{35}{2}{10}
+
+        donc le fils a 25 ans et le père 55ans.
+        }
+    \end{enumerate}
 \end{corrige}
 

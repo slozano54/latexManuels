@@ -1,9 +1,23 @@
 \begin{exercice*}
-    \dots
+    La tirelire de Paola contient 200 pièces, les unes de \Prix{0,20} et les autres de \Prix{0,50}, pour un total de \Prix{52,30}.
+
+    Déterminer le nombre de pièces de chaque sorte.
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    La tirelire de Paola contient 200 pièces, les unes de \Prix{0,20} et les autres de \Prix{0,50}, pour un total de \Prix{52,30}.
+
+    Déterminer le nombre de pièces de chaque sorte.
+
+    {\color{red} On désigne par $x$ le nombre de pièces de \Prix{0.20}, il y en a donc $200-x$ de \Prix{0.50}.
+    
+    
+    On obtient donc l'équation $x\times\Prix{0.20} + (200-x)\times\Prix{0.50}=\Prix{52.30}$ soit $\num{-0.3}x+100=\num{52.30}$
+    
+    \ResolEquation[Decomposition,Decimal]{-0.3}{100}{0}{52.30}
+
+    Donc Paola a 159 pièces de \Prix{0.20} et 41 pièces de \Prix{0.50}.
+}
 \end{corrige}
 
