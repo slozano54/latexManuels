@@ -17,7 +17,9 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
     Résoudre chaque équation.
-    \begin{multicols}{2}
+    \hspace*{-5mm}\begin{minipage}{\linewidth}
+    {\setlength{\columnseprule}{0pt}
+    \begin{multicols}{2}        
         \begin{enumerate}
             \item \ResolEquation[Decomposition]{2}{9}{0}{5}
             \item \ResolEquation[Decomposition]{-4}{5}{0}{1}
@@ -28,6 +30,8 @@
             \item \ResolEquation[Decomposition]{-0.1}{4}{0}{-6}
             \item \ResolEquation[Decomposition]{-3}{-5.5}{0}{-7.5}
         \end{enumerate}
-    \end{multicols}    
+    \end{multicols}
+    }
+    \end{minipage}
 \end{corrige}
 

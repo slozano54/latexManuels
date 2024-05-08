@@ -3,13 +3,12 @@
     en deux parties distinctes : une salle de recherche et une salle de travail.
 
     $ABCE$ est un trapèze rectangle tel que $AB=\Lg[m]{9}$, $BC=\Lg[m]{8}$ et $DE=\Lg[m]{6}$.
-
     $M$ est un point du segment $[AB]$. 
     
     On pose $AM=x$ avec $x$ désignant une distance \textbf{exprimée en mètre} : $0\leq x \leq 9$.
 
-    \scalebox{0.5}{
     \begin{Geometrie}[CoinHD={(17u,10u)}]
+        u:=0.5*u;
         pair A,B,C,D,E,F,M;
         E=u*(1,1);
         D-E=u*(6,0);
@@ -26,25 +25,24 @@
         trace codeperp(C,F,M,8);
         trace codeperp(B,C,F,8);
         trace codeperp(M,B,C,8);
-        trace appelation(A,M,3mm,btex {\LARGE $x$} etex);
+        trace cotation(A,M,3mm,2mm,btex $x$ etex);
         pair st,sr[];
         st=iso(F,C,B,M);
-        label(btex {\LARGE\textbf{Salle de travail}} etex,st);
+        label(btex \textbf{Salle de travail} etex,st);
         sr1-iso(E,F)=u*(1.5,4);
         sr2-iso(E,F)=u*(1.5,3);
         sr3-iso(E,F)=u*(1.5,2);
-        label(btex {\LARGE\textbf{Salle}} etex,sr1);
-        label(btex {\LARGE\textbf{de}} etex,sr2);
-        label(btex {\LARGE\textbf{Recherche}} etex,sr3);
-        label.llft(btex {\LARGE $E$} etex,E);
-        label.bot(btex  {\LARGE $D$} etex,D);
-        label.bot(btex  {\LARGE $F$} etex,F);
-        label.lrt(btex  {\LARGE $C$} etex,C);
-        label.urt(btex  {\LARGE $B$} etex,B);
-        label.top(btex  {\LARGE $M$} etex,M);
-        label.ulft(btex {\LARGE $A$} etex,A);
+        label(btex \textbf{Salle} etex,sr1);
+        label(btex \textbf{de} etex,sr2);
+        label(btex \textbf{Recherche} etex,sr3);
+        label.llft(btex $E$ etex,E);
+        label.bot(btex  $D$ etex,D);
+        label.bot(btex  $F$ etex,F);
+        label.lrt(btex  $C$ etex,C);
+        label.urt(btex  $B$ etex,B);
+        label.urt(btex  $M$ etex,M);
+        label.ulft(btex $A$ etex,A);
     \end{Geometrie}
-    }
 
     \textbf{Rappel :} L'aire d'un trapèze de hauteur $h$ , de bases $b$ et $B$, est donné par $\mathcal{A}=\dfrac{h(b+B)}{2}$.
 
@@ -64,13 +62,14 @@
     en deux parties distinctes : une salle de recherche et une salle de travail.
 
     $ABCE$ est un trapèze rectangle tel que $AB=\Lg[m]{9}$, $BC=\Lg[m]{8}$ et $DE=\Lg[m]{6}$.
-
     $M$ est un point du segment $[AB]$. 
     
     On pose $AM=x$ avec $x$ désignant une distance \textbf{exprimée en mètre} : $0\leq x \leq 9$.
 
-    \scalebox{0.5}{
+    \smallskip
+    \hspace*{-5mm}
     \begin{Geometrie}[CoinHD={(17u,10u)}]
+        u:=0.5*u;
         pair A,B,C,D,E,F,M;
         E=u*(1,1);
         D-E=u*(6,0);
@@ -87,25 +86,24 @@
         trace codeperp(C,F,M,8);
         trace codeperp(B,C,F,8);
         trace codeperp(M,B,C,8);
-        trace appelation(A,M,3mm,btex {\LARGE $x$} etex);        
+        trace cotation(A,M,3mm,2mm,btex $x$ etex);
         pair st,sr[];
         st=iso(F,C,B,M);
-        label(btex {\LARGE\textbf{Salle de travail}} etex,st);
+        label(btex \textbf{Salle de travail} etex,st);
         sr1-iso(E,F)=u*(1.5,4);
         sr2-iso(E,F)=u*(1.5,3);
         sr3-iso(E,F)=u*(1.5,2);
-        label(btex {\LARGE\textbf{Salle}} etex,sr1);
-        label(btex {\LARGE\textbf{de}} etex,sr2);
-        label(btex {\LARGE\textbf{Recherche}} etex,sr3);
-        label.llft(btex {\LARGE $E$} etex,E);
-        label.bot(btex  {\LARGE $D$} etex,D);
-        label.bot(btex  {\LARGE $F$} etex,F);
-        label.lrt(btex  {\LARGE $C$} etex,C);
-        label.urt(btex  {\LARGE $B$} etex,B);
-        label.top(btex  {\LARGE $M$} etex,M);
-        label.ulft(btex {\LARGE $A$} etex,A);
+        label(btex \textbf{Salle} etex,sr1);
+        label(btex \textbf{de} etex,sr2);
+        label(btex \textbf{Recherche} etex,sr3);
+        label.llft(btex $E$ etex,E);
+        label.bot(btex  $D$ etex,D);
+        label.bot(btex  $F$ etex,F);
+        label.lrt(btex  $C$ etex,C);
+        label.urt(btex  $B$ etex,B);
+        label.urt(btex  $M$ etex,M);
+        label.ulft(btex $A$ etex,A);
     \end{Geometrie}
-    }
 
     \textbf{Rappel :} L'aire d'un trapèze de hauteur $h$ , de bases $b$ et $B$, est donné par $\mathcal{A}=\dfrac{h(b+B)}{2}$.
 
@@ -129,6 +127,10 @@
         $\mathcal{A}_{MBCF}=(9-x)\times 8$
         
         $\mathcal{A}_{MBCF}=72-8x$}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{3}
         \item Conclure.
         
         {\color{red}$\mathcal{A}_{AMFE}=\mathcal{A}_{MBCF}$
