@@ -1,9 +1,53 @@
 \begin{exercice*}
-    \dots
+    On juxtapose un triangle équilatéral et un carré comme sur le schéma.
+
+    \begin{Geometrie}
+        pair t[],c[];
+        t1=u*(1,1);
+        t2-t1=u*(4,0);
+        c1=t2;
+        c2-t1=u*(7,0);
+        t3=rotation(t2,t1,60);
+        c3=rotation(c1,c2,-90);
+        c4=rotation(c2,c1,90);
+        trace polygone(t1,t2,t3);
+        trace polygone(c1,c2,c3,c4);
+        trace cotationmil(t1,c2,-5mm,20,btex \Lg[cm]{14} etex);
+    \end{Geometrie}
+
+    Justifier s'il est possible ou non que le triangle et le carré aient le même périmètre.
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+        On juxtapose un triangle équilatéral et un carré comme sur le schéma.
+
+    \begin{Geometrie}
+        pair t[],c[];
+        t1=u*(1,1);
+        t2-t1=u*(4,0);
+        c1=t2;
+        c2-t1=u*(7,0);
+        t3=rotation(t2,t1,60);
+        c3=rotation(c1,c2,-90);
+        c4=rotation(c2,c1,90);
+        trace polygone(t1,t2,t3);
+        trace polygone(c1,c2,c3,c4);
+        trace cotationmil(t1,c2,-5mm,20,btex \Lg[cm]{14} etex);
+    \end{Geometrie}
+
+    Justifier s'il est possible ou non que le triangle et le carré aient le même périmètre.
+
+    {\color{red} Notons $t$ la longueur du côté du triangle et $c$ celle du côté du carré.
+
+    On a donc les rélations suivantes : $3t=4c$ et $t+c=14$.
+
+    $t+c=14$ est équivalente à $c=14-t$, l'autre égalité s'écrit donc $3t=4\times(14-t)$ qui revient à $3t=56-4t$.
+
+    \ResolEquation[Decomposition,Decimal]{3}{0}{-4}{56}
+
+    Cette équation admet une solution, il est donc possible que le triangle et le carré aient la même aire et cela
+    se produit lorsque le côté du triangle mesure \Lg[cm]{8} et le côté du carré mesure \Lg[cm]{6}.
+    }
 \end{corrige}
 

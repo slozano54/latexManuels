@@ -1,9 +1,69 @@
 \begin{exercice*}
-    \dots
+    Trois triangles équilatéraux identiques sont découpés dans les coins d’un triangle équilatéral de côté \Lg[cm]{6}.
+    
+    La somme des périmètres des trois petits triangles est égale au périmètre de l’hexagone vert restant.
+    
+    Déterminer la mesure du côté des petits triangles.
+
+    \scalebox{0.7}{
+    \begin{Geometrie}
+        pair t[];
+        path hexagone;
+        t1=u*(1,1);
+        t2-t1=u*(1.5,0);
+        t3-t2=u*(3,0);
+        t4-t3=u*(1.5,0);
+        t5=rotation(t3,t4,-60);
+        t6=rotation(t2,t4,-60);
+        t7=rotation(t1,t4,-60);
+        t8=rotation(t3,t1,60);
+        t9=rotation(t2,t1,60);
+        trace polygone(t1,t4,t7);
+        hexagone=polygone(t2,t3,t5,t6,t8,t9);
+        fill hexagone withcolor LightGray;
+        trace hexagone withcolor Gray withpen pencircle scaled 1.2bp;
+    \end{Geometrie}
+    }
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Trois triangles équilatéraux identiques sont découpés dans les coins d’un triangle équilatéral de côté \Lg[cm]{6}.
+    
+    La somme des périmètres des trois petits triangles est égale au périmètre de l’hexagone vert restant.
+    
+    Déterminer la mesure du côté des petits triangles.
+
+    \scalebox{0.7}{
+    \begin{Geometrie}
+        pair t[];
+        path hexagone;
+        t1=u*(1,1);
+        t2-t1=u*(1.5,0);
+        t3-t2=u*(3,0);
+        t4-t3=u*(1.5,0);
+        t5=rotation(t3,t4,-60);
+        t6=rotation(t2,t4,-60);
+        t7=rotation(t1,t4,-60);
+        t8=rotation(t3,t1,60);
+        t9=rotation(t2,t1,60);
+        trace polygone(t1,t4,t7);
+        hexagone=polygone(t2,t3,t5,t6,t8,t9);
+        fill hexagone withcolor LightGray;
+        trace hexagone withcolor Gray withpen pencircle scaled 1.2bp;
+    \end{Geometrie}
+    }
+
+    {\color{red}Notons $x$ la mesure du côté d'un petit triangle équilatéral.
+    
+    La somme des périmètres des 3 petits triangles vaut $3\times 3x=9x$.
+    
+    L'hexagone a 3 côtés de longueur $x$ et 3 côtés de longueur $6-2x$, son périmètre vaut donc $3x+3(6-2x)=3x+18-6x=18-3x$.
+    
+    L'égalité des périmètres permet d'écrire l'équation $9x=18-3x$
+    
+    \ResolEquation[Decomposition,Decimal]{9}{0}{-3}{18}
+    
+    Le petit triangle équilatéral a donc un côté de \Lg[cm]{1.5}.}
 \end{corrige}
 

@@ -1,9 +1,48 @@
 \begin{exercice*}
-    \dots
+    Dans une assemblée de 500 personnes, il y a deux fois plus de Belges que de Luxembourgeois, 
+    et 48 Néerlandais de plus que de Luxembourgeois. 
+    
+    Déterminer la composition de l'assemblée en suivant la méthode ci-dessous. 
+    
+    On désigne par $x$ le nombre de Luxembourgeois.
+
+    \begin{enumerate}
+        \item Exprimer en fonction du nombre $x$ :
+        \begin{itemize}
+            \item le nombre de Belges ;
+            \item le nombre de Néerlandais ;
+            \item le nombre total de personnes.
+        \end{itemize}
+        \item Écrire une équation qui traduit que le nombre total de personnes est 500, puis la résoudre.
+        \item Conclure sur la composition de cette assemblée.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Dans une assemblée de 500 personnes, il y a deux fois plus de Belges que de Luxembourgeois, 
+    et 48 Néerlandais de plus que de Luxembourgeois. 
+    
+    Déterminer la composition de l'assemblée en suivant la méthode ci-dessous. 
+    
+    On désigne par $x$ le nombre de Luxembourgeois.
+
+    \begin{enumerate}
+        \item Exprimer en fonction du nombre $x$ :
+        \begin{itemize}
+            \item le nombre de Belges ; \textcolor{red}{$2x$}
+            \item le nombre de Néerlandais ; \textcolor{red}{$x+48$}
+            \item le nombre total de personnes. \textcolor{red}{$x+2x+x+48$}
+        \end{itemize}
+        \item Écrire une équation qui traduit que le nombre total de personnes est 500, puis la résoudre.
+        
+        {\color{red} $x+2x+x+48=500$ soit $4x+48=500$
+        
+        \ResolEquation[Decomposition,Decimal]{4}{48}{0}{500}
+        }
+        \item Conclure sur la composition de cette assemblée.
+        
+        {\color{red} Dans cette assemblée, il y a donc 113 Luxembourgeois, 226 Belges et 161 Néerlandais.}
+    \end{enumerate}
 \end{corrige}
 
