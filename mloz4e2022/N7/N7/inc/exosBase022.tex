@@ -1,5 +1,64 @@
 \begin{exercice*}
-    \dots
+    Le carré $ABCD$ a un côté de longueur \Lg[cm]{8}. $M$ est un point du segment $[AB]$. 
+    Dans le carré $ABCD$, on trace un carré de côté $[AM]$, et un triangle isocèle de base $[MB]$
+    dont la hauteur a la même mesure que le côté $[AM]$ du carré.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,5u)}]
+            u:=0.5*u;
+            trace grille(0.25) withcolor LightGray;
+            pair A,B,C,D,M,E,F,G;
+            A=u*(1,1);
+            M-A=u*(6,0);
+            B-M=u*(2,0);
+            G-A=u*(0,6);
+            D-G=u*(0,2);
+            C-A=u*(8,8);
+            F-A=u*(6,6);
+            E-A=u*(7,6);
+            fill polygone(A,M,F,G) withcolor LightGray;
+            fill polygone(M,B,E) withcolor LightGray;
+            trace polygone(A,B,C,D);
+            trace chemin(G,F,M,E,B);
+            trace appelation(A,M,-3mm,btex $x$ etex);
+            label.llft(btex $A$ etex,A);
+            label.bot(btex $M$ etex,M);
+            label.lrt(btex $B$ etex,B);
+            label.urt(btex $C$ etex,C);
+            label.ulft(btex $D$ etex,D);
+            label.lft(btex $G$ etex,G);
+            label.top(btex $F$ etex,F);
+            label.top(btex $E$ etex,E);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Déterminer l'aire du carré $ABCD$
+        \item Sur la figure ci-contre, $AM=\Lg[cm]{6}$.
+        \begin{itemize}
+            \item Déterminer l'aire du carré $AMFG$.
+            \item Déterminer l'aire du triangle $BME$.
+        \end{itemize}
+        \item Pour $AM=x$ , exprimer l'aire du carré $AMFG$ ainsi que celle du triangle $BME$.
+        \item Dans une feuille de calcul, recopier les éléments suivants.
+        
+        \smallskip
+        \begin{Tableur}[Bandeau=false,LargeurUn=50pt,Largeur=10pt,Colonnes=8]
+            $x$             &  1   &   2   &   3   &   4   &   5   &   6   &   7\\
+            Aire de $AMFG$  &      &       &       &       &       &       &    \\
+            Aire de $BME$   &      &       &       &       &       &       &    \\
+            Somme           &      &       &       &       &       &       &    \\
+        \end{Tableur}
+
+        \smallskip
+        \item Programmer les cellules pour qu'elles calculent les aires indiquées aux lignes 2 et 3, et la somme de ces deux aires à la ligne 4.
+        \item Déterminer si l'aire du carré est toujours supérieure à l'aire du triangle. Justifier.
+        \item On souhaite déterminer la valeur de $x$ , pour laquelle l'aire du carré AMFG est supérieure à l'aire du triangle $BME$. À l'aide du tableau, donner un encadrement de cette valeur.
+        \item Affiner cette valeur à l'aide du tableur et en donner un encadrement au centième.
+        \item Déterminer si la somme des deux aires est toujours inférieure à la moitié de l'aire du carré $ABCD$ ou non.
+        \item On souhaite déterminer la valeur de $x$ , pour laquelle la somme des deux aires est inférieure à la moitié de celle du carré $ABCD$. 
+        À l'aide du tableau, donner un encadrement de cette valeur.
+        \item Affiner cette valeur à l'aide du tableur et en donner un encadrement au centième.
+        \item Déterminer pour quelles valeurs entières de $x$ ces deux conditions sont réunies.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
