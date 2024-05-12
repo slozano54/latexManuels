@@ -1,0 +1,55 @@
+\begin{changemargin}{0mm}{-15mm}
+    \section{Division décimale}
+    \begin{definition}
+        Effectuer la division décimale d'un {\bf dividende} par un {\bf diviseur}, c'est calculer la valeur exacte ou une valeur approchée du quotient \og dividende $\div$ diviseur \fg.
+    \end{definition}
+
+    \begin{exemple}
+    On achète 8 CD de même prix pour \ueuro{150}, quel est le prix d'un CD ? \\ [5mm]
+    Réponse : Un CD vaut \ueuro{18,75}.
+    \correction
+        \begin{pspicture}(-2.5,0)(4,2)
+            \rput(1,1.2){\opdiv[decimalsepsymbol={,}]{150}{8}}
+        \end{pspicture}
+    \end{exemple}
+
+    \begin{remarque}
+        lorsque l'on effectue la division d'un nombre décimal par un nombre entier, au moment où on abaisse le chiffre des dixièmes dans le dividende, on pose une virgule dans le quotient. Lorsque la division \og ne s'arrête jamais \fg{} ou que le quotient comporte un grand nombre de décimales, on donne une valeur approchée du quotient.
+    \end{remarque}
+
+    \begin{methode*1}
+        \phantom{rrr}
+        \exercice
+
+        \begin{minipage}{0.45\linewidth}
+            Poser et effectuer la division décimale de 21,3 par 4.\par \vspace{0.5cm}
+            \begin{center}
+            \opdiv[displayintermediary=all,operandstyle.1.-1=\OPoval{F}{0},resultstyle.d=\OPoval{B}{0},remainderstyle.4=\OPoval{A}{0.8},remainderstyle.1.1=\OPoval{C}{0}, shiftdecimalsep=none]{21,3}{4}\qquad
+            \begin{minipage}[c]{3cm}
+                \pnode(0,0.2em){D}{Dès que l'on abaisse le chiffre des dixièmes du dividende, on place la virgule dans le quotient.}
+                \ncarc{<-}{D}{B}\par
+                \ncarc{<-}{D}{C}\par
+                \ncarc{<-}{C}{F}\par
+                \pnode(0,0.2em){E}{Le reste est nul, on s'arrête là.}
+                \ncarc{->}{A}{E}\par
+            \end{minipage}
+            \end{center}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\linewidth}
+            \begin{remarque}
+                \titreRemarque{Divisions interminables}
+                
+                \textit{\underline{Problème} : Nous avons 1 litre d'eau pour 7 à nous partager \'equitablement. Quelle quantit\'e aura \textbf{exactement} chacun ?}\\
+                \begin{center}
+                    \opdiv[displayintermediary=all, shiftdecimalsep=both, period]{1}{7}
+                \end{center}
+            \end{remarque}
+        \end{minipage}
+    \end{methode*1}
+    
+    \begin{remarque}
+        La division ci-dessus à droite, est interminable on notera son r\'esultat $\dfrac{1}{7}$. 
+    \end{remarque}
+\end{changemargin}
+ 
