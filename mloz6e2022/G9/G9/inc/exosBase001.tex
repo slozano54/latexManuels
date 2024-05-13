@@ -1,7 +1,55 @@
+\begin{exercice*} %1
+   Compléter les phrases en utilisant les mots \fbox{côtés},
+      \fbox{sommets}, \fbox{diagonales}, \fbox{opposés} et \fbox{consécutifs} .
+   Dans le quadrilatère $IJKL$ :
+   \begin{enumerate}
+      \item $[IJ]$ et $[KL]$ sont des \pointilles \smallskip
+      \item $K$ et $L$ sont des \pointilles \smallskip
+      \item $[IJ]$ et $[JK]$ sont des \pointilles \smallskip
+      \item $[IK]$ et $[JL]$ sont les \pointilles \smallskip
+   \end{enumerate}
 
-\begin{exercice*}
-   \dots
+   \begin{minipage}{0.5\linewidth}
+      \begin{Geometrie}[CoinHD={(6u,4u)}]
+         u:=u*0.7;
+         pair A,B,C,D;
+         A=u*(1,1);
+         B-A=u*(3,0.5);
+         D-A=u*(1,2);
+         C-D=u*(3,0.5);
+         trace segment(A,B);
+         trace segment(D,C);
+         trace segment(A,D);
+         trace segment(B,C);
+         label.llft(btex $I$ etex,A);
+         label.lrt(btex $J$ etex,B);
+         label.urt(btex $K$ etex,C);
+         label.ulft(btex $L$ etex,D);
+     \end{Geometrie}
+   \end{minipage}
+   \begin{minipage}{0.5\linewidth}
+      \begin{Geometrie}[CoinHD={(6u,4u)}]
+         pair A,B,C,D,E,F,G,H;
+         A=u*(2,1);
+         B-A=u*(-1,1);
+         G-A=u*(0,1);
+         C-A=u*(0,2);
+         F-A=u*(1,0.3);
+         E-A=u*(2,1);
+         H-F=u*(0,0.7);
+         D-F=u*(0,1.7);
+         trace polygone(A,B,C,D,E,F);
+         trace segment(A,C);
+         trace segment(F,D);
+         trace segment(B,E);
+         label.bot(btex $A$ etex,A);
+         label.lft(btex $B$ etex,B);
+         label.top(btex $C$ etex,C);
+         label.urt(btex $D$ etex,D);
+         label.rt(btex $E$ etex,E);
+         label.bot(btex $F$ etex,F);
+         label.urt(btex $G$ etex,G);
+         label.urt(btex $H$ etex,H);
+     \end{Geometrie}
+   \end{minipage} 
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}

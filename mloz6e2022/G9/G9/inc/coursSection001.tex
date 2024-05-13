@@ -1,5 +1,357 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+\begin{changemargin}{-5mm}{-15mm}
+    \section{Quadrilatères}
+    \begin{definition}
+        Un \textbf{quadrilatère} est un polygone qui a \textbf{quatre} côtés.
+    \end{definition}
+    
+    \begin{definition}[Vocabulaire]
+        \begin{minipage}{0.3\linewidth}
+            \begin{Geometrie}
+                pair G,S,X,R;
+                G=u*(1,4);
+                S-G=u*(2,-3);
+                X-G=u*(3,-1);
+                R-G=u*(2,1);
+                trace chemin(G,S,X,R,G,X);
+                trace segment(S,R);
+                label.lft(btex $G$ etex,G);
+                label.bot(btex $S$ etex,S);
+                label.rt(btex $X$ etex,X);
+                label.top(btex $R$ etex,R);
+            \end{Geometrie}
+        \end{minipage}
+        \begin{minipage}{0.7\linewidth}
+            \begin{itemize}
+                \item $[GS]$ et $[SX]$ sont des \textbf{côtés consécutifs} ( qui se suivent ).
+                \item $[GS]$ et $[RX]$ sont des \textbf{côtés opposés} ( l'un en face de l'autre ).
+                \item $G$ et $S$ sont des \textbf{sommets consécutifs}.
+                \item $G$ et $X$ sont des \textbf{sommets opposés}.
+                \item $\widehat{GSX}$ et $\widehat{SXR}$ sont des \textbf{angles consécutifs}.
+                \item $\widehat{GSX}$ et $\widehat{XRG}$ sont des \textbf{angles opposés}.
+                \item $[GX]$ et $[SR]$ sont les \textbf{diagonales}.
+            \end{itemize}
+        \end{minipage}
+    \end{definition}
+
+    \begin{definition}
+        \begin{minipage}{0.6\linewidth}
+            Un \textbf{cerf-volant} est un quadrilatère dont les \textbf{diagonales} sont \textbf{perpendiculaires}.    
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            \begin{Geometrie}
+                pair G,S,X,R;
+                G=u*(1,4);
+                S-G=u*(2,-3);
+                X-G=u*(4,0);
+                R-G=u*(2,1);
+                trace chemin(G,S,X,R,G,X);
+                trace segment(S,R);
+                trace codeperp(R,milieu(G,X),G,5);
+            \end{Geometrie}
+        \end{minipage}
+    \end{definition}
+
+    \begin{definition}
+        \begin{minipage}{0.5\linewidth}
+            Le \textbf{losange} est un quadrilatère dont \textbf{tous les côtés sont de même longueur}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.5\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair G,S,X,R;
+                    G=u*(1,2.5);
+                    S-G=u*(3,-1.5);
+                    X-G=u*(6,0);
+                    R-G=u*(3,1.5);
+                    trace chemin(G,S,X,R,G);
+                    marque_s:=marque_s/3;
+                    trace Codelongueur(G,S,S,X,X,R,R,G,2);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{definition}
+    
+    \begin{propriete}[\admise]
+        \begin{minipage}{0.6\linewidth}
+            \textbf{Si} un quadrilatère est un losange \textbf{alors} :
+            \begin{itemize}
+                \item ses diagonales sont perpendiculaires et se coupent en leur milieu.
+                \item chaque diagonale est médiatrice de l'autre.
+                \item Les diagonales sont les axes de symétrie du losange.
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}{0.4\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair A,B,C,D,O;
+                    O=u*(3,2.5);
+                    A=pointarc(cercles(O,3u),25);
+                    C=pointarc(cercles(O,3u),205);
+                    B=pointarc(cercles(O,1.5u),115);
+                    D=pointarc(cercles(O,1.5u),295);
+                    trace polygone(A,B,C,D);
+                    trace segment(A,C);
+                    trace segment(B,D);
+                    marque_s:=marque_s/3;
+                    trace Codelongueur(A,O,O,C,2);
+                    trace Codelongueur(B,O,O,D,3);
+                    trace codeperp(A,O,B,5);
+                \end{Geometrie}
+                % \includegraphics[scale=1]{courslosange.2}
+            \end{center}
+        \end{minipage}
+    \end{propriete}
+    
+    \begin{remarque}
+        \titreRemarque{tu dois savoir \ldots}
+
+        \ldots utiliser les propriétés des côtés et/ou des diagonales pour \textbf{construire un losange de différentes fa\c cons :}
+        \begin{itemize}
+            \item en commen\c cant par les côtés.
+            \item ou en commen\c cant par les diagonales.
+        \end{itemize}
+    \end{remarque}
+    
+    \begin{definition}        
+        \begin{minipage}{0.6\linewidth}
+            Un \textbf{rectangle} est un quadrilatère qui a \textbf{4 angles droits}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair A,B,C,D;
+                    A=u*(1,1);
+                    B=u*(1,3);
+                    C=u*(5,3);
+                    D=u*(5,1);
+                    trace polygone(A,B,C,D);
+                    trace codeperp(D,A,B,5);
+                    trace codeperp(A,B,C,5);
+                    trace codeperp(B,C,D,5);
+                    trace codeperp(C,D,A,5);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{definition}
+    
+    \begin{propriete}[\admise]
+        \begin{minipage}[t]{0.25\linewidth}
+            \begin{itemize}
+                \item Un rectangle a ses côtés opposés de même longueur.
+            \end{itemize}
+            \begin{Geometrie}[CoinHD={(4.9u,3.5u)}]
+                u:=0.7*u;
+                pair A,B,C,D,O;
+                pair I,J,K,L;
+                A=u*(1,1);
+                B=u*(1,4);
+                C=u*(6,4);
+                D=u*(6,1);
+                trace polygone(A,B,C,D);
+                marque_s:=marque_s/3;
+                trace Codelongueur(A,B,C,D,4);
+                trace Codelongueur(B,C,D,A,3);
+                trace codeperp(D,A,B,5);
+                trace codeperp(A,B,C,5);
+                trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+            \end{Geometrie}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.35\linewidth}
+            \begin{itemize}
+                \item Un rectangle a 2 axes de symétrie : ce sont les médiatrices des côtés.
+            \end{itemize}
+            \begin{Geometrie}[CoinHD={(4.9u,3.5u)}]
+                u:=0.7*u;
+                pair A,B,C,D,O;
+                pair I,J,K,L;
+                A=u*(1,1);
+                B=u*(1,4);
+                C=u*(6,4);
+                D=u*(6,1);
+                O=milieu(A,C);
+                I=milieu(A,B);
+                J=milieu(B,C);
+                K=milieu(C,D);
+                L=milieu(D,A);
+                trace polygone(A,B,C,D);
+                trace mediatrice(A,B) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                trace mediatrice(B,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                marque_s:=marque_s/3;
+                trace Codelongueur(B,J,J,C,D,L,L,A,4);
+                trace Codelongueur(A,I,I,B,C,K,K,D,5);
+                trace Codelongueur(I,O,O,K,3);
+                trace Codelongueur(J,O,O,L,2);
+                trace codeperp(D,L,J,5);
+                trace codeperp(I,K,C,5);
+                trace codeperp(C,J,L,5);
+                trace codeperp(B,I,K,5);
+                trace codeperp(D,A,B,5);
+                trace codeperp(A,B,C,5);
+                trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+                label.ulft(btex $O$ etex,O);
+            \end{Geometrie}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.32\linewidth}
+            \begin{itemize}
+                \item Dans un rectangle, les diagonales ont la même longueur et elles se coupent en leur milieu.
+            \end{itemize}
+            \begin{Geometrie}[CoinHD={(4.9u,3.5u)}]
+                u:=0.7*u;
+                pair A,B,C,D,O;
+                pair I,J,K,L;
+                A=u*(1,1);
+                B=u*(1,4);
+                C=u*(6,4);
+                D=u*(6,1);
+                O=milieu(A,C);
+                I=milieu(A,B);
+                J=milieu(B,C);
+                K=milieu(C,D);
+                L=milieu(D,A);
+                trace polygone(A,B,C,D);
+                marque_s:=marque_s/3;
+                trace Codelongueur(B,O,O,A,O,D,O,C,1);
+                trace segment(B,D) withcolor blue;
+                trace segment(A,C) withcolor blue;
+                trace codeperp(D,A,B,5);
+                trace codeperp(A,B,C,5);
+                trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+                label.top(btex $O$ etex,O);
+            \end{Geometrie}
+        \end{minipage}
+    \end{propriete}
+    
+    \begin{definition}        
+        \begin{minipage}{0.7\linewidth}
+            Un \textbf{carré} est un quadrilatère qui \textbf{est à la fois un rectangle et un losange}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair A,B,C,D;
+                    A=u*(1,1);
+                    B=u*(1,3);
+                    C=u*(3,3);
+                    D=u*(3,1);
+                    trace polygone(A,B,C,D);
+                    trace codeperp(D,A,B,5);
+                    trace codeperp(A,B,C,5);
+                    trace codeperp(B,C,D,5);
+                    trace codeperp(C,D,A,5);
+                    marque_s:=0.3*marque_s;
+                    trace Codelongueur(A,B,B,C,C,D,D,A,3);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{definition}
+
+    \begin{propriete}[\admise]
+        \begin{minipage}{0.65\linewidth}
+            Un \textbf{CARRÉ} a 4 axes de symétrie : ce sont les médiatrices des côtés et ses diagonales.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.25\linewidth}
+            \begin{center}
+                \begin{Geometrie}[CoinHD={(4u,4u)}]
+                    u:=0.5*u;
+                    pair A,B,C,D,O;
+                    pair I,J,K,L;
+                    A=u*(1,4);
+                    B=u*(4,7);
+                    C=u*(7,4);
+                    D=u*(4,1);
+                    O=milieu(A,C);
+                    I=milieu(A,B);
+                    J=milieu(B,C);
+                    K=milieu(C,D);
+                    L=milieu(D,A);
+                    trace polygone(A,B,C,D);
+                    trace mediatrice(A,B) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                    trace mediatrice(B,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                    trace droite(A,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                    trace droite(B,D) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+                    marque_s:=marque_s/3;
+                    trace Codelongueur(B,J,J,C,D,L,L,A,4);
+                    trace Codelongueur(A,I,I,B,C,K,K,D,4);
+                    trace Codelongueur(B,O,O,A,O,D,O,C,5);
+                    trace codeperp(A,I,K,5);
+                    trace codeperp(L,J,C,5);
+                    trace codeperp(A,L,J,5);
+                    trace codeperp(D,K,I,5);
+                    trace codeperp(D,O,C,5);
+                    label.ulft(btex $O$ etex,O);
+                \end{Geometrie}
+            \end{center}
+        \end{minipage} 
+    \end{propriete}
+    \begin{remarque}
+        \titreRemarque{conséquence}
+
+        \textbf{Les diagonales} d'un carré se coupent perpendiculairement en leur milieu et sont de même longueur.
+    \end{remarque}
+    
+    \begin{remarque}
+        \titreRemarque{tu dois savoir \ldots}
+
+        \ldots utiliser ces propriétés pour \textbf{construire un rectangle ou un carré de différentes fa\c cons :}        
+        \begin{itemize}
+            \item en commen\c cant par les côtés.
+            \item ou en commen\c cant par les diagonales.
+        \end{itemize}
+    \end{remarque}
+    
+    \begin{definition}        
+        \begin{minipage}{0.7\linewidth}
+            Un \textbf{trapèze} est un quadrilatère qui a \textbf{deux côtés parallèles}.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair A,B,C,D,E,F;
+                    path d,d';
+                    A=u*(1,1);
+                    B=u*(5.5,1.5);
+                    C=0.5[A,rotation(B,A,75)];
+                    F=0.5[C,rotation(A,C,105)];
+                    D=0.5[B,rotation(A,B,315)];
+                    d=droite(B,D);
+                    d'=droite(C,F);
+                    E=d intersectionpoint d';
+                    trace polygone(A,B,E,C);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{definition}
+  
+    \begin{definition}        
+        \begin{minipage}{0.7\linewidth}
+            Un \textbf{trapèze rectangle} est un quadrilatère qui possède deux angles droits.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+            \begin{center}
+                \begin{Geometrie}
+                    pair A,B,C,D;
+                    A=u*(2,1);
+                    B=u*(5.5,1.5);
+                    C=0.5[A,rotation(B,A,90)];
+                    D=0.9[C,rotation(A,C,90)];
+                    trace codeperp(B,A,C,8);
+                    trace codeperp(A,C,D,8);
+                    trace polygone(A,B,D,C);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{definition}
 \end{changemargin}
  

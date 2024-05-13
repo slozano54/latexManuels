@@ -2,16 +2,85 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
+\vspace*{-10mm}
+\begin{enigme}[Des quadrilatères dans un octogone]
     \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
+        \begin{center}
+        \fbox{
+            \begin{minipage}{15cm}
+                \parbox{5cm}{
+                    Tracer quatre diagonales de l'octogone régulier pour obtenir le quadrilatère demandé comme dans les exemples ci-contre.}
+                \parbox{5cm}{
+                    \begin{pspicture}(-2.5,-2.2)(2.5,2.2)
+                    \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+                    \psline(2;-22.5)(2;-157.5)
+                    \psline(2;157.5)(2;22.5)
+                    \psline(2;-112.5)(2;22.5)
+                    \psline(2;112.5)(2;-157.5)
+                    \pspolygon[fillstyle=solid,fillcolor=lightgray](2;-157.5)(0.32,-0.77)(2;22.5)(-1.21,0.77)
+                    \end{pspicture}}
+                \parbox{5cm}{
+                    \begin{pspicture}(-2.5,-2.2)(2.5,2.2)
+                    \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+                    \psline(2;67.5)(2;157.5)
+                    \psline(2;67.5)(2;-112.5)
+                    \psline(2;-112.5)(2;157.5)
+                    \psline(2;-22.5)(2;-157.5)
+                    \pspolygon[fillstyle=solid,fillcolor=lightgray](2;157.5)(2;67.5)(-0.32,-0.77)(-1.215,-0.77)
+                    \end{pspicture}}
+            \end{minipage}
+        }
+        
+
+        {\psset{unit=0.95}
+        \begin{pspicture}(-3.2,-3)(2.5,2.5)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Pour faire des essais}
+            \end{pspicture}
+            \begin{pspicture}(-3,-3)(2.5,2.5)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un carré}
+            \end{pspicture}
+        \begin{pspicture}(-3,-3)(2.5,2.5)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un autre carré}
+        \end{pspicture}
+        
+        \begin{pspicture}(-3.2,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Pour faire des essais}
+        \end{pspicture}
+        \begin{pspicture}(-3,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un rectangle}
+        \end{pspicture}
+        \begin{pspicture}(-3,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un parallélogramme}
+        \end{pspicture}
+
+        \begin{pspicture}(-3.2,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Pour faire des essais}
+        \end{pspicture}
+        \begin{pspicture}(-3,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un losange}
+        \end{pspicture}
+        \begin{pspicture}(-3,-3)(2.5,2.3)
+            \pspolygon(2;22.5)(2;67.5)(2;112.5)(2;157.5)(2;-157.5)(2;-112.5)(2;-67.5)(2;-22.5)
+            \rput(0,-2.5){Un autre losange}
+        \end{pspicture}}
+    \end{center}
+
+        \hfill{\footnotesize\it Source : inspiré de \href{http://www-irem.univ-paris13.fr/site_spip/IMG/pdf/activitepapierquad1.pdf}{Angles, parallélogrammes et programmation au cycle 4}, IREM Paris-Nord.}
     \end{changemargin}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 
-\begin{corrige}
-    Correction du binz.
-\end{corrige}
+% \begin{corrige}
+%     Correction du binz.
+% \end{corrige}
  

@@ -1,5 +1,65 @@
-\begin{activite}[\dots]
+\begin{activite}[Les bandelettes]
     \begin{changemargin}{-10mm}{-15mm}
-        \dots
+        \vspace*{-5mm}
+        {\bf Objectifs :} connaître et reconnaître des figures géométriques à quatre côtés ; donner des propriétés de ces figures.
+        \partie[construction des bandelettes]
+           \begin{enumerate}
+              \item On souhaite fabriquer des \og squelettes \fg{} de quadrilatères : chaque squelette est composé de deux bandelettes fixées à l'aide d'une attache parisienne. Sur une feuille de papier canson, tracer les deux rectangles suivants et placer les points O, O', M, N, P, Q, R et S sachant que la droite est graduée en centimètres.
+              \begin{center}
+                 {\psset{unit=0.7}
+                 \begin{pspicture}(-7,-2.2)(7,1.5)
+                    \psline{->}(-6.5,-1.5)(6.5,-1.5)
+                    \multido{\n=-6+1}{13}{\psline(\n,-1.6)(\n,-1.4)\rput(\n,-1.8){\footnotesize\n}}
+                    \psline{<->}(-6.3,-1)(-6.3,1)
+                    \rput{90}(-6.6,0){\footnotesize 2 cm}
+                    \psframe[linewidth=0.5mm](-6,-1)(6,1)
+                    \psline[linestyle=dashed,linecolor=gray](-6,0)(6,0)
+                    \psdot[linewidth=2mm](0,0)
+                    \rput(0,0.5){O}
+                    \psdots[linewidth=0.5mm,linecolor=blue](-5,0)(-3,0)(3,0)(5,0)
+                    \rput(-5,0.5){\blue M}
+                    \rput(5,0.5){\blue N}
+                    \psdots[linewidth=0.5mm,linecolor=red](-3,0)(3,0)
+                    \rput(-3,0.5){\red P}
+                    \rput(3,0.5){\red Q}     
+                 \end{pspicture} \\
+                 \begin{pspicture}(-7,-1.3)(7,1)
+                    \psline{<->}(-6.3,-1)(-6.3,1)
+                    \rput{90}(-6.6,0){\footnotesize 2 cm}
+                    \psframe[linewidth=0.5mm](-6,-1)(6,1)
+                    \psline[linestyle=dashed,linecolor=gray](-6,0)(6,0)t
+                    \psdots[linewidth=2mm](0,0)
+                    \rput(0,0.5){O'}
+                    \psdots[linewidth=0.5mm,linecolor=teal](-5,0)(5,0)
+                    \rput(-5,0.5){\textcolor{teal}{R}}
+                    \rput(5,0.5){\textcolor{teal}{S}}   
+                 \end{pspicture}}
+              \end{center}
+              \item Percer des trous sur les points M, N, P, Q, R et S qui doivent permettre de passer la mine d'un crayon pour tracer les points correspondants. 
+              \item Percer des trous sur les points O et O', qui sont destinés à recevoir une attache parisienne. Les bandelettes attachées correspondent alors au squelette d'un quadrilatère.
+           \end{enumerate}
+  
+        \partie[construction de quadrilatères]
+            On considère un squelette obtenu en faisant se croiser les deux bandelettes aux points O et O' en plaçant l'attache parisienne sur ces deux points. 
+            \begin{enumerate}
+              \item On s'intéresse aux quadrilatères MRNS tracés à partir de ce squelette.
+              \begin{enumerate}
+                \item En plaçant le squelette sur votre feuille, placer les points M, N, R et S puis tracer le quadrilatère MRNS. \medskip
+                \item À quelle famille semble appartenir ce quadrilatère ? \pointilles \medskip
+                \item Que représente les segments [MN] et [RS] pour ce quadrilatère ? \pointilles \medskip
+                \item Citer d'autres propriétés relatives à ce quadrilatère particulier. \pointilles 
+                
+                \medskip\pointilles
+                \item Trouver un cas particulier à cette configuration \pointilles \\
+              \end{enumerate}
+              \item On s'intéresse maintenant aux quadrilatères PRQS tracés à partir de ce squelette.
+              \begin{enumerate}
+                 \item En plaçant le squelette sur votre feuille, placer les points P, Q, R et S puis tracer le quadrilatère PRQS. \medskip
+                 \item Conjecturer une propriété concernant ce quadrilatère. \pointilles \medskip
+                 \item Trouver un cas particulier à cette configuration. \pointilles
+              \end{enumerate}
+           \end{enumerate} 
+  
+        \vfill\hfill{\it\footnotesize Source : activité inspirée du site de \href{http://pernoux.pagesperso-orange.fr/revision/revgeo.pdf}{Dominique Pernoux}}.
     \end{changemargin}
 \end{activite}

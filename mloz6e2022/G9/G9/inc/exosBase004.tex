@@ -1,7 +1,26 @@
-
-\begin{exercice*}
-   \dots
+\begin{exercice*} %4
+   Construire sur ce quadrillage les quadrilatères suivants : le rectangle $ABCG$, le carré $CDEH$, le parallélogramme $BCDI$ et le losange $EDFJ$. 
+   \vspace*{-2mm}
+   \begin{center}
+      \begin{Geometrie}[CoinHD={(6u,4.5u)}]
+         trace grille(0.5) withcolor gris;
+         pair A,B,C,D,E,F;
+         A=u*0.5*(1,1);
+         B=u*0.5*(5,1);
+         C=u*0.5*(5,3);
+         D=u*0.5*(8,5);
+         E=u*0.5*(6,8);
+         F=u*0.5*(11,3);
+         labeloffset:=1.2*labeloffset;
+         label.rt(btex $A$ etex,A);
+         label.rt(btex $B$ etex,B);
+         label.rt(btex $C$ etex,C);
+         label.rt(btex $D$ etex,D);
+         label.rt(btex $E$ etex,E);
+         label.rt(btex $F$ etex,F);
+         marque_p:="croix";         
+         pointe(A,B,C,D,E,F);
+      \end{Geometrie}
+   \end{center} 
+   \vspace*{-5mm}
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}

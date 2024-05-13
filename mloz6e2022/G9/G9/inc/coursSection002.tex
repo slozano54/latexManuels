@@ -1,5 +1,31 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+\begin{changemargin}{-5mm}{-15mm}
+    \section{Un nouveau quadrilatère : le parallélogramme}
+    \begin{definition}
+        \begin{minipage}{0.5\linewidth}
+            Un \textbf{parallélogramme} est un quadrilatère dont les côtés sont deux à deux parallèles.
+
+            \bigskip
+            \textcolor{red}{$(AB)//(DC)$} et \textcolor{blue}{$(AD)//(BC)$} 
+            
+            donc $ABCD$ est un parallélogramme.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+            \begin{Geometrie}[CoinHD={(6u,4u)}]
+                pair A,B,C,D;
+                A=u*(1,1);
+                B-A=u*(3,0.5);
+                D-A=u*(1,2);
+                C-D=u*(3,0.5);
+                trace droite(A,B) withcolor red;
+                trace droite(D,C) withcolor red;
+                trace droite(A,D) withcolor blue;
+                trace droite(B,C) withcolor blue;
+                label.ulft(btex $A$ etex,A);
+                label.lrt(btex $B$ etex,B);
+                label.ulft(btex $C$ etex,C);
+                label.ulft(btex $D$ etex,D);
+            \end{Geometrie}
+        \end{minipage}
+    \end{definition}
 \end{changemargin}
- 
