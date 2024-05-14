@@ -1,18 +1,209 @@
-\vspace*{-7mm}
-\begin{changemargin}{-10mm}{-10mm}
+\vspace*{-5mm}
+\begin{changemargin}{-10mm}{-15mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
-\vspace*{-3mm}
-%pre-002
-\input{\currentpath/inc/prerequis002.tex}
-\end{changemargin}
-\vspace*{-13mm}
-\begin{debat}[...] 
-      ...
-    \bigskip
-    \begin{cadre}[B2][J4]
-       \begin{center}
-          \hrefVideo{https://www.yout-ube.com/watch?v=eawBr43xWf8}{\bf ...}
-       \end{center}
-    \end{cadre}
+\vspace*{-5mm}
+\begin{debat}[Les solides de Platon]
+   \vspace*{-7mm}
+   Parmi les solides de l'espace, il en est une sorte qui a été étudiée par le philosophe grec {\bf Platon} ($-425;-348$) : les polyèdres réguliers et convexes. Ce dernier associe chacun des quatre éléments physiques avec un solide régulier.
+   \begin{itemize}
+      \item la {\bf Terre} est associée au {\it cube} : ces petits solides font de la poussière lorsqu'ils sont émiettés et se cassent lorsqu'on s'en saisit ;
+      \item l'{\bf air} est associé à l'{\it octaèdre} : ses composants minuscules sont si doux qu'on peut à peine les sentir ;
+      \item l'{\bf eau} est associée à l'{\it icosaèdre} : elle s'échappe de la main lorsqu'on la saisit comme si elle était constituée de petites boules minuscules ;
+      \item le {\bf feu} est associé au {\it tétraèdre} car la chaleur du feu semble pointue comme un poignard ;
+      \item le \textit{dodécaèdre} est mis en correspondance avec le {\bf tout}, parce que c'est le solide qui ressemble le plus à la sphère.
+   \end{itemize}
+   \vspace*{-5mm}
+   \begin{center}
+      \scalebox{0.9}{
+      \Solide[%
+         Nom=pyramide,
+         Reguliere,
+         Theta=90,
+         Phi=0,
+         SommetsPyramide=4,
+         Sommets=false,
+         Traces={
+            trace appelation(iso(A,C),iso(A,B),0mm,btex 1 etex);
+            trace appelation(iso(A,D),iso(A,C),0mm,btex 2 etex);
+            trace appelation(iso(A,B),iso(A,D),0mm,btex 3 etex);
+         }
+      ]%
+      }
+      \Solide[%
+         Nom=cube,
+         % Theta=90,
+         % Phi=0,
+         Sommets=false,
+         Aretes=false,
+         Traces={
+            trace chemin(A,B,C,H,G,F,A);
+            trace chemin(F,E,H);
+            trace chemin(B,G);            
+            drawoptions(withcolor white);
+            pointe(D);
+            drawoptions(withcolor black);
+            Label(btex 1 etex,iso(A,B,F,G));
+            Label(btex 2 etex,iso(B,C,H,G));
+            Label(btex \rotatebox{-110}{5} etex,iso(E,F,G,H));
+         }
+      ]%
+      \scalebox{0.9}{
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+         Initialisation(1500,40,30,50);
+         color S,S',O,A,B,C,D;
+         O=(0,0,0);
+         S-O=(0,0,1);
+         S'-O=(0,0,-1);
+         A-O=(1,0,0);
+         B-O=(0,1,0);
+         C-O=(-1,0,0);
+         D-O=(0,-1,0);         
+         trace chemin(S,D,A,B,C,S,A);
+         trace chemin(S,B,S',A);
+         label(btex 1 etex,Projette(iso(A,B,S)));
+         label(btex \rotatebox{-45}{4} etex,Projette(iso(A,D,S)));
+         label(btex \rotatebox{60}{2} etex,Projette(iso(C,B,S)));
+         label(btex 5 etex,Projette(iso(A,B,S')));
+      \end{Geometrie}
+      }
+      % https://skosmos.loterre.fr/PSR/fr/page/-PDTQPM8R-7
+      \scalebox{0.5}{
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+         Initialisation(1500,135,30,50);
+         color O,S[];
+         O=(0,0,0);
+         % Cube
+         S1-O=(1,1,1);
+         S2-O=(1,1,-1);
+         S3-O=(-1,1,-1);
+         S4-O=(-1,1,1);
+         S5-O=(1,-1,-1);
+         S6-O=(-1,-1,-1);
+         S7-O=(-1,-1,1);
+         S8-O=(1,-1,1);
+         % label(btex 1 etex,Projette(S1));
+         % label(btex 2 etex,Projette(S2));
+         % label(btex 3 etex,Projette(S3));
+         % label(btex 4 etex,Projette(S4));
+         % label(btex 5 etex,Projette(S5));
+         % label(btex 6 etex,Projette(S6));
+         % label(btex 7 etex,Projette(S7));
+         % label(btex 8 etex,Projette(S8));
+         numeric h,a,b;
+         h:=0.5*(sqrt(5)-1);
+         a:=1+h;% phi
+         b:=1-h*h; % 1/phi
+         % Sommets verts
+         S9-O=(0,a,b);
+         S10-O=(0,a,-b);         
+         S11-O=(0,-a,b);
+         S12-O=(0,-a,-b);         
+         % label(btex \textcolor{green}{11} etex,Projette(S11));
+         % label(btex \textcolor{green}{12} etex,Projette(S12));
+         % label(btex \textcolor{green}{9 } etex,Projette(S9));
+         % label(btex \textcolor{green}{10} etex,Projette(S10));
+         % Sommets bleus
+         S13-O=(b,0,a);
+         S14-O=(-b,0,a);
+         S15-O=(b,0,-a);
+         S16-O=(-b,0,-a);
+         % label(btex \textcolor{blue}{13} etex,Projette(S13));
+         % label(btex \textcolor{blue}{14} etex,Projette(S14));
+         % label(btex \textcolor{blue}{15} etex,Projette(S15));
+         % label(btex \textcolor{blue}{16} etex,Projette(S16));
+         % Sommets roses/rouges
+         S17-O=(a,b,0);
+         S18-O=(a,-b,0);         
+         S19-O=(-a,b,0);
+         S20-O=(-a,-b,0);
+         % label(btex \textcolor{red}{17} etex,Projette(S17));
+         % label(btex \textcolor{red}{18} etex,Projette(S18));
+         % label(btex \textcolor{red}{19} etex,Projette(S19));
+         % label(btex \textcolor{red}{20} etex,Projette(S20));
+         % faces
+         % trace chemin(S1,S13,S8,S18,S17,S1);
+         % trace chemin(S18,S17,S2,S15,S5,S18);
+         trace chemin(S1,S17,S2,S10,S9,S1);%11
+         label(btex \Large\rotatebox{-10}{11} etex,Projette(iso(S1,iso(S2,S10))));
+         trace chemin(S13,S1,S9,S4,S14,S13);%5
+         label(btex \Large\rotatebox{-30}{5} etex,Projette(iso(S9,iso(S13,S14))));
+         trace chemin(S8,S13,S14,S7,S11,S8);%6
+         label(btex \Large\rotatebox{125}{6.} etex,Projette(iso(S11,iso(S13,S14))));
+         trace chemin(S10,S3,S19,S4,S9,S10);%9
+         label(btex \Large\rotatebox{-30}{9.} etex,Projette(iso(S4,iso(S10,S3))));
+         trace chemin(S19,S20,S7,S14,S4,S19);%1
+         label(btex \Large\rotatebox{30}{1} etex,Projette(iso(S14,iso(S19,S20))));
+         trace chemin(S19,S3,S16,S6,S20,S19);%3
+         label(btex \Large\rotatebox{-40}{3} etex,Projette(iso(S20,iso(S3,S16))));
+      \end{Geometrie}
+      }
+      % https://fr.wikipedia.org/wiki/Icosa%C3%A8dre#Construction_par_les_coordonn%C3%A9es      
+      \scalebox{0.5}{
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+         Initialisation(1500,40,30,50);
+         color O,S[];
+         O=(0,0,0);
+         numeric myPhi;
+         myPhi:=0.5*(1+sqrt(5));
+         %bleu         
+         S1-O=(myPhi,1,0);
+         S2-O=(-myPhi,1,0);
+         S3-O=(myPhi,-1,0);
+         S4-O=(-myPhi,-1,0);
+         %rouge
+         S5-O=(1,0,myPhi);
+         S6-O=(1,0,-myPhi);
+         S7-O=(-1,0,myPhi);
+         S8-O=(-1,0,-myPhi);
+         %noir
+         S9-O=(0,myPhi,1);
+         S10-O=(0,-myPhi,1);         
+         S11-O=(0,myPhi,-1);
+         S12-O=(0,-myPhi,-1);
+         %
+         trace chemin(S10,S5,S7,S10);
+         label(btex \Large\rotatebox{-60}{11} etex,Projette(iso(S10,S5,S7)));
+         trace chemin(S5,S9,S7,S5);
+         label(btex \Large\rotatebox{-10}{5} etex,Projette(iso(S5,S9,S7)));
+         trace chemin(S7,S9,S2,S7);
+         label(btex \Large\rotatebox{15}{6.} etex,Projette(iso(S7,S9,S2)));
+         %
+         trace chemin(S10,S3,S5,S10);
+         label(btex \Large\rotatebox{-50}{18} etex,Projette(iso(S10,S3,S5)));
+         trace chemin(S1,S3,S5,S1);
+         label(btex \Large\rotatebox{-15}{17} etex,Projette(iso(S1,S3,S5)));
+         trace chemin(S1,S9,S5,S1);
+         label(btex \Large\rotatebox{-10}{9.} etex,Projette(iso(S1,S9,S5)));
+         trace chemin(S1,S9,S11,S1);
+         label(btex \Large\rotatebox{-30}{1} etex,Projette(iso(S1,S9,S11)));
+         trace chemin(S9,S11,S2,S9);
+         label(btex \Large\rotatebox{0}{10} etex,Projette(iso(S9,S11,S2)));
+         %
+         trace chemin(S1,S3,S6,S1);
+         label(btex \Large\rotatebox{5}{13} etex,Projette(iso(S1,S3,S6)));
+         trace chemin(S1,S6,S11,S1);
+         label(btex \Large\rotatebox{-45}{3} etex,Projette(iso(S1,S6,S11)));
+         % label(btex \textcolor{blue}{1} etex,Projette(S1));
+         % label(btex \textcolor{blue}{2} etex,Projette(S2));
+         % label(btex \textcolor{blue}{3} etex,Projette(S3));
+         % label(btex \textcolor{blue}{4} etex,Projette(S4));
+         % label(btex \textcolor{red}{5} etex,Projette(S5));
+         % label(btex \textcolor{red}{6} etex,Projette(S6));
+         % label(btex \textcolor{red}{7} etex,Projette(S7));
+         % label(btex \textcolor{red}{8} etex,Projette(S8));
+         % label(btex \textcolor{black}{9} etex,Projette(S9));
+         % label(btex \textcolor{black}{10} etex,Projette(S10));
+         % label(btex \textcolor{black}{11} etex,Projette(S11));
+         % label(btex \textcolor{black}{12} etex,Projette(S12));
+      \end{Geometrie}
+      }
+   \end{center}
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         \hrefVideo{https://www.yout-ube.com/watch?v=eDsFmYur9Yo}{\bf Les 5 solides de Platon}, chaîne YouTube {\it Micmaths} de {\it Mickaël Launay}.
+      \end{center}
+   \end{cadre}
  \end{debat}
+\end{changemargin}
+ 
