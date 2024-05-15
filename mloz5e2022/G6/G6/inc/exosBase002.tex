@@ -1,7 +1,108 @@
+\begin{exercice*} %2
+   On dispose de trois objets sur une table : un cône, un cube et une sphère. On a également des représentations de ces solides selon des points de vue différents.
+   
+   \columnbreak
+   {\bf Vue de la table du dessus :} 
+   \begin{center}
+      \psset{unit=0.8}
+      \begin{pspicture}(-2.3,-2.1)(2.3,2.3)
+         \psframe(-1.5,-1.5)(1.5,1.5)
+         \rput(2,2){NE}
+         \rput(1.7,1.7){$\swarrow$}
+         \rput(2,0){E}
+         \rput(1.7,0){$\leftarrow$}
+         \rput(2,-2){SE}
+         \rput(1.7,-1.7){$\nwarrow$}
+         \rput(0,-2){S}
+         \rput(0,-1.7){$\uparrow$}
+         \rput(-2,-2){SO}
+         \rput(-1.7,-1.7){$\nearrow$}
+         \rput(-2,0){O}
+         \rput(-1.7,0){$\rightarrow$}
+         \rput(-2,2){NO}
+         \rput(-1.7,1.7){$\searrow$}
+         \rput(0,2){N}
+         \rput(0,1.7){$\downarrow$}
+         \pscircle(0.6,-0.85){0.45}
+         \pscircle(-0.25,0.85){0.45}
+         \pscircle(-0.25,0.85){0.05}
+         \pspolygon(-1,-0.4)(-0.55,0.35)(0.2,-0.1)(-0.25,-0.85)
+      \end{pspicture}
+   \end{center}
+   {\bf Solides en vue du dessus et de face :}
+   \begin{center}
+      \begin{pspicture}(0,-1.5)(8,1.7)
+          \rput[l](0.5,1){vue aérienne}
+          \pscircle(3.5,1){0.45}
+          \pscircle(3.5,1){0.05}
+          \pscircle(5.25,1){0.45}
+          \rput(7.4,1.25){\pspolygon(-1,-0.4)(-0.55,0.35)(0.2,-0.1)(-0.25,-0.85)}
+          \rput[l](0.5,-0.5){vue frontale}
+          \rput(3.05,-1.3){\coneND}
+          \rput(5.25,-.95){\bouleND}
+          \rput(6.4,-0.95){\cubeND}
+      \end{pspicture}
+   \end{center} 
+   Les images ci-dessous représentent des vues, selon divers axes de visée. Déterminer le point de vue de chaque image (attention, certaines images correspondent à aucune configuration !).
 
-\begin{exercice*}
-   \dots
-\end{exercice*}
+   \smallskip
+   {\renewcommand{\arraystretch}{1.5}
+   \begin{ltableau}{\linewidth}{8}
+      \hline
+      N & NE & E & SE & S & SO & O & NO \\
+      \hline
+      & & & & & & & \\
+      \hline
+   \end{ltableau}}
+   \vspace*{-20mm}
+   \begin{center}
+      \begin{pspicture}(0,0)(3.3,4)
+         \psframe(0,0)(3.2,2.5)
+         \rput(2.9,2.2){A}
+         \rput(0.9,0.2){\bouleND}
+         \rput(1.35,0.2){\cubeND}
+         \rput(1.35,0.2){\coneND}
+      \end{pspicture}
+      \begin{pspicture}(0,0)(3.3,2.9)
+         \psframe(0,0)(3.2,2.5)
+         \rput(2.9,2.2){B}
+         \rput(0.2,0.2){\coneND}
+         \rput(2.3,0.2){\bouleND}
+         \rput(1.1,0.2){\cubeND} 
+      \end{pspicture}
+      \begin{pspicture}(0,0)(3.3,2.9)
+         \psframe(0,0)(3.2,2.5)
+         \rput(2.9,2.2){C}
+         \rput(2.15,0.2){\bouleND}
+         \rput(0.8,0.2){\coneND}
+         \rput(0.55,0.2){\cubeND}      
+      \end{pspicture}
+      \begin{pspicture}(0,0)(3.3,2.9)
+         \psframe(0,0)(3.2,2.5)
+         \rput(2.9,2.2){D}
+         \rput(1.4,0.2){\cubeND}  
+         \rput(0.4,0.2){\coneND}
+         \rput(0.85,0.2){\bouleND}
+      \end{pspicture}
+      \begin{pspicture}(0,0)(3,2.9)
+         \psframe(0,0)(3.2,2.5)
+         \rput(2.9,2.2){E}
+         \rput(0.65,0.2){\cubeND}
+         \rput(0.75,0.2){\bouleND}
+         \rput(1.9,0.2){\coneND}
+      \end{pspicture}
+   \end{center}
+\end{exercice*} 
+
 \begin{corrige}
-   \dots
-\end{corrige}
+   Les images D et H ne sont pas utilisées. \\ \smallskip
+   \small
+   \renewcommand{\arraystretch}{1.5}
+   \begin{ltableau}{0.9\linewidth}{8}
+      \hline
+      N & NE & E & SE & S & SO & O & NO \\
+      \hline
+      \textcolor{red}{A} & \textcolor{red}{J} & \textcolor{red}{E} & \textcolor{red}{I} & \textcolor{red}{C} & \textcolor{red}{G} & \textcolor{red}{B} & \textcolor{red}{F} \\
+      \hline
+   \end{ltableau}
+\end{corrige} 
