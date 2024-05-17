@@ -1,2 +1,68 @@
-\section{\dots}
-\dots
+\section{Volume par dénombrement}
+\begin{definition}
+   Le \textbf{volume} est une grandeur physique qui mesure l'espace occupé par celui-ci.
+\end{definition}
+
+\begin{exemple*1}
+%    {\psset{unit=0.5}
+   Ces trois objets n'ont pas la même forme mais occupent la même quantité d'espace, ils ont donc le même volume.
+   \begin{center}
+    \hfill
+    \VueCubes[%
+        Seul,%
+        Angle=60,%
+        Largeur=1,%
+        Profondeur=3,%
+        Creation,%            
+    ]{2,2,2}
+    \hfill
+    \VueCubes[%
+        Seul,%
+        Angle=60,%
+        Largeur=1,%
+        Profondeur=4,%
+        Creation,%
+        CouleurCube=LightSalmon%            
+    ]{2,1,1,2}
+    \hfill
+    \VueCubes[%
+        Seul,%
+        Angle=60,%
+        Largeur=1,%
+        Profondeur=3,%
+        Creation,%
+        CouleurCube=LightGreen%            
+    ]{3,2,1}
+    \hfill\phantom{r}
+   \end{center}
+   Si l'unité de volume est un cube 
+    \VueCubes[%
+            Seul,%
+            Angle=60,%
+            Largeur=1,%
+            Profondeur=1,%
+            Creation,%
+            CouleurCube=LightGray%
+        ]{1}
+   \hfill le volume de ces trois solides est de 6 unités de volume.
+%    }
+\end{exemple*1}
+
+Il existe deux unités en dimension 3 : les unités de volumes en \og cube \fg{} et les unités de capacité en \og litre \fg. 
+
+\begin{definition}
+   \begin{itemize}
+      \item Lorsque l'unité de volume est un cube de \Lg[m]{1} d'arête, cela représente \Vol[m]{1}.
+      \item Le {\bf litre} (L) est une unité de capacité valant \Vol[dm]{1}. On a alors $\Capa[L]{1} =\Vol[dm]{1}$ et $\Capa[L]{1000} =\Vol[m]{1}$.
+   \end{itemize}
+   \vspace*{-4mm}
+\end{definition}
+
+Pour effectuer un changement d'unité de volume, on reprend les même préfixes que pour les changements de longueur, et on impose pour chacun d'eux trois colonnes au tableau.
+
+\Tableau[Cube,Capacite,FlechesH]{39621/12}
+\vspace*{-8mm}
+
+\begin{exemple*1}
+    \Vol[dam]{0,0039621} = \Vol[m]{3,9621} = \Vol[dm]{3962,1} = \Capa[L]{3962,1} = \Vol[cm]{3962100}.
+\end{exemple*1}

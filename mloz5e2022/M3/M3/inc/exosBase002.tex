@@ -1,7 +1,43 @@
-\begin{exercice*}
-   \dots
-\end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
+\begin{exercice*} %2
+   Classer ces pavés du plus petit au plus grand volume.
 
+   \smallskip
+   \begin{center}
+      {\psset{unit=0.5,fillstyle=solid,fillcolor=lightgray}
+      \footnotesize
+      \begin{pspicture}(1,0.5)(11,8)
+         \pspolygon(1,1)(5,1)(6,2)(6,3.5)(2,3.55)(1,2.5)
+         \psline(1,2.5)(5,2.5)(6,3.5)
+         \psline(5,2.5)(5,1)
+         \rput(3,0.6){\Lg[cm]{4}}
+         \rput{90}(0.6,1.75){\Lg[cm]{1,5}}
+         \rput{45}(5.8,1.2){\Lg[cm]{2,5}}
+         \rput(3.5,3){C}
+         \pspolygon(1,5)(3.5,5)(4.5,6)(4.5,8.5)(2,8.5)(1,7.5)
+         \psline(1,7.5)(3.5,7.5)(4.5,8.5)
+         \psline(3.5,7.5)(3.5,5)
+         \rput(2.25,4.6){\Lg[cm]{2,5}}
+         \rput(2.25,6.25){cube}
+         \rput(2.5,8){A}
+         \pspolygon(9,1)(10,1)(10.9,1.9)(10.9,8.9)(9.9,8.9)(9,8)
+         \psline(10,1)(10,8)(10.9,8.9)
+         \psline(10,8)(9,8)
+         \rput(9.4,0.6){\Lg[cm]{1}}
+         \rput{45}(10.9,1.15){\Lg[cm]{2,2}}
+         \rput{90}(8.6,4.5){\Lg[cm]{7}}
+         \rput(10,8.5){B}
+      \end{pspicture}}
+   \end{center}
+\end{exercice*}
+
+\begin{corrige}
+   \begin{itemize}
+      \item Le volume du cube A vaut $c^3$ : \\
+      $V_{\text A} =\Lg[cm]{2,5}\times\Lg[cm]{2,5}\times\Lg[cm]{2,5} =\textcolor{red}{\Vol[cm]{15,625}}$.
+      \item Le volume du pavé haut B vaut $L\times\ell\times h$ : \\
+      $V_{\text B} =\Lg[cm]{2,2}\times\Lg[cm]{1}\times\Lg[cm]{7} =\textcolor{red}{\Vol[cm]{15,4}}$.
+      \item Le volume du dernier pavé C vaut $L\times\ell\times h$ : \\
+      $V_{\text C} =\Lg[cm]{4}\times\Lg[cm]{2,5}\times\Lg[cm]{1,5} =\textcolor{red}{\Vol[cm]{15}}$.
+   \end{itemize}
+   On a donc \textcolor{red}{C < B < A}. \\
+\end{corrige}

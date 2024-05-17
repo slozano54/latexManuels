@@ -1,7 +1,33 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*} %7
+   Voici la représentation en perspective cavalière d'une maison de poupée dont les longueurs sont exprimées en centimètres.
+   \begin{center}
+      \includegraphics[scale=0.5]{\currentpath/images/maison}
+   \end{center}
+   \vspace*{-5mm}
+   \begin{enumerate}
+      \item Calculer la surface de bois nécessaire pour réaliser le modèle de la maison.
+      \item Sachant que le contre-plaqué choisi coûte \Prix{28,90} le \Aire[m]{}, calculer le montant de sa dépense.
+      \item Calculer, au \Vol[dm]{} près, le volume de la maison.
+   \end{enumerate}   
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
 
+\begin{corrige}
+   \begin{enumerate}
+      \item On a les pièces suivantes, les aires sont en \Aire[cm]{} :
+         \begin{itemize}
+            \item fond : $90\times40 =\num{3600}$ ;
+            \item face et arrière : $2\times(90\times60) =\num{10800}$ ;
+            \item côtés : $2\times(40\times60) =\num{4800}$ ; 
+            \item toit : $2\times(40\times53) =\num{4240}$ ; \smallskip
+            \item pignons : $2\times\dfrac{90\times28}{2} =\num{2520}$. \smallskip
+         \end{itemize}
+         On additionne les mesures de toutes les pièces : \\
+         $\num{3600}+\num{10800}+\num{4800}+\num{4240}+\num{2520} =\num{25960}$. \\
+         \textcolor{red}{Il faut \Aire[m]{2,596} de bois pour la maison}.
+      \item $\num{2,596}\times\num{28,9} \approx\num{75,02}$. 
+      \textcolor{red}{Le prix est de \approx\Prix{75}}.
+      \item La maison a la forme d'un prisme de base : \\
+      \Aire[cm]{5400} + \Aire[cm]{1260} = \Aire[cm]{6660} et dont la hauteur vaut \Lg[cm]{40}. Son volume est donc de $\Aire[cm]{6660}\times\Lg[cm]{40} =\Vol[cm]{266400} =\Vol[dm]{266,4}$. \\
+      \textcolor{red}{Le volume de la maison est d'environ \Vol[dm]{266}}.
+   \end{enumerate}   
+\end{corrige}

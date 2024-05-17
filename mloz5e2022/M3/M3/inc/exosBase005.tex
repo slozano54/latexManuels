@@ -1,8 +1,130 @@
-\begin{exercice*}
-    \dots
- \end{exercice*}
- \begin{corrige}
-    \dots
- \end{corrige}
- 
- 
+\begin{exercice*} %5
+   Dans chacune des figures suivantes, colorier une base en gris, repasser une hauteur en rouge puis calculer le volume.
+   
+   \vspace*{-5mm}
+   \begin{center}
+   \begin{minipage}[t]{0.3\linewidth}
+      \begin{Geometrie}
+         pair A[],B[],C[],D[];
+         A1=u*(0.1,0.1);
+         B1-A1=u*(2,0);
+         C1-A1=u*(1.7,0.8);
+         D1-A1=u*(0.3,0.6);
+         A2-A1=u*(0,1.2);
+         B2-B1=u*(0,1.2);
+         C2-C1=u*(0,1.2);
+         D2-D1=u*(0,1.2);
+         fill polygone(A1,B1,C1,D1) withcolor LightGray;
+         trace chemin(A2,B2,C2,D2,A2,A1,B1,B2);
+         trace chemin(A1,D1,C1,B1) dashed evenly;
+         trace C1--C2 dashed evenly;
+         trace D1--D2 dashed evenly;
+         trace cotation(B1,B2,-3mm,-4mm,btex \Lg[cm]{6.5} etex);
+         label(btex \Aire[cm]{8} etex,iso(A1,B1,C1,D1));
+      \end{Geometrie}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.3\linewidth}
+      \begin{Geometrie}
+         pair A[],B[],C[];
+         A1=u*(0.7,0.7);
+         B1-A1=u*(2.1,0);
+         C1-A1=u*(1.3,0.8);
+         A2-A1=u*(0,1.2);
+         B2-B1=u*(0,1.2);
+         C2-C1=u*(0,1.2);
+         trace chemin(A2,B2,C2,D2,A2,A1,B1,B2);
+         trace chemin(A1,C1,B1) dashed evenly;
+         trace C2--C1 dashed evenly;
+         trace cotation(B1,B2,-3mm,-4mm,btex \Lg[cm]{5} etex);
+         trace cotation(A1,B1,-3mm,-2mm,btex \Lg[cm]{4} etex);
+         trace cotation(iso(A1,B1),C1,1mm,3mm,btex \Lg[cm]{3} etex);
+         trace C1--iso(A1,B1);
+         trace codeperp(B1,iso(A1,B1),C1,5);
+      \end{Geometrie}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.3\linewidth}
+      \begin{Geometrie}
+         pair A[],B[],C[];
+         A1=u*(1,1);
+         B1-A1=u*(2.1,0);
+         C1-A1=u*(0,1.2);
+         A2-A1=u*(0.6,0.4);
+         B2-B1=u*(0.6,0.4);
+         C2-C1=u*(0.6,0.4);
+         trace chemin(A1,B1,C1,A1);
+         trace chemin(C1,C2,B2,B1);
+         trace chemin(A1,A2,B2) dashed evenly;
+         trace A2--C2 dashed evenly;
+         trace cotation(C1,C2,3mm,4mm,btex \Lg[cm]{5} etex);
+         trace cotation(A1,B1,-3mm,-2mm,btex \Lg[cm]{8} etex);
+         trace cotation(A1,C1,3mm,3mm,btex \Lg[cm]{6} etex);
+         trace cotation(C2,B2,3mm,3mm,btex \Lg[cm]{10} etex);
+         trace codeperp(B1,A1,C1,5);
+      \end{Geometrie}
+   \end{minipage}
+
+   \vspace*{-5mm}
+   \begin{minipage}[t]{0.4\linewidth}
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},CoinHD={u*(10,10)},TypeTrace="Espace"]
+         Initialisation(5,0,20,20);
+         color O,O',A,A',B,B',C,C';
+         O=(0,0,0);
+         O'-O=(0,0,1.75);
+         A-O=(0,1.75,0);
+         A'-A=O'-O;
+         C=symetrie(A,O);
+         C'-C=O'-O;
+         B-O=(-1.75,0,0);
+         B'-B=O'-O;
+         path cc,cd;
+         cc=cercles(O,A,O,A,B);
+         cd=cercles(O',A',O',A',B');
+         trace cd;
+         trace segment(C,C');
+         trace segment(A,A');
+         trace (subpath(0,length cc/2) of cc) dashed evenly;
+         trace subpath(length cc/2,length cc) of cc;
+         trace cotationmil(A,A',-3mm,15,btex \Lg[cm]{5} etex);
+         trace cotationmil(O,A,0mm,15,btex \Lg[cm]{4} etex);         
+      \end{Geometrie}  
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.4\linewidth}
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},CoinHD={u*(10,10)},TypeTrace="Espace"]
+         Initialisation(5,0,20,20);
+         color O,O',A,A',B,B',C,C',D;
+         O=(0,0,0);
+         O'-O=(0,0,1.75);
+         A-O=(0,1.75,0);
+         A'-A=O'-O;
+         C=symetrie(A,O);
+         C'-C=O'-O;
+         B-O=(-1.75,0,0);
+         D-O=(0,-1.75,0);
+         B'-B=O'-O;
+         path cc,cd;
+         cc=cercles(O,A,O,A,B);
+         cd=cercles(O',A',O',A',B');
+         trace cd;
+         trace segment(C,C');
+         trace segment(A,A');
+         trace (subpath(0,length cc/2) of cc) dashed evenly;
+         trace subpath(length cc/2,length cc) of cc;
+         trace cotationmil(A,A',-3mm,15,btex \Lg[cm]{5} etex);
+         trace cotationmil(D,A,0mm,15,btex \Lg[cm]{8} etex);         
+      \end{Geometrie}  
+   \end{minipage}
+   \end{center}   
+\end{exercice*}
+
+\begin{corrige}
+   \begin{itemize}
+      \item $V_a =\Aire[cm]{8}\times\Lg[cm]{6,5} =\textcolor{red}{\Vol[cm]{52}}$ \smallskip
+      \item $V_b =\dfrac{\Lg[cm]{4}\times\Lg[cm]{3}}{2}\times\Lg[cm]{5} =\textcolor{red}{\Vol[cm]{30}}$ \smallskip
+      \item $V_c =\dfrac{\Lg[cm]{8}\times\Lg[cm]{6}}{2}\times\Lg[cm]{5} =\textcolor{red}{\Vol[cm]{120}}$ \smallskip
+      \item $V_d =\pi\times(\Lg[cm]{4})^2\times\Lg[cm]{5} \approx\textcolor{red}{\Vol[cm]{251,3}}$ \smallskip
+      \item $V_e =\pi\times(\Lg[cm]{4})^2\times\Lg[cm]{5} \approx\textcolor{red}{\Vol[cm]{251,3}}$
+   \end{itemize}
+\end{corrige}

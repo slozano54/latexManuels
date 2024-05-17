@@ -2,14 +2,115 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
+\begin{enigme}[Format A5 et cylindres]
+   \partie[construction de cylindres]
+   \ \\ [-10mm]
+      \begin{enumerate}
+         \item Découper une feuille au format A4 suivant sa médiane la plus courte afin d'obtenir deux feuilles au format A5.
+            \begin{center}
+               \begin{pspicture}(0,0)(3,2.3)
+                  \psframe(0,0)(3,2.1)
+                  \psline[linestyle=dashed](1.5,0)(1.5,2)
+                  \rput(0.75,1){A5}
+                  \rput(2.25,1){A5}
+               \end{pspicture}
+            \end{center}
+         \begin{multicols}{2}
+         \item Rouler la première feuille dans le sens de la \\
+            longueur pour former un premier cylindre. \\
+            {\psset{unit=0.7}
+               \begin{pspicture}(0.5,-0.5)(11,3.75)
+                  \psframe(0,0)(3,2.1)
+                  \rput(1.5,1){A5}
+                  \rput(4,1){$\Rightarrow$}
+                  \psline(5.6,-0.37)(5.6,1.65)
+                  \psline(5,0)(5,2)
+                  \psline(7,0)(7,2)
+                  \psellipticarc(6,2)(1,0.4){0}{-137}
+                  \psellipticarc(6,0)(1,0.4){0}{137}
+                  \psellipticarc(6,0)(1,0.4){180}{-137}
+                  \rput(8,1){$\Rightarrow$}
+                  \psline(10.5,0)(10.5,2)
+                  \psline(9,0)(9,2)
+                  \psellipse(9.75,2)(0.75,0.3)
+                  \psellipticarc(9.75,0)(0.75,0.3){180}{0}
+               \end{pspicture}}
+         \item Rouler la deuxième feuille dans le sens de la \\
+            largeur pour former un deuxième cylindre. \\
+            {\psset{unit=0.71}
+               \begin{pspicture}(0,-0.5)(8.5,3.75)
+                  \psframe(0,0)(2.1,3)
+                  \rput(1,1.5){A5}
+                  \rput(3,1.5){$\Rightarrow$}
+                  \psline(4.4,-0.3)(4.4,2.7)
+                  \psline(4,0)(4,3)
+                  \psline(5.5,0)(5.5,3)
+                  \psellipticarc(4.75,3)(0.75,0.35){0}{-137}
+                  \psellipticarc(4.75,0)(0.75,0.35){0}{137}
+                  \psellipticarc(4.75,0)(0.75,0.35){180}{-137}
+                  \rput(6.5,1.5){$\Rightarrow$}
+                  \psline(8.5,0)(8.5,3)
+                  \psline(7.5,0)(7.5,3)
+                  \psellipse(8,3)(0.5,0.25)
+                  \psellipticarc(8,0)(0.5,0.25){180}{0}
+               \end{pspicture}}
+         \end{multicols}
+         \item À votre avis, ces cylindres ont-il le même volume ? Si non, quel est celui qui semble avoir le volume le plus grand ? \pointilles
+      \end{enumerate}
+      
+   \partie[calcul du volume]
+   \ \\ [-10mm]
+   \begin{enumerate}
+     \setcounter{enumi}{4}
+        \item Rappeler les dimensions d'une feuille au format A4. En déduire les dimensions d'une feuille au format A5. \par \smallskip
+           \pointilles \medskip
+        \item Premier cylindre.
+        \begin{enumerate}
+           \item Donner la mesure de la hauteur du cylindre. \pointilles \\
+           \item Que vaut le périmètre du disque de base du cylindre ? En déduire son rayon. \par \smallskip
+           \pointilles \medskip
+           \item Calculer alors  le volume du premier cylindre. \par \smallskip
+           \pointilles \\
+        \end{enumerate}
+        \item Deuxième cylindre.
+        \begin{enumerate}
+           \item Donner la mesure de la hauteur du cylindre. \pointilles \\
+           \item Que vaut le périmètre du disque de base du cylindre ? En déduire son rayon. \par \smallskip
+           \pointilles \medskip
+           \item Calculer alors  le volume du deuxième cylindre. \par \smallskip
+           \pointilles \bigskip
+        \end{enumerate}
+        \item Conclusion : \pointilles \par \medskip
+           \pointilles
+     \end{enumerate}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
-\begin{corrige}
-    {\red
-    \dots
-    }
- \end{corrige}
+\begin{corrige}   
+\begin{enumerate}
+   \setcounter{enumi}{4}
+      \item Format A4 : \textcolor{red}{ $\ell =\Lg[cm]{21}; L=\Lg[cm]{29,7}$}. \\
+         Format A5 : \textcolor{red}{ $\ell =\Lg[cm]{29,7}\div2 = \Lg[cm]{14,85}; L=\Lg[cm]{21}$}.
+      \item
+      \begin{enumerate}
+         \item La hauteur vaut \textcolor{red}{ $h_1 =\Lg[cm]{14,85}$}.
+         \item Le périmètre du disque vaut \textcolor{red}{ $P_1 =\Lg[cm]{21}$}. \\
+         Or, le périmètre d'un disque se calcule grâce à la formule $2\pi\times R$ où $R$ est le rayon du disque. \\
+            Donc,  $\textcolor{red}{ R_1} =\Lg[cm]{21}\div(2\pi) \textcolor{red}{ \approx\Lg[cm]{3,34}}$.
+         \item $\mathcal{V}_1 =\pi\times R_1^2\times h_1 \approx\pi\times(\Lg[cm]{3,34})^2\times\Lg[cm]{14,85}$ \\
+            \textcolor{red}{ $\mathcal{V}_1 \approx\Vol[cm]{520,44}$}.
+      \end{enumerate}
+      \setcounter{enumi}{6}
+      \item
+      \begin{enumerate}
+         \item La hauteur vaut \textcolor{red}{ $h_2 =\Lg[cm]{21}$}.
+         \item Le périmètre du disque vaut \textcolor{red}{ $P_2 =\Lg[cm]{14,85}$}. \\
+            Donc,  $\textcolor{red}{ R_2} =\Lg[cm]{14,85}\div(2\pi) \textcolor{red}{ \approx\Lg[cm]{2,36}}$.
+         \item $\mathcal{V}_2 =\pi\times R_2^2\times h_2 \approx\pi\times(\Lg[cm]{2,36})^2\times\Lg[cm]{21}$ \\
+            \textcolor{red}{ $\mathcal{V}_2 \approx\Vol[cm]{367,45}$}.
+      \end{enumerate}
+      \setcounter{enumi}{7}
+      \item \textcolor{red}{ Le premier cylindre a le volume le plus grand}, malgré la feuille identique.
+   \end{enumerate}
+\end{corrige}

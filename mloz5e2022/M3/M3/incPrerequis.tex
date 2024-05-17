@@ -1,8 +1,42 @@
-\vspace*{-13mm}
+\vspace*{-5mm}
+\begin{changemargin}{-10mm}{-15mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
 %pre-002
 \input{\currentpath/inc/prerequis002.tex}
-\begin{debat}[\dots]
-\dots
+% \begin{debat}[\Capa[L]{1}=\Vol[dm]{1}]
+\begin{debat}[${\Capa[L]{1}}={\Vol[dm]{1}}$]
+   \begin{minipage}{0.7\linewidth}
+    Cette correspondance est à connaître. Pourtant, elle ne paraît pas si naturelle que cela : elle signifie que l'eau contenue dans une bouteille d'un litre remplirait exactement un cube de \Lg[dm]{1} de côté.
+   \end{minipage}
+   \hfill     
+   \begin{minipage}{0.25\linewidth}
+      \begin{center}
+         {\psset{unit=0.7}
+         \begin{pspicture}(0,0)(6,5.5)
+            \psline(0.5,0.5)(0.5,3.75) %bouteille
+            \psline(2,0.5)(2,3.75)
+            \psarc(1.5,3.75){0.5}{0}{90}
+            \psarc(1,3.75){0.5}{90}{180}
+            \psline(1,4.25)(1,5)
+            \psline(1.5,4.25)(1.5,5)
+            \psellipticarc(1.25,0.5)(0.75,0.3){180}{0}
+            \psellipticarc(1.25,3.5)(0.75,0.3){180}{0}
+            \psellipticarc[linestyle=dashed](1.25,3.5)(0.75,0.3){0}{180}
+            \psellipse(1.25,5)(0.25,0.1)
+            \rput(1.25,2){\textcolor{B1}{\Capa[L]{1}}}
+            \psframe(3,0.5)(5,2.5) %cube
+            \psline(3,2.5)(3.75,3.25)(5.75,3.25)(5.75,1.25)(5,0.5)
+            \psline(5,2.5)(5.75,3.25)
+            \rput(4,0){\textcolor{B1}{$\Lg[dm]{1} =\Lg[cm]{10}$}}
+            \rput(4,1.5){\textcolor{B1}{$\Vol[dm]{1}$}}
+         \end{pspicture}}
+      \end{center}
+   \end{minipage}
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         \hrefVideo{https://www.yout-ube.com/watch?v=DRKmlWtUN0k}{\bf Correspondance entre unités de volume et de contenance},\\ chaîne de {\it Jean-Charles Toussaint}.
+      \end{center}
+   \end{cadre}
 \end{debat}
+\end{changemargin}

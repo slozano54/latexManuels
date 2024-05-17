@@ -1,2 +1,88 @@
-\section{\dots}
-\dots
+\section{Deux nouveaux solides : Le prisme et le cylindre}
+\begin{definition}[Le prisme droit]
+   \begin{minipage}{0.25\linewidth}
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},CoinHD={u*(10,10)},TypeTrace="Espace"]
+         Initialisation(5,30,30,70);
+         color A,B,C,D,E,F;
+         D=(0.75,0,0);
+         F=(0.75,1/2,0);
+         E=(0,1/2,0);
+         A-D=(0,0,1);
+         C-F=A-D;
+         B-E=A-D;
+         NbS:=6;
+         Sommet1:=A;
+         Sommet2:=B;
+         Sommet3:=C;
+         Sommet4:=D;
+         Sommet5:=E;
+         Sommet6:=F;
+         NF:=5;
+         Fc[100]:=3;Fc[101]:=1;Fc[102]:=3;Fc[103]:=2;
+         Fc[200]:=3;Fc[201]:=4;Fc[202]:=5;Fc[203]:=6;
+         Fc[300]:=4;Fc[301]:=1;Fc[302]:=2;Fc[303]:=5;Fc[304]:=4;
+         Fc[400]:=4;Fc[401]:=1;Fc[402]:=4;Fc[403]:=6;Fc[404]:=3;
+         Fc[500]:=4;Fc[501]:=3;Fc[502]:=6;Fc[503]:=5;Fc[504]:=2;
+         DessineObjet;
+         label.ulft(btex A etex,Projette(A));
+         label.top(btex B etex,Projette(B));
+         label.lrt(btex C etex,Projette(C));
+         label.rt(btex E etex,Projette(E));
+         label.bot(btex F etex,Projette(F));
+         label.llft(btex D etex,Projette(D));
+         % trace appelation(D,A,3mm,btex hauteur etex);
+         trace cotationmil(D,A,5mm,20,btex hauteur etex);
+      \end{Geometrie} 
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.7\linewidth}
+      \begin{itemize}
+         \item  ses bases sont parallèles, ce sont des polygones superposables;
+         \item  les autres faces (faces latérales) sont des rectangles;
+         \item  les arêtes qui relient les deux bases ont toutes la même longueur; cette longueur est la hauteur du prisme droit.
+      \end{itemize}
+   \end{minipage}
+\end{definition}
+
+\begin{definition}[Le cylindre]
+   \begin{minipage}{0.25\linewidth}
+      \begin{Geometrie}[CoinBG={u*(-10,-10)},CoinHD={u*(10,10)},TypeTrace="Espace"]
+         Initialisation(5,0,20,70);
+         color O,O',A,A',B,B',C,C';
+         O=(0,0,0);
+         O'-O=(0,0,1);
+         A-O=(0,1/2,0);
+         A'-A=O'-O;
+         C=symetrie(A,O);
+         C'-C=O'-O;
+         B-O=(-1/2,0,0);
+         B'-B=O'-O;
+         path cc,cd;
+         cc=cercles(O,A,O,A,B);
+         cd=cercles(O',A',O',A',B');
+         trace cd;
+         trace segment(C,C');
+         trace segment(A,A');
+         trace (subpath(0,length cc/2) of cc) dashed evenly;
+         trace subpath(length cc/2,length cc) of cc;
+         trace segment(O,A) dashed evenly;
+         trace segment(O',A') ;
+         trace segment(O,O') dashed evenly;
+         trace codeperp(A,O,O',5);
+         trace codeperp(A',O',O,5);
+         trace cotationmil(A,A',-3mm,20,btex hauteur etex);
+         % trace cotationmil(O,O',3mm,10,btex hauteur etex);
+         marque_p:="croix";
+         pointe(O);
+         pointe(O');
+         marque_p:="non";
+      \end{Geometrie}  
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.7\linewidth}
+      \begin{itemize}
+         \item  ses bases sont parallèles, ce sont des disques superposables;
+         \item  le segment qui joint les centres des disques de base est perpendiculaire aux bases, sa longueur est la hauteur du cylindre.
+      \end{itemize}
+   \end{minipage}
+\end{definition}
