@@ -1,2 +1,91 @@
-\section{...}
-...
+\section{Représentation graphique d'une fonction linéaire}
+\begin{propriete}[\admise]
+    Dans un repère, la représentation graphique d'une fonction linéaire de coefficient $a$ est une droite passant par l'origine du repère.
+\end{propriete}
+\begin{exemple*1}
+    Représenter graphiquement la fonction linéaire $f$ de coefficient 0,6.
+
+    $$f:x\mapsto0,6x$$
+    \begin{minipage}{0.55\linewidth}
+        \psset{unit=0.9}
+        \begin{pspicture}(-3,-3)(4,3)
+            \psplot[plotpoints=2,linecolor=red]{-3}{4}{0.6 x mul}
+            \rput(0,0){\rnode{A}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \rput(3,1.8){\rnode{C}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \psgrid[griddots=5,subgriddots=5,gridlabels=0pt]
+            \psline{->}(0,-3)(0,3)
+            \psline{->}(-3,0)(4,0)
+            {\footnotesize
+            \rput(1,-0.2){1}
+            \rput(-0.2,1){1}
+            \rput(3,-0.2){3}
+            \rput(-0.25,1.8){1,8}
+            }
+            \pscircle*(1,0){0.05}
+            \pscircle*(0,1){0.05}
+            \pscircle*(0,1.8){0.05}
+            \pscircle*(3,0){0.05}
+            \psline{->}(0,1.8)(3,1.8)
+            \psline{->}(3,0)(3,1.8)
+        \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.45\linewidth}
+        Comme $f$ est une fonction linéaire, sa représentation graphique est une droite qui passe par \rnode{B}{\psframebox{l'origine du repère}}.
+        $$\begin{tabular}{|c|c|c|}
+        \hline
+        $x$&0&3\\
+        \hline
+        $f(x)$&0&1,8\\
+        \hline
+        \end{tabular}
+        $$
+        On prend $x=3$ : son image est $f(3)=0,5\times3=1,8$. Je place \rnode{D}{\psframebox{le point de coordonnées $(3;1,8)$}}.
+    \end{minipage}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{B}{A}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{D}{C}
+\end{exemple*1}
+\begin{propriete}[\admise]
+    Soit $(d)$ la droite qui représente graphiquement la fonction linéaire de coefficient $a$.
+    
+    On dit alors que $a$ est {\bf le coefficient directeur} de la droite $(d)$ et que $y=ax$ est une {\bf équation de la droite $(d)$}.
+\end{propriete}
+\begin{exemple*1}
+    Représenter graphiquement la fonction linéaire $g$ de coefficient $-2$.
+
+    $$f:x\mapsto-2x$$
+    \begin{minipage}{0.55\linewidth}
+        \psset{unit=0.9}
+        \begin{pspicture}(-3,-3)(4,3)
+            \psplot[plotpoints=2,linecolor=red]{-1.5}{1.5}{-2 x mul}
+            \rput(0,0){\rnode{A}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \rput(1,-2){\rnode{C}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \psgrid[griddots=5,subgriddots=5,gridlabels=0pt]
+            \psline{->}(0,-3)(0,3)
+            \psline{->}(-3,0)(4,0)
+            {\footnotesize
+            \rput(1,-0.2){1}
+            \rput(-0.2,1){1}
+            \rput(-0.25,-2){$-2$}
+            }
+            \pscircle*(1,0){0.05}
+            \pscircle*(0,1){0.05}
+            \pscircle*(0,-2){0.05}
+            \psline{->}(0,-2)(1,-2)
+            \psline{->}(1,0)(1,-2)
+        \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.45\linewidth}    
+        Comme $f$ est une fonction linéaire, sa représentation graphique est une droite qui passe par \rnode{B}{\psframebox{l'origine du repère}}.
+        $$\begin{tabular}{|c|c|c|}
+        \hline
+        $x$&0&1\\
+        \hline
+        $f(x)$&0&-2\\
+        \hline
+        \end{tabular}
+        $$
+        On prend $x=1$ : son image est $g(1)=-2\times1=-2$. Je place \rnode{D}{\psframebox{le point de coordonnées $(1;-2)$}}.
+    \end{minipage}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{B}{A}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{D}{C}    
+\end{exemple*1}

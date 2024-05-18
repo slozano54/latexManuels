@@ -1,0 +1,50 @@
+\section{Système de 2 équations à 2 inconnues (Hors programme)}
+\begin{exemple*1}
+    Résoudre graphiquement le système
+    $\left\lbrace
+    \begin{tabular}{l}
+    $2x-y=1$\\
+    $-x-y=-2$\\
+    \end{tabular}
+    \right.
+    $
+    \par On obtient le système d'équations équivalent suivant : 
+    $\left\lbrace
+    \begin{tabular}{l}
+    $y=2x-1$\\
+    $y=-x+2$\\
+    \end{tabular}
+    \right.
+    $
+    \par et la solution est le couple de coordonnées du point d'intersection des deux droites qui représentent les fonctions affines $f(x)=2x-1$ et $g(x)=-x+2$; c'est à dire dans ce cas le couple \rnode{D}{\underline{$(1;1)$}}.
+    \begin{center}
+        \begin{pspicture}(-3,-3)(4,4)
+            %amélioré par Manuel Luque
+            \SpecialCoor
+            % on prend deux points de la droite 1
+            \pnode(!/a1 2 def /b1 -1 def /xA1 1  def /yA1 a1 xA1 mul b1 add def xA1 yA1){A1}
+            \pnode(!/xB1 2.5 def /yB1 a1 xB1 mul b1 add def xB1 yB1){B1}
+            \pcline[linecolor=red](A1)(B1)
+            \aput{:U}{\red $y=2x-1$}
+            \pnode(!/xA1 -1  def /yA1 a1 xA1 mul b1 add def xA1 yA1){A1}
+            \psline[linecolor=red](A1)(B1)
+            % on prend deux points de la droite 2
+            \pnode(!/a2 -1 def /b2 2 def /xA2 2 def  /yA2 xA2 a2 mul b2 add def xA2 yA2){A2}
+            \pnode(!/xB2  4 def  /yB2 xB2 a2 mul b2 add def xB2 yB2){B2}
+            \pcline[linecolor=blue](A2)(B2)
+            \aput{:U}{\blue $y=-x+2$}
+            \pnode(!/xA2 -2 def  /yA2 xA2 neg 2 add def xA2 yA2){A2}
+            \psline[linecolor=blue](A2)(B2)
+            \pnode(! /xinter b2 b1 sub a1 a2 sub div def
+                    /yinter a1 xinter mul b1 add def
+                    xinter yinter){C}
+            \pscircle[fillstyle=solid,fillcolor=yellow](C){0.1}
+            \psgrid[griddots=5,subgriddots=5,gridlabels=0pt]
+            \psline{->}(0,-3)(0,4)
+            \psline{->}(-3,0)(4,0)
+            \pscircle*(1,0){0.05}
+            \pscircle*(0,1){0.05}
+            \ncline[linecolor=gray,linestyle=dashed]{<->}{D}{C}
+        \end{pspicture}
+    \end{center}
+\end{exemple*1}

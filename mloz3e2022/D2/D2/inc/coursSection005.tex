@@ -1,0 +1,105 @@
+\begin{changemargin}{0mm}{-10mm}
+\section{Représentation graphique d'une fonction affine}
+\begin{propriete}[\admise]
+    Dans un repère, la représentation graphique de la fonction affine $x\mapsto ax+b$ est la droite $(d)$ :
+    \begin{itemize}
+        \item qui passe par le point $B$ de coordonnées $(0;b)$;
+        \item qui est parallèle à la droite $(d')$ représentant la fonction linéaire associée.
+    \end{itemize}
+\end{propriete}
+\begin{exemple*1}
+    Représenter graphiquement la fonction affine $f$ définie par $f:x\mapsto-0,6x\rnode{E}{-1}$
+
+    \smallskip
+    \begin{minipage}{0.45\linewidth}
+        \psset{unit=0.85}
+        \begin{pspicture}(-3,-4)(4,3)
+            \psplot[plotpoints=2,linecolor=red]{-3}{4}{-0.6 x mul -1 add}
+            \psplot[plotpoints=2,linecolor=red,linestyle=dashed]{-3}{4}{-0.6 x mul}
+            \rput(0,-1){\rnode{A}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \rput(3,-2.8){\rnode{C}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \psgrid[griddots=5,subgriddots=5,gridlabels=0pt]
+            \psline{->}(0,-4)(0,3)
+            \psline{->}(-3,0)(4,0)
+            {\footnotesize
+            \rput(1,+0.2){1}
+            \rput(-0.2,1){1}
+            \rput(-0.25,-2.8){$-2,8$}
+            \rput(3,0.2){3}
+            }
+            \pscircle*(1,0){0.05}
+            \pscircle*(0,1){0.05}
+            \pscircle*(0,-2.8){0.05}
+            \pscircle*(3,0){0.05}
+            \psline{->}(0,-2.8)(3,-2.8)
+            \psline{->}(3,0)(3,-2.8)
+        \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        Comme $f$ est une fonction affine, sa représentation graphique est une droite qui passe par \rnode{B}{\psframebox{l'ordonnée à l'origine (0,\rnode{F}{\pscirclebox{$-1$}})}}.
+        $$\begin{tabular}{|c|c|c|}
+        \hline
+        $x$&0&3\\
+        \hline
+        $f(x)$&$-1$&-2,8\\
+        \hline
+        \end{tabular}
+        $$
+        On prend $x=3$ :\\son image est $f(3)=-0,6\times3-1=-1,8-1=-2,8$. Je place \rnode{D}{\psframebox{le point de coordonnées $(3;-2,8)$}}.
+    \end{minipage}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{B}{A}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{D}{C}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{E}{F}
+\end{exemple*1}
+\begin{propriete}[\admise]
+    On dit que $y=ax+b$ est une équation de la droite $(d)$ qui représente la fonction affine qui à $x$ associe $ax+b$. On dit également que :
+    \begin{itemize}
+        \item $b$ est l'ordonnée à l'origine,
+        \item $a$ est le coefficient directeur.
+    \end{itemize}
+\end{propriete}
+\begin{exemple*1}
+    Représenter graphiquement la fonction affine $g$ définie par $g:x\mapsto1,2x\rnode{E}{+0,6}$
+
+    \smallskip
+    \begin{minipage}{0.45\linewidth}
+        \psset{unit=0.85}
+        \begin{pspicture}(-3,-3)(4,4)
+            \psplot[plotpoints=2,linecolor=red]{-3}{2.84}{1.2 x mul 0.6 add}
+            \psplot[plotpoints=2,linecolor=red,linestyle=dashed]{-2.5}{3.33}{1.2 x mul}
+            \rput(0,0.6){\rnode{A}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \rput(2,3){\rnode{C}{\pscircle[fillstyle=solid,fillcolor=yellow](0,0){0.1}}}
+            \psgrid[griddots=5,subgriddots=5,gridlabels=0pt]
+            \psline{->}(0,-3)(0,4)
+            \psline{->}(-3,0)(4,0)
+            {\footnotesize
+            \rput(1,+0.2){1}
+            \rput(-0.2,1){1}
+            \rput(-0.2,3){3}
+            \rput(2,-0.2){2}
+            }
+            \pscircle*(1,0){0.05}
+            \pscircle*(0,1){0.05}
+            \pscircle*(0,3){0.05}
+            \pscircle*(2,0){0.05}
+            \psline{->}(0,3)(2,3)
+            \psline{->}(2,0)(2,3)
+        \end{pspicture}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        Comme $g$ est une fonction affine, sa représentation graphique est une droite qui passe par \rnode{B}{\psframebox{l'ordonnée à l'origine (0,\rnode{F}{\pscirclebox{+0,6}})}}.
+        $$\begin{tabular}{|c|c|c|}
+        \hline
+        $x$&0&2\\
+        \hline
+        $g(x)$&1&3\\
+        \hline
+        \end{tabular}
+        $$
+        On prend $x=2$ :\\son image est $g(2)=1,2\times2+0,6=2,4+0,6=3$. Je place \rnode{D}{\psframebox{le point de coordonnées $(2;3)$}}.
+    \end{minipage}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{B}{A}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{D}{C}
+    \ncline[linecolor=gray,linestyle=dashed,nodesepA=3pt,nodesepB=3pt]{->}{E}{F}
+\end{exemple*1}
+\end{changemargin}

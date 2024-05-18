@@ -1,0 +1,81 @@
+\vspace*{-30mm}
+\section{Proportionnalité des accroissements d'une fonction affine}
+\begin{propriete}[\admise]
+    Soit $f$ une fonction affine $x\mapsto ax+b$.
+
+    Si $x$ varie (c'est à dire augmente ou diminue) d'un nombre $h$, alors son image $f(x)$ varie de $ah$.
+\end{propriete}
+\begin{methode*1}[Expression algébrique d'une fonction affine - Méthode 1]
+    \exercice
+    Déterminer la fonction affine $f$ tel que $f(1)=4$ et $f(3)=8$
+    \correction
+    Une application affine est de la forme $x\mapsto ax+b$.
+    $$\begin{tabular}{|c|c|c|}
+    \hline
+    $x$&1&3\\
+    \hline
+    $f(x)$&4&8\\
+    \hline
+    \end{tabular}$$
+    \par Donc
+    $$\Eqalign{
+    4&=2\times a\cr
+    a&=2\cr
+    }$$
+    \par D'où $f$ est de la forme $x\mapsto2x+b$.
+    \par Or $f(1)=2\times1+b$ et $f(1)=4$.
+    \par D'où
+    $$\Eqalign{
+    4&=2+b\cr
+    b&=2\cr
+    }$$
+    \par L'application affine cherchée est $x\mapsto2x+2$.
+\end{methode*1}
+\begin{methode*1}[Expression algébrique d'une fonction affine - Méthode 2]
+    \exercice
+    Déterminer la fonction affine $f$ tel que $f(1)=4$ et $f(3)=8$
+    \correction
+    Une application affine est de la forme $x\mapsto ax+b$. Donc
+
+    \begin{minipage}{0.5\linewidth}
+    $$\left\{\begin{tabular}{l}
+    $4=a\times1+b$\\
+    $8=a\times3+b$\\
+    \end{tabular}
+    \right.
+    $$
+    $$\left\{\begin{tabular}{l}
+    $4=a+b$\\
+    $8=3a+b$\\
+    \end{tabular}
+    \right.
+    $$
+    $$\left\{\begin{tabular}{l}
+    $-4=-a-b$\\
+    $8=3a+b$\\
+    \end{tabular}
+    \right.    
+    $$
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+    $$\left\{\begin{tabular}{l}
+    $4=2a$\\
+    $8=3a+b$\\
+    \end{tabular}
+    \right.
+    $$
+    $$\left\{\begin{tabular}{l}
+    $a=2$\\
+    $8=6+b$\\
+    \end{tabular}
+    \right.
+    $$
+    $$\left\{\begin{tabular}{l}
+    $a=2$\\
+    $b=2$\\
+    \end{tabular}
+    \right.
+    $$
+    \end{minipage}
+    \par Donc la fonction $f$ est $x\mapsto2x+2$.
+\end{methode*1}
