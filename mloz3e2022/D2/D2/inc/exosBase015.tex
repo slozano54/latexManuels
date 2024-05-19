@@ -1,6 +1,124 @@
 \begin{exercice*}
-    ...
+    Soient les fonctions $f : x\longmapsto 4 x$ et $g : x \longmapsto - 4 x$.
+    \begin{enumerate}
+        \item Déterminer la nature de leur représentation graphique ? Justifier.
+        \item Calculer les coordonnées des points $F$ et $G$ d'abscisse 1 de la courbe de $f$ puis de celle de $g$.
+        
+        \smallskip
+        \begin{minipage}{0.4\linewidth}
+            \item Tracer la courbe de $f$.
+        
+            \begin{center}
+                \Fonction[%
+                    Trace,%
+                    % Vide,%
+                    Calcul=0,%
+                    Ymin=-2,Ymax=2,Ystep=2,%
+                    Xmin=-0.5,Xmax=0.5,Xstep=2,%
+                    Origine={(0.5,2)},%
+                    PasGrilleX=0.5,PasGrilleY=0.5,%
+                    Grille,%
+                    Traces={%
+                        label.bot(btex \num{1} etex,placepoint(1,0));
+                        label.lft(btex \num{1} etex,placepoint(0,1));
+                        marque_p:="plein";
+                        marque_s:=0.5*marque_s;
+                        pointe(placepoint(1,0));
+                        pointe(placepoint(0,1));
+                    }
+                ]{}
+            \end{center}    
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.4\linewidth}
+            \item Tracer la courbe de $g$.
+            
+            \begin{center}
+                \Fonction[%
+                    Trace,%
+                    % Vide,%
+                    Calcul=0,%
+                    Ymin=-2,Ymax=2,Ystep=2,%
+                    Xmin=-0.5,Xmax=0.5,Xstep=2,%
+                    Origine={(0.5,2)},%
+                    PasGrilleX=0.5,PasGrilleY=0.5,%
+                    Grille,%
+                    Traces={%
+                        label.bot(btex \num{1} etex,placepoint(1,0));
+                        label.lft(btex \num{1} etex,placepoint(0,1));
+                        marque_p:="plein";
+                        marque_s:=0.5*marque_s;
+                        pointe(placepoint(1,0));
+                        pointe(placepoint(0,1));
+                    }
+                ]{}
+            \end{center}
+        \end{minipage}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Soient les fonctions $f : x\longmapsto 4 x$ et $g : x \longmapsto - 4 x$.
+
+    \begin{enumerate}
+        \item Déterminer la nature de leur représentation graphique ? Justifier.
+        
+        \textcolor{red}{Les fonctions sont linéaires donc e sont des droites passant par l'origine du repère.}
+        \item Calculer les coordonnées des points $F$ et $G$ d'abscisse 1 de la courbe de $f$ puis de celle de $g$.
+        
+        \textcolor{red}{$F(1;4)$ et $G(1;-4)$}
+        
+        \smallskip
+        \begin{minipage}{0.48\linewidth}
+            \item Courbe de $f$.
+        
+                \Fonction[%
+                    Trace,%
+                    Calcul=4x,%
+                    CouleurTrace=red,%
+                    Ymin=-2,Ymax=2,Ystep=2,%
+                    Xmin=-0.5,Xmax=0.5,Xstep=2,%
+                    Origine={(0.5,2)},%
+                    PasGrilleX=0.5,PasGrilleY=0.5,%
+                    Grille,%
+                    Traces={%
+                        label.bot(btex \num{1} etex,placepoint(1,0));
+                        label.lft(btex \num{1} etex,placepoint(0,1));
+                        label.rt(btex \textcolor{red}{$F$} etex,placepoint(1,4));
+                        marque_p:="plein";
+                        marque_s:=0.5*marque_s;
+                        pointe(placepoint(1,0));
+                        pointe(placepoint(0,1));
+                        drawoptions(withcolor red);
+                        pointe(placepoint(1,4));
+                    }
+                ]{}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\linewidth}
+            \item Courbe de $g$.
+            
+                \Fonction[%
+                    Trace,%
+                    % Vide,%
+                    Calcul=-4x,%
+                    CouleurTrace=red,%
+                    Ymin=-2,Ymax=2,Ystep=2,%
+                    Xmin=-0.5,Xmax=0.5,Xstep=2,%
+                    Origine={(0.5,2)},%
+                    PasGrilleX=0.5,PasGrilleY=0.5,%
+                    Grille,%
+                    Traces={%
+                        label.bot(btex \num{1} etex,placepoint(1,0));
+                        label.lft(btex \num{1} etex,placepoint(0,1));
+                        label.rt(btex \textcolor{red}{$G$} etex,placepoint(1,-4));
+                        marque_p:="plein";
+                        marque_s:=0.5*marque_s;
+                        pointe(placepoint(1,0));
+                        pointe(placepoint(0,1));
+                        drawoptions(withcolor red);
+                        pointe(placepoint(1,-4));
+                    }
+                ]{}
+        \end{minipage}
+    \end{enumerate}
 \end{corrige}

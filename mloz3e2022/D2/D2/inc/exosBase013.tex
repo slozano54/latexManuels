@@ -1,6 +1,109 @@
 \begin{exercice*}
-    ...
+    Les droites $(d_1)$, $(d_2)$ et $(d_3)$ sont les représentations graphiques respectives de quatre fonctions linéaires $f_1$, $f_2$ et $f_3$.
+
+    \scalebox{1}{
+    \Fonction[%
+        Trace,
+        Calcul={0.5x,-x+5,2x+1},% les fonctions.
+        Bornea={-1.5,-0.5,-1},% les bornes a de l'intervalle [a,b] de tracé
+        Borneb={7.5,6,2.3},% les bornes b de l'intervalle [a,b] de tracé
+        LabelC={0.9,0.95,0.9},% les positions du label des courbes
+        NomCourbe={$(d_1)$,$(d_2)$,$(d_3)$},% les noms des représentations graphiques.
+        Xmin=-1,Xmax=7,
+        Ymin=-0.5,Ymax=5,
+        CouleurTrace={bleu,Crimson,Gray},
+        Origine={(1,0.5)},
+        Grille,PasGrilleX=0.5,PasGrilleY=0.5,        
+        Graduations,
+        Traces={%
+            drawarrow placepoint(0,1)--placepoint(1,1) dashed evenly;
+            drawarrow placepoint(1,1)--placepoint(1,3) dashed evenly;
+            drawarrow placepoint(2,3)--placepoint(3,3) dashed evenly;
+            drawarrow placepoint(3,3)--placepoint(3,2) dashed evenly;
+            drawarrow placepoint(4,2)--placepoint(5,2) dashed evenly;
+            drawarrow placepoint(5,2)--placepoint(5,2.5) dashed evenly;
+        }
+    ]{}
+    }
+    \begin{enumerate}
+        \item Indiquer la(les) fonction(s) qui ont un coefficient négatif.        
+        \item Indiquer le coefficient de $f_1$, $f_2$ et $f_3$.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{15mm}|*{3}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Fonction}   &$f_1$&$f_2$&$f_3$\\\hline
+            \text{Coefficient}&&&\\\hline
+        \end{array}
+        \]        
+        }
+        \item Indiquer l'ordonnée à l'origine de chaque droite.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{30mm}|*{3}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Droite}   &$(d_1)$&$(d_2)$&$(d_3$)\\\hline
+            \text{Ordonnée à l'origine}&&&\\\hline
+        \end{array}
+        \]        
+        }
+        \item En déduire l'expression de chaque fonction.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Les droites $(d_1)$, $(d_2)$ et $(d_3)$ sont les représentations graphiques respectives de quatre fonctions linéaires $f_1$, $f_2$ et $f_3$.
+
+    \scalebox{1}{
+    \Fonction[%
+        Trace,
+        Calcul={0.5x,-x+5,2x+1},% les fonctions.
+        Bornea={-1.5,-0.5,-1},% les bornes a de l'intervalle [a,b] de tracé
+        Borneb={7.5,6,2.3},% les bornes b de l'intervalle [a,b] de tracé
+        LabelC={0.9,0.95,0.9},% les positions du label des courbes
+        NomCourbe={$(d_1)$,$(d_2)$,$(d_3)$},% les noms des représentations graphiques.
+        Xmin=-1,Xmax=7,
+        Ymin=-0.5,Ymax=5,
+        CouleurTrace={bleu,Crimson,Gray},
+        Origine={(1,0.5)},
+        Grille,PasGrilleX=0.5,PasGrilleY=0.5,        
+        Graduations,
+        Traces={%
+            drawarrow placepoint(0,1)--placepoint(1,1) dashed evenly;
+            drawarrow placepoint(1,1)--placepoint(1,3) dashed evenly;
+            drawarrow placepoint(2,3)--placepoint(3,3) dashed evenly;
+            drawarrow placepoint(3,3)--placepoint(3,2) dashed evenly;
+            drawarrow placepoint(4,2)--placepoint(5,2) dashed evenly;
+            drawarrow placepoint(5,2)--placepoint(5,2.5) dashed evenly;
+        }
+    ]{}
+    }
+
+    \begin{enumerate}
+        \item Indiquer la(les) fonction(s) qui ont un coefficient négatif.  
+    
+        \textcolor{red}{Pour $f_2$, quand les abscisses augmantent, les images correspondantes diminuent donc le coefficient estr négatif. }
+        \item Indiquer le coefficient de $f_1$, $f_2$ et $f_3$.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{15mm}|*{3}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Fonction}   &$f_1$&$f_2$&$f_3$\\\hline
+            \text{Coefficient}&\textcolor{red}{\num{0.5}}&\textcolor{red}{\num{-1}}&\textcolor{red}{\num{2}}\\\hline
+        \end{array}
+        \]        
+        }
+        \item Indiquer l'ordonnée à l'origine de chaque droite.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{30mm}|*{3}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Droite}   &$(d_1)$&$(d_2)$&$(d_3$)\\\hline
+            \text{Ordonnée à l'origine}&\textcolor{red}{\num{0}}&\textcolor{red}{\num{5}}&\textcolor{red}{\num{1}}\\\hline
+        \end{array}
+        \]        
+        }
+        \item En déduire l'expression de chaque fonction.
+        
+        \textcolor{red}{$f_1(x)=\num{0.5}x$; $f_2(x)=-x+5$ et $f_3(x)=2x+1$}
+    \end{enumerate}
 \end{corrige}

@@ -1,6 +1,31 @@
 \begin{exercice*}
-    ...
+    Une agence de location de voitures propose le tarif suivant : un forfait de \Prix{100} auquel s'ajoute \Prix{0,70} par kilomètre parcouru.
+    \begin{enumerate}
+        \item Calculer le prix à payer pour \Lg[km]{540}.
+        \item Avec un budget de \Prix{275}, déterminer le nombre de kilomètres que l'on peut parcourir.
+        \item On considère la fonction $f$ qui, au nombre de kilomètres parcourus $d$ , associe le prix à payer.
+        
+        Donner une expression de $f$, ainsi que sa nature.
+        \item Traduire les réponses des questions \setcounter{enumi}{0}\theenumi et \setcounter{enumi}{1}\theenumi en utilisant la fonction $f$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Une agence de location de voitures propose le tarif suivant : un forfait de \Prix{100} auquel s'ajoute \Prix{0,70} par kilomètre parcouru.
+
+    \begin{enumerate}
+        \item Calculer le prix à payer pour \Lg[km]{540}.
+        
+        \textcolor{red}{$\Prix{100} + 540\times\Prix{0.70}=\Prix{100}+\Prix{378}=\Prix{478}$. Il faut donc payer \Prix{478} pour parcourir \Lg[km]{540}.}
+        \item Avec un budget de \Prix{275}, déterminer le nombre de kilomètres que l'on peut parcourir.
+        
+        \textcolor{red}{Notons $d$ la distance cherchée. $100+d\times\num{0.70}=275$ donc $d\times\num{0.70}=175$ soit $d=\dfrac{175}{0.7}=250$. Pour \Prix{275}, on peut parcourir \Lg[km]{250}.}
+        \item On considère la fonction $f$ qui, au nombre de kilomètres parcourus $d$ , associe le prix à payer.
+        
+        Donner une expression de $f$, ainsi que sa nature.
+
+        \textcolor{red}{$f(d)=\num{0.70}\times d+100$ c'est une fonction affine.}
+        \item Traduire les réponses des questions \setcounter{enumi}{0}\theenumi et \setcounter{enumi}{1}\theenumi en utilisant la fonction $f$.
+        
+        \textcolor{red}{$f(540)=478$ et $f(250)=275$.}
+    \end{enumerate}
 \end{corrige}

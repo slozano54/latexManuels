@@ -1,6 +1,105 @@
 \begin{exercice*}
-    ...
+    Les droites $(d_1)$, $(d_2)$, $(d_3)$ et $(d_4)$ sont les représentations graphiques respectives de quatre fonctions linéaires $f_1$, $f_2$, $f_3$ et $f_4$.
+
+    \hspace*{-5mm}
+    \scalebox{0.8}{
+    \Fonction[%
+        Trace,
+        Calcul={3x,-1.5x,-0.5x,0.4x},% les fonctions.
+        Bornea={-1,-2.8,-5,-5},% les bornes a de l'intervalle [a,b] de tracé
+        Borneb={1.5,2,6,6},% les bornes b de l'intervalle [a,b] de tracé
+        LabelC={0.1,0.1,0.1,0.1},% les positions du label des courbes
+        NomCourbe={$(d_1)$,$(d_2)$,$(d_3)$,$(d_4)$},% les noms des représentations graphiques.
+        Xmin=-4.5,Xmax=4.5,
+        Ymin=-2,Ymax=3,
+        CouleurTrace={bleu,Crimson,Gray,DarkGreen},
+        Origine={(4,2)},
+        Grille,PasGrilleX=1,PasGrilleY=1,
+        Graduations,
+        Traces={%
+            draw placepoint(0,-1.5)--placepoint(1,-1.5) dashed evenly;
+            draw placepoint(1,0)--placepoint(1,-1.5) dashed evenly;
+            label.lrt(btex $A_1$ etex,placepoint(1,3));
+            label.llft(btex $A_2$ etex,placepoint(1,-1.5));
+            label.bot(btex $A_3$ etex,placepoint(2,-1));
+            label.bot(btex $A_4$ etex,placepoint(5,2));
+            label.lft(btex \num{-1.5} etex,placepoint(0,-1.5));
+            marque_p:="plein";
+            pointe(placepoint(1,3));
+            pointe(placepoint(1,-1.5));
+            pointe(placepoint(2,-1));
+            pointe(placepoint(5,2));
+        }
+    ]{}
+    }
+    \begin{enumerate}
+        \item Déterminer les coordonnées de $A_1$, $A_2$, $A_3$ et $A_4$.
+        \item En déduire quatre égalités avec $f_1$, $f_2$, $f_3$ et $f_4$.
+        \item En déduire le coefficient de $f_1$, $f_2$, $f_3$ et $f_4$.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{15mm}|*{4}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Fonction}   &$f_1$&$f_2$&$f_3$&$f_4$\\\hline
+            \text{Coefficient}&&&&\\\hline
+        \end{array}
+        \]        
+        }
+        \item En déduire l'expression de chaque fonction.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Les droites $(d_1)$, $(d_2)$, $(d_3)$ et $(d_4)$ sont les représentations graphiques respectives de quatre fonctions linéaires $f_1$, $f_2$, $f_3$ et $f_4$.
+
+    \scalebox{0.8}{
+    \Fonction[%
+        Trace,
+        Calcul={3x,-1.5x,-0.5x,0.4x},% les fonctions.
+        Bornea={-1,-2.8,-5,-5},% les bornes a de l'intervalle [a,b] de tracé
+        Borneb={1.5,2,6,6},% les bornes b de l'intervalle [a,b] de tracé
+        LabelC={0.1,0.1,0.1,0.1},% les positions du label des courbes
+        NomCourbe={$(d_1)$,$(d_2)$,$(d_3)$,$(d_4)$},% les noms des représentations graphiques.
+        Xmin=-4.5,Xmax=4.5,
+        Ymin=-2,Ymax=3,
+        CouleurTrace={bleu,Crimson,Gray,DarkGreen},
+        Origine={(4,2)},
+        Grille,PasGrilleX=1,PasGrilleY=1,
+        Graduations,
+        Traces={%
+            draw placepoint(0,-1.5)--placepoint(1,-1.5) dashed evenly;
+            draw placepoint(1,0)--placepoint(1,-1.5) dashed evenly;
+            label.lrt(btex $A_1$ etex,placepoint(1,3));
+            label.llft(btex $A_2$ etex,placepoint(1,-1.5));
+            label.bot(btex $A_3$ etex,placepoint(2,-1));
+            label.bot(btex $A_4$ etex,placepoint(5,2));
+            label.lft(btex \num{-1.5} etex,placepoint(0,-1.5));
+            marque_p:="plein";
+            pointe(placepoint(1,3));
+            pointe(placepoint(1,-1.5));
+            pointe(placepoint(2,-1));
+            pointe(placepoint(5,2));
+        }
+    ]{}
+    }
+    \begin{enumerate}
+        \item Déterminer les coordonnées de $A_1$, $A_2$, $A_3$ et $A_4$.
+        
+        \textcolor{red}{$A_1 (1;3)$ ; $A_2 (1;\num{-1.5})$ ; $A_3 (2;-1)$ ; $A_4 (5;2)$}
+        \item En déduire quatre égalités avec $f_1$, $f_2$, $f_3$ et $f_4$.
+        
+        \textcolor{red}{$f_1(1)=3$ ; $f_2(1)=\num{-1.5}$ ; $f_3(2)=-1$ ; $f_4(5)=2$}
+        \item En déduire le coefficient de $f_1$, $f_2$, $f_3$ et $f_4$.
+        
+        {\renewcommand{\arraystretch}{1.8}
+        \[\begin{array}{|>{\columncolor{gray!15}}>{\centering\arraybackslash}m{15mm}|*{4}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            \text{Fonction}   &$f_1$&$f_2$&$f_3$&$f_4$\\\hline
+            \text{Coefficient}&\textcolor{red}{3}&\textcolor{red}{\num{-1.5}}&$\textcolor{red}{-\dfrac{1}{2}}$&$\textcolor{red}{\dfrac{2}{5}}$\\\hline
+        \end{array}
+        \]        
+        }
+        \item En déduire l'expression de chaque fonction.
+        
+        \textcolor{red}{$f_1(x)=3x$ ; $f_2(x)=\num{-1.5}x$ ; $f_3(x)=-\dfrac{1}{2}x$ ; $f_4(x)=\dfrac{2}{5}x$}
+    \end{enumerate}
 \end{corrige}
