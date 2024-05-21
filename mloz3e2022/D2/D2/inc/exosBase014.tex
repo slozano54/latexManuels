@@ -1,6 +1,7 @@
 \begin{exercice*}
     Par lecture graphique, indique pour chaque fonction affine quelle droite est sa représentation graphique.
 
+    \hspace*{-3mm}
     \scalebox{1}{
     \Fonction[%
         Trace,
@@ -16,19 +17,15 @@
         Grille,PasGrilleX=0.5,PasGrilleY=0.5,Xstep=2,Ystep=2,
         % Graduations%,
         Traces={%
-            label.bot(btex \num{1} etex,placepoint(1,0));
-            label.lft(btex \num{1} etex,placepoint(0,1));
-            marque_p:="plein";
-            marque_s:=0.5*marque_s;
-            pointe(placepoint(1,0));
-            pointe(placepoint(0,1));
+            dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+            dotlabel.lft(btex \num{1} etex,placepoint(0,1));
         }
     ]{}
     }
 
-    \begin{minipage}{0.45\linewidth}
+    % \begin{minipage}{0.45\linewidth}
         {\renewcommand{\arraystretch}{1.8}
-        \[\begin{array}{|>{\centering\arraybackslash}m{22mm}|>{\centering\arraybackslash}m{15mm}|}%
+        \[\begin{array}{|>{\centering\arraybackslash}m{22mm}|>{\centering\arraybackslash}m{12mm}|}%
             \hline
             \rowcolor{gray!15}\text{Fonction}&\text{Droite}\\\hline
             $x\longmapsto 2x+1$&\\\hline
@@ -38,11 +35,12 @@
         \end{array}
         \]        
         }    
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\linewidth}
+    % \end{minipage}
+    % \hfill
+    % \begin{minipage}{0.45\linewidth}
+        
         {\renewcommand{\arraystretch}{1.8}
-        \[\begin{array}{|>{\centering\arraybackslash}m{22mm}|>{\centering\arraybackslash}m{15mm}|}%
+        \[\begin{array}{|>{\centering\arraybackslash}m{22mm}|>{\centering\arraybackslash}m{12mm}|}%
             \hline
             \rowcolor{gray!15}\text{Fonction}&\text{Droite}\\\hline
             $x\longmapsto 2x-3$&\\\hline
@@ -52,7 +50,7 @@
         \end{array}
         \]        
         }    
-    \end{minipage}
+    % \end{minipage}
 \end{exercice*}
 \begin{corrige}
     Par lecture graphique, indique pour chaque fonction affine quelle droite est sa représentation graphique.
@@ -72,12 +70,8 @@
         Grille,PasGrilleX=0.5,PasGrilleY=0.5,Xstep=2,Ystep=2,
         % Graduations%,
         Traces={%
-            label.bot(btex \num{1} etex,placepoint(1,0));
-            label.lft(btex \num{1} etex,placepoint(0,1));
-            marque_p:="plein";
-            marque_s:=0.5*marque_s;
-            pointe(placepoint(1,0));
-            pointe(placepoint(0,1));
+            dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+            dotlabel.lft(btex \num{1} etex,placepoint(0,1));
         }
     ]{}
     }

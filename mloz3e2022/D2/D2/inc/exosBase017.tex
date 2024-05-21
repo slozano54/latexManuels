@@ -1,6 +1,122 @@
 \begin{exercice*}
-    ...
+    Soit la fonction $g : x\longmapsto 2x -1$.
+    \begin{enumerate}
+        \item Indiquer la nature de sa représentation graphique.
+        
+        Justifier.
+        
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+        \item Compléter le tableau suivant.
+        {\renewcommand{\arraystretch}{1.5}
+        \[\begin{array}{|>{\columncolor{gray!15}}c|*{2}{>{\centering\arraybackslash}m{7mm}|}}%
+            \hline
+            x   &\num{0}&\num{1}\\\hline
+            g(x)&&\\\hline
+        \end{array}
+        \]
+        }
+        \item En déduire les coordonnées de deux points appartenant à cette représentation graphique.
+        
+        \medskip
+        \pointilles
+        \item Tracer la représentation graphique fonction $g$ dans le repère ci-dessous.
+        
+        \scalebox{1}{%
+            \Fonction[%
+                Trace,%
+                Calcul=0,%
+                Ymin=-2,Ymax=2,Ystep=2,%
+                Xmin=-2,Xmax=2,Xstep=1,%
+                Origine={(2,2)},%
+                PasGrilleX=0.5,PasGrilleY=0.5,%
+                Grille,%
+                Traces={%
+                    dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,1));
+                }
+            ]{}
+        }
+        \item Par lecture graphique, compléter le tableau de valeurs suivant.        
+        {\renewcommand{\arraystretch}{1.5}
+        \[\begin{array}{|>{\columncolor{gray!15}}c|*{5}{>{\centering\arraybackslash}m{10mm}|}}%
+            \hline
+            x   &\num{-2}&\num{-1}&\num{0.5}&&\\\hline
+            g(x)&&&&\num{2}&\num{3}\\\hline
+        \end{array}
+        \]
+        }
+        \item Indiquer l'image de 2 par $g$.\hfill\pointilles[20mm]\medskip
+        \item Indiquer un nombre qui a pour image 2 par $g$.\hfill\pointilles[20mm]\medskip
+        \item Indiquer l'image de \num{0,5} par $g$.\hfill\pointilles[20mm]\medskip
+        \item Indiquer l'antécédent de 3 par $g$.\hfill\pointilles[20mm]\medskip
+        \item $g(\num{-1.5})=\pointilles[10mm]$\medskip
+        \item $g(\num{4})=\pointilles[10mm]$\medskip
+        \item $g(\pointilles[10mm])=\num{1}$\medskip
+        \item $g(\pointilles[10mm])=\num{-1.5}$
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Soit la fonction $g : x\longmapsto 2x -1$.
+
+    \begin{enumerate}
+        \item Indiquer la nature de sa représentation graphique. Justifier.
+        
+        \textcolor{red}{C'est l'expression algébrique d'une fonction affine non linéaire, sa représentation est donc une droite ne passant pas par l'origine.}
+        \item Compléter le tableau suivant.
+
+        \[\begin{array}{|>{\columncolor{gray!15}}c|*{2}{>{\centering\arraybackslash}m{7mm}|}}%
+            \hline
+            x   &\num{0}&\num{1}\\\hline
+            g(x)&\textcolor{red}{\num{-1}}&\textcolor{red}{\num{1}}\\\hline
+        \end{array}
+        \]
+        \item En déduire les coordonnées de deux points appartenant à cette représentation graphique.
+        
+        \textcolor{red}{$A(0;-1)$ et $B(1;1)$}
+        \item Tracer la représentation graphique fonction $g$ dans le repère ci-dessous.
+        
+        \scalebox{1}{%
+            \Fonction[%
+                Trace,%
+                Calcul=2x-1,%
+                CouleurTrace=red,%
+                Ymin=-2,Ymax=2,Ystep=2,%
+                Xmin=-2,Xmax=2,Xstep=1,%
+                Origine={(2,2)},%
+                PasGrilleX=0.5,PasGrilleY=0.5,%
+                Grille,%
+                Traces={%
+                    dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,1));
+                    drawoptions(withcolor red);
+                    dotlabel.lft(btex $A$ etex,placepoint(0,-1));
+                    dotlabel.lft(btex $B$ etex,placepoint(1,1));
+                }
+            ]{}
+        }
+        \item Par lecture graphique, compléter le tableau de valeurs suivant.
+        
+        \[\begin{array}{|>{\columncolor{gray!15}}c|*{5}{>{\centering\arraybackslash}m{7mm}|}}%
+            \hline
+            x   &\num{-2}&\num{-1}&\num{0.5}&\textcolor{red}{\num{1.5}}&\textcolor{red}{\num{2}}\\\hline
+            g(x)&\textcolor{red}{\num{-5}}&\textcolor{red}{\num{-3}}&\textcolor{red}{\num{0}}&\num{2}&\num{3}\\\hline
+        \end{array}
+        \]
+
+        \item Indiquer l'image de 2 par $g$.\hfill$\textcolor{red}{g(2)=3}$
+        \item Indiquer un nombre qui a pour image 2 par $g$.\hfill$\textcolor{red}{\num{1.5}}$
+        \item Indiquer l'image de \num{0,5} par $g$.\hfill$\textcolor{red}{g(\num{0.5})=0}$
+        \item Indiquer l'antécédent de 3 par $g$.\hfill$\textcolor{red}{\num{-1}}$
+        \item $g(\num{-1.5})=\textcolor{red}{\num{-4}}$
+        \item $g(\num{4})=\textcolor{red}{\num{7}}$
+        \item $g(\textcolor{red}{\num{1}})=\num{1}$
+        \item $g(\textcolor{red}{\num{-0.25}})=\num{-1.5}$
+    \end{enumerate}
 \end{corrige}

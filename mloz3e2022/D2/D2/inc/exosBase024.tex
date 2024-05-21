@@ -1,6 +1,160 @@
 \begin{exercice*}
-    ...
+    Le collège Jean Lurçat décide d’acheter un logiciel pour gérer sa bibliothèque. Il y a trois tarifs :
+    \begin{itemize}
+        \item \textbf{Tarif A} : \Prix{19} ;
+        \item \textbf{Tarif B} : \Prix{0.10} par élève ;
+        \item \textbf{Tarif C} : \Prix{8} et  \Prix{0.05} par élève.
+    \end{itemize}
+    \clearpage
+    \begin{enumerate}
+        \item Compléter le tableau    
+        {\renewcommand{\arraystretch}{1.5}
+        \[\begin{array}{|>{\centering\arraybackslash}m{25mm}|*{3}{>{\centering\arraybackslash}m{15mm}|}}%
+            \hline
+            \rowcolor{gray!15}\text{Nombre d'élèves}&$100$&$200$&$300$\\\hline
+            \text{\textbf{Tarif A}}&\Prix{19}&&\\\hline
+            \text{\textbf{Tarif B}}&&&\Prix{30}\\\hline
+            \text{\textbf{Tarif C}}&&\Prix{18}&\\\hline
+        \end{array}
+        \] 
+        }
+        \item Si $x$ représente le nombre d'élèves, entourer la fonction qui correspond au tarif C.
+        
+        $x\longmapsto 8 + 5x$ \hfill $x\longmapsto 8 + \num{0.05}x$ \hfill $x\longmapsto \num{0.05} + 8x$
+        \item Indiquer la nature de cette fonction.
+        
+        \medskip
+        \pointilles
+        \item Sur le graphique ci-dessous, on a représenté le tarif B. Sur ce même graphique, représenter les tarifs A et C.
+        
+        \smallskip
+        \scalebox{0.8}{%
+            \Fonction[%
+                Trace,%
+                Calcul=x,%
+                CouleurTrace=blue,%
+                Bornea=0,% les bornes a de l'intervalle [a,b] de tracé
+                Borneb=36,% les bornes b de l'intervalle [a,b] de tracé
+                LabelC=0.9,%
+                NomCourbe=\textcolor{blue}{Tarif B},%
+                Xmin=0,Xmax=9,Xstep=4,%
+                Ymin=0,Ymax=9,Ystep=4,%
+                Origine={(0.5,0.5)},%
+                PasGrilleX=0.25,%
+                PasGrilleY=0.25,%
+                Grille,%
+                LabelX={\textcolor{black}{\textbf{Nombre d'élèves}}},%
+                LabelY={\rotatebox{90}{\textcolor{black}{\textbf{Prix en euros}}}},%
+                Traces={%
+                    dotlabel.bot(btex \num{100} etex,placepoint(10,0));
+                    dotlabel.lft(btex \num{10} etex,placepoint(0,10));
+                    dotlabel.bot(btex \num{200} etex,placepoint(20,0));
+                    dotlabel.lft(btex \num{20} etex,placepoint(0,20));
+                    dotlabel.bot(btex \num{300} etex,placepoint(30,0));
+                    dotlabel.lft(btex \num{30} etex,placepoint(0,30));
+                    drawoptions(withcolor blue);
+                    draw placepoint(0,32)--placepoint(32,32) dashed evenly;
+                    draw placepoint(32,0)--placepoint(32,32) dashed evenly;
+                }
+            ]{}
+        }
+        \item Par lecture graphique, indiquer à partir de combien d’élèves le tarif A est plus intéressant que le tarif C.
+        
+        Faire apparaitre sur le graphique les tracés nécessaires à la lecture.
+
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+        \item Au collège Jean Lurçat, il y a 209 élèves. Indiquer le tarif le plus intéressant.
+        
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+
+        \medskip
+        \pointilles
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Le collège Jean Lurçat décide d’acheter un logiciel pour gérer sa bibliothèque. Il y a trois tarifs :
+    \begin{itemize}
+        \item \textbf{Tarif A} : \Prix{19} ;
+        \item \textbf{Tarif B} : \Prix{0.10} par élève ;
+        \item \textbf{Tarif C} : \Prix{8} et  \Prix{0.05} par élève.
+    \end{itemize}
+    \clearpage
+    \begin{enumerate}
+        \item Compléter le tableau    
+        {\renewcommand{\arraystretch}{1.5}
+        \[\begin{array}{|>{\centering\arraybackslash}m{25mm}|*{3}{>{\centering\arraybackslash}m{15mm}|}}%
+            \hline
+            \rowcolor{gray!15}\text{Nombre d'élèves}&$100$&$200$&$300$\\\hline
+            \text{\textbf{Tarif A}}&\Prix{19}&\textcolor{red}{\Prix{19}}&\textcolor{red}{\Prix{19}}\\\hline
+            \text{\textbf{Tarif B}}&\textcolor{red}{\Prix{10}}&\textcolor{red}{\Prix{20}}&\Prix{30}\\\hline
+            \text{\textbf{Tarif C}}&\textcolor{red}{\Prix{13}}&\Prix{18}&\textcolor{red}{\Prix{23}}\\\hline
+        \end{array}
+        \] 
+        }
+        \item Si $x$ représente le nombre d'élèves, entourer la fonction qui correspond au tarif C.
+        
+        $x\longmapsto 8 + 5x$ \hfill \Circled[inner color=red,outer color=red]{$x\longmapsto 8 + \num{0.05}x$} \hfill $x\longmapsto \num{0.05} + 8x$
+        \item Indiquer la nature de cette fonction.
+        
+        \textcolor{red}{C'est une fonction affine.}
+        \item Sur le graphique ci-dessous, on a représenté le tarif B. Sur ce même graphique, représenter les tarifs A et C.
+        
+        \smallskip
+        \hspace*{-15mm}
+        \scalebox{1}{%
+            \Fonction[%
+                Trace,%
+                Calcul={x,19,0.5x+8},%
+                CouleurTrace={blue,red,red},%
+                Bornea={0 ,0 ,0 },% les bornes a de l'intervalle [a,b] de tracé
+                Borneb={36,36,36},% les bornes b de l'intervalle [a,b] de tracé
+                LabelC={0.9,0.2,0.2},%
+                NomCourbe={\textcolor{blue}{Tarif B},\textcolor{red}{Tarif A},\textcolor{red}{Tarif C}},%
+                Xmin=0,Xmax=9,Xstep=4,%
+                Ymin=0,Ymax=9,Ystep=4,%
+                Origine={(0.5,0.5)},%
+                PasGrilleX=0.25,%
+                PasGrilleY=0.25,%
+                Grille,%
+                LabelX={\textcolor{black}{\textbf{Nombre d'élèves}}},%
+                LabelY={\rotatebox{90}{\textcolor{black}{\textbf{Prix en euros}}}},%
+                Traces={%
+                    dotlabel.bot(btex \num{100} etex,placepoint(10,0));
+                    dotlabel.lft(btex \num{10} etex,placepoint(0,10));
+                    dotlabel.bot(btex \num{200} etex,placepoint(20,0));
+                    dotlabel.lft(btex \num{20} etex,placepoint(0,20));
+                    dotlabel.bot(btex \num{300} etex,placepoint(30,0));
+                    dotlabel.lft(btex \num{30} etex,placepoint(0,30));
+                    drawoptions(withcolor blue);
+                    draw placepoint(0,32)--placepoint(32,32) dashed evenly;
+                    draw placepoint(32,0)--placepoint(32,32) dashed evenly;
+                    drawoptions(withcolor red);
+                    drawarrow placepoint(22,19)--placepoint(22,0) dashed evenly;
+                }
+            ]{}
+        }
+        \item Par lecture graphique, indiquer à partir de combien d’élèves le tarif A est plus intéressant que le tarif C.
+        
+        Faire apparaitre sur le graphique les tracés nécessaires à la lecture.
+
+        \textcolor{red}{À partir d'environ 220 élèves, le tarif A est plus avantageux que le tarif C.}
+        \item Au collège Jean Lurçat, il y a 209 élèves. Indiquer le tarif le plus intéressant.
+        
+        {\color{red}%
+        Tarif A : \Prix{19} ; Tarif B : $209\times\num{0.1}=\Prix{20.90}$ ; Tarif C : $8+209\times\num{0.05}=\Prix{18.45}$
+
+        Le tarif C est plus avantageux pour 209 élèves.
+        }
+    \end{enumerate}
 \end{corrige}

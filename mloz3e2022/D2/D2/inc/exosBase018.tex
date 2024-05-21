@@ -1,6 +1,88 @@
 \begin{exercice*}
-    ...
+    On veut tracer la représentation graphique $(d_f)$ de la fonction $f : x\longmapsto 3x + 3$.
+    \begin{enumerate}
+        \item Indiquer les coordonnées du point A de $(d_f)$ d’abscisse 0.\hfill \pointilles[30mm]
+        \item Indiquer le nom deson ordonnée. \pointilles
+        \item Placer le point A dans le repère ci-dessous.
+        \item En utilisant le coefficient de la fonction $f$, placer un deuxième point B de $(d_f)$.
+        \item Indiquer ses coordonnées.\hfill\pointilles[30mm]
+        \item Tracer la courbe $(d_f)$ representative de $f$.
+        
+        \scalebox{1}{%
+            \Fonction[%
+                Trace,%
+                Calcul=0,%
+                Ymin=-3.5,Ymax=3.5,Ystep=2,%
+                Xmin=-2.5,Xmax=2.5,Xstep=1,%
+                Origine={(2.5,3.5)},%
+                PasGrilleX=0.5,PasGrilleY=0.5,%
+                Grille,%
+                Traces={%
+                    dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,1));
+                }
+            ]{}
+        }
+        \item Tracer les courbes $(d_g)$ et $(d_h)$ des fonctions $g$ et $h$ définies par $g(x)=3x$ et $h(x)=3x-4$.
+        \item Faire une remarque justifiée.
+        
+        \pointilles
+
+        \pointilles
+
+        \pointilles
+        \item Placer les points $F$, $G$ et $H$ d'abscisse \num{-1} appartenant respectivement à $(d_f)$, $(d_g)$ et $(d_h)$.
+        \item Donner les coordonnées de ces points.
+        
+        \pointilles
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On veut tracer la représentation graphique $(d_f)$ de la fonction $f : x\longmapsto 3x + 3$.
+
+    \begin{enumerate}
+        \item Indiquer les coordonnées du point A de $(d_f)$ d’abscisse 0.\hfill\textcolor{red}{$A(0;3)$}
+        \item Indiquer le nom deson ordonnée.\textcolor{red}{Ordonnée à l'origine.}
+        \item Placer le point A dans le repère ci-dessous.
+        \item En utilisant le coefficient de la fonction $f$, placer un deuxième point B de $(d_f)$.
+        \item Indiquer ses coordonnées.\hfill\textcolor{red}{$B(1;6)$}
+        \item Tracer la courbe $(d_f)$ representative de $f$.
+        
+        \scalebox{1}{%
+            \Fonction[%
+                Trace,%
+                Calcul={3x+3,3x,3x-4},%
+                CouleurTrace={red,red,red},%
+                Bornea={-3,-3,-3},% les bornes a de l'intervalle [a,b] de tracé
+                Borneb={3 ,3 ,3 },% les bornes b de l'intervalle [a,b] de tracé
+                LabelC={0.1,0.15,0.9},% les positions du label des courbes
+                NomCourbe={\textcolor{red}{$(d_f)$},\textcolor{red}{$(d_g)$},\textcolor{red}{$(d_h)$}},% les noms des représentations graphiques.
+                Ymin=-3.5,Ymax=3.5,Ystep=2,%
+                Xmin=-2.5,Xmax=2.5,Xstep=1,%
+                Origine={(2.5,3.5)},%
+                PasGrilleX=0.5,PasGrilleY=0.5,%
+                Grille,%
+                Traces={%
+                    dotlabel.bot(btex \num{1} etex,placepoint(1,0));
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,1));
+                    drawoptions(withcolor red);
+                    dotlabel.rt(btex $B$ etex,placepoint(1,6));
+                    dotlabel.lrt(btex $A$ etex,placepoint(0,3));
+                    dotlabel.ulft(btex $F$ etex,placepoint(-1,0));
+                    dotlabel.ulft(btex $G$ etex,placepoint(-1,-3));
+                    dotlabel.ulft(btex $H$ etex,placepoint(-1,-7));
+                    drawarrow placepoint(0,3)--placepoint(1,3) dashed evenly;
+                    drawarrow placepoint(1,3)--placepoint(1,6) dashed evenly;
+                }
+            ]{}
+        }
+        \item Tracer les courbes $(d_g)$ et $(d_h)$ des fonctions $g$ et $h$ définies par $g(x)=3x$ et $h(x)=3x-4$.
+        \item Faire une remarque justifiée.
+        
+        \textcolor{red}{Les trois droites ont le même coefficient directeur, elles sont donc parallèles.}
+        \item Placer les points $F$, $G$ et $H$ d'abscisse \num{-1} appartenant respectivement à $(d_f)$, $(d_g)$ et $(d_h)$.
+        \item Donner les coordonnées de ces points.
+        
+        \textcolor{red}{$F(-1;0)$ $G(-1;-3)$ $H(-1;-7)$}
+    \end{enumerate}
 \end{corrige}

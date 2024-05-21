@@ -1,6 +1,180 @@
 \begin{exercice*}
-    ...
+    TRAP est un trapèze, rectangle en A et en P, tel que :
+
+    $TP=\Lg[cm]{3}$ ; $PA=\Lg[cm]{5}$ et $AR=\Lg[cm]{4}$.
+    
+    $M$ est un point variable du segment $[PA]$ et on note $x$ la longueur du segment $[PM]$ en \Lg[cm]{}.
+
+    \begin{Geometrie}
+        pair R,A,T,P,M;
+        P=u*(1,1);
+        A-P=u*(5,0);
+        T-P=u*(0,3);
+        R-P=u*(5,4);
+        M-P=u*(1.5,0);
+        trace polygone(R,A,P,T);
+        trace chemin(T,M,R);
+        trace cotationmil(P,A,-7mm,15,btex \Lg[cm]{5} etex);
+        trace cotationmil(P,M,-5mm,10,btex $x$ etex);
+        trace cotationmil(P,T,5mm,15,btex \Lg[cm]{3} etex);
+        trace cotationmil(A,R,-5mm,15,btex \Lg[cm]{4} etex);
+        label.llft(btex $P$ etex,P);
+        label.bot(btex $M$ etex,M);
+        label.lrt(btex $A$ etex,A);
+        label.urt(btex $R$ etex,R);
+        label.ulft(btex $T$ etex,T);        
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Donner les valeurs entre lesquelles $x$ peut varier.
+        \item Montrer que l’aire du triangle $PTM$ est $\num{1,5}x$ et que l’aire du triangle $ARM$ est $10-2x$.
+        
+        \medskip
+        Cette droite est la représentation graphique de la fonction qui, à $x$ , associe l’aire du triangle $ARM$.
+
+        \smallskip
+        \hspace*{-5mm}
+        \scalebox{0.7}{%
+            \Fonction[%
+                Trace,%
+                Calcul=10/8-2x/5,%
+                CouleurTrace=blue,%
+                Bornea=0,% les bornes a de l'intervalle [a,b] de tracé
+                Borneb=3.125,% les bornes b de l'intervalle [a,b] de tracé
+                LabelC=0.8,%
+                NomCourbe=\textcolor{blue}{Aire du triangle $ARM$},%
+                Xmin=0,Xmax=13,Xstep=0.25,%
+                Ymin=0,Ymax=6,Ystep=0.25,%
+                Origine={(0.25,0.25)},%
+                PasGrilleX=0.25,%
+                PasGrilleY=0.25,%
+                Grille,%
+                LabelX={\textcolor{black}{\footnotesize\textbf{Longueur de $x$ en \Lg[cm]{}}}},%
+                LabelY={\textcolor{black}{\footnotesize\textbf{Aire en \Aire[cm]{}}}},%
+                Traces={%
+                    dotlabel.bot(btex \num{0.2} etex,placepoint(0.125,0));                    
+                    dotlabel.bot(btex \num{1} etex,placepoint(0.625,0));
+                    dotlabel.bot(btex \num{2} etex,placepoint(1.25,0));
+                    dotlabel.bot(btex \num{3} etex,placepoint(1.875,0));
+                    dotlabel.bot(btex \num{4} etex,placepoint(2.5,0));
+                    dotlabel.bot(btex \num{5} etex,placepoint(3.125,0));
+                    %
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,0.125));
+                    dotlabel.lft(btex \num{5} etex,placepoint(0,0.625));
+                    dotlabel.lft(btex \num{10} etex,placepoint(0,1.25));
+                }
+            ]{}
+        }
+
+        Répondre aux questions \theenumi), \setcounter{enumi}{3}\theenumi), \setcounter{enumi}{5}\theenumi)~en utilisant ce
+        graphique. Laisser apparents les traits nécessaires.
+        \setcounter{enumi}{2}
+        \item Déterminer la valeur de $x$ pour laquelle l’aire du triangle $ARM$ est égale à \Aire[cm]{6}.
+        \item Déterminer la valeur l’aire du triangle $ARM$ lorsque $x$ est égal à \Lg[cm]{4}.
+        \item Sur ce graphique, tracer la droite représentant la fonction $x\longmapsto \num{1,5}x$.
+        \item Estimer, à un millimètre près, la valeur de $x$ pour laquelle les triangles $PTM$ et $ARM$ ont la même aire.
+        \item Montrer par le calcul que la valeur exacte de $x$ pour laquelle les deux aires sont égales est $\dfrac{100}{35}$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    TRAP est un trapèze, rectangle en A et en P, tel que :
+
+    $TP=\Lg[cm]{3}$ ; $PA=\Lg[cm]{5}$ et $AR=\Lg[cm]{4}$.
+    
+    $M$ est un point variable du segment $[PA]$ et on note $x$ la longueur du segment $[PM]$ en \Lg[cm]{}.
+
+    \begin{Geometrie}
+        pair R,A,T,P,M;
+        P=u*(1,1);
+        A-P=u*(5,0);
+        T-P=u*(0,3);
+        R-P=u*(5,4);
+        M-P=u*(1.5,0);
+        trace polygone(R,A,P,T);
+        trace chemin(T,M,R);
+        trace cotationmil(P,A,-7mm,15,btex \Lg[cm]{5} etex);
+        trace cotationmil(P,M,-5mm,10,btex $x$ etex);
+        trace cotationmil(P,T,5mm,15,btex \Lg[cm]{3} etex);
+        trace cotationmil(A,R,-5mm,15,btex \Lg[cm]{4} etex);
+        label.llft(btex $P$ etex,P);
+        label.bot(btex $M$ etex,M);
+        label.lrt(btex $A$ etex,A);
+        label.urt(btex $R$ etex,R);
+        label.ulft(btex $T$ etex,T);        
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Donner les valeurs entre lesquelles $x$ peut varier.
+        
+        \textcolor{red}{$x$ peut varier entre $0$ et $5$.}
+        \item Montrer que l’aire du triangle $PTM$ est $\num{1,5}x$ et que l’aire du triangle $ARM$ est $10-2x$.
+        
+        {\color{red}%
+        $\mathcal{A}_{PTM}=\dfrac12 \times PT \times PM=\dfrac12 \times 3 \times x=\num{1.5} x$.
+
+        $MA = 5-x$ donc $\mathcal{A}_{ARM}=\dfrac12 \times AR \times AM=\dfrac12 \times 4 \times (5-x) = 2\times (5-x)= 10-2x$
+        }
+
+        \medskip
+        Cette droite est la représentation graphique de la fonction qui, à $x$ , associe l’aire du triangle $ARM$.
+
+        \smallskip
+        \hspace*{-5mm}
+        \scalebox{0.7}{%
+            \Fonction[%
+                Trace,%
+                Calcul={10/8-2x/5,1.5x/5},%
+                CouleurTrace={blue,red},%
+                Bornea={0    ,0    },% les bornes a de l'intervalle [a,b] de tracé
+                Borneb={3.125,3.125},% les bornes b de l'intervalle [a,b] de tracé
+                LabelC={0.8,0.8},%
+                NomCourbe={\textcolor{blue}{Aire du triangle $ARM$},\textcolor{white}{r}},%
+                Xmin=0,Xmax=13,Xstep=0.25,%
+                Ymin=0,Ymax=6,Ystep=0.25,%
+                Origine={(0.25,0.25)},%
+                PasGrilleX=0.25,%
+                PasGrilleY=0.25,%
+                Grille,%
+                LabelX={\textcolor{black}{\footnotesize\textbf{Longueur de $x$ en \Lg[cm]{}}}},%
+                LabelY={\textcolor{black}{\footnotesize\textbf{Aire en \Aire[cm]{}}}},%
+                Traces={%
+                    dotlabel.bot(btex \num{0.2} etex,placepoint(0.125,0));                    
+                    dotlabel.bot(btex \num{1} etex,placepoint(0.625,0));
+                    dotlabel.bot(btex \num{2} etex,placepoint(1.25,0));
+                    dotlabel.bot(btex \num{3} etex,placepoint(1.875,0));
+                    dotlabel.bot(btex \num{4} etex,placepoint(2.5,0));
+                    dotlabel.bot(btex \num{5} etex,placepoint(3.125,0));
+                    %
+                    dotlabel.lft(btex \num{1} etex,placepoint(0,0.125));
+                    dotlabel.lft(btex \num{5} etex,placepoint(0,0.625));
+                    dotlabel.lft(btex \num{10} etex,placepoint(0,1.25));
+                    %
+                    drawoptions(withcolor red);
+                    drawarrow placepoint(0,0.75)--placepoint(1.25,0.75) dashed evenly;
+                    drawarrow placepoint(1.25,0.75)--placepoint(1.25,0) dashed evenly;
+                    drawarrow placepoint(0,0.54)--placepoint(1.79,0.54) dashed evenly;
+                    drawarrow placepoint(1.79,0.54)--placepoint(1.79,0) dashed evenly;
+                    drawarrow placepoint(2.5,0)--placepoint(2.5,0.25) dashed evenly;
+                    drawarrow placepoint(2.5,0.25)--placepoint(0,0.25) dashed evenly;
+                }
+            ]{}
+        }
+
+        Répondre aux questions \theenumi), \setcounter{enumi}{3}\theenumi), \setcounter{enumi}{5}\theenumi)~en utilisant ce
+        graphique. Laisser apparents les traits nécessaires.
+        \setcounter{enumi}{2}
+        \item Déterminer la valeur de $x$ pour laquelle l’aire du triangle $ARM$ est égale à \Aire[cm]{6}.
+        
+        \textcolor{red}{Pour $x=\Lg[cm]{2}$}
+        \item Déterminer la valeur l’aire du triangle $ARM$ lorsque $x$ est égal à \Lg[cm]{4}.
+        
+        \textcolor{red}{Si $x=\Lg[cm]{4}$ alors l'aire du triangle vaut \Aire[cm]{2}.}
+        \item Sur ce graphique, tracer la droite représentant la fonction $x\longmapsto \num{1,5}x$.
+        \item Estimer, à un millimètre près, la valeur de $x$ pour laquelle les triangles $PTM$ et $ARM$ ont la même aire.
+        
+        \textcolor{red}{Pour $x\approx\Lg[cm]{2.8}$}
+        \item Montrer par le calcul que la valeur exacte de $x$ pour laquelle les deux aires sont égales est $\dfrac{100}{35}$.
+        
+        {\color{red} $10-2x=\num{1.5} x$ donc $10=2x +\num{1.5} x$ donc $10=\num{3.5} x$ soit $x=\dfrac{10}{\num{3.5}}=\dfrac{100}{35}$}
+    \end{enumerate}
 \end{corrige}
