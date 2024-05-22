@@ -78,11 +78,10 @@
 \end{exercice*}
 \begin{corrige}
     TRAP est un trapèze, rectangle en A et en P, tel que :
-
     $TP=\Lg[cm]{3}$ ; $PA=\Lg[cm]{5}$ et $AR=\Lg[cm]{4}$.
     
     $M$ est un point variable du segment $[PA]$ et on note $x$ la longueur du segment $[PM]$ en \Lg[cm]{}.
-
+    \scalebox{0.7}{
     \begin{Geometrie}
         pair R,A,T,P,M;
         P=u*(1,1);
@@ -102,6 +101,7 @@
         label.urt(btex $R$ etex,R);
         label.ulft(btex $T$ etex,T);        
     \end{Geometrie}
+    }
 
     \begin{enumerate}
         \item Donner les valeurs entre lesquelles $x$ peut varier.
@@ -112,15 +112,15 @@
         {\color{red}%
         $\mathcal{A}_{PTM}=\dfrac12 \times PT \times PM=\dfrac12 \times 3 \times x=\num{1.5} x$.
 
-        $MA = 5-x$ donc $\mathcal{A}_{ARM}=\dfrac12 \times AR \times AM=\dfrac12 \times 4 \times (5-x) = 2\times (5-x)= 10-2x$
-        }
+        $MA = 5-x$ donc $\mathcal{A}_{ARM}=\dfrac12 \times AR \times AM$
 
-        \medskip
+        $\mathcal{A}_{ARM}=\dfrac12 \times 4 \times (5-x) = 2\times (5-x)= 10-2x$
+        }
         Cette droite est la représentation graphique de la fonction qui, à $x$ , associe l’aire du triangle $ARM$.
 
         \smallskip
-        \hspace*{-5mm}
-        \scalebox{0.7}{%
+        \hspace*{-10mm}
+        \scalebox{0.6}{%
             \Fonction[%
                 Trace,%
                 Calcul={10/8-2x/5,1.5x/5},%
@@ -159,7 +159,10 @@
                 }
             ]{}
         }
-
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
         Répondre aux questions \theenumi), \setcounter{enumi}{3}\theenumi), \setcounter{enumi}{5}\theenumi)~en utilisant ce
         graphique. Laisser apparents les traits nécessaires.
         \setcounter{enumi}{2}

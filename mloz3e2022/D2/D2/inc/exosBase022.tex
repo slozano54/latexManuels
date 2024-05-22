@@ -15,15 +15,35 @@
     $f(x)$ est une fonction affine de la forme $ax+b$ telle que $f(-3)=-10$ et $f(3)=2$.
 
     On souhaite déterminer l'expression algébrique de $f$ , c'est-à-dire déterminer $a$ et $b$.
+    
     \begin{enumerate}
         \item Calculer le coefficient de $f$ en utilisant la formule $a=\dfrac{f(x_1)-f(x_2)}{x_1-x_2}$ puis déterminer l'expression algébrique de $f$.
         
-        {\color{red} \FonctionAffine[Retrouve]{3}{2}{-3}{-10}}
-        \item Vérifier que la fonction trouvée convient.
+        {\color{red} 
+        %\FonctionAffine[Retrouve]{3}{2}{-3}{-10}
+        On sait que f est une fonction affine. Donc elle s’écrit sous la forme : $f (x) = ax + b$
         
+        Or, $f (3) = 2$ et $f (-3) = -10$. Par conséquent, d’après la propriété des accroissements :
+
+        $a=\dfrac{f(3)-f(-3)}{3-(-3)}$
+
+        $a=\dfrac{2-(-10)}{6}$
+
+        $a=2$
+
+        La fonction $f$ s’écrit alors sous la forme $f (x) = 2x + b$.
+        De plus, comme $f (3) = 2$, alors : $2\times 3+b = 2$ d'où $b=-4$
+
+        La fonction affine $f$ cherchée est donc $f : x \longmapsto 2x - 4$
+        
+        }
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Vérifier que la fonction trouvée convient.        
         {\color{red}%
         \FonctionAffine[Image]{-3}{2}{-4}{}
-
         \FonctionAffine[Image]{3}{2}{-4}{}
         }
     \end{enumerate}
