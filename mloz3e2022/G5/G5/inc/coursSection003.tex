@@ -251,47 +251,159 @@
     \end{enumerate}
 \end{methode*1}
 
-% \subsection{Sections de solides - Le parallélépipède rectangle}
-% \proprNumBis{par un plan parallèle à une face (admise)}{
-% \begin{center}
-% $\includegraphics[scale=0.75]{coursespace.3}$\par
-% $(\mathcal{P})$ est parallèle à la face $ADHE$.
-% \end{center}
-% \vspace{0.5cm}
-% La section d'un parallélépipède rectangle par un plan parallèle à une face est un rectangle ayant les mêmes dimensions que cette face.
-% }
+\subsection{Le parallélépipède rectangle}
+\begin{propriete}[Section par un plan parallèle à une face \admise]
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}        
+            \scalebox{0.7}{
+            \begin{Geometrie}[CoinBG={(-2u,-2u)},CoinHD={(7u,6u)}]
+                z0=(0,0)*u;
+                label.bot(btex $E$ etex,z0);
+                z1=(-1,1)*u;label.llft(btex $H$ etex,z1);
+                z2=(-1,3)*u;label.ulft(btex $D$ etex,z2);
+                z3=(0,2)*u; label.top(btex $A$ etex,z3);
+                z4=z0 shifted (2.5u,0);label.lrt(btex $K$ etex,z4);
+                z5=z1 shifted (2.5u,0);label.bot(btex $L$ etex,z5);
+                z6=z2 shifted (2.5u,0);label.ulft(btex $I$ etex,z6);
+                z7=z3 shifted (2.5u,0);label.lrt(btex $J$ etex,z7);
+                draw codeperp(z5,z4,z7,5);draw codeperp(z6,z7,z4,5);draw codeperp(z5,z6,z7,5);draw codeperp(z4,z5,z6,5);
+                z8 = z0 shifted (6u,0);z9 = z1 shifted (6u,0);z10 = z2 shifted (6u,0);z11 = z3 shifted (6u,0);
+                draw z0--z1--z2--z3--cycle; draw z0--z4;draw z1--z5 dashed evenly; draw z2--z6; draw z3--z7;
+                draw z4--z7--z6; draw z5--z6 dashed evenly; draw z4--z5 dashed evenly; draw z8--z9--z10 dashed evenly;draw z10--z11--z8;
+                z12=(1,3)*u;z13=(1,4.5)*u;z14=(3,2.5)*u;z15=(3,-1)*u;z16=(2,0)*u;
+                draw z12--z13--z14--z15--z16;draw z10 --((z13--z14) intersectionpoint(z10--z12));
+                draw z9--z5 dashed evenly; draw z8--((z8--z0) intersectionpoint(z14--z15));
+                draw z11--((z11--z3) intersectionpoint(z14--z15));labeloffset:=0.6cm;
+                label.lrt(btex $(\mathcal P)$ etex,z13 shifted (-0.35u,0));
+                labeloffset:=3bp;
+            \end{Geometrie}
+            }
+    
+            $(\mathcal{P})$ est parallèle à la face $ADHE$.
+        \end{center}        
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        La section d'un parallélépipède rectangle par un plan parallèle à une face est un rectangle ayant les mêmes dimensions que cette face.    
+    \end{minipage}
+\end{propriete}
+\begin{propriete}[Section par un plan parallèle à une arête \admise]
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}        
+            \scalebox{0.7}{
+            \begin{Geometrie}[CoinBG={(-2u,-2u)},CoinHD={(7u,6u)}]
+                z0=(0,0)*u;label.bot(btex $E$ etex,z0);
+                z1=(-1,1)*u;label.ulft(btex $H$ etex,z1);
+                z2=(-1,3)*u;label.ulft(btex $D$ etex,z2);
+                z3=(0,2)*u; label.top(btex $A$ etex,z3);
+                z4=z0 shifted (3.5u,0);label.lrt(btex $K$ etex,z4);
+                z5=z1 shifted (1.5u,0);label.bot(btex $L$ etex,z5);
+                z6= z2 shifted(1.5u,0);label.ulft(btex $I$ etex,z6);
+                z7=z3 shifted (3.5u,0);label.lrt(btex $J$ etex,z7);
+                z8 = z0 shifted (6u,0);z9 = z1 shifted (6u,0);z10 = z2 shifted (6u,0);z11 = z3 shifted (6u,0);
+                draw z0--z1--z2--z3--cycle;draw z0--z4;draw z1--z5 dashed evenly; draw z2--z6; draw z3--z7;
+                draw z4--z7--z6; draw z5--z6 dashed evenly; draw z4--z5 dashed evenly;draw z10--z11--z8;
+                draw codeperp(z5,z4,z7,5);draw codeperp(z6,z7,z4,5);draw codeperp(z5,z6,z7,5);draw codeperp(z4,z5,z6,5);
+                z12=(-0.75,0.75)*u;z13=(-1.5,1)*u;z14=(-1.5,4.5)*u;z15=(5.25,2.25)*u;z16=(5.25,-1.25)*u;z17=(1.5,0)*u;
+                z20=z15 - 0.1(z15-z14);z21=z16 - 0.1(z15-z14);
+                draw z12--z13--z14--z20--z21--z17;draw z10--((z14--z15) intersectionpoint(z10--z2));
+                 draw z10 --((z14--z15) intersectionpoint(z10--z9)) dashed evenly;
+                draw z11--((z20--z21) intersectionpoint(z11--z3));
+                draw z8 --((z20--z21) intersectionpoint(z0--z8));
+                draw z8--z9--z10 dashed evenly; draw z9--((z20--z21) intersectionpoint(z9--z1)) dashed evenly;
+                labeloffset:=0.3cm;
+                label.lrt(btex $(\mathcal P)$ etex,z14);
+            \end{Geometrie}
+            }
+    
+            $(\mathcal{P})$ est parallèle à l'arête $[AE]$.
+        \end{center}        
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        La section d'un parallélépipède rectangle par un plan parallèle à une arête est un rectangle.
+    \end{minipage}
+\end{propriete}
 
-% \proprNumBis{par un plan parallèle à une arête (admise)}{
-% \begin{center}
-% $\includegraphics[scale=0.75]{coursespace.4}$\par
-% $(\mathcal{P})$ est parallèle à l'arête $[AE]$.
-% \end{center}
-% \vspace{0.5cm}
-% La section d'un parallélépipède rectangle par un plan parallèle à une arête est un rectangle.
-% }
+\begin{remarque}
+    Lorsque le parallélépipède est un \textbf{cube} les sections parallèles aux faces sont des carrés.
+\end{remarque}
 
-% \Remarques[Remarque]{
-% Lorsque le parallélépipède est un \textbf{cube} les sections parallèles aux faces sont des carrés.
-% }
-
-% \subsection{Sections de solides - Le cylindre de révolution}
-% \proprNumBis{par un plan perpendiculaire à l'axe (admise)}{
-% \begin{center}
-% $\includegraphics[scale=0.45]{coursespace.5}$\par
-% $(\mathcal{P})$ est perpendiculaire à l'axe de révolution.
-% \end{center}
-% \vspace{0.5cm}
-% La section d'un cylindre par un plan perpendiculaire à son axe de révolution est un disque de même rayon que sa base.
-% }
-
-% \proprNumBis{par un plan parallèle à l'axe (admise)}{
-% \begin{center}
-% $\includegraphics[scale=0.45]{coursespace.6}$\par
-% $(\mathcal{P})$ est parallèle à l'axe de révolution.
-% \end{center}
-% \vspace{0.5cm}
-% La section d'un cylindre par un plan parallèle à son axe de révolution est un rectangle.
-% }
+\subsection{Le cylindre de révolution}
+\begin{propriete}[Section par un plan perpendiculaire à l'axe \admise]
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}        
+            \scalebox{0.5}{
+            \begin{Geometrie}[CoinBG={(-4u,-3u)},CoinHD={(6u,6u)}]
+                z0=(0,0)*u;
+                path c;
+                c=(fullcircle scaled 4cm)yscaled 0.375;
+                z1=(-4,-1)*u;z2=(-2.75,1)*u; z3=(3.75,1)*u;z4=(2.5,-1)*u;
+                draw z2--z1--z4--z3; draw  (subpath (0,0.5*(length c)) of c)dashed evenly;
+                draw (subpath(0.5*(length c),length c) of c)  ;z6=(0,4u);
+                draw point 0 of c -- point 0 of (c shifted z6);label.urt(btex $(\mathcal P)$etex,z1 shifted (0.2u,0));
+                draw point 0.5*(length c) of c -- point 0.5*(length c) of (c shifted z6);
+                path d,e; d=point 0.5*(length c) of c -- point 0.5*(length c) of (c shifted z6);
+                e=point 0 of c -- point 0 of (c shifted z6);
+                z5=(0,-2u);draw z2-- ((z2--z3)intersectionpoint d);
+                draw z3--((z3--z2) intersectionpoint e);z20=(-2.5,5.4)*u;z21=(-0.5,3.5)*u;z12=(0,-7.5u);z24=z21 shifted z12;
+                draw z20; draw z24;
+                draw z6-- ((((subpath(0.5*(length c),length c) of (c shifted z5)))intersectionpoint(z5+0.2(z5-z6)--z6))--z6) dashed evenly; draw z6--z6+0.2(z6-z5);
+                draw(((subpath(0.5*(length c),length c) of (c shifted z5)))intersectionpoint(z5+0.2(z5-z6)--z6)) --z5+0.2(z5-z6);
+                draw (c shifted z6);draw (subpath(0.5*(length c),length c) of c)  shifted z5;
+                draw (subpath(0,0.5*(length c)) of c) shifted z5 dashed evenly;
+                draw ((z1--z4) intersectionpoint (point 0.5*(length c) of c -- point 0.5*(length c) of (c shifted z5)))-- point 0.5*(length c) of (c shifted z5);
+                draw ((z1--z4) intersectionpoint (point 0 of c -- point 0 of (c shifted z5)))-- point 0 of (c shifted z5);
+                draw z0-- point 0.9*(length c)of c dashed evenly; label.top(btex$R$etex,0.5[z0,point 0.9*(length c)of c]);
+                draw z6--point 0.9*(length c)of (c shifted z6) dashed evenly; label.top(btex$R$etex,0.5[z6,point 0.9*(length c)of (c shifted z6)]);
+            \end{Geometrie}
+            }
+    
+            $(\mathcal{P})$ est perpendiculaire à l'axe de révolution.
+        \end{center}        
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        La section d'un cylindre par un plan perpendiculaire à son axe de révolution est un disque de même rayon que sa base.
+    \end{minipage}
+\end{propriete}
+\begin{propriete}[Section par un plan parallèle à l'axe \admise]
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}        
+            \scalebox{0.5}{
+            \begin{Geometrie}[CoinBG={(-3u,-4u)},CoinHD={(6u,6u)}]
+                z0=(0,0)*u;
+                path c,ch,cb;
+                c=(fullcircle scaled 4cm)yscaled 0.375;
+                ch=subpath (0,0.5*(length c)) of c;cb=subpath(0.5*(length c),length c) of c;
+                z1=(-2.5,5.4)*u;z2=(-0.5,3.5)*u;z12=(0,-7.5u);z5=(0,-2u);z6=(0,4u);
+                z3=z1 shifted z12; z4=z2 shifted z12;label.ulft(btex $(\mathcal P)$ etex,z4 shifted (0,0.5u));
+                draw z1--z3--z4--z2--cycle;draw (ch shifted z6)  cutafter (z1--z2);
+                draw (cb shifted z6) cutbefore (z2--z4);
+                draw subpath (0,0.35*(length cb)) of (cb shifted z6);draw subpath (0.9*(length ch),length ch) of (ch shifted z6);
+                draw (cb shifted z5) cutbefore (z2--z4);
+                draw subpath (0,0.35*(length cb)) of (cb shifted z5);draw subpath (0.9*(length ch),length ch) of (ch shifted z5);
+                draw subpath (0,0.9*(length ch)) of (ch shifted z5)dashed evenly;
+                draw point 0 of c shifted z5--point 0 of ch shifted z6;
+                draw point 0.5*(length c) of (c shifted z5)--point 0.5*(length c) of (c shifted z6);
+                draw point 0.9*(length ch) of (ch shifted z6) -- point 0.35*(length cb)  of cb shifted z6;
+                draw point 0.35*(length cb)  of cb shifted z6--point 0.35*(length cb)  of cb shifted z5;
+                draw point 0.9*(length ch) of (ch shifted z5) -- point 0.35*(length cb)  of (cb shifted z5) dashed evenly;
+                draw point 0.9*(length ch) of (ch shifted z5) -- point 0.9*(length ch) of (ch shifted z6) dashed evenly;
+                z13=point  0.9*(length ch) of (ch shifted z6);z14= point 0.35*(length cb)  of cb shifted z6;
+                z15=point 0.9*(length ch) of (ch shifted z5);z16 = point 0.35*(length cb)  of (cb shifted z5);
+                draw codeperp(z15,z13,z14,5); draw codeperp(z13,z14,z16,5); draw codeperp(z14,z16,z15,5); draw codeperp(z16,z15,z13,5);
+                draw z6-- ((((subpath(0.5*(length c),length c) of (c shifted z5)))intersectionpoint(z5+0.2(z5-z6)--z6))--z6) dashed evenly; draw z6--z6+0.2(z6-z5);
+                draw(((subpath(0.5*(length c),length c) of (c shifted z5)))intersectionpoint(z5+0.2(z5-z6)--z6)) --z5+0.2(z5-z6);
+                draw z5-- point 0.9*(length c)of (c shifted z5) dashed evenly; label.top(btex$R$etex,0.5[z5,point 0.9*(length c)of (c shifted z5)]);
+                draw z6--point 0.9*(length c)of (c shifted z6) dashed evenly; label.top(btex$R$etex,0.5[z6,point 0.9*(length c)of (c shifted z6)]);
+            \end{Geometrie}
+            }
+    
+            $(\mathcal{P})$ est perpendiculaire à l'axe de révolution.
+        \end{center}        
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        La section d'un cylindre par un plan parallèle à son axe de révolution est un rectangle.
+    \end{minipage}
+\end{propriete}
 
 % \subsection*{Sections de solides - La pyramide et le cône de révolution}
 % \proprNumBis{(admise)}{
@@ -303,7 +415,7 @@
 % La section d'une pyramide ou d'un cône est de même nature que la base, c'est une réduction de celle-ci
 % }
 
-% \subsection{Agrandissement - réduction}
+% \section{Agrandissement - réduction}
 % \definNum{
 % \begin{itemize}
 % \item L'{\bf agrandissement de rapport $k$} d'un objet est la transformation qui consiste à \textbf{multiplier} toutes ses longueurs \textbf{par un nombre $k$ supérieur à 1}.
@@ -349,7 +461,7 @@
 % \end{center}
 % }
 
-% \subsection{Le globe terrestre}
+% \section{Le globe terrestre}
 % \definNumTitre{Vocabulaire}{
 % \begin{minipage}{5cm}
 % \begin{center}
