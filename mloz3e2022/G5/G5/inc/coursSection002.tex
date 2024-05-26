@@ -1,2 +1,164 @@
-\section{...}
-...
+\section{Sphères et boules}
+\subsection{Sphères}
+\begin{remarque}
+    Le solide obtenu en faisant tourner un cercle autour d'un de ses diamètres est une sphère.
+\end{remarque}
+\begin{definition}
+    Une \textbf{sphère} de centre $O$ et de rayon $r$ est l'ensemble des points de l'espace situés à une distance $r$ du point $O$.
+\end{definition}
+\begin{exemples*1}
+    Balles, ballons,etc.. ce sont des objets creux.
+\end{exemples*1}
+\begin{propriete}[\admise]
+    Si $(\mathscr S)$ est une sphère de rayon $r$ alors son aire vaut $4\pi r^2$.
+\end{propriete}
+\begin{exemple*1}
+    \titreExemple{Utilisation du vocabulaire}
+
+    \begin{minipage}{0.5\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $[NS]$ est un diamètre de la sphère.
+            \item $[OM]$ est un rayon de la sphère.
+            \item $OM=r$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            \scalebox{0.7}{
+            \begin{Geometrie}
+                u:=1cm;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231cm);
+                ellipse=(contour yscaled 0.25) rotated 14;
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.ulft(btex $M$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+            \end{Geometrie}
+            }
+        \end{center}
+    \end{minipage}
+    \vspace*{-10mm}
+\end{exemple*1}
+\subsection{Boules}
+\begin{definition}
+    Une \textbf{boule} de centre $O$ et de rayon $r$ est l'ensemble des points de l'espace situés à une distance inférieures ou égale à $r$ du point $O$.
+\end{definition}
+\begin{exemples*1}
+    Boules de pétanques, balles de golf, etc... ce sont des objets pleins.
+\end{exemples*1}
+\begin{propriete}[\admise]
+    Si $(\mathscr B)$ est une boule de rayon $r$ alors son volume vaut $\dfrac43 \pi r^3$.
+\end{propriete}
+\begin{exemple*1}
+    \titreExemple{Utilisation du vocabulaire}
+
+    \begin{minipage}{0.5\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $[NS]$ est un diamètre de la boule.
+            \item $[OM]$ est un rayon de la boule.
+            \item $OM=r$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            \scalebox{0.7}{
+            \begin{Geometrie}
+                u:=1cm;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231cm);
+                ellipse=(contour yscaled 0.25) rotated 14;
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.ulft(btex $M$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+            \end{Geometrie}
+            }
+        \end{center}
+    \end{minipage}
+    \vspace*{-10mm}
+\end{exemple*1}
+\begin{methode}[Aire d'une sphère et volume d'une boule.]
+    \exercice
+    \begin{enumerate}
+        \item Dessiner une sphère de centre $O$ en perspective.
+        \item Calculer l'aire exacte d'une sphère de rayon \Lg[cm]{12}.
+        \item Calculer le volume exact d'une boule de rayon \Lg[cm]{12}.
+        \item Arrondir ces résultats au centième.
+        \item \textit{Soit une sphère d'aire \Aire[cm]{7850}}
+        \begin{enumerate}
+            \item Calculer la valeur exacte de son rayon.
+            \item Calculer la valeur exacte du volume de la boule correspondante.
+            \item Arrondir ce volume au \Vol[cm]{} près.
+            \item Convertir ce volume en \Vol[dm]{}.
+        \end{enumerate}
+    \end{enumerate}
+    \correction
+    \begin{enumerate}
+        \item Schéma
+        
+        \scalebox{0.6}{
+            \begin{Geometrie}
+                u:=1cm;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231cm);
+                ellipse=(contour yscaled 0.25) rotated 14;
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.ulft(btex $M$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+            \end{Geometrie}
+        }
+        \item $4\times\pi\times(\Lg[cm]{12})^2\approx\Aire[cm]{1810.56}$.
+        \item $\dfrac43 \times\pi(\Lg[cm]{12})^3\approx\Vol[cm]{7238.23}$.
+        \item Arrondir ces résultats au centième.
+        \item \textit{Soit une sphère d'aire \Aire[cm]{7850}}
+        \begin{enumerate}
+            \item $R=\sqrt{\dfrac{\num{7850}}{4\times\pi}}$.
+            \item $V=\dfrac43 \times\pi\times\left(\sqrt{\dfrac{\num{7850}}{4\times\pi}}\right)^3$ Argh !!!
+            \item $V\approx\Vol[cm]{93960}$.
+            \item $V\approx\Vol[dm]{94}$.
+        \end{enumerate}
+    \end{enumerate}
+\end{methode} 

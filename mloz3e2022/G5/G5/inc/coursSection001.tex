@@ -1,2 +1,130 @@
-\section{...}
-...
+\section{Rappels : Cercles et disques}
+\subsection{Cercles}
+\begin{definition}
+    Le \textbf{cercle} de centre $O$ et de rayon $R$ est l'ensemble des points du plan situés à une distance $R$ du point $O$.
+\end{definition}
+\begin{propriete}[\admise]
+    Si $(\mathscr C)$ est un cercle de rayon $R$ alors son périmètre vaut $2\pi R$ : \og{} deux pierres \fg{}.
+\end{propriete}
+\begin{exemple*1}
+    \titreExemple{Utilisation du vocabulaire}
+
+    \begin{minipage}{0.5\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $[EB]$ est un diamètre.
+            \item $[OC]$ est un rayon.
+            \item $OC=R$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            \begin{Geometrie}
+                u:=u*0.6; 
+                pair O,B,C,D,E;
+                path co;
+                O=u*(3,3);
+                co=cercles(O,2u);
+                C=pointarc(co,15);
+                B=pointarc(co,45);
+                D=pointarc(co,105);
+                E=pointarc(co,225);
+                trace co;
+                trace segment(E,B) dashed evenly;
+                trace segment(O,C) dashed evenly;
+                label.ulft(btex $O$ etex,O);
+                label.rt(btex $C$ etex,C);
+                label.urt(btex $B$ etex,B);
+                %nomme.top(D);
+                label.top(btex $(\mathcal{C})$ etex,D);
+                label.llft(btex $E$ etex,E);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \vspace*{-5mm}
+\end{exemple*1}
+\begin{methode}[Longueur d'un cercle]
+    \exercice
+        \begin{enumerate}
+            \item Calculer la longueur d'un cercle de rayon \Lg[cm]{3,7}.
+            \item \textit{Soit un cercle de longueur \Lg[cm]{18}}
+            \begin{enumerate}
+                \item Calculer la valeur exacte de son rayon.
+                \item Donner une valeur approchée au dixième de ce rayon.
+            \end{enumerate}
+        \end{enumerate}
+    \correction
+    \begin{enumerate}
+        \item $2\times\pi\times \Lg[cm]{3,7}\approx\Lg[cm]{23.2}$.
+        \item \textit{Soit un cercle de longueur \Lg[cm]{18}}
+        \begin{enumerate}
+            \item $R=\Lg[cm]{18}\div (2\times\pi)$ soit $R=\Lg[cm]{9}\div \pi$.
+            \item $R\approx \Lg[cm]{2.9}$
+        \end{enumerate}
+    \end{enumerate}
+\end{methode}    
+\subsection{Disques}
+\begin{definition}
+    Le \textbf{disque} de centre $O$ et de rayon $R$ est l'ensemble des points du plan situés à une distance inférieure ou égale à $R$ du point $O$.    
+\end{definition}
+\begin{propriete}[\admise]
+    Si $(\mathscr D)$ est un disque de rayon $R$ alors son aire vaut $\pi R^2$ : \og{} pierre carrée \fg{}.
+\end{propriete}
+\begin{exemple*1}
+    \titreExemple{Utilisation du vocabulaire}
+
+    \begin{minipage}{0.5\linewidth}
+        Sur la figure ci-contre :
+        \begin{itemize}
+            \item $[EB]$ est un diamètre.
+            \item $[OC]$ est un rayon.
+            \item $OC=R$.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            % \includegraphics[scale=1]{coursespace.12} 
+            \begin{Geometrie}
+                u:=u*0.6; 
+                pair O,B,C,D,E;
+                path co;
+                O=u*(3,3);
+                co=cercles(O,2u);
+                trace co;
+                C=pointarc(co,15);
+                B=pointarc(co,45);
+                D=pointarc(co,105);
+                E=pointarc(co,225);
+                trace segment(E,B) dashed evenly;
+                trace segment(O,C) dashed evenly;
+                label.ulft(btex $O$ etex,O);
+                label.rt(btex $C$ etex,C);
+                label.urt(btex $B$ etex,B);
+                %nomme.top(D);
+                label.top(btex $(\mathcal{D})$ etex,D);
+                label.llft(btex $E$ etex,E);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \vspace*{-5mm}
+\end{exemple*1}
+\begin{methode}[Aire d'un disque]
+    \exercice
+        \begin{enumerate}
+            \item Calculer l'aire d'un disque de rayon \Lg[cm]{3,7}.
+            \item \textit{Soit un disque d'aire \Aire[cm]{27}}
+            \begin{enumerate}
+                \item Calculer la valeur exacte de son rayon.
+                \item Donner une valeur approchée au dixième de ce rayon.
+            \end{enumerate}
+        \end{enumerate}
+    \correction
+    \begin{enumerate}
+        \item $\pi\times \Lg[cm]{3,7}\times \Lg[cm]{3,7}\approx\Aire[cm]{43}$.
+        \item \textit{Soit un disque d'aire \Aire[cm]{27}}
+        \begin{enumerate}
+            \item $R^2=\Aire[cm]{27}\div \pi$ soit $R=\sqrt{27\div \pi}~\Lg[cm]{}$.
+            \item $R\approx\Lg[cm]{9.2}$.
+        \end{enumerate}
+    \end{enumerate}
+\end{methode}    

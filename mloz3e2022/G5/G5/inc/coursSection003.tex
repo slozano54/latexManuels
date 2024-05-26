@@ -1,2 +1,515 @@
-\section{...}
-...
+\section{Sections de solides}
+\subsection{La sphère}
+\begin{remarque}
+    lorsqu'elle existe, la section d'une sphère par un plan est un cercle.
+\end{remarque}
+
+\begin{changemargin}{-5mm}{-5mm}
+    \begin{propriete}[Disjonction des cas]
+        Soit $(\mathcal{P})$ un plan perpendiculaire en $H$ à l'un des diamètres $[NS]$ d'une sphère de rayon $r$. 
+
+        $OH$ est {\bf la distance du point $O$ au plan $(\mathcal{P})$}.
+        \columnseprule0.4pt
+        \begin{multicols}{3}
+        \centerline{\underline{$0<OH<r$}}
+        \par Le cercle de section a pour centre $H$.
+
+        \vspace*{10mm}
+        \scalebox{0.7}{
+        $$\begin{Geometrie}
+            u:=30;
+            z0=(3,3)*u;
+            dotlabel.urt(btex $O$ etex,z0);
+            z1=(3.5,1)*u;
+            label.lrt(btex $S$ etex,z1);
+            z2=(2.5,5)*u;
+            label.urt(btex $N$ etex,z2);
+            % remplissages ici avant les path
+            fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+            % fin remplissages    
+            path contour, ellipse,p,q,r,s,coupe;
+            contour=(fullcircle scaled 4.1231u);
+            ellipse=(contour yscaled 0.25) rotated 14;    
+            coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+            p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+            s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+            r=contour shifted z0;
+            draw z0--point 0 of ellipse shifted z0 dashed evenly;
+            label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+            q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+            draw contour shifted z0;
+            draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+            draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+            draw q;
+            draw z1--z2 dashed evenly;
+            draw z1--z1 + 0.08(z1-z2);
+            draw z2--z2+0.08(z2-z1);
+            dotlabel.rt(btex $H$ etex,z0+unitvector(z2-z1)*u);
+            dotlabel.ulft(btex $M$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+            draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+            draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0+ unitvector(z2-z1)*u dashed evenly;
+            draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u);
+            label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u);
+            z6= point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u));
+            z7= z0+ unitvector(z2-z1)*u;
+            draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed evenly;
+            draw codeperp(z6,z7,z0,5);
+            draw (0.5,4)*u--(p intersectionpoint r);draw (p intersectionpoint r)--(s intersectionpoint r) dashed evenly;
+            draw (s intersectionpoint r)--(6,5.5)*u;
+        \end{Geometrie}$$
+        }
+        \vskip2.5cm
+        \par\centerline{\underline{$OH=0$}}
+        \par
+        Le cercle de section a le même centre $O$ et le même rayon $r$ que la sphère : on dit que c'est un {\bf grand cercle} de la sphère.
+
+        \scalebox{0.7}{
+            $$\begin{Geometrie}
+                u:=30;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                % remplissages ici avant les path
+                fill fullcircle scaled 4.1231u yscaled 0.25 rotated 14 shifted (z0) withcolor Cornsilk;
+                % fin remplissages    
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231u);
+                ellipse=(contour yscaled 0.25) rotated 14;    
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                r=contour shifted z0;
+                draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw q shifted (-unitvector(z2-z1)*u);
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.llft(btex $H$ etex,z0);
+                dotlabel.urt(btex $O$ etex,z0);
+                label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u shifted (-unitvector(z2-z1)*u));
+                draw codeperp(z1,z0,0.5[z0,point 0 of ellipse shifted z0],5);
+                draw (0.5,4)*u shifted (-unitvector(z2-z1)*u)--(p shifted (-unitvector(z2-z1)*u) intersectionpoint r);
+                draw (p shifted (-unitvector(z2-z1)*u) intersectionpoint r)--(s shifted (-unitvector(z2-z1)*u) intersectionpoint r) dashed evenly;
+                draw (s shifted (-unitvector(z2-z1)*u) intersectionpoint r)--(6,5.5)*u shifted (-unitvector(z2-z1)*u);
+            \end{Geometrie}$$
+        }
+        \vskip1.5cm
+        \par\centerline{\underline{$OH=r$}}
+        \par
+        Le cercle de section a pour centre $S$ et pour rayon $0$. On dit que {\bf le plan $(\mathcal{P})$ est tangent à la sphère en $S$}.\par
+
+        \scalebox{0.7}{
+            $$\begin{Geometrie}[CoinBG={(0,-u)}]
+                u:=30;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                % remplissages ici avant les path
+                % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+                % fin remplissages    
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231u);
+                ellipse=(contour yscaled 0.25) rotated 14;    
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                r=contour shifted z0;
+                draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw q shifted (-unitvector(z2-z1)*3u);
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.llft(btex $H$ etex,z1);
+                label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u shifted (-unitvector(z2-z1)*3u));
+                z6= point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u));
+                z7= z0+ unitvector(z2-z1)*u;
+                draw codeperp(s shifted (-unitvector(z2-z1)*3u) intersectionpoint r,z1,z0,5);
+                draw z1--s shifted (-unitvector(z2-z1)*3u) intersectionpoint r dashed evenly;
+                draw (0.5,4)*u shifted (-unitvector(z2-z1)*3u)--(p shifted (-unitvector(z2-z1)*3u) intersectionpoint r);
+                draw (p shifted (-unitvector(z2-z1)*3u) intersectionpoint r)--(s shifted (-unitvector(z2-z1)*3u) intersectionpoint r) dashed evenly;
+                draw (s shifted (-unitvector(z2-z1)*3u) intersectionpoint r)--(6,5.5)*u shifted (-unitvector(z2-z1)*3u);
+            \end{Geometrie}$$
+        }
+        \end{multicols}
+        \columnseprule0pt
+    \end{propriete}
+\end{changemargin}
+\begin{exemple*1}
+    \titreExemple{Utilisation du vocabulaire}
+    
+    \begin{minipage}{0.4\linewidth}
+        \begin{center}
+            \scalebox{0.7}{
+                $$\begin{Geometrie}
+                    u:=30;
+                    z0=(3,3)*u;
+                    dotlabel.urt(btex $O$ etex,z0);
+                    z1=(3.5,1)*u;
+                    label.lrt(btex $S$ etex,z1);
+                    z2=(2.5,5)*u;
+                    label.urt(btex $N$ etex,z2);
+                    % remplissages ici avant les path
+                    fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+                    % fin remplissages    
+                    path contour, ellipse,p,q,r,s,coupe;
+                    contour=(fullcircle scaled 4.1231u);
+                    ellipse=(contour yscaled 0.25) rotated 14;    
+                    coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                    p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                    s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                    r=contour shifted z0;
+                    draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                    label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                    q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+                    draw contour shifted z0;
+                    draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                    draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                    draw q;
+                    draw z1--z2 dashed evenly;
+                    draw z1--z1 + 0.08(z1-z2);
+                    draw z2--z2+0.08(z2-z1);
+                    dotlabel.rt(btex $H$ etex,z0+unitvector(z2-z1)*u);
+                    dotlabel.ulft(btex $M$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                    draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+                    draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0+ unitvector(z2-z1)*u dashed evenly;
+                    draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u);
+                    label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u);
+                    z6= point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u));
+                    z7= z0+ unitvector(z2-z1)*u;
+                    draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed evenly;
+                    draw codeperp(z6,z7,z0,5);
+                    draw (0.5,4)*u--(p intersectionpoint r);draw (p intersectionpoint r)--(s intersectionpoint r) dashed evenly;
+                    draw (s intersectionpoint r)--(6,5.5)*u;
+                \end{Geometrie}$$
+                }
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}
+        Le plan $(\mathcal{P})$ coupe la sphère de centre $O$ et de rayon $r$ : la section obtenue est un cercle de centre $H$ et de rayon $MH$ que l'on calcule à l'aide du théorème de Pythagore.
+    \end{minipage}
+    \vspace*{-5mm}
+\end{exemple*1}
+\begin{propriete}
+    \textit{
+        \begin{itemize}
+            \item Soit une sphère $(\mathscr S)$ de centre $O$ et de rayon $r$.
+            \item Soit un plan $(\mathscr P)$ situé à la distance $d$ de $O$, $d<r$, $d=OH$.
+            \item H est le pied de la perpendiculaire à $(\mathscr P)$ passant par $O$.
+        \end{itemize}
+    }
+    \par
+    \begin{center}
+    La section de la sphère $(\mathscr S)$ et du plan $(\mathscr P)$ :\\
+    c'est le cercle de centre H et de rayon $MH=\sqrt{r^2-d^2}$
+\end{center}
+\end{propriete}
+\begin{preuve}
+    Dans le triangle $MHO$, rectangle en H, la relation de Pythagore s'écrit :
+    $$MH^2+HO^2=OM^2$$
+    On note $OH=d$ et $OM=r$, on a donc :
+    $$MH^2+d^2=r^2$$ 
+    d'où $MH^2=r^2-d^2$, or $d<r$ donc $r^2-d^2>0$ ce qui garantit l'existence de sa racine carrée.\\
+    d'où $\mathbf{MH=\sqrt{r^2-d^2}}$ $\square$
+\end{preuve}
+
+\begin{methode*1}[Applications]
+    \exercice
+    \begin{enumerate}
+        \item \textit{On coupe une sphère de centre $O$ et de rayon $21$ cm par un plan situé à $6$ cm de $O$.\\Soit $I$ le centre de la section.}
+        \begin{enumerate}
+            \item Calculer la valeur exacte du rayon de la section.
+            \item Arrondir ce rayon à l'unité.
+        \end{enumerate}
+        \item \textit{La section d'une sphère de $8$ cm de rayon et d'un plan est un cercle de $4$ cm de rayon.}\\
+        Calculer la distance du centre de la sphère au centre de la section.
+    \end{enumerate}
+    \correction
+    \begin{enumerate}
+        \item \textit{On coupe une sphère de centre $O$ et de rayon $21$ cm par un plan situé à $6$ cm de $O$.\\Soit $I$ le centre de la section.}
+        \begin{enumerate}
+            \item $\text{Rayon}_{\text{section}}=\sqrt{(\Lg[cm]{21})^2-(\Lg[cm]{6})^2}$ soit $\text{Rayon}_{\text{section}}=\sqrt{405}~\Lg[cm]{}$.
+            \item $\text{Rayon}_{\text{section}}\approx\Lg[cm]{21}$.
+        \end{enumerate}
+        \item \textit{La section d'une sphère de $8$ cm de rayon et d'un plan est un cercle de $4$ cm de rayon.}\\
+        $(\Lg[cm]{4})^2=\sqrt{(\Lg[cm]{8})^2-r^2}$ soit $16=\sqrt{64-r^2}$ d'où $16=64-r^2$ donc $r^2=48$ et $r=\sqrt{48}\Lg[cm]{}\approx\Lg[cm]{6.9}$.
+    \end{enumerate}
+\end{methode*1}
+
+% \subsection{Sections de solides - Le parallélépipède rectangle}
+% \proprNumBis{par un plan parallèle à une face (admise)}{
+% \begin{center}
+% $\includegraphics[scale=0.75]{coursespace.3}$\par
+% $(\mathcal{P})$ est parallèle à la face $ADHE$.
+% \end{center}
+% \vspace{0.5cm}
+% La section d'un parallélépipède rectangle par un plan parallèle à une face est un rectangle ayant les mêmes dimensions que cette face.
+% }
+
+% \proprNumBis{par un plan parallèle à une arête (admise)}{
+% \begin{center}
+% $\includegraphics[scale=0.75]{coursespace.4}$\par
+% $(\mathcal{P})$ est parallèle à l'arête $[AE]$.
+% \end{center}
+% \vspace{0.5cm}
+% La section d'un parallélépipède rectangle par un plan parallèle à une arête est un rectangle.
+% }
+
+% \Remarques[Remarque]{
+% Lorsque le parallélépipède est un \textbf{cube} les sections parallèles aux faces sont des carrés.
+% }
+
+% \subsection{Sections de solides - Le cylindre de révolution}
+% \proprNumBis{par un plan perpendiculaire à l'axe (admise)}{
+% \begin{center}
+% $\includegraphics[scale=0.45]{coursespace.5}$\par
+% $(\mathcal{P})$ est perpendiculaire à l'axe de révolution.
+% \end{center}
+% \vspace{0.5cm}
+% La section d'un cylindre par un plan perpendiculaire à son axe de révolution est un disque de même rayon que sa base.
+% }
+
+% \proprNumBis{par un plan parallèle à l'axe (admise)}{
+% \begin{center}
+% $\includegraphics[scale=0.45]{coursespace.6}$\par
+% $(\mathcal{P})$ est parallèle à l'axe de révolution.
+% \end{center}
+% \vspace{0.5cm}
+% La section d'un cylindre par un plan parallèle à son axe de révolution est un rectangle.
+% }
+
+% \subsection*{Sections de solides - La pyramide et le cône de révolution}
+% \proprNumBis{(admise)}{
+% \begin{center}
+% \includegraphics[scale=0.85]{coursespace.7}\hspace{2cm} \includegraphics[scale=0.85]{coursespace.8}\par
+% $(\mathcal{P})$ est parallèle au plan de base.
+% \end{center}
+% \vspace{0.5cm}
+% La section d'une pyramide ou d'un cône est de même nature que la base, c'est une réduction de celle-ci
+% }
+
+% \subsection{Agrandissement - réduction}
+% \definNum{
+% \begin{itemize}
+% \item L'{\bf agrandissement de rapport $k$} d'un objet est la transformation qui consiste à \textbf{multiplier} toutes ses longueurs \textbf{par un nombre $k$ supérieur à 1}.
+% \item La {\bf réduction de rapport $k$} d'un objet est la transformation qui consiste à \textbf{multiplier} toutes ses longueurs \textbf{par un nombre $k$ inférieur à 1}.
+% \end{itemize}
+% }
+% \Exemples{}{
+% \begin{itemize}
+% \item une maquette réalisée à l'échelle $1/100$ est la réduction de rapport $\dfrac1{100}$ de l'objet réel.
+% \item une feuille de format A3 (rectangle de dimensions $29,7\,cm$ et $42\,cm$) est un agrandissement de rapport $\sqrt2$ d'une feuille de format A4 (rectangle de dimensions $21\,cm$ et $29,7\,cm$).
+% \end{itemize}
+% }
+
+% \proprNumBis{(Admise)}{Dans un agrandissement ou une réduction de rapport $k$ :
+% \begin{itemize}
+% \item les aires sont multipliées par $k^2$.
+% \item les volumes sont multipliés par $k^3$.
+% \end{itemize}
+% }
+
+% \Exemples{}{
+% \begin{itemize}
+% \item Deux feuilles de format A4 sont nécessaires pour recouvrir exactement une feuille de format A3 ($k=\sqrt2$ et $k^2=2$ soit le double de la surface).
+% \item huit petits cubes d'arête $a$ sont nécessaires pour remplir un cube d'arête $2a$ ($k=2$ et $k^3=8$).
+% \end{itemize}
+% }
+
+% \proprNumBis{(Admise)}{
+% Dans un agrandissement ou une réduction, il y a conservation des \textbf{mesures d'angles}, de la \textbf{perpendicularité} et du \textbf{parallélisme}.
+% }
+
+% \Exemples[Exemple dans l'espace : section de la pyramide ou du c\^{o}ne]{}{
+% C'est l'application du \textbf{théor\`{e}me de Thal\`{e}s} qui permet le calcul du coefficient d'agrandissement ou de réduction.\\
+% Les plans de sections étant parall\`{e}les aux bases, son application est licite! 
+% \begin{center}
+% \begin{tabular}{c|c|c}
+% \includegraphics[scale=0.85]{../figures/coursespace.9}&&\includegraphics[scale=0.85]{../figures/coursespace.10}\\
+% &&\\
+% $k=\dfrac{SO'}{SO}=\dfrac{SA'}{SA}=\dfrac{O'A'}{OA}=\ldots$&&$k=\dfrac{SO'}{SO}=\dfrac{SA'}{SA}=\dfrac{A'B'}{AB}=\dfrac{A'O'}{AO}=\ldots$\\
+% &&\\
+% \textbf{c\^{o}ne de révolution}&&\textbf{pyramide}\\
+% \end{tabular}
+% \end{center}
+% }
+
+% \subsection{Le globe terrestre}
+% \definNumTitre{Vocabulaire}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 1:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,2.77){\psellipse[linestyle=dotted](0,0)(4.16,0.83)}
+% \rput{90}(0,0){\psellipse[linestyle=dotted](0,0)(5,3.6)}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(0.98,-0.98)
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(-3.55,-0.7)
+% %\psarc[linewidth=2pt](0,0){5}{224.75}{281.31}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(-3.22,2.24)
+% %\psarc[linewidth=2pt](0,0){5}{63.36}{98.13}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(-3.55,-0.7)
+% \rput[bl](-3.43,-0.5){$B$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% La Terre est assimilable à une boule d'environ 6400 km de rayon.\\
+% Appelons $O$ le centre de la Terre. Le point $N$ représente le pôle Nord, le point $S$ le pôle Sud.\\
+% Sur la sphère représentant la surface terrestre, un grand cercle de centre $O$ passant par $N$ et $S$ est appelé \textbf{méridien}.\\
+% Le grand cercle de centre $O$ et tracé dans un plan perpendiculaire au diamètre $[NS]$ est, lui, appelé \textbf{l'équateur}.\\
+% Ici est tracé le méridien qui sert de référence, appelé \textbf{méridien de Greenwich} (\textit{car il passe par Greenwich, petite ville située non loin de Londres})\\
+% Chaque point à la surface de la Terre peut être repéré grâce à deux nombres: la \textbf{longitude} et la \textbf{latitude}.\\
+% La longitude est calculée par rapport au méridien de Greenwich, la latitude par rapport à l'équateur; par exemple, le point $C$ sur cette figure, qui représente la position de la ville de Chicago, a pour longitude $\widehat{AOB}=87^{\circ}$, et pour latitude $\widehat{BOC}=41^{\circ}$
+% \end{minipage}
+% }
+
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 2:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,2.77){\psellipse[linestyle=dotted](0,0)(4.16,0.83)}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\platitude longitude istansarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% \rput{0}(0,2.77){\psarcellipse[linewidth=2pt](0,0)(4.16,0.83){220}{300}}
+% %\psarc(0,0){5}{180}{0}
+% \psline[linestyle=dashed,dash=8pt 8pt](0,0)(0,2.77)
+% %\psarc[linewidth=2pt](0,2.77){4.16}{219.38}{301.24}
+% \psdots(0,2.77)
+% \rput[bl](-0.13,2.97){$O'$}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Le cercle de centre $O'$ et passant par $C$, parallèle au plan de l'équateur, est appelé  \textbf{parallèle}, justement.\\
+% Ce n'est pas ce que l'on appelle un grand cercle (car il n'a pas $O$ pour centre).\\
+% La situation d'Istanbul, ville située sur le même parallèle que Chicago (et qui a donc la même latitude, mais pas la même longitude), est représentée par le point $I$.\\ Les question à traiter sont les suivantes:\\
+% \textbf{1.} Connaissant les coordonnées (longitude et latitude) des deux villes, \textbf{quel est le chemin le plus court pour les joindre en avion}? en suivant le parallèle passant par $I$ et $C$? (\textit{voir figure 2}), ou en suivant le grand cercle passant par $I$ et $C$? (\textit{voir figure 3})\\
+% \textbf{2.} Quelle est l'aire totale, en km$^2$, de la surface terrestre ? Quel est le volume total, en km$^3$, de la Terre ? (\textit{donner les réponses sous forme scientifique})
+% \end{minipage}
+% }
+
+
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 3:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{-7.59}(0,0){\psellipse[linestyle=dotted](0,0)(5,2.51)}
+% \rput{-7.59}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,2.51){68}{135}}
+% %\psarc[linewidth=2pt](0,0){5}{68.05}{134.21}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Voici ce dont vous avez besoin pour répondre à ces questions:
+% \begin{itemize}
+% \item  Coordonnées géographiques de Chicago:\\
+% Latitude $41^{\circ}$ Nord, longitude $87^{\circ}$ Ouest.
+% \item  Coordonnées géographiques d'Istanbul:\\
+% Latitude $41^{\circ}$ Nord, longitude $28^{\circ}$ Est.
+% \item  $OO'=4200$ km, $\widehat{COI}=79^{\circ}$
+% \item  Formule pour calculer la longueur d'un arc de cercle défini par un angle de mesure $\alpha$:\\ $L=2\times\pi\times R\times\frac{\alpha}{360}$
+% \item  Aire d'une sphère de rayon $R$:\\
+% $\mathcal{A}=4\times\pi\times R^2$.
+% \item  Volume d'une boule de rayon $R$:\\
+% $\mathcal{V}=\frac{4}{3}\times\pi\times R^3$
+% \end{itemize}
+% \end{minipage}
+% }
+
+% \subsection{Compléments numériques - Constructions}
+
+% \Animations{
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_078.html}{Section d'une pyramide par un plan}
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_077.html}{Section d'un pavé par un plan}
+% \creditInstrumentPoche
+% }
