@@ -405,15 +405,73 @@
     \end{minipage}
 \end{propriete}
 
-% \subsection*{Sections de solides - La pyramide et le cône de révolution}
-% \proprNumBis{(admise)}{
-% \begin{center}
-% \includegraphics[scale=0.85]{coursespace.7}\hspace{2cm} \includegraphics[scale=0.85]{coursespace.8}\par
-% $(\mathcal{P})$ est parallèle au plan de base.
-% \end{center}
-% \vspace{0.5cm}
-% La section d'une pyramide ou d'un cône est de même nature que la base, c'est une réduction de celle-ci
-% }
+\subsection*{La pyramide et le cône de révolution}
+\begin{propriete}
+    \begin{center}
+        \hfill
+        \scalebox{0.4}{
+            \begin{Geometrie}[CoinBG={(-5u,-3u)},CoinHD={(6u,8u)}]
+                labeloffset:=1.5bp;
+                z5=(0,7)*u;
+                z0=(0,0)*u;z1=(4.5,2)*u;z2=(1.5,-2)*u;z3=(-4.5,-2)*u;z4=(-1.5,2)*u;
+                draw z1--z2--z3 ;draw z3--z4--z1 dashed evenly; z6=0.6[z3,z5];
+                z7=whatever [z6,z6+2(z2-z3)]=whatever[z2,z5];z8=whatever[z7,z7+2(z1-z2)]=whatever[z1,z5];
+                z9=whatever[z8,z8+2(z3-z2)]=whatever[z4,z5];
+                draw z6-- z7--z8; draw z8--z9--z6 dashed evenly;
+                draw z6--z5--z7;draw z5--z9 dashed evenly;draw z5--z8 ;
+                z10=z6-0.4(z8-z6); z11=z7+0.4(z7-z9);z12=z8+0.4(z8-z6);draw z10--z11--z12;z13=z9+0.4(z9-z7);
+                draw z12--(z12--z12+0.5(z13-z12)) intersectionpoint (z1--z5);
+                draw z13--(z13--z13+0.5(z12-z13)) intersectionpoint (z3--z5);
+                draw z13--z10;draw z3--(z3--z6)intersectionpoint (z10--z11);
+                draw z2--(z2--z7)intersectionpoint (z10--z11);
+                draw z1--(z1--z8)intersectionpoint (z11--z12);
+                draw z4--z9 dashed evenly;draw z6--z8 dashed evenly; draw z7--z9 dashed evenly;
+                draw z2--z4 dashed evenly; draw z1--z3 dashed evenly;
+                z15=whatever[z7,z9]=whatever[z6,z8];
+                draw codeperp(z3,z0,z15,7); draw codeperp(z6,z15,z5,7);
+                label.urt(btex \large $(\mathcal P)$ etex,z10 shifted(0.2u,0.1u));
+                draw z0--z5 dashed evenly;
+            \end{Geometrie}
+        }
+        \hfill
+        \scalebox{0.6}{
+            \begin{Geometrie}[CoinBG={(-6u,-2u)},CoinHD={(6u,6u)}]
+                z0=(0,0)*u;
+                path c,cb,ch; c=(fullcircle scaled 4cm)yscaled 0.3;
+                ch=subpath (0,0.5*(length c)) of c;cb=subpath(0.5*(length c),length c) of c;
+                z1=(0,5u);
+                draw ch dashed evenly; draw cb;draw z0--z1 dashed evenly;
+                draw (ch scaled 0.6) shifted (0,2u) dashed evenly;draw (cb scaled 0.6) shifted (0,2u);
+                draw z1--point 0 of ((c scaled 0.6)shifted (0,2u));draw z1--point 0.5*(length c) of ((c scaled 0.6)shifted (0,2u));
+                z2=point 0.625*(length c) of ((c scaled 0.6)shifted (0,2u));
+                z3=point 0.125*(length c) of ((c scaled 0.6)shifted (0,2u));
+                z4=point 0.875*(length c) of ((c scaled 0.6)shifted (0,2u));
+                z5=point 0.375*(length c) of ((c scaled 0.6)shifted (0,2u));
+                draw z5+0.5(z5-z4)--z2+0.7(z2-z3)--z4+0.5(z4-z5)--z3+0.7(z3-z2);
+                draw (z3+0.7(z3-z2)) -- ((z3+0.7(z3-z2)--z5+0.5(z5-z4))intersectionpoint (z1--point 0 of ((c scaled 0.6)shifted (0,2u))));
+                draw (z5+0.5(z5-z4))-- ((z3+0.7(z3-z2)--z5+0.5(z5-z4))intersectionpoint (z1--point 0.5*(length c) of ((c scaled 0.6)shifted (0,2u))));
+                z6=whatever[z2,z3]=whatever[z4,z5];
+                draw z6--point 0.6*(length c) of (c scaled 0.6)shifted (0,2u);
+                draw z6--point 0 of (c scaled 0.6) shifted (0,2u) dashed evenly;
+                draw point 0 of c--z0 dashed evenly;
+                draw z0--z1 dashed evenly;
+                draw z0--point 0.6*(length c) of c;
+                label.urt(btex $(\mathcal P)$ etex,z2+0.6(z2-z3));
+                draw point 0 of c--(point 0 of (c scaled 0.6)shifted (0,2u)--point 0 of c)intersectionpoint (z4+0.5(z4-z5)--z2+0.7(z2-z3));
+                draw point 0.5*(length c) of c--(point 0.5*(length c) of (c scaled 0.6)shifted (0,2u)--point 0.5*(length c) of c) intersectionpoint (z4+0.5(z4-z5)--z2+0.7(z2-z3));
+                draw codeperp(z1,z6,point 0.6*(length c) of (c scaled 0.6)shifted (0,2u),5);
+                draw codeperp(z1,z0,point 0.6*(length c) of c,5);
+                draw codeperp(z1,z6,point 0 of (c scaled 0.6)shifted (0,2u),7) dashed evenly;
+                draw codeperp(z1,z0,point 0 of c,7) dashed evenly;
+            \end{Geometrie}
+        }
+        \hfill\phantom{rrr}
+
+        $(\mathcal{P})$ est parallèle au plan de base.
+    \end{center}
+    \smallskip
+    La section d'une pyramide ou d'un cône est de même nature que la base, c'est une réduction de celle-ci
+\end{propriete}
 
 % \section{Agrandissement - réduction}
 % \definNum{

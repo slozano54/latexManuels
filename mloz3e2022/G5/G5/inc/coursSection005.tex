@@ -1,0 +1,361 @@
+\begin{changemargin}{-5mm}{-10mm}
+\section{Le globe terrestre}
+\begin{definition}[Vocabulaire]
+    \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \textbf{Figure 1:}
+
+            \medskip            
+            \scalebox{1}{
+                \begin{Geometrie}
+                    u:=30;
+                    z0=(3,3)*u;%centre
+                    numeric angleInclinaison;
+                    % angleInclinaison:=14;
+                    angleInclinaison:=-14;
+                    dotlabel.urt(btex $O$ etex,z0);
+                    % z1=(3.5,1)*u;%pole sud pour angleInclinaison 14
+                    z1=(2.5,1)*u;%pole sud
+                    dotlabel.lrt(btex $S$ etex,z1);
+                    % z2=(2.5,5)*u;%pole nord pour angleInclinaison 14
+                    z2=(3.5,5)*u;%pole nord
+                    dotlabel.urt(btex $N$ etex,z2);
+                    % remplissages ici avant les path
+                    % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+                    % fin remplissages    
+                    path contour, ellipse,coupe,greenwich,meridien;
+                    path r;% contour translaté
+                    contour=(fullcircle scaled 4.1231u);
+                    ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+                    coupe=(contour scaled 0.88 yscaled 0.15) rotated angleInclinaison;
+                    greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+                    meridien=(contour scaled 1 xscaled 0.79) rotated angleInclinaison;
+                    r=contour shifted z0;
+                    z3=point 0.6*(length ellipse) of ellipse shifted z0;
+                    dotlabel.urt(btex $B$ etex,z3);
+                    z4=point 0.8*(length ellipse) of ellipse shifted z0;
+                    dotlabel.llft(btex $A$ etex,z4);
+                    z5=point 0.5*(length ellipse) of ellipse shifted z0;
+                    dotlabel.lft(btex $W$ etex,z5);
+                    z6=point 0 of ellipse shifted z0;
+                    dotlabel.urt(btex $E$ etex,z6);
+                    draw contour shifted z0;
+                    %equateur
+                    draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                    %greenwich
+                    draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 dashed evenly;                    
+                    %meridien
+                    draw meridien shifted z0 dashed withdots withpen pencircle scaled 1.1bp;
+                    %
+                    draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    z7=point 0.6*(length coupe) of coupe shifted (z0+ unitvector(z2-z1)*u);
+                    dotlabel.urt(btex $C$ etex,z7);
+                    % draw q;
+                    draw z1--z2 dashed evenly;
+                    draw z1--z1 + 0.08(z1-z2);
+                    draw z2--z2+0.08(z2-z1);
+                \end{Geometrie}
+                }
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.65\linewidth}
+        La Terre est assimilable à une boule d'environ 6400 km de rayon.
+
+        Appelons $O$ le centre de la Terre.
+        
+        Le point $N$ représente le pôle Nord, le point $S$ le pôle Sud.
+
+        Sur la sphère représentant la surface terrestre, un grand cercle de centre $O$ passant par $N$ et $S$ est appelé \textbf{méridien}.
+
+        Le grand cercle de centre $O$ et tracé dans un plan perpendiculaire au diamètre $[NS]$ est, lui, appelé \textbf{l'équateur}.
+
+        On a tracé ici le méridien qui sert de référence, appelé \textbf{méridien de Greenwich} (\textit{car il passe par Greenwich, petite ville située non loin de Londres})
+
+        Chaque point à la surface de la Terre peut être repéré grâce à deux nombres: la \textbf{longitude} et la \textbf{latitude}.
+
+        La longitude est calculée par rapport au méridien de Greenwich, la latitude par rapport à l'équateur.
+    \end{minipage}
+\end{definition}
+\begin{exemple*1}
+     Le point $C$ sur cette figure, qui représente la position de la ville de Chicago, a pour longitude $\widehat{AOB}=\ang{87}$ et pour latitude $\widehat{BOC}=\ang{41}$.
+     Les coordonnées GPS de Chicago sont donc \ang{41} Nord et \ang{87} Ouest.
+\end{exemple*1}
+\begin{exemple*1}
+    \titreExemple{Application}
+
+        \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \textbf{Figure 2:}
+
+            \medskip            
+            \scalebox{0.8}{
+                \begin{Geometrie}
+                    u:=30;
+                    z0=(3,3)*u;%centre
+                    numeric angleInclinaison;
+                    % angleInclinaison:=14;
+                    angleInclinaison:=-14;
+                    dotlabel.urt(btex $O$ etex,z0);
+                    % z1=(3.5,1)*u;%pole sud pour angleInclinaison 14
+                    z1=(2.5,1)*u;%pole sud
+                    dotlabel.lrt(btex $S$ etex,z1);
+                    % z2=(2.5,5)*u;%pole nord pour angleInclinaison 14
+                    z2=(3.5,5)*u;%pole nord
+                    dotlabel.urt(btex $N$ etex,z2);
+                    % remplissages ici avant les path
+                    % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+                    % fin remplissages    
+                    path contour, ellipse,coupe,greenwich,meridien;
+                    path r;% contour translaté
+                    contour=(fullcircle scaled 4.1231u);
+                    ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+                    coupe=(contour scaled 0.88 yscaled 0.15) rotated angleInclinaison;
+                    greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+                    meridien=(contour scaled 1 xscaled 0.79) rotated angleInclinaison;
+                    r=contour shifted z0;
+                    z3=point 0.6*(length ellipse) of ellipse shifted z0;
+                    dotlabel.urt(btex $B$ etex,z3);
+                    z4=point 0.8*(length ellipse) of ellipse shifted z0;
+                    dotlabel.llft(btex $A$ etex,z4);
+                    z5=point 0.5*(length ellipse) of ellipse shifted z0;
+                    dotlabel.lft(btex $W$ etex,z5);
+                    z6=point 0 of ellipse shifted z0;
+                    dotlabel.urt(btex $E$ etex,z6);
+                    draw contour shifted z0;
+                    %equateur
+                    draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                    %greenwich
+                    draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 dashed evenly;                    
+                    %meridien
+                    draw meridien shifted z0 dashed withdots withpen pencircle scaled 1.1bp;
+                    %
+                    draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    z7=point 0.6*(length coupe) of coupe shifted (z0+ unitvector(z2-z1)*u);
+                    z8=point 0.9*(length coupe) of coupe shifted (z0+ unitvector(z2-z1)*u);
+                    dotlabel.urt(btex $C$ etex,z7);
+                    dotlabel.urt(btex $I$ etex,z8);
+                    draw (subpath (0.6*(length coupe),0.9*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) withpen pencircle scaled 1.3bp;
+                    % draw q;
+                    draw z1--z2 dashed evenly;
+                    draw z1--z1 + 0.08(z1-z2);
+                    draw z2--z2+0.08(z2-z1);
+                \end{Geometrie}
+            }
+
+            \textbf{Figure 3:}
+
+            \medskip            
+            \scalebox{0.8}{
+                \begin{Geometrie}
+                    u:=30;
+                    z0=(3,3)*u;%centre
+                    numeric angleInclinaison;
+                    % angleInclinaison:=14;
+                    angleInclinaison:=-14;
+                    dotlabel.urt(btex $O$ etex,z0);
+                    % z1=(3.5,1)*u;%pole sud pour angleInclinaison 14
+                    z1=(2.5,1)*u;%pole sud
+                    dotlabel.lrt(btex $S$ etex,z1);
+                    % z2=(2.5,5)*u;%pole nord pour angleInclinaison 14
+                    z2=(3.5,5)*u;%pole nord
+                    dotlabel.urt(btex $N$ etex,z2);
+                    % remplissages ici avant les path
+                    % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+                    % fin remplissages    
+                    path contour, ellipse,coupe,greenwich,meridien,grandCercle;
+                    path r;% contour translaté
+                    contour=(fullcircle scaled 4.1231u);
+                    ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+                    grandCercle=(contour yscaled 0.6) rotated angleInclinaison;
+                    coupe=(contour scaled 0.88 yscaled 0.15) rotated angleInclinaison;
+                    greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+                    meridien=(contour scaled 1 xscaled 0.79) rotated angleInclinaison;
+                    r=contour shifted z0;
+                    z3=point 0.6*(length ellipse) of ellipse shifted z0;
+                    dotlabel.urt(btex $B$ etex,z3);
+                    z4=point 0.8*(length ellipse) of ellipse shifted z0;
+                    dotlabel.llft(btex $A$ etex,z4);
+                    z5=point 0.5*(length ellipse) of ellipse shifted z0;
+                    dotlabel.lft(btex $W$ etex,z5);
+                    z6=point 0 of ellipse shifted z0;
+                    dotlabel.urt(btex $E$ etex,z6);                    
+                    %
+                    draw contour shifted z0;
+                    %equateur
+                    draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                    %greenwich
+                    draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.3bp;;
+                    draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 dashed evenly;                    
+                    %meridien
+                    draw meridien shifted z0 dashed withdots withpen pencircle scaled 1.1bp;
+                    %coupe
+                    % draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    % draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed withdots  withpen pencircle scaled 1.1bp;
+                    %
+                    draw grandCercle shifted z0 dashed withdots withpen pencircle scaled 1.1bp;
+                    draw (subpath (0.12*(length grandCercle),0.38*(length grandCercle)) of grandCercle) shifted z0 withpen pencircle scaled 1.3bp;
+                    %
+                    z7=point 0.6*(length coupe) of coupe shifted (z0+ unitvector(z2-z1)*u);
+                    z8=point 0.9*(length coupe) of coupe shifted (z0+ unitvector(z2-z1)*u);
+                    dotlabel.urt(btex $C$ etex,z7);
+                    dotlabel.urt(btex $I$ etex,z8);
+                    % draw q;
+                    draw z1--z2 dashed evenly;
+                    draw z1--z1 + 0.08(z1-z2);
+                    draw z2--z2+0.08(z2-z1);
+                \end{Geometrie}
+                }
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.65\linewidth}
+        Le cercle de centre $O'$ et passant par $C$, parallèle au plan de l'équateur, est appelé  \textbf{parallèle}, justement.
+
+        Ce n'est pas ce que l'on appelle un grand cercle car $O$ n'est pas son centre.
+
+        La situation d'Istanbul, ville située sur le même parallèle que Chicago, donc à la même latitude, mais pas à la même longitude, est représentée par le point $I$.
+        
+        Quelques questions :
+        \begin{enumerate}
+            \item Connaissant les coordonnées (longitude et latitude) des deux villes, \textbf{quel est le chemin le plus court pour les joindre en avion}?
+            En suivant le parallèle passant par $I$ et $C$ (\textit{voir figure 2}), ou en suivant le grand cercle passant par $I$ et $C$ (\textit{voir figure 3}) ?
+            \item Quelle est l'aire totale, en km$^2$, de la surface terrestre ? Quel est le volume total, en km$^3$, de la Terre ? (\textit{donner les réponses sous forme scientifique})
+        \end{enumerate}
+    \end{minipage}
+\end{exemple*1}
+
+\begin{remarque}
+    Quelques éléments nécessaires pour répondre à ces questions:
+    \begin{itemize}
+        \item  Coordonnées géographiques de Chicago:\\
+        Latitude $\ang{41}$ Nord, longitude $\ang{87}$ Ouest.
+        \item  Coordonnées géographiques d'Istanbul:\\
+        Latitude $\ang{41}$ Nord, longitude $\ang{28}$ Est.
+        \item  $OO'=4200$ km, $\widehat{COI}=\ang{79}$
+        \item  Formule pour calculer la longueur d'un arc de cercle défini par un angle de mesure $\alpha$:\\ $L=2\times\pi\times R\times\frac{\alpha}{360}$
+        \item  Aire d'une sphère de rayon $R$:\\
+        $\mathcal{A}=4\times\pi\times R^2$.
+        \item  Volume d'une boule de rayon $R$:\\
+        $\mathcal{V}=\frac{4}{3}\times\pi\times R^3$
+    \end{itemize}
+\end{remarque}
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 2:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,2.77){\psellipse[linestyle=dotted](0,0)(4.16,0.83)}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\platitude longitude istansarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% \rput{0}(0,2.77){\psarcellipse[linewidth=2pt](0,0)(4.16,0.83){220}{300}}
+% %\psarc(0,0){5}{180}{0}
+% \psline[linestyle=dashed,dash=8pt 8pt](0,0)(0,2.77)
+% %\psarc[linewidth=2pt](0,2.77){4.16}{219.38}{301.24}
+% \psdots(0,2.77)
+% \rput[bl](-0.13,2.97){$O'$}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Le cercle de centre $O'$ et passant par $C$, parallèle au plan de l'équateur, est appelé  \textbf{parallèle}, justement.\\
+% Ce n'est pas ce que l'on appelle un grand cercle (car il n'a pas $O$ pour centre).\\
+% La situation d'Istanbul, ville située sur le même parallèle que Chicago (et qui a donc la même latitude, mais pas la même longitude), est représentée par le point $I$.\\ Les question à traiter sont les suivantes:\\
+% \textbf{1.} Connaissant les coordonnées (longitude et latitude) des deux villes, \textbf{quel est le chemin le plus court pour les joindre en avion}? en suivant le parallèle passant par $I$ et $C$? (\textit{voir figure 2}), ou en suivant le grand cercle passant par $I$ et $C$? (\textit{voir figure 3})\\
+% \textbf{2.} Quelle est l'aire totale, en km$^2$, de la surface terrestre ? Quel est le volume total, en km$^3$, de la Terre ? (\textit{donner les réponses sous forme scientifique})
+% \end{minipage}
+% }
+
+
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 3:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{-7.59}(0,0){\psellipse[linestyle=dotted](0,0)(5,2.51)}
+% \rput{-7.59}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,2.51){68}{135}}
+% %\psarc[linewidth=2pt](0,0){5}{68.05}{134.21}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Voici ce dont vous avez besoin pour répondre à ces questions:
+% \begin{itemize}
+% \item  Coordonnées géographiques de Chicago:\\
+% Latitude $41^{\circ}$ Nord, longitude $87^{\circ}$ Ouest.
+% \item  Coordonnées géographiques d'Istanbul:\\
+% Latitude $41^{\circ}$ Nord, longitude $28^{\circ}$ Est.
+% \item  $OO'=4200$ km, $\widehat{COI}=79^{\circ}$
+% \item  Formule pour calculer la longueur d'un arc de cercle défini par un angle de mesure $\alpha$:\\ $L=2\times\pi\times R\times\frac{\alpha}{360}$
+% \item  Aire d'une sphère de rayon $R$:\\
+% $\mathcal{A}=4\times\pi\times R^2$.
+% \item  Volume d'une boule de rayon $R$:\\
+% $\mathcal{V}=\frac{4}{3}\times\pi\times R^3$
+% \end{itemize}
+% \end{minipage}
+% }
+
+% \subsection{Compléments numériques - Constructions}
+
+% \Animations{
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_078.html}{Section d'une pyramide par un plan}
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_077.html}{Section d'un pavé par un plan}
+% \creditInstrumentPoche
+% }
+\end{changemargin}

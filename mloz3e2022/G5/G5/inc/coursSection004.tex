@@ -1,0 +1,283 @@
+\section{Agrandissement - réduction}
+\begin{definition}
+    \begin{itemize}
+        \item L'{\bf agrandissement de rapport $k$} d'un objet est la transformation qui consiste à \textbf{multiplier} toutes ses longueurs \textbf{par un nombre $k$ supérieur à 1}.
+        \item La {\bf réduction de rapport $k$} d'un objet est la transformation qui consiste à \textbf{multiplier} toutes ses longueurs \textbf{par un nombre $k$ inférieur à 1}.
+    \end{itemize}
+\end{definition}
+\begin{exemple*1}
+    \begin{itemize}
+        \item une maquette réalisée à l'échelle $1/100$ est la réduction de rapport $\dfrac1{100}$ de l'objet réel.
+        \item une feuille de format A3 (rectangle de dimensions $29,7\,cm$ et $42\,cm$) est un agrandissement de rapport $\sqrt2$ d'une feuille de format A4 (rectangle de dimensions $21\,cm$ et $29,7\,cm$).
+    \end{itemize}
+\end{exemple*1}
+\begin{propriete}[\admise]
+    Dans un agrandissement ou une réduction de rapport $k$ :
+    \begin{itemize}
+        \item les aires sont multipliées par $k^2$.
+        \item les volumes sont multipliés par $k^3$.
+    \end{itemize}
+\end{propriete}
+\begin{exemple*1}
+    \begin{itemize}
+        \item Deux feuilles de format A4 sont nécessaires pour recouvrir exactement une feuille de format A3 ($k=\sqrt2$ et $k^2=2$ soit le double de la surface).
+        \item huit petits cubes d'arête $a$ sont nécessaires pour remplir un cube d'arête $2a$ ($k=2$ et $k^3=8$).
+    \end{itemize}
+\end{exemple*1}
+\begin{propriete}[\admise]
+    Dans un agrandissement ou une réduction, il y a conservation des \textbf{mesures d'angles}, de la \textbf{perpendicularité} et du \textbf{parallélisme}.
+\end{propriete}
+\begin{exemples*1}
+    \titreExemple{Section de la pyramide ou du cône}
+
+    C'est l'application du \textbf{théorème de Thalès} qui permet le calcul du coefficient d'agrandissement ou de réduction.\\
+    Les plans de sections étant parallèles aux bases, son application est licite! 
+    
+    \begin{minipage}{0.4\linewidth}
+        \begin{center}
+            \scalebox{0.6}{
+                \begin{Geometrie}[CoinBG={(-6u,-10u)},CoinHD={(6u,10u)}]
+                    z0=(0,0)*u;label.lrt(btex $O$ etex,z0);
+                    path c,cb,ch;
+                    c=(fullcircle scaled 4cm)yscaled 0.3;
+                    ch=subpath (0,0.5*(length c)) of c;cb=subpath(0.5*(length c),length c) of c;
+                    z1=(0,5u);label.top(btex $S$ etex,z1);
+                    draw ch dashed evenly; draw cb;draw z0--z1 dashed evenly;
+                    draw (ch scaled 0.6) shifted (0,2u) dashed evenly;draw (cb scaled 0.6) shifted (0,2u);
+                    draw z1--point 0 of ((c scaled 0.6)shifted (0,2u));draw z1--point 0.5*(length c) of ((c scaled 0.6)shifted (0,2u));
+                    z2=point 0.625*(length c) of ((c scaled 0.6)shifted (0,2u));
+                    z3=point 0.125*(length c) of ((c scaled 0.6)shifted (0,2u));
+                    z4=point 0.875*(length c) of ((c scaled 0.6)shifted (0,2u));
+                    z5=point 0.375*(length c) of ((c scaled 0.6)shifted (0,2u));
+                    draw z5+0.5(z5-z4)--z2+0.7(z2-z3)--z4+0.5(z4-z5)--z3+0.7(z3-z2);
+                    draw (z3+0.7(z3-z2)) -- ((z3+0.7(z3-z2)--z5+0.5(z5-z4))intersectionpoint (z1--point 0 of ((c scaled 0.6)shifted (0,2u))));
+                    draw (z5+0.5(z5-z4))-- ((z3+0.7(z3-z2)--z5+0.5(z5-z4))intersectionpoint (z1--point 0.5*(length c) of ((c scaled 0.6)shifted (0,2u))));
+                    z6=whatever[z2,z3]=whatever[z4,z5];label.urt(btex $O'$ etex,z6);
+                    draw z6--point 0.6*(length c) of (c scaled 0.6)shifted (0,2u);
+                    draw z6--point 0 of (c scaled 0.6) shifted (0,2u) dashed evenly;
+                    draw point 0 of c--z0 dashed evenly;
+                    draw z0--z1 dashed evenly;
+                    draw z0--point 0.6*(length c) of c;
+                    label.top(btex $A'$ etex,point 0.6*(length c) of (c scaled 0.6)shifted (0,2u));
+                    label.top(btex $A$ etex,point 0.6*(length c) of c);
+                    label.rt(btex $B'$ etex,point 0 of (c scaled 0.6)shifted (0,2u));
+                    label.rt(btex $B$ etex,point 0 of c);
+                    draw codeperp(z1,z6,point 0.6*(length c) of (c scaled 0.6)shifted (0,2u),7);
+                    draw codeperp(z1,z0,point 0.6*(length c) of c,7);
+                    label.urt(btex $(\mathcal P)$ etex,z2+0.6(z2-z3));
+                    draw point 0 of c--(point 0 of (c scaled 0.6)shifted (0,2u)--point 0 of c)intersectionpoint (z4+0.5(z4-z5)--z2+0.7(z2-z3));
+                    draw point 0.5*(length c) of c--(point 0.5*(length c) of (c scaled 0.6)shifted (0,2u)--point 0.5*(length c) of c) intersectionpoint (z4+0.5(z4-z5)--z2+0.7(z2-z3));
+                \end{Geometrie}
+            }
+            
+            \smallskip
+            $k=\dfrac{SO'}{SO}=\dfrac{SA'}{SA}=\dfrac{O'A'}{OA}=\ldots$
+        
+            \smallskip
+            \textbf{cône de révolution}
+        \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\linewidth}
+        \begin{center}
+            \scalebox{0.7}{
+                \begin{Geometrie}[CoinBG={(-10u,-10u)},CoinHD={(10u,10u)}]
+                    u:=5mm;
+                    labeloffset:=1.5bp;z5=(0,7)*u;
+                    z0=(0,0)*u;z1=(4.5,2)*u;z2=(1.5,-2)*u;z3=(-4.5,-2)*u;z4=(-1.5,2)*u;
+                    draw z1--z2--z3 ;draw z3--z4--z1 dashed evenly; z6=0.6[z3,z5];
+                    z7=whatever [z6,z6+2(z2-z3)]=whatever[z2,z5];z8=whatever[z7,z7+2(z1-z2)]=whatever[z1,z5];
+                    z9=whatever[z8,z8+2(z3-z2)]=whatever[z4,z5];
+                    draw z6-- z7--z8; draw z8--z9--z6 dashed evenly;
+                    draw z6--z5--z7;draw z5--z9 dashed evenly;draw z5--z8;
+                    z10=z6-0.5(z8-z6); z11=z7+0.5(z7-z9);z12=z8+0.5(z8-z6);draw z10--z11--z12;z13=z9+0.5(z9-z7);
+                    draw z12--(z12--z12+0.6(z13-z12)) intersectionpoint (z1--z5);
+                    draw z13--(z13--z13+0.6(z12-z13)) intersectionpoint (z3--z5);
+                    draw z13--z10;draw z3--(z3--z6)intersectionpoint (z10--z11);
+                    draw z2--(z2--z7)intersectionpoint (z10--z11);
+                    draw z1--(z1--z8)intersectionpoint (z11--z12);
+                    draw z4--z9 dashed evenly;draw z6--z8 dashed evenly; draw z7--z9 dashed evenly;
+                    draw z2--z4 dashed evenly; draw z1--z3 dashed evenly;
+                    z15=whatever[z7,z9]=whatever[z6,z8];
+                    draw codeperp(z3,z0,z15,7); draw codeperp(z6,z15,z5,7);
+                    label.urt(btex $(\mathcal P)$ etex,z10 shifted(0.2u,0.1u));label.bot(btex $O$ etex,z0);
+                    label.llft(btex $A$ etex,z3);label.lrt(btex $B$ etex,z2);label.rt(btex $C$ etex,z1);
+                    label.bot(btex $O'$ etex,z15);label.top(btex $S$ etex,z5);label.ulft(btex $A'$ etex,z6);
+                    label.lrt(btex $B'$ etex,z7);label.rt(btex $C'$ etex,z8);label.lft(btex $D'$ etex,z9);
+                    label.lft(btex $D$ etex,z4);draw z0--z5 dashed evenly;
+                \end{Geometrie}
+            }
+
+            \smallskip
+            $k=\dfrac{SO'}{SO}=\dfrac{SA'}{SA}=\dfrac{A'B'}{AB}=\dfrac{A'O'}{AO}=\ldots$
+
+            \smallskip
+            \textbf{pyramide}
+        \end{center}
+    \end{minipage}
+\end{exemples*1}
+
+% \section{Le globe terrestre}
+% \definNumTitre{Vocabulaire}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 1:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,2.77){\psellipse[linestyle=dotted](0,0)(4.16,0.83)}
+% \rput{90}(0,0){\psellipse[linestyle=dotted](0,0)(5,3.6)}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(0.98,-0.98)
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(-3.55,-0.7)
+% %\psarc[linewidth=2pt](0,0){5}{224.75}{281.31}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \psline[linestyle=dashed,dash=4pt 4pt](0,0)(-3.22,2.24)
+% %\psarc[linewidth=2pt](0,0){5}{63.36}{98.13}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(-3.55,-0.7)
+% \rput[bl](-3.43,-0.5){$B$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% La Terre est assimilable à une boule d'environ 6400 km de rayon.\\
+% Appelons $O$ le centre de la Terre. Le point $N$ représente le pôle Nord, le point $S$ le pôle Sud.\\
+% Sur la sphère représentant la surface terrestre, un grand cercle de centre $O$ passant par $N$ et $S$ est appelé \textbf{méridien}.\\
+% Le grand cercle de centre $O$ et tracé dans un plan perpendiculaire au diamètre $[NS]$ est, lui, appelé \textbf{l'équateur}.\\
+% Ici est tracé le méridien qui sert de référence, appelé \textbf{méridien de Greenwich} (\textit{car il passe par Greenwich, petite ville située non loin de Londres})\\
+% Chaque point à la surface de la Terre peut être repéré grâce à deux nombres: la \textbf{longitude} et la \textbf{latitude}.\\
+% La longitude est calculée par rapport au méridien de Greenwich, la latitude par rapport à l'équateur; par exemple, le point $C$ sur cette figure, qui représente la position de la ville de Chicago, a pour longitude $\widehat{AOB}=87^{\circ}$, et pour latitude $\widehat{BOC}=41^{\circ}$
+% \end{minipage}
+% }
+
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 2:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,2.77){\psellipse[linestyle=dotted](0,0)(4.16,0.83)}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\platitude longitude istansarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% \rput{0}(0,2.77){\psarcellipse[linewidth=2pt](0,0)(4.16,0.83){220}{300}}
+% %\psarc(0,0){5}{180}{0}
+% \psline[linestyle=dashed,dash=8pt 8pt](0,0)(0,2.77)
+% %\psarc[linewidth=2pt](0,2.77){4.16}{219.38}{301.24}
+% \psdots(0,2.77)
+% \rput[bl](-0.13,2.97){$O'$}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Le cercle de centre $O'$ et passant par $C$, parallèle au plan de l'équateur, est appelé  \textbf{parallèle}, justement.\\
+% Ce n'est pas ce que l'on appelle un grand cercle (car il n'a pas $O$ pour centre).\\
+% La situation d'Istanbul, ville située sur le même parallèle que Chicago (et qui a donc la même latitude, mais pas la même longitude), est représentée par le point $I$.\\ Les question à traiter sont les suivantes:\\
+% \textbf{1.} Connaissant les coordonnées (longitude et latitude) des deux villes, \textbf{quel est le chemin le plus court pour les joindre en avion}? en suivant le parallèle passant par $I$ et $C$? (\textit{voir figure 2}), ou en suivant le grand cercle passant par $I$ et $C$? (\textit{voir figure 3})\\
+% \textbf{2.} Quelle est l'aire totale, en km$^2$, de la surface terrestre ? Quel est le volume total, en km$^3$, de la Terre ? (\textit{donner les réponses sous forme scientifique})
+% \end{minipage}
+% }
+
+
+% \Methode[Application]{}{
+% \begin{minipage}{5cm}
+% \begin{center}
+% \textbf{Figure 3:}
+% \end{center}
+% \scalebox{0.7}{
+% \psset{xunit=0.6cm,yunit=0.6cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \begin{pspicture*}(-6,-5.5)(6,5.8)
+% \pscircle(0,0){3}
+% \rput{0}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{90}(0,0){\psellipse[linestyle=dashed,dash=8pt 8pt](0,0)(5,1)}
+% %\psarc(0,0){5}{180}{0}
+% \rput{-7.59}(0,0){\psellipse[linestyle=dotted](0,0)(5,2.51)}
+% \rput{-7.59}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,2.51){68}{135}}
+% %\psarc[linewidth=2pt](0,0){5}{68.05}{134.21}
+% \psdots(0,0)
+% \rput[bl](0.13,0.2){$O$}
+% \psdots(0,-5)
+% \rput[bl](0.13,-5.5){$S$}
+% \psdots(0,5)
+% \rput[bl](0.13,5.2){$N$}
+% \psdots(-3.22,2.24)
+% \rput[bl](-3.1,2.43){$C$}
+% \psdots(0.98,-0.98)
+% \rput[bl](1.1,-0.77){$A$}
+% \psdots(2.16,2.06)
+% \rput[bl](2.3,2.27){$I$}
+% \psdots(-5,0)
+% \rput[bl](-5.8,0){$W$}
+% \psdots(5,0)
+% \rput[bl](5.2,0){$E$}
+% \psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}
+% \rput{90}(0,0){\psarcellipse[linewidth=2pt](0,0)(5,1){180}{0}}
+% \end{pspicture*}
+% }
+% \end{minipage}
+% \begin{minipage}{12cm}
+% Voici ce dont vous avez besoin pour répondre à ces questions:
+% \begin{itemize}
+% \item  Coordonnées géographiques de Chicago:\\
+% Latitude $41^{\circ}$ Nord, longitude $87^{\circ}$ Ouest.
+% \item  Coordonnées géographiques d'Istanbul:\\
+% Latitude $41^{\circ}$ Nord, longitude $28^{\circ}$ Est.
+% \item  $OO'=4200$ km, $\widehat{COI}=79^{\circ}$
+% \item  Formule pour calculer la longueur d'un arc de cercle défini par un angle de mesure $\alpha$:\\ $L=2\times\pi\times R\times\frac{\alpha}{360}$
+% \item  Aire d'une sphère de rayon $R$:\\
+% $\mathcal{A}=4\times\pi\times R^2$.
+% \item  Volume d'une boule de rayon $R$:\\
+% $\mathcal{V}=\frac{4}{3}\times\pi\times R^3$
+% \end{itemize}
+% \end{minipage}
+% }
+
+% \subsection{Compléments numériques - Constructions}
+
+% \Animations{
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_078.html}{Section d'une pyramide par un plan}
+% \lienCadre{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_077.html}{Section d'un pavé par un plan}
+% \creditInstrumentPoche
+% }
