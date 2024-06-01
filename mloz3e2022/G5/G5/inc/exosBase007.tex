@@ -1,6 +1,174 @@
 \begin{exercice*}
-    ...
+    Cette figure représente une boule de centre O et de diamètre \Lg[cm]{5}.
+
+    \scalebox{1.3}{
+        \begin{Geometrie}
+            u:=30;
+            z0=(3,3)*u;%centre
+            numeric angleInclinaison;
+            angleInclinaison:=-14;
+            dotlabel.urt(btex $O$ etex,z0);
+            z1=(2.5,1)*u;%pole sud
+            dotlabel.lrt(btex $F$ etex,z1);
+            z2=(3.5,5)*u;%pole nord
+            dotlabel.urt(btex $E$ etex,z2);
+            % remplissages ici avant les path
+            % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+            % fin remplissages    
+            path contour, ellipse,coupe,greenwich,meridien;
+            path r;% contour translaté
+            contour=(fullcircle scaled 4.1231u);
+            ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+            greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+            r=contour shifted z0;
+            z3=point 0.6*(length ellipse) of ellipse shifted z0;
+            dotlabel.bot(btex $J$ etex,z3);
+            z4=point 0.8*(length ellipse) of ellipse shifted z0;
+            dotlabel.llft(btex $G$ etex,z4);            
+            z5=point 0.5*(length ellipse) of ellipse shifted z0;
+            dotlabel.lft(btex $B$ etex,z5);
+            z6=point 0 of ellipse shifted z0;
+            dotlabel.urt(btex $A$ etex,z6);
+            z7=z4+ 0.5(z4-z0);
+            dotlabel.llft(btex $K$ etex,z7);
+            z8=z0 + 0.5(z0-z3);
+            dotlabel.urt(btex $I$ etex,z8);
+            path diam;            
+            diam=z3--z0 + 2(z0-z3);
+            z9=diam intersectionpoint r;
+            draw z3--z9 dashed withdots withpen pencircle scaled 1.5bp;
+            draw z9--z9 + 0.7(z0-z3);
+            draw z3--z3 + 0.7(z3-z0);
+            draw z0--z4 dashed withdots withpen pencircle scaled 1.5bp;
+            draw z4--z7 + 1.5(z4-z0);
+            draw z5--z6 dashed withdots withpen pencircle scaled 1.5bp;            
+            %
+            draw contour shifted z0;
+            %equateur
+            draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.3bp;;
+            draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+            %greenwich
+            draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.3bp;;
+            draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 dashed evenly;                    
+            % Axe de rotation
+            draw z1--z2 dashed evenly;
+            draw z1--z1 + 0.08(z1-z2);
+            draw z2--z2+0.08(z2-z1);
+        \end{Geometrie}
+        }
+
+        \begin{enumerate}
+            \item Compléter le tableau ci-dessous.
+             
+            Points appartenant à \dots
+
+            \begin{tabular}{|*{2}{>{\centering\arraybackslash}m{0.4\linewidth}|}}
+                \hline
+                \cellcolor{LightGray}La sphère de centre $O$ et de rayon $OA$&\\\hline
+                \cellcolor{LightGray}La boule de centre $O$ et de rayon $OA$&\\\hline
+                \cellcolor{LightGray}Aucun des deux&\\\hline
+            \end{tabular}
+            \item Placer, sur la figure, le point $H$, diamétralement opposé à $G$. Puis placer, sur la demi-droite $[OG)$, un point $L$ qui appartient à la boule de rayon $OA$.  
+            \item Compléter.
+            \begin{itemize}
+                \item $[AB]$ est un \pointilles[3cm] de la sphère.
+                \item $[OG]$ est un \pointilles[3cm] de la sphère.
+                \item $[OJ]$ est un \pointilles[3cm] de la sphère.
+                \item $[GH]$ est un \pointilles[3cm] de la sphère.
+                \item Le cercle de centre $O$ et de diamètre $[EF]$ est                
+                appelé \pointilles[3cm] de la sphère.
+            \end{itemize}
+            \item Calculer le périmètre du cercle de centre $O$ et de diamètre $[EF]$.
+        \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Cette figure représente une boule de centre O et de diamètre \Lg[cm]{5}.
+
+    \scalebox{1.3}{
+        \begin{Geometrie}
+            u:=30;
+            z0=(3,3)*u;%centre
+            numeric angleInclinaison;
+            angleInclinaison:=-14;
+            dotlabel.urt(btex $O$ etex,z0);
+            z1=(2.5,1)*u;%pole sud
+            dotlabel.lrt(btex $F$ etex,z1);
+            z2=(3.5,5)*u;%pole nord
+            dotlabel.urt(btex $E$ etex,z2);
+            % remplissages ici avant les path
+            % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+            % fin remplissages    
+            path contour, ellipse,coupe,greenwich,meridien;
+            path r;% contour translaté
+            contour=(fullcircle scaled 4.1231u);
+            ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+            greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+            r=contour shifted z0;
+            z3=point 0.6*(length ellipse) of ellipse shifted z0;
+            dotlabel.bot(btex $J$ etex,z3);
+            z4=point 0.8*(length ellipse) of ellipse shifted z0;
+            dotlabel.llft(btex $G$ etex,z4);            
+            z5=point 0.5*(length ellipse) of ellipse shifted z0;
+            dotlabel.lft(btex $B$ etex,z5);
+            z6=point 0 of ellipse shifted z0;
+            dotlabel.urt(btex $A$ etex,z6);
+            z7=z4+ 0.5(z4-z0);
+            dotlabel.llft(btex $K$ etex,z7);
+            z8=z0 + 0.5(z0-z3);
+            dotlabel.urt(btex $I$ etex,z8);
+            path diam;            
+            diam=z3--z0 + 2(z0-z3);
+            z9=diam intersectionpoint r;
+            draw z3--z9 dashed withdots withpen pencircle scaled 1.5bp;
+            draw z9--z9 + 0.7(z0-z3);
+            draw z3--z3 + 0.7(z3-z0);
+            draw z0--z4 dashed withdots withpen pencircle scaled 1.5bp;
+            draw z4--z7 + 1.5(z4-z0);
+            draw z5--z6 dashed withdots withpen pencircle scaled 1.5bp;
+            %
+            draw contour shifted z0;
+            %equateur
+            draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.3bp;;
+            draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+            %greenwich
+            draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.3bp;;
+            draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 dashed evenly;                    
+            % Axe de rotation
+            draw z1--z2 dashed evenly;
+            draw z1--z1 + 0.08(z1-z2);
+            draw z2--z2+0.08(z2-z1);
+            %correction
+            z10=point 0.3*(length ellipse) of ellipse shifted z0;
+            dotlabel.llft(btex \textcolor{red}{$H$} etex,z10) withcolor red;
+            draw z10--z0 dashed withdots withpen pencircle scaled 1.5bp withcolor red;
+            z11=z0 + 0.5(z4-z0);
+            dotlabel.lft(btex \textcolor{red}{$L$} etex,z11) withcolor red;
+        \end{Geometrie}
+        }
+
+        \begin{enumerate}
+            \item Compléter le tableau ci-dessous.
+             
+            Points appartenant à \dots
+
+            \begin{tabular}{|*{2}{>{\centering\arraybackslash}m{0.4\linewidth}|}}
+                \hline
+                \cellcolor{LightGray}La sphère de centre $O$ et de rayon $OA$&\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$}\\\hline
+                \cellcolor{LightGray}La boule de centre $O$ et de rayon $OA$ &\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$;$O$;$I$}\\\hline
+                \cellcolor{LightGray}Aucun des deux&\textcolor{red}{$K$}\\\hline
+            \end{tabular}
+            \item Placer, sur la figure, le point $H$, diamétralement opposé à $G$. Puis placer, sur la demi-droite $[OG)$, un point $L$ qui appartient à la boule de rayon $OA$.  
+            \item Compléter.
+            \begin{itemize}
+                \item $[AB]$ est un \textcolor{red}{diamètre} de la sphère.
+                \item $[OG]$ est un \textcolor{red}{rayon} de la sphère.
+                \item $[OJ]$ est un \textcolor{red}{rayon} de la sphère.
+                \item $[GH]$ est un \textcolor{red}{diamètre} de la sphère.
+                \item Le cercle de centre $O$ et de diamètre $[EF]$ est                
+                appelé \textcolor{red}{grand cercle} de la sphère.
+            \end{itemize}
+            \item Calculer le périmètre du cercle de centre $O$ et de diamètre $[EF]$.
+            
+            \textcolor{red}{$2\times\pi\times R = 5\pi \approx \Lg[cm]{15.7}$}
+        \end{enumerate}
 \end{corrige}
