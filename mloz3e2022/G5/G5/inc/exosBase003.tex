@@ -1,6 +1,73 @@
 \begin{exercice*}
-    ...
+    $ABCDEFGH$ est un pavé droit. Compléter les phrases en y indiquant la nature des solides.
+    \begin{itemize}
+        \item $ABLKEFMN$ est \pointilles
+        \item $MDCGH$ est \pointilles
+        \item $ALKN$ est \pointilles
+    \end{itemize}
+    
+    \Solide[%
+        Nom=pave,
+        Largeur=2,
+        Hauteur=1,
+        Profondeur=1,
+        Anglez=0,
+        ListeSommets={E,H,G,F,B,A,D,C},
+        Traces={%
+            color K,L,M,N;
+            K=iso(A,D);
+            L=iso(B,C);
+            M=iso(F,G);
+            N=iso(E,H);
+            DotLabel.top(btex K etex,K);
+            DotLabel.top(btex L etex,L);
+            DotLabel.top(btex M etex,M);
+            DotLabel.top(btex N etex,N);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(A,K,K,D,E,N,N,H,F,M,M,G,B,L,L,C,2);
+        }
+    ]
 \end{exercice*}
 \begin{corrige}
-    ...
+    $ABCDEFGH$ est un pavé droit. Compléter les phrases en y indiquant la nature des solides.
+    \begin{itemize}
+        \item $ABLKEFMN$ est \textcolor{red}{un cube.}
+        \item $MDCGH$ est \textcolor{red}{une pyramide.}
+        \item $ALKN$ est \textcolor{red}{une pyramide.}
+    \end{itemize}
+    
+    \Solide[%
+        Nom=pave,
+        Largeur=2,
+        Hauteur=1,
+        Profondeur=1,
+        Anglez=0,
+        ListeSommets={E,H,G,F,B,A,D,C},
+        Traces={%
+            color K,L,M,N;
+            K=iso(A,D);
+            L=iso(B,C);
+            M=iso(F,G);
+            N=iso(E,H);
+            DotLabel.top(btex K etex,K);
+            DotLabel.top(btex L etex,L);
+            DotLabel.top(btex M etex,M);
+            DotLabel.top(btex N etex,N);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(A,K,K,D,E,N,N,H,F,M,M,G,B,L,L,C,2);
+            % cube
+            drawoptions(withcolor blue);
+            trace chemin(A,B,L,K,A,E,N,K);
+            trace chemin(N,M,F,E) dashed withdots withpen pencircle scaled 1.2bp;
+            trace chemin(B,F) dashed withdots withpen pencircle scaled 1.2bp;
+            trace chemin(L,M) dashed withdots withpen pencircle scaled 1.2bp;
+            % une des pyramides
+            drawoptions(withcolor red);
+            trace chemin(D,C,G,H,D);
+            trace chemin(H,M) dashed withdots withpen pencircle scaled 1.2bp;
+            trace chemin(G,M) dashed withdots withpen pencircle scaled 1.2bp;
+            trace chemin(C,M) dashed withdots withpen pencircle scaled 1.2bp;
+            trace chemin(D,M) dashed withdots withpen pencircle scaled 1.2bp;
+        }
+    ]
 \end{corrige}
