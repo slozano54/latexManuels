@@ -1,6 +1,51 @@
 \begin{exercice*}
-    ...
+    On empile des cubes pour construire ce solide.
+
+    \begin{minipage}{0.2\linewidth}
+        \VueCubes[%
+        Seul,
+        Creation,%
+        Profondeur=3,Largeur=3]{%
+            3,4,5,%
+            2,3,4,%
+            1,2,3%
+        }    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.75\linewidth}
+        \begin{enumerate}
+            \item Déterminer le nombre minimum de cubes unités nécessaires pour obtenir un pavé droit.
+            \item Déterminer alors le nombre de cubes que compte ce pavé.
+        \end{enumerate}        
+    \end{minipage}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On empile des cubes pour construire ce solide.
+
+    \begin{minipage}{0.2\linewidth}
+        \VueCubes[%
+        Seul,
+        Creation,%
+        Profondeur=3,Largeur=3]{%
+            3,4,5,%
+            2,3,4,%
+            1,2,3%
+        }    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.7\linewidth}
+        \begin{enumerate}
+            \item Déterminer le nombre minimum de cubes unités nécessaire pour obtenir un pavé droit.
+            
+            {\color{red} Il manque 3, 6 et 9 cubes respectivement de droite à gauche.
+            
+            Cela fait donc 18 en tout.}
+            \item Déterminer alors le nombre de cubes que compte ce pavé.
+            
+            {\color{red} Le pavé droit comptera alors 
+            
+            $3\times 3\times 5 = 45$ cubes.
+            }
+        \end{enumerate}        
+    \end{minipage}
 \end{corrige}

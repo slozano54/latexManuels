@@ -1,6 +1,250 @@
 \begin{exercice*}
-    ...
+    Associer chaque patron au nom du solide qui lui correspond parmi prisme droit, pyramide, cône de révolution, cube, pavé droit et cylindre de révolution.
+
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}%1
+        \scalebox{0.7}{%
+        \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+            % trace feuillet;
+            numeric pi;
+            pi = 3.141592653589793;
+            pair A[],B[];
+            path cA[];
+            u:=0.5*u;
+            B0=u*(1,3.5);
+            B1-B0=u*(2*pi,0);
+            B2-B0=u*(2*pi,2);
+            B3-B0=u*(0,2);
+            A0-B0=u*(2,-1);
+            A1-B0=u*(4,3);
+            trace polygone(B0,B1,B2,B3);
+            trace cercles(A0,u);
+            trace cercles(A1,u);
+        \end{Geometrie}
+        }
+        \vfill
+        \textbf{a/}\pointilles
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{0.7}{
+            \begin{Geometrie}[CoinHD={u*(7,4.5)}]
+                % trace feuillet;
+                pair A[];
+                A0=u*(1,1);
+                A1-A0=u*(1.5,0);
+                A2-A1=u*(1,0);
+                A9-A1=u*(0,-1);
+                A3-A2=u*(sqrt(3.25),0);
+                A7-A0=u*(0,2);
+                A6-A1=u*(0,2);
+                A5-A2=u*(0,2);
+                A4-A3=u*(0,2);
+                A8-A6=u*(0,1);
+                draw A0--A3--A4--A7--cycle;
+                draw A8--A9;
+                draw A8--A7;
+                draw A0--A9;
+                draw A2--A5;
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{b/}\pointilles
+    \end{minipage}
+
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}%1
+        \scalebox{1}{%
+            \Patron{%
+                oxoo,
+                xxxx,
+                ooxo
+            }%
+        }
+        \vfill
+        \textbf{c/}\pointilles
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{1}{
+            \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+                % trace feuillet;
+                pair O[],A[];
+                u:=0.5*u;
+                O0=u*(6.5,4.5);
+                O1-O0=u*(-4,0);
+                trace cercles(O1,u);
+                path cc;
+                cc=cercles(O0,3u);
+                A0=pointarc(cc,-120);
+                A1=pointarc(cc,-240);
+                trace arccercle(A1,A0,O0);
+                trace chemin(A0,O0,A1);
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{d/}\pointilles
+    \end{minipage}
+
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}%1
+        \scalebox{0.7}{%
+        \Patron[%
+            Pave,
+            Largeur=0.8cm,%
+            Profondeur=2.5cm,%
+            Hauteur=1.2cm]{%
+            hopl,
+            lhpo,
+            hopo,
+            lopo
+        }
+        }
+        \vfill
+        \textbf{e/}\pointilles
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{1}{
+            \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+                % trace feuillet;
+                pair A[],S[];
+                u:=0.4*u;
+                A0=u*(6,7);                
+                A1-A0=u*(2,-2);
+                A2=rotation(A0,A1,90);
+                A3=rotation(A1,A0,-90);
+                trace polygone(A0,A1,A2,A3);                                
+                S0=cercles(A0,4u) intersectionpoint cercles(A1,4u);
+                S1=subpath (6,8) of cercles(A1,4u) intersectionpoint subpath (6,8) of cercles(A2,4u);
+                S2=cercles(A3,4u) intersectionpoint subpath (4,6) of cercles(A2,4u);
+                S3=cercles(A3,4u) intersectionpoint cercles(A0,4u);
+                trace chemin(A0,S0,A1,S1,A2,S2,A3,S3,A0);
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{f/}\pointilles
+    \end{minipage}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Associer chaque patron au nom du solide qui lui correspond parmi prisme droit, pyramide, cône de révolution, cube, pavé droit et cylindre de révolution.
+
+    \begin{minipage}[t][35mm][c]{0.5\linewidth}%1
+        \scalebox{0.7}{%
+        \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+            % trace feuillet;
+            numeric pi;
+            pi = 3.141592653589793;
+            pair A[],B[];
+            path cA[];
+            u:=0.5*u;
+            B0=u*(1,3.5);
+            B1-B0=u*(2*pi,0);
+            B2-B0=u*(2*pi,2);
+            B3-B0=u*(0,2);
+            A0-B0=u*(2,-1);
+            A1-B0=u*(4,3);
+            trace polygone(B0,B1,B2,B3);
+            trace cercles(A0,u);
+            trace cercles(A1,u);
+        \end{Geometrie}
+        }
+        \vfill
+        \textbf{a/}\textcolor{red}{Cylindre de révolution}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{0.7}{
+            \begin{Geometrie}[CoinHD={u*(7,4.5)}]
+                % trace feuillet;
+                pair A[];
+                A0=u*(1,1);
+                A1-A0=u*(1.5,0);
+                A2-A1=u*(1,0);
+                A9-A1=u*(0,-1);
+                A3-A2=u*(sqrt(3.25),0);
+                A7-A0=u*(0,2);
+                A6-A1=u*(0,2);
+                A5-A2=u*(0,2);
+                A4-A3=u*(0,2);
+                A8-A6=u*(0,1);
+                draw A0--A3--A4--A7--cycle;
+                draw A8--A9;
+                draw A8--A7;
+                draw A0--A9;
+                draw A2--A5;
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{b/}\textcolor{red}{Prisme droit}
+    \end{minipage}
+
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}%1
+        \scalebox{1}{%
+            \Patron{%
+                oxoo,
+                xxxx,
+                ooxo
+            }%
+        }
+        \vfill
+        \textbf{c/}\textcolor{red}{Cube}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{1}{
+            \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+                % trace feuillet;
+                pair O[],A[];
+                u:=0.5*u;
+                O0=u*(6.5,4.5);
+                O1-O0=u*(-4,0);
+                trace cercles(O1,u);
+                path cc;
+                cc=cercles(O0,3u);
+                A0=pointarc(cc,-120);
+                A1=pointarc(cc,-240);
+                trace arccercle(A1,A0,O0);
+                trace chemin(A0,O0,A1);
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{d/}\textcolor{red}{Cône de révolution}
+    \end{minipage}
+
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}%1
+        \scalebox{0.7}{%
+        \Patron[%
+            Pave,
+            Largeur=0.8cm,%
+            Profondeur=2.5cm,%
+            Hauteur=1.2cm]{%
+            hopl,
+            lhpo,
+            hopo,
+            lopo
+        }
+        }
+        \vfill
+        \textbf{e/}\textcolor{red}{Pavé droit}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t][35mm][c]{0.45\linewidth}
+        \scalebox{1}{
+            \begin{Geometrie}[CoinHD={u*(4.5,4.5)}]
+                % trace feuillet;
+                pair A[],S[];
+                u:=0.4*u;
+                A0=u*(6,7);                
+                A1-A0=u*(2,-2);
+                A2=rotation(A0,A1,90);
+                A3=rotation(A1,A0,-90);
+                trace polygone(A0,A1,A2,A3);                                
+                S0=cercles(A0,4u) intersectionpoint cercles(A1,4u);
+                S1=subpath (6,8) of cercles(A1,4u) intersectionpoint subpath (6,8) of cercles(A2,4u);
+                S2=cercles(A3,4u) intersectionpoint subpath (4,6) of cercles(A2,4u);
+                S3=cercles(A3,4u) intersectionpoint cercles(A0,4u);
+                trace chemin(A0,S0,A1,S1,A2,S2,A3,S3,A0);
+            \end{Geometrie}
+        }
+        \vfill
+        \textbf{f/}\textcolor{red}{Pyramide}
+    \end{minipage}
 \end{corrige}
