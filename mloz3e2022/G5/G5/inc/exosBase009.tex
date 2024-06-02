@@ -1,6 +1,195 @@
 \begin{exercice*}
-    ...
-\end{exercice*}
+    Pour obtenir ce solide, on a empilé et collé \num{6} cubes de \Lg[cm]{4} d’arête et un prisme droit.
+    La hauteur du prisme est égale à la moitié de l’arête des cubes.
+
+    Calculer son volume en \Vol[cm]{}.
+
+    \begin{Geometrie}
+        pair F,A[],B[],C[],D[],E[];
+        numeric dec;
+        dec:=1.5;
+        % point de fuite
+        F=u*(8,6);
+        A0=u*(1,1);
+        A1-A0=u*(0,dec);
+        A2-A1=u*(0,dec);
+        A5-A0=u*(dec,-0.3);
+        A4-A5=u*(0,dec);
+        A3-A4=u*(0,dec);
+        % lignes de fuite
+        path ligneFuite[];
+        ligneFuite0=A0--F;
+        ligneFuite1=A1--F;
+        ligneFuite2=A2--F;
+        ligneFuite5=A5--F;
+        ligneFuite4=A4--F;
+        ligneFuite3=A3--F;
+        % placement des points du reseau
+        B0=point 0.17*(length ligneFuite0) of ligneFuite0;
+        B1=point 0.17*(length ligneFuite1) of ligneFuite1;
+        B2=point 0.17*(length ligneFuite2) of ligneFuite2;
+        B5=point 0.17*(length ligneFuite5) of ligneFuite5;
+        B4=point 0.17*(length ligneFuite4) of ligneFuite4;
+        B3=point 0.17*(length ligneFuite3) of ligneFuite3;
+        C0=point 0.31*(length ligneFuite0) of ligneFuite0;
+        C1=point 0.31*(length ligneFuite1) of ligneFuite1;
+        C2=point 0.31*(length ligneFuite2) of ligneFuite2;
+        C5=point 0.31*(length ligneFuite5) of ligneFuite5;
+        C4=point 0.31*(length ligneFuite4) of ligneFuite4;
+        C3=point 0.31*(length ligneFuite3) of ligneFuite3;
+        D0=point 0.41*(length ligneFuite0) of ligneFuite0;
+        D1=point 0.41*(length ligneFuite1) of ligneFuite1;
+        D2=point 0.41*(length ligneFuite2) of ligneFuite2;
+        D5=point 0.41*(length ligneFuite5) of ligneFuite5;
+        D4=point 0.41*(length ligneFuite4) of ligneFuite4;
+        D3=point 0.41*(length ligneFuite3) of ligneFuite3;
+        E0=point 0.48*(length ligneFuite0) of ligneFuite0;
+        E1=point 0.48*(length ligneFuite1) of ligneFuite1;
+        E2=point 0.48*(length ligneFuite2) of ligneFuite2;
+        E5=point 0.48*(length ligneFuite5) of ligneFuite5;
+        E4=point 0.48*(length ligneFuite4) of ligneFuite4;
+        E3=point 0.48*(length ligneFuite3) of ligneFuite3;        
+        draw A0--A2--A3--A5--cycle;
+        draw A1--A4--E4;
+        draw A2--B2--B3--B5;
+        draw A5--D5;
+        draw A3--B3;
+        draw C5--C4;                
+        path pathPourIntersectionsUtiles[];
+        pathPourIntersectionsUtiles0=B3--B5;
+        pathPourIntersectionsUtiles1=C1--C4;
+        draw pathPourIntersectionsUtiles0;
+        draw C4--(pathPourIntersectionsUtiles0 intersectionpoint pathPourIntersectionsUtiles1);
+        draw (pathPourIntersectionsUtiles0 intersectionpoint ligneFuite1)--D1;
+        draw D1--D4--D5;
+        D99-D5=D5-D0;
+        D98-D4=D4-D1;
+        E99-E5=E5-E0;
+        E98-E4=E4-E1;
+        draw D5--D99--D98--D4;
+        draw D99--E99--E98--E4;
+        draw D98--E98;
+        draw D1--iso(D1,D2)--iso(D4,D3)--iso(E3,E4)--E4;
+        draw iso(D4,D3)--D4;
+        draw iso(D1,D2)--iso(E3,E4);
+        % fleches pour faces
+        pair legendeFleche[];
+        legendeFleche0=iso(A2,B2)-0.5(A3-A2);
+        drawarrow legendeFleche0--(iso(A2,B2)-0.1(A3-A2));
+        label.top(btex Face arrière etex, legendeFleche0);
+        legendeFleche1=iso(A0,A5)-0.5(B5-A5);
+        drawarrow legendeFleche1--(iso(A0,A5)-0.1(B5-A5));
+        label.bot(btex Face de gauche etex, legendeFleche1);
+        legendeFleche2=iso(B5,C5)-0.5(A4-B5);
+        drawarrow legendeFleche2--(iso(B5,C5)-0.1(A4-B5));
+        label.lrt(btex Face avant etex, legendeFleche2);
+        legendeFleche3=E4-0.8(D4-iso(E4,E98));
+        drawarrow legendeFleche3--(E4-0.1(D4-iso(E4,E98)));
+        label.urt(btex Face de droite etex, legendeFleche3);
+    \end{Geometrie}
+\end{exercice*}    
 \begin{corrige}
-    ...
+    Pour obtenir ce solide, on a empilé et collé \num{6} cubes de \Lg[cm]{4} d’arête et un prisme droit.
+    La hauteur du prisme est égale à la moitié de l’arête des cubes.
+
+    Calculer son volume en \Vol[cm]{}.
+
+    \medskip
+    \begin{Geometrie}
+        pair F,A[],B[],C[],D[],E[];
+        numeric dec;
+        dec:=1.5;
+        % point de fuite
+        F=u*(8,6);
+        A0=u*(1,1);
+        A1-A0=u*(0,dec);
+        A2-A1=u*(0,dec);
+        A5-A0=u*(dec,-0.3);
+        A4-A5=u*(0,dec);
+        A3-A4=u*(0,dec);
+        % lignes de fuite
+        path ligneFuite[];
+        ligneFuite0=A0--F;
+        ligneFuite1=A1--F;
+        ligneFuite2=A2--F;
+        ligneFuite5=A5--F;
+        ligneFuite4=A4--F;
+        ligneFuite3=A3--F;
+        % placement des points du reseau
+        B0=point 0.17*(length ligneFuite0) of ligneFuite0;
+        B1=point 0.17*(length ligneFuite1) of ligneFuite1;
+        B2=point 0.17*(length ligneFuite2) of ligneFuite2;
+        B5=point 0.17*(length ligneFuite5) of ligneFuite5;
+        B4=point 0.17*(length ligneFuite4) of ligneFuite4;
+        B3=point 0.17*(length ligneFuite3) of ligneFuite3;
+        C0=point 0.31*(length ligneFuite0) of ligneFuite0;
+        C1=point 0.31*(length ligneFuite1) of ligneFuite1;
+        C2=point 0.31*(length ligneFuite2) of ligneFuite2;
+        C5=point 0.31*(length ligneFuite5) of ligneFuite5;
+        C4=point 0.31*(length ligneFuite4) of ligneFuite4;
+        C3=point 0.31*(length ligneFuite3) of ligneFuite3;
+        D0=point 0.41*(length ligneFuite0) of ligneFuite0;
+        D1=point 0.41*(length ligneFuite1) of ligneFuite1;
+        D2=point 0.41*(length ligneFuite2) of ligneFuite2;
+        D5=point 0.41*(length ligneFuite5) of ligneFuite5;
+        D4=point 0.41*(length ligneFuite4) of ligneFuite4;
+        D3=point 0.41*(length ligneFuite3) of ligneFuite3;
+        E0=point 0.48*(length ligneFuite0) of ligneFuite0;
+        E1=point 0.48*(length ligneFuite1) of ligneFuite1;
+        E2=point 0.48*(length ligneFuite2) of ligneFuite2;
+        E5=point 0.48*(length ligneFuite5) of ligneFuite5;
+        E4=point 0.48*(length ligneFuite4) of ligneFuite4;
+        E3=point 0.48*(length ligneFuite3) of ligneFuite3;        
+        draw A0--A2--A3--A5--cycle;
+        draw A1--A4--E4;
+        draw A2--B2--B3--B5;
+        draw A5--D5;
+        draw A3--B3;
+        draw C5--C4;                
+        path pathPourIntersectionsUtiles[];
+        pathPourIntersectionsUtiles0=B3--B5;
+        pathPourIntersectionsUtiles1=C1--C4;
+        draw pathPourIntersectionsUtiles0;
+        draw C4--(pathPourIntersectionsUtiles0 intersectionpoint pathPourIntersectionsUtiles1);
+        draw (pathPourIntersectionsUtiles0 intersectionpoint ligneFuite1)--D1;
+        draw D1--D4--D5;
+        D99-D5=D5-D0;
+        D98-D4=D4-D1;
+        E99-E5=E5-E0;
+        E98-E4=E4-E1;
+        draw D5--D99--D98--D4;
+        draw D99--E99--E98--E4;
+        draw D98--E98;
+        draw D1--iso(D1,D2)--iso(D4,D3)--iso(E3,E4)--E4;
+        draw iso(D4,D3)--D4;
+        draw iso(D1,D2)--iso(E3,E4);
+        % fleches pour faces
+        pair legendeFleche[];
+        legendeFleche0=iso(A2,B2)-0.5(A3-A2);
+        drawarrow legendeFleche0--(iso(A2,B2)-0.1(A3-A2));
+        label.top(btex Face arrière etex, legendeFleche0);
+        legendeFleche1=iso(A0,A5)-0.5(B5-A5);
+        drawarrow legendeFleche1--(iso(A0,A5)-0.1(B5-A5));
+        label.bot(btex Face de gauche etex, legendeFleche1);
+        legendeFleche2=iso(B5,C5)-0.5(A4-B5);
+        drawarrow legendeFleche2--(iso(B5,C5)-0.1(A4-B5));
+        label.lrt(btex Face avant etex, legendeFleche2);
+        legendeFleche3=E4-0.8(D4-iso(E4,E98));
+        drawarrow legendeFleche3--(E4-0.1(D4-iso(E4,E98)));
+        label.urt(btex Face de droite etex, legendeFleche3);
+    \end{Geometrie}
+
+    {\color{red}%
+    $\mathcal{V}_{cube}=4^3=\Vol[cm]{64}$
+
+    $\mathcal{V}_{prisme}=(4\times 4 \div 2)\times 2=\Vol[cm]{16}$
+
+    $\mathcal{V}_{solide}=6\mathcal{V}_{cube}+\mathcal{V}_{prisme}$
+
+    $\mathcal{V}_{solide}=6\times\Vol[cm]{64}+\Vol[cm]{16}$
+
+    $\mathcal{V}_{solide}=\Vol[cm]{400}$
+
+    Ce solide a un volume de \Vol[cm]{400}.
+    }
 \end{corrige}

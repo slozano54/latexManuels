@@ -15,7 +15,7 @@
             % remplissages ici avant les path
             % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
             % fin remplissages    
-            path contour, ellipse,coupe,greenwich,meridien;
+            path contour, ellipse,greenwich,meridien;
             path r;% contour translaté
             contour=(fullcircle scaled 4.1231u);
             ellipse=(contour yscaled 0.25) rotated angleInclinaison;
@@ -55,7 +55,7 @@
             draw z1--z1 + 0.08(z1-z2);
             draw z2--z2+0.08(z2-z1);
         \end{Geometrie}
-        }
+    }
 
         \begin{enumerate}
             \item Compléter le tableau ci-dessous.
@@ -84,7 +84,7 @@
 \begin{corrige}
     Cette figure représente une boule de centre O et de diamètre \Lg[cm]{5}.
 
-    \scalebox{1.3}{
+    \hspace*{-10mm}\scalebox{1.3}{
         \begin{Geometrie}
             u:=30;
             z0=(3,3)*u;%centre
@@ -98,7 +98,7 @@
             % remplissages ici avant les path
             % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
             % fin remplissages    
-            path contour, ellipse,coupe,greenwich,meridien;
+            path contour, ellipse,greenwich,meridien;
             path r;% contour translaté
             contour=(fullcircle scaled 4.1231u);
             ellipse=(contour yscaled 0.25) rotated angleInclinaison;
@@ -144,31 +144,31 @@
             z11=z0 + 0.5(z4-z0);
             dotlabel.lft(btex \textcolor{red}{$L$} etex,z11) withcolor red;
         \end{Geometrie}
-        }
-
-        \begin{enumerate}
-            \item Compléter le tableau ci-dessous.
-             
-            Points appartenant à \dots
-
-            \begin{tabular}{|*{2}{>{\centering\arraybackslash}m{0.4\linewidth}|}}
-                \hline
-                \cellcolor{LightGray}La sphère de centre $O$ et de rayon $OA$&\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$}\\\hline
-                \cellcolor{LightGray}La boule de centre $O$ et de rayon $OA$ &\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$;$O$;$I$}\\\hline
-                \cellcolor{LightGray}Aucun des deux&\textcolor{red}{$K$}\\\hline
-            \end{tabular}
-            \item Placer, sur la figure, le point $H$, diamétralement opposé à $G$. Puis placer, sur la demi-droite $[OG)$, un point $L$ qui appartient à la boule de rayon $OA$.  
-            \item Compléter.
-            \begin{itemize}
-                \item $[AB]$ est un \textcolor{red}{diamètre} de la sphère.
-                \item $[OG]$ est un \textcolor{red}{rayon} de la sphère.
-                \item $[OJ]$ est un \textcolor{red}{rayon} de la sphère.
-                \item $[GH]$ est un \textcolor{red}{diamètre} de la sphère.
-                \item Le cercle de centre $O$ et de diamètre $[EF]$ est                
-                appelé \textcolor{red}{grand cercle} de la sphère.
-            \end{itemize}
-            \item Calculer le périmètre du cercle de centre $O$ et de diamètre $[EF]$.
+    }
+    \Coupe
+    \begin{enumerate}
+        \item Compléter le tableau ci-dessous.
             
-            \textcolor{red}{$2\times\pi\times R = 5\pi \approx \Lg[cm]{15.7}$}
-        \end{enumerate}
+        Points appartenant à \dots
+
+        \begin{tabular}{|*{2}{>{\centering\arraybackslash}m{0.4\linewidth}|}}
+            \hline
+            \cellcolor{LightGray}La sphère de centre $O$ et de rayon $OA$&\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$}\\\hline
+            \cellcolor{LightGray}La boule de centre $O$ et de rayon $OA$ &\textcolor{red}{$A$;$E$;$B$;$F$;$J$;$G$;$O$;$I$}\\\hline
+            \cellcolor{LightGray}Aucun des deux&\textcolor{red}{$K$}\\\hline
+        \end{tabular}
+        \item Placer, sur la figure, le point $H$, diamétralement opposé à $G$. Puis placer, sur la demi-droite $[OG)$, un point $L$ qui appartient à la boule de rayon $OA$.  
+        \item Compléter.
+        \begin{itemize}
+            \item $[AB]$ est un \textcolor{red}{diamètre} de la sphère.
+            \item $[OG]$ est un \textcolor{red}{rayon} de la sphère.
+            \item $[OJ]$ est un \textcolor{red}{rayon} de la sphère.
+            \item $[GH]$ est un \textcolor{red}{diamètre} de la sphère.
+            \item Le cercle de centre $O$ et de diamètre $[EF]$ est                
+            appelé \textcolor{red}{grand cercle} de la sphère.
+        \end{itemize}
+        \item Calculer le périmètre du cercle de centre $O$ et de diamètre $[EF]$.
+        
+        \textcolor{red}{$2\times\pi\times R = 5\pi \approx \Lg[cm]{15.7}$}
+    \end{enumerate}
 \end{corrige}

@@ -1,6 +1,162 @@
 \begin{exercice*}
-    ...
+    Cette figure représente une sphère de centre $O$ et de rayon \Lg[cm]{3}. $[AB]$ et $[EF]$ sont deux diamètres perpendiculaires, et $C$ est un point d'un grand cercle tel que $AC = \Lg[cm]{4}$.
+
+    \begin{center}
+    \scalebox{1.3}{
+        \begin{Geometrie}
+            % Sphère de base
+            u:=30;
+            z0=(3,3)*u;% centre
+            numeric angleInclinaison;
+            angleInclinaison:=-14;
+            dotlabel.lrt(btex $O$ etex,z0);
+            z1=(2.5,1)*u;% pole sud
+            dotlabel.lrt(btex $F$ etex,z1);
+            z2=(3.5,5)*u;% pole nord
+            dotlabel.urt(btex $E$ etex,z2);
+            % remplissages ici avant les path
+            % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+            % fin remplissages    
+            path contour, ellipse,greenwich,meridien;
+            path contourTranslate;
+            contour=(fullcircle scaled 4.1231u);
+            ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+            greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+            contourTranslate=contour shifted z0;       
+            %
+            draw contour shifted z0;
+            % equateur
+            draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.1bp;;
+            draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+            % greenwich
+            draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 dashed evenly;
+            draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.1bp;
+            % Axe de rotation
+            draw z1--z2 dashed evenly;
+            draw z1--z1 + 0.08(z1-z2);
+            draw z2--z2+0.08(z2-z1);
+            % Elements ajoutés
+            z3=(subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 intersectionpoint (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+            dotlabel.urt(btex $A$ etex,z3);
+            z4=(subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 intersectionpoint (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0;
+            dotlabel.urt(btex $B$ etex,z4);
+            z5=point 0.87*(length ellipse) of ellipse shifted z0;
+            dotlabel.urt(btex $C$ etex,z5);
+            draw z3--z4 dashed evenly;
+            draw z3--z5 dashed evenly;
+            draw z4--z5 dashed evenly;
+            trace codeperp(z4,z0,z2,5);
+        \end{Geometrie}
+    }
+    \end{center}
+
+    \begin{enumerate}
+        \item Indiquer les mesures des segments $[AB]$ et $[AO]$ à l'aide des données de l'énoncé.
+        \item Justifier la nature du triangle $EAO$.
+        \item Construire le triangle $EAO$ en vraie grandeur.
+        \item Construire le triangle $ABC$ rectangle en $C$ en vraie \mbox{grandeur}.
+        \item Calculer la longueur $BC$ au dixième près.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Cette figure représente une sphère de centre $O$ et de rayon \Lg[cm]{3}. $[AB]$ et $[EF]$ sont deux diamètres perpendiculaires, et $C$ est un point d'un grand cercle tel que $AC = \Lg[cm]{4}$.
+
+    \begin{center}
+    \scalebox{1.3}{
+        \begin{Geometrie}
+            % Sphère de base
+            u:=30;
+            z0=(3,3)*u;% centre
+            numeric angleInclinaison;
+            angleInclinaison:=-14;
+            dotlabel.lrt(btex $O$ etex,z0);
+            z1=(2.5,1)*u;% pole sud
+            dotlabel.lrt(btex $F$ etex,z1);
+            z2=(3.5,5)*u;% pole nord
+            dotlabel.urt(btex $E$ etex,z2);
+            % remplissages ici avant les path
+            % fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor Cornsilk;
+            % fin remplissages    
+            path contour, ellipse,greenwich,meridien;
+            path contourTranslate;
+            contour=(fullcircle scaled 4.1231u);
+            ellipse=(contour yscaled 0.25) rotated angleInclinaison;
+            greenwich=(contour scaled 1 xscaled 0.32) rotated angleInclinaison;
+            contourTranslate=contour shifted z0;       
+            %
+            draw contour shifted z0;
+            % equateur
+            draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0 withpen pencircle scaled 1.1bp;;
+            draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+            % greenwich
+            draw (subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 dashed evenly;
+            draw (subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 withpen pencircle scaled 1.1bp;
+            % Axe de rotation
+            draw z1--z2 dashed evenly;
+            draw z1--z1 + 0.08(z1-z2);
+            draw z2--z2+0.08(z2-z1);
+            % Elements ajoutés
+            z3=(subpath (0.25*(length greenwich),0.75*(length greenwich)) of greenwich) shifted z0 intersectionpoint (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+            dotlabel.urt(btex $A$ etex,z3);
+            z4=(subpath (-0.25*(length greenwich),0.25*(length greenwich)) of greenwich) shifted z0 intersectionpoint (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0;
+            dotlabel.urt(btex $B$ etex,z4);
+            z5=point 0.87*(length ellipse) of ellipse shifted z0;
+            dotlabel.urt(btex $C$ etex,z5);
+            draw z3--z4 dashed evenly;
+            draw z3--z5 dashed evenly;
+            draw z4--z5 dashed evenly;
+            trace codeperp(z4,z0,z2,5);
+        \end{Geometrie}
+    }
+    \end{center}
+
+    \begin{enumerate}
+        \item Indiquer les mesures des segments $[AB]$ et $[AO]$ à l'aide des données de l'énoncé.
+        
+        \textcolor{red}{$[AB]$ et $[A0]$ sont respectivment un diamètre et un rayon de la sphère donc $AB=\Lg[cm]{6}$ et $AO=\Lg[cm]{3}$.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Justifier la nature du triangle $EAO$.
+        
+        {\color{red}%
+        Les diamètres $[EF]$ et $[AB]$ sont perpendiculaires en $O$ donc le triangle $EAO$ est rectangle en $O$.
+
+        $[OA]$ et $[OE]$ sont deux rayons de la sphère donc donc le triangle $EAO$ est isocèle en $O$.
+
+        Le triangle $EAO$ est donc un triangle rectangle et isocèle en $O$.
+        }
+        \item Construire le triangle $EAO$ en vraie grandeur.
+        
+        \begin{Geometrie}
+            pair E,A,O;
+            O=u*(1,1);
+            A-O=u*(3,0);
+            E-O=u*(0,3);
+            drawoptions(withcolor red);
+            draw E--A--O--cycle;
+            label.top(btex $E$ etex,E);
+            label.rt(btex $A$ etex,A);
+            label.llft(btex $O$ etex,O);
+            trace codeperp(A,O,E,5);
+        \end{Geometrie}
+        \item Construire le triangle $ABC$ rectangle en $C$ en vraie \mbox{grandeur}.
+        
+        \begin{Geometrie}
+            pair A,B,C;
+            A=u*(1,1);
+            B-A=u*(6,0);
+            C=(fullcircle scaled 8u shifted (u,u)) intersectionpoint (fullcircle scaled 6u shifted (4u,u));
+            drawoptions(withcolor red);
+            draw A--B--C--cycle;
+            label.rt(btex $B$ etex,B);
+            label.lft(btex $A$ etex,A);
+            label.top(btex $C$ etex,C);
+            trace codeperp(A,C,B,5);
+        \end{Geometrie}
+        \item Calculer la longueur $BC$ au dixième près.
+        
+        {\color{red}\Pythagore[Precision=1]{BCA}{6}{4}{}}
+    \end{enumerate}
 \end{corrige}
