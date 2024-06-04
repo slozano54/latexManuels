@@ -1,0 +1,186 @@
+\begin{exercice*}
+    \begin{mplibcode}
+        input PfCSolid;
+        nb:=1;
+        subh:=1;
+        Initialisation(1500,60,20,50);
+        Objetcube1("a=0.5");
+        TR:=(0,0.5,0);
+        ObjetDeplacement2(1);
+        TR:=(0,1,0);
+        ObjetDeplacement3(1);
+        TR:=(0,1.5,0);
+        ObjetDeplacement4(1);
+        TR:=(0.5,1.5,0);
+        ObjetDeplacement5(1);
+        TR:=(0,0,0.5);
+        ObjetDeplacement6(1);
+        color A,B,C;
+        A=(0,0,0);
+        B=(0,0.5,0);
+        C=(-0.5,0,0);
+        TR:=(0.25,1.25,0.25);
+        ObjetPrisme7("axe=(0,0,1)","h=0.25")(A,B,C);
+        TR:=(0,0,0);
+        nbobj:=7;
+        DessineFusion;
+    \end{mplibcode}
+
+    \AssemblageSolides[Type=CylindreBoules,Anglex=90,HauteurCylindre=1.5,RayonCylindre=0.5]
+
+    \AssemblageSolides[Type=ConeBoule,HauteurCone=1.5,RayonCone=0.5]
+
+    \Solide[%
+        Nom=pave,
+        Largeur=2,
+        Hauteur=4,
+        Profondeur=1.5,
+        ListeSommets={A,B,C,D,L,I,J,K},
+        Aretes=false,
+        Traces={
+            color S,E,F,G,H,O;
+            S=(0.75,1,2.5);
+            E-A=(0,0,1.5);
+            F-B=(0,0,1.5);
+            G-C=(0,0,1.5);
+            H-D=(0,0,1.5);
+            O=(0.75,1,3.25);
+            DotLabel.top(btex S etex,S);
+            Label.lft(btex E etex,E);
+            Label.lrt(btex F etex,F);
+            Label.lrt(btex G etex,G);
+            Label.lrt(btex H etex,H);
+            DotLabel.urt(btex O etex,O);
+            % color S[];
+            % trace myCircl;            
+            % %https://metapost.gutenberg-asso.fr/?page=exemples&id=267
+            % s:=0.01;
+            % for i=0 step s until 1:
+            %     S[i]=(0.75,1,2.5+i);
+            %     trace cercles(O,S[i],A,C,I);
+            %     fill cercles(O,S[i],A,C,I) withcolor (1-i)*white;
+            %     %fill myCircl shifted (i*(S-O)) withcolor i*white;
+            path myCircl;
+            myCircl = cercles(O,S,A,C,I);
+            pas:=100;
+            for k=0 upto pas:
+                fill homothetie(myCircl,Projette(O),(pas-k)/pas) withcolor ((pas-k)/pas)[white,LightGray];
+            endfor;
+            trace myCircl;
+            % fill cercles(O,S,A,C,I) withcolor LightGray;
+            trace chemin(A,B,C,K,L,I,J,K);
+            trace chemin(I,A);
+            trace chemin(E,F,G);
+            trace chemin(F,B);
+            trace chemin(A,D,C) dashed evenly;
+            trace chemin(E,S,H) dashed evenly;
+            trace chemin(F,S,G) dashed evenly;
+            trace chemin(E,H,G) dashed evenly;
+            trace chemin(H,D) dashed evenly;
+        }
+    ]
+
+    \begin{Geometrie}[Cadre="aucun"]
+        pair O;
+        O=(0,0);
+      
+        vardef Gradient(expr chem,PtC,coulA,coulB,pas)=
+        save $;
+        picture $;
+      
+        $=image(
+        for k=0 upto pas:
+        fill homothetie(chem,PtC,(pas-k)/pas) withcolor ((pas-k)/pas)[coulA,coulB];
+        endfor;
+        );
+        $
+        enddef;
+      
+        path cc;
+        cc=cercles(O,3u);
+        trace Gradient(cc,O,white,Crimson,100);
+        trace cc;
+      
+        path dd;
+      
+        dd=u*(4,0)--u*(8,0)--u*(8,4)--u*(4,4)--cycle;
+        trace Gradient(dd,u*(5,1),LightSteelBlue,Purple,100);
+        trace dd;
+      \end{Geometrie}
+
+      \begin{Geometrie}[Cadre="aucun"]
+        vardef Gradient(expr chem,PtC,coulA,coulB,pas)=
+            save $;
+            picture $;      
+            $=image(
+                for k=0 upto pas:
+                    fill homothetie(chem,PtC,(pas-k)/pas) withcolor ((pas-k)/pas)[coulA,coulB];
+                endfor;
+            );
+            $
+        enddef;
+        pair A[],B[],O;
+        A0=u*(1,1);
+        A1-A0=u*(5,0);
+        A2-A1=u*(1.5,1.2);
+        A3-A2=u*(-5,0);
+        draw A0--A1--A2;
+        draw A2--A3--A0 dashed evenly;
+        B0-A0=u*(0,1.8);
+        B1-A1=u*(0,1.8);
+        B2-A2=u*(0,1.8);
+        B3-A3=u*(0,1.8);
+        draw B0--B1--B2--B3--cycle;
+        for k=0 upto 2:
+            draw A[k]--B[k];
+        endfor;
+        draw A[3]--B[3] dashed evenly;
+        O=iso(B0,B1,B2,B3);
+        path creux;
+        creux = fullcircle scaled 4u; 
+        draw (subpath (0.5*(length creux),length creux) of creux) shifted O dashed evenly;
+        path section;
+        section=(creux yscaled 0.25) shifted O;
+        trace Gradient(section,O,white,LightGray,100);                
+        draw section;
+        trace cotationmil(A0,A1,-3mm,15,btex \Lg[cm]{10} etex);
+        trace cotation(A0,B0,3mm,3mm,btex \Lg[cm]{4} etex);        
+        trace cotationmil(point 0.5*(length section) of section,point 1*(length section) of section,-0mm,15,btex \Lg[cm]{8} etex);
+      \end{Geometrie}
+
+      \begin{mplibcode}
+        input PfCSolid;
+        nb:=1;
+        subh:=1;
+        incolor:=0.5[LightGray,blanc] ;
+        outcolor:=0.5[LightGray,blanc] ;
+        Initialisation(1500,60,20,50);        
+        Objetcube1("a=1");        
+        %
+        Objetcube2("a=0.5");
+        %
+        TR:=(0.75,0.25,0.25);
+        ObjetDeplacement3(2);
+        TR:=(0.25,-0.75,0.75);
+        ObjetDeplacement4(2);
+        TR:=(-0.25,0.75,-0.25);
+        ObjetDeplacement5(2);
+        color Dessus,Face,Droite;
+        Dessus=(1,2,2.5);
+        Face=(2.5,1,0.5);
+        Droite=(2,6,1);
+        drawarrow Projette(Dessus+(0,0,-0.2))--Projette(Dessus+(0,0,-0.6)) withpen pencircle scaled 1bp;
+        Label(btex Vue de dessus etex,Dessus);
+        drawarrow Projette(Face+(-0.4,0,0))--Projette(Face+(-0.8,0,0)) withpen pencircle scaled 1bp;
+        Label(btex Vue etex,Face+(0,0,0.2));
+        Label(btex de face etex,Face);
+        drawarrow Projette(Droite+(0,-0.4,0))--Projette(Droite+(0,-1,0)) withpen pencircle scaled 1bp;
+        Label(btex Vue etex,Droite+(0,0,0.2));
+        Label(btex de droite etex,Droite);
+        nbobj:=5;        
+        DessineFusion;
+    \end{mplibcode}
+\end{exercice*}
+\begin{corrige}
+    ...
+\end{corrige}
