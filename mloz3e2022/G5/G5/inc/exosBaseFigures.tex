@@ -1,4 +1,5 @@
 \begin{exercice*}
+    % assemblage cubes et prisme
     \begin{mplibcode}
         input PfCSolid;
         nb:=1;
@@ -26,8 +27,10 @@
         DessineFusion;
     \end{mplibcode}
 
+    % gelule
     \AssemblageSolides[Type=CylindreBoules,Anglex=90,HauteurCylindre=1.5,RayonCylindre=0.5]
 
+    % coneBoule
     \AssemblageSolides[Type=ConeBoule,HauteurCone=1.5,RayonCone=0.5]
 
     \Solide[%

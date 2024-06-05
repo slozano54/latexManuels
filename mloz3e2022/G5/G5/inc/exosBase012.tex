@@ -1,6 +1,61 @@
 \begin{exercice*}
-    ...
+    Une gélule a la forme d'un cylindre droit, de longueur \Lg[cm]{1}, avec une demi-sphère collée à chacune de ses bases, de rayon \Lg[mm]{3}.
+    \begin{center}
+        \AssemblageSolides[Type=CylindreBoules,Anglex=90,HauteurCylindre=1.5,RayonCylindre=0.5]
+    \end{center}
+    \begin{enumerate}
+        \item Reporter sur la figure les longueurs de l'énoncé, exprimées en millimètre.
+        \item Calculer le volume total exact de la gélule, puis son volume arrondi à l'unité.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Une gélule a la forme d'un cylindre droit, de longueur \Lg[cm]{1}, avec une demi-sphère collée à chacune de ses bases, de rayon \Lg[mm]{3}.
+
+    \begin{center}
+        \AssemblageSolides[%
+            Type=CylindreBoules,%
+            Anglex=90,%
+            HauteurCylindre=1.5,%
+            RayonCylindre=0.5,%            
+            Traces={
+                color O,O';
+                O=(0,0,0);
+                O'-O=(0,-1.5,0);                
+                drawoptions(withcolor red);
+                trace cotation(Projette(O'),Projette(O),-15mm,-2mm,TEX("\Lg[mm]{10}"));
+                color A,B,C,D;
+                C=(0.5*cosd(110),0,0.5*sind(110));
+                D=(-0.5*cosd(110),0,-0.5*sind(110));
+                A=(-0.5*cosd(110),-1.5,-0.5*sind(110));
+                B=(0.5*cosd(110),-1.5,0.5*sind(110));
+                trace chemin(C,D) dashed withdots;
+                trace chemin(A,B) dashed withdots;
+                trace cotation(Projette(C),Projette(D),15mm,-2mm,TEX("\Lg[mm]{6}"));
+                trace cotation(Projette(A),Projette(B),15mm,-2mm,TEX("\Lg[mm]{6}"));
+            }
+        ]
+    \end{center}
+
+    \begin{enumerate}
+        \item Reporter sur la figure les longueurs de l'énoncé, exprimées en millimètre.
+        
+        \textcolor{red}{cf figure}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Calculer le volume total exact de la gélule, puis son volume arrondi à l'unité.
+        
+        {\color{red}%
+        $\mathcal{V}_{\text{cylindre}}=\pi r^2 h=\pi\times3^2\times10=90\pi~\Vol[mm]{}$.
+        
+        $\mathcal{V}_{\text{demi-boule}}=\dfrac12\times\dfrac43\pi r^3=\dfrac12\times\dfrac43\pi\times3^3=18\pi~\Vol[mm]{}$.
+
+        $\mathcal{V}_{\text{gélule}}=\mathcal{V}_{\text{cylindre}}+\mathcal{V}_{\text{demi-boule}}$
+
+        $\mathcal{V}_{\text{gélule}}=90\pi+2\times 18\pi=126\pi~\Vol[mm]{}$
+
+        $\mathcal{V}_{\text{gélule}}\approx \Vol[mm]{396}$ au \Vol[mm]{} près.
+        }
+    \end{enumerate}
 \end{corrige}

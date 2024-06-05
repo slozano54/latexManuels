@@ -1,6 +1,104 @@
 \begin{exercice*}
-    ...
+    On considère la bougie conique représentée ci-dessous.
+
+    \begin{minipage}{0.7\linewidth}
+        Le rayon $OA$ de sa base est \Lg[cm]{2,5}.
+        
+        La longueur du segment $[SA]$ est \Lg[cm]{6,5}.
+
+        \bigskip
+        \textit{La figure n’est pas aux dimensions réelles.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\linewidth}
+        \scalebox{0.7}{
+        \Solide[%
+            Nom=cone,            
+            ListeSommets={S,O},
+            Axes,
+            Traces={%
+                color A;
+                A=(cosd(10),sind(10),0);
+                Label.ulft(btex S etex,S);
+                Label.urt(btex O etex,O);
+                Label.llft(btex A etex,A);
+                trace chemin(S,A);
+                trace chemin(S,O,A) dashed evenly;
+            }
+        ]
+        }
+    \end{minipage}
+
+    \begin{enumerate}
+        \item Sans justifier, donner la nature du triangle $SAO$ et le construire en vraie grandeur.
+        \item Montrer que la hauteur $SO$ de la bougie est \Lg[cm]{6}.
+        \item Calculer le volume de cire nécessaire à la fabrication de cette bougie ; Arrondie au dixième de \Vol[cm]{}.
+        \item Calculer l’angle $\widehat{ASO}$ arrondi au degré près.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On considère la bougie conique représentée ci-dessous.
+
+    \begin{minipage}{0.7\linewidth}
+        Le rayon $OA$ de sa base est \Lg[cm]{2,5}.
+        
+        La longueur du segment $[SA]$ est \Lg[cm]{6,5}.
+
+        \bigskip
+        \textit{La figure n’est pas aux dimensions réelles.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\linewidth}
+        \scalebox{0.7}{
+        \Solide[%
+            Nom=cone,            
+            ListeSommets={S,O},
+            Axes,
+            Traces={%
+                color A;
+                A=(cosd(10),sind(10),0);
+                Label.ulft(btex S etex,S);
+                Label.urt(btex O etex,O);
+                Label.llft(btex A etex,A);
+                trace chemin(S,A);
+                trace chemin(S,O,A) dashed evenly;
+            }
+        ]
+        }
+    \end{minipage}
+
+    \begin{enumerate}
+        \item Sans justifier, donner la nature du triangle $SAO$ et le construire en vraie grandeur.
+        
+        {\color{red}$SAO$ est un triangle rectangle en $O$.
+
+        \begin{Geometrie}
+            pair A,O,S;
+            O=u*(1,1);
+            A-O=u*(0,2.5);
+            S-O=u*(sqrt(6.5*6.5-2.5*2.5),0);
+            drawoptions(withcolor red);
+            trace A--S--O--cycle;
+            trace codeperp(S,O,A,5);
+            trace cotationmil(A,O,-5mm,15,btex \Lg[cm]{2.5} etex);
+            trace cotationmil(A,S,5mm,15,btex \Lg[cm]{6.5} etex);
+            label.llft(btex $O$ etex, O);
+            label.ulft(btex $A$ etex, A);
+            label.lrt(btex $S$ etex, S);
+        \end{Geometrie}
+        }
+        \item Montrer que la hauteur $SO$ de la bougie est \Lg[cm]{6}.
+        
+        {\color{red} En appliquant le théorème de Pythagore dans le triangle $AOS$ rectangle en $O$ : $AS^2=AO^2+OS^2$ d'où $OS=\Lg[cm]{6}$}
+        \item Calculer le volume de cire nécessaire à la fabrication de cette bougie ; Arrondie au dixième de \Vol[cm]{}.
+        
+        {\color{red}%
+        $\mathcal{V}_{\text{bougie}}=\dfrac13\pi r^2 h=\dfrac13\pi\times\num{2.5}^2\times 6=\num{12.5}\pi~\Vol[cm]{}$.
+
+        $\mathcal{V}_{\text{bougie}}\approx\Vol[cm]{39.3}$.
+         }
+        \item Calculer l’angle $\widehat{ASO}$ arrondi au degré près.
+        
+        {\color{red} Dans le triangle $AOS$ rectangle en $O$, $cos(\widehat{ASO})=\dfrac{OS}{SA}=\dfrac{6}{\num{6.5}}$ d'où $\widehat{ASO}\approx\ang{23}$}
+    \end{enumerate}
 \end{corrige}

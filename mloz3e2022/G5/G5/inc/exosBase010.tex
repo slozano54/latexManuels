@@ -1,6 +1,89 @@
 \begin{exercice*}
-    ...
+    $ABCDEFGH$ est un cube d’arête $AB = \Lg[cm]{12}$.
+    
+    \smallskip
+    \begin{minipage}{0.6\linewidth}
+        \begin{itemize}
+            \item $I$ est le milieu du segment $[AB]$;
+            \item $J$ est le milieu du segment $[AE]$;
+            \item $K$ est le milieu du segment $[AD]$.
+        \end{itemize}    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\linewidth}
+        \Solide[%
+            Phi=20,
+            ListeSommets={E,H,G,F,B,A,D,C},
+            Traces={
+                color I,J,K;
+                I=iso(A,B);
+                J=iso(A,E);
+                K=iso(A,D);
+                Label.ulft(btex $I$ etex,I);                
+                Label.lft(btex $J$ etex,J);
+                Label.urt(btex $K$ etex,K);
+                trace chemin(I,K,J);
+                trace chemin(J,I) dashed evenly;
+            }
+        ]
+    \end{minipage}
+    \begin{enumerate}
+        \item Calculer l’aire du triangle $AIK$.
+        \item Calculer le volume de la pyramide $AIKJ$ de base $AKI$.
+        \item Déterminer la fraction du volume du cube que représente le volume de la pyramide $AIKJ$. Écrire le résultat
+        sous forme d’une fraction de numérateur 1.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    $ABCDEFGH$ est un cube d’arête $AB = \Lg[cm]{12}$.
+    
+    \smallskip
+    \begin{minipage}{0.5\linewidth}
+        \begin{itemize}
+            \item $I$ est le milieu de $[AB]$;
+            \item $J$ est le milieu de $[AE]$;
+            \item $K$ est le milieu de $[AD]$.
+        \end{itemize}    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\linewidth}
+        \Solide[%
+            Phi=20,
+            ListeSommets={E,H,G,F,B,A,D,C},
+            Traces={
+                color I,J,K;
+                I=iso(A,B);
+                J=iso(A,E);
+                K=iso(A,D);
+                Label.ulft(btex $I$ etex,I);                
+                Label.lft(btex $J$ etex,J);
+                Label.urt(btex $K$ etex,K);
+                trace chemin(I,K,J);
+                trace chemin(J,I) dashed evenly;
+            }
+        ]
+    \end{minipage}
+
+    \begin{enumerate}
+        \item Calculer l’aire du triangle $AIK$.
+        \\\textcolor{red}{$AIK$ est un triangle rectangle en $A$ tel que $AI=AK=\Lg[cm]{6}$ donc son aire vaut $\mathcal{A}_{AIK}=6\times 6 \div 2 =\Aire[cm]{18}$}
+        \item Calculer le volume de la pyramide $AIKJ$ de base $AKI$.
+        \\{\color{red}
+        La hauteur de la pyramide $AIKJ$ est $AJ=\Lg[cm]{6}$ donc son volume vaut $\mathcal{V}_{AIKJ}=\text{Aire de la base}\times\text{hauteur}\div3$
+        
+        $\mathcal{V}_{AIKJ}=18\times 6 \div 3 = \Vol[cm]{36}$}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Déterminer la fraction du volume du cube que représente le volume de la pyramide $AIKJ$.
+        
+        Écrire le résultat sous forme d’une fraction de numérateur 1.
+        \\{\color{red}{
+            Le volume du cube vaut $\mathcal{V}_{\text{cube}}=12^3=\Vol[cm]{1728}$,
+         
+            \smallskip
+            d'où la fraction $\dfrac{36}{\num{1728}}=\dfrac{1}{48}$}
+        }
+    \end{enumerate}
 \end{corrige}
