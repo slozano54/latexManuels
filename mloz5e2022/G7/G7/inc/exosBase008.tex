@@ -1,7 +1,44 @@
-
-\begin{exercice*}
-   \dots
+\begin{exercice*} %8
+   Tracer, puis démontrer\dots{} le retour !
+   \begin{enumerate}
+      \item Tracer un triangle équilatéral $ABC$ de côté \Lg[cm]{5}.
+      \item À l'extérieur du triangle et de telle sorte que les figures ne se recouvrent pas, placer les points $D$ et $E$ tels que $ABDE$ soit un rectangle avec $AD =\Lg[cm]{7}$.
+      \item Placer les points $F$ et $G$ tels que $ACFG$ soit un losange avec $\widehat{ACF} =\ang{150}$.
+      \item Donner la mesure des angles $\widehat{CAG}$ et $\widehat{BAG}$.
+      \item Que peut-on en déduire pour les points $G, A$ et $E$ ?
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item {\bf\textcolor{G1}{2) \;3)}} Figure taille réelle.
+      \begin{pspicture}(-1,-5.7)(5,10.2)
+         \pstGeonode[PointSymbol=none,PosAngle={180,0,45,-45,-135,45,145}]{A}(5,0){B}(5;60){C}(5,-5){D}(0,-5){E}(2.8,9.5){F}(0,5){G}
+         \psset{MarkAngle=90}
+         \pstSegmentMark{A}{B}
+         \pstSegmentMark{B}{C}
+         \pstSegmentMark{A}{C}
+         \pstLabelAB{A}{B}{\color{red}\Lg[cm]{5}}
+         \pstSegmentMark[SegmentSymbol=pstslashhh]{B}{D}
+         \pstSegmentMark[SegmentSymbol=pstslashhh]{A}{E}
+         \pstSegmentMark{E}{D}
+         \pstLabelAB{A}{D}{\color{red}\Lg[cm]{7}}
+         \pstSegmentMark{C}{F}
+         \pstSegmentMark{F}{G}
+         \pstSegmentMark{A}{G}
+         \pstLineAB{A}{D}
+         \pstMarkAngle[Mark=MarkHashhh,MarkAngleRadius=0.5]{F}{C}{A}{\color{red}\ang{150}}
+         \pstMarkAngle{B}{A}{C}{\color{red}\ang{60}}
+         \pstMarkAngle{C}{B}{A}{\color{red}\ang{60}}
+         \pstMarkAngle{A}{C}{B}{\color{red}\ang{60}}
+         \pstRightAngle{A}{B}{D}
+      \end{pspicture}
+      \setcounter{enumi}{3}
+      \item Le triangle $CAG$ est isocèle en $A$ puisque $AC = AG$ donc, $\widehat{ACG} = \widehat{AGC}$. \\
+      De plus, $(GC)$ est un axe de symétrie du losange, donc $\widehat{ACG}=\ang{150}\div2 =\ang{75}$. \\
+      La somme des angles dans un triangle vaut \ang{180} donc $\widehat{CAG}+\widehat{AGC}+\widehat{GCA} =\ang{180}$ soit $\widehat{CAG} + \ang{75}+\ang{75}=\ang{180}$ ou encore {\color{red} $\widehat{CAG} =\ang{30}$}. \\
+      $\widehat{BAG} = \widehat{BAC}+\widehat{CAG} =\ang{60}+\ang{30} =\color{red} \ang{90}$. \smallskip
+      \item On a $\widehat{GAE} =\widehat{GAB}+\widehat{BAE} =\ang{90}+\ang{90} =\ang{180}$ donc l'angle $\widehat{GAE}$ est plat d'où : {\color{red} les points $G, A$ et $E$ sont alignés}.
+   \end{enumerate}
 \end{corrige}

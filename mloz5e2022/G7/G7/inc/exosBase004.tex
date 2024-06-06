@@ -1,7 +1,38 @@
-
-\begin{exercice*}
-   \dots
+\begin{exercice*} %4
+   Construire les parallélogrammes $ABCD$ et $EFGH$ tels que :
+   \begin{enumerate}
+      \item $AB =\Lg[cm]{5} \; ; AD =\Lg[cm]{3,5}$ et $BD =\Lg[cm]{7}$.
+      \item $EF =\Lg[cm]{2} \; ; EH =\Lg[cm]{4,5}$ et $EG = \Lg[cm]{3,5}$.
+   \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-   \dots
+\ \\ [-5mm]
+   \begin{enumerate}
+      \item
+      {\footnotesize
+         \begin{pspicture}(-1.5,1.5)(6,3.8)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={-135,-45,45,135}]{A}(5,0){B}(3.8,3.3){C}(-1.2,3.3){D}
+            \pstLineAB{D}{B}
+            \pstLabelAB{D}{B}{\color{red} \Lg[cm]{7}}
+            \pstLabelAB[offset=-3mm]{D}{A}{\color{red} \Lg[cm]{3,5}}
+            \pstLabelAB[offset=-3mm]{A}{B}{\color{red} \Lg[cm]{5}}
+            \pstSegmentMark[SegmentSymbol=MarkHash]{A}{D}
+            \pstSegmentMark[SegmentSymbol=MarkHash]{B}{C}
+            \pstSegmentMark[SegmentSymbol=MarkCros]{A}{B}
+            \pstSegmentMark[SegmentSymbol=MarkCros]{D}{C}
+         \end{pspicture}}
+      \item
+      {\footnotesize
+         \begin{pspicture}(-2,0.5)(5,4.3)
+      \pstGeonode[PointSymbol=none,CurveType=polygon,PosAngle={-135,-45,45,135}]{E}(4.5,0){H}(3.5;25.2){G}(2;131.8){F}
+            \pstLineAB{E}{G}
+            \pstLabelAB{E}{G}{\color{red} \Lg[cm]{3,5}}
+            \pstLabelAB[offset=-4mm]{E}{H}{\color{red} \Lg[cm]{4,5}}
+            \pstLabelAB[offset=-4mm]{F}{E}{\color{red} \Lg[cm]{2}}
+            \pstSegmentMark[SegmentSymbol=MarkCros]{E}{F}
+            \pstSegmentMark[SegmentSymbol=MarkCros]{H}{G}
+            \pstSegmentMark[SegmentSymbol=MarkHashh]{E}{H}
+           \pstSegmentMark[SegmentSymbol=MarkHashh]{F}{G}
+      \end{pspicture}}
+   \end{enumerate}
 \end{corrige}

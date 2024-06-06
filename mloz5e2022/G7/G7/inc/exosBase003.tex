@@ -1,7 +1,38 @@
-
-\begin{exercice*}
-   \dots
+\begin{exercice*} %3
+   Construire sur ce quadrillage les parallélogrammes suivants : $ABCF$, $BCDG$, $CDHE$ et $BIEC$.
+   \begin{center}
+      {\psset{unit=0.7}
+      \begin{pspicture}(11,11)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(11,11)
+         \pstGeonode(1,1){A}(5,1){B}(6,3){C}(9,6){D}(3,7){E}         
+      \end{pspicture}}
+   \end{center} 
 \end{exercice*}
 \begin{corrige}
-   \dots
+   \ \\ [-3mm]
+   {\psset{unit=0.7}
+      \begin{pspicture}(11,11)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(11,11)
+         \pstGeonode(1,1){A}(5,1){B}(6,3){C}(9,6){D}(3,7){E}
+         \psline(1,1)(5,1)
+         \psline(5,1)(6,3)
+         \psline(6,3)(2,3)
+         \psline(2,3)(1,1)
+         \pstGeonode[CurveType=polygon,linecolor=A1](1,1){A}(5,1){B}(6,3){C}(2,3){F}
+         \psline(5,1)(6,3)
+         \psline(6,3)(9,6)
+         \psline(9,6)(8,4)
+         \psline(8,4)(5,1)
+         \pstGeonode[CurveType=polygon,linecolor=B1](5,1){B}(6,3){C}(9,6){D}(8,4){G}
+         \psline(6,3)(9,6)
+         \psline(9,6)(6,10)
+         \psline(6,10)(3,7)
+         \psline(3,7)(6,3)
+         \pstGeonode[CurveType=polygon,linecolor=G1](6,3){C}(9,6){D}(6,10){H}(3,7){E}
+         \psline(5,1)(2,5)
+         \psline(2,5)(3,7)
+         \psline(3,7)(6,3)
+         \psline(6,3)(5,1)
+         \pstGeonode[CurveType=polygon,linecolor=J1](5,1){B}(2,5){I}(3,7){E}(6,3){C}
+      \end{pspicture}}
 \end{corrige}

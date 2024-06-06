@@ -1,5 +1,169 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Centre de symétrie d'un parallélogramme}
+    \begin{propriete}[\admise]
+        Si on construit le point d'intersection des diagonales d'un parallélogramme alors c'est son centre de symétrie.
+    \end{propriete}
+    \begin{exemple*1}
+        \phantom{rrr}
+
+        \begin{minipage}{0.65\linewidth}
+            \begin{itemize}
+                \item $O$ est centre de symétrie du parallèlogramme $ABCD$.
+                \item On dit parfois que $ABCD$ est un parallélogramme de centre $O$.
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            % \includegraphics[scale=0.8]{coursparallelogramme.2}
+            \scalebox{0.9}{
+            \begin{Geometrie}[CoinBG={(0.5u,0.5u)},CoinHD={(5.5u,4u)}]
+                pair A,B,C,D,O;
+                path sac, sbd;
+                D=u*(1,1);
+                A-D=u*(1,2);
+                C-D=u*(3,0.5);
+                B-C=u*(1,2);  
+                trace droite(A,B) withcolor red;
+                trace droite(C,D) withcolor red;
+                trace droite(A,D) withcolor DarkGreen;
+                trace droite(C,B) withcolor DarkGreen;
+                trace segment(A,C);
+                trace segment(B,D);
+                sac=segment(A,C);
+                sbd=segment(B,D);
+                O=sac intersectionpoint sbd;
+                label.ulft(btex $A$ etex,A);
+                label.urt(btex $B$ etex,B);
+                label.lrt(btex $C$ etex,C);
+                label.llft(btex $D$ etex,D);
+                label.top(btex $O$ etex,O);
+            \end{Geometrie}
+            } 
+        \end{minipage}
+        \vspace*{-10mm}
+    \end{exemple*1}
+    \begin{propriete}[des diagonales]    
+        Si un quadrilatère est un parallélogramme alors ses diagonales se coupent en leur milieu.
+    \end{propriete}
+    \begin{preuve}
+        \phantom{rrr}
+
+        \begin{minipage}{0.65\linewidth}
+            Soit $ABCD$ un parallélogramme de centre $O$, $O$ est un centre de symétrie donc :
+            \begin{itemize}
+                \item $A$ et $C$ sont symétriques par rapport à $O$.
+                \item $B$ et $D$ sont symétriques par rapport à $O$.
+            \end{itemize}
+            On peut donc conclure que $O$ est les milieu de $[AC]$ et de $[BD]$ $\square$
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            % \includegraphics[scale=0.8]{coursparallelogramme.10}
+            \begin{Geometrie}[CoinBG={(0.5u,0.5u)},CoinHD={(5.5u,4u)}]
+                pair A,B,C,D,O;
+                path sac, sbd;
+                D=u*(1,1);
+                A-D=u*(1,2);
+                C-D=u*(3,0.5);
+                B-C=u*(1,2); 
+                trace droite(A,B) withcolor red;
+                trace droite(C,D) withcolor red;
+                trace droite(A,D) withcolor DarkGreen;
+                trace droite(C,B) withcolor DarkGreen;
+                trace segment(A,C);
+                trace segment(B,D);
+                sac=segment(A,C);
+                sbd=segment(B,D);
+                O=sac intersectionpoint sbd;
+                marque_s:=0.2*marque_s;
+                trace codesegments(A,O,O,C,2);
+                trace codesegments(B,O,O,D,4);
+                label.ulft(btex $A$ etex,A);
+                label.urt(btex $B$ etex,B);
+                label.lrt(btex $C$ etex,C);
+                label.llft(btex $D$ etex,D);
+                label.top(btex $O$ etex,O);
+            \end{Geometrie}
+        \end{minipage}
+    \end{preuve}
+    \begin{propriete}[des côtés opposés]
+        Si un quadrilatère est un parallélogramme alors ses côtés opposés sont de même longueur.
+    \end{propriete}
+    \begin{preuve}
+        \phantom{rrr}
+
+        \begin{minipage}{0.65\linewidth}
+            Soit $ABCD$ un parallélogramme de centre $O$.
+            \par
+            $A$ et $C$ sont symétriques par rapport à $O$, $B$ et $D$ aussi
+            \par \textbf{donc} $[AB]$ et $[CD]$ sont symétriques par rapport à $O$, $[AD]$ et $[BC]$ aussi
+            \par \textbf{or} la symétrie centrale conserve les longueurs
+            \par On peut donc conclure que, $[AB]$ et $[CD]$ ont la même longueur, $[AD]$ et $[BC]$ aussi. $\square$
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \underline{Illustration} :\par 
+                % \includegraphics[scale=0.9]{coursparallelogramme.3}
+                \begin{Geometrie}[CoinHD={(7u,6u)}]
+                    pair A,B,C,D;
+                    D=u*(1,1);
+                    A-D=u*(1,2);
+                    C-D=u*(3,0.5);
+                    B-C=u*(1,2);  
+                    trace polygone(A,B,C,D);
+                    marque_s:=0.2*marque_s;
+                    trace codesegments(A,D,B,C,2);
+                    trace codesegments(A,B,D,C,4);
+                    label.ulft(btex $A$ etex,A);
+                    label.urt(btex $B$ etex,B);
+                    label.lrt(btex $C$ etex,C);
+                    label.llft(btex $D$ etex,D);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{preuve}
+    \begin{propriete}[des angles opposés]
+        Si un quadrilatère est un parallélogramme alors ses angles opposés sont de même mesure.
+    \end{propriete}
+    \begin{preuve}
+        \phantom{rrr}
+
+        \begin{minipage}{0.65\linewidth}
+            Soit $ABCD$ un parallélogramme de centre $O$.
+            \par
+            $A$ et $C$ sont symétriques par rapport à $O$, $B$ et $D$ aussi
+            \par \textbf{donc} $\widehat{ABC}$ et $\widehat{CDA}$ sont symétriques par rapport à $O$, $\widehat{BCD}$ et $\widehat{DAB}$ aussi
+            \par \textbf{or} la symétrie centrale conserve les mesures d'angles
+            \par On peut donc conclure que, $\widehat{ABC}$ et $\widehat{CDA}$ d'une part puis $\widehat{BCD}$ et $\widehat{DAB}$ d'autre part, ont la même mesure. $\square$
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \underline{Illustration} :\par
+                % \includegraphics[scale=1]{coursparallelogramme.4} 
+                \begin{Geometrie}[CoinHD={(7u,6u)}]
+                    pair A,B,C,D;
+                    A=u*(3,4);
+                    B=u*(6,5);
+                    C=u*(4,2);
+                    D=u*(1,1);
+                    trace polygone(A,B,C,D);
+                    marque_a:=0.5*marque_a;
+                    trace marqueangle(D,A,B,0) withcolor red;
+                    trace marqueangle(B,C,D,0) withcolor red;
+                    trace marqueangle(A,B,C,0) withcolor DarkGreen;
+                    trace marqueangle(C,D,A,0) withcolor DarkGreen;
+                    marque_a:=1.2*marque_a;
+                    trace marqueangle(A,B,C,0) withcolor DarkGreen;
+                    trace marqueangle(C,D,A,0) withcolor DarkGreen;
+                    label.ulft(btex $A$ etex,A);
+                    label.urt(btex $B$ etex,B);
+                    label.lrt(btex $C$ etex,C);
+                    label.llft(btex $D$ etex,D);
+                \end{Geometrie} 
+            \end{center}
+        \end{minipage}
+    \end{preuve}
+    \begin{propriete}[\admise]
+        Dans un parallélogramme, deux angles consécutifs sont supplémentaires. \\
+        Cela signifie que leur somme vaut \ang{180}.
+    \end{propriete}
 \end{changemargin}
  

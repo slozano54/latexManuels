@@ -1,0 +1,123 @@
+\begin{changemargin}{0mm}{-15mm}
+    \section{Propriétés caractéristiques du parallélogramme}
+    \begin{propriete}[caractérisation par les diagonales]
+        Si les diagonales d'un quadrilatère ont le même milieu alors ce quadrilatère est un parallélogramme.
+    \end{propriete}
+    \begin{preuve}
+        \phantom{rrr}
+
+        \begin{minipage}{0.65\linewidth}
+            On suppose que $[IK]$ et $[LJ]$ ont le même milieu $M$.
+            \par \textbf{d'où} $I$ et $K$ sont symétriques par rapport à $M$, $L$ ,et $J$ aussi. 
+            \par \textbf{donc} $(IL)$ et $(KJ)$ sont symétriques par rapport à $M$
+            \par \textbf{or} la symétrie centrale transforme une droite en une droite parallèle
+            \par \textbf{donc} $(IL)$ et $(KJ)$ sont parallèles, on montrerait de même que $(IJ)$ et $(KL)$ le sont.
+            \par On peut donc conclure que le quadrilatère $IJKL$ est un parallélogramme. $\square$
+        \end{minipage}
+        \begin{minipage}{7cm}
+            \begin{center}
+                % \includegraphics[scale=1]{coursparallelogramme.5}
+                \begin{Geometrie}[CoinHD={(7u,6u)}]
+                    pair I,J,K,L,M;
+                    I=u*(1,5);
+                    J=u*(5,4);
+                    K=u*(5,1);
+                    L=u*(1,2);
+                    M=u*(3,3);
+                    marque_s:=0.2*marque_s;
+                    trace segment(I,K);
+                    trace marquesegment(I,K);
+                    trace segment(L,J);                    
+                    trace marquesegment(L,J);
+                    trace codesegments(I,M,M,K,5);
+                    trace codesegments(L,M,M,J,3);
+                    label.ulft(btex $I$ etex,I);
+                    label.urt(btex $J$ etex,J);
+                    label.lrt(btex $K$ etex,K);
+                    label.llft(btex $L$ etex,L);
+                    label.top(btex $M$ etex,M);
+                \end{Geometrie}  
+            \end{center}
+        \end{minipage}
+    \end{preuve}
+    \begin{propriete}[caractérisation par les côtés opposés \admise]
+        \begin{minipage}{0.65\linewidth}    
+            Si un quadrilatère, non croisé, a ses côtés opposés deux à deux égaux alors ce quadrilatère est un parallélogramme.
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}    
+            % \includegraphics[scale=0.8]{coursparallelogramme.11}
+            \begin{Geometrie}[CoinHD={(7u,6u)}]
+                pair I,J,K,L,M;
+                I=u*(1,5);
+                J=u*(5,4);
+                K=u*(5,1);
+                L=u*(1,2);
+                trace segment(I,J);
+                trace segment(I,L);
+                trace segment(L,K);
+                trace segment(J,K);
+                marque_s:=0.2*marque_s;
+                trace codesegments(I,J,L,K,4);
+                trace codesegments(I,L,J,K,1);
+                label.ulft(btex $I$ etex,I);
+                label.urt(btex $J$ etex,J);
+                label.lrt(btex $K$ etex,K);
+                label.llft(btex $L$ etex,L);
+            \end{Geometrie} 
+        \end{minipage}
+    \end{propriete}
+    \begin{propriete}[caractérisation par les côtés opposés bis \admise]
+        \begin{minipage}{0.65\linewidth}    
+            Si un quadrilatère, non croisé, a deux côtés opposés égaux ET parallèles alors ce quadrilatère est un parallélogramme.
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}    
+            % \includegraphics[scale=0.8]{coursparallelogramme.6} 
+            \begin{Geometrie}[CoinHD={(7u,6u)}]
+                pair I,J,K,L,M;
+                I=u*(1,5);
+                J=u*(5,4);
+                K=u*(5,1);
+                L=u*(1,2);
+                trace segment(I,J);
+                trace segment(I,L) dashed evenly;
+                trace segment(L,K);
+                trace segment(J,K) dashed evenly;
+                marque_s:=0.2*marque_s;
+                trace codesegments(I,J,L,K,4);
+                label.ulft(btex $I$ etex,I);
+                label.urt(btex $J$ etex,J);
+                label.lrt(btex $K$ etex,K);
+                label.llft(btex $L$ etex,L);
+            \end{Geometrie}
+        \end{minipage}
+    \end{propriete}
+    \begin{propriete}[caractérisation par les angles opposés \admise]
+        \begin{minipage}{0.65\linewidth}    
+            Si un quadrilatère, non croisé, a ses angles opposés deux à deux égaux alors ce quadrilatère est un parallélogramme.
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}    
+            % \includegraphics[scale=0.8]{coursparallelogramme.4} 
+            \begin{Geometrie}[CoinHD={(7u,6u)}]
+                pair A,B,C,D;
+                A=u*(3,4);
+                B=u*(6,5);
+                C=u*(4,2);
+                D=u*(1,1);
+                trace polygone(A,B,C,D);
+                marque_a:=0.5*marque_a;
+                trace marqueangle(D,A,B,0) withcolor red;
+                trace marqueangle(B,C,D,0) withcolor red;
+                trace marqueangle(A,B,C,0) withcolor DarkGreen;
+                trace marqueangle(C,D,A,0) withcolor DarkGreen;
+                marque_a:=1.2*marque_a;
+                trace marqueangle(A,B,C,0) withcolor DarkGreen;
+                trace marqueangle(C,D,A,0) withcolor DarkGreen;
+                label.ulft(btex $A$ etex,A);
+                label.urt(btex $B$ etex,B);
+                label.lrt(btex $C$ etex,C);
+                label.llft(btex $D$ etex,D);
+            \end{Geometrie}
+        \end{minipage}
+    \end{propriete}
+\end{changemargin}
+ 

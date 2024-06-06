@@ -1,7 +1,37 @@
-
-\begin{exercice*}
-   \dots
+\begin{exercice*} %7
+   Tracer, puis démontrer\dots
+   \begin{enumerate}
+      \item Tracer le cercle $(C_1)$ de centre $O$ de rayon \Lg[cm]{3,5}.
+      \item Placer deux points $N$ et $P$ sur $(C_1)$ tels que [NP] soit un diamètre de $(C_1)$.
+      \item Construire le cercle $(C_2)$ de centre $O$ de rayon \Lg[cm]{5}.
+      \item Placer deux autres points $Q$ et $R$ sur $(C_2)$, non alignés avec $N$ et $P$ tels que $[QR]$ soit un diamètre de $(C_2)$.
+      \item Démontrer que le quadrilatère $NQPR$ est un parallélogramme.
+      \item Calculer les longueurs $NP$ et $QR$. Justifier.
+   \end{enumerate} 
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Questions 1 à 4. Figure à l'échelle trois quarts : \\
+   {\psset{unit=0.75}
+   \begin{pspicture}(-4.5,-5)(5,5.3)
+      \pscircle(0,0){3.5}
+      \pscircle(0,0){5}
+      \psline(3.5;240)(3.5;60)
+      \psline(5;190)(5;10)
+      \pspolygon[linecolor=red](3.5;240)(5;190)(3.5;60)(5;10)
+      \rput(3.8;240){N}
+      \rput(5.3;190){Q}
+      \rput(3.8;60){P}
+      \rput(5.3;10){R}
+      \rput(3.9;110){$(C_1)$}
+      \rput(5.5;150){$(C_2)$}
+      \rput{60}(0.5,1.5){\color{red}\Lg[cm]{3,5}}
+      \rput{12}(2,0.7){\color{red}\Lg[cm]{5}}
+      \rput(-0.2,0.4){$O$}
+   \end{pspicture}}
+   \begin{enumerate}
+   \setcounter{enumi}{4}
+      \item $O$ est le milieu du segment $[QR]$ et également le milieu du segment $[NP]$. Or, ces deux segments sont les diagonales du quadrilatère $NQPR$ donc, ses diagonales se coupent en leur milieu et par conséquent : {\color{red} $NQPR$ est un parallélogramme}.
+      \item $NP =2OP =2\times\Lg[cm]{3,5} =\color{red}\Lg[cm]{7}$. \\
+         $QR =2OR =2\times\Lg[cm]{5} =\color{red}\Lg[cm]{10}$.
+   \end{enumerate}
 \end{corrige}

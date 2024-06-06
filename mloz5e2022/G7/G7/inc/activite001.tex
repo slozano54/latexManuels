@@ -1,5 +1,67 @@
-\begin{activite}[\dots]
+\begin{activite}[Les bandelettes]
     \begin{changemargin}{-10mm}{-15mm}
-        \dots
+        {\bf Objectifs :} connaître et reconnaître des figures à quatre côtés ; donner des propriétés de quadrilatères.
+        \partie[construction des bandelettes]
+        \vspace*{-10mm}
+            \begin{enumerate}
+                \item On veut fabriquer à l'aide de bandelettes de papier des \og squelettes \fg{} de quadrilatères : chaque squelette est composé de deux bandelettes fixées à l'aide d'une attache parisienne. Sur une feuille de papier canson, tracer les deux rectangles suivants et placer les points O, O', M, N, P, Q, R et S à l'aide de la droite graduée en centimètres.
+                \begin{center}
+                \begin{pspicture}(-7,-2)(7,1.25)
+                    \psline{->}(-6.5,-1.5)(6.5,-1.5)
+                    \multido{\n=-6+1}{13}{\psline(\n,-1.6)(\n,-1.4)\rput(\n,-1.8){\footnotesize\n}}
+                    \psline{<->}(-6.3,-1)(-6.3,1)
+                    \rput{90}(-6.6,0){\footnotesize 2 cm}
+                    \psframe[linewidth=0.5mm](-6,-1)(6,1)
+                    \psline[linestyle=dashed,linecolor=gray](-6,0)(6,0)
+                    \psdot[linewidth=2mm](0,0)
+                    \rput(0,0.5){O}
+                    \psdots[linewidth=0.5mm,linecolor=blue](-5,0)(-3,0)(3,0)(5,0)
+                    \rput(-5,0.5){\blue M}
+                    \rput(5,0.5){\blue N}
+                    \psdots[linewidth=0.5mm,linecolor=red](-3,0)(3,0)
+                    \rput(-3,0.5){\red P}
+                    \rput(3,0.5){\red Q}     
+                \end{pspicture} \\
+                \begin{pspicture}(-7,-1.25)(7,1)
+                    \psline{<->}(-6.3,-1)(-6.3,1)
+                    \rput{90}(-6.6,0){\footnotesize 2 cm}
+                    \psframe[linewidth=0.5mm](-6,-1)(6,1)
+                    \psline[linestyle=dashed,linecolor=gray](-6,0)(6,0)t
+                    \psdots[linewidth=2mm](0,0)
+                    \rput(0,0.5){O'}
+                    \psdots[linewidth=0.5mm,linecolor=teal](-5,0)(5,0)
+                    \rput(-5,0.5){\textcolor{teal}{R}}
+                    \rput(5,0.5){\textcolor{teal}{S}}   
+                \end{pspicture}
+                \end{center}
+                \item Percer des trous sur les points M, N, P, Q, R et S qui doivent permettre de passer la mine d'un crayon. 
+                \item Percer des trous sur les points O et O', qui sont destinés à recevoir une attache parisienne. \\
+                Les bandelettes attachées correspondent alors au squelette d'un quadrilatère.
+            \end{enumerate}
+    
+        \partie[construction des quadrilatères]
+        \vspace*{-10mm}
+            \begin{enumerate}
+            \setcounter{enumi}{3}
+                \item On considère un squelette obtenu en faisant se croiser les deux bandelettes aux points O et O' en plaçant l'attache parisienne à travers ces deux points. On s'intéresse aux quadrilatères MRNS tracés à partir de ce squelette.
+                \begin{enumerate}
+                \item En plaçant le squelette sur votre feuille, placer les points M, N, R et S puis tracer le quadrilatère MRNS.
+                \item À quelle famille semble appartenir ce quadrilatère ?
+                \item Que représentent les segments [MN] et [RS] pour ce quadrilatère ?
+                \item Justifier alors la conjecture proposée en b).
+                \item Citer d'autres propriétés relatives à ce quadrilatère particulier.
+                \item Trouver un cas particulier à cette configuration.
+                \end{enumerate}
+                \item On s'intéresse maintenant aux quadrilatères PRQS tracés à partir de ce même squelette.
+                \begin{enumerate}
+                \item En plaçant le squelette sur votre feuille, placer les points P, Q, R et S puis tracer le quadrilatère PRQS.
+                \item À quelle famille semble appartenir ce quadrilatère ?
+                \item Que représentent les segments [PQ] et [RS] pour ce quadrilatère ?
+                \item Conjecturer trois propriétés concernant votre quadrilatère : une à partir de ses diagonales, une autre à partir de la position relative de ses côtés et une dernière concernant les angles.
+                    \item Trouver un cas particulier à cette configuration.
+                \end{enumerate}
+        \end{enumerate}    
+        \hfill{\it\footnotesize Source : inspirée du site de \href{http://pernoux.pagesperso-orange.fr/revision/revgeo.pdf}{Dominique Pernoux}}.
+        \vspace*{-15mm}
     \end{changemargin}
 \end{activite}

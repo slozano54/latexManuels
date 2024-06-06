@@ -1,5 +1,48 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Définition et vocabulaire}
+    \begin{definition}
+        Un \textbf{parallélogramme} est un quadrilatère dont les côtés opposés sont parallèles deux à deux.
+    \end{definition}
+    \begin{exemple*1}
+        \phantom{rrr}    
+
+        \begin{minipage}{0.6\linewidth}
+            \begin{itemize}
+                \item $(GS)$ est parallèle à $(RX)$
+                \item $(SX)$ est parallèle à $(GR)$
+            \end{itemize}
+            Cette figure représente un parallélogramme nommé $GSXR$ ou $SXRG$ ou ... mais pas $GSRX$ ou $SRXG$, ...
+        \end{minipage}
+        \begin{minipage}{0.4\linewidth}
+            % \includegraphics[scale=0.8]{coursparallelogramme.1} 
+            \begin{Geometrie}[CoinBG={(0.5u,0.5u)},CoinHD={(5.5u,4u)}]
+                pair G,S,X,R;
+                R=u*(1,1);
+                G-R=u*(1,2);
+                X-R=u*(3,0.5);
+                S-X=u*(1,2);                
+                trace droite(G,S) withcolor red;
+                trace droite(X,R) withcolor red;
+                trace droite(G,R) withcolor DarkGreen;
+                trace droite(X,S) withcolor DarkGreen;
+                label.ulft(btex $G$ etex,G);
+                label.ulft(btex $S$ etex,S);
+                label.lrt(btex $X$ etex,X);
+                label.ulft(btex $R$ etex,R);
+            \end{Geometrie}
+        \end{minipage}
+        \vspace*{-10mm}
+    \end{exemple*1}
+    \begin{definition}[Vocabulaire]
+        \begin{itemize}
+            \item $[GS]$ et $[SX]$ sont des \colorbox{red!30}{\textbf{côtés consécutifs}} ( qui se suivent ).
+            \item $[GS]$ et $[RX]$ sont des \colorbox{red!30}{\textbf{côtés opposés}} ( l'un en face de l'autre ).
+            \item $G$ et $S$ sont des \colorbox{red!30}{\textbf{sommets consécutifs}}.
+            \item $G$ et $X$ sont des \colorbox{red!30}{\textbf{sommets opposés}}.
+            \item $\widehat{GSX}$ et $\widehat{SXR}$ sont des \colorbox{red!30}{\textbf{angles consécutifs}}.
+            \item $\widehat{GSX}$ et $\widehat{XRG}$ sont des \colorbox{red!30}{\textbf{angles opposés}}.
+            \item $[GX]$ et $[SR]$ sont les \colorbox{red!30}{\textbf{diagonales}}.
+        \end{itemize}
+    \end{definition}
 \end{changemargin}
  
