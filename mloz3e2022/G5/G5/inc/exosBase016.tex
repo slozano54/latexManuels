@@ -1,6 +1,146 @@
 \begin{exercice*}
-    ...
+    On considère les trois solides suivants :
+    \begin{itemize}
+        \item la boule de centre $O$ et de rayon $SO$ tel que $SO = \Lg[cm]{3}$ ;
+        \item la pyramide $SEFGH$ de hauteur \Lg[cm]{3} dont la base est le carré $EFGH$ de côté \Lg[cm]{6} ;
+        \item le cube $ABCDEFGH$ d’arête \Lg[cm]{6}.
+    \end{itemize}
+    
+    Ces trois solides sont placés dans un récipient.
+
+    Ce récipient est représenté par le pavé droit $ABCDIJKL$, de hauteur \Lg[cm]{15}, dont la base est le carré $ABCD$ \mbox{de côté \Lg[cm]{6}}.
+    \vspace*{-7mm}
+    \begin{center}
+        \scalebox{0.9}{
+            \Solide[%
+                Nom=pave,
+                Largeur=2,
+                Hauteur=4,
+                Profondeur=1.5,
+                ListeSommets={A,B,C,D,L,I,J,K},
+                Aretes=false,
+                Traces={
+                    color S,E,F,G,H,O;
+                    S=(0.75,1,2.5);
+                    E-A=(0,0,1.5);
+                    F-B=(0,0,1.5);
+                    G-C=(0,0,1.5);
+                    H-D=(0,0,1.5);
+                    O=(0.75,1,3.25);
+                    DotLabel.top(btex S etex,S);
+                    Label.lft(btex E etex,E);
+                    Label.lrt(btex F etex,F);
+                    Label.lrt(btex G etex,G);
+                    Label.lrt(btex H etex,H);
+                    DotLabel.urt(btex O etex,O);
+                    path myCircl;
+                    myCircl = cercles(O,S,A,C,I);
+                    pas:=100;
+                    for k=0 upto pas:
+                        fill homothetie(myCircl,Projette(O),(pas-k)/pas) withcolor ((pas-k)/pas)[white,LightGray];
+                    endfor;
+                    trace myCircl;
+                    trace chemin(A,B,C,K,L,I,J,K);
+                    trace chemin(I,A);
+                    trace chemin(E,F,G);
+                    trace chemin(F,B);
+                    trace chemin(A,D,C) dashed evenly;
+                    trace chemin(E,S,H) dashed evenly;
+                    trace chemin(F,S,G) dashed evenly;
+                    trace chemin(E,H,G) dashed evenly;
+                    trace chemin(H,D) dashed evenly;
+                }
+            ]
+        }
+
+        \textit{La figure n’est pas en vraie grandeur.}
+    \end{center}
+    \begin{enumerate}
+        \item Calculer le volume du cube $ABCDEFGH$, en \Vol[cm]{}.
+        \item Calculer le volume de la pyramide $SEFGH$, en \Vol[cm]{}.
+        \item Calculer le volume de la boule, en \Vol[cm]{} et arrondir à l’unité près.
+        \item En déduire le volume occupé par les trois  solides à l’intérieur du pavé $ABCDIJKL$, en \Vol[cm]{}.
+        \item Dire s'il est possible ou non de verser dans ce récipient \Capa[cL]{20} d’eau sans qu’elle ne déborde. Justifier.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On considère les trois solides suivants :
+    \begin{itemize}
+        \item la boule de centre $O$ et de rayon $SO$ tel que $SO = \Lg[cm]{3}$ ;
+        \item la pyramide $SEFGH$ de hauteur \Lg[cm]{3} dont la base est le carré $EFGH$ de côté \Lg[cm]{6} ;
+        \item le cube $ABCDEFGH$ d’arête \Lg[cm]{6}.
+    \end{itemize}
+    
+    Ces trois solides sont placés dans un récipient.
+
+    Ce récipient est représenté par le pavé droit $ABCDIJKL$, de hauteur \Lg[cm]{15}, dont la base est le carré $ABCD$ \mbox{de côté \Lg[cm]{6}}.
+    \begin{center}
+        \scalebox{0.9}{
+            \Solide[%
+                Nom=pave,
+                Largeur=2,
+                Hauteur=4,
+                Profondeur=1.5,
+                ListeSommets={A,B,C,D,L,I,J,K},
+                Aretes=false,
+                Traces={
+                    color S,E,F,G,H,O;
+                    S=(0.75,1,2.5);
+                    E-A=(0,0,1.5);
+                    F-B=(0,0,1.5);
+                    G-C=(0,0,1.5);
+                    H-D=(0,0,1.5);
+                    O=(0.75,1,3.25);
+                    DotLabel.top(btex S etex,S);
+                    Label.lft(btex E etex,E);
+                    Label.lrt(btex F etex,F);
+                    Label.lrt(btex G etex,G);
+                    Label.lrt(btex H etex,H);
+                    DotLabel.urt(btex O etex,O);
+                    path myCircl;
+                    myCircl = cercles(O,S,A,C,I);
+                    pas:=100;
+                    for k=0 upto pas:
+                        fill homothetie(myCircl,Projette(O),(pas-k)/pas) withcolor ((pas-k)/pas)[white,LightGray];
+                    endfor;
+                    trace myCircl;
+                    trace chemin(A,B,C,K,L,I,J,K);
+                    trace chemin(I,A);
+                    trace chemin(E,F,G);
+                    trace chemin(F,B);
+                    trace chemin(A,D,C) dashed evenly;
+                    trace chemin(E,S,H) dashed evenly;
+                    trace chemin(F,S,G) dashed evenly;
+                    trace chemin(E,H,G) dashed evenly;
+                    trace chemin(H,D) dashed evenly;
+                }
+            ]
+        }
+
+        \textit{La figure n’est pas en vraie grandeur.}
+    \end{center}
+    \begin{enumerate}
+        \item Calculer le volume du cube $ABCDEFGH$, en \Vol[cm]{}.
+        
+        {\color{red}$\mathcal{V}_{\text{cube}}=6^3=\Vol[cm]{216}$, le volume du cube est de \Vol[cm]{216}.}
+        \item Calculer le volume de la pyramide $SEFGH$, en \Vol[cm]{}.
+        
+        {\color{red}$\mathcal{V}_{\text{pyramide}}=\dfrac13 B\times h= 36\times 3 \div 3 = \Vol[cm]{36}$}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Calculer le volume de la boule, en \Vol[cm]{} et arrondir à l’unité près.
+        
+        {\color{red}$\mathcal{V}_{\text{boule}}=\dfrac43 \pi R^3=\dfrac43 \pi 3^3 = 36\pi\approx\Vol[cm]{113}$}
+        \item En déduire le volume occupé par les trois  solides à l’intérieur du pavé $ABCDIJKL$, en \Vol[cm]{}.
+        
+        {\color{red}$\mathcal{V}_{\text{total}}=\mathcal{V}_{\text{cube}}+\mathcal{V}_{\text{pyramide}}+\mathcal{V}_{\text{boule}}\approx\Vol[cm]{216}+\Vol[cm]{36}+\Vol[cm]{113}$ soit environ \Vol[cm]{365}}
+        \item Dire s'il est possible ou non de verser dans ce récipient \Capa[cL]{20} d’eau sans qu’elle ne déborde. Justifier.
+
+        {\color{red}$\mathcal{V}_{\text{pavé}}=L\times \ell \times h = 6\times 6\times 15 = \Vol[cm]{540}$
+        
+        $\mathcal{V}_{\text{pavé}}-\mathcal{V}_{\text{total}}\approx 540 -365$ Il reste donc environ \Vol[cm]{175}=\Capa[cL]{17.5} dans le récipient. On en pourra donc pas ajouter \Capa[cL]{20} sans faire déborder.
+        }
+    \end{enumerate}
 \end{corrige}

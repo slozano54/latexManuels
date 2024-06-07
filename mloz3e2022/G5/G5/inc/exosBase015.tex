@@ -1,6 +1,119 @@
 \begin{exercice*}
-    ...
+    Ce moule à gâteau a la forme d'un pavé droit à base carrée dans lequel on a évidé une demi-boule.
+
+    \begin{center}
+        \scalebox{0.9}{
+            \begin{Geometrie}[Cadre="aucun"]
+                vardef Gradient(expr chem,PtC,coulA,coulB,pas)=
+                    save $;
+                    picture $;      
+                    $=image(
+                        for k=0 upto pas:
+                            fill homothetie(chem,PtC,(pas-k)/pas) withcolor ((pas-k)/pas)[coulA,coulB];
+                        endfor;
+                    );
+                    $
+                enddef;
+                pair A[],B[],O;
+                A0=u*(1,1);
+                A1-A0=u*(5,0);
+                A2-A1=u*(1.5,1.2);
+                A3-A2=u*(-5,0);
+                draw A0--A1--A2;
+                draw A2--A3--A0 dashed evenly;
+                B0-A0=u*(0,1.8);
+                B1-A1=u*(0,1.8);
+                B2-A2=u*(0,1.8);
+                B3-A3=u*(0,1.8);
+                draw B0--B1--B2--B3--cycle;
+                for k=0 upto 2:
+                    draw A[k]--B[k];
+                endfor;
+                draw A[3]--B[3] dashed evenly;
+                O=iso(B0,B1,B2,B3);
+                path creux;
+                creux = fullcircle scaled 4u; 
+                draw (subpath (0.5*(length creux),length creux) of creux) shifted O dashed evenly;
+                path section;
+                section=(creux yscaled 0.25) shifted O;
+                trace Gradient(section,O,white,LightGray,100);                
+                draw section;
+                trace cotationmil(A0,A1,-3mm,15,btex \Lg[cm]{10} etex);
+                trace cotation(A0,B0,3mm,3mm,btex \Lg[cm]{4} etex);        
+                trace cotationmil(point 0.5*(length section) of section,point 1*(length section) of section,-0mm,15,btex \Lg[cm]{8} etex);
+            \end{Geometrie}
+        }
+    \end{center}
+    \vspace*{-7mm}
+    \begin{enumerate}
+        \item Calculer le volume de plastique nécessaire pour fabriquer ce moule, arrondi au centième de \Vol[cm]{}.
+        \item Ce moule a servi à Catherine pour faire un gâteau qu'elle veut à présent napper de chocolat. Déterminer la surface de gâteau à recouvrir, arrondie au centième de \Aire[cm]{}.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Ce moule à gâteau a la forme d'un pavé droit à base carrée dans lequel on a évidé une demi-boule.
+
+    \begin{center}
+        \scalebox{0.9}{
+        \begin{Geometrie}[Cadre="aucun"]
+            vardef Gradient(expr chem,PtC,coulA,coulB,pas)=
+                save $;
+                picture $;      
+                $=image(
+                    for k=0 upto pas:
+                        fill homothetie(chem,PtC,(pas-k)/pas) withcolor ((pas-k)/pas)[coulA,coulB];
+                    endfor;
+                );
+                $
+            enddef;
+            pair A[],B[],O;
+            A0=u*(1,1);
+            A1-A0=u*(5,0);
+            A2-A1=u*(1.5,1.2);
+            A3-A2=u*(-5,0);
+            draw A0--A1--A2;
+            draw A2--A3--A0 dashed evenly;
+            B0-A0=u*(0,1.8);
+            B1-A1=u*(0,1.8);
+            B2-A2=u*(0,1.8);
+            B3-A3=u*(0,1.8);
+            draw B0--B1--B2--B3--cycle;
+            for k=0 upto 2:
+                draw A[k]--B[k];
+            endfor;
+            draw A[3]--B[3] dashed evenly;
+            O=iso(B0,B1,B2,B3);
+            path creux;
+            creux = fullcircle scaled 4u; 
+            draw (subpath (0.5*(length creux),length creux) of creux) shifted O dashed evenly;
+            path section;
+            section=(creux yscaled 0.25) shifted O;
+            trace Gradient(section,O,white,LightGray,100);                
+            draw section;
+            trace cotationmil(A0,A1,-3mm,15,btex \Lg[cm]{10} etex);
+            trace cotation(A0,B0,3mm,3mm,btex \Lg[cm]{4} etex);        
+            trace cotationmil(point 0.5*(length section) of section,point 1*(length section) of section,-0mm,15,btex \Lg[cm]{8} etex);
+          \end{Geometrie}
+        }
+    \end{center}
+    \begin{enumerate}
+        \item Calculer le volume de plastique nécessaire pour fabriquer ce moule, arrondi au centième de \Vol[cm]{}.
+        
+        {\color{red} $\mathcal{V}_{\text{moule}}=\mathcal{V}_{\text{pavé}} - \mathcal{V}_{\text{demi-boule}}$
+
+        $\mathcal{V}_{\text{moule}}=10\times 10\times 4 - \dfrac12\times\dfrac43\pi\times 4^3$
+
+        $\mathcal{V}_{\text{moule}}=400 - \dfrac{\num{128}\pi}{3}~\Vol[cm]{}\approx\Vol[cm]{266}$
+        }
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Ce moule a servi à Catherine pour faire un gâteau qu'elle veut à présent napper de chocolat. Déterminer la surface de gâteau à recouvrir, arrondie au centième de \Aire[cm]{}.
+        
+        {\color{red} $\dfrac12\times 4\pi \times 4^2=32\pi~\Aire[cm]{}\approx\Aire[cm]{100.53}$
+
+        La surface recouvrir est donc d'environ $\Aire[cm]{100.53}$.
+        }
+    \end{enumerate}
 \end{corrige}

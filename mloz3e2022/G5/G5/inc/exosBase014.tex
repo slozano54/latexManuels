@@ -1,6 +1,62 @@
 \begin{exercice*}
-    ...
+    Le culbuto ci-dessous est un jouet pour enfant qui oscille sur une base sphérique.
+    \begin{center}
+        \AssemblageSolides[%
+            Type=ConeBoule,%
+            HauteurConeA=2,%
+            RayonCone=1,%
+            Traces={
+                color O,A,B,S;
+                O=(0,0,0);
+                A-O=(\useKV[Assemblage]{RayonCone}*cosd(120),\useKV[Assemblage]{RayonCone}*sind(120),0);
+                B-O=(-\useKV[Assemblage]{RayonCone}*cosd(120),-\useKV[Assemblage]{RayonCone}*sind(120),0);
+                S-O=(0,0,\useKV[Assemblage]{HauteurConeA});
+                trace cotationmil(Projette(O),Projette(S),0mm,15,TEX("\Lg[cm]{20}"));
+                trace cotationmil(Projette(B),Projette(A),-20mm,15,TEX("\Lg[cm]{20}"));
+            }%
+        ]
+    \end{center}
+    \begin{enumerate}
+        \item Calculer son volume exact, puis arrondir au \Vol[cm]{}.
+        \item La base sphérique est remplie de sable. Déterminer la proportion du jouet qui est occupée par le sable.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Le culbuto ci-dessous est un jouet pour enfant qui oscille sur une base sphérique.
+    
+    \begin{center}
+        \scalebox{0.9}{
+            \AssemblageSolides[%
+                Type=ConeBoule,%
+                HauteurConeA=2,%
+                RayonCone=1,%
+                Traces={
+                    color O,A,B,S;
+                    O=(0,0,0);
+                    A-O=(\useKV[Assemblage]{RayonCone}*cosd(120),\useKV[Assemblage]{RayonCone}*sind(120),0);
+                    B-O=(-\useKV[Assemblage]{RayonCone}*cosd(120),-\useKV[Assemblage]{RayonCone}*sind(120),0);
+                    S-O=(0,0,\useKV[Assemblage]{HauteurConeA});
+                    trace cotationmil(Projette(O),Projette(S),0mm,15,TEX("\Lg[cm]{20}"));
+                    trace cotationmil(Projette(B),Projette(A),-20mm,15,TEX("\Lg[cm]{20}"));
+                }%
+            ]
+        }
+    \end{center}
+
+    \begin{enumerate}
+        \item Calculer son volume exact, puis arrondir au \Vol[cm]{}.
+        
+        {\color{red} $\mathcal{V}_{\text{culbuto}}=\mathcal{V}_{\text{cône}} + \mathcal{V}_{\text{demi-boule}}$
+
+        $\mathcal{V}_{\text{culbuto}}=\dfrac13\pi\times 10^2\times 20 + \dfrac12\times\dfrac43\pi\times 10^3$
+
+        $\mathcal{V}_{\text{culbuto}}=\dfrac{\num{2000}\pi}{3}+\dfrac{\num{2000}\pi}{3}=\dfrac{\num{4000}\pi}{3}\approx\Vol[cm]{4189}$
+        }
+        \item La base sphérique est remplie de sable. Déterminer la proportion du jouet qui est occupée par le sable.
+        
+        {\color{red} $\dfrac{\mathcal{V}_{\text{demi-boule}}}{\mathcal{V}_{\text{culbuto}}}=\dfrac{\dfrac{\num{2000}\pi}{3}}{\dfrac{\num{4000}\pi}{3}}=\dfrac12$
+
+        donc le sable occupe la moitié du volume du jouet.
+        }
+    \end{enumerate}
 \end{corrige}
