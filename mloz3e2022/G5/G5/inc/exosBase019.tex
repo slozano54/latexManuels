@@ -1,6 +1,100 @@
 \begin{exercice*}
-    ...
+    On réalise la section $ABB'A'$ par un plan parallèle à l'axe d'un cylindre.
+
+    \begin{minipage}{0.65\linewidth}
+        La hauteur $[OO']$ mesure \Lg[cm]{5} et le rayon $[OA]$ 
+        mesure \Lg[cm]{3}. Le triangle $AOB$ soit rectangle en $O$.
+    \end{minipage}
+    \hfill        
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=cylindre,%
+                    % Axes,%
+                    ListeSommets={I,J},%
+                    Traces={
+                        color A,B,C,D;
+                        numeric SLangle;
+                        SLangle:=270;
+                        D=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        C=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle+90),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle+90),0);
+                        A-D=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        B-C=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        trace chemin(A,I,B,A);
+                        trace chemin(D,J,C,D) dashed evenly;
+                        trace chemin(A,D) dashed evenly;
+                        trace chemin(B,C) dashed evenly;
+                        trace chemin(I,J) dashed evenly;
+                        trace codeperp(A,I,B,5);
+                        trace codeperp(D,J,C,5);
+                        Label.urt(btex $O$ etex,I);
+                        Label.lrt(btex $O'$ etex,J);
+                        Label.ulft(btex $A$ etex,A);
+                        Label.lrt(btex $B$ etex,B);
+                        Label.bot(btex $B'$ etex,C);
+                        Label.urt(btex $A'$ etex,D);
+                    }
+                ]%
+            }
+        \end{center}
+    \end{minipage}
+    \begin{enumerate}
+        \item Préciser la nature du triangle $AOB$.
+        \item Justifier la nature de la section $ABB'A'$.
+        \item Calculer l'aire de $ABB'A'$, arrondie au dixième.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On réalise la section $ABB'A'$ par un plan parallèle à l'axe d'un cylindre.
+    La hauteur $[OO']$ mesure \Lg[cm]{5} et le rayon $[OA]$ 
+    mesure \Lg[cm]{3}. Le triangle $AOB$ soit rectangle en $O$.
+    \begin{minipage}{\linewidth}
+        \begin{center}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=cylindre,%
+                    % Axes,%
+                    ListeSommets={I,J},%
+                    Traces={
+                        color A,B,C,D;
+                        numeric SLangle;
+                        SLangle:=270;
+                        D=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        C=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle+90),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle+90),0);
+                        A-D=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        B-C=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        trace chemin(A,I,B,A);
+                        trace chemin(D,J,C,D) dashed evenly;
+                        trace chemin(A,D) dashed evenly;
+                        trace chemin(B,C) dashed evenly;
+                        trace chemin(I,J) dashed evenly;
+                        trace codeperp(A,I,B,5);
+                        trace codeperp(D,J,C,5);
+                        Label.urt(btex $O$ etex,I);
+                        Label.lrt(btex $O'$ etex,J);
+                        Label.ulft(btex $A$ etex,A);
+                        Label.lrt(btex $B$ etex,B);
+                        Label.bot(btex $B'$ etex,C);
+                        Label.urt(btex $A'$ etex,D);
+                    }
+                ]%
+            }
+        \end{center}
+    \end{minipage}
+    \begin{enumerate}
+        \item Préciser la nature du triangle $AOB$.
+        
+        {\color{red} $[OA]$ et $[OB]$ sont des rayons d'un même cercle donc le triangle $AOB$ est un triangle rectangle et isocèle en $O$.}
+        \item Justifier la nature de la section $ABB'A'$.
+        
+        {\color{red}La section du cylindre par un plan parallèle à son axe est rectangulaire donc la section $ABB'A'$ est un rectangle.}
+        \item Calculer l'aire de $ABB'A'$, arrondie au dixième.
+        
+        {\color{red}Le triangle $AOB$ est rectangle en $O$ donc, le théorème de Pythagore garantit que $OA^2+OB^2=AB^2$, d'où $AB^2=3^2+3^2=18$ et $AB=\sqrt{18}~\Lg[cm]{}$.        
+        $AB\times AA' = \sqrt{18}\times 5 \approx \Aire[cm]{21.2}$.
+        
+        L'aire de $ABB'A'$ est donc d'environ $\Aire[cm]{21.2}$.
+        }
+    \end{enumerate}
 \end{corrige}

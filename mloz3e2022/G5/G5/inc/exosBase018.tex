@@ -1,6 +1,176 @@
 \begin{exercice*}
-    ...
+    \phantom{rrr}
+
+    \begin{minipage}{0.45\linewidth}
+        On considère un cylindre de révolution de rayon \Lg[cm]{2,5} et de hauteur \Lg[cm]{3,5}.
+    \end{minipage}
+    \hfill        
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            % \begin{Geometrie}[Cadre="aucun"]
+            %     pair A[],B[],O[],M;
+            %     path BaseA,BaseB,SectionA,SectionB;
+            %     numeric SLHauteur,SLCoeffSection;
+            %     SLHauteur:=3;
+            %     SLCoeffSection:=0.4;
+            %     O0=u*(0,0);
+            %     O1-O0=u*(0,SLHauteur);            
+            %     M-O0=u*(0,SLCoeffSection*SLHauteur);            
+            %     BaseA=fullcircle scaled 4u  yscaled 0.25;
+            %     BaseB=BaseA shifted (0,u*SLHauteur);
+            %     SectionA=BaseA shifted (0,u*SLCoeffSection*SLHauteur);
+            %     fill SectionA withcolor PaleGreen;
+            %     A0=point 0.4*(length BaseA) of BaseA;
+            %     A1=point 0.9*(length BaseA) of BaseA;
+            %     B0-A0=u*(0,SLHauteur);
+            %     B1-A1=u*(0,SLHauteur);
+            %     SectionB=A0--A1--B1--B0--cycle;
+            %     fill SectionB withcolor PaleGreen; 
+            %     draw (subpath (0.5*(length BaseA),length BaseA) of BaseA); 
+            %     draw (subpath (0,0.5*(length BaseA)) of BaseA) dashed evenly;
+            %     draw BaseB;
+            %     draw point 0.5*(length BaseA) of BaseA--point 0.5*(length BaseB) of BaseB;
+            %     draw point length BaseA of BaseA--point length BaseB of BaseB;
+            %     draw (subpath (0.5*(length SectionA),length SectionA) of SectionA); 
+            %     draw (subpath (0,0.5*(length SectionA)) of SectionA) dashed evenly;
+            %     draw B0--A0--A1 dashed evenly;
+            %     draw A1--B1--B0;
+            %     draw segment(1.5[O0,O1],1.5[O1,O0]) dashed dashpattern(on6 off3 on3 off 3);
+            %     dotlabel.llft(btex $O'$ etex,O0);
+            %     dotlabel.llft(btex $O$ etex,O1);
+            %     dotlabel.llft(btex $M$ etex,M);
+            % \end{Geometrie}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=cylindre,
+                    Distance=50,            
+                    Axes,
+                    Section="face",
+                    CoefSection=0.7,
+                    CouleurSection=PaleGreen,
+                    ListeSommets={O,O'},
+                    PointsSection={I,J,K,L,M},
+                    Traces={
+                        color A,B,C,D;
+                        numeric SLangle;
+                        SLangle:=80;
+                        A=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        B=(-\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),-\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        C-B=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        D-A=(0,0,\useKV[ClesSolides]{HauteurCylindre});                
+                        path SLSection;
+                        SLSection=Projette(A)--Projette(B)--Projette(C)--Projette(D)--cycle;
+                        fillcolor:=PaleGreen;
+                        transparence SLSection;% withcolor PaleGreen;                
+                        % draw Projette(A)--Projette(B)--Projette(C)--Projette(D);
+                        draw chemin(C,D,A);
+                        trace chemin(A,B,C) dashed evenly;
+                        Label.urt(btex $O$ etex,O);
+                        Label.llft(btex $O'$ etex,O');
+                        DotLabel.urt(btex M etex,M);                
+                    }
+                ]%
+            }
+        \end{center}
+    \end{minipage}
+    \begin{enumerate}
+        \item Dessiner ci-dessous, en vraie grandeur, la section du cylindre par un plan perpendiculaire à son axe $(OO')$.
+        \\\vspace*{60mm}
+        \item Dessiner ci-dessous, en vraie grandeur, la section de ce cylindre par un plan parallèle à son axe contenant $O$ et $O'$.
+        \\\vspace*{60mm}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    \phantom{rrr}
+
+    \begin{minipage}{0.4\linewidth}
+        On considère un cylindre de révolution de rayon \Lg[cm]{2,5} et de hauteur \Lg[cm]{3,5}.
+    \end{minipage}
+    \hfill        
+    \begin{minipage}{0.55\linewidth}
+        \begin{center}
+            % \begin{Geometrie}[Cadre="aucun"]
+            %     pair A[],B[],O[],M;
+            %     path BaseA,BaseB,SectionA,SectionB;
+            %     numeric SLHauteur,SLCoeffSection;
+            %     SLHauteur:=3;
+            %     SLCoeffSection:=0.4;
+            %     O0=u*(0,0);
+            %     O1-O0=u*(0,SLHauteur);            
+            %     M-O0=u*(0,SLCoeffSection*SLHauteur);            
+            %     BaseA=fullcircle scaled 4u  yscaled 0.25;
+            %     BaseB=BaseA shifted (0,u*SLHauteur);
+            %     SectionA=BaseA shifted (0,u*SLCoeffSection*SLHauteur);
+            %     fill SectionA withcolor PaleGreen;
+            %     A0=point 0.4*(length BaseA) of BaseA;
+            %     A1=point 0.9*(length BaseA) of BaseA;
+            %     B0-A0=u*(0,SLHauteur);
+            %     B1-A1=u*(0,SLHauteur);
+            %     SectionB=A0--A1--B1--B0--cycle;
+            %     fill SectionB withcolor PaleGreen; 
+            %     draw (subpath (0.5*(length BaseA),length BaseA) of BaseA); 
+            %     draw (subpath (0,0.5*(length BaseA)) of BaseA) dashed evenly;
+            %     draw BaseB;
+            %     draw point 0.5*(length BaseA) of BaseA--point 0.5*(length BaseB) of BaseB;
+            %     draw point length BaseA of BaseA--point length BaseB of BaseB;
+            %     draw (subpath (0.5*(length SectionA),length SectionA) of SectionA); 
+            %     draw (subpath (0,0.5*(length SectionA)) of SectionA) dashed evenly;
+            %     draw B0--A0--A1 dashed evenly;
+            %     draw A1--B1--B0;
+            %     draw segment(1.5[O0,O1],1.5[O1,O0]) dashed dashpattern(on6 off3 on3 off 3);
+            %     dotlabel.llft(btex $O'$ etex,O0);
+            %     dotlabel.llft(btex $O$ etex,O1);
+            %     dotlabel.llft(btex $M$ etex,M);
+            % \end{Geometrie}
+            \scalebox{0.8}{
+                \Solide[%
+                    Nom=cylindre,
+                    Distance=50,            
+                    Axes,
+                    Section="face",
+                    CoefSection=0.7,
+                    CouleurSection=PaleGreen,
+                    ListeSommets={O,O'},
+                    PointsSection={I,J,K,L,M},
+                    Traces={
+                        color A,B,C,D;
+                        numeric SLangle;
+                        SLangle:=80;
+                        A=(\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        B=(-\useKV[ClesSolides]{RayonCylindre}*cosd(SLangle),-\useKV[ClesSolides]{RayonCylindre}*sind(SLangle),0);
+                        C-B=(0,0,\useKV[ClesSolides]{HauteurCylindre});
+                        D-A=(0,0,\useKV[ClesSolides]{HauteurCylindre});                
+                        path SLSection;
+                        SLSection=Projette(A)--Projette(B)--Projette(C)--Projette(D)--cycle;
+                        fillcolor:=PaleGreen;
+                        transparence SLSection;% withcolor PaleGreen;                
+                        % draw Projette(A)--Projette(B)--Projette(C)--Projette(D);
+                        draw chemin(C,D,A);
+                        trace chemin(A,B,C) dashed evenly;
+                        Label.urt(btex $O$ etex,O);
+                        Label.llft(btex $O'$ etex,O');
+                        DotLabel.urt(btex M etex,M);                
+                    }
+                ]%
+            }
+        \end{center}
+    \end{minipage}
+    \begin{enumerate}
+        \item Dessiner ci-dessous, en vraie grandeur, la section du cylindre par un plan perpendiculaire à son axe $(OO')$.
+        
+        \begin{Geometrie}
+            pair O;
+            O=u*(5,5);
+            trace cercles(O,2.5u) withcolor red;
+            dotlabel.urt(btex $M$ etex,O) withcolor red;
+        \end{Geometrie}
+        \item Dessiner ci-dessous, en vraie grandeur, la section de ce cylindre par un plan parallèle à son axe contenant $O$ et $O'$.
+        
+        \medskip
+        \begin{Geometrie}
+            pair A;
+            A=u*(0.5,0.5);            
+            draw A--A shifted (0,5u)--A shifted (3.5u,5u)--A shifted (3.5u,0)--cycle withcolor red;
+        \end{Geometrie}
+    \end{enumerate}
 \end{corrige}
