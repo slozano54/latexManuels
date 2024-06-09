@@ -1,6 +1,135 @@
 \begin{exercice*}
-    ...
+    $EABC$ est un tétraèdre tel que $AB=\Lg[cm]{12}$ ; $BC=\Lg[cm]{8}$ et $BE=\Lg[cm]{16}$.
+
+    \begin{minipage}{0.65\linewidth}
+        $MNP$ est la section de la pyramide par un plan, parallèle à la base, passant par le point $N$ de $[EB]$ tel que $EN=\Lg[cm]{6,4}$.
+    \end{minipage}
+    \hfill        
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \scalebox{0.8}{
+                \begin{Geometrie}
+                    pair A,B,C,E,M,N,P;
+                    numeric SLCoeff;
+                    SLCoeff:=0.5;
+                    path SLSection;
+                    A=u*(1,1);
+                    B-A=u*(1.5,0.75);
+                    C-A=u*(3,0.5);
+                    E-B=u*(0,3);                    
+                    M=SLCoeff[E,A];
+                    N=SLCoeff[E,B];
+                    P=SLCoeff[E,C];
+                    SLSection=M--N--P--cycle;
+                    fill SLSection withcolor PaleTurquoise;
+                    draw A--B--C dashed evenly;
+                    draw A--E--C--cycle;
+                    draw E--B dashed evenly;
+                    draw M--N--P dashed evenly;
+                    draw M--P;
+                    trace codeperp(A,B,C,5);
+                    trace codeperp(E,B,A,5);
+                    trace codeperp(C,B,E,5);
+                    label.top(btex $E$ etex,E);
+                    label.llft(btex $A$ etex,A);
+                    label.ulft(btex $B$ etex,B);
+                    label.lrt(btex $C$ etex,C);
+                    label.lft(btex $M$ etex,M);
+                    label.ulft(btex $N$ etex,N);
+                    label.rt(btex $P$ etex,P);
+                \end{Geometrie}
+            }
+        \end{center}
+    \end{minipage}
+    \begin{enumerate}
+        \item Déterminer la nature du triangle $MNP$.
+        \item Calculer la valeur exacte de $MN$.
+        \item Calculer la valeur exacte de $NP$.
+        \item Tracer le triangle $MNP$ en vraie grandeur.
+        \item Calculer la valeur exacte de $MP$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    $EABC$ est un tétraèdre tel que $AB=\Lg[cm]{12}$ ; $BC=\Lg[cm]{8}$ et $BE=\Lg[cm]{16}$.
+
+    \begin{minipage}{0.65\linewidth}
+        $MNP$ est la section de la pyramide par un plan, parallèle à la base, passant par le point $N$ de $[EB]$ tel que $EN=\Lg[cm]{6,4}$.
+    \end{minipage}
+    \hspace*{-5mm}
+    \begin{minipage}{0.3\linewidth}
+        \begin{center}
+            \scalebox{0.8}{
+                \begin{Geometrie}
+                    pair A,B,C,E,M,N,P;
+                    numeric SLCoeff;
+                    SLCoeff:=0.5;
+                    path SLSection;
+                    A=u*(1,1);
+                    B-A=u*(1.5,0.75);
+                    C-A=u*(3,0.5);
+                    E-B=u*(0,3);                    
+                    M=SLCoeff[E,A];
+                    N=SLCoeff[E,B];
+                    P=SLCoeff[E,C];
+                    SLSection=M--N--P--cycle;
+                    fill SLSection withcolor PaleTurquoise;
+                    draw A--B--C dashed evenly;
+                    draw A--E--C--cycle;
+                    draw E--B dashed evenly;
+                    draw M--N--P dashed evenly;
+                    draw M--P;
+                    trace codeperp(A,B,C,5);
+                    trace codeperp(E,B,A,5);
+                    trace codeperp(C,B,E,5);
+                    label.top(btex $E$ etex,E);
+                    label.llft(btex $A$ etex,A);
+                    label.ulft(btex $B$ etex,B);
+                    label.lrt(btex $C$ etex,C);
+                    label.lft(btex $M$ etex,M);
+                    label.ulft(btex $N$ etex,N);
+                    label.rt(btex $P$ etex,P);
+                \end{Geometrie}
+            }
+        \end{center}
+    \end{minipage}
+
+    \vspace*{5mm}
+    \begin{enumerate}
+        \item Déterminer la nature du triangle $MNP$.
+        
+        {\color{red} Le triangle $MNP$ est une section du tétraèdre parallèle à la face $ABC$, il est donc de même nature que le triangle $ABC$, c'est donc un triangle rectangle en $N$.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Calculer la valeur exacte de $MN$.
+        
+        {\color{red} Les droites $(MA)$ et $(NB)$ sont sécantes en $E$ et les droites $(MN)$ et $(AB)$ sont parallèles, le théorème de Thalès garantit donc que l'on peut écrire
+        l'égalité $\dfrac{EA}{EM}=\dfrac{EB}{EN}=\dfrac{AB}{MN}$ d'où $\dfrac{16}{\num{6.4}}=\dfrac{12}{MN}$ et donc $MN=\dfrac{12\times\num{6.4}}{16}=\Lg[cm]{4.8}$}
+        \item Calculer la valeur exacte de $NP$.
+        
+        {\color{red} Les droites $(PC)$ et $(NB)$ sont sécantes en $E$ et les droites $(PN)$ et $(BC)$ sont parallèles, le théorème de Thalès garantit donc que l'on peut écrire
+        l'égalité $\dfrac{EB}{EN}=\dfrac{EC}{EP}=\dfrac{BC}{PN}$ d'où $\dfrac{PN}{8}=\dfrac{\num{6.4}}{16}$ et donc $PN=\dfrac{8\times\num{6.4}}{16}=\Lg[cm]{3.2}$}
+        \item Tracer le triangle $MNP$ en vraie grandeur.
+        
+        \begin{Geometrie}
+            pair M,N,P;
+            N=u*(1,1);
+            M-N=u*(0,4.8);
+            P-N=u*(3.2,0);
+            drawoptions(withcolor red);
+            draw M--N--P--cycle;
+            trace codeperp(P,N,M,5);
+            trace cotationmil(N,P,-5mm,15,btex \Lg[cm]{3.2} etex);
+            trace cotationmil(N,M,5mm,15,btex \Lg[cm]{4.8} etex);
+            label.top(btex $M$ etex,M);
+            label.llft(btex $N$ etex,N);
+            label.lrt(btex $P$ etex,P);
+        \end{Geometrie}
+        \item Calculer la valeur exacte de $MP$.
+        
+        {\color{red} $MNP$ est un triangle rectangle en $N$, le théorème de Pythagore garantit que $MN^2+NP^2=MP^2$ soit $MP^2=\num{4.8}^2+\num{3.2}^2=\num{33.28}$, $MP$ étant une longueur, $MP$ est une nombre positif
+        donc $MP=\sqrt{\num{33.28}}~\Lg[cm]{}$}
+    \end{enumerate}
 \end{corrige}
+
