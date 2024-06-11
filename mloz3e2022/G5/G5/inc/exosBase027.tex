@@ -1,6 +1,46 @@
 \begin{exercice*}
-    ...
+    La pyramide du Louvre est une pyramide régulière, à base carrée, de \Lg[m]{35} de côté et de \Lg[m]{22} de hauteur.
+
+    \begin{enumerate}
+        \item Faire un schéma.
+        \item Calculer le volume $\mathcal{V}$ de cette pyramide. Donner la valeur exacte en \Lg[m]{}, puis la valeur arrondie à l'unité.
+        \item Sur une maquette, on construit une réduction de cette pyramide. Le côté de la base carrée mesure \Lg[cm]{7}. Calculer le coefficient de réduction.
+        \item En déduire le volume $\mathcal{V'}$ de la pyramide sur la maquette. Donner la valeur exacte en \Vol[cm]{}, puis la valeur arrondie à l'unité.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    La pyramide du Louvre est une pyramide régulière, à base carrée, de \Lg[m]{35} de côté et de \Lg[m]{22} de hauteur.
+
+    \begin{enumerate}
+        \item Faire un schéma.
+        
+        {\color{red}
+        \Solide[%
+            Nom=pyramide,
+            HauteurPyramide=1.5,
+            Reguliere,
+            SommetsPyramide=5,
+            Sommets=false,
+            Traces={%                
+                trace cotationmil(S,PiedHauteur,0mm,15,btex \Lg[m]{22} etex);
+                trace cotationmil(B,E,-3mm,15,btex \Lg[m]{35} etex);
+            }      
+        ]
+        }
+        \item Calculer le volume $\mathcal{V}$ de cette pyramide. Donner la valeur exacte en \Lg[m]{}, puis la valeur arrondie à l'unité.
+        
+        {\color{red}$\mathcal{V}=\dfrac13\times\text{aire dela base}\times\text{hauteur}=\dfrac13\times 35\times 35\times 22$
+        
+        $\mathcal{V}=\dfrac{\num{26950}}{3}~\Vol[m]{}\approx\Vol[m]{8983}$.
+        }
+        \item Sur une maquette, on construit une réduction de cette pyramide. Le côté de la base carrée mesure \Lg[cm]{7}. Calculer le coefficient de réduction.
+
+        {\color{red}Le coefficient de réduction est égal au quotient d'une dimension réduite sur la dimension originale correspondante, donc $k=\dfrac{\num{0.07}}{35}=\num{0.002}$.}
+        \item En déduire le volume $\mathcal{V'}$ de la pyramide sur la maquette. Donner la valeur exacte en \Vol[cm]{}, puis la valeur arrondie à l'unité.
+
+        {\color{red}$\mathcal{V'}=\num{0.002}^3\times\mathcal{V}=\num{0.000000008}\times\dfrac{\num{26950}}{3}$
+        
+        $\mathcal{V'}=\dfrac{\num{0.0002156}}{3}~\Vol[m]{}\dfrac{\num{215.6}}{3}~\Vol[cm]{}\approx\Vol[cm]{72}$.
+        }
+    \end{enumerate}
 \end{corrige}

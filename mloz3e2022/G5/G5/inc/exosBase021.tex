@@ -1,6 +1,112 @@
-\begin{exercice*}
-    ...
+\begin{exercice*}[Section d'une sphère]
+    On réalise la section de la sphère, de centre $O$ et de rayon $OA = \Lg[cm]{7}$, par un plan représenté ici.
+    \begin{center}
+        \scalebox{0.7}{
+            \begin{Geometrie}
+                u:=30;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                % remplissages ici avant les path
+                fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor PaleGreen;
+                % fin remplissages    
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231u);
+                ellipse=(contour yscaled 0.25) rotated 14;    
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                r=contour shifted z0;
+                % draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                % label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw q;
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.rt(btex $H$ etex,z0+unitvector(z2-z1)*u);
+                dotlabel.ulft(btex $A$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0+ unitvector(z2-z1)*u dashed evenly;
+                draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u);
+                label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u);
+                z6= point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u));
+                z7= z0+ unitvector(z2-z1)*u;
+                draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed evenly;
+                draw codeperp(z6,z7,z0,5);
+                draw (0.5,4)*u--(p intersectionpoint r);draw (p intersectionpoint r)--(s intersectionpoint r) dashed evenly;
+                draw (s intersectionpoint r)--(6,5.5)*u;
+            \end{Geometrie}
+        }
+    \end{center}
+    \begin{enumerate}
+        \item Indiquer la nature de cette section.
+        \item Calculer la valeur exacte du rayon $HA$ de cette section, sachant que $OH = \Lg[cm]{4}$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    On réalise la section de la sphère, de centre $O$ et de rayon $OA = \Lg[cm]{7}$, par un plan représenté ici.
+    \begin{center}
+        \scalebox{0.7}{
+            \begin{Geometrie}
+                u:=30;
+                z0=(3,3)*u;
+                dotlabel.urt(btex $O$ etex,z0);
+                z1=(3.5,1)*u;
+                label.lrt(btex $S$ etex,z1);
+                z2=(2.5,5)*u;
+                label.urt(btex $N$ etex,z2);
+                % remplissages ici avant les path
+                fill fullcircle scaled 4.1231u scaled 0.88 yscaled 0.15 rotated 14 shifted (z0+ unitvector(z2-z1)*u) withcolor PaleGreen;
+                % fin remplissages    
+                path contour, ellipse,p,q,r,s,coupe;
+                contour=(fullcircle scaled 4.1231u);
+                ellipse=(contour yscaled 0.25) rotated 14;    
+                coupe=(contour scaled 0.88 yscaled 0.15) rotated 14;
+                p=(0.5,4)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                s=(6,5.5)*u--(0.5,4)*u + 0.45*((6,5.5)*u-(0.5,4)*u);
+                r=contour shifted z0;
+                % draw z0--point 0 of ellipse shifted z0 dashed evenly;
+                % label.bot(btex $r$ etex,0.5[z0,point 0 of ellipse shifted z0]);
+                q=(0.5,4)*u--(0,2.5)*u--(5.5,4)*u--(6,5.5)*u;
+                draw contour shifted z0;
+                draw (subpath (0.5*(length ellipse),length ellipse) of ellipse) shifted z0;
+                draw (subpath (0,0.5*(length ellipse)) of ellipse) shifted z0 dashed evenly;
+                draw q;
+                draw z1--z2 dashed evenly;
+                draw z1--z1 + 0.08(z1-z2);
+                draw z2--z2+0.08(z2-z1);
+                dotlabel.rt(btex $H$ etex,z0+unitvector(z2-z1)*u);
+                dotlabel.ulft(btex $A$ etex,point 4 of (coupe shifted(z0+unitvector(z2-z1)*u)));
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0 dashed evenly;
+                draw point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u))--z0+ unitvector(z2-z1)*u dashed evenly;
+                draw (subpath (0.5*(length coupe),length coupe) of coupe) shifted (z0+ unitvector(z2-z1)*u);
+                label.urt(btex $(\mathcal{P})$ etex,(0,2.5)*u);
+                z6= point 4 of (coupe shifted(z0+ unitvector(z2-z1)*u));
+                z7= z0+ unitvector(z2-z1)*u;
+                draw (subpath (0,0.5*(length coupe)) of coupe) shifted (z0+ unitvector(z2-z1)*u) dashed evenly;
+                draw codeperp(z6,z7,z0,5);
+                draw (0.5,4)*u--(p intersectionpoint r);draw (p intersectionpoint r)--(s intersectionpoint r) dashed evenly;
+                draw (s intersectionpoint r)--(6,5.5)*u;
+            \end{Geometrie}
+        }
+    \end{center}
+    \begin{enumerate}
+        \item Indiquer la nature de cette section.
+        
+        \textcolor{red}{Cette section est un cercle de centre $H$.}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item Calculer la valeur exacte du rayon $HA$ de cette section, sachant que $OH = \Lg[cm]{4}$.
+        
+        {\color{red} $AOH$ est un triangle rectangle en H, donc le théorème de Pythagore garantit que $AH^2+HO^2=AO^2$ d'où $AH^2=7^2-4^2=33$ donc $HA=\sqrt{33}~\Lg[cm]{}$.}
+    \end{enumerate}
 \end{corrige}
