@@ -1,6 +1,125 @@
 \begin{exercice*}
-    ...
+    Le gros globe de cristal est un trophée attribué au vainqueur de la coupe du monde de ski.
+    Ce trophée pèse \Masse[kg]{9} et mesure \Lg[cm]{46} de hauteur.
+
+    \begin{enumerate}
+        \item Le biathlète français Martin Fourcade a remporté le sixième gros globe de cristal de
+        sa carrière en 2017 à Pyeongchang en Corée du Sud.
+
+        Donner approximativement la latitude et la longitude de ce lieu repéré sur la carte ci-dessous.
+        \begin{center}
+            \includegraphics[scale=0.5]{\currentpath/images/mappemonde}            
+        \end{center}
+
+        \item On considère que ce globe est composé d'un cylindre en cristal de diamètre \Lg[cm]{6}, surmonté d'une boule de cristal.
+        Voir schéma ci-contre. Montrer qu'une valeur approchée du volume de la boule de ce trophée est de \Vol[cm]{6371}.
+
+        \begin{center}
+            \begin{minipage}{0.4\linewidth}
+                \vspace*{-10mm}
+                \includegraphics[scale=0.5]{\currentpath/images/globe}
+            \end{minipage}            
+            \begin{minipage}{0.4\linewidth}
+                \begin{Geometrie}
+                    pair A,B,C,D,E[];
+                    numeric l;
+                    l:=2.3;
+                    A=u*(0.7,0.7);
+                    B-A=u*(0,l);
+                    C-B=u*(0,l);
+                    D=A shifted (0.7*u*l,1.5*u*l);
+                    E0=A shifted (0.7*u*l-0.3u,0);
+                    E1=A shifted (0.7*u*l+0.3u,0);
+                    E2=A shifted (0.7*u*l+0.3u,2.3u);
+                    E3=A shifted (0.7*u*l-0.3u,2.3u);
+                    trace cercles(D,1.15u);
+                    trace E0--E1--E2--E3--cycle;
+                    trace segment(A,A shifted (3u,0)) dashed evenly;
+                    trace segment(B,B shifted (3u,0)) dashed evenly;
+                    trace segment(C,C shifted (3u,0)) dashed evenly;
+                    trace cotationmil(A,B,3mm,15,btex \Lg[cm]{23} etex);
+                    trace cotationmil(B,C,3mm,15,btex \Lg[cm]{23} etex);
+                    trace cotation(E0,E1,-3mm,-3mm,btex \Lg[cm]{6} etex);
+                \end{Geometrie}
+            \end{minipage}
+        \end{center}
+        
+        \item Marie affirme que le volume de la boule de cristal représente environ 90\,\% du volume total du trophée.
+
+        Déterminer si elle a raison.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+        Le gros globe de cristal est un trophée attribué au vainqueur de la coupe du monde de ski.
+    Ce trophée pèse \Masse[kg]{9} et mesure \Lg[cm]{46} de hauteur.
+
+    \begin{enumerate}
+        \item Le biathlète français Martin Fourcade a remporté le sixième gros globe de cristal de
+        sa carrière en 2017 à Pyeongchang en Corée du Sud.
+
+        Donner approximativement la latitude et la longitude de ce lieu repéré sur la carte ci-dessous.
+
+        \textcolor{red}{Coordonnées de Peyongchang : \ang{130}E ; \ang{35}N}
+
+        \includegraphics[scale=0.5]{\currentpath/images/mappemonde}            
+
+        \item On considère que ce globe est composé d'un cylindre en cristal de diamètre \Lg[cm]{6}, surmonté d'une boule de cristal.
+        Voir schéma ci-contre. Montrer qu'une valeur approchée du volume de la boule de ce trophée est de \Vol[cm]{6371}.
+
+        \begin{minipage}{0.4\linewidth}
+            \vspace*{-10mm}
+            \includegraphics[scale=0.5]{\currentpath/images/globe}
+        \end{minipage}            
+        \begin{minipage}{0.4\linewidth}
+            \begin{Geometrie}
+                pair A,B,C,D,E[];
+                numeric l;
+                l:=2.3;
+                A=u*(0.7,0.7);
+                B-A=u*(0,l);
+                C-B=u*(0,l);
+                D=A shifted (0.7*u*l,1.5*u*l);
+                E0=A shifted (0.7*u*l-0.3u,0);
+                E1=A shifted (0.7*u*l+0.3u,0);
+                E2=A shifted (0.7*u*l+0.3u,2.3u);
+                E3=A shifted (0.7*u*l-0.3u,2.3u);
+                trace cercles(D,1.15u);
+                trace E0--E1--E2--E3--cycle;
+                trace segment(A,A shifted (3u,0)) dashed evenly;
+                trace segment(B,B shifted (3u,0)) dashed evenly;
+                trace segment(C,C shifted (3u,0)) dashed evenly;
+                trace cotationmil(A,B,3mm,15,btex \Lg[cm]{23} etex);
+                trace cotationmil(B,C,3mm,15,btex \Lg[cm]{23} etex);
+                trace cotation(E0,E1,-3mm,-3mm,btex \Lg[cm]{6} etex);
+            \end{Geometrie}
+        \end{minipage}
+
+        {\color{red}On sait que: $R = \Lg[cm]{11,5}$        
+            $\mathcal{V}_{\text{boule de cristal}} = \dfrac{4}{3} \times  \pi \times  R^3 =  \dfrac{4}{3} \times  \pi \times   11,5^3 $
+            
+            $\mathcal{V}_{\text{boule de cristal}} \approx \Vol[cm]{6371}.$
+        }
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Marie affirme que le volume de la boule de cristal représente environ 90\,\% du volume total du trophée.
+
+        Déterminer si elle a raison.
+
+        {\color{red}Calculons le volume du socle.
+            
+            $\mathcal{V}_{\text{socle}} = \pi r^2 \times H = \pi \times 3^2 \times 23 \approx \Vol[cm]{650}$
+            
+            $\mathcal{V}_{\text{trophée}}= \mathcal{V}_{\text{boule de cristal}} + \mathcal{V}_{\text{socle}}$.
+
+            $\mathcal{V}_{\text{trophée}}=\approx \num{6371} + 650$.
+
+            $\mathcal{V}_{\text{trophée}}\approx \Vol[cm]{7021}$.
+            
+            Or $\dfrac{\num{6371}}{\num{7021}}\approx  \num{0,907}$ soit environ 91\,\%.
+            
+            Marie a donc raison.
+        }
+    \end{enumerate}
 \end{corrige}
