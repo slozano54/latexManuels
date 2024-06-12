@@ -61,16 +61,17 @@
 
         \textcolor{red}{Coordonnées de Peyongchang : \ang{130}E ; \ang{35}N}
 
-        \includegraphics[scale=0.5]{\currentpath/images/mappemonde}            
+        \includegraphics[scale=0.4]{\currentpath/images/mappemonde}            
 
         \item On considère que ce globe est composé d'un cylindre en cristal de diamètre \Lg[cm]{6}, surmonté d'une boule de cristal.
         Voir schéma ci-contre. Montrer qu'une valeur approchée du volume de la boule de ce trophée est de \Vol[cm]{6371}.
 
         \begin{minipage}{0.4\linewidth}
-            \vspace*{-10mm}
-            \includegraphics[scale=0.5]{\currentpath/images/globe}
+            \vspace*{-5mm}
+            \includegraphics[scale=0.3]{\currentpath/images/globe}
         \end{minipage}            
         \begin{minipage}{0.4\linewidth}
+            \scalebox{0.6}{
             \begin{Geometrie}
                 pair A,B,C,D,E[];
                 numeric l;
@@ -92,6 +93,7 @@
                 trace cotationmil(B,C,3mm,15,btex \Lg[cm]{23} etex);
                 trace cotation(E0,E1,-3mm,-3mm,btex \Lg[cm]{6} etex);
             \end{Geometrie}
+            }
         \end{minipage}
 
         {\color{red}On sait que: $R = \Lg[cm]{11,5}$        
@@ -99,10 +101,10 @@
             
             $\mathcal{V}_{\text{boule de cristal}} \approx \Vol[cm]{6371}.$
         }
-    \end{enumerate}
-    \Coupe
-    \begin{enumerate}
-        \setcounter{enumi}{2}
+    % \end{enumerate}
+    % \Coupe
+    % \begin{enumerate}
+    %     \setcounter{enumi}{2}
         \item Marie affirme que le volume de la boule de cristal représente environ 90\,\% du volume total du trophée.
 
         Déterminer si elle a raison.

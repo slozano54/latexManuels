@@ -1,6 +1,61 @@
-\begin{exercice*}
-    ...
+\begin{exercice*}[Agrandissement de tétraèdre][\tice]
+    Aller sur \href{https://www.geogebra.org/classic#3d}{\underline{\textcolor{blue}{Geogebra3D}}} \hspace*{10mm}\qrcode[hyperlink,height=0.4in]{https://www.geogebra.org/classic#3d}
+
+    \begin{center}
+        \begin{Geometrie}[CoinBG={u*(-10,-10)},TypeTrace="Espace"]
+            Initialisation(1500,30,20,50);
+            color O,A,B,C;
+            O=(0,0,0);
+            A=(1,0,0);
+            B=(0,1,0);
+            C=(0,0,1);
+            path faceTetra;
+            faceTetra = Projette(A)--Projette(B)--Projette(C)--cycle;
+            fill faceTetra withcolor PaleGreen;
+            trace faceTetra;
+            % [Ox)
+            drawarrow Projette(O)--Projette(A+1.5[O,A]) dashed dashpattern(on6 off3 on3 off 3);
+            remplis (fullcircle scaled 1mm) shifted(Projette(O));
+            remplis (fullcircle scaled 1mm) shifted(Projette(A));
+            % [Oy)
+            drawarrow Projette(O)--Projette(B+1.5[O,B]) dashed dashpattern(on6 off3 on3 off 3);
+            remplis (fullcircle scaled 1mm) shifted(Projette(B));
+            % [Oz)
+            drawarrow Projette(O)--Projette(C+1.5[O,C]) dashed dashpattern(on6 off3 on3 off 3);
+            remplis (fullcircle scaled 1mm) shifted(Projette(C));
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Effectuer cette construction :
+        \begin{itemize}
+            \item Afficher la fenêtre Graphique.
+            \item Créer un curseur n entier de 1 à 10, avec un incrément de 1 dans la fenêtre graphique 2D.
+            \item Dans la zone de saisie, entrer les coordonnées de ces points pour les placer dans le repère :
+            
+            $O=(0,0,0)$ ; $A=( n ,0,0)$ ; $B=(0, n ,0)$ ; $C=(0,0, n )$.
+            \item Construire le tétraèdre OABC à l'aide du bouton \textit{Pyramide}.
+        \end{itemize}
+        On s'intéresse à son volume.
+        \item Compléter ce tableau.
+        
+        \medskip
+        \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.2\linewidth}|*{5}{>{\centering\arraybackslash}m{0.1\linewidth}|}}
+            \hline
+            n&1&2&3&4&5\\\hline
+            Volume&&&&&\\\hline
+        \end{tabular}
+
+        \medskip
+        \begin{tabular}{|>{\columncolor{LightGray}\centering\arraybackslash}m{0.2\linewidth}|*{5}{>{\centering\arraybackslash}m{0.1\linewidth}|}}
+            \hline
+            n&1&2&3&4&5\\\hline
+            Volume&&&&&\\\hline
+        \end{tabular}
+
+        \medskip
+        \item Déterminer si c'est un tableau de proportionnalité.        
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    ...
+    Pas de correction.
 \end{corrige}
