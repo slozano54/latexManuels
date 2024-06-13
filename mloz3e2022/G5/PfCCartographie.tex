@@ -1,0 +1,418 @@
+%%%
+% Cartographie
+%%%
+\setKVdefault[Cartographie]{Echelle=1,Carte=false,All=false,Europe=false,Asie=false,Amsud=false,Amnord=false,Amcentre=false,Caraibes=false,Afrique=false,AfficheEchelle=false,PaysSeul=false,VillesSup=false,VillesSupI=false,Capitales=false,Impression=false,Fleuves=false,CouleurFond=ciel,Largeur=12,Hauteur=12,Arborescence="/usr/local/texlive/2023/texmf-dist/metapost/profcollege/",Projection=false,TypeProjection="mercator",CouleurPays=Cornsilk,Pasl=2,PasL=2,Codes=false,Epaisseur=2,ModeleCouleur=5,Boussole=false,Allegee=1,Maillage=false}
+\defKV[Cartographie]{EchelleCarte=\setKV[Cartographie]{Carte}}
+\defKV[Cartographie]{Pays=\setKV[Cartographie]{PaysSeul}}
+\defKV[Cartographie]{Villes=\setKV[Cartographie]{VillesSup}}
+\defKV[Cartographie]{VillesI=\setKV[Cartographie]{VillesSupI}}
+\defKV[Cartographie]{Traces=\setKV[Cartographie]{Codes}}
+
+\newcommand\Cartographie[3][]{%
+  \ifluatex%
+  \useKVdefault[Cartographie]%
+  \setKV[Cartographie]{#1}%
+  \mplibforcehmode%
+  \mplibnumbersystem{double}%
+  \ifboolKV[Cartographie]{Projection}{%
+    \begin{mplibcode}
+      input PfCMonde;
+      string arborescence;
+      arborescence:=\useKV[Cartographie]{Arborescence};
+      boolean Impression,VillesSup,VillesSupI,Boussole;
+      VillesSup=\useKV[Cartographie]{VillesSup};
+      VillesSupI=\useKV[Cartographie]{VillesSupI};
+      Impression=\useKV[Cartographie]{Impression};
+      Boussole=\useKV[Cartographie]{Boussole};
+
+      Allegee:=\useKV[Cartographie]{Allegee};
+      
+      maillage:=true;
+      fleuves:=false;
+      lacs:=false;
+      capitales:=false;
+
+      if Impression:
+      noncolore:=true;
+      payscolor:=white;
+      else:
+      noncolore:=true;
+      payscolor:=\useKV[Cartographie]{CouleurPays};
+      fi;
+
+      projection:=\useKV[Cartographie]{TypeProjection};
+      feuillet:=u*(-20,-20)--u*(20,-20)--u*(20,20)--u*(-20,20)--cycle;
+      drawoptions(withpen pencircle scaled 0.5 withcolor 0.5white);
+      Projection(3,48,\useKV[Cartographie]{Echelle});
+      drawoptions();
+
+      if projection="mercator":
+      clip currentpicture to (mercatorc(-85,-180)--mercatorc(-85,180)--mercatorc(85,180)--mercatorc(85,-180)--cycle);
+      draw mercatorc(0,-180)--mercatorc(0,180);
+      draw mercatorc(-85,0)--mercatorc(85,0);
+      %
+      if Boussole:
+      label.top(TEX("\scriptsize Nord"),mercatorc(85,0));
+      label.bot(TEX("\scriptsize Sud"),mercatorc(-85,0));
+      label.urt(TEX("\scriptsize Est"),mercatorc(0,180));
+      label.ulft(TEX("\scriptsize Ouest"),mercatorc(0,-180));
+      fi;      
+      %
+      label.llft(TEX("\tiny \ang{"&decimal(0)&"}"),mercatorc(0,0));
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 8:
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),mercatorc(-k*10,0));
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),mercatorc(k*10,0));
+      endfor;
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 18:
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),mercatorc(0,-k*10));
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),mercatorc(0,k*10));
+      endfor;
+      elseif projection="cylindrique":
+      clip currentpicture to (cylindriquec(-85,-180)--cylindriquec(-85,180)--cylindriquec(85,180)--cylindriquec(85,-180)--cycle);
+      draw cylindriquec(0,-180)--cylindriquec(0,180);
+      draw cylindriquec(-85,0)--cylindriquec(85,0);
+      %
+      if Boussole:
+      label.top(TEX("\scriptsize Nord"),cylindriquec(85,0));
+      label.bot(TEX("\scriptsize Sud"),cylindriquec(-85,0));
+      label.urt(TEX("\scriptsize Est"),cylindriquec(0,180));
+      label.ulft(TEX("\scriptsize Ouest"),cylindriquec(0,-180));
+      fi;      
+      %
+      label.llft(TEX("\tiny \ang{"&decimal(0)&"}"),cylindriquec(0,0));
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 8:
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(-k*10,0));
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(k*10,0));
+      endfor;
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 18:
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(0,-k*10));
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(0,k*10));
+      endfor;
+      elseif projection="winkel":
+      clip currentpicture to (winkelc(-85,-180)--winkelc(-85,180) for k=-80 step 5 until 85:--winkelc(k,180) endfor --winkelc(85,-180) for k=80 step -5 until -85:--winkelc(k,-180) endfor --cycle);
+      draw winkelc(0,-180)--winkelc(0,180);
+      draw winkelc(-85,0)--winkelc(85,0);
+      %
+      if Boussole:
+      label.top(TEX("\scriptsize Nord"),winkelc(85,0));
+      label.bot(TEX("\scriptsize Sud"),winkelc(-85,0));
+      label.urt(TEX("\scriptsize Est"),winkelc(0,180));
+      label.ulft(TEX("\scriptsize Ouest"),winkelc(0,-180));
+      fi;      
+      %
+      label.llft(TEX("\tiny \ang{"&decimal(0)&"}"),winkelc(0,0));
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 8:
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),winkelc(-k*10,0));
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),winkelc(k*10,0));
+      endfor;
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 18:
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),winkelc(0,-k*10));
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),winkelc(0,k*10));
+      endfor;
+%      elseif projection="cylindrique":
+%      clip currentpicture to (cylindriquec(-85,-180)--cylindriquec(-85,180)--cylindriquec(85,180)--cylindriquec(85,-180)--cycle);
+%      draw cylindriquec(0,-180)--cylindriquec(0,180);
+%      draw cylindriquec(-85,0)--cylindriquec(85,0);
+%      label.llft(TEX("\tiny \ang{"&decimal(0)&"}"),cylindriquec(0,0));
+%      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 8:
+%      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(-k*10,0));
+%      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(k*10,0));
+%      endfor;
+%      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 18:
+%      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(0,-k*10));
+%      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),cylindriquec(0,k*10));
+%      endfor;
+      elseif projection="simple":
+      clip currentpicture to (simplec(-85,-180)--simplec(-85,180)--simplec(85,180)--simplec(85,-180)--cycle);
+      draw simplec(0,-180)--simplec(0,180);
+      draw simplec(-85,0)--simplec(85,0);
+      %
+      if Boussole:
+      label.top(TEX("\scriptsize Nord"),simplec(85,0));
+      label.bot(TEX("\scriptsize Sud"),simplec(-85,0));
+      label.urt(TEX("\scriptsize Est"),simplec(0,180));
+      label.ulft(TEX("\scriptsize Ouest"),simplec(0,-180));
+      fi;      
+      %
+      label.llft(TEX("\tiny \ang{"&decimal(0)&"}"),simplec(0,0));
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 8:
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),simplec(-k*10,0));
+      label.lft(TEX("\tiny \ang{"&decimal(k*10)&"}"),simplec(k*10,0));
+      endfor;
+      for k=\useKV[Cartographie]{Pasl} step \useKV[Cartographie]{Pasl} until 18:
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),simplec(0,-k*10));
+      label.bot(TEX("\tiny \ang{"&decimal(k*10)&"}"),simplec(0,k*10));
+      endfor;
+      fi;
+      
+      vardef Villes(text t)=
+      pair CoordVille;
+      string NomVille;
+      n:=0;
+      for p_:=t:
+      n:=n+1;
+      if n=1:
+      %nblec:=p;
+      else:
+      if pair p_:
+      if projection="mercator":
+      CoordVille:=mercatorc(ypart(p_),xpart(p_));
+      elseif projection="winkel":
+      CoordVille:=winkelc(ypart(p_),xpart(p_));
+      elseif projection="cylindrique":
+      CoordVille:=cylindriquec(ypart(p_),xpart(p_));
+      elseif projection="simple":
+      CoordVille:=simplec(ypart(p_),xpart(p_));
+      fi;
+      elseif string p_:
+      NomVille:=p_;
+      else:
+      marque_p:="croix";
+      pointe(CoordVille);
+      label.position(p_)(TEX(""&NomVille&""),CoordVille);
+      fi;
+      fi;
+      endfor;
+      drawoptions();
+      enddef;
+
+      def position(expr t)=
+      if t=1:rt
+      elseif t=2:urt
+      elseif t=3:top
+      elseif t=4:ulft
+      elseif t=5:lft
+      elseif t=6:llft
+      elseif t=7:bot
+      elseif t=8:lrt
+      fi
+      enddef;
+      
+      if VillesSup:
+      nomfichiermul:=\useKV[Cartographie]{Villes};
+      nblec:=scantokens readfrom nomfichiermul;
+      drawoptions(withcolor (0.15,0.15,0.15));
+      for p=1 upto nblec:
+      pair Coord[],latlon;string p_;
+      latlon=scantokens readfrom nomfichiermul;
+      p_=scantokens readfrom nomfichiermul;
+      if projection="mercator":
+      Coord[p]=mercatorc(ypart(latlon),xpart(latlon));
+      elseif projection="winkel":
+      Coord[p]=winkelc(ypart(latlon),xpart(latlon));
+      elseif projection="cylindrique":
+      Coord[p]=cylindriquec(ypart(latlon),xpart(latlon));
+      elseif projection="simple":
+      Coord[p]=simplec(ypart(latlon),xpart(latlon));
+      fi;
+      marque_p:="croix";
+      pointe(Coord[p]);
+      label.scantokens readfrom nomfichiermul(TEX(""&p_&""),Coord[p]);
+      endfor;
+      drawoptions();
+      closefrom nomfichiermul;
+      fi;
+
+      if VillesSupI:
+       Villes(\useKV[Cartographie]{VillesI});
+      fi;
+    \end{mplibcode}
+  }{%    
+    % \mplibforcehmode
+    \begin{mplibcode}
+      input PfCMonde;
+
+      Allegee:=\useKV[Cartographie]{Allegee};
+      
+      defaultcolormodel:=\useKV[Cartographie]{ModeleCouleur};
+      string arborescence;
+      arborescence:=\useKV[Cartographie]{Arborescence};
+      LargeurCadre=\useKV[Cartographie]{Largeur};
+      HauteurCadre=\useKV[Cartographie]{Hauteur};
+      Epaisseur:=\useKV[Cartographie]{Epaisseur};
+      distanceecran=100*\useKV[Cartographie]{Echelle};
+      fleuves:=\useKV[Cartographie]{Fleuves};
+      boolean Carte,Impression,VillesSup,VillesSupI,Codes;
+      Carte=\useKV[Cartographie]{Carte};
+      Impression=\useKV[Cartographie]{Impression};
+      VillesSup=\useKV[Cartographie]{VillesSup};
+      VillesSupI=\useKV[Cartographie]{VillesSupI};
+      Codes=\useKV[Cartographie]{Codes};
+      if defaultcolormodel=7:
+      cmykcolor couleurfond,white,payscolor,couleurfleuve;
+      couleurfond=\useKV[Cartographie]{CouleurFond};
+      white=(0,0,0,1);
+      payscolor=white;
+      couleurfleuve=white;
+      if Impression:
+        noncolore:=true;
+        payscolor:=0.15white;
+        couleurfond:=(0,0,0,0);
+        couleurfleuve:=couleurfond;
+      fi;
+      else:
+      couleurfond:=\useKV[Cartographie]{CouleurFond};
+      color couleurimpression;
+      couleurimpression:=Cornsilk;
+      if Impression:
+        noncolore:=true;
+        payscolor:=couleurimpression;%0.85white
+        couleurfond:=white;
+        couleurfleuve:=couleurfond;
+      fi;
+      fi;
+      capitales:=\useKV[Cartographie]{Capitales};
+      All:=\useKV[Cartographie]{All};
+      Europe:=\useKV[Cartographie]{Europe};
+      Asie:=\useKV[Cartographie]{Asie};
+      Amsud:=\useKV[Cartographie]{Amsud};
+      Amnord:=\useKV[Cartographie]{Amnord};
+      Amcentrale:=\useKV[Cartographie]{Amcentre};
+      Caraibes:=\useKV[Cartographie]{Caraibes};
+      Afrique:=\useKV[Cartographie]{Afrique};
+
+      vardef Villes(text t)=
+      pair CoordVille;
+      string NomVille;
+      n:=0;
+      for p_:=t:
+      n:=n+1;
+      if n=1:
+      %nblec:=p;
+      else:
+      if pair p_:
+      if projection="mercator":
+      CoordVille:=mercatorc(ypart(p_),xpart(p_));
+      elseif projection="winkel":
+      CoordVille:=winkelc(ypart(p_),xpart(p_));
+      elseif projection="cylindrique":
+      CoordVille:=cylindriquec(ypart(p_),xpart(p_));
+      elseif projection="simple":
+      CoordVille:=simplec(ypart(p_),xpart(p_));
+      elseif projection="bonne":
+      CoordVille:=bonnec(ypart(p_),xpart(p_));
+      fi;
+      elseif string p_:
+      NomVille:=p_;
+      else:
+      marque_p:="croix";
+      pointe(CoordVille);
+      label.position(p_)(TEX(""&NomVille&""),CoordVille);
+      fi;
+      fi;
+      endfor;
+      drawoptions();
+      enddef;
+
+      def position(expr t)=
+      if t=1:rt
+      elseif t=2:urt
+      elseif t=3:top
+      elseif t=4:ulft
+      elseif t=5:lft
+      elseif t=6:llft
+      elseif t=7:bot
+      elseif t=8:lrt
+      fi
+      enddef;
+     
+      if Carte:
+        Echelle:=\useKV[Cartographie]{AfficheEchelle};
+        figure(-0.5u*LargeurCadre,-0.5u*HauteurCadre,0.5u*LargeurCadre,0.5u*HauteurCadre);
+        if \useKV[Cartographie]{PaysSeul}:
+          projection:="bonne";
+          theta:=#2;
+          phi:=#3;
+          zoom(echelle(#2,#3,\useKV[Cartographie]{EchelleCarte}));
+          fill (bonnec(-90,-180) for k=-85 step 5 until 90:..bonnec(k,-180) endfor)..reverse(bonnec(-90,180) for k=-85 step 5 until 90:..bonnec(k,180) endfor)..cycle withcolor couleurfond;
+          lecturep(arborescence&"PfC"&\useKV[Cartographie]{Pays}&".dat",couleurfond);%
+          if Echelle=true:
+            draw ((Xa,Ya)+u*(1,1))--((Xa,Ya)+u*(2,1));
+            labeloffset:=labeloffset*1.5;
+            label.top(btex 0 etex,(Xa,Ya)+u*(1,1));
+            label.top(TEX(""&decimal(Long)&"~km"),(Xa,Ya)+u*(2,1));
+            labeloffset:=labeloffset/1.5;
+            draw ((Xa,Ya)+u*(1,1.1))--((Xa,Ya)+u*(1,0.9));
+            draw (((Xa,Ya)+u*(1,1.1))--((Xa,Ya)+u*(1,0.9))) shifted(u*(1,0));
+          fi;
+        else:
+          projection:="bonne";
+          Projection(#2,#3,echelle(#2,#3,\useKV[Cartographie]{EchelleCarte}));
+        fi;
+        if Epaisseur>0:
+          trace feuillet withpen pencircle scaled Epaisseur;
+        fi;
+        if VillesSup:
+          nomfichiermul:=\useKV[Cartographie]{Villes};
+          nblec:=scantokens readfrom nomfichiermul;
+          drawoptions(withcolor (0.15,0.15,0.15));
+          projection:="bonne";
+          for p=1 upto nblec:
+          pair Coord[],latlon;string p_;
+          latlon=scantokens readfrom nomfichiermul;
+          p_=scantokens readfrom nomfichiermul;
+          Coord[p]=bonnec(ypart(latlon),xpart(latlon));
+          dotlabel.scantokens readfrom nomfichiermul(TEX(""&p_&""),Coord[p]);
+          endfor;
+          drawoptions();
+          closefrom nomfichiermul;
+          fi;
+                if VillesSupI:
+       Villes(\useKV[Cartographie]{VillesI});
+      fi;
+        if Codes:
+        \useKV[Cartographie]{Traces};
+        fi;
+        
+      else:
+      boolean maillagecoord;
+      maillagecoord=\useKV[Cartographie]{Maillage};
+      if VillesSupI:
+      lacs:=false;
+      fi;
+      
+      mappemonde(#2,#3);
+
+      vardef Villes(text t)=
+      pair CoordVille;
+      string NomVille;
+      n:=0;
+      for p_:=t:
+      n:=n+1;
+      if n=1:
+      %nblec:=p;
+      else:
+      if pair p_:
+      CoordVille:=Projgeo(rayon*(cosd(ypart(p_))*cosd(xpart(p_)),cosd(ypart(p_))*sind(xpart(p_)),sind(ypart(p_))));
+      elseif string p_:
+      NomVille:=p_;
+      else:
+      marque_p:="croix";
+      pointe(CoordVille);
+      label.position(p_)(TEX(""&NomVille&""),CoordVille);
+      fi;
+      fi;
+      endfor;
+      drawoptions();
+      enddef;
+      
+      
+      if Codes:
+      \useKV[Cartographie]{Traces};
+      fi;
+      if VillesSupI:
+      Villes(\useKV[Cartographie]{VillesI});
+      label.ulft(TEX("\tiny\ang{0}"),Projgeo(rayon*(1,0,0)));
+      label.ulft(TEX("\tiny\ang{10}"),Projgeo(rayon*(cosd(10),0,sind(10))));
+      fill (fullcircle scaled 0.75mm) shifted Projgeo(rayon*(cosd(10),0,sind(10)));
+      label.llft(TEX("\tiny\ang{10}"),Projgeo(rayon*(cosd(10),sind(10),0)));
+      fill (fullcircle scaled 0.75mm) shifted Projgeo(rayon*(cosd(10),sind(10),0));
+      fi;
+      fi;
+    \end{mplibcode}
+  }
+  \mplibnumbersystem{scaled}%
+  \else
+  \PackageWarning{ProfCollege}{"La commande Cartographie n'est compatible qu'avec LuaLaTeX."}
+  \fi
+}%

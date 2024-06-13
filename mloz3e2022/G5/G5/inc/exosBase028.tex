@@ -5,17 +5,29 @@
         \item le méridien de Greenwich et la longitude \ang{30}O.
     \end{enumerate}
     \begin{center}
-        \includegraphics[scale=0.4]{\currentpath/images/exosBase028.png}    
-        % \Cartographie[%
-        %     Impression,Echelle=2,Maillage,Allegee=10,
-        %     VillesI={%
-        %         4,%
-        %         (-21.933333,64.133333),"\noexpand\tiny Reykjavik",7,
-        %         (-0.094151,51.509093),"\noexpand\tiny Londres",6,
-        %         (37.619183,55.757425),"\noexpand\tiny Moscou",2,
-        %         (-35.200916,-5.779257),"\noexpand\tiny Natal",2
-        %     }
-        % ]{-5}{20}
+        % \includegraphics[scale=0.4]{\currentpath/images/exosBase028.png}    
+        % nombre de points
+        %(longitude,latitude),"texte",position du texte
+        \Cartographie[%
+            Impression,Echelle=2.5,Maillage,Allegee=10,
+            VillesI={%
+                14,
+                (-21,64),"\noexpand\tiny Reykjavik",6,
+                (0,51),"\noexpand\tiny Londres",6,
+                (37,55),"\noexpand\tiny Moscou",2,
+                (-35,-5),"\noexpand\tiny Natal",1,
+                (18,-33),"\noexpand\tiny Le Cap",8,
+                (-17,14),"\noexpand\tiny Dakar",5,
+                (31,30),"\noexpand\tiny Le Caire",6,
+                (55,-20),"\noexpand\tiny Saint Denis la Réunion",2,
+                (69,34),"\noexpand\tiny Kaboul",2,
+                (-9,38),"\noexpand\tiny Lisbonne",6,
+                (72,19),"\noexpand\tiny Bombay",2,
+                (9,0),"\noexpand\tiny Libreville",3,
+                (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
+                (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
+            }
+        ]{5}{20}
     \end{center}    
 \end{exercice*}
 \begin{corrige}
@@ -30,6 +42,28 @@
         \textcolor{red}{Les villes situées entre le méridien de Greenwich et la longitude \ang{30}O sont Dakar, Lisbonne, Londres et Reykjavik.}
     \end{enumerate}
     \begin{center}
-        \includegraphics[scale=0.3]{\currentpath/images/exosBase028.png}    
-    \end{center} 
+        % \includegraphics[scale=0.3]{\currentpath/images/exosBase028.png}
+        % nombre de points
+        %(longitude,latitude),"texte",position du texte
+        \Cartographie[%
+            Impression,Echelle=1.5,Maillage,Allegee=10,
+            VillesI={%
+                14,
+                (-21,64),"\noexpand\tiny Reykjavik",6,
+                (0,51),"\noexpand\tiny Londres",6,
+                (37,55),"\noexpand\tiny Moscou",2,
+                (-35,-5),"\noexpand\tiny Natal",1,
+                (18,-33),"\noexpand\tiny Le Cap",8,
+                (-17,14),"\noexpand\tiny Dakar",5,
+                (31,30),"\noexpand\tiny Le Caire",6,
+                (55,-20),"\noexpand\tiny Saint Denis la Réunion",2,
+                (69,34),"\noexpand\tiny Kaboul",2,
+                (-9,38),"\noexpand\tiny Lisbonne",6,
+                (72,19),"\noexpand\tiny Bombay",2,
+                (9,0),"\noexpand\tiny Libreville",3,
+                (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
+                (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
+            }
+        ]{5}{20}
+    \end{center}
 \end{corrige}
