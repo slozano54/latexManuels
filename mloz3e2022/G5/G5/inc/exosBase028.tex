@@ -24,8 +24,12 @@
                 (-9,38),"\noexpand\tiny Lisbonne",6,
                 (72,19),"\noexpand\tiny Bombay",2,
                 (9,0),"\noexpand\tiny Libreville",3,
-                (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
-                (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
+                % (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
+                % (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
+            },
+            Traces={%
+                label.bot(TEX("\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}"),Projgeo(rayon*(cosd(-45),0,sind(-45))));
+                label.urt(TEX("\noexpand\tiny\textcolor{red}{Équateur}"),Projgeo(rayon*(cosd(0)*cosd(-30),cosd(0)*sind(-30),0)));
             }
         ]{5}{20}
     \end{center}    
@@ -61,9 +65,13 @@
                 (-9,38),"\noexpand\tiny Lisbonne",6,
                 (72,19),"\noexpand\tiny Bombay",2,
                 (9,0),"\noexpand\tiny Libreville",3,
-                (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
-                (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
-            }
+                % (0,-45),"\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}",7,
+                % (70,0),"\noexpand\tiny\textcolor{red}{Équateur}",1
+                },
+                Traces={%
+                    label.bot(TEX("\noexpand\tiny\textcolor{LightSteelBlue}{Méridien de Greenwich}"),Projgeo(rayon*(cosd(-45),0,sind(-45))));
+                    label.urt(TEX("\noexpand\tiny\textcolor{red}{Équateur}"),Projgeo(rayon*(cosd(0)*cosd(-30),cosd(0)*sind(-30),0)));
+                }
         ]{5}{20}
     \end{center}
 \end{corrige}
