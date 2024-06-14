@@ -1,3 +1,34 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+        Relier chaque égalité au triangle rectangle dans lequel elle peut s'appliquer.
+    \begin{center}
+        \begin{Geometrie}[CoinBG={(-2u,-5u)}]
+            pair Q[],R[],dec;
+            Q1=u*(1,1);
+            Q2-Q1=u*(0,-1);
+            Q3-Q2=u*(0,-1);
+            Q4-Q3=u*(0,-1);
+            Q5-Q4=u*(0,-1);
+            Q6-Q5=u*(0,-1);
+            R1-Q1=u*(1,-1);
+            R2-R1=u*(0,-1.5);
+            R3-R2=u*(0,-1.5);
+            dec=(0.2u,0);
+            label.lft(TEX("$cos(\widehat{JIK})=\dfrac{IJ}{IK}$ $\bullet$"),Q1);
+            label.lft(TEX("$cos(\widehat{JIK})=\dfrac{IK}{IJ}$ $\bullet$"),Q2);
+            label.lft(TEX("$cos(\widehat{IJK})=\dfrac{JK}{IJ}$ $\bullet$"),Q3);
+            label.lft(TEX("$cos(\widehat{IJK})=\dfrac{IJ}{JK}$ $\bullet$"),Q4);
+            label.lft(TEX("$cos(\widehat{IKJ})=\dfrac{JK}{IK}$ $\bullet$"),Q5);
+            label.lft(TEX("$cos(\widehat{IKJ})=\dfrac{IK}{JK}$ $\bullet$"),Q6);
+            label.rt(TEX("$\bullet$ $IJK$ est rectangle en $I$"),R1);
+            label.rt(TEX("$\bullet$ $IJK$ est rectangle en $J$"),R2);
+            label.rt(TEX("$\bullet$ $IJK$ est rectangle en $K$"),R3);
+            % Correction
+            trace segment(Q1-dec,R2+dec) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Q4-dec,R1+dec) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Q2-dec,R3+dec) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Q3-dec,R3+dec) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Q5-dec,R2+dec) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Q6-dec,R1+dec) withcolor red withpen pencircle scaled 1bp;
+        \end{Geometrie}
+    \end{center}

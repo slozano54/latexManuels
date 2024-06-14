@@ -1,2 +1,113 @@
-\section{\dots}
-\dots
+\section{Applications}
+\begin{remarque}
+    Pour les calculs, on utilise le mode \og{}{\bf degré}\fg{} de la calculatrice.
+\end{remarque}
+
+\begin{methode}[Cosinus - Calculer la longueur d'un des côtés de l'angle droit]
+    \exercice    
+    Dans le triangle $RST$, déterminer $RS$.\\
+    \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+        pair S,R,T;
+        S=u*(1,1);
+        R-S=u*(4,0);
+        T=0.78[R,rotation(S,R,-90)];
+        trace polygone(S,R,T);
+        remplis codeperp(S,R,T,8)--R--cycle withcolor noir;
+        trace codeperp(S,R,T,8);
+        trace appelation(S,T,3mm,btex \Lg[cm]{6} etex);        
+        trace cotation(S,R,-2mm,-3mm,btex ? etex);
+        marque_a:=marque_a*1.5;
+        trace Codeangle(R,S,T,0,btex \ang{38} etex);
+        label.llft(btex S etex,S);
+        label.lrt(btex R etex,R);
+        label.top(btex T etex,T);
+    \end{Geometrie}
+    \correction
+    Dans le triangle $RST$ rectangle en $R$, on connaît :
+    \begin{itemize}
+        \item l'angle $\widehat{RST}=\ang{38}$,
+        \item la longueur de l'hypoténuse : $ST=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche la longueur du côté adjacent à l'angle $\widehat{RST}$.\\
+    On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{RST}&=\frac{RS}{ST}\\
+        {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos38}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{RS}}{\rnode{C}{6}}\\    
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        RS&=6\times\psframebox[linestyle=dashed]{\cos38}\\
+        RS&\simeq\Lg[cm]{4.73}
+    \end{align*}
+    \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{A}{C}
+    \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{B}{D}
+    \vspace*{-10mm}
+\end{methode}
+
+\begin{methode}[Cosinus - Calculer la longueur de l'hypoténuse]
+    \exercice    
+    Dans le triangle $EFG$, déterminer $EF$.\\
+    \begin{Geometrie}[CoinHD={(4u,5u)}]        
+        pair E,F,G;
+        E=u*(1,1);
+        G-E=u*(2,0);
+        F=2[E,rotation(G,E,60)];
+        trace polygone(E,F,G);
+        remplis codeperp(E,G,F,8)--G--cycle withcolor noir;
+        trace codeperp(E,G,F,8);
+        trace appelation(E,G,-3mm,btex \Lg[cm]{6} etex);        
+        trace cotation(E,F,2mm,3mm,btex ? etex);        
+        trace Codeangle(G,E,F,0,btex \ang{60} etex);
+        label.llft(btex E etex,E);
+        label.lrt(btex G etex, G);
+        label.top(btex F etex, F);
+    \end{Geometrie}
+    \correction
+    Dans le triangle $EFG$ rectangle en $G$, on connaît :
+    \begin{itemize}
+        \item l'angle $\widehat{FEG}=\ang{60}$,
+        \item le côté adjacent à l'angle $\widehat{FEG}$ : $EG=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche l'hypoténuse. On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{EFG}&=\frac{EG}{EF}\\
+        {\color{red}\frac{\psframebox[linestyle=dashed]{\rnode{A}{\color{black}\cos60}}}{\rnode{D}{1}}}\,&=\,\frac{\rnode{B}{6}}{\rnode{C}{EF}}\\
+        \intertext{\centering\bf Les produits en croix sont égaux}
+        EF\times\psframebox[linestyle=dashed]{\cos60}&=6\\
+        EF&=\frac{6}{\psframebox[linestyle=dashed]{\cos60}}\\
+        EF&=\Lg[cm]{12}
+    \end{align*}
+    \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{A}{C}
+    \ncline[linestyle=dashed,linewidth=0.1mm]{<->}{B}{D}
+\end{methode}
+
+\begin{methode}[Cosinus - Calculer un angle]
+    \exercice    
+    Dans le triangle $IJK$, déterminer $\widehat{KIJ}$.\\
+    \begin{Geometrie}[CoinHD={(6u,4.5u)}]        
+        pair I,J,K;
+        K=u*(1,1);
+        J-K=u*(4,0);
+        I=0.78[J,rotation(K,J,-90)];
+        trace polygone(K,J,I);
+        remplis codeperp(K,J,I,8)--J--cycle withcolor noir;
+        trace codeperp(K,J,I,8);
+        trace appelation(K,I,3mm,btex \Lg[cm]{10} etex);
+        trace appelation(I,J,3mm,btex \Lg[cm]{6} etex);                
+        trace Codeangle(K,I,J,0,btex ? etex);
+        label.llft(btex K etex,K);
+        label.lrt(btex J etex,J);
+        label.top(btex I etex,I);
+    \end{Geometrie}
+    \correction
+    Dans le triangle $IJK$ rectangle en $J$, on connaît :
+    \begin{itemize}        
+        \item l'hypoténuse : $IK=\Lg[cm]{10}$,
+        \item le côté adjacent à l'angle $\widehat{KIJ}$ : $EG=\Lg[cm]{6}$,
+    \end{itemize}
+    et on cherche l'angle $\widehat{KIJ}$. On utilise donc le cosinus.
+    \begin{align*}
+        \cos\widehat{KIJ}&=\frac{IJ}{IK}\\
+        \cos\widehat{KIJ}&=\frac{6}{10}\\
+        \widehat{KIJ}&=\cos^{-1}\left(\frac{6}{10}\right)\\
+        \widehat{KIJ}&\simeq\ang{53}
+    \end{align*}
+\end{methode}

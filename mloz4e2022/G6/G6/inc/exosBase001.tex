@@ -1,9 +1,133 @@
 \begin{exercice*}
-    \dots
+    \textbf{Compléter directement sur la feuille}
+    \begin{enumerate}
+        \item Soit le triangle $ABC$, rectangle en $B$. 
+        
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            Marquer l'angle $\widehat{BAC}$ puis repasser :
+            \begin{itemize}
+                \item \textcolor{red}{\textbf{en rouge}} l'hypoténuse,                
+                \item \textcolor{DarkGreen}{\textbf{en vert}} le côté adjacent à l'angle $\widehat{BAC}$.
+            \end{itemize}
+        \end{minipage}        
+        \begin{minipage}{0.45\linewidth}
+            \scalebox{0.9}{
+                \begin{Geometrie}
+                    pair A,B,C;
+                    A=u*(1,1);
+                    B-A=u*(3,1);
+                    C=0.4[B,rotation(A,B,90)];
+                    trace polygone(A,B,C);
+                    trace codeperp(A,B,C,5);
+                    label.top(TEX("B"),B);
+                    label.lft(TEX("A"),A);
+                    label.rt(TEX("C"),C);
+                \end{Geometrie}
+            }            
+        \end{minipage}
+
+        \medskip
+        Dans le triangle $ABC$, rectangle en $B$, on a donc : $$cos (\widehat{BAC})=\pointilles[30mm]$$
+        \item Soit le triangle $HJK$, rectangle en $K$. 
+        
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            Marquer l'angle $\widehat{JHK}$ puis repasser :
+            \begin{itemize}
+                \item \textcolor{red}{\textbf{en rouge}} l'hypoténuse,
+                \item \textcolor{DarkGreen}{\textbf{en vert}} le côté adjacent à l'angle $\widehat{JHK}$.
+            \end{itemize}
+        \end{minipage}        
+        \begin{minipage}{0.45\linewidth}
+            \scalebox{0.9}{
+                \begin{Geometrie}
+                    pair H,J,K;
+                    K=u*(2,2);
+                    J-K=u*(1.5,1.5);
+                    H=0.5[K,rotation(J,K,90)];
+                    trace polygone(H,J,K);
+                    trace codeperp(J,K,H,5);
+                    label.bot(TEX("K"),K);
+                    label.urt(TEX("J"),J);
+                    label.ulft(TEX("H"),H);
+                \end{Geometrie}
+            }            
+        \end{minipage}
+
+        \medskip
+        Dans le triangle $HJK$, rectangle en $K$, on a donc : $$cos (\widehat{JHK})=\pointilles[30mm]$$
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    \textbf{Compléter directement sur la feuille}
+
+    \begin{enumerate}
+        \item Soit le triangle $ABC$, rectangle en $B$. 
+        
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            Marquer l'angle $\widehat{BAC}$ puis repasser :
+            \begin{itemize}
+                \item \textcolor{red}{\textbf{en rouge}} l'hypoténuse,                
+                \item \textcolor{DarkGreen}{\textbf{en vert}} le côté adjacent à l'angle $\widehat{BAC}$.
+            \end{itemize}
+        \end{minipage}        
+        \begin{minipage}{0.45\linewidth}
+            \scalebox{0.9}{
+                \begin{Geometrie}
+                    pair A,B,C;
+                    A=u*(1,1);
+                    B-A=u*(3,1);
+                    C=0.4[B,rotation(A,B,90)];
+                    trace polygone(A,B,C);
+                    trace codeperp(A,B,C,5);
+                    trace segment(A,C) withcolor red withpen pencircle scaled 1bp;
+                    trace segment(A,B) withcolor DarkGreen withpen pencircle scaled 1bp;
+                    trace marqueangle(C,A,B,0) withpen pencircle scaled 1bp;
+                    label.top(TEX("B"),B);
+                    label.lft(TEX("A"),A);
+                    label.rt(TEX("C"),C);
+                \end{Geometrie}
+            }            
+        \end{minipage}
+
+        \medskip
+        Dans le triangle $ABC$, rectangle en $B$, on a donc : $$cos (\widehat{BAC})=\dfrac{\textcolor{DarkGreen}{\textbf{AB}}}{\textcolor{red}{\textbf{AC}}}$$
+        \item Soit le triangle $HJK$, rectangle en $K$. 
+        
+        \medskip
+        \begin{minipage}{0.5\linewidth}
+            Marquer l'angle $\widehat{JHK}$ puis repasser :
+            \begin{itemize}
+                \item \textcolor{red}{\textbf{en rouge}} l'hypoténuse,
+                \item \textcolor{DarkGreen}{\textbf{en vert}} le côté adjacent à l'angle $\widehat{JHK}$.
+            \end{itemize}
+        \end{minipage}        
+        \begin{minipage}{0.45\linewidth}
+            \scalebox{0.9}{
+                \begin{Geometrie}
+                    pair H,J,K;
+                    K=u*(2,2);
+                    J-K=u*(1.5,1.5);
+                    H=0.5[K,rotation(J,K,90)];
+                    trace polygone(H,J,K);
+                    trace codeperp(J,K,H,5);
+                    trace segment(H,J) withcolor red withpen pencircle scaled 1bp;
+                    trace segment(H,K) withcolor DarkGreen withpen pencircle scaled 1bp;
+                    marque_a:=0.6*marque_a;
+                    trace marqueangle(K,H,J,0) withpen pencircle scaled 1bp;
+                    label.bot(TEX("K"),K);
+                    label.urt(TEX("J"),J);
+                    label.ulft(TEX("H"),H);
+                \end{Geometrie}
+            }            
+        \end{minipage}
+
+        \medskip
+        Dans le triangle $HJK$, rectangle en $K$, on a donc : $$cos (\widehat{JHK})=\dfrac{\textcolor{DarkGreen}{\textbf{HK}}}{\textcolor{red}{\textbf{HJ}}}$$
+    \end{enumerate}
 \end{corrige}
 

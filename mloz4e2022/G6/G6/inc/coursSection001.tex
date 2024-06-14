@@ -1,2 +1,33 @@
-\section{\dots}
-\dots
+\section{Vocabulaire}
+\begin{definitions}
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,4.5u)}]
+            u:=0.75*u;            
+            pair A,B,C;
+            A=u*(1.75,1.75);
+            B=u*(1.75,5.25);
+            C=u*(6.25,1.75);
+            trace polygone(A,B,C);
+            remplis codeperp(B,A,C,8)--A--cycle withcolor noir;
+            trace codeperp(B,A,C,8);
+            trace appelation(A,B,8mm,btex Côté opposé etex);
+            trace appelation(A,B,3mm,btex à l'angle $\widehat{ACB}$ etex);
+            trace appelation(A,C,-3mm,btex Côté adjacent etex);
+            trace appelation(A,C,-8mm,btex à l'angle $\widehat{ACB}$etex);
+            trace appelation(B,C,3mm,btex Hypoténuse etex);
+            marque_a:=marque_a*1.5;    
+            trace marqueangle(B,C,A,0);
+            label.llft(btex A etex,A);
+            label.lrt(btex C etex,C);
+            label.top(btex B etex,B);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+        Dans un triangle $ABC$ rectangle en $A$, par rapport à l'angle $\widehat{ACB}$ :
+            \begin{itemize}
+                \item Le segment $[BC]$ est l'\textbf{hypoténuse}.
+                \item Le segment $[AC]$ est le \textbf{côté adjacent} à l'angle $\widehat{ACB}$.
+                \item Le segment $[AB]$ est le côté \textbf{opposé} à l'angle $\widehat{ACB}$.
+            \end{itemize}
+    \end{minipage}
+\end{definitions}
