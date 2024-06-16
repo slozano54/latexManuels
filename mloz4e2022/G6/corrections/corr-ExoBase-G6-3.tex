@@ -1,3 +1,73 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    Entourer les triangles dans lesquels \mbox{$cos(\widehat{EGF})=\dfrac{GF}{GE}$} et barrer les autres.
+
+    \begin{minipage}{0.45\linewidth}
+        \begin{Geometrie}
+            pair E,F,G,C;
+            E=u*(1,2);
+            F-E=u*(1,1);
+            G=1.4[F,rotation(E,F,90)];
+            C=iso(E,G);
+            trace polygone(E,F,G);
+            trace segment(F,C);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(E,C,C,G,C,F,2);
+            label.lft(TEX("E"),E);
+            label.top(TEX("F"),F);
+            label.rt(TEX("G"),G);
+            label.bot(TEX("C"),C);
+            trace cercles(iso(E,F,G),1.5u) withcolor red;
+        \end{Geometrie}
+        \textcolor{red}{$EFG$ est bien rectangle, on peut le justifier à l'aide des triangles isocèles et de la somme des angles d'un triangle.}
+
+        \bigskip
+        \begin{Geometrie}
+            pair E,F,G;
+            E=u*(3,1);
+            F-E=u*(-2,1);
+            G=0.7[E,rotation(F,E,-90)];
+            trace polygone(E,F,G);
+            trace cotationmil(F,E,-3mm,15,TEX("\Lg[cm]{4}"));
+            trace cotationmil(E,G,-3mm,15,TEX("\Lg[cm]{3}"));
+            trace cotationmil(F,G,3mm,15,TEX("\Lg[cm]{5}"));
+            label.bot(TEX("E"),E);
+            label.lft(TEX("F"),F);
+            label.urt(TEX("G"),G);
+            trace segment(F+(0.2u,0.5u),E+(0.2u,-0.2u)) withcolor red;
+            trace segment(F+(0.2u,-u),G+(0.2u,0.2u)) withcolor red;
+        \end{Geometrie}
+        \textcolor{red}{$EFG$ est bien rectangle grâce à la réciproque du théorème de Pythagore mais $cos(\widehat{EGF})\neq\dfrac{GF}{GE}$.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\linewidth}
+        \begin{Geometrie}
+            pair E,F,G;
+            E=u*(1,2);
+            F-E=u*(1,1);
+            G=1.4[F,rotation(E,F,90)];
+            trace codeperp(E,F,G,5);
+            trace polygone(E,F,G);
+            label.lft(TEX("E"),E);
+            label.top(TEX("G"),F);
+            label.rt(TEX("F"),G);
+            trace segment(G+(0,-0.2u),E+(0,1.5u)) withcolor red;
+            trace segment(F+(u,0),E+(-0.2u,-0.2u)) withcolor red;
+        \end{Geometrie}
+        \textcolor{red}{$EFG$ est bien rectangle mais $\widehat{EGF}=\ang{90}$.}
+
+        \bigskip
+        \begin{Geometrie}
+            pair E,F,G;
+            E=u*(1,1);
+            F-E=u*(3,1);
+            G=0.6[F,rotation(E,F,-90)];
+            trace codeperp(E,F,G,5);
+            trace polygone(E,F,G);
+            label.lft(TEX("E"),E);
+            label.rt(TEX("F"),F);
+            label.top(TEX("G"),G);
+            trace cercles(iso(E,F,G),2u) withcolor red;
+        \end{Geometrie}
+        \textcolor{red}{$EFG$ est bien rectangle et $cos(\widehat{EGF})\neq\dfrac{GF}{GE}$.}
+    \end{minipage}
