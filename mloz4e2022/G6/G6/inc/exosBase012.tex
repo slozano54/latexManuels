@@ -1,9 +1,58 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Longueur de l'hypoténuse]
+    On considère cette figure.
+
+    \begin{center}
+        \begin{Geometrie}
+            pair I,V,U;
+            V=u*(1,1);
+            I-V=u*(3,1);
+            U=0.4[I,rotation(V,I,90)];
+            trace polygone(V,I,U);
+            trace codeperp(V,I,U,5);
+            trace cotationmil(V,I,3mm,15,TEX("\Lg[cm]{3.5}"));
+            marque_a:=1.2*marque_a;                
+            trace Codeangle(U,V,I,0,TEX("\ang{21}")) withpen pencircle scaled 1bp;
+            label.llft(TEX("V"),V);
+            label.lrt(TEX("U"),U);
+            label.urt(TEX("I"),I);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Dans le triangle $VUI$, rectangle en $I$, exprimer le cosinus de l'angle $\widehat{IVU}$ en fonction des longueurs des côtés.
+        \item Exprimer alors la longueur $VU$ en fonction de $IV$ et du cosinus de l'angle $\widehat{IVU}$.
+        \item À l'aide de la calculatrice, déduire la mesure, arrondie au millimètre, de la longueur $VU$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    On considère cette figure.
+
+    \begin{Geometrie}
+        pair I,V,U;
+        V=u*(1,1);
+        I-V=u*(3,1);
+        U=0.4[I,rotation(V,I,90)];
+        trace polygone(V,I,U);
+        trace codeperp(V,I,U,5);
+        trace cotationmil(V,I,3mm,15,TEX("\Lg[cm]{3.5}"));
+        marque_a:=1.2*marque_a;                
+        trace Codeangle(U,V,I,0,TEX("\ang{21}")) withpen pencircle scaled 1bp;
+        label.llft(TEX("V"),V);
+        label.lrt(TEX("U"),U);
+        label.urt(TEX("I"),I);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Dans le triangle $VUI$, rectangle en $I$, exprimer le cosinus de l'angle $\widehat{IVU}$ en fonction des longueurs des côtés.
+        
+        {\color{red} $cos(\widehat{IVU})=\dfrac{IV}{UV}$}
+        \item Exprimer alors la longueur $VU$ en fonction de $IV$ et du cosinus de l'angle $\widehat{IVU}$.
+        
+        {\color{red} $UV=\dfrac{IV}{cos(\widehat{IVU})}$}
+        \item À l'aide de la calculatrice, déduire la mesure, arrondie au millimètre, de la longueur $VU$.
+        
+        {\color{red} $UV=\dfrac{IV}{cos(\widehat{IVU})}=\dfrac{\num{3.5}}{cos(\ang{21})}\approx\Lg[cm]{3.7}$}
+    \end{enumerate}
 \end{corrige}
 

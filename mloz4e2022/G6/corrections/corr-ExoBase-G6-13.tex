@@ -1,3 +1,38 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    On considère cette figure.
+
+    \begin{Geometrie}
+        pair I,V,U;
+        U=u*(1,1);
+        I-U=u*(2,2);
+        V=1.3[I,rotation(U,I,90)];
+        trace polygone(V,I,U);
+        trace codeperp(V,I,U,5);
+        trace cotationmil(U,V,-3mm,15,TEX("\Lg[cm]{6}"));
+        marque_a:=0.8*marque_a;
+        trace Codeangle(I,V,U,0,TEX("\textbf{?}")) withpen pencircle scaled 1bp;
+        trace Codeangle(V,U,I,0,TEX("\ang{55}")) withpen pencircle scaled 1bp;
+        label.lrt(TEX("V"),V);
+        label.llft(TEX("U"),U);
+        label.top(TEX("I"),I);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Avec ces données, indiquer la longueur que l'on peut calculer. La calculer et arrondir au millimètre.
+
+        {\color{red}Dans le triangle $VUI$ rectangle en $I$, on connait la longueur de l'hypoténuse et l'angle $\widehat{VUI}$ on peut donc calculer le côté adjacent à cet angle, $UI$.
+
+        \Trigo[Cosinus,Precision=1]{UIV}{}{6}{55}
+        }
+    % \end{enumerate}
+    % \Coupe
+    % \begin{enumerate}
+    %     \setcounter{enumi}{1}
+        \item Détermne la la mesure de l'angle $\widehat{IVU}$. Justifier.
+
+        {\color{red} Dans un triangle rectangle, les angles aigus sont complémentaires, donc $\widehat{IVU}=\ang{90}-\widehat{IUV}=\ang{90}-\ang{55}=\ang{35}$.}
+        \item En déduire la longueur du troisième côté du triangle $IVU$.
+
+        {\color{red}\Trigo[Cosinus,Precision=1]{VIU}{}{6}{35}}
+    \end{enumerate}
