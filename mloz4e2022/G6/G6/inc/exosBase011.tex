@@ -1,9 +1,58 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Longueur du côté adjacent]
+    On considère cette figure.
+
+    \begin{center}
+        \begin{Geometrie}
+            pair I,K,J;
+            I=u*(1,1);
+            K-I=u*(3,0.5);
+            J=0.8[K,rotation(I,K,-90)];
+            trace polygone(I,K,J);
+            trace codeperp(J,K,I,5);
+            trace cotationmil(I,J,3mm,15,TEX("\Lg[cm]{6}"));
+            marque_a:=0.6*marque_a;                
+            trace Codeangle(I,J,K,0,TEX("\ang{53}")) withpen pencircle scaled 1bp;
+            label.urt(TEX("J"),J);
+            label.lrt(TEX("K"),K);
+            label.llft(TEX("I"),I);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Dans le triangle $IJK$, rectangle en $K$, exprimer le cosinus de l'angle $\widehat{IJK}$ en fonction des longueurs des côtés.
+        \item Exprimer alors la longueur JK en fonction de IJ et du cosinus de l'angle $\widehat{IJK}$.
+        \item À l'aide de la calculatrice, déduire la mesure, arrondie au millimètre, de la longueur $JK$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    On considère cette figure.
+
+    \begin{Geometrie}
+        pair I,K,J;
+        I=u*(1,1);
+        K-I=u*(3,0.5);
+        J=0.8[K,rotation(I,K,-90)];
+        trace polygone(I,K,J);
+        trace codeperp(J,K,I,5);
+        trace cotationmil(I,J,3mm,15,TEX("\Lg[cm]{6}"));
+        marque_a:=0.6*marque_a;                
+        trace Codeangle(I,J,K,0,TEX("\ang{53}")) withpen pencircle scaled 1bp;
+        label.urt(TEX("J"),J);
+        label.lrt(TEX("K"),K);
+        label.llft(TEX("I"),I);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Dans le triangle $IJK$, rectangle en $K$, exprimer le cosinus de l'angle $\widehat{IJK}$ en fonction des longueurs des côtés.
+        
+        {\color{red} $cos(\widehat{IJK})=\dfrac{JK}{IJ}$}
+        \item Exprimer alors la longueur JK en fonction de IJ et du cosinus de l'angle $\widehat{IJK}$.
+        
+        {\color{red} $JK=IJ\times cos(\widehat{IJK})$}
+        \item À l'aide de la calculatrice, déduire la mesure, arrondie au millimètre, de la longueur $JK$.
+        
+        {\color{red} $JK=IJ\times cos(\widehat{IJK})=6\times cos(\ang{53})\approx\Lg[cm]{3.6}$}
+    \end{enumerate}
 \end{corrige}
 

@@ -1,3 +1,48 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    Pour chaque figure, calculer la mesure de l'angle indiqué par un \og{}\textbf{?}\fg{}, arrondir au degré. Détailler la rédaction.
+
+    \begin{enumerate}
+        \item \textbf{Figure 1}
+
+        \begin{Geometrie}
+            pair I,K,S;
+            I=u*(6,1);
+            S-I=u*(0,2);
+            K-I=u*(-sqrt(32),0);
+            trace polygone(I,K,S);
+            trace codeperp(S,I,K,5);
+            trace cotationmil(I,S,-3mm,15,TEX("\Lg[cm]{2}"));
+            trace cotationmil(K,S,3mm,15,TEX("\Lg[cm]{6}"));
+            marque_a:=0.6*marque_a;
+            trace Codeangle(K,S,I,0,TEX("\textbf{?}")) withpen pencircle scaled 1bp;
+            label.urt(TEX("S"),S);
+            label.llft(TEX("K"),K);
+            label.lrt(TEX("I"),I);
+        \end{Geometrie}
+
+        \textcolor{red}{\Trigo[Cosinus]{SIK}{2}{6}{}}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item \textbf{Figure 2}
+
+        \begin{Geometrie}
+            pair F,U,N;
+            F=u*(1,3.5);
+            N-F=u*(4.15,0);
+            U-F=u*(0,-0.5*sqrt(31.11));
+            trace polygone(F,U,N);
+            trace codeperp(U,F,N,5);
+            trace cotationmil(F,N,3mm,15,TEX("\Lg[cm]{8.3}"));
+            trace cotationmil(U,N,-3mm,15,TEX("\Lg[cm]{10}"));
+            marque_a:=0.7*marque_a;
+            trace Codeangle(F,N,U,0,TEX("\textbf{?}")) withpen pencircle scaled 1bp;
+            label.urt(TEX("N"),N);
+            label.llft(TEX("U"),U);
+            label.ulft(TEX("F"),F);
+        \end{Geometrie}
+
+        \textcolor{red}{\Trigo[Cosinus]{NFU}{8.3}{10}{}}
+    \end{enumerate}

@@ -1,9 +1,53 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Mesure d'un angle]
+    On considère cette figure.
+    \begin{center}
+        \begin{Geometrie}
+            pair E,F,G;
+            F=u*(1,1);
+            E-F=u*(0,2);
+            G-F=u*(0.5*sqrt(33),0);
+            trace polygone(E,F,G);
+            trace codeperp(G,F,E,5);
+            trace cotationmil(F,E,3mm,15,TEX("\Lg[cm]{4}"));
+            trace cotationmil(E,G,3mm,15,TEX("\Lg[cm]{7}"));
+            label.ulft(TEX("E"),E);
+            label.llft(TEX("F"),F);
+            label.lrt(TEX("G"),G);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Exprimer le cosinus de l'angle $\widehat{FEG}$.
+        \vspace*{20mm}
+        \item Calculer la mesure de l'angle $\widehat{FEG}$, arrondir au degré près.
+        \vfill
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    On considère cette figure.
+    \begin{center}
+        \begin{Geometrie}
+            pair E,F,G;
+            F=u*(1,1);
+            E-F=u*(0,2);
+            G-F=u*(0.5*sqrt(33),0);
+            trace polygone(E,F,G);
+            trace codeperp(G,F,E,5);
+            trace cotationmil(F,E,3mm,15,TEX("\Lg[cm]{4}"));
+            trace cotationmil(E,G,3mm,15,TEX("\Lg[cm]{7}"));
+            label.ulft(TEX("E"),E);
+            label.llft(TEX("F"),F);
+            label.lrt(TEX("G"),G);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Exprimer le cosinus de l'angle $\widehat{FEG}$.
+        
+        {\color{red}Dans le triangle $EFG$ rectangle en $F$, $cos(\widehat{FEG})=\dfrac{FE}{EG}=\dfrac47$}
+        \item Calculer la mesure de l'angle $\widehat{FEG}$, arrondir au degré près.
+        
+        {\color{red}$cos(\widehat{FEG})=\dfrac47$ d'où $\widehat{FEG}=cos^{-1}\left(\dfrac47\right)\approx\ang{55}$.}
+    \end{enumerate}
 \end{corrige}
 
