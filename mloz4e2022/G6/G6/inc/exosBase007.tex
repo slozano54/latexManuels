@@ -1,9 +1,82 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Trois triangles]
+    On considère cette figure.
+
+    \begin{center}
+        \begin{Geometrie}
+            pair A,B,D,E,F,G,P;
+            A=u*(1,1);
+            D-A=u*(4,3);
+            B=0.7[D,rotation(A,D,90)];            
+            G=.3[A,B];
+            P=.7[A,D];
+            F=projection(G,A,D);
+            E=projection(P,A,B);
+            trace polygone(A,B,D);
+            trace segment(F,G);
+            trace segment(P,E);
+            trace codeperp(A,F,G,5);
+            trace codeperp(B,E,P,5);
+            trace codeperp(A,D,B,5);
+            label.lft(TEX("A"),A);
+            label.top(TEX("F"),F);
+            label.bot(TEX("G"),G);
+            label.top(TEX("P"),P);
+            label.top(TEX("D"),D);
+            label.bot(TEX("E"),E);
+            label.rt(TEX("B"),B);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Écrire le cosinus de l'angle $\widehat{DAB}$ de trois façons différentes, en précisant le triangle utilisé.
+        \item Faire une remarque justifiée sur ces trois rapports.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    On considère cette figure.
+
+    \begin{center}
+        \begin{Geometrie}
+            pair A,B,D,E,F,G,P;
+            A=u*(1,1);
+            D-A=u*(4,3);
+            B=0.7[D,rotation(A,D,90)];            
+            G=.3[A,B];
+            P=.7[A,D];
+            F=projection(G,A,D);
+            E=projection(P,A,B);
+            trace polygone(A,B,D);
+            trace segment(F,G);
+            trace segment(P,E);
+            trace codeperp(A,F,G,5);
+            trace codeperp(B,E,P,5);
+            trace codeperp(A,D,B,5);
+            label.lft(TEX("A"),A);
+            label.top(TEX("F"),F);
+            label.bot(TEX("G"),G);
+            label.top(TEX("P"),P);
+            label.top(TEX("D"),D);
+            label.bot(TEX("E"),E);
+            label.rt(TEX("B"),B);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Écrire le cosinus de l'angle $\widehat{DAB}$ de trois façons différentes, en précisant le triangle utilisé.
+        
+        {\color{red}
+        \begin{itemize}
+            \def\item{$\bullet$}
+            \item Dans le triangle $ADB$ rectangle en $D$, $cos(\widehat{DAB})=\dfrac{AD}{AB}$
+            
+            \item Dans le triangle $APE$ rectangle en $E$, $cos(\widehat{DAB})=\dfrac{AE}{AP}$
+            
+            \item Dans le triangle $AFG$ rectangle en $F$, $cos(\widehat{DAB})=\dfrac{AF}{AG}$
+        \end{itemize}
+        }
+        \item Faire une remarque justifiée sur ces trois rapports.
+        
+        \textcolor{red}{Ces trois rapports représentent tous le cosinus de l'angle $\widehat{DAB}$, ils sont donc égaux. $$\dfrac{AD}{AB}=\dfrac{AE}{AP}=\dfrac{AF}{AG}$$}
+    \end{enumerate}
 \end{corrige}
 

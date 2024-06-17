@@ -1,3 +1,37 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    On considère cette figure.
+
+    \begin{center}
+        \scalebox{1}{
+        \begin{Geometrie}
+            pair E,F,G,H,I;
+            G=u*(3.5,3);
+            H-G=u*(2,0.5);
+            I=0.7[I,rotation(G,H,90)];
+            E=2.3[I,G];
+            F=2.3[H,G];
+            trace polygone(G,H,I);
+            trace codeperp(G,H,I,5);
+            trace polygone(G,E,F);
+            trace Codeangle(I,G,H,0,TEX("\ang{40}"));
+            trace Codeangle(F,E,G,0,TEX("\ang{50}"));
+            label.ulft(TEX("E"),E);
+            label.llft(TEX("F"),F);
+            label.top(TEX("G"),G);
+            label.urt(TEX("H"),H);
+            label.lrt(TEX("I"),I);
+        \end{Geometrie}
+        }
+    \end{center}
+    \begin{enumerate}
+        \item Déterminer la mesure de l'angle $\widehat{EGF}$. Justifier.
+
+        \textcolor{red}{Les angles $\widehat{EGF}$ et $\widehat{HGI}$ sont opposés par le sommet or $\widehat{HGI}=\ang{40}$ donc $\widehat{EGF}=\ang{40}$.}
+        \item Montrer que le triangle $EFG$ est rectangle \mbox{en $F$}.
+
+        \textcolor{red}{Dans un triangle la somme des angles vaut \ang{180} donc $\widehat{EFG}=\ang{180}-\ang{50}-\ang{40}=\ang{90}$, le triangle $EFG$ est donc bien rectangle en $F$.}
+        \item Exprimer alors le cosinus de l'angle $\widehat{EGF}$. Justifier.
+
+        \textcolor{red}{Le triangle $EFG$ est rectangle en $F$, donc $cos(\widehat{EGF})=\dfrac{GF}{EG}$.}
+    \end{enumerate}
