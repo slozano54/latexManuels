@@ -1,9 +1,95 @@
-\begin{exercice*}
-    \dots
+\begin{exercice*}[Dans un cercle]
+    On considère cette figure sur laquelle on admet que le triangle $PEO$ est rectangle en $P$ et le triangle $EOF$ est rectangle en $F$.
+    \begin{center}
+        \begin{Geometrie}
+            pair P,O,F,E,centre;
+            numeric rayon;
+            rayon=2.5;
+            E=u*(1,1);
+            O-E=u*(rayon*sqrt(2),rayon*sqrt(2));
+            centre=iso(O,E);
+            path cc;
+            cc=cercle(centre,rayon*u);
+            trace cc;
+            trace segment (O,E);
+            P=pointarc(cc,165);
+            F=pointarc(cc,-30);
+            trace polygone(P,E,F,O);
+            trace appelation(E,O,2mm,TEX("\Lg[cm]{55}"));
+            trace appelation(F,O,2mm,TEX("\Lg[cm]{36}"));
+            marque_a:=0.8*marque_a;                
+            trace Codeangle(P,O,E,0,TEX("\ang{37}")) withpen pencircle scaled 1bp;
+            label.llft(TEX("E"),E);
+            label.urt(TEX("O"),O);
+            label.ulft(TEX("P"),P);
+            label.lrt(TEX("F"),F);
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Coder la figure.
+        \item Indiquer ce qu'ont les triangles $PEO$ et $EOF$ en commun.
+        \item Calculer la mesure de l'angle $\widehat{EOF}$. Arrondir au degré.
+        \item Calculer la longueur $PO$. Arrondir au millimètre.
+        \item Calculer de deux façons différentes la longueur $EF$. Arrondir au millimètre.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    On considère cette figure sur laquelle on admet que le triangle $PEO$ est rectangle en $P$ et le triangle $EOF$ est rectangle en $F$.
+
+    \begin{Geometrie}
+        pair P,O,F,E,centre;
+        numeric rayon;
+        rayon=2.5;
+        E=u*(1,1);
+        O-E=u*(rayon*sqrt(2),rayon*sqrt(2));
+        centre=iso(O,E);
+        path cc;
+        cc=cercle(centre,rayon*u);
+        trace cc;
+        trace segment (O,E);
+        P=pointarc(cc,165);
+        F=pointarc(cc,-30);
+        trace polygone(P,E,F,O);
+        trace appelation(E,O,2mm,TEX("\Lg[cm]{55}"));
+        trace appelation(F,O,2mm,TEX("\Lg[cm]{36}"));
+        marque_a:=0.8*marque_a;                
+        trace Codeangle(P,O,E,0,TEX("\ang{37}")) withpen pencircle scaled 1bp;
+        label.llft(TEX("E"),E);
+        label.urt(TEX("O"),O);
+        label.ulft(TEX("P"),P);
+        label.lrt(TEX("F"),F);
+        trace codeperp(E,P,O,5) withcolor red;
+        trace codeperp(O,F,E,5) withcolor red;
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Coder la figure.
+        \item Indiquer ce qu'ont les triangles $PEO$ et $EOF$ en commun.
+        
+        \textcolor{red}{les triangles $PEO$ et $EOF$ ont la même hypoténuse.}
+        \item Calculer la mesure de l'angle $\widehat{EOF}$. Arrondir au degré.
+        
+        {\color{red}\Trigo[Cosinus,Precision=0]{FOE}{36}{55}{}}
+        \item Calculer la longueur $PO$. Arrondir au millimètre.
+        
+        {\color{red}\Trigo[Cosinus,Precision=1]{POE}{}{55}{37}}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Calculer de deux façons différentes la longueur $EF$. Arrondir au millimètre.
+        
+        {\color{red}\textbf{Méthode 1 :}
+        
+        $\widehat{EOF}\approx\ang{49}$ donc $\widehat{OEF}\approx\ang{90}-\ang{49} \text{ soit } \ang{41}$
+        \Trigo[Cosinus,Precision=1]{FOE}{}{55}{41}
+
+        \textbf{Méthode 2 :} avec le théorème de Pythagore
+
+        \Pythagore[Precision=1]{EFO}{55}{36}{}
+        }
+    \end{enumerate}
 \end{corrige}
 

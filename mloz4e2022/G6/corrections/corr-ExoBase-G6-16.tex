@@ -1,3 +1,43 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    $TICE$ est un losange de côté \Lg[cm]{7} tel que $\widehat{TIC}=\ang{64}$.
+
+    \begin{Geometrie}
+        pair T,I,C,E,O;
+        T=u*(1,4);
+        C-T=u*(2.5,0);
+        O=iso(T,C);
+        I-O=u*(0,2.5);
+        E-O=u*(0,-2.5);
+        trace polygone(T,I,C,E);
+        trace segment(I,E);
+        trace segment(T,C);
+        label.lft(TEX("T"),T);
+        label.rt(TEX("C"),C);
+        label.top(TEX("I"),I);
+        label.bot(TEX("E"),E);
+        label.urt(TEX("O"),O);
+    \end{Geometrie}
+    \begin{enumerate}
+        \item Justifier la position relative des droites $(IE)$ et $(TC)$.
+
+        {\color{red}Les diagonales d'un losange sont perpendiculaires, or $TICE$ est un losange, donc $(IE)$ et $(TC)$ sont perpendiculaires.}
+        \item Déterminer les mesures des angles $\widehat{TIE}$ et $\widehat{EIC}$. Justifier.
+
+        {\color{red}Les diagonales d'un losange sont des axes de symétrie de ce losange, or $TICE$ est un losange, donc $\widehat{TIE}=\widehat{EIC}=\dfrac{\widehat{TIC}}{2}=\ang{32}$.}
+        \item Calculer la longueur $IO$, arrondie au millimètre.
+
+        {\color{red}$(IE)$ et $(TC)$ sont perpendiculaires donc le triangle $TIO$ est rectangle en $O$.
+
+        \Trigo[Cosinus,Precision=1]{OIT}{}{7}{32}
+        }
+        \item En déduire, en justifiant, la longueur de la diagonale $[IE]$, arrondie au millimètre.
+
+        {\color{red}Les diagonales d'un losange ont le même milieu, or $TICE$ est un losange donc O est e milieu de $[IE]$ et $[TC]$ d'où $IE=IO\times 2\approx\Lg[cm]{5.9}\times 2$ soit \Lg[cm]{11.8}.}
+        \item Calculer $TO$, puis $TC$, en arrondissant au millimètre.
+
+        {\color{red}\Pythagore[Precision=1]{TOI}{7}{5.9}{}
+
+        Comme dans la question précédente, $TC=2\times TO\approx\Lg[cm]{7.5}$.
+        }
+    \end{enumerate}

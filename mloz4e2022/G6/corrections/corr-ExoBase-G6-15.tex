@@ -1,3 +1,33 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    On considère cette figure.
+    \begin{Geometrie}
+        pair L,K,J[],P[];
+        L=u*(1,1);
+        K-L=u*(4.25,0);
+        P0=rotation(K,L,35);
+        P1=projection(K,L,P0);
+        J0=rotation(K,P1,37);
+        J1=projection(K,P1,J0);
+        trace polygone(L,K,P1);
+        trace polygone(J1,K,P1);
+        trace codeperp(L,P1,K,5);
+        trace codeperp(P1,J1,K,5);
+        marque_a:=0.8*marque_a;
+        trace Codeangle(P1,K,L,0,TEX("\ang{55}")) withpen pencircle scaled 1bp;
+        trace Codeangle(K,P1,J1,0,TEX("\ang{37}")) withpen pencircle scaled 1bp;
+        trace appelation(L,K,-3mm,TEX("\Lg[cm]{8.5}"));
+        label.llft(TEX("L"),L);
+        label.lrt(TEX("K"),K);
+        label.top(TEX("P"),P1);
+        label.urt(TEX("J"),J1);
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Calculer la longueur $PK$, arrondie au millimètre.
+
+        {\color{red}\Trigo[Cosinus,Precision=1]{KPL}{}{8.5}{55}}
+        \item En déduire la longueur $PJ$, arrondie au mm.
+
+        {\color{red}\Trigo[Cosinus,Precision=1]{PJK}{}{4.9}{37}}
+    \end{enumerate}
