@@ -1,5 +1,93 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Représentations graphiques et interprétation}
+    
+    \begin{definition}[Diagramme en bandes]
+        Dans un \textbf{diagramme en bandes}, l'\textbf{aire de chaque bande} est proportionnelle à l'effectif qu'elle représente.
+    \end{definition}
+    \begin{definition}[Diagramme en barres ou diagramme bâtons]
+        Dans un \textbf{diagramme en barres ou en bâtons}, la \textbf{hauteur de chaque barre ou bâton} est proportionnelle à l'effectif qu'elle représente.
+    \end{definition}
+    \begin{exemples*1}
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|}
+                \cline{2-6}
+                \multicolumn{1}{c|}{}&6e&5e&4e&3e&Total\\
+                \hline
+                Effectifs (Nombre d'élèves)&150&200&150&100&600\\
+                \hline
+            \end{tabular}
+        
+            \medskip
+            En bandes\\\smallskip
+            % \includegraphics[scale=0.8]{figures/coursstatistique.1} 
+            \begin{Geometrie}
+                pair A,B,C,D,E,F,G,H,I,J;
+                A=u*(1,1);
+                B-A=u*(1.5,0);
+                C-B=u*(2,0);
+                D-C=u*(1.5,0);
+                E-D=u*(1,0);
+                F-E=u*(0,1);
+                G-F=u*(-1,0);
+                H-G=u*(-1.5,0);
+                I-H=u*(-2,0);
+                J-I=u*(-1.5,0);
+                trace polygone(A,E,F,J);
+                trace segment(I,B);
+                trace segment(H,C);
+                trace segment(G,D);
+                label(TEX("6e"),iso(iso(A,J),iso(I,B)));
+                label(TEX("5e"),iso(iso(I,B),iso(H,C)));
+                label(TEX("4e"),iso(iso(H,C),iso(G,D)));
+                label(TEX("3e"),iso(iso(G,D),iso(E,F)));
+            \end{Geometrie}
+            
+            \medskip
+            En barres\\\smallskip
+            \scalebox{0.8}{%
+                \Stat[Qualitatif,Graphique,Donnee=Niveau,Effectif=Nombre d'élèves,Unitey=0.02,Pasy=40,Unitex=2,Grille,LectureFine]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}
+            }
+        \end{center}
+    \end{exemples*1}
+    \begin{minipage}{0.8\linewidth}
+        \begin{definition}[Diagramme circulaire ou camembert]
+            Dans un \textbf{diagramme circulaire ou camembert}, l'\textbf{angle de chaque secteur} est proportionnel à l'effectif qu'elle représente.
+        
+            L'effectif total est représenté par \ang{360}.   
+        \end{definition}
+    \end{minipage}
+    \hspace*{-15mm}
+    \begin{minipage}{0.2\linewidth}
+        \begin{center}
+            \scalebox{0.6}{\Stat[Qualitatif,Graphique,Angle,Hachures,AffichageAngle]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}}
+        \end{center}
+    \end{minipage}   
+
+    \begin{minipage}{0.8\linewidth}
+        \begin{definition}[Diagramme semi-circulaire]
+        Dans un \textbf{diagramme semi-circulaire}, l'\textbf{angle de chaque secteur} est proportionnel à l'effectif qu'elle représente.
+        \par
+        L'effectif total est représenté par \ang{180}.
+        \end{definition}
+     \end{minipage}
+     \hspace*{-15mm}
+     \begin{minipage}{0.2\linewidth}
+        \begin{center}
+           \scalebox{0.6}{\Stat[Qualitatif,Graphique,SemiAngle,Hachures,AffichageAngle]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}}
+        \end{center}
+     \end{minipage}
+    \begin{definition}[Graphique cartésien]
+        Un graphique cartésien permet de représenter l'évolution d'une grandeur \textbf{en fonction} d'une autre.
+    \end{definition}
+    \begin{exemple*1}
+        \titreExemple{Relevé des températures au cours d'une matinée à Lyon}
+
+        \begin{center}      
+            \Stat[Representation,Grille,Graduations,Xmin=0,Ymin=0,Xmax=12,Ymax=12,Xstep=0.8,Ystep=2,%
+                PasGrilleX=1,PasGrilleY=2,RelieSegment,LabelX=Heure,LabelY=Températures en \Temp{}]{%
+                0/2,1/2,2/1.25,3/1,4/1,5/0.5,6/1,7/2,8/4,9/5,10/8,11/10
+            }
+        \end{center}
+    \end{exemple*1}
 \end{changemargin}
  
