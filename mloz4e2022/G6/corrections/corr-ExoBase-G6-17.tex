@@ -1,3 +1,38 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}
-    \dots
+    $[A'B']$ est l'image de $[AB]$ sur l'écran d'une chambre noire d'un appareil photo d'orifice $O$.
+
+    \begin{Geometrie}
+        pair A,A',B,B',O;
+        O=u*(2,2);
+        B-O=u*(sqrt(9.8),0);
+        A-B=u*(0,2.8);
+        B'=1.5[A,O];
+        A'=1.5[B,O];
+        trace segment(A',B);
+        trace segment(A,B') dashed evenly;
+        drawarrow A'--B' withpen pencircle scaled 1bp;
+        drawarrow B--A withpen pencircle scaled 1bp;
+        trace codeperp(A,B,O,5);
+        trace codeperp(B',A',O,5);
+        trace appelation(O,A,3mm,TEX("\Lg[m]{2.10}"));
+        trace appelation(B,A,-3mm,TEX("\Lg[m]{1.40}"));
+        trace appelation(B',O,-3mm,TEX("\Lg[m]{0.03}"));
+        label.top(TEX("A'"),A');
+        label.urt(TEX("A"),A);
+        label.rt(TEX("B"),B);
+        label.ulft(TEX("O"),O);
+        label.bot(TEX("B'"),B');
+    \end{Geometrie}
+
+    \begin{enumerate}
+        \item Démontrer l'égalité des angles $\widehat{A'B'O}$ et $\widehat{OAB}$.
+
+        {\color{red}$(AB)$ et $(A'B')$ sont toutes les deux perpendiculaires à la même droite, $(A'B)$, elles sont donc parallèles.
+        Les parallèles $(AB)$ et $(A'B')$ déterminent donc avec la sécante $(AB')$, des angles alternes-internes $\widehat{A'B'O}$ et $\widehat{OAB}$ de même mesure.}
+        \item Écrire $\text{cos}(\widehat{A'B'O})$ en fonction de $A'B'$ puis, en utilisant $\text{cos}(\widehat{OAB})$, en déduire la valeur exacte de la longueur $A'B'$.
+
+        {\color{red}LE triangle $OA'B'$ est rectangle en $A'$ sonc : $\text{cos}(\widehat{A'B'O})=\dfrac{A'B'}{B'O}=\dfrac{A'B'}{\num{0.03}}$.
+        De plus, $\text{cos}(\widehat{A'B'O})=\text{cos}(\widehat{OAB})=\dfrac{\num{1.4}}{\num{2.1}}$ d'où $A'B'=\dfrac{\num{0.03}\times\num{1.4}}{\num{2.1}}=\Lg[m]{0.02}$
+        }
+    \end{enumerate}

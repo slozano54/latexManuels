@@ -1,9 +1,31 @@
 \begin{exercice*}
-    \dots
+    Un sous-marin (S), situé à \Lg[m]{728} d'un iceberg (I), veut plonger pour passer sous celui-ci.
+    \begin{center}
+        \includegraphics[scale=0.5]{\currentpath/images/icebergSousMarin.png}
+    \end{center}
+    \begin{enumerate}
+        \item Pour \Lg[m]{1} au-dessus de l'eau, il y a environ \Lg[m]{8} en dessous. Calculer la hauteur de la partie immergée de l'iceberg, puis sa hauteur totale.
+        \item Calculer la longueur $SP$, en justifiant.
+        \item Calculer la mesure de l'angle $\widehat{ISP}$, c'est l'angle de plongée du sous-marin, arrondie au degré.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
-    \dots
+    Un sous-marin (S), situé à \Lg[m]{728} d'un iceberg (I), veut plonger pour passer sous celui-ci.
+
+    \includegraphics[scale=0.5]{\currentpath/images/icebergSousMarin.png}
+
+    \begin{enumerate}
+        \item Pour \Lg[m]{1} au-dessus de l'eau, il y a environ \Lg[m]{8} en dessous. Calculer la hauteur de la partie immergée de l'iceberg, puis sa hauteur totale.
+
+        {\color{red}Puisque pour \Lg[m]{6} au-dessus de l'eau, environ \Lg[m]{8} sont immergés, la partie immergée de cet iceberg mesure environ \Lg[m]{48}, sa hauteur totale est donc de \Lg[m]{54}.}
+        \item Calculer la longueur $SP$, en justifiant.
+        
+        {\color{red}\Pythagore[Precision=1,Unite=m]{PIS}{54}{728}{}}
+        \item Calculer la mesure de l'angle $\widehat{ISP}$, c'est l'angle de plongée du sous-marin, arrondie au degré.
+        
+        {\color{red}\Trigo[Cosinus,Precision=0]{SIP}{728}{730}{}}
+    \end{enumerate}
 \end{corrige}
 
