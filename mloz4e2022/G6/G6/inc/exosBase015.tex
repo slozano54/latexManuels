@@ -1,6 +1,7 @@
 \begin{exercice*}[En deux temps]
     On considère cette figure.
     \begin{center}
+        \scalebox{1.2}{
         \begin{Geometrie}
             pair L,K,J[],P[];
             L=u*(1,1);
@@ -22,6 +23,7 @@
             label.top(TEX("P"),P1);
             label.urt(TEX("J"),J1);
         \end{Geometrie}
+        }
     \end{center}
     \begin{enumerate}
         \item Calculer la longueur $PK$, arrondie au millimètre.
@@ -32,6 +34,8 @@
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     %\phantom{rrr}    
     On considère cette figure.
+
+    \scalebox{0.7}{
     \begin{Geometrie}
         pair L,K,J[],P[];
         L=u*(1,1);
@@ -53,11 +57,16 @@
         label.top(TEX("P"),P1);
         label.urt(TEX("J"),J1);
     \end{Geometrie}
-
+    }
+    
     \begin{enumerate}
         \item Calculer la longueur $PK$, arrondie au millimètre.
         
         {\color{red}\Trigo[Cosinus,Precision=1]{KPL}{}{8.5}{55}}
+    \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{1}
         \item En déduire la longueur $PJ$, arrondie au mm.
         
         {\color{red}\Trigo[Cosinus,Precision=1]{PJK}{}{4.9}{37}}
