@@ -41,7 +41,21 @@ $150$ en $6^e$; $200$ en $5^e$; $150$ en $4^e$; $100$ en $3^e$
 Dans un \textbf{diagramme en barres ou en bâtons}, la \textbf{hauteur de chaque barre ou bâton} est proportionnelle à l'effectif qu'elle repr\'esente.
 \end{definition}
 \begin{center}
-\scalebox{0.8}{\Stat[Qualitatif,Graphique,Donnee=Niveau,Effectif=Nombre d'élèves,Unitey=0.02,Pasy=40,Unitex=2,Grille,LectureFine]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}}
+   % \scalebox{0.8}{\Stat[Qualitatif,Graphique,Donnee=Niveau,Effectif=Nombre d'élèves,Unitey=0.02,Pasy=40,Unitex=2,Grille,LectureFine]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}}
+   \scalebox{0.8}{%
+   \Stat[%
+      Qualitatif,
+      Graphique,
+      Donnee=Niveau,
+      Effectif=Nombre d'élèves,
+      Unitex=2,AngleRotationAbscisse=60,
+      Unitey=0.03,Pasy=25,PasGrilley=25,
+      Grille,LectureFine,
+      ListeCouleursB={Crimson,Brown,LightBlue,Olive},
+      EpaisseurBatons=2]{%
+         6e/150,5e/200,4e/150,3e/100%
+      }
+}
 \end{center}
 \subsection{Diagramme circulaire ou camembert}
 \vspace*{-15mm}
