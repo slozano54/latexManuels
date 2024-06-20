@@ -17,7 +17,7 @@
                 \hline
             \end{tabular}
         
-            \medskip
+            \bigskip
             En bandes\\\smallskip
             % \includegraphics[scale=0.8]{figures/coursstatistique.1} 
             \begin{Geometrie}
@@ -45,7 +45,18 @@
             \medskip
             En barres\\\smallskip
             \scalebox{0.8}{%
-                \Stat[Qualitatif,Graphique,Donnee=Niveau,Effectif=Nombre d'élèves,Unitey=0.02,Pasy=40,Unitex=2,Grille,LectureFine]{$6^e$/150,$5^e$/200,$4^e$/150,$3^e$/100}
+                \Stat[%
+                    Qualitatif,
+                    Graphique,
+                    Donnee=Niveau,
+                    Effectif=Nombre d'élèves,
+                    Unitex=2,AngleRotationAbscisse=60,
+                    Unitey=0.03,Pasy=25,PasGrilley=25,
+                    Grille,LectureFine,
+                    ListeCouleursB={Crimson,Brown,LightBlue,Olive},
+                    EpaisseurBatons=2]{%
+                        6e/150,5e/200,4e/150,3e/100%
+                    }
             }
         \end{center}
     \end{exemples*1}
