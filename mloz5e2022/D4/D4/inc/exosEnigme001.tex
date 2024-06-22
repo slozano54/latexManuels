@@ -2,14 +2,99 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
+\vspace*{-15mm}
+\begin{enigme}[The golden ratio] 
+   \begin{enumerate}
+      \item Among the following rectangles, circle the one you think is the most attractive and well-balanced.
+      \begin{center}
+         \begin{pspicture}(0,0)(14,5.5)
+            \psset{fillstyle=solid}
+            \psframe[fillcolor=A3](0,0)(2,2)
+            \rput(1,1){a}
+            \psframe[fillcolor=C3](3,0)(7,2.47)
+            \rput(5,1.235){b}
+            \psframe[fillcolor=G3](8,0)(14,2)
+            \rput(11,1){c}
+            \psframe[fillcolor=J3](0,3)(4,5)
+            \rput(2,4){d}
+            \psframe[fillcolor=D3](5,3)(14,4)
+            \rput(9.5,3.5){e}
+         \end{pspicture}
+      \end{center}
+      \item Measure each rectangle's length and width, and compare the ratio of length to width for each rectangle above : \\
+      \begin{center}
+         \small
+         {\renewcommand{\arraystretch}{1.5}
+         \begin{CLtableau}{0.8\linewidth}{6}{c}
+            \hline
+            Rectangle & \qquad\; a & \qquad\; b & \qquad\; c & \qquad\; d & \qquad\; e \\
+            \hline
+            Length ($\ell$) in \Lg[cm]{}{} & & & & & \\
+            \hline
+            Width ($w$) in \Lg[cm]{}{} & & & & & \\
+            \hline
+            $\ell\div w $ & & & & & \\
+            \hline
+         \end{CLtableau}}
+      \end{center}
+      \item Draw a segment \Lg[cm]{}{10} long then make a small mark on it \Lg[cm]{}{6.18} along. Divide the length of the whole line by the length of the long section just made. Divide the length of the long section by the length of the short section. What ratios do you get? \\ [1cm]
+      \item Unscramble the words to find out the various names of this ratio. \smallskip
+      \begin{center}
+         \renewcommand{\arraystretch}{1.2}
+         \begin{tabular}{|p{3cm}p{4cm}|p{3cm}p{4cm}|}
+            \hline
+            TEH & \_ \_ \_ & HET & \_ \_ \_ \\
+            DEOGNL & \_ \_ \_ \_ \_ \_ & NODLEG & \_ \_ \_ \_ \_ \_ \\
+            TAIRO & \_ \_ \_ \_ \_ & NOOPOITRRP & \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \\
+            \hline
+            ETH & \_ \_ \_ & HTE & \_ \_ \_ \\
+            DIINVE & \_ \_ \_ \_ \_ \_ & DEONLG & \_ \_ \_ \_ \_ \_ \\
+            TINPOORPRO & \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ & NEBRUM & \_ \_ \_ \_ \_ \_ \\
+            \hline
+         \end{tabular}
+      \end{center}
+      \smallskip
+      \item This number named golden ratio is $\phi =\dfrac{1+\sqrt5}{2}$. Calculate is value with your calculator : \pointilles
+   \end{enumerate}
+   
+   \vfill
+   
+   \begin{minipage}{10cm}
+      A golden rectangle has a length to width ratio called the golden ratio, which is approximately 1.618. It is used often in art and architecture. For example, the front of the Parthenon, a temple in Athens, Greece fits into a golden rectangle.
+   \end{minipage}
+   \qquad
+   \begin{minipage}{5cm}
+      \includegraphics[width=4.5cm]{\currentpath/images/Parthenon}
+   \end{minipage}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
-% \addtocounter{exercice}{-1}
+% \addtocounter{exercice}{-1}  
 \begin{corrige}
-    {\red
-    \dots
-    }
- \end{corrige}
+   {\color{red}
+   \begin{enumerate}
+      \item Cette question est personnelle, cependant, {\color{red} le rectangle d} semble être le plus équilibré.
+      \item Tableau complété : \\ \smallskip
+      {\renewcommand{\arraystretch}{1.2}
+         \small
+         \begin{CLtableau}{\linewidth}{6}{c}
+            \hline
+            Rectangle & a & b & c & d & e \\
+            \hline
+            Length ($\ell$) in \Lg[cm]{}{} & 2 & 4 & 6 & 4 & 9 \\
+            \hline
+            Width ($w$) in \Lg[cm]{}{} & 2 & 2,5 & 2 & 2 & 1 \\
+            \hline
+            $\ell\div w$ & 1 & 1,6 & 3 & 2 & 9 \\
+            \hline
+         \end{CLtableau}}
+      \item {\color{red} $10\div6,18 \approx 1,618$} et {\color{red} $6,18\div3,82 \approx 1,618$}.
+      \item On trouve les dénominations suivantes : \\ 
+         {\color{red} THE GOLDEN RATIO} ; \\
+         {\color{red} THE GOLDEN PROPORTION} ; \\
+         {\color{red} THE DIVINE PROPORTION} ; \\
+         {\color{red} THE GOLDEN NUMBER}. \smallskip
+      \item $\phi =\dfrac{1+\sqrt5}{2} \approx {\color{red} 1,618}$.
+   \end{enumerate}
+   }
+\end{corrige}
