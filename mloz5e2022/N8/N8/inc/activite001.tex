@@ -1,5 +1,51 @@
 \begin{changemargin}{-10mm}{-15mm}
-\begin{activite}[...]    
-\dots
-\end{activite}
+    \vspace*{-15mm}
+    \begin{activite}[Le crible d'Ératosthène]
+        {\bf Objectifs} : calculer des multiples ; suivre un algorithme ; déterminer des nombres premiers.
+
+        On considère le tableau des nombres entiers de 1 à 100 ci-dessous. \\
+        \begin{center}
+        {\renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{|*{10}{>{\centering\arraybackslash}m{0.5cm}|}}
+            \hline
+            1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+            \hline
+            11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\
+            \hline
+            21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
+            \hline
+            31 & 32 & 33 & 34 & 35 & 36 & 37 & 38 & 39 & 40 \\
+            \hline
+            41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 & 50 \\
+            \hline
+            51 & 52 & 53 & 54 & 55 & 56 & 57 & 58 & 59 & 60 \\
+            \hline
+            61 & 62 & 63 & 64 & 65 & 66 & 67 & 68 & 69 & 70 \\
+            \hline
+            71 & 72 & 73 & 74 & 75 & 76 & 77 & 78 & 79 & 80 \\
+            \hline
+            81 & 82 & 83 & 84 & 85 & 86 & 87 & 88 & 89 & 90 \\
+            \hline
+            91 & 92 & 93 & 94 & 95 & 96 & 97 & 98 & 99 & 100 \\
+            \hline
+        \end{tabular}}
+        \end{center}
+        \medskip
+        \partie[recherche des nombres premiers jusqu'à 100]
+        \vspace*{-5mm}
+        \begin{enumerate}
+            \item Barrer le nombre 1.
+            \item Entourer le nombre 2, premier nombre non barré après 1, puis barrer tous les multiples de 2 supérieurs à 2.
+            \item Entourer le nombre 3, premier nombre non barré après 2, puis barrer tous les multiples de 3 supérieurs à 3.
+            \item Entourer le nombre 5, premier nombre non barré après 3, puis barrer tous les multiples de 5 supérieurs à 5.
+            \item Continuer ainsi de suite jusqu'à 10 puis entourer les nombres restants.
+        \end{enumerate}
+        
+        \partie[conclusion]
+        {\it Eratosthène} ($-276 ; -194$) était un mathématicien, géographe, philosophe, astronome, poète grec. Cet algorithme qu'il a établi porte son nom et permet de trouver tous les {\bf nombres premiers} (des nombres entiers divisibles uniquement par 1 et eux-même) inférieurs à un certain nombre $n$, ici 100. \\ [3mm]
+        Lister tous les nombres entourés dans le tableau : ce sont les nombres premiers inférieurs à 100. \par \medskip
+        \pointilles \par \medskip
+        \pointilles
+    \end{activite}
+    \vspace*{-20mm}
 \end{changemargin}
