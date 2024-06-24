@@ -1,7 +1,75 @@
 \begin{exercice*}
-   \dots
+   Les chrysodes traduisent des propriétés relatives à la division euclidienne et aux nombres premiers. Ils s'obtiennent à partir d'un cercle gradué.
+
+   \begin{minipage}{0.7\linewidth}
+      \begin{enumerate}
+         \item Choisir un nombre de 1 à 6. Le multiplier par 3, puis calculer le reste de la division par 7. Tracer le corde d'extrémités le point correspondant au nombre choisi et le point correspondant au reste obtenu.
+         \item À partir de ce reste, recommencer plusieurs fois. Que constate-ton ?
+      \end{enumerate}  
+   \end{minipage}
+   \begin{minipage}{0.5\linewidth}
+      \begin{center}
+         \begin{Geometrie}
+            pair O,A[];
+            path co;
+            O=u*(3,3);
+            co=cercles(O,1.5u);
+            A0=pointarc(co,90);
+            A1=pointarc(co,90-360/7);
+            A2=pointarc(co,90-2*360/7);
+            A3=pointarc(co,90-3*360/7);
+            A4=pointarc(co,90-4*360/7);
+            A5=pointarc(co,90-5*360/7);
+            A6=pointarc(co,90-6*360/7);
+            trace co;
+            marque_p:="plein";
+            pointe(A0,A1,A2,A3,A4,A5,A6);
+            label.top(TEX("0"),A0);
+            label.urt(TEX("1"),A1);
+            label.lrt(TEX("2"),A2);
+            label.lrt(TEX("3"),A3);
+            label.llft(TEX("4"),A4);
+            label.llft(TEX("5"),A5);
+            label.ulft(TEX("6"),A6);
+         \end{Geometrie}
+      \end{center}
+   \end{minipage}
 \end{exercice*}
-% \begin{corrige}
-%    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-%    \dots
-% \end{corrige}
+\begin{corrige}
+   Les chrysodes traduisent des propriétés relatives à la division euclidienne et aux nombres premiers. Ils s'obtiennent à partir d'un cercle gradué.
+
+   \begin{enumerate}
+      \item Choisir un nombre de 1 à 6. Le multiplier par 3, puis calculer le reste de la division par 7. Tracer le corde d'extrémités le point correspondant au nombre choisi et le point correspondant au reste obtenu.
+      \item À partir de ce reste, recommencer plusieurs fois. Que constate-ton ?
+      
+      {\color{red}On remarque que tous les points, sauf 0,  sont atteints et que la ligne brisée est fermée.}
+   \end{enumerate}
+   \begin{minipage}{\linewidth}
+      \begin{center}
+         \begin{Geometrie}
+            pair O,A[];
+            path co;
+            O=u*(3,3);
+            co=cercles(O,1.5u);
+            A0=pointarc(co,90);
+            A1=pointarc(co,90-360/7);
+            A2=pointarc(co,90-2*360/7);
+            A3=pointarc(co,90-3*360/7);
+            A4=pointarc(co,90-4*360/7);
+            A5=pointarc(co,90-5*360/7);
+            A6=pointarc(co,90-6*360/7);
+            trace co;
+            marque_p:="plein";
+            pointe(A0,A1,A2,A3,A4,A5,A6);
+            label.top(TEX("0"),A0);
+            label.urt(TEX("1"),A1);
+            label.lrt(TEX("2"),A2);
+            label.lrt(TEX("3"),A3);
+            label.llft(TEX("4"),A4);
+            label.llft(TEX("5"),A5);
+            label.ulft(TEX("6"),A6);
+            trace polygone(A1,A3,A2,A6,A4,A5) withcolor red;
+         \end{Geometrie}
+      \end{center}
+   \end{minipage}
+\end{corrige}
