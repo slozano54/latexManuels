@@ -46,6 +46,16 @@
 \newcommand{\coneND}{\pspolygon[fillstyle=solid,fillcolor=white](0,0)(0.9,0)(0.45,1.7)}
 \newcommand{\bouleND}{\pscircle[fillstyle=solid,fillcolor=white](0,0.45){0.45}}
 \newcommand{\cubeND}{\psframe[fillstyle=solid,fillcolor=white](0,0)(1.15,0.9)\psline(0.75,0)(0.75,0.9)}
+
+% Cube isometrique - commande de Nathalie DAVAL
+%Cube
+\newcommand{\cubiso}[2]{
+   \rput(#1,#2) 
+      {\psset{fillstyle=solid}
+       \pspolygon[fillcolor=purple!80](0,0)(2;90)(2;30)(2;-30)
+       \pspolygon[fillcolor=lightgray](2;-30)(3.464;0)(4;30)(2;30)
+       \pspolygon[fillcolor=teal](2;90)(2;30)(4;30)(3.464;60)}
+}
 %==========================================
 % Probabilités
 %==========================================

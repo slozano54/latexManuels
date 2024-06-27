@@ -2,9 +2,54 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-    \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
+\begin{enigme}[Des dessins magiques]
+    \begin{changemargin}{0mm}{-10mm}
+        \hspace*{-10mm}
+        {\psset{unit=0.75}
+        \begin{pspicture*}(-1,-1)(24,27.5)
+           \multido{\i=-15+1}{45}{\rput(\i;90){\multido{\n=0+1}{29}{\psdot[linewidth=0.05mm,linecolor=gray](\n;30)}}} % quadrillage
+           \cubiso{1.732}{1}
+           \cubiso{5.196}{1}
+           \cubiso{8.66}{1}
+           \cubiso{3.464}{4}
+           \cubiso{6.928}{4}
+           \cubiso{5.196}{7}
+           \rput(0,18){ % trident
+              \psline(0,0)(19;30)(23.383,5.5)(8;-30)
+              \psline(0,-2)(16.454,7.5)(19.919,5.5)(3.464,-4)
+              \psline(23.383,5.5)(23.383,3.5)(6.928,-6)
+              \psline(16.454,7.5)(16.454,5.5)(18.187,4.5)
+              \psline(16.454,5.5)(3.464,-2)
+              \psellipse(0,-1)(0.4,0.98)
+              \psellipse(3.464,-3)(0.4,0.98)
+              \psellipse(6.928,-5)(0.4,0.98)
+           }
+           \psset{fillstyle=solid,fillcolor=teal}
+           \rput(3.464,-2){\pspolygon(2;90)(2;30)(4;30)(3.464;60)}
+           \rput(6.928,-2){\pspolygon(2;90)(2;30)(4;30)(3.464;60)}
+           \psset{fillcolor=purple!80}
+           \rput(8.66,7){\pspolygon(0,0)(2;90)(2;30)(2;-30)}
+           \rput(10.393,4){\pspolygon(0,0)(2;90)(2;30)(2;-30)}
+           \psset{fillcolor=lightgray}
+           \rput(0,4){\pspolygon(2;-30)(3.464;0)(4;30)(2;30)}
+           \rput(1.732,7){\pspolygon(2;-30)(3.464;0)(4;30)(2;30)}
+           \rput(17;30){ %triangle impossible
+              \pspolygon[fillcolor=cyan](0,0)(8;-30)(7.794,-3.5)(1.732,0)(6.062,2.5)(6.062,3.5)(7;30)
+              \pspolygon[fillcolor=violet](0,0)(7;30)(6.062,-1.5)(6.928,-2)(6.928,5)(1;90)
+              \pspolygon[fillcolor=orange](1.732,0)(7.794,-3.5)(7.794,4.5)(6.928,5)(6.928,-2)(2.598,0.5)
+           }
+           \psframe[fillstyle=solid,fillcolor=white,linecolor=white](0,25)(6,27.5)
+           \rput(3,26.6){Reproduire ces dessins}
+           \rput(3,25.8){sur du papier pointé}
+        \end{pspicture*}}
+        
+        \pagebreak
+        
+        \hspace*{-10mm}
+        {\psset{unit=0.75}
+        \begin{pspicture*}(-1,-1)(24,28)
+           \multido{\i=-15+1}{45}{\rput(\i;90){\multido{\n=0+1}{29}{\psdot[linewidth=0.05mm,linecolor=gray](\n;30)}}}
+        \end{pspicture*}}
     \end{changemargin}
 \end{enigme}
 
@@ -12,6 +57,5 @@
 % \addtocounter{exercice}{-1}
 
 \begin{corrige}
-    Correction du binz.
+    Pas de correction.
 \end{corrige}
- 
