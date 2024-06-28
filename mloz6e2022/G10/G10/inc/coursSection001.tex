@@ -1,5 +1,113 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+\begin{changemargin}{-5mm}{-15mm}
+    \section{Les solides au collège}
+    \begin{Mind}
+        \begin{Bulle}[Nom=CadreTitre,Rayon=5,Largeur=7cm,Ancre={-5,0}]
+            \begin{center}
+                \LARGE\textsc{Les solides au collège}
+            \end{center}
+        \end{Bulle}
+        %
+        \begin{Bulle}[Nom=Polyedres, Rayon=5,Largeur=0.7cm,Ancre={-14,5},CTrace=blue]
+            \begin{center}
+                \rotatebox{90}{\Large\textcolor{blue}{Les polyèdres}}
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom=Prismes, Rayon=5,Largeur=0.55\linewidth,Ancre={-8,6},CTrace=blue]
+            \begin{center}
+                \hfill \Solide[Nom=pave,Sommets=false,Largeur=0.7,Hauteur=0.7,Profondeur=0.7] \hfill \includegraphics[width=1.75cm]{\currentpath/images/Cours_Rubiks}\hfill\phantom{rrr}
+            \end{center}
+
+            \begin{minipage}{\linewidth}
+                {\bf Cube} : cas particulier du pavé droit lorsque toutes les faces sont carrées.
+            \end{minipage}
+            
+            \begin{center}
+                \hfill \Solide[Nom=pave,Sommets=false,Largeur=1.05,Hauteur=0.525,Profondeur=0.7] \hfill \includegraphics[width=1.75cm]{\currentpath/images/Cours_boite}\hfill\phantom{rrr}
+            \end{center}
+
+            \begin{minipage}{\linewidth}
+                {\bf Parallélépipède ou pavé} : du grec {\it parallelos}, parallèle et {\it epidon}, surface. Cas particulier du prisme droit lorsque la base est un rectangle.
+            \end{minipage}
+            
+            \begin{center}
+                \hfill%
+                \begin{Geometrie}
+                    pair S[];
+                    S1=u*(1,1);
+                    S2-S1=u*(2,-0.4);
+                    S3-S1=u*(3,0);
+                    S4-S1=u*(0,1);
+                    S5-S2=u*(0,1);
+                    S6-S3=u*(0,1);
+                    trace chemin(S1,S2,S3,S6,S5,S4,S1);
+                    trace chemin(S4,S6);
+                    trace chemin(S5,S2);
+                    trace chemin(S1,S3) dashed evenly;
+                \end{Geometrie}
+                \hfill \includegraphics[width=3cm]{\currentpath/images/Cours_Toblerone}\hfill\phantom{rrr}
+            \end{center}
+
+            \begin{minipage}{\linewidth}{\bf Prisme} : du grec {\it prismatos}, scié. Deux bases polygonales, des faces latérales qui sont des parallélogrammes, rectangles si le prisme est droit \end{minipage}
+        \end{Bulle}
+        \begin{Bulle}[Nom=Pyramides, Rayon=5,Largeur=0.3\linewidth,Ancre={1,6},CTrace=blue]
+            \begin{center}
+                \includegraphics[width=4cm]{\currentpath/images/Cours_Kheops}
+
+                \medskip
+                \Solide[Nom=pyramide,SommetsPyramide=4,Sommets=false,DecalageSommet={(0,0,-1)}]
+            \end{center}
+
+            \begin{minipage}{\linewidth}
+                {\bf Pyramide} : une base polygonale, un sommet, des faces latérales triangulaires, qui sont isocèles et superposables si la pyramide est régulière.
+            \end{minipage}
+        \end{Bulle}
+        \draw[-stealth,line width=2pt] (CadreTitre-H-1) -- (Prismes-B-7) node[midway,fill=white]{\textcolor{blue}{primes}};
+        \draw[-stealth,line width=2pt] (CadreTitre-H-9) -- (Pyramides-B-5) node[midway,fill=white]{\textcolor{blue}{pyramides}};
+        %        
+        \begin{Bulle}[Nom=NonPolyedres, Rayon=5,Largeur=0.7cm,Ancre={-14,-6},CTrace=red]
+            \begin{center}
+                \rotatebox{90}{\Large\textcolor{red}{Les solides non polyèdriques}}
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom=Cylindres, Rayon=5,Largeur=0.27\linewidth,Ancre={-10.5,-6},CTrace=red]
+            \begin{minipage}{\linewidth}
+                {\bf Cylindre} : du grec {\it kulindros}, rouleau. Deux bases en forme de disques, une surface latérale.
+            \end{minipage}
+
+            \begin{center}
+                \Solide[Nom=cylindre,RayonCylindre=0.5,HauteurCylindre=1.5,Anglex=70]
+
+                \medskip                
+                \includegraphics[width=2cm]{\currentpath/images/Cours_conserve}
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom=Cones, Rayon=5,Largeur=0.27\linewidth,Ancre={-4.75,-6},CTrace=red]
+            \begin{minipage}{\linewidth}
+                {\bf Cône} : du grec {\it kônos}, pomme de pain. Une base en forme de disque, une surface latérale, un sommet.
+            \end{minipage}
+
+            \begin{center}
+                \Solide[Nom=cone,RayonCone=0.75,HauteurCone=1.8,Anglex=70]
+
+                \medskip                
+                \includegraphics[width=3cm]{\currentpath/images/Cours_glace}
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom=Boules, Rayon=5,Largeur=0.27\linewidth,Ancre={1,-6},CTrace=red]
+            \begin{minipage}{\linewidth}
+                {La \bf sphère} : du grec {\it sphaîra}, corps rond, est la surface extérieure de la {\bf boule}.
+            \end{minipage}
+
+            \begin{center}
+                \Solide[Nom=sphere,RayonSphere=0.75,Anglex=20]
+
+                \medskip                
+                \includegraphics[width=3cm]{\currentpath/images/Cours_ballon}
+            \end{center}
+        \end{Bulle}
+        \draw[-stealth,line width=2pt] (CadreTitre-B-9) -- (Cylindres-H-5) node[midway,fill=white]{\textcolor{red}{cylindres}};
+        \draw[-stealth,line width=2pt] (CadreTitre-B-5) -- (Cones-H-5) node[midway,fill=white]{\textcolor{red}{cones}};
+        \draw[-stealth,line width=2pt] (CadreTitre-B-1) -- (Boules-H-5) node[midway,fill=white]{\textcolor{red}{boules}};
+    \end{Mind}
 \end{changemargin}
  

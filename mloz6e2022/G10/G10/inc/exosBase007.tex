@@ -1,7 +1,27 @@
 
 \begin{exercice*}
-   \dots
+   Reproduire la figure suivante en perspective isométrique juste à côté : combien y a-t-il de cubes entiers ? Et si on retourne la figure ? \\ [2mm]
+   {\psset{unit=0.4}
+   \begin{pspicture*}(-3,5)(30,18)
+      %quadrillage
+      \multido{\n=0+2}{15}{\psline[linestyle=dotted](\n,-2)(\n,20)}
+      \multido{\i=-15+2,\n=0+2}{18}{\psline[linestyle=dotted](-1,\i)(29,\n)}
+      \multido{\i=-15+2,\n=0+2}{18}{\psline[linestyle=dotted](-1,\n)(29,\i)} 
+      %pyramide
+      \cubisoBis{6}{12.5}
+      \cubisoBis{4}{9.5}
+      \cubisoBis{2}{6.5}
+      \cubisoBis{8}{9.5}
+      \cubisoBis{6}{6.5}
+      \cubisoBis{10}{6.5} 
+      \pspolygon[fillstyle=solid,fillcolor=black](2,6.5)(4,5.5)(6,6.5)(4,7.5)
+      \pspolygon[fillstyle=solid,fillcolor=black](8,5.5)(10,6.5)(8,7.5)(6,6.5)
+      \pspolygon[fillstyle=solid,fillcolor=red](12,9.5)(12,11.5)(10,12.5)(10,10.5)
+      \pspolygon[fillstyle=solid,fillcolor=red](10,12.5)(10,14.5)(8,15.5)(8,13.5)
+      \pspolygon[fillstyle=solid,fillcolor=lightgray](0,9.5)(2,10.5)(2,12.5)(0,11.5)
+      \pspolygon[fillstyle=solid,fillcolor=lightgray](2,12.5)(4,13.5)(4,15.5)(2,14.5)    
+   \end{pspicture*}}
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}
