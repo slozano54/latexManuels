@@ -1,2 +1,39 @@
-\section{\dots}
-\dots
+\section{Hauteur d'un parallélogramme}
+
+\begin{definition}
+   On considère l'un des côtés parallèles d'un parallélogramme que l'on prend comme {\bf base}. Une {\bf hauteur} du parallélogramme associée à cette base est un segment perpendiculaire à la base situé entre les deux côtés parallèles.
+\end{definition}
+
+\begin{remarque}
+   il y a donc quatre bases possibles pour un parallélogramme, deux à deux parallèles et deux hauteurs associées chacune à une paire de parallèles.
+\end{remarque}
+
+\begin{center}
+    \psset{unit=0.9}
+   \begin{pspicture}(0,-0.5)(6,3.2)
+      \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+      \psset{linecolor=B1}
+      \color{B1}
+      \psline{<->}(0,-0.3)(4,-0.3)
+      \rput(2,-0.6){base 1}
+      \psline{<->}(1,2.8)(5,2.8)
+      \rput(3,3.1){base 1'}
+      \psline(1,0)(1,2.5)
+      \psframe(1,0)(1.3,0.3)
+      \psframe(1,2.5)(1.3,2.2)
+      \rput{90}(1.3,1.3){hauteur 1}
+   \end{pspicture}
+   \begin{pspicture}(-1,-0.5)(6,3)
+      \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+      \psset{linecolor=A1}
+      \color{A1}
+      \psline{<->}(-0.3,0)(0.7,2.5)
+      \rput{68}(-0.15,1.4){base 2}
+      \psline{<->}(4.3,0)(5.3,2.5)
+      \rput{68}(5.15,1.3){base 2'}
+      \psline(4,0)(0.55,1.38)
+      \pspolygon(4,0)(4.1,0.25)(3.85,0.35)(3.75,0.1)
+      \pspolygon(0.55,1.38)(0.8,1.28)(0.9,1.53)(0.65,1.63)
+      \rput{-23}(2.4,1){hauteur 2}
+   \end{pspicture} 
+\end{center}

@@ -1,8 +1,23 @@
 \vspace*{-13mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
-%pre-002
-\input{\currentpath/inc/prerequis002.tex}
-\begin{debat}[\dots]
-\dots
-\end{debat}
+\begin{debat}[Des aires en images]
+    Le parallélogramme peut être vu comme un rectangle que l'on aurait \og étiré \fg{} par un coin, son {\bf aire} correspond donc à l'aire un rectangle.
+    \begin{center}
+       \begin{pspicture}(0,-0.5)(15.5,2.5)
+          \rput(0.1,1.7){\Huge \ding{43}}
+          \psframe[fillstyle=solid,fillcolor=A3,linecolor=A3](0.5,0)(3.5,2)
+          \rput(5.55,1.7){\Huge \ding{43}}
+          \pspolygon[fillstyle=solid,fillcolor=A3,linecolor=A3](5,0)(8,0)(9,2)(6,2)
+          \psframe[linestyle=dashed,linecolor=B1](5,0)(8,2)
+          \rput(10.95,1.7){\Huge \ding{43}}
+          \pspolygon[fillstyle=solid,fillcolor=A3,linecolor=A3](9.5,0)(12.5,0)(14.5,2)(11.5,2)
+          \psframe[linestyle=dashed,linecolor=B1](9.5,0)(12.5,2)
+       \end{pspicture}
+    \end{center}
+    \begin{cadre}[B2][J4]
+       \begin{center}
+          \hrefVideo{https://www.yout-ube.com/watch?v=5_PiZrfLghQ}{\bf Aire de figures simples}, chaîne YouTube de {\it Science silencieuse}.
+       \end{center}
+    \end{cadre}
+ \end{debat}

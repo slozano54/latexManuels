@@ -1,2 +1,46 @@
-\section{\dots}
-\dots
+\section{Aire du parallélogramme}
+
+\begin{propriete}
+   L'aire du parallélogramme se calcule grâce à la formule :
+   $$\mathcal{A} =\text{base}\times\text{hauteur} =b\times h$$
+\end{propriete}
+
+\begin{remarque}
+   attention à ne pas confondre avec l'aire du rectangle qui est longueur $\times$ largeur.
+\end{remarque}
+
+\begin{exemple}[0.3]
+   Déterminer l'aire du parallélogramme suivant : \\
+   \psset{unit=0.9}
+   \begin{pspicture}(1,-3)(5,3)
+      \rput{-90}(2,2.5){\pspolygon(0,0)(4,0)(5,2.5)(1,2.5)}
+   \end{pspicture}
+   \correction
+      \begin{minipage}{4.5cm}
+         \begin{itemize}
+            \item On définit une base ;
+            \item on trace une hauteur relative à cette base ;
+            \item on mesure la base ;
+            \item on mesure la hauteur ;
+            \item on applique la formule : \\
+            $\mathcal{A} =b\times h$ \\
+            $\mathcal{A} =\ucm{4}\times\ucm{2,5}$ \\
+            $\mathcal{A} =\ucmq{10}$.
+         \end{itemize}
+      \end{minipage}
+      \begin{minipage}{4cm}
+        \psset{unit=0.9}
+         \begin{pspicture}(0.5,-3)(5,3)
+            \rput{-90}(2,2.5){
+            \pspolygon(0,0)(4,0)(5,2.5)(1,2.5)
+            \psset{linecolor=B1}
+            \color{B1}
+            \psline{<->}(0,-0.3)(4,-0.3)
+            \rput(2,-0.6){$b =\ucm{4}$}
+            \psline(1,0)(1,2.5)
+            \psframe(1,0)(1.3,0.3)
+            \rput{90}(1.3,1.3){$h =\ucm{2,5}$}
+           }
+         \end{pspicture}
+      \end{minipage}
+\end{exemple}

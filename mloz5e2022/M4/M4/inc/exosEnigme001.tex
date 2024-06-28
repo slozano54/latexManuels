@@ -2,14 +2,72 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
+\vspace*{-20mm}
+\begin{enigme}[La formule de Pick]
+   On travaille dans un réseau pointé à maille carrée. On note $u.\ell.$ l'unité de longueur et $u.a.$ l'unité d'aire. \\
+   On appelle polygone de Pick, un polygone non aplati construit sur un tel réseau et dont chacun des sommets est un point du réseau. On considère les figures $FORMULE$ et $PICK$ suivantes :
+   \begin{center}
+      \small
+      {\psset{unit=0.5}
+      \begin{pspicture}(6,0)(28,11.5)
+         \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={45,135,-135,-50,-30,45}](9,10){R}(7,6){O}(7,1){F}(12,1){E}(16,3){L}(16,6){U}(12,6){M}
+         \psframe[fillstyle=solid,fillcolor=lightgray!30](22,9)(23,10)
+         \pstGeonode[fillstyle=solid,fillcolor=lightgray!30,CurveType=polygon,PosAngle={-150,-45,30,135}](18,1){P}(24,1){I}(27,5){C}(21,5){K}
+         \psgrid[griddots=1,gridlabels=0,subgriddiv=1,gridwidth=0.5mm](6,0)(28,11)
+         \rput(22.5,8.5){1 $u.a.$}
+         \psline{<->}(18,9)(19,9)
+         \rput(18.5,8.5){1 $u.\ell.$}      
+      \end{pspicture}}
+   \end{center}
+   
+   \partie[avec les formules classiques]
+     \ \\ [-10mm]
+      \begin{enumerate}
+         \item Calculer l'aire du parallélogramme $PICK$ en unité d'aire. \par \bigskip
+            \pointilles  \\
+         \item Calculer l'aire du polygone $FORMULE$, en unité d'aire en détaillant les étapes du raisonnement. \par \bigskip
+            \pointilles  \par \bigskip
+            \pointilles \bigskip
+      \end{enumerate}
+   
+   \partie[avec la formule de Pick]
+      La formule de Pick permet de calculer l'aire $\mathcal{A}$ d'un polygone de Pick, à partir du nombre $i$ de points du réseau strictement intérieurs à ce polygone et du nombre $b$ de points du réseau sur le bord du polygone : \fbox{$\mathcal{A} =i+\dfrac{b}{2}-1$}. 
+      \begin{enumerate}
+      \setcounter{enumi}{2}
+         \item Appliquer cette formule au parallélogramme $PICK$. \\ [3mm]
+            $i =\pointilles  \quad b =\pointilles $ \quad donc, $\mathcal{A} = \pointilles $ \\
+          \item Appliquer cette formule au polygone $FORMULE$. \\ [3mm]
+            $i =\pointilles  \quad b =\pointilles $ \quad donc, $\mathcal{A} = \pointilles $ \\
+          \item Appliquer la formule de Pick aux trois polygones de Pick $MOFE$, $MOR$ et $MULE$. \\
+            Vérifier que la somme des résultats obtenus est égale à l'aire totale de la figure. \par \bigskip
+            \pointilles \par \bigskip
+            \pointilles \par \bigskip
+            \pointilles 
+      \end{enumerate}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 \begin{corrige}
-    {\red
-    \dots
-    }
- \end{corrige}
+   \begin{enumerate}
+      \item $\mathcal{A}_{PICK} =6\,u.\ell.\times4\,u\ell. ={\color{red} 24\,u.a.}$
+      \item $\mathcal{A}(MOFE) =5\,u.\ell.\times5\,u.\ell. =25\,u.a.$ \\ [1mm] 
+         $\mathcal{A}(MOR) =\dfrac{5\,u.\ell.\times4\,u.\ell.}{2} =10\,u.a.$ \\ [1mm]
+         $\mathcal{A}(MULE) =4\,u.\ell.\times3\,u.\ell.+\dfrac{4\,u.\ell.\times2\,u.\ell.}{2} =16\,u.a.$ \\ [1mm]
+         En sommant, on obtient : $\mathcal{A}(FORMULE)$ \\
+         $=25\,u.a.+10\,u.a.+16\,u.a. ={\color{red} 51\,u.a.}$ \smallskip
+      \item {\color{red} $i =18$} et {\color{red} $b =14$} donc, $\mathcal{A} =18+\dfrac{14}{2}-1 ={\color{red} 24}$. \smallskip
+      \item {\color{red} $i =41$} et {\color{red} $b =22$} donc, $\mathcal{A} =41+\dfrac{22}{2}-1 ={\color{red} 51}$. \smallskip
+      \item On décompose comme à la question 2)
+         \begin{itemize}
+            \item MOFE : $i =16$, $b =20$, $\mathcal{A} =16+\dfrac{20}{2}-1 =25$. \smallskip
+            \item MOR : $i =7$ et $b =8$, $\mathcal{A} =7+\dfrac{8}{2}-1 =10$. \smallskip
+            \item MULE : $i =10$ et $b =14$, $\mathcal{A} =10+\dfrac{14}{2}-1 =16$. \smallskip
+            \item FORMULE : $\mathcal{A} =25+10+16 =51$. \\
+         {\color{red} La somme des résultats obtenus est égale au résultat trouvé à la question 2).}
+      \end{itemize}
+   \end{enumerate}
+\end{corrige}
+
+
+   

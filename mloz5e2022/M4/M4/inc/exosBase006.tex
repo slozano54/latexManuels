@@ -1,7 +1,46 @@
 \begin{exercice*}
-   \dots
+   Un menuisier doit découper une planche selon le plan suivant :
+   \begin{center}
+   \footnotesize
+   {\psset{unit=0.7}
+      \begin{pspicture}(0,0)(8,4.5)
+         \pspolygon(0,0)(5,0)(8,1)(8,4.5)(5,3.5)(0,3.5)
+         \psline(5,0)(5,3.5)
+         \psline{<->}(0,-0.3)(8,-0.3)
+         \rput(4,-0.7){\Lg[cm]{80}}
+         \psline{<->}(-0.3,0)(-0.3,3.5)
+         \rput{90}(-0.7,1.75){\Lg[cm]{35}}
+         \psline{<->}(0,3.8)(5,3.8)
+         \rput(2.5,4.2){\Lg[cm]{50}}
+      \end{pspicture}}
+   \end{center}
+   \begin{enumerate}
+      \item Calculer l'aire de la planche.
+      \item Le menuisier doit faire deux ouvertures dans cette planche :
+      \begin{itemize}
+        \item une ouverture rectangulaire de \Lg[cm]{40} sur \Lg[cm]{15} ;
+        \item une ouverture en parallélogramme de base \Lg[cm]{20} et de hauteur \Lg[cm]{13}.
+      \end{itemize}
+      Calculer la nouvelle aire de la planche.
+   \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-   \dots
-\end{corrige}
-
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Aire de la planche de gauche : \\
+      $\mathcal{A}_1 =\Lg[cm]{50}\times\Lg[cm]{35} =\Aire[cm]{1750}$. \\
+         Aire de la planche de droite : \\
+         $\mathcal{A}_2 =\Lg[cm]{35}\times(\Lg[cm]{80}-\Lg[cm]{50}) =\Lg[cm]{35}\times\Lg[cm]{30}$ \\
+         $=\Aire[cm]{1050}$. \\
+         Aire de la planche complète : \\
+         $\mathcal{A}_1+\mathcal{A}_2 =\Aire[cm]{1750}+\Aire[cm]{1050} =\Aire[cm]{2800}$. \\
+         L'aire de la planche est de {\color{red} \Aire[cm]{2800}}.
+      \item Ouverture rectangulaire : \\
+         $\mathcal{A}_3 =\Lg[cm]{40}\times\Lg[cm]{15} =\Aire[cm]{600}$. \\
+         Ouverture du parallélogramme : \\
+         $\mathcal{A}_4 =\Lg[cm]{20}\times\Lg[cm]{13} =\Aire[cm]{260}$. \\
+         $\mathcal{A}_3+\mathcal{A}_4 =\Aire[cm]{600}+\Aire[cm]{260} =\Aire[cm]{860}$. \\
+         La nouvelle aire de la planche est de \\
+         $\Aire[cm]{2800}-\Aire[cm]{860} ={\color{red} \Aire[cm]{1940}}$.
+   \end{enumerate}
+   \end{corrige}
