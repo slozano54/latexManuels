@@ -1,18 +1,49 @@
-\vspace*{-7mm}
-\begin{changemargin}{-10mm}{-10mm}
 %pre-001
 \input{\currentpath/inc/prerequis001.tex}
-\vspace*{-3mm}
-%pre-002
-\input{\currentpath/inc/prerequis002.tex}
-\end{changemargin}
-\vspace*{-13mm}
-\begin{debat}[...] 
-      ...
-    \bigskip
-    \begin{cadre}[B2][J4]
-       \begin{center}
-          \hrefVideo{https://www.yout-ube.com/watch?v=eawBr43xWf8}{\bf ...}
-       \end{center}
-    \end{cadre}
- \end{debat}
+\vfill
+\begin{debat}[La symétrie au natruel] 
+   Dans la nature, on trouve de nombreux objets ayant une {\bf symétrie axiale} : animaux, paysages, monuments\dots{} regardez et observez autour de vous !
+   \begin{center}
+      \begin{Geometrie}
+         pair A[],B[],C[],SymA[],SymB[];
+         % Maison
+         A0=u*(1,1);
+         A1-A0=u*(2,0);
+         A2-A1=u*(0,1);
+         A3-A0=u*(0,1);
+         A4=iso(A2,A3) shifted (0,0.5u);
+         % Porte
+         B0-A0=u*(1.2,0);
+         B1-B0=u*(0.4,0);
+         B2-B1=u*(0,0.4);
+         B3-B0=u*(0,0.4);
+         % Axe
+         C0-A0=u*(3,-1);
+         C1-C0=u*(0,3);
+         % Tracés
+         trace polygone(A0,A1,A2,A4,A3);
+         trace segment(A3,A2);
+         trace polygone(B0,B1,B2,B3);
+         trace segment(C0,C1) dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+         % Symétriques
+         SymA0=symetrie(A0,C0,C1);
+         SymA1=symetrie(A1,C0,C1);
+         SymA2=symetrie(A2,C0,C1);
+         SymA3=symetrie(A3,C0,C1);
+         SymA4=symetrie(A4,C0,C1);
+         SymB0=symetrie(B0,C0,C1);
+         SymB1=symetrie(B1,C0,C1);
+         SymB2=symetrie(B2,C0,C1);
+         SymB3=symetrie(B3,C0,C1);
+         trace polygone(SymA0,SymA1,SymA2,SymA4,SymA3);
+         trace segment(SymA3,SymA2);
+         trace polygone(SymB0,SymB1,SymB2,SymB3);
+      \end{Geometrie}
+   \end{center}
+   \vfill
+   \begin{cadre}[B2][J4]
+      \begin{center}
+         \hrefVideo{https://www.yout-ube.com/watch?v=6LfXWSvtKM4}{\bf La symétrie ou les maths au clair de lune}, chaîne {\it Le Blob}
+      \end{center}
+   \end{cadre}
+\end{debat}
