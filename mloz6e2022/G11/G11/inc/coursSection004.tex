@@ -1,0 +1,273 @@
+\section{Constructions élémentaires}
+    \subsection{Méthodes}
+    % droite
+    \begin{methode*1}[Image d'une droite par rapport à une droite non parallèle]
+        \exercice
+        Construire l'image d'une droite $(d_1)$ par rapport à une droite $(d)$ non parallèle.
+        \correction
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \begin{Geometrie}[CoinHD={(6u,4u)},CoinBG={(0,0)}]
+                    pair M[],I[],axe[],dr[];
+                    axe0=u*(3,0);
+                    axe1-axe0=u*(0.5,5);                
+                    trace 1.5[axe1,axe0]--axe1 dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                    M0-axe0=u*(-1,0.8);
+                    M1=symetrie(M0,axe0,axe1);
+                    I0=segment(M0,M1) intersectionpoint segment(axe0,axe1);
+                    I1=0.6[axe0,axe1];
+                    trace droite(M0,M1) dashed withdots;
+                    trace droite(M0,I1) dashed evenly;
+                    trace segment(M0,M1);
+                    trace droite(M1,I1);
+                    dr0=0.3[I1,M0];
+                    dr1=1.7[I1,M0];
+                    trace segment(dr0,dr1);                
+                    trace codeperp(M0,I0,I1,5);
+                    marque_s:=0.3*marque_s;
+                    trace Codelongueur(M0,I0,I0,M1,3);
+                    label.top(TEX("{\color{red} axe (d)}"),1.2[axe1,axe0]);                
+                    label.lft(TEX("$(d_1)$"),1.3[I1,M0]);
+                    label.ulft(TEX("$H$"),M0);
+                    label.urt(TEX("$H'$"),M1);
+                    label.rt(TEX("$I$"),I1);
+                \end{Geometrie}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.65\linewidth}
+            \begin{enumerate}
+                \item Prolonger la droite (d) afin qu'elle coupe l'axe si nécessaire.
+                \item Nommer $I$ l'intersection de la droite et de l'axe de symétrie.
+                \item Placer un point $H$ sur la droite (d) distinct de $I$.
+                \item Construire le symétrique $H'$ de $H$ par rapport à l'axe.
+                \item Tracer la droite $(H'I)$.
+            \end{enumerate}
+        \end{minipage}
+        \begin{myBox}{\infoComplementsNumeriques{singulier}}
+            \begin{minipage}{\linewidth}
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_115.html}{Avec l'équerre et le compas}
+            
+                \creditInstrumentPoche
+            \end{minipage}
+        \end{myBox}
+    \end{methode*1}
+    % segment
+    \begin{methode*1}[Image d'un segment par rapport à une droite non parallèle]
+        \exercice
+        Construire l'image d'un segment par rapport à une droite $(d)$.
+        \correction
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \begin{Geometrie}[CoinHD={(5u,4u)},CoinBG={(0,0)}]
+                    pair M[],I[],axe[],dr[];
+                    axe0=u*(3,0);
+                    axe1-axe0=u*(0.5,4);                
+                    trace 1.5[axe1,axe0]--axe1 dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                    M0-axe0=u*(-1.5,0.6);
+                    M1=symetrie(M0,axe0,axe1);                
+                    I0=segment(M0,M1) intersectionpoint segment(axe0,axe1);
+                    I1=0.8[axe0,axe1];
+                    trace droite(M0,M1) dashed withdots;
+                    trace droite(M0,I1) dashed withdots;
+                    trace droite(M1,I1) dashed withdots;
+                    trace segment(M0,M1);
+                    dr0=0.4[I1,M0];
+                    dr1=1.7[I1,M0];
+                    dr2=symetrie(dr0,axe0,axe1);
+                    dr3=symetrie(dr1,axe0,axe1);
+                    trace segment(dr0,dr2);
+                    trace segment(M0,dr0) withcolor blue;
+                    trace segment(M1,dr2) withcolor blue;
+                    trace codeperp(M0,I0,I1,5);
+                    I2=segment(dr0,dr2) intersectionpoint segment(axe0,axe1);
+                    trace codeperp(dr0,I2,I1,5);
+                    marque_s:=0.3*marque_s;
+                    trace Codelongueur(M0,I0,I0,M1,3);
+                    trace Codelongueur(dr0,I2,I2,dr2,2);
+                    trace Codelongueur(M0,dr0,M1,dr2,1) withcolor blue;                
+                    label.ulft(TEX("$B$"),dr0);
+                    label.ulft(TEX("$A$"),M0);
+                    label.urt(TEX("$A'$"),M1);
+                    label.urt(TEX("$B'$"),dr2);
+                \end{Geometrie}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.65\linewidth}
+            \begin{enumerate}
+                \item Construire les symétriques $A'$ et $B'$ des extrémités $A$ et $B$ par rapport à l'axe.
+                \item Tracer $[A'B']$.
+            \end{enumerate}
+        \end{minipage}
+        \begin{myBox}{\infoComplementsNumeriques{singulier}}
+            \begin{minipage}{\linewidth}
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_112.html}{Avec l'équerre et le compas}
+            
+                \creditInstrumentPoche
+            \end{minipage}
+        \end{myBox}
+    \end{methode*1}
+    % demi-droite
+    \begin{methode*1}[Image d'une demi-droite par rapport à une droite non parallèle]
+        \exercice
+        Construire l'image d'une demi-droite $[My)$ par rapport à une droite $(d)$ non parallèle.
+        \correction
+        \begin{minipage}{0.35\linewidth}
+            \begin{center}
+                \begin{Geometrie}[CoinHD={(6u,3.5u)},CoinBG={(0,0)}]
+                    pair M[],I[],axe[],dr[];
+                    axe0=u*(3,0);
+                    axe1-axe0=u*(0.5,5);                
+                    trace 1.5[axe1,axe0]--axe1 dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                    M0-axe0=u*(-1.4,0.8);
+                    M1=symetrie(M0,axe0,axe1);
+                    I0=segment(M0,M1) intersectionpoint segment(axe0,axe1);
+                    I1=0.6[axe0,axe1];
+                    trace droite(M0,M1) dashed withdots;
+                    trace droite(M0,I1) dashed evenly;
+                    trace segment(M0,M1);
+                    trace droite(M1,I1) dashed evenly;
+                    dr0=0.5[I1,M0];
+                    dr1=1.7[I1,M0];
+                    dr2=symetrie(dr0,axe0,axe1);
+                    dr3=symetrie(dr1,axe0,axe1);
+                    trace segment(dr2,dr3) withcolor blue;
+                    trace segment(dr0,dr1) withcolor blue;                    
+                    marque_s:=0.3*marque_s;
+                    I2=segment(dr0,dr2) intersectionpoint segment(axe0,axe1);
+                    trace codeperp(dr0,I2,I1,5);
+                    trace Codelongueur(dr0,I2,I2,dr2,2);
+                    trace segment(dr0,dr2);
+                    label.top(TEX("{\color{red} axe (d)}"),1.2[axe1,axe0]);                
+                    label.lft(TEX("$y$"),1.3[I1,M0]);
+                    label.ulft(TEX("$M$"),dr0);
+                    label.urt(TEX("$M'$"),dr2);
+                    label.rt(TEX("$I$"),I1);
+                \end{Geometrie}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.65\linewidth}
+            \begin{enumerate}
+                \item Tracer la droite portant la demi-droite afin qu'elle coupe l'axe si nécessaire.
+                \item Nommer $I$ l'intersection de la droite et de l'axe de symétrie.
+                \item Construire le symétrique $M'$ de l'origine $M$ par rapport à l'axe.
+                \item Tracer la demi-droite image.
+            \end{enumerate}
+        \end{minipage}
+        \begin{myBox}{\infoComplementsNumeriques{singulier}}
+            \begin{minipage}{\linewidth}
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_155.html}{Symétrique d'une demi-droite}
+            
+                \creditInstrumentPoche
+            \end{minipage}
+        \end{myBox}
+    \end{methode*1}
+    % cercle
+    \begin{methode*1}[Image d'un cercle par rapport à une droite non parallèle]
+        \exercice
+        Construire l'image d'un cercle $(\mathcal{C})$ par rapport à une droite $(d)$.
+        \correction
+        \begin{minipage}{0.45\linewidth}
+            \begin{center}
+                \begin{Geometrie}[CoinHD={(6.5u,5.5u)},CoinBG={(0,-0.5u)}]
+                    pair M[],I[],axe[],dr[],B[];
+                    axe0=u*(3,0);
+                    axe1-axe0=u*(0.5,5);                    
+                    trace 1.5[axe1,axe0]--1.5[axe0,axe1] dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                    M0-axe0=u*(-1.4,0.8);
+                    M1=symetrie(M0,axe0,axe1);
+                    I0=segment(M0,M1) intersectionpoint segment(axe0,axe1);
+                    M2-axe0=u*(-0.8,4);
+                    M3=symetrie(M2,axe0,axe1);
+                    I1=segment(M2,M3) intersectionpoint segment(axe0,axe1);
+                    path c[];
+                    c0=cercles(M0,u);
+                    c1=cercles(M2,1.5u);
+                    trace c0;
+                    trace c1;
+                    B0=pointarc(c0,45);
+                    B1=symetrie(B0,axe0,axe1);
+                    marque_p:="croix";
+                    u:=0.5*u;
+                    pointe(M0,M1,M2,M3,B0,B1);
+                    u:=2*u;
+                    trace codeperp(M0,I0,axe1,5);
+                    trace codeperp(M2,I1,axe1,5);
+                    marque_s:=0.3*marque_s;
+                    trace Codelongueur(M0,I0,I0,M1,2);
+                    trace Codelongueur(M2,I1,I1,M3,3);
+                    c2=cercles(M1,u);
+                    c3=cercles(M3,1.5u);
+                    trace c2;
+                    trace c3;
+                    trace droite(M0,M1) dashed withdots;
+                    trace droite(M2,M3) dashed withdots;
+                    trace segment(M0,M1);
+                    trace segment(M2,M3);
+                    label.ulft(TEX("$C$"),M0);
+                    label.urt(TEX("$C'$"),M1);
+                    label.ulft(TEX("$D$"),M2);
+                    label.urt(TEX("$D'$"),M3);
+                    M4=pointarc(c0,135);
+                    M5=pointarc(c1,135);
+                    M6=symetrie(M4,axe0,axe1);
+                    M7=symetrie(M5,axe0,axe1);
+                    label.ulft(TEX("$(\mathcal{C})$"),M4);
+                    label.ulft(TEX("$(\mathcal{C_1})$"),M5);
+                    label.urt(TEX("$(\mathcal{C}')$"),M6);
+                    label.urt(TEX("$(\mathcal{C_1}')$"),M7);
+                    label.top(TEX("$B$"),B0);
+                    label.top(TEX("$B'$"),B1);
+                    trace segment(B0,B1) dashed evenly;
+                    I2=segment(B0,B1) intersectionpoint segment(axe0,axe1);
+                    trace Codelongueur(B0,I2,I2,B1,1);
+                    trace codeperp(B0,I2,axe1,5);
+                \end{Geometrie}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}{0.55\linewidth}
+            \begin{enumerate}
+                \item Construire le symétrique $C'$ (ou $D'$) du centre $C$ (ou $D$) du cercle $(\mathcal{C})$ (ou $(\mathcal{C}_1)$) par rapport à l'axe.
+                \item Construire le cercle $(\mathcal{C}')$ (ou $(\mathcal{C}_1')$) de centre $C'$ (ou $D'$) et de même rayon que $(\mathcal{C})$ (ou $(\mathcal{C}_1)$).                
+            \end{enumerate}
+            \begin{remarque}
+                pour construire l'image de $(\mathcal{C})$, après avoir construit l'image du centre, on peut aussi construie le symétrique $B'$ d'un point $B$ de $(\mathcal{C})$
+                et tracer le cercle $(\mathcal{C}')$ de centre $C'$ passant par $B'$.
+            \end{remarque}
+        \end{minipage}
+        \begin{myBox}{\infoComplementsNumeriques{singulier}}
+            \begin{minipage}{\linewidth}
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_109.html}{Symétrique d'un cercle à la règle et l'équerre.}
+
+                \medskip
+                \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_114.html}{Symétrique d'un cercle à la règle et au compas.}
+            
+                \creditInstrumentPoche
+            \end{minipage}
+        \end{myBox}
+    \end{methode*1}
+    \subsection{Quelques propriétes et remarques}
+    \begin{propriete}[\admise]
+        Si deux droites sont symétriques par rapport à un axe alors elles se coupent sur cet axe.
+    \end{propriete}
+    % \begin{remarque}
+    %     On connaît complètement une droite avec deux de ses points donc pour construire le symétrique 
+    %     d’une droite par rapport à un axe, il suffit de construire les symétriques de deux de ses points.
+    %     ( n’importe lesquels ) Si cette droite n’est pas parallèle à l’axe de symétrie alors elle le coupe en un point qui est 
+    %     lui-même son image, il reste donc à construire l’image d’un seul autre point.
+    % \end{remarque}
+    \begin{propriete}[\admise]
+        Si deux segments sont symétriques par rapport à une droite alors ils ont la même longueur.
+    \end{propriete}
+    \begin{remarque}
+        les droites qui les portent se coupent sur l'axe de symétrie.
+    \end{remarque}
+    \begin{propriete}[\admise]
+        Si deux demi-droites sont symétriques par rapport à un point alors les droites qui les portent se coupent sur l'axe de symétrie.
+    \end{propriete}
+    \begin{propriete}[\admise]
+        Si deux cercles sont symétriques par rapport à un point alors ils ont le même rayon.
+    \end{propriete}
+
+    
+     
+        

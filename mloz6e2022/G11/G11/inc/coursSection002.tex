@@ -1,5 +1,82 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
-\end{changemargin}
- 
+\section{Définition}
+% \begin{minipage}{0.75\linewidth}
+    \begin{definition}
+        $A$ et $A’$ sont symétriques \textbf{par rapport à la droite $\mathbf{(d)}$} signifie que :
+        \begin{itemize}
+            \item $[AA’]$ est perpendiculaire à $(d)$,
+            \item $A$ et $A’$ sont à égale distance de $(d)$.
+        \end{itemize}
+    \end{definition}
+% \end{minipage}
+% \begin{minipage}{0.25\linewidth}
+%     \hspace*{-15mm}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(18u,10u)}]
+            u:=20mm;
+            pair A[],B[],C[],D[],E[],F[],G[],H[],I[],M[];
+            path figRouge,figVerte;
+            A0=u*(3,3);
+            B0-A0=u*(-1,0);
+            C0-A0=u*(-1,-1);
+            D0-A0=u*(-2,-2);
+            E0-A0=u*(-1,-2);
+            F0-A0=u*(-0.5,-1.5);
+            G0-A0=u*(0,-2);
+            H0-A0=u*(0,-1);
+            I0-A0=u*(-0.5,-0.5);
+            figRouge=polygone(A0,B0,C0,D0,E0,F0,G0,H0,I0);
+            M0-A0=u*(1,0);
+            M1-M0=u*(0,-2.5);
+            A1=symetrie(A0,M0,M1);
+            B1=symetrie(B0,M0,M1);
+            C1=symetrie(C0,M0,M1);
+            D1=symetrie(D0,M0,M1);
+            E1=symetrie(E0,M0,M1);
+            F1=symetrie(F0,M0,M1);
+            G1=symetrie(G0,M0,M1);
+            H1=symetrie(H0,M0,M1);
+            I1=symetrie(I0,M0,M1);
+            figVerte=polygone(A1,B1,C1,D1,E1,F1,G1,H1,I1);
+            trace figRouge;
+            fill figRouge withcolor IndianRed;        
+            trace figVerte;
+            fill figVerte withcolor LightGreen;
+            trace segment(M1,M0+(0,0.5u)) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+            trace segment(A0,A1);
+            trace codeperp(A0,M0,M1,5);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(A0,M0,M0,A1,3);
+            label.bot(TEX("axe (d)"),M1);
+            label.top(TEX("$A$"),A0);
+            label.ulft(TEX("$B$"),B0);
+            label.ulft(TEX("$C$"),C0);
+            label.llft(TEX("$D$"),D0);
+            label.bot(TEX("$E$"),E0);
+            label.top(TEX("$F$"),F0);
+            label.lrt(TEX("$G$"),G0);
+            label.rt(TEX("$H$"),H0);
+            label.lft(TEX("$I$"),I0);
+            label.urt(TEX("$M$"),M0);
+            label.top(TEX("$A'$"),A1);
+            label.urt(TEX("$B'$"),B1);
+            label.urt(TEX("$C'$"),C1);
+            label.lrt(TEX("$D'$"),D1);
+            label.bot(TEX("$E'$"),E1);
+            label.top(TEX("$F'$"),F1);
+            label.llft(TEX("$G'$"),G1);
+            label.lft(TEX("$H'$"),H1);
+            label.rt(TEX("$I'$"),I1);
+            label(TEX("Figure rouge"),B0+(0,u));
+            label(TEX("Figure verte"),B1+(0,u));
+        \end{Geometrie}
+    \end{center}
+% \end{minipage}
+
+\begin{myvocabulaire}
+    \begin{itemize}
+        \item La \textbf{figure verte} est obtenue à partir de la \textbf{figure rouge} par \textbf{pliage} le long de l'\textbf{axe (d)}.
+        \item On dit que a \textbf{figure verte} est la \textbf{symétrique} de la \textbf{figure rouge} \textbf{par rapport à l'\textbf{axe (d)}}.
+        \item On peut également dire qu'elle est \textbf{l'image} de la \textbf{figure rouge} \textbf{par la symétrie d'axe (d)}.
+        \item \textbf{(d)} est un \textbf{axe de symétrie}.
+        \end{itemize}
+\end{myvocabulaire}

@@ -1,5 +1,67 @@
-\begin{activite}[\dots]
+\begin{activite}[Les napperons]
     \begin{changemargin}{-10mm}{-15mm}
-        \dots
+        {\bf Objectif :} construire une figure complexe par découpage à l'aide de symétries. 
+
+        \partie[pliage rosace]
+            Effectuer le pliage ci-dessous dans une feuille carrée de \Lg[cm]{10} de côté.
+            \begin{center}
+                \begin{pspicture}(-0.5,-0.5)(3.5,3.3)
+                    \rput(-0.3,1.5){1)}
+                    \psframe(0,0)(3,3)
+                    \psline[linestyle=dashed](1.5,0)(1.5,3)
+                    \psarc{<-}(1.5,1.5){0.75}{0}{180}
+                    \rput(3.3,1.5){$\Rightarrow$}
+                    \end{pspicture}
+                    \begin{pspicture}(0,-0.5)(2,3.3)
+                    \psframe(0,0)(1.5,3)
+                    \end{pspicture}
+                    \begin{pspicture}(-0.5,-0.5)(2,3.3)
+                    \rput(-0.3,1.5){2)}
+                    \psframe(0,0)(1.5,3)
+                    \psline[linestyle=dashed](0,1.5)(1.5,1.5)
+                    \psarc{->}(0.75,1.5){0.5}{90}{-90}
+                    \rput(1.8,0.75){$\Rightarrow$}
+                    \end{pspicture}
+                    \begin{pspicture}(0,-0.5)(2,3.3)
+                    \psframe(0,0)(1.5,1.5)
+                    \end{pspicture}
+                    \begin{pspicture}(-0.5,-0.5)(2,3.3)
+                    \rput(-0.3,1.5){3)}
+                    \psframe(0,0)(1.5,1.5)
+                    \psline[linestyle=dashed](0,1.5)(1.5,0)
+                    \psarc{->}(0.75,0.75){0.4}{45}{-135}
+                    \rput(1.8,0.75){$\Rightarrow$}
+                    \end{pspicture}
+                    \begin{pspicture}(0,-0.5)(2,3.3)
+                    \pspolygon(0,0)(0,1.5)(1.5,0)
+                \end{pspicture}
+            \end{center}
+        
+        \partie[un joli napperon]
+            Utiliser maintenant le pliage rosace pour réaliser le napperon ci-dessous.
+            \begin{center}
+                \psset{unit=0.9}
+                \begin{pspicture}(-5,-5.5)(5,5.5)
+                \pspolygon(-5,-5)(-0.5,-5)(0,-4)(0.5,-5)(5,-5)(5,-0.5)(4,0)(5,0.5)(5,5)(0.5,5)(0,4)(-0.5,5)(-5,5)(-5,0.5)(-4,0)(-5,-0.5)
+                \psset{PointSymbol=none,PointName=none}
+                \pstGeonode{O}(5,0){Z}(0,5){Y}(5,-5){X}
+                \pstTriangle(-4,-3){M}(-3,-4){N}(-3,-3){C}
+                \pstTriangle(-3,-2){D}(-2,-3){E}(-2,-2){F}
+                \psset{CurveType=polygon}
+                \pstSymO{O}{M,N,C}
+                \pstSymO{O}{D,E,F}
+                \pstOrtSym{O}{Z}{M,N,C}
+                \pstOrtSym{O}{Z}{D,E,F}
+                \pstOrtSym{O}{Y}{M,N,C}
+                \pstOrtSym{O}{Y}{D,E,F}
+                \pstGeonode(-3.25,0){G}(-2.75,-0.5){H}(-2.25,0){I}(-2.75,0.5){J}
+                \pstSymO{O}{G,H,I,J}
+                \pstOrtSym{O}{X}{G,H,I,J}
+                \pstSymO{O}{G',H',I',J'}
+                \pspolygon(-1,-0.5)(-0.5,-0.5)(-0.5,-1)(0,-0.5)(0.5,-1)(0.5,-0.5)(1,-0.5)(0.5,0)(1,0.5)(0.5,0.5)(0.5,1)(0,0.5)(-0.5,1)(-0.5,0.5)(-1,0.5)(-0.5,0)
+            \end{pspicture}
+        \end{center}
+
+        \hfill{\it\footnotesize Source : inspiré de l'article \href{https://irem.univ-grenoble-alpes.fr/medias/fichier/68n3_1555658318837-pdf}{Le napperon, un problème pour travailler la symétrie axiale}, Grand N n\degre68, Marie-Lise Peltier, 2001}.
     \end{changemargin}
 \end{activite}
