@@ -1,7 +1,43 @@
-
 \begin{exercice*}
-   \dots
-\end{exercice*}
+   Reproduire chaque lettre et la droite sur le cahier puis construire le symétrique par rapport à la droite.
+   \begin{center}
+      {\psset{unit=0.45}
+      \begin{pspicture}(3,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-1,0)(2,3)
+        \psset{linewidth=0.6mm}
+        \psline(0,1)(0,3)(1,3)(1,1)
+        \psline(0,2)(1,2)
+        \psline[linecolor=B1](-1,0)(2,0)  
+     \end{pspicture}
+     \begin{pspicture}(-1,0)(2,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](-1,0)(1,3)
+        \psset{linewidth=0.6mm}
+        \psline(1,1)(0,1)(0,3)(1,3)
+        \psline(0,2)(1,2)
+        \psline[linecolor=B1](-1,0)(-1,3)
+     \end{pspicture}
+     \begin{pspicture}(4,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+        \psset{linewidth=0.6mm}
+        \psline(0,1)(0,3)
+        \psline(0,2)(1,2)
+        \psline(1,1)(1,3)
+        \psline[linecolor=B1](1,0)(3,2)
+     \end{pspicture}
+     \begin{pspicture}(4,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+        \psset{linewidth=0.6mm}
+        \psline(1,2)(1,0)(2,0)
+        \psline[linecolor=B1](0,3)(3,0)
+     \end{pspicture}
+     \begin{pspicture}(2,3)
+        \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,3)
+        \psset{linewidth=0.6mm}
+        \pscircle(1,1){1}
+        \psline[linecolor=B1](0,2)(2,2)
+     \end{pspicture}}
+   \end{center}
+\end{exercice*}  
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}

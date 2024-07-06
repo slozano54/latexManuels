@@ -1,7 +1,37 @@
-
 \begin{exercice*}
-   \dots
+   Trouver les erreurs dans les tracés de symétriques suivants (la figure d'origine est dans la partie grise).
+   \begin{center}
+   {\psset{unit=0.3}
+      \begin{pspicture}(12,17.5)
+         \psframe[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](12,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](12,18)
+         \psline(0,8)(12,8)
+         \psset{linewidth=0.3mm}
+         \pspolygon(4,0)(10,5)(5,3)(2,4)
+         \pspolygon(2,12)(10,11)(5,13)(4,16)
+         \psdots(2,12)(10,11)(5,13)(4,16)
+      \end{pspicture}
+      \begin{pspicture}(12,17)
+         \psframe[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](12,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](12,18)
+         \psline(0,8)(12,8)
+         \psset{linewidth=0.3mm}
+         \pspolygon(4,0)(10,5)(5,3)(2,4)
+         \pspolygon(2,12)(5,13)(10,11)(4,18)
+      \end{pspicture}
+      
+      \begin{pspicture}(0,0)(18,9)
+         \pspolygon[fillstyle=solid,fillcolor=lightgray!50,linewidth=0](14,0)(18,0)(18,8)(6,8)
+         \psgrid[subgriddiv=0,gridcolor=lightgray,gridlabels=0](0,0)(18,8)
+         \psline(14,0)(6,8)
+         \psset{linewidth=0.4mm}
+         \psline(13,5)(10,5)(10,7)
+         \psline(11,5)(11,6)
+         \psline(6,1)(9,4)(7,5)
+         \psline(8,3)(7,4)
+      \end{pspicture}}
+   \end{center}   
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}

@@ -1,7 +1,26 @@
-
 \begin{exercice*}
-   \dots
+   Tracer la figure symétrique de toutes les figures par rapport à la droite.
+   {\psset{unit=0.45}
+   \begin{center}
+      \begin{pspicture}(18,18)
+         \psgrid[gridlabels=0,gridcolor=lightgray,subgriddiv=0](18,18)
+         \psline(0,0)(18,18)
+          \psset{linewidth=1.5pt}
+         \pspolygon(1,8)(2,9)(3,8)(5,8)(6,9)(5,9)(6,10)(5,11)(3,11)(2,10)(1,11)
+         \pspolygon(1,13)(3,17)(7,17)(9,13)
+         \pscircle(5,15){1}
+         \psdot(5,10)
+         \psline(7,13)(7,17)
+         \psline(3,13)(3,17)
+         \psarc(2,2){1.41}{45}{225}
+         \psarc(3,3){1.41}{45}{225}
+         \pscircle(3,6){1}
+         \pscircle(3,5){1.41}
+         \pspolygon(10,14)(13,14)(14,15)(10,15)
+         \psline(12,15)(12,18)(11,16)(12,16)
+      \end{pspicture}
+   \end{center}}
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}

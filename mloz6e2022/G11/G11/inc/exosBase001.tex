@@ -1,7 +1,25 @@
-
 \begin{exercice*}
-   \dots
+   Pour chacune des figures suivantes, dire s'il s'agit ou pas d'une symétrie axiale. Si oui, tracer l'axe de symétrie.
+   \begin{center}
+      \psset{unit=0.85}
+      \begin{pspicture}(8,7.5)
+         \def\cocottea{\pspolygon(0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+         \def\cocotteb{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(0.5,0)(0.75,0.25)(1,0)(1,0.5)(0.75,0.75)(1,1)(0.5,1)(0.5,0.5)}
+         \def\cocottec{\pspolygon[fillstyle=solid,fillcolor=lightgray](0,0)(-0.5,0)(-0.75,0.25)(-1,0)(-1,0.5)(-0.75,.75)(-1,1)(-0.5,1)(-0.5,0.5)}
+         \psframe(0,0)(8,7.5)
+         \psline(4,0)(4,7.5)
+         \psline(8,0)(8,7.5)
+         \psline(0,2.5)(8,2.5)
+         \psline(0,5.5)(8,5.5)
+         \rput(0.5,6){\cocottea} \rput(3.5,6){\cocottec}
+         \rput{90}(6,6){\cocotteb} \rput(6,6){\cocottea} 	
+         \rput(1.5,4){\cocottea} \rput(1.5,2.75){\cocotteb}
+         \rput(5.75,4.25){\cocotteb} \rput{180}(6,4){\cocottea}                         
+         \rput(0.5,1){\cocottea} \rput(3.25,0.5){\cocottec}     
+         \rput{-30}(4.25,0.75){\cocottea} \rput{80}(7.5,2.25){\cocottec}	               
+      \end{pspicture}
+   \end{center}
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}
