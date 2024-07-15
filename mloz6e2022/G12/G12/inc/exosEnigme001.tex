@@ -2,16 +2,69 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
+\vspace*{-10mm}
+\begin{enigme}[Pavage]
     \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
+        \begin{minipage}{12cm}
+            Un {\bf pavage du plan} est un ensemble de portions du plan qui, lorsqu'on les met les unes à côté des autres, forment le plan tout entier, sans recouvrement. Par exemple, lorsque l'on pose du carrelage, on effectue un pavage de la pièce. Ce carrelage peut être de forme carrée, rectangulaire, hexagonale\dots \\
+            On considère le carrelage carré ci-contre qui dispose de huit axes de symétrie. \\
+            Effectuer un pavage du plan ci-dessous avec ce carrelage en commençant par l'un des coins puis le colorier.
+         \end{minipage}
+         \qquad
+         \begin{minipage}{4.5cm}
+            \begin{Geometrie}[CoinHD={(5u,5u)}]
+                trace grille(0.5) withcolor LightGray;
+                pair A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R;
+                A=u*(2.5,2.5);
+                B=u*(4,4);
+                C=u*(4,4.5);
+                D=u*(3.5,5);
+                E=u*(3,5);
+                F=u*(2.5,4.5);
+                G=u*(2,5);
+                H=u*(1.5,5);
+                I=u*(1,4.5);
+                J=u*(1,4);
+                K=u*(2.5,3);
+                L=u*(3.5,4);
+                M=u*(3.5,4.5);
+                N=u*(3,4.5);
+                O=u*(2.5,4);
+                P=u*(2,4.5);
+                Q=u*(1.5,4.5);
+                R=u*(1.5,4);
+                drawoptions(withpen pencircle scaled 1.5bp);
+                path triangleCoin;
+                triangleCoin = polygone((0,4.5u),(0.5u,4.5u),(0.5u,5u));
+                trace triangleCoin;
+                trace symetrie(triangleCoin,(2.5u,0),(2.5u,5u));
+                trace symetrie(triangleCoin,(0,2.5u),(5u,2.5u));
+                trace symetrie(triangleCoin,(2.5u,2.5u));
+                path grandCoeur, petitCoeur;
+                grandCoeur=polygone(A,B,C,D,E,F,G,H,I,J);
+                trace grandCoeur;                
+                petitCoeur=polygone(K,L,M,N,O,P,Q,R);
+                trace petitCoeur;
+                trace symetrie(grandCoeur,A);
+                trace symetrie(petitCoeur,A);
+                trace symetrie(grandCoeur,A,B);
+                trace symetrie(petitCoeur,A,B);
+                trace symetrie(grandCoeur,A,J);
+                trace symetrie(petitCoeur,A,J);
+            \end{Geometrie}
+         \end{minipage}
+         \begin{center}
+            \begin{Geometrie}[CoinHD={(15u,15u)}]
+                trace grille(0.5) withcolor LightGray;
+                draw (0,0)--(15u,0)--(15u,15u)--(1,15u)--cycle withpen pencircle scaled 3bp;
+            \end{Geometrie}
+         \end{center}
     \end{changemargin}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
-
 \begin{corrige}
-    Correction du binz.
+    Pas de corrigé.
 \end{corrige}
  

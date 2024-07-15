@@ -1,7 +1,40 @@
-
 \begin{exercice*}
-   \dots
+   Un quadrilatère $ABCD$ est appelé isocerfvolant en $A$ si l'angle $\widehat{BAD}$ est droit et si la droite $(AC)$ est un axe de symétrie.
+   \begin{center}
+      \begin{Geometrie}
+         pair A,B,C,D;
+         A=u*(1,3);
+         B-A=u*(2,-2);
+         C-A=u*(6,0);
+         D=symetrie(B,A,C);
+         trace polygone(A,B,C,D);
+         trace segment(A+0.3(A-C),C+0.2(C-A)) dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1bp withcolor red;
+         trace codeperp(B,A,D,8);
+         label.ulft(TEX("$A$"),A);
+         label.bot(TEX("$B$"),B);
+         label.urt(TEX("$C$"),C);
+         label.top(TEX("$D$"),D);
+      \end{Geometrie}
+   \end{center}
+\begin{enumerate}
+   \item
+   \begin{enumerate}
+      \item Démontrer que $\widehat{DAC} =\widehat{BAC}$
+      \item En déduire la mesure de l'angle $\widehat{DAC}$
+      \item Quelle est la position relative des droites $(BD)$ et $(AC)$ ?
+   \end{enumerate}
+   \item
+   \begin{enumerate}
+      \item Construire un quadrilatère $ABCD$ qui soit un isocerfvolant en $A$.
+      \item Construire un quadrilatère qui admette un axe de symétrie et qui ne soit pas un isocerfvolant.
+   \end{enumerate}
+   \item Les affirmations suivantes sont-elles vraies ou fausses ? Justifier les réponses.
+   \begin{enumerate}
+      \item Tous les carrés sont des isocerfvolants.
+      \item Tous les rectangles sont des isocerfvolants.
+   \end{enumerate}
+\end{enumerate}
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}

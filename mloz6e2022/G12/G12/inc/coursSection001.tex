@@ -1,5 +1,161 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Propriétés de conservation}
+    \subsection{Énoncés}
+    \begin{propriete}[Conservations \admise]
+    Dans une \textbf{symétrie par rapport à un axe}, une figure se transforme en une \textbf{reproduction} de celle-ci; La figure symétrique possède donc les mêmes propriétés géométriques que la figure d'origine :
+        \begin{itemize}
+            \item  toutes les longueurs sont conservées.
+            \item  toutes les mesures d'angles sont conservées.
+            \item  l'alignement des points est conservé.
+            \item  Le parallélisme est conservé.
+        \end{itemize}
+    \end{propriete}   
+    
+    Par exemple cela permet d'écrire les propriétés suivantes :
+
+    \begin{propriete}[conservation des angles \admise]
+        Si deux angles sont symétriques par rapport à un axe alors ils ont la même mesure.
+    \end{propriete}   
+    \begin{propriete}[conservation de l'alignement \admise]
+        Si trois points sont alignés alors leurs symétriques par rapport à un axe le sont aussi.
+    \end{propriete}   
+    \begin{propriete}[conservation des aires \admise]
+        Si deux figures sont symétriques par rapport à un axe alors elles ont la même aire.
+    \end{propriete}   
+
+    En écrire d'autres...
+    \subsection{Illustrations}
+    \begin{Geometrie}
+        pair A[],B[],H[],axe[];
+        axe0=u*(3,0);
+        axe1-axe0=u*(1,5);
+        trace segment(axe0,axe1) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+        A0-axe0=u*(-1,4);
+        A1=symetrie(A0,axe0,axe1);
+        H0=projection(A0,axe0,axe1);
+        B0-axe0=u*(-2,2);
+        B1=symetrie(B0,axe0,axe1);
+        H1=projection(B0,axe0,axe1);
+        trace segment(A0,B0);
+        trace segment(A1,B1);
+        trace segment(A0,A1) dashed evenly;
+        trace segment(B0,B1) dashed evenly;
+        trace codeperp(A0,H0,axe0,5);
+        trace codeperp(B0,H1,axe0,5);
+        marque_s:=0.5*marque_s;
+        trace marquesegment(A0,B0);
+        trace marquesegment(A1,B1);        
+        marque_s:=0.5*marque_s;
+        trace Codelongueur(A0,B0,B1,A1,2);
+        trace Codelongueur(A0,H0,H0,A1,3);
+        trace Codelongueur(B0,H1,H1,B1,4);
+        label.ulft(TEX("$A$"),A0);
+        label.ulft(TEX("$B$"),B0);
+        label.urt(TEX("$A'$"),A1);
+        label.urt(TEX("$B'$"),B1);
+    \end{Geometrie}
+    \hfill
+    \begin{Geometrie}
+        pair A[],B[],H[],axe[];
+        axe0=u*(5,0);
+        axe1-axe0=u*(-1,5);
+        trace segment(axe0,axe1) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+        A0-axe0=u*(-2,3);
+        A1=symetrie(A0,axe0,axe1);
+        H0=projection(A0,axe0,axe1);        
+        trace segment(A0,A1) dashed evenly;        
+        trace cercles(A0,u);
+        trace cercles(A1,u);
+        trace codeperp(A0,H0,axe0,5);
+        marque_s:=0.3*marque_s;
+        trace Codelongueur(A0,H0,H0,A1,2);
+        label.ulft(TEX("$O$"),A0);
+        label.urt(TEX("$O'$"),A1);
+        u:=u*0.5;
+        marque_p:="croix";
+        pointe(A0,A1);
+        u:=u*2;
+    \end{Geometrie}
+    \hfill
+    \begin{Geometrie}
+        pair A[],B[],C[],H[],axe[];
+        axe0=u*(0,4);
+        axe1-axe0=u*(7,0.5);
+        trace segment(axe0,axe1) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp);
+        A0-axe0=u*(1,0.75);
+        A1=symetrie(A0,axe0,axe1);
+        H0=projection(A0,axe0,axe1);
+        B0-axe0=u*(1.5,2.5);
+        B1=symetrie(B0,axe0,axe1);
+        H1=projection(B0,axe0,axe1);
+        C0-axe0=u*(5.5,1.5);
+        C1=symetrie(C0,axe0,axe1);
+        H2=projection(C0,axe0,axe1);
+        trace polygone(A0,B0,C0);
+        trace polygone(A1,B1,C1);
+        trace segment(A0,A1) dashed evenly;
+        trace segment(B0,B1) dashed evenly;
+        trace segment(C0,C1) dashed evenly;
+        trace codeperp(A0,H0,axe0,5);
+        trace codeperp(B0,H1,axe0,5);
+        trace codeperp(C0,H2,axe0,5);
+        marque_s:=0.5*marque_s;
+        trace marquesegment(A0,B0);        
+        %
+        trace marqueangle(B0,C0,A0,0);
+        trace marqueangle(A1,C1,B1,0);
+        marque_a:=1.1*marque_a;
+        trace marqueangle(B0,C0,A0,0);
+        trace marqueangle(A1,C1,B1,0);
+        marque_a:=1.1*marque_a;        
+        trace marqueangle(B0,C0,A0,0);
+        trace marqueangle(A1,C1,B1,0);
+        %
+        marque_a:=marque_a/1.21;
+        marque_a:=marque_a*0.5;
+        trace marqueangle(C0,A0,B0,0);
+        trace marqueangle(B1,A1,C1,0);
+        marque_a:=marque_a*1.2;
+        trace marqueangle(C0,A0,B0,0);
+        trace marqueangle(B1,A1,C1,0);
+        marque_s:=0.5*marque_s;
+        trace Codelongueur(A0,H0,H0,A1,3);
+        trace Codelongueur(B0,H1,H1,B1,4);
+        trace Codelongueur(C0,H2,H2,C1,2);
+        label.ulft(TEX("$A$"),A0);
+        label.ulft(TEX("$B$"),B0);
+        label.urt(TEX("$C$"),C0);
+        label.llft(TEX("$A'$"),A1);
+        label.llft(TEX("$B'$"),B1);
+        label.lrt(TEX("$C'$"),C1);
+    \end{Geometrie}
+
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5u,5u)}]
+            pair axe[],A[],B[];
+            axe0=u*(5,0);
+            axe1=u*(0,5);        
+            trace segment(axe0,axe1) withcolor red withpen pencircle scaled 1bp;
+            A0=u*(0.5,0.5);
+            A1-A0=u*(1,0);
+            A2-A0=u*(1,0.5);
+            A3-A0=u*(1.5,1);
+            A4-A0=u*(0.5,1);
+            A5-A0=u*(0.5,2);
+            A6-A0=u*(0,2);
+            B0=symetrie(A0,axe0,axe1);
+            B1=symetrie(A1,axe0,axe1);
+            B2=symetrie(A2,axe0,axe1);
+            B3=symetrie(A3,axe0,axe1);
+            B4=symetrie(A4,axe0,axe1);
+            B5=symetrie(A5,axe0,axe1);
+            B6=symetrie(A6,axe0,axe1);
+            fill polygone(A0,A1,A2,A3,A4,A5,A6) withcolor LightSkyBlue;
+            fill polygone(B0,B1,B2,B3,B4,B5,B6) withcolor LightPink;
+            trace grille(0.5);
+            trace polygone(A0,A1,A2,A3,A4,A5,A6) withcolor blue withpen pencircle scaled 1bp;
+            trace polygone(B0,B1,B2,B3,B4,B5,B6) withcolor Crimson withpen pencircle scaled 1bp;
+        \end{Geometrie}
+    \end{center}
 \end{changemargin}
  

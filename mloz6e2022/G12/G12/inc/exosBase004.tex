@@ -1,7 +1,38 @@
-
 \begin{exercice*}
-   \dots
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item Reproduire deux fois cette figure sur le cahier.
+         \begin{center}
+            % \begin{pspicture}(-1,0)(6,8)
+            %    {\psset{fillstyle=solid,fillcolor=A2}
+            %    \pstGeonode[CurveType=polygon,PointName=none,PointSymbol=none](1,4){A}(2.5,4){B}(2.5,6){C}
+            %    \pstGeonode[CurveType=polygon,PointName=none,PointSymbol=none,fillcolor=B2](1,4){A}(2.5,6){C}(0.5,7.5){D}
+            %    \pstGeonode[PointName=none,PointSymbol=none](0,1){E}(5,4){F}
+            %    \pstOrtSym[CodeFig=false,PointSymbol=none,PointName=none,CurveType=polygon]{E}{F}{A,B,C}[A',B',C']}
+            % \end{pspicture}
+            \begin{Geometrie}
+               pair A[],B[],C[],D,E,F;
+               A0=u*(1,4);
+               B0=u*(2.5,4);
+               C0=u*(2.5,6);
+               D=u*(0.5,7.5);
+               E=u*(0,1);
+               F=u*(5,4);
+               path triangleRouge,triangleBleu;
+               triangleRouge=polygone(A0,C0,D);
+               triangleBleu=polygone(A0,B0,C0);               
+               fill triangleRouge withcolor Crimson;
+               fill triangleBleu withcolor LightSkyBlue;
+               A1=symetrie(A0,E,F);
+               B1=symetrie(B0,E,F);
+               C1=symetrie(C0,E,F);
+               fill polygone(A1,B1,C1) withcolor LightSkyBlue;
+            \end{Geometrie}
+         \end{center}
+      \item On souhaite compléter la figure de telle sorte qu'elle ait un axe de symétrie. Proposer une méthode avec la règle non graduée et le compas.
+      \item Proposer une autre méthode avec uniquement une règle non graduée.
+   \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-   \dots
+   Pas de corrigé.
 \end{corrige}
