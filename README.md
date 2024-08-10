@@ -107,8 +107,8 @@ tlmgr update -list
 
 ## Remerciements
 
-- À Nathalie DAVAL pour son partage des sources des ses manuels de 6e et 5e
-- À Christophe POULAIN pour son aide précieuse de TeXnicien
+- À Nathalie DAVAL pour son partage des sources des ses manuels de 6e et 5e.
+- À Christophe POULAIN pour son aide précieuse de TeXnicien.
 - À l'association Sésamath pour ces nombreux exercices en partage libre.
 
 <!-- CONTRIBUTING -->
