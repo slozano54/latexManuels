@@ -1,7 +1,38 @@
-
 \begin{exercice*}
-   \dots
+   Une pâtissière a pesé ses beignets, que l’on
+   suppose de masse identique, et a trouvé :
+   \begin{center}
+     \setlength{\tabcolsep}{3\tabcolsep}
+       \begin{tabular}{cc}
+         \Masse{300}&\Masse{450}\\
+         \begin{mplibcode}
+            input fiziko;
+            path p[];
+            p2 := fullcircle scaled 7mm;
+            addStrandToKnot (Donut) (p2,1/5cm,"s","") ;
+            picture Donuts;
+            Donuts=image(draw knotFromStrands(Donut););
+            for k=0 upto 1:
+            draw Donuts shifted(k*1.25cm,0);
+            endfor;
+         \end{mplibcode}
+         &
+         \begin{mplibcode}
+            input fiziko;
+            path p[];
+            p2 := fullcircle scaled 7mm;
+            addStrandToKnot (Donut) (p2,1/5cm,"s","") ;
+            picture Donuts;
+            Donuts=image(draw knotFromStrands(Donut););
+            for k=0 upto 2:
+            draw Donuts shifted(k*1.25cm,0);
+            endfor;
+         \end{mplibcode}\\
+       \end{tabular}
+     \end{center}
+     Combien pèsent cinq, six, dix et un beignet ?
+     \begin{center}
+       \setlength{\tabcolsep}{0.5\tabcolsep}
+     \Propor[Largeur=18pt,Condense,GrandeurA=\begin{tabular}{cc}Nombre\\de beignets\end{tabular},GrandeurB=Masse (en \Masse{}),Math]{2/300,3/450,\pointilles/\pointilles,\pointilles/\pointilles,\pointilles/\pointilles,\pointilles/\pointilles}
+     \end{center}
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
