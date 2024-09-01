@@ -1,24 +1,35 @@
 \begin{activite}[Le puzzle de Brousseau]
+    \begin{changemargin}{-10mm}{-20mm}
     {\bf Objectifs :} mettre en \oe uvre un ou des moyens pour résoudre un problème d'agrandissement ; reproduire une figure géométrique en respectant des mesures ; rendre compte d'un travail en groupe.
     \partie[présentation du puzzle]
         Ci-dessous se trouve un puzzle composé de quatre pièces A, B, C et D dont les mesures dont indiquées sur la figure.
         \begin{center}
-            \begin{pspicture}(-1.5,-1.2)(12.5,11.5)
-            \psframe(0,0)(11,11)
-            \psline(4,0)(4,11)
-            \psline(4,6)(11,6)
-            \psline(7,0)(7,6)
-            {\small
-                \rput(12,3){\ucm{6}}
-                \rput(12,8.5){\ucm{5}}
-                \rput(2,-0.5){\ucm{4}}
-                \rput(5.5,-0.5){\ucm{2}}
-                \rput(9,-0.5){\ucm{5}}}
-                \rput(2,5.5){A}
-                \rput(5.5,3){B}
-                \rput(9,3){C}
-                \rput(7.5,8.5){D}
-            \end{pspicture}
+            \begin{Geometrie}[CoinHD={(12u,12u)}]
+                pair S[];
+                S0=u*(0.5,0.5);
+                S1-S0=u*(11,0);
+                S2-S0=u*(11,11);
+                S3-S0=u*(0,11);
+                S4-S0=u*(4,0);
+                S5-S0=u*(4,11);
+                S6-S0=u*(7,6);
+                S7-S0=u*(7,0);
+                S8-S0=u*(4,6);
+                S9-S0=u*(11,6);
+                trace polygone(S0,S1,S2,S3) withpen pencircle scaled 1.2bp;
+                trace segment(S4,S5) withpen pencircle scaled 1.2bp;
+                trace segment(S6,S7) withpen pencircle scaled 1.2bp;
+                trace segment(S8,S9) withpen pencircle scaled 1.2bp;
+                label(TEX("\textbf{A}"),iso(S3,S4));
+                label(TEX("\textbf{B}"),iso(S8,S7));
+                label(TEX("\textbf{C}"),iso(S6,S1));
+                label(TEX("\textbf{D}"),iso(S5,S9));
+                trace cotationmil(S0,S4,-3mm,15,TEX("\Lg[cm]{4}"));
+                trace cotationmil(S4,S7,-3mm,15,TEX("\Lg[cm]{2}"));
+                trace cotationmil(S7,S1,-3mm,15,TEX("\Lg[cm]{5}"));
+                trace cotationmil(S1,S9,-3mm,15,TEX("\Lg[cm]{6}"));
+                trace cotationmil(S9,S2,-3mm,15,TEX("\Lg[cm]{5}"));
+            \end{Geometrie}
             \end{center}
     
     \partie[travail demandé]
@@ -27,4 +38,5 @@
         \begin{center}
             {\bf C'est parti\dots{} le segment de \ucm{4} devra mesurer \ucm{6} sur votre puzzle agrandi.}
         \end{center}
+    \end{changemargin}
  \end{activite}

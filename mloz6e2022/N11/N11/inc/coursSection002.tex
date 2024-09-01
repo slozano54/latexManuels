@@ -1,5 +1,129 @@
-\begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
-\end{changemargin}
- 
+\section{Procédures de proportionnalité}
+\begin{center} 
+    \begin{Mind}
+        \begin{Bulle}[Nom={HautGauche},Pointilles,Ancre={-6,1.9},Largeur=7cm,CFond=blue!15]
+            \begin{center}
+                \textbf{Linéarité additive}
+                
+                12 stylos = 4 stylos + 4 stylos + 4 stylos 
+                
+                coûtent $\Prix{10}+\Prix{10}+\Prix{10} =\Prix{30}$
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom={HautDroit},Pointilles,Ancre={2,1.9},Largeur=7cm,CFond=blue!15]
+            \begin{center}
+                \textbf{Linéarité multiplicative}
+
+                12 stylos = 3$\times$4 stylos 
+                
+                coûtent $3\times\Prix{10} =\Prix{30}$
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom={BasGauche},Pointilles,Ancre={-6,-2.2},Largeur=7cm,CFond=blue!15]
+            \begin{center}
+                \textbf{Passage par l'unité}
+
+                1 stylo coûte 4 fois moins cher : 
+                
+                $\Prix{10}\div4 =\Prix{2,5}$ 
+                
+                12 stylos coûtent 12 fois plus cher : 
+                
+                $12\times\Prix{2,5} =\Prix{30}$
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom={BasDroit},Pointilles,Ancre={2,-2.2},Largeur=7cm,CFond=blue!15]
+            \begin{center}
+                \textbf{Coefficient de proportionnalité}
+
+                $4\times\fbox{2,5} =10$ 
+                
+                le coefficient de proportionnalité vaut 2,5 
+                
+                $12\times\fbox{2,5} =30$ 
+                
+                12 stylos coûtent \Prix{30}
+            \end{center}
+        \end{Bulle}
+        \begin{Bulle}[Nom={Enonce},Pointilles,Ancre={-2,0},Largeur=6cm,CFond=red!15]
+            \setlength{\abovedisplayskip}{0pt}
+            \begin{center}
+            \textbf{Si 4 stylos coûtent \Prix{10},}
+            
+            \textbf{combien coûtent 12 stylos ?}
+            \end{center}
+        \end{Bulle}        
+        \draw[-stealth,line width=2pt,out=180,in=-90] (Enonce-G-8) to (HautGauche-B-5);
+        \draw[-stealth,line width=2pt,out=0,in=-90] (Enonce-D-2) to (HautDroit-B-5);
+        \draw[-stealth,line width=2pt,out=180,in=90] (Enonce-G-2) to (BasGauche-H-5);
+        \draw[-stealth,line width=2pt,out=0,in=90] (Enonce-D-8) to (BasDroit-H-5);
+    \end{Mind}
+\end{center}
+
+\begin{propriete}[Linéarité de la proportionnalité \admise]
+    \begin{center}
+        \vspace*{23mm}
+        \renewcommand{\arraystretch}{1.8}
+        \[\begin{tabular}{c|>{\centering}p{2cm}|>{\centering}p{1.2cm}|>{\centering}p{1.2cm}|>{\centering}p{1.2cm}|>{\centering}p{1.2cm}|>{\centering}p{1.2cm}|c}
+        \cline{2-7}
+        \rnode{A}{} & $1^{\grave{e}re}$ ligne : $x$ & \rnode[ul]{G1}{\phantom{0}} \rnode[uc]{E1}{\num{0,5}} & \rnode[uc]{E2}{1} \rnode[ur]{G2}{\phantom{0}} & \rnode[uc]{G4}{\num{1,5}} & \rnode[uc]{I1}{10} & \rnode[uc]{I2}{\num{2,5}} & \rnode{C}{}\tabularnewline
+        \cline{2-7}
+        \rnode{B}{}& $2^{\grave{e}me}$ ligne : $y$ & \rnode[bl]{H1}{\phantom{0}} \rnode[bc]{F1}{\num{1,5}} & \rnode[bc]{F2}{3}\rnode[br]{H2}{\phantom{0}} & \rnode[bc]{H4}{\num{4,5}} & \rnode[uc]{J1}{30} & \rnode[uc]{J2}{\num{7,5}} & \rnode{D}{}\tabularnewline
+        \cline{2-7} 
+        \end{tabular}\]
+        \renewcommand{\arraystretch}{1}
+        % Coeffs de proportionnalité
+        \ncbar[angle=180,arm=0.8]{->}{A}{B} \ncput*{$\times 3$}
+        \ncbar[angle=0,arm=0.8]{->}{D}{C} \ncput*{$\div 3$}
+        % Linéartité sur la ligne x
+        \ncbar[nodesep=2pt,angle=90,arm=1.2]{->}{E1}{E2} \ncput*{$\times 2$}
+        \ncbar[nodesep=2pt,angle=90,arm=1.2]{->}{I1}{I2} \ncput*{$\div 4$}
+        \ncbar[nodesep=8pt,angle=90,arm=1.7]{-}{G1}{G2} \ncput*{\rnode{G3}{}}
+        \ncbar[angle=90,arm=0.8]{->}{G3}{G4} \ncput*{$+$}
+        % Linéartité sur la ligne y
+        \ncbar[nodesep=2pt,angle=-90,arm=1.2]{->}{F1}{F2} \ncput*{$\times 2$}
+        \ncbar[nodesep=2pt,angle=-90,arm=1.2]{->}{J1}{J2} \ncput*{$\div 4$}
+        \ncbar[nodesep=8pt,angle=-90,arm=1.5]{-}{H1}{H2} \ncput*{\rnode{H3}{}}
+        \ncbar[angle=-90,arm=0.8]{->}{H3}{H4} \ncput*{$+$}
+        \vspace*{23mm}
+    \end{center}
+\end{propriete}
+
+\begin{exemple*1}
+    \titreExemple{J'ai voulu planter un oranger}
+    Le tableau suivant résume la situation suivante :
+    \begin{itemize}
+    \item Des oranges coûtent \Prix{1,40} le kg.
+    \item Le prix et la masse des oranges sont des grandeurs proportionnelles.
+
+    1,40 est le \textbf{coefficient de proportionnalité}
+    \item 2 kg d'oranges coûtent $2\times \Prix{1,40} = \Prix{2,80}$ 
+    \item 6 kg d'oranges coûtent $3\times \Prix{2,80} = \Prix{8,40}$
+    \item 2 kg + 6 kg = 8kg coûtent $ \Prix{2,80} + \Prix{8,40} = \Prix{11,20}$
+    \item 1,6 kg coûtent $ \Prix{11,20} \div 5 = \Prix{2,24}$ 
+    \end{itemize}
+    \vspace*{20mm}
+    \renewcommand{\arraystretch}{1.8}
+    \[\begin{tabular}{c|>{\centering}p{35mm}|>{\centering}p{1cm}|>{\centering}p{1cm}|>{\centering}p{1cm}|>{\centering}p{1cm}|>{\centering}p{1cm}|c}
+    \cline{2-7}
+    \rnode{A}{} & Masse d'oranges (en kg) &1& \rnode[ul]{G1}{\phantom{0}} \rnode[uc]{E1}{2} & \rnode[uc]{E2}{6} \rnode[ur]{G2}{\phantom{0}} & \rnode[uc]{G4}{8} \rnode[uc]{I1}{\phantom{0,00}} & \rnode[uc]{I2}{\num{1,6}} & \rnode{C}{}\tabularnewline
+    \cline{2-7}
+    \rnode{B}{}& Prix (en \Prix{})&\num{1,40}& \rnode[bl]{H1}{\phantom{0}} \rnode[bc]{F1}{\num{2,80}} & \rnode[bc]{F2}{\num{8,40}}\rnode[br]{H2}{\phantom{0}} & \rnode[bc]{H4}{\num{11,20}} \rnode[bc]{J1}{}& \rnode[uc]{J2}{\num{2,24}} & \rnode{D}{}\tabularnewline
+    \cline{2-7} 
+    \end{tabular}\]
+    \renewcommand{\arraystretch}{1}
+    \vspace{3cm}
+    % Coeffs de proportionnalité
+    \ncbar[angle=180,arm=0.8]{->}{A}{B} \ncput*{$\times\num{1,40}$}
+    \ncbar[angle=0,arm=0.8]{->}{D}{C} \ncput*{$\div \num{1,40}$}
+    % Linéartité sur la ligne x
+    \ncbar[nodesep=2pt,angle=90,arm=1.2]{->}{E1}{E2} \ncput*{$\times 2$}
+    \ncbar[nodesep=2pt,angle=90,arm=1.2]{->}{I1}{I2} \ncput*{$\div 4$}
+    \ncbar[nodesep=8pt,angle=90,arm=1.7]{-}{G1}{G2} \ncput*{\rnode{G3}{}}
+    \ncbar[nodesep=1pt,angle=90,arm=0.8]{->}{G3}{G4} \ncput*{$+$}
+    % Linéartité sur la ligne y
+    \ncbar[nodesep=2pt,angle=-90,arm=1.2]{->}{F1}{F2} \ncput*{$\times 2$}
+    \ncbar[nodesep=2pt,angle=-90,arm=1.2]{->}{J1}{J2} \ncput*{$\div 4$}
+    \ncbar[nodesep=8pt,angle=-90,arm=1.5]{-}{H1}{H2} \ncput*{\rnode{H3}{}}
+    \ncbar[angle=-90,arm=0.8]{->}{H3}{H4} \ncput*{$+$}
+\end{exemple*1}
