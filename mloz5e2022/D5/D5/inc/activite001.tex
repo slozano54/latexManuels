@@ -1,3 +1,47 @@
-\begin{activite}[...]
-\dots
-\end{activite}
+\begin{activite}[Pourquoi étudier les statistiques ?]
+    \begin{changemargin}{-10mm}{-15mm}
+    {\bf Objectif :} avoir un regard critique envers les chiffres et les informations que l'on nous donne.
+    Pourquoi étudier les statistiques ? Entre autres pour savoir démêler le vrai du faux dans les publicités, les journaux\dots{} Pour chaque ligne du tableau suivant, discuter de ce que vous pouvez déduire immédiatement des données brutes que l'on vous donne, puis étudier ce que l'on pourrait ajouter dans la colonne de droite. \\
+    Cela change-t-il votre opinion ? 
+    \begin{center}
+        {\small
+        \renewcommand{\arraystretch}{2}
+        \begin{CLtableau}{\linewidth}{3}{c}
+            \hline
+            & Ce qu'on vous dit & Ce qu'on oublie de vous dire \\
+            \hline
+            1 & Au loto, 100\,\% des gagnants ont tenté leur chance. & Le pourcentage de gagnants par rapport au nombre total de joueurs. \\
+            \hline
+            2 & M. Truc a largement remporté les élections avec 60\,\% des suffrages. & Le taux d’abstention a été de 50\,\%. \\
+            \hline
+            4 & En 1995, au Brésil, 16\,\% des enfants étaient au travail et au Guatemala : 15,9\,\%. & Le Brésil compte 170 millions d’habitants et le Guatemala 12,7 millions d’habitants.  \\
+            \hline
+            5 & La température annuelle moyenne de Moscou est de 5 degrés. \newline Que prendrez-vous dans vos valises ? & Quel mois partez-vous ? \\
+            \hline
+            6 & Il y a en France environ 200\,000 licenciés à la Fédération française de tir à l'arc. En Chine, il y en a 1\,500\,000. \newline C'est un sport beaucoup plus pratiqué en Chine qu'en France. & La France compte 60\,000\,000 habitants et la Chine 1\,200\,000\,000 habitants. \\
+            \hline
+            7 & C’est un vendredi noir à la Bourse ! Forte chute des valeurs ! & Et si on prenait une autre échelle ? \\
+            & \footnotesize
+                \psset{yunit=0.7}
+                \begin{pspicture}(-1,-0.5)(5,5.5)
+                \psset{linecolor=lightgray}
+                \multido{\r=0+0.5,\n=3760+10}{11}{\psline(0,\r)(5,\r) \rput(-0.5,\r){\n}}  
+                \multido{\n=0+1}{6}{\rput(\n,0){|}}
+                \psline[linecolor=black](0.5,4.5)(1,3.5)(1.5,4)(2,3.75)(2.5,3)(3,2.75)(3.5,1.5)(4,1.75)(4.5,0.5)
+            \end{pspicture}
+            & \footnotesize
+                \psset{yunit=0.7}
+                \begin{pspicture}(-1,-0.5)(5,5.5)
+                \psset{linecolor=lightgray}
+                \multido{\r=0+0.5,\n=3500+50}{11}{\psline(0,\r)(5,\r) \rput(-0.5,\r){\n}}  
+                \multido{\n=0+1}{6}{\rput(\n,0){|}}
+                \psline[linecolor=black](0.5,3.5)(1,3.3)(1.5,3.4)(2,3.35)(2.5,3.2)(3,3.15)(3.5,2.9)(4,2.95)(4.5,2.7)
+            \end{pspicture} \\
+            \hline
+        \end{CLtableau}}
+    \end{center}
+    Ce que nous apprend ce tableau c'est que l'on peut faire dire n'importe quoi aux chiffres, et ainsi déformer la réalité, donc il faut toujours avoir à l'esprit que les résultats d'une étude statistique peuvent être fortement biaisés. \\
+
+    \vfill\hfill{\footnotesize\it Source : d'après \href{http://maths.spip.ac-rouen.fr/IMG/pdf/Statistiques.pdf}{\og Les statistiques dans les nouveaux programmes du cycle central \fg}, académie de Rouen}
+    \end{changemargin}
+ \end{activite}

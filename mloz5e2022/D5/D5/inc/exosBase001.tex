@@ -1,7 +1,64 @@
 \begin{exercice*}
-   \dots
+   Le diagramme en bâtons ci-dessous représente le temps de trajet journalier en minutes de 36 personnes travaillant dans l'entreprise Kadubol.
+   \begin{center}
+      {\footnotesize  
+   \Stat[%
+      Graphique,%
+      Grille,Unitex=0.12,Unitey=0.4,Pasx=5,%
+      EpaisseurBatons=5,Donnee={},Effectif=Nombre de personnes,%
+      LectureFine,Tiret,CouleurDefaut=Gray]{5/1,10/3,15/2,20/2,25/4,30/7,35/5,40/4,45/3,50/2,55/0,60/3} \\ [-2mm]
+   \hspace*{50mm} Temps en minutes}
+   \end{center}  
+   \vspace*{-5mm}
+   \begin{enumerate}
+      \item
+      \begin{enumerate}
+         \item Construire le tableau d'effectifs et de fréquences récapitulant toutes ces valeurs.
+         \item Calculer la moyenne
+      \end{enumerate}
+      \item
+      \begin{enumerate}
+         \item Construire le tableau des effectifs en les regroupant par classes d'amplitude 15 minutes en commençant par la classe ]~0~;~15~].
+         \item Calculer la moyenne en utilisant la répartition par classes. Le résultat obtenu est-il le même que lors du calcul précédent ? Pourquoi ? Est-il plus fiable ?
+      \end{enumerate}
+   \end{enumerate}
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
 
+\begin{corrige}
+   \ \\ [-5mm]
+   \begin{enumerate}
+      \item
+      \begin{enumerate}
+         \item Tableau des effectifs et des fréquences en \% \\ \smallskip
+         {\footnotesize
+         \renewcommand{\arraystretch}{1.3}
+         \begin{ltableau}{\linewidth}{12}
+            \hline
+            5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 \\
+            \hline
+            1 & 3 & 2 & 2 & 4 & 7 & 5 & 4 & 3 & 2 & 0 & 3 \\
+            \hline
+            \!2,8 & \!8,3 & \!5,6 & \!5,6 & \!\!11,1 & \!\!19,4 & \!\!13,9 & \!\!11,1 & \!8,3 & \!5,6 & 0 & \!8,3 \\
+            \hline
+         \end{ltableau}}
+         \item $\overline{m} =(1\times5+3\times10+2\times15+2\times20+4\times25+7\times30+5\times35+4\times40+3\times45+2\times50+0\times55+3\times60)\div36 =1\,165\div36 \approx32,4$. \\
+         {\red La moyenne est de \umin{32,4}}.
+      \end{enumerate}   
+      \setcounter{enumi}{1}
+      \item
+      \begin{enumerate}
+      \item Tableau des effectifs par classes. \\ \smallskip
+      {\small
+      \renewcommand{\arraystretch}{1.3}
+      \begin{lctableau}{0.9\linewidth}{5}
+         \hline
+         Durée & $]\,0\,;\,15\,]$ & $]\,15\,;\,30\,]$ & $]\,30\,;\,45\,]$ & $]\,45\,;\,60\,]$ \\
+         \hline
+         Eff.& \quad 6 & \quad 13 & \quad 12 & \quad 5 \\
+         \hline
+      \end{lctableau}}
+      \item $\overline{m} =(6\times7,5+13\times22,5+12\times37,5+5\times52,5)\div36 \approx 29,2$. {\red La moyenne est de \umin{29,2}}. \\
+         Ce résultat est différent de celui trouvé dans la question précédente car on perd en précision, puisqu'on ne s'occupe plus de la valeur exacte, mais de l'appartenance à un intervalle plus grand.
+      \end{enumerate}
+   \end{enumerate}
+\end{corrige}

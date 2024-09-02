@@ -2,14 +2,82 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
-\end{enigme}
+\begin{enigme}[Cryptographie]
+   La cryptographie est l'ensemble des techniques permettant de protéger une communication au moyen d'un code graphique secret. Parmi elles, on retrouve la méthode de substitution monoalphabétique : les lettres du texte à coder sont remplacées par d’autres lettres tel que  deux lettres différentes sont codées de façons différentes et que la même lettre est toujours codée de la même façon. \\
+   \begin{minipage}{12cm}
+      Le savant arabe {\it Al-Kindi}  (Abu Yūsuf Ya'qūb ibn'Ishāq as-Sabbāh al-Kindī) met au point, au 9\up{e} siècle, une technique appelée analyse des fréquences afin de déchiffrer les messages secrets. Elle repose sur la comparaison entre les fréquences d'apparition des lettres dans un message crypté à partir d'une langue connue avec la fréquence d'apparition moyenne des lettres dans cette langue. \\ [3mm]
+      En français, par exemple, on a la répartition suivante représentée par \\
+      un diagramme en bâtons, basée sur l'analyse de milliers de romans. 
+   \end{minipage}
+   \qquad
+   \begin{minipage}{4cm}
+      \includegraphics[width=3.5cm]{\currentpath/images/Al-kindi}
+   \end{minipage}
+   \begin{center}
+      {\footnotesize
+   
+      \Stat[Graphique,Qualitatif,Donnee={},Effectif=Fréquence d'apparition de la lettre (\%),Grille,Unitex=0.6,Unitey=0.33,EpaisseurBatons=4,LectureFine,Tiret,CouleurDefaut=Gray]{A/7.68,B/0.8,C/3.32,D/3.6,E/17.76,F/1.06,G/1.1,H/0.64,I/7.23,J/0.19,K/0,L/5.89,M/2.72,N/7.61,O/5.34,P/3.24,Q/1.34,R/6.81,S/8.23,T/7.3,U/6.05,V/1.27,W/0,X/0.54,Y/0.21,Z/0.07}}
+   \end{center}  
+   Ainsi, il y a des chances que la lettre la plus fréquente du message crypté soit la traduction de la lettre E, très fréquente en français. Les lettres très peu fréquentes ou absentes dans un message auront tendance à être les traductions de K ou W, par exemple. \\
 
+   Calculer la fréquence de chaque lettre du message codé ci-dessous (on pourra représenter les résultats dans un tableau). En observant les correspondances entre le diagramme en bâton et votre tableau, décoder le message.
+   
+   \begin{center}
+      \fbox{
+         \begin{minipage}{13cm}
+            \ \\ [-1mm]
+            BKSMAMZCZMTFY \; KF \; OKATOCFZ \; ZHKY \; CYZIAMKIYKUKFZ \; AK \; UKYYCLK \; ATOK \; RTIY \; CRKP \; BHCFADM \; IF \; XCY \; OKAMYMB \; RKHY \; SC \; YTSIZMTF \; BMFCSK \; OCFY \; AKZZK \; CAZMRMZK \; UCZDKUCZMGIK \; VHCRT
+         \end{minipage}}
+   \end{center}
+
+   \vfill
+   
+   {\it Pour retrouver la correspondance de chaque lettre, on pourra tout d'abord retrouver la lettre la plus fréquente qui correspond à un E, puis chercher les mots courts de 2 lettres par exemple.
+   
+   \vfill
+   
+      \hspace*{8cm}\rotatedown{Spoiler : l'un des mots du message décrypté est \og message \fg.}}
+\end{enigme}
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 \begin{corrige}
-    {\red
-    \dots
-    }
- \end{corrige}
+   On obtient les effectifs et fréquences suivants : \\
+{\footnotesize
+\begin{Ltableau}{\linewidth}{9}{c}
+   \hline
+   A & B & C & D & E & F & G & H & I \\
+   \hline
+   9 & 4 & 13 & 2 & 0 & 9 & 1 & 3 & 6 \\
+   \hline
+   6,67 & 2,96 & 9,63 & 1,48 & 0 & 6,67 & 0,74 & 2,22 & 4,44 \\
+   \hline
+   C & F & A & H & & N & Q & R & U \\
+   \hline
+\end{Ltableau}
+
+\begin{Ltableau}{\linewidth}{9}{c}
+   \hline
+   J & K & L & M & N & O & P & Q & R \\
+   \hline
+   0 & 20 & 1 & 12 & 0 & 5 & 1 & 0 & 4 \\
+   \hline
+   0 & 14,81 & 0,74 & 8,89 & 0 & 3,7 & 0,74 & 0 & 2,95 \\
+   \hline
+   & E & G & I & & D & Z & & V \\
+   \hline
+\end{Ltableau}
+
+\begin{Ltableau}{\linewidth}{8}{c}
+   \hline
+   S & T & U & V & W & X & Y & Z \\
+   \hline
+   4 & 6 & 4 & 1 & 0 & 1 & 12 & 13 \\
+   \hline
+   2,96 & 4,44 & 2,96 & 0,74 & 0 & 0,74 & 8,89 & 9,63 \\
+   \hline
+   L & O & M & B & & P & S & T \\
+   \hline
+\end{Ltableau}}
+
+En analysant ces données, on peut décrypter le message suivant : \og Félicitations : en décodant très astucieusement ce message codé, vous avez franchi un pas décisif vers la solution finale dans cette activité mathématique. Bravo ! \fg
+\end{corrige}
