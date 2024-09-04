@@ -1,0 +1,104 @@
+\begin{changemargin}{0mm}{-15mm}
+    \section{Hauteurs du triangle}
+    \begin{definition}
+        Dans un triangle, la hauteur \textbf{issue d'un sommet} est la droite qui passe par ce sommet et qui est perpendiculaire \textbf{au côté opposé}.
+    \end{definition}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(6u,5u)}]
+            pair A,B,C;
+            pair H,x;
+            path d,d';
+            A=u*(0.5,2);
+            B-A=u*(1,2);
+            C-A=u*(4,-1);
+            d=perpendiculaire(B,C,A);
+            d'=droite(B,C);
+            H=d intersectionpoint d';
+            x=symetrie(A,H);
+            trace polygone(A,B,C) withpen pencircle scaled 1.5bp;
+            trace d;
+            trace codeperp(B,H,A,5);
+            trace appelation(A,x,-2mm,btex hauteur issue de A etex);
+            label.lft(TEX("A"),A);
+            label.top(TEX("B"),B);
+            label.lrt(TEX("C"),C);
+            label.top(TEX("x"),x);
+        \end{Geometrie}
+        \hspace*{0.1\linewidth}
+        \begin{Geometrie}[CoinHD={(5u,5u)}]
+            pair E,F,G;
+            pair H;
+            path d,d';
+            E=u*(0.5,0.5);
+            F-E=u*(1.5,3.5);
+            G-E=u*(4,3.5);
+            trace  polygone(E,F,G) withpen pencircle scaled 1.5bp;
+            d=droite(F,G);
+            d'=perpendiculaire(F,G,E);
+            H= d intersectionpoint d';
+            trace d dashed evenly;
+            trace d';
+            trace codeperp(E,H,G,5);
+            trace appelation(E,H,2mm,btex hauteur issue de E etex);
+            label.top(TEX("F"),F);
+            label.top(TEX("G"),G);
+            label.lrt(TEX("E"),E);
+        \end{Geometrie}
+    \end{center}
+    \begin{remarque}
+        On dit aussi que \textbf{$(Ax)$} est la hauteur \textbf{relative} au côté \textbf{$[BC]$}.
+    \end{remarque}
+    \begin{propriete}[\admise]
+        Si on trace les trois hauterus d'un triangle, alors elles sont concourantes (en un point qui s'appelle \textbf{orthocentre}).
+    \end{propriete}
+    
+    \begin{Geometrie}[CoinHD={(10u,7u)},CoinBG={(0,-0.5u)}]
+        pair A,B,C;
+        pair H[];
+        A=u*(0.5,2);
+        B-A=u*(2,4);
+        C-A=u*(8,-2);
+        H0=projection(A,B,C);
+        H1=projection(B,C,A);
+        H2=projection(C,A,B);
+        H3=droite(A,H0) intersectionpoint droite(B,H1);
+        trace polygone(A,B,C) withpen pencircle scaled 1.5bp;
+        trace droite(A,H0) dashed evenly;
+        trace codeperp(B,H0,A,5);
+        trace droite(B,H1) dashed evenly;
+        trace codeperp(C,H1,B,5);
+        trace droite(C,H2) dashed evenly;
+        trace codeperp(A,H2,C,5);
+        label.ulft(TEX("A"),A);
+        label.ulft(TEX("B"),B);
+        label.bot(TEX("C"),C);
+        label.rt(TEX("Orthocentre"),H3 shifted (0.1u,0));
+    \end{Geometrie}
+    \hspace*{0.1\linewidth}
+    \begin{Geometrie}[CoinHD={(5u,7u)}]
+        pair E,F,G;
+        pair H[];
+        E=u*(0.5,0.5);
+        F-E=u*(1.5,3.5);
+        G-E=u*(4,3.5);
+        H0=projection(E,F,G);
+        H1=projection(F,G,E);
+        H2=projection(G,E,F);
+        H3=droite(E,H0) intersectionpoint droite(F,H1);
+        trace droite(F,G);
+        trace droite(E,F);
+        trace  polygone(E,F,G) withpen pencircle scaled 1.5bp;
+        trace droite(E,H0) dashed evenly;
+        trace codeperp(F,H0,E,5);
+        trace droite(F,H1) dashed evenly;
+        trace codeperp(G,H1,F,5);
+        trace droite(G,H2) dashed evenly;
+        trace codeperp(E,H2,G,5);
+        label.top(TEX("F"),F);
+        label.top(TEX("G"),G);
+        label.lrt(TEX("E"),E);
+        label.urt(TEX("Orthocentre"),H3 shifted (0.1u,0));
+    \end{Geometrie}
+    
+\end{changemargin}
+

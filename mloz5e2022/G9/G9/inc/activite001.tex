@@ -1,5 +1,131 @@
-\begin{activite}[\dots]
+\begin{activite}[Des droites concourantes]
     \begin{changemargin}{-10mm}{-15mm}
-        \dots
+        {\bf Objectifs :} tracer les médiatrices d'un triangle ; démontrer que les médiatrices d'un triangle sont concourantes ; faire une démonstration.
+        \partie[construction de médiatrices]
+        \vspace*{-7mm}
+        \begin{enumerate}
+            \item Expliquer à l'oral la construction de la médiatrice d'un segment d'après les schémas suivants :
+                  \begin{center}
+                    \scalebox{0.45}{
+                    \begin{Geometrie}[CoinHD={u*(4,6)}]
+                        trace feuillet;
+                        pair A,B,C,D;
+                        A=u*(0.5,3);
+                        B-A=u*(3,0);
+                        C=rotation(B,A,60);
+                        D=pointarc(cercles(A,B),35);
+                        trace segment(A,B);
+                        trace marquesegment(A,B);
+                        label.lft(TEX("A"),A);
+                        label.rt(TEX("B"),B);
+                      \end{Geometrie}
+                    }
+                      \hfill
+                      \scalebox{0.45}{
+                      \begin{Geometrie}[CoinHD={u*(4,6)}]
+                        trace feuillet;
+                        pair A,B,C,D,E;
+                        A=u*(0.5,3);
+                        B-A=u*(3,0);
+                        C=rotation(B,A,60);
+                        D=pointarc(cercles(A,B),35);
+                        E=pointarc(cercles(B,A),150);
+                        trace segment(A,B);
+                        trace marquesegment(A,B);
+                        trace (subpath(6,10) of cercles(A,B)) dashed evenly withcolor 0.7white;
+                        trace coupdecompas(A,C,10) dashed evenly;
+                        trace coupdecompas(A,symetrie(C,A,B),10) dashed evenly;
+                        trace compas(A,D,1);
+                        label.lft(TEX("A"),A);
+                        label.rt(TEX("B"),B);
+                      \end{Geometrie}
+                      }
+                      \hfill
+                      \scalebox{0.45}{
+                      \begin{Geometrie}[CoinHD={u*(4,6)}]
+                        trace feuillet;
+                        pair A,B,C,D,E;
+                        A=u*(0.5,3);
+                        B-A=u*(3,0);
+                        C=rotation(B,A,60);
+                        D=pointarc(cercles(A,B),35);
+                        E=pointarc(cercles(B,A),150);
+                        trace segment(A,B);
+                        trace marquesegment(A,B);
+                        trace (subpath(2,6) of cercles(B,A)) dashed evenly withcolor 0.7white;
+                        trace coupdecompas(B,C,10) dashed evenly;
+                        trace coupdecompas(B,symetrie(C,A,B),10) dashed evenly;
+                        trace coupdecompas(A,C,10) dashed evenly;
+                        trace coupdecompas(A,symetrie(C,A,B),10) dashed evenly;
+                        trace compas(B,E,-1);
+                        label.lft(TEX("A"),A);
+                        label.rt(TEX("B"),B);
+                      \end{Geometrie}
+                      }
+                      \hfill
+                      \scalebox{0.45}{
+                      \begin{Geometrie}[CoinHD={u*(4,6)}]
+                        trace feuillet;
+                        pair A,B,C,D,E;
+                        A=u*(0.5,3);
+                        B-A=u*(3,0);
+                        C=rotation(B,A,60);
+                        D=pointarc(cercles(A,B),35);
+                        E=pointarc(cercles(B,A),150);
+                        trace segment(A,B);
+                        trace marquesegment(A,B);
+                        trace coupdecompas(B,C,10) dashed evenly;
+                        trace coupdecompas(B,symetrie(C,A,B),10) dashed evenly;
+                        trace coupdecompas(A,C,10) dashed evenly;
+                        trace coupdecompas(A,symetrie(C,A,B),10) dashed evenly;
+                        label.lft(TEX("A"),A);
+                        label.rt(TEX("B"),B);
+                        trace droite(C,symetrie(C,A,B)) dashed dashpattern(on6 off3 on3 off 3) withcolor red;
+                        trace codeperp(B,iso(B,A),C,5) withcolor red;
+                        marque_s:=0.5*marque_s;
+                        trace Codelongueur(A,iso(A,B),iso(A,B),B,2) withcolor red;
+                        dotlabel("",iso(A,B));
+                      \end{Geometrie}
+                    }
+                  \end{center}
+            \item Donner une définition de la médiatrice d'un segment : \par \medskip
+                  \pointilles \smallskip
+            \item Donner une propriété de la médiatrice d'un segment : \par \medskip
+                  \pointilles \smallskip
+            \item Tracer la médiatrice de tous les côtés de ces deux polygones.
+                  \begin{center}
+                          \begin{Geometrie}
+                            pair A,B,C;
+                            A=0.6*u*(0,2);
+                            B=0.6*u*(6,0);
+                            C=0.6*u*(9,3);
+                            trace polygone(A,B,C);
+                          \end{Geometrie}
+                          \hspace*{25mm}
+                          \begin{Geometrie}[CoinHD={(20u,5u)}]
+                            pair A,B,C,D;
+                            A=0.6*u*(12,0);
+                            B=0.6*u*(20,1);
+                            C=0.6*u*(16,5);
+                            D=0.6*u*(12,3);
+                            trace polygone(A,B,C,D);
+                          \end{Geometrie}
+                  \end{center}
+            \item Pour quel polygone les médiatrices sont-elles concourantes ? \pointilles \\
+        \end{enumerate}
+
+        \partie[démonstration] %%%
+        \vspace*{-7mm}
+        \begin{enumerate}
+            \setcounter{enumi}{5}
+            \item Sur une feuille, tracer un triangle $ABC$ puis tracer la médiatrice de $[AB]$ et la médiatrice de $[BC]$. \\
+                  Placer $O$, point d'intersection de ces deux médiatrices.
+            \item $O$ se situe sur la médiatrice de $[AB]$. Comparer les longueurs $OA$ et $OB$ : \pointilles \medskip
+            \item $O$ se situe sur la médiatrice de $[BC]$. Comparer les longueurs $OB$ et $OC$ : \pointilles \medskip
+            \item En déduire une relation entre $OA$ et $OC$ : \pointilles \medskip
+            \item Que peut-on dire du point $O$ par rapport à $[CA]$ ? \pointilles \medskip
+            \item Tracer le cercle de centre $O$ passant par $A$. Que remarque-t-on ? \pointilles \medskip
+            \item Conclure : \pointilles 
+        \end{enumerate}
     \end{changemargin}
 \end{activite}

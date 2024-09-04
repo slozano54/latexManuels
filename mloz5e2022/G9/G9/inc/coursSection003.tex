@@ -1,0 +1,90 @@
+\begin{changemargin}{0mm}{-15mm}
+    \section{Médianes du triangle}
+    \begin{minipage}{0.6\linewidth}
+        \begin{propriete}
+            Dans un triangle, une \textbf{médiane} est une droite qui passe par un sommet et qui coupe le triangle en deux parties d'aires égales.
+        \end{propriete}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(6.5u,4u)}]
+            pair A,B,C,I;
+            B=u*(0.5,0.5);
+            A-B=u*(1,3);
+            C-B=u*(5,0);
+            I=iso(B,C);
+            trace polygone(A,B,C);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(B,I,I,C,2);
+            trace droite(A,I) dashed evenly withcolor red;
+            label.urt(TEX("A"),A);
+            label.llft(TEX("B"),B);
+            label.lrt(TEX("C"),C);
+            label.bot(TEX("I"),I);
+        \end{Geometrie}
+    \end{minipage}
+    \begin{propriete}[\admise]
+        Si dans un triangle, une droite passe par un sommet et par le milieu du côté opposé à ce sommet, alors c'est une des médianes du triangle
+    \end{propriete}
+    \begin{preuve}
+
+        \begin{minipage}{0.6\linewidth}
+            Il s'agit de montrer que les triangles $ABI$ et $ACI$ ont la même aire.\\
+            $\text{Aire}_{ABI}=\dfrac{BI\times AH}{2}$ et $\text{Aire}_{ACI}=\dfrac{CI\times AH}{2}$\\
+            or $I$ est le mileiu de $[BC]$ donc $BI=CI$ \\
+            d'où $\text{Aire}_{ABI}=\dfrac{BI\times AH}{2}=\dfrac{CI\times AH}{2}=\text{Aire}_{ACI}$ $\square$
+        \end{minipage}
+        \begin{minipage}{0.4\linewidth}
+            \begin{Geometrie}[CoinHD={(6.5u,4u)}]
+                pair A,B,C,I,H;
+                B=u*(0.5,0.5);
+                A-B=u*(1,3);
+                C-B=u*(5,0);
+                I=iso(B,C);
+                H=projection(A,B,C);
+                trace polygone(A,B,C);
+                marque_s:=0.3*marque_s;
+                trace Codelongueur(B,I,I,C,2);
+                trace droite(A,I) dashed evenly withcolor red;
+                trace droite(A,H) dashed evenly withcolor DarkGreen;
+                trace codeperp(A,H,B,5);
+                label.urt(TEX("A"),A);
+                label.llft(TEX("B"),B);
+                label.lrt(TEX("C"),C);
+                label.bot(TEX("I"),I);
+            \end{Geometrie}
+        \end{minipage}
+    \end{preuve}
+    \begin{minipage}{0.6\linewidth}
+        \begin{propriete}[Hors programme \admise]
+            Si dans un triangle, on trace les trois médianes, alors elles sont concourantes en un point appelé \textbf{centre de gravité} du triangle, situé aux $\dfrac23$ de chaque médiane en partant des sommets.
+        \end{propriete}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \begin{Geometrie}[CoinHD={(6.5u,4u)}]
+            pair A[],B[],C[],G;
+            A0=u*(0.5,0.5);
+            B0-A0=u*(5,1);
+            C0-A0=u*(1.5,3);
+            A1=iso(B0,C0);
+            B1=iso(A0,C0);
+            C1=iso(A0,B0);
+            G=iso(A0,B0,C0);
+            trace polygone(A0,B0,C0);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(A0,C1,C1,B0,2);
+            trace Codelongueur(B0,A1,A1,C0,1);
+            trace Codelongueur(C0,B1,B1,A0,4);
+            trace droite(A0,A1) dashed evenly withcolor red;
+            trace droite(B0,B1) dashed evenly withcolor red;
+            trace droite(C0,C1) dashed evenly withcolor red;
+            label.lft(TEX("A"),A0);
+            label.bot(TEX("B"),B0);
+            label.urt(TEX("C"),C0);
+            label.top(TEX("A'"),A1);
+            label.ulft(TEX("B'"),B1);
+            label.lrt(TEX("C'"),C1);
+            label.bot(TEX("G"),G);
+        \end{Geometrie}
+    \end{minipage}
+\end{changemargin}
+

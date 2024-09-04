@@ -1,5 +1,137 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Bissectrices du triangle}
+
+    \begin{definition}
+        La \textbf{bissectrice} d'un angle est la demi-droite dont l'origine est le sommet de l'angle et qui partage cet angle en deux angles adjacents de même mesure.
+    \end{definition}
+    \begin{propriete}[\admise]
+        L'axe de symétrie d'un triangle isocèle est aussi la bissectrice de l'angle au sommet principal.
+    \end{propriete}
+    \begin{propriete}[\admise]
+        Les angles à la base d'un triangle isocèle sont égaux.
+    \end{propriete}
+    \begin{propriete}[\admise]
+        Les trois angles d'un triangle équilatéral sont égaux.
+    \end{propriete}
+    \begin{Geometrie}[CoinHD={(5u,6u)}]
+        pair O,x,y,z;
+        path cO;
+        O=u*(0.5,3);
+        cO=cercles(O,2u);
+        x=pointarc(cO,20);
+        y=pointarc(cO,-20);
+        z=pointarc(cO,0);
+        trace droite(O,x);
+        trace droite(O,y);
+        trace droite(O,z) dashed dashpattern(on6 off3 on3 off3) withcolor red;
+        marque_a:=1.2*marque_a;
+        trace marqueangle(z,O,x,2);
+        trace marqueangle(y,O,z,2);
+        label.top(TEX("bissectrice"),z shifted(u,0));
+        label.top(TEX("x"),1.2[O,x]);
+        label.bot(TEX("y"),1.2[O,y]);
+        label.top(TEX("O"),O);
+    \end{Geometrie}
+    \hspace*{10mm}
+    \begin{Geometrie}[CoinHD={(6u,6u)}]
+        pair O,x,y,z;
+        path cO;
+        O=u*(2.5,5.5);
+        cO=cercles(O,4.5u);
+        x=pointarc(cO,-70);
+        y=pointarc(cO,250);
+        z=iso(x,y);
+        trace polygone(O,x,y);
+        trace droite(O,z) dashed dashpattern(on6 off3 on3 off3) withcolor red;
+        trace codeperp(O,z,y,5) withcolor red;
+        marque_s:=marque_s/2;
+        trace Codelongueur(y,z,z,x,4);
+        trace Codelongueur(y,O,O,x,3);
+        trace marqueangle(y,O,z,2);
+        trace marqueangle(z,O,x,2);
+    \end{Geometrie}
+    \hspace*{10mm}
+    \begin{Geometrie}[CoinHD={(6u,6u)}]
+        pair O,x,y,z;
+        path cO;
+        O=u*(2.5,5.5);
+        cO=cercles(O,4u);
+        x=pointarc(cO,-75);
+        y=pointarc(cO,255);
+        z=iso(x,y);
+        trace polygone(O,x,y);
+        marque_s:=marque_s/2;
+        trace Codelongueur(y,O,O,x,3);
+        trace marqueangle(x,y,O,4);
+        trace marqueangle(O,x,y,4);
+    \end{Geometrie}
+    \hspace*{10mm}
+    \begin{Geometrie}[CoinHD={(6u,6u)}]
+        pair A,B,C;
+        A=u*(1,1);
+        B-A=u*(4,2);
+        C=rotation(B,A,60);
+        marque_s:=marque_s/2;
+        trace Codelongueur(A,B,B,C,C,A,2);
+        trace marqueangle(C,B,A,4);
+        trace marqueangle(B,A,C,4);
+        trace marqueangle(A,C,B,4);
+        trace polygone(A,B,C);
+    \end{Geometrie}
+
+    \begin{remarque}
+        Tu dois aussi connaître deux méthodes pour construire la bissectrice d'un angle :
+        \begin{itemize}
+            \item avec le rapporteur.
+            \item avec le compas.
+        \end{itemize}
+        \begin{center}
+            \textbf{Avec le compas}
+
+            \begin{Geometrie}[CoinHD={u*(7,4)}]
+                trace feuillet;
+                pair A,B,C,D[],E[];
+                path cA;
+                A=u*(0.5,2);
+                B-A=u*(2,0);
+                C-A=u*(5,0);
+                cA=cercles(A,B);
+                D0=pointarc(cA,20);
+                D1=pointarc(cA,45);
+                E0=pointarc(cA,-20);
+                E1=pointarc(cA,-45);
+                trace demidroite(A,D0);
+                trace demidroite(A,E0);
+                trace (subpath(7,9) of cA) dashed evenly;
+                trace compas(A,D1,1);
+            \end{Geometrie}
+            \begin{Geometrie}[CoinHD={u*(7,4)}]
+                trace feuillet;
+                pair A,B,C[],D,E;
+                path cA,cD;
+                A=u*(0.5,2);
+                B-A=u*(2,0);
+                C0-A=u*(5,0);
+                cA=cercles(A,B);
+                D=pointarc(cA,20);
+                E=pointarc(cA,-20);
+                cD=cercles(D,C0);
+                C1=pointarc(cD,-5);
+                trace demidroite(A,D);
+                trace demidroite(A,E);
+                trace (subpath(7,9) of cA) dashed evenly;
+                trace coupdecompas(D,C0,10) dashed evenly;
+                trace coupdecompas(E,C0,10) dashed evenly;
+                trace demidroite(A,C0) dashed dashpattern (on6 off3 on3 off3) withcolor red;
+                trace compas(D,C1,1);
+            \end{Geometrie}
+        \end{center}
+    \end{remarque}
+
+    \begin{propriete}[Bissectrices du triangle \admise]
+        Si on trace les bissectrices des trois angles d'un triangle, alors elles sont concourantes (en un point qui est le centre de son cercle inscrit).
+    \end{propriete}
+
 \end{changemargin}
- 
+
+

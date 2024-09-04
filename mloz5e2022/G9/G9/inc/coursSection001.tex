@@ -1,5 +1,131 @@
 \begin{changemargin}{0mm}{-15mm}
-    \section{...}
-    \dots
+    \section{Médiatrices d'un triangle}
+    \subsection{Rappels de 6\up{e}}
+    \begin{minipage}{0.7\linewidth}
+        \begin{definition}
+            Un \textbf{cercle} est un ensemble de points ( tous les points ) situés à la même distance ( le rayon ) d'un point fixe ( le centre ).
+        \end{definition}
+        \begin{definition}
+            La \textbf{médiatrice} d'un segment est l'axe de symétrie de ce segment qui ne le porte pas. ( Il forme un angle droit avec )
+        \end{definition}
+        \begin{propriete}
+            Si on place un point sur la médiatrice d'un segment, alors ce point est à la même distance des extrémités de ce segment.
+        \end{propriete}
+    \end{minipage}
+    \begin{minipage}{0.3\linewidth}
+        \begin{Geometrie}[CoinHD={(5.5u,5.5u)}]
+            pair A,B,M,H;
+            A=u*(1,2);
+            B=u*(5,1);
+            H=u*(3,1.5);
+            M=1.5[H,rotation(B,H,90)];
+            trace polygone(A,B,M);
+            marque_s:=0.5*marque_s;
+            trace codesegments(A,H,H,B,2);
+            trace codesegments(A,M,M,B,4);
+            trace droite(H,M) withcolor red;
+            trace codeperp(M,H,A,8);
+            label.lft(TEX("A"),A);
+            label.lrt(TEX("B"),B);
+            label.ulft(TEX("M"),M);
+        \end{Geometrie}
+    \end{minipage}
+
+    \subsection{Cercle circonscrit à un triangle - Hors Programme}
+    \begin{propriete}[\admise]
+        Si on trace les médiatrices des trois côtés d'un triangle, alors elles se coupent en un même point ( elles sont \textbf{concourantes} ).
+    \end{propriete}
+    \begin{definition}
+        Le \textbf{cercle circonscrit} à un triangle est le cercle qui passe par les trois sommets de ce triangle.
+    \end{definition}
+
+    \begin{minipage}{0.7\linewidth}
+        \begin{propriete}[\admise]
+            Si on trace les médiatrices des trois côtés d'un triangle, alors leur intersection est le centre du cercle circonscrit au triangle.
+        \end{propriete}
+        \begin{propriete}[\admise]
+            Si un cercle est circonscrit à un triangle, alors son centre est à l'intersection des trois médiatrices de ce triangle.
+        \end{propriete}
+    \end{minipage}
+    \begin{minipage}{0.3\linewidth}
+        \begin{Geometrie}[CoinHD={(6u,6u)}]
+            pair A,B,C,I;
+            pair A',B',C';
+            path cI;
+            I=u*(3,3);
+            cI=cercles(I,2.5u);
+            A=pointarc(cI,195);
+            B=pointarc(cI,85);
+            C=pointarc(cI,-30);
+            A'=milieu(B,C);
+            B'=milieu(A,C);
+            C'=milieu(B,A);
+            trace mediatrice(A,B) dashed dashpattern(on6 off3 on3 off3) withcolor red;
+            trace mediatrice(A,C) dashed dashpattern(on6 off3 on3 off3) withcolor red;
+            trace mediatrice(B,C) dashed dashpattern(on6 off3 on3 off3) withcolor red;
+            trace codeperp(A,C',I,5);
+            trace codeperp(B,A',I,5);
+            trace codeperp(C,B',I,5);
+            marque_s:=0.3*marque_s;
+            trace codesegments(A,C',C',B,2);
+            trace codesegments(A,B',B',C,3);
+            trace codesegments(C,A',A',B,4);
+            trace cI;
+            trace polygone(A,B,C);
+            label.urt(TEX("B"),B);
+            label.lft(TEX("A"),A);
+            label.rt(TEX("C"),C);
+            label.lft(TEX("I"),I);
+        \end{Geometrie}
+    \end{minipage}
+
+    \subsection{Démonstrations}
+    \begin{preuve}\titrePreuve{Propriété du cercle circonscrit}
+        \begin{enumerate}
+            \item Données :
+                  \begin{itemize}
+                      \item  triangle $ABC$.
+                      \item  médiatrice de $[AB]$.
+                      \item  médiatrice de $[BC]$.
+                      \item  médiatrice de $[AC]$.
+                  \end{itemize}
+            \item Premier pas :
+                  \par
+                  Si on trace les trois médiatrices d'un triangle alors elles sont concourantes, appelons $I$ ce point de concours.
+                  \par
+                  \begin{itemize}
+                      \item  $I$ est sur la médiatrice de $[AB]$.
+                      \item  $I$ est sur la médiatrice de $[BC]$.
+                      \item  $I$ est sur la médiatrice de $[AC]$.
+                  \end{itemize}
+                  \par
+                  Ce sont trois nouvelles données.
+            \item Deuxième pas :
+                  \par
+                  \begin{itemize}
+                      \item  Comme $I$ est sur la médiatrice de $[BC]$ alors il est à égale distance de $B$ et de $C$.
+                      \item  Comme $I$ est sur la médiatrice de $[AB]$ alors il est à égale distance de $A$ et de $B$.
+                  \end{itemize}
+                  donc
+            \item Dernier pas :
+                  \par\vspace{0.25cm}
+                  Comme $I$ est à égale distance de $B$ et de $C$ et que $I$ est à égale distance de $A$ et de $B$ alors il est équidistant de $A$, $B$ et $C$. $\square$
+        \end{enumerate}
+    \end{preuve}
+
+    \begin{preuve}\titrePreuve{Propriété réciproque du cercle circonscrit}
+        \begin{enumerate}
+            \item Données :
+                  \begin{itemize}
+                      \item  triangle $ABC$.
+                      \item  $I$ centre du cercle circonscrit.
+                  \end{itemize}
+            \item Justifications :
+                  \par
+                  $I$ est équidistant de $A$,$B$ et $C$ donc en particulier de $A$ et de $B$ donc $I$ est sur la médiatrice de $[AB]$.
+                  \par
+                  De même, $I$ est sur les médiatrices de $[BC]$ et $[AC]$ c'est donc bien l'intersection des médiatrices du triangle $ABC$.$\square$
+        \end{enumerate}
+    \end{preuve}
 \end{changemargin}
- 
+
