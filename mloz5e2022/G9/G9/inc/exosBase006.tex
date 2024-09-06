@@ -1,7 +1,52 @@
-
 \begin{exercice*}
-   \dots
+   \begin{enumerate}
+      \item Tracer un triangle $BAC$ rectangle en $A$.
+      \item Placer un point $M$ à l'extérieur du triangle $ABC$.
+      \item La droite perpendiculaire à $(AB)$ passant par $M$ coupe $[AB]$ en $I$ et la droite perpendiculaire à $[AC]$ passant par $M$ coupe $[AC]$ en $J$.
+      \item Placer le point $P$ sur la demi-droite $[MI)$ tel que $I$ soit le milieu de $[MP]$ et le point $Q$ sur la demi-droite $[MJ)$ tel que $J$ soit le milieu de $[MQ]$.
+      \item Que représente le point $A$ pour le triangle $MQP$ ? Justifier.
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{Geometrie}[CoinBG={(0,-3.5u)}]
+      pair B,A,C,M,P,Q,I,J;
+      B=u*(1,0);
+      A=u*(5,0);
+      C=u*(5,3);
+      M=u*(2,1.6);
+      P=u*(2,-1.6);
+      Q=u*(8,1.6);
+      I=iso(M,P);
+      J=iso(M,Q);
+      %
+      trace polygone(B,A,C);
+      trace polygone(M,P,Q) withcolor red;
+      trace codeperp(C,A,B,5);
+      marque_s:=0.3*marque_s;
+      trace Codelongueur(M,iso(M,P),iso(M,P),P,2) withcolor red;
+      trace Codelongueur(P,iso(P,Q),iso(P,Q),Q,3) withcolor red;
+      trace Codelongueur(Q,iso(Q,M),iso(Q,M),M,4) withcolor red;
+      trace codeperp(C,J,M,5) withcolor red;
+      trace codeperp(M,I,B,5) withcolor red;
+      trace cercles(A,P);
+      %
+      label.llft(TEX("B"),B);
+      label.lrt(TEX("A"),A);
+      label.top(TEX("C"),C);
+      label.ulft(TEX("M"),M);
+      label.llft(TEX("P"),P);
+      label.urt(TEX("Q"),Q);
+      label.urt(TEX("I"),I);
+      label.urt(TEX("J"),J);
+      label(TEX("\parbox{4cm}{$A$ est le {\red centre du cercle circonscrit au triangle $MPQ$}.}"),A shifted (0.5u,-1.5u));
+   \end{Geometrie}
+
+   \begin{itemize}
+      \item la droite $(CJ)$ est perpendiculaire à la droite $(MQ)$ et coupe le segment $[MQ]$ en son milieu $J$ , il s'agit donc de la médiatrice du segment $[MQ]$ ;
+      \item la droite $(BA)$ est perpendiculaire à la droite $(MP)$ et coupe le segment $[MP]$ en son milieu $I$, il s'agit donc de la médiatrice du segment $[MP]$ ;
+      \item or, les médiatrices du triangle $MPQ$ sont concourantes en un point qui est le centre de son cercle circonscrit ;
+      \item $(CJ)$ et $(BI)$ se coupent en $A$, qui est bien le centre du triangle circonscrit au triangle $MPQ$.
+   \end{itemize}
 \end{corrige}

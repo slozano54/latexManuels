@@ -1,7 +1,34 @@
-
 \begin{exercice*}
-   \dots
+   Construction de hauteurs.
+   \begin{enumerate}
+      \item Construire un triangle $BLE$ puis tracer :
+      \begin{itemize}
+         \item en bleu, la hauteur issue du sommet $E$ ;
+         \item en noir, la hauteur issue du sommet $B$ ;
+         \item en rouge, la hauteur relative à $[BE]$.
+      \end{itemize}
+       \item Quelle remarque peut-on faire ?
+   \end{enumerate} 
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{Geometrie}
+      pair B,L,E;
+      B=u*(0.5,1);
+      L=u*(6.5,2);
+      E=u*(4.5,5);
+      trace polygone(B,L,E);
+      trace segment(E,projection(E,B,L)) dashed evenly withcolor blue;
+      trace codeperp(L,projection(E,B,L),E,5) withcolor blue;
+      trace segment(B,projection(B,L,E)) dashed evenly;
+      trace codeperp(E,projection(B,L,E),B,5);
+      trace segment(L,projection(L,E,B)) dashed evenly withcolor red;
+      trace codeperp(B,projection(L,E,B),L,5) withcolor red;
+      label.llft(TEX("B"),B);
+      label.lrt(TEX("L"),L);
+      label.top(TEX("E"),E);
+   \end{Geometrie}
+
+   On remarque que {\red les hauteurs sont concourantes} en un point appelé l'orthocentre du triangle.
 \end{corrige}

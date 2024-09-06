@@ -1,7 +1,66 @@
-
 \begin{exercice*}
-   \dots
+   Tracer les hauteurs dans les cas suivants :
+   \begin{enumerate}
+      \item Un triangle $ONE$ ayant trois angles aigus, quelle remarque peut-on faire sur l'orthocentre ? \smallskip
+      \item Un triangle $TWO$ tel que l'angle $\widehat{TWO}$ soit obtus, quelle remarque peut-on faire sur l'orthocentre ? \smallskip
+      \item Un triangle $TRE$ rectangle en $R$, quelle remarque peut-on faire sur l'orthocentre ?
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{Geometrie}
+      pair O,N,E;
+      O=u*(0.5,1);
+      N=u*(6,0.5);
+      E=u*(2.5,4);
+      trace polygone(O,N,E);
+      trace segment(E,projection(E,O,N)) dashed evenly withcolor red;
+      trace codeperp(N,projection(E,O,N),E,5) withcolor red;
+      trace segment(O,projection(O,N,E)) dashed evenly withcolor red;
+      trace codeperp(E,projection(O,N,E),O,5) withcolor red;
+      trace segment(N,projection(N,E,O)) dashed evenly withcolor red;
+      trace codeperp(O,projection(N,E,O),N,5) withcolor red;
+      label.llft(TEX("O"),O);
+      label.lrt(TEX("N"),N);
+      label.top(TEX("E"),E);
+      label(TEX("\parbox{2.5cm}{L'orthocentre se situe {\red à l'intérieur du triangle}}"),(5.5u,3.5u));
+   \end{Geometrie}
+      
+   \begin{Geometrie}[CoinBG={(-0.5u,-3u)}]
+      pair T,O,W;
+      T=u*(0,3);
+      O=u*(7,3.5);
+      W=u*(4.5,1);
+      trace segment(T,projection(O,T,W)) dashed evenly;
+      trace segment(O,projection(T,O,W)) dashed evenly;
+      trace polygone(T,O,W);
+      trace demidroite(projection(W,T,O),W) dashed evenly withcolor red;
+      trace codeperp(O,projection(W,T,O),W,5) withcolor red;
+      trace demidroite(T,projection(T,O,W)) dashed evenly withcolor red;
+      trace codeperp(W,projection(T,O,W),T,5) withcolor red;
+      trace demidroite(O,projection(O,W,T)) dashed evenly withcolor red;
+      trace codeperp(T,projection(O,W,T),O,5) withcolor red;
+      label.top(TEX("T"),T);
+      label.top(TEX("O"),O);
+      label.rt(TEX("W"),W);
+      label(TEX("\parbox{2.5cm}{L'orthocentre se situe {\red à l'extérieur du triangle}}"),(u,-.5u));
+   \end{Geometrie}
+
+   \begin{Geometrie}[CoinBG={(-0.5u,-3u)}]
+      pair T,R,E;
+      T=u*(0,0);
+      R=u*(6,0);
+      E=u*(6,3.5);
+      trace polygone(T,R,E);
+      trace segment(E,R) dashed evenly withcolor red;      
+      trace segment(T,R) dashed evenly withcolor red;
+      trace segment(R,projection(R,E,T)) dashed evenly withcolor red;
+      trace codeperp(T,projection(R,E,T),R,5) withcolor red;
+      trace codeperp(E,R,T,5) withcolor red;      
+      label.llft(TEX("T"),T);
+      label.lrt(TEX("R"),R);
+      label.urt(TEX("E"),E);
+      label(TEX("\parbox{3cm}{L'orthocentre est {\red au point $R$} où le triangle est rectangle}"),(u,2.5u));
+   \end{Geometrie}
 \end{corrige}

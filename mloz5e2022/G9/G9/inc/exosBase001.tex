@@ -1,7 +1,36 @@
-
 \begin{exercice*}
-   \dots
-\end{exercice*}
+   Suivre le programme suivant en codant les éléments construits : \smallskip
+   \begin{enumerate}
+      \item Construire un triangle $CJR$ quelconque. \smallskip
+      \item Tracer en rouge la médiatrice du segment $[JR]$ à l'aide du compas et d'une règle graduée. \smallskip
+      \item Tracer en noir la médiatrice du segment $[CJ]$ à la règle graduée et à l'équerre. \smallskip
+      \item Construire la médiatrice $(d)$ du segment $[CR]$ avec seulement une équerre (non graduée).
+   \end{enumerate}
+\end{exercice*}    
+
 \begin{corrige}
-   \dots
-\end{corrige}
+   \ \\ [-5mm]
+   \begin{Geometrie}[CoinBG={(-0.5u,0)},CoinHD={(6u,4.5u)}]
+      pair C,J,R,H;
+      C=u*(1,1);
+      J=u*(5.5,1);
+      R=u*(2.5,4);
+      H=mediatrice(C,J) intersectionpoint mediatrice(C,R);
+      trace polygone(C,J,R);
+      trace mediatrice(J,R) withcolor red;
+      trace mediatrice(C,J);
+      trace mediatrice(C,R);
+      trace codeperp(C,iso(C,R),H,5);
+      trace codeperp(H,iso(J,R),J,5);
+      trace codeperp(H,iso(C,J),J,5);
+      marque_s:=0.3*marque_s;
+      trace Codelongueur(C,iso(C,R),iso(C,R),R,3);
+      trace Codelongueur(R,iso(R,J),iso(R,J),J,2);
+      trace Codelongueur(J,iso(J,C),iso(J,C),C,4);
+      label.top(TEX("$(d)$"),0.5[iso(C,R),H]);
+      label.top(TEX("R"),R);
+      label.llft(TEX("C"),C);
+      label.lrt(TEX("J"),J);
+   \end{Geometrie}
+\end{corrige}    
+

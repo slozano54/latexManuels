@@ -1,7 +1,55 @@
-
 \begin{exercice*}
-   \dots
+   \begin{enumerate}
+   \item Tracer un triangle $YES$ quelconque.
+      \item Placer :
+      \begin{itemize}
+         \item le milieu $O$ du côté $[ES]$ ;
+         \item le milieu $U$ du côté $[YS]$ ;
+         \item le milieu $I$ du côté $[YE]$.
+      \end{itemize}
+      \item Tracer le triangle $OUI$ puis ses hauteurs.
+      \item Placer le point $T$ orthocentre du triangle $OUI$.
+      \item Trace le cercle de centre $T$ et de rayon
+$[TY]$.
+      \item Quelle conjecture peut-on écrire ?
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ [-5mm]
+   \begin{Geometrie}[CoinBG={(0,-2u)}]
+      pair Y,E,S,O,U,I,T;
+      Y=u*(0.5,0.5);
+      E=u*(6.5,1);
+      S=u*(4.3,4.5);
+      O=iso(E,S);
+      U=iso(Y,S);
+      I=iso(Y,E);
+      T=droite(O,projection(O,U,I)) intersectionpoint droite(U,projection(U,O,I));
+      %
+      trace polygone(Y,E,S);
+      trace polygone(O,U,I);
+      drawoptions(withcolor red);
+      trace segment(O,projection(O,U,I)) dashed evenly;
+      trace codeperp(O,projection(O,U,I),U,5); 
+      trace segment(U,projection(U,I,O)) dashed evenly;
+      trace codeperp(U,projection(U,I,O),I,5); 
+      trace segment(I,projection(I,O,U)) dashed evenly;
+      trace codeperp(I,projection(I,O,U),O,5);
+      marque_s:=0.3*marque_s;
+      trace Codelongueur(Y,iso(Y,E),iso(Y,E),E,1); 
+      trace Codelongueur(E,iso(E,S),iso(E,S),S,2); 
+      trace Codelongueur(S,iso(S,Y),iso(S,Y),Y,3);
+      trace cercles(T,Y);
+      drawoptions(withcolor black);
+      label.llft(TEX("Y"),Y);
+      label.lrt(TEX("E"),E);
+      label.top(TEX("S"),S);
+      label.urt(TEX("O"),O);
+      label.ulft(TEX("U"),U);
+      label.bot(TEX("I"),I);
+      label.urt(TEX("T"),T);
+   \end{Geometrie}
+
+   On peut conjecturer que {\red le centre du cercle circonscrit au triangle $YES$ est l'orthocentre du triangle $OUI$}.
 \end{corrige}

@@ -1,7 +1,47 @@
-
 \begin{exercice*}
-   \dots
+   Rose avait tracé un triangle $AVU$ au crayon et les médiatrices de deux des côtés au stylo. Son voisin Natan a effacé le triangle mais a laissé le point $A$ et les deux médiatrices. Reconstruire le triangle de Rose.
+   \begin{center}
+      \begin{Geometrie}[CoinHD={(6u,5.5u)}]
+         pair A;
+         A=u*(1,3.3);
+         marque_p:="croix";
+         u:=0.5*u;
+         pointe(A);
+         u:=2*u;
+         label.top(TEX("A"),A);
+         trace droite((0,0.5u),(6u,4u));
+         trace droite((4u,0),(2.5u,4u));
+      \end{Geometrie}
+   \end{center}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   Il suffit de construire les points $U$ et $V$ symétriques du point $A$ par rapport aux deux droites déjà tracées.
+   \begin{center}
+      \begin{Geometrie}[CoinHD={(6u,5.5u)}]
+         pair A;
+         A=u*(1,3.3);
+         marque_p:="croix";
+         u:=0.5*u;
+         pointe(A);
+         u:=2*u;
+         label.top(TEX("A"),A);
+         trace droite((0,0.5u),(6u,4u));
+         trace droite((4u,0),(2.5u,4u));
+         drawoptions(withcolor red);
+         pair U,V,M[];
+         V=symetrie(A,(0,0.5u),(6u,4u));
+         U=symetrie(A,(4u,0),(2.5u,4u));
+         trace polygone(A,U,V);
+         M0=iso(A,U);
+         M1=iso(A,V);
+         marque_s:=0.3*marque_s;
+         trace Codelongueur(A,M0,M0,U,1);
+         trace Codelongueur(A,M1,M1,V,2);
+         trace codeperp((4u,0),M0,A,5);
+         trace codeperp(A,M1,(0,0.5u),5);
+         label.top(TEX("U"),U);
+         label.bot(TEX("V"),V);
+      \end{Geometrie}
+   \end{center}
 \end{corrige}

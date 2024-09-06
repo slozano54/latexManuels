@@ -1,7 +1,142 @@
-
 \begin{exercice*}
-   \dots
+   Dans chaque cas, construire le triangle puis son cercle circonscrit de centre $O$. \smallskip
+   \begin{enumerate}
+      \item Triangle $SKI$ tel que : \\ [1mm]
+         $SI = \Lg[cm]{8} \; ; \widehat{KSI} =\ang{65}$ et $\widehat{KIS} =\ang{45}$. \smallskip
+      \item Triangle $GYM$ tel que : \\ [1mm]
+         $GM = \Lg[cm]{4} \; ; GY = \Lg[cm]{5}$ et $\widehat{YGM} = \ang{103}$. \smallskip
+      \item Triangle $TIR$ tel que : \\ [1mm]
+         $TIR$ est isocèle en $T$ ; $TI =\Lg[cm]{8}$ et $IR =\Lg[cm]{5,5}$. \smallskip
+      \item Triangle $VTC$ tel que : \\
+         $VTC$ est un triangle équilatéral de côté \Lg[cm]{4}.
+   \end{enumerate}
 \end{exercice*}
+
 \begin{corrige}
-   \dots
+   \ \\ 
+   \begin{enumerate}
+      \item\hfil\newline
+         \begin{Geometrie}[CoinBG={(0,-2.1u)},CoinHD={(6u,4.2u)}]
+            u:=6mm;
+            pair S,I,K[],O;
+            S=u*(0.5,0.5);
+            I-S=u*(8,0);
+            K0=rotation(I,S,65);
+            K1=rotation(S,I,-45);
+            K2=droite(S,K0) intersectionpoint droite(I,K1);
+            O=mediatrice(S,K2) intersectionpoint mediatrice(I,K2);
+            drawoptions(withcolor red);
+            trace polygone(S,I,K2);
+            trace cercles(O,K2);
+            trace mediatrice(S,K2) dashed evenly;
+            trace mediatrice(K2,I) dashed evenly;
+            trace mediatrice(I,S) dashed evenly;
+            trace codeperp(O,iso(I,S),S,5);
+            trace codeperp(O,iso(K2,I),I,5);
+            trace codeperp(O,iso(S,K2),K2,5);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(S,iso(S,K2),iso(S,K2),K2,3);
+            trace Codelongueur(K2,iso(K2,I),iso(K2,I),I,2);
+            trace Codelongueur(I,iso(I,S),iso(I,S),S,4);
+            trace Codeangle(I,S,K2,0,TEX("\ang{65}"));
+            trace Codeangle(K2,I,S,0,TEX("\ang{45}"));
+            trace appelation(S,I,-3mm,TEX("\Lg[cm]{8}"));
+            label.top(TEX("K"),K2);
+            label.llft(TEX("S"),S);
+            label.lrt(TEX("I"),I);
+            label.rt(TEX("O"),O);
+         \end{Geometrie}
+      \item\hfil\newline
+         \begin{Geometrie}[CoinBG={(-1.05u,-1.4u)},CoinHD={(7u,5.25u)}]
+            u:=7mm;
+            pair G,M,Y[],O;
+            G=u*(0.5,0.5);
+            M-G=u*(4,0);
+            Y0=rotation(M,G,103);
+            Y1=droite(G,Y0) intersectionpoint cercles(G,u);
+            Y2=5[G,Y1];
+            O=mediatrice(G,Y2) intersectionpoint mediatrice(M,Y2);
+            drawoptions(withcolor red);
+            trace polygone(G,M,Y2);
+            trace cercles(O,Y2);
+            trace mediatrice(G,Y2) dashed evenly;
+            trace mediatrice(Y2,M) dashed evenly;
+            trace mediatrice(M,G) dashed evenly;
+            trace codeperp(O,iso(M,G),G,5);
+            trace codeperp(O,iso(Y2,M),M,5);
+            trace codeperp(O,iso(G,Y2),Y2,5);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(G,iso(G,Y2),iso(G,Y2),Y2,3);
+            trace Codelongueur(Y2,iso(Y2,M),iso(Y2,M),M,2);
+            trace Codelongueur(M,iso(M,G),iso(M,G),G,4);
+            trace Codeangle(M,G,Y2,0,TEX("\ang{103}"));
+            trace appelation(G,M,-3mm,TEX("\Lg[cm]{4}"));
+            trace appelation(Y2,G,-3mm,TEX("\Lg[cm]{5}"));
+            label.top(TEX("Y"),Y2);
+            label.llft(TEX("G"),G);
+            label.lrt(TEX("M"),M);
+            label.ulft(TEX("O"),O);
+         \end{Geometrie}
+   \end{enumerate}
+   \Coupe
+   \begin{enumerate}
+      \setcounter{enumi}{2}
+      \item\hfil\newline
+         \begin{Geometrie}[CoinBG={(0,-2u)},CoinHD={(8u,5.6u)}]
+            u:=8mm;
+            pair R,T,I,O;
+            path cT,cI;
+            T=u*(0.5,0.5);
+            I-T=u*(8,0);
+            cT=cercles(T,8u);
+            cI=cercles(I,5.5u);
+            R=cT intersectionpoint cI;
+            O=mediatrice(T,I) intersectionpoint mediatrice(I,R);
+            drawoptions(withcolor red);
+            trace polygone(T,I,R);
+            trace cercles(O,T);
+            trace mediatrice(T,I) dashed evenly;
+            trace mediatrice(I,R) dashed evenly;
+            trace mediatrice(R,T) dashed evenly;
+            trace codeperp(O,iso(T,I),T,5);
+            trace codeperp(O,iso(I,R),I,5);
+            trace codeperp(O,iso(R,T),R,5);
+            marque_s:=0.3*marque_s;
+            trace Codelongueur(T,iso(T,I),iso(T,I),I,3);
+            trace Codelongueur(I,iso(I,R),iso(I,R),R,2);
+            trace Codelongueur(R,iso(R,T),iso(R,T),T,4);
+            trace appelation(T,I,-3mm,TEX("\Lg[cm]{8}"));
+            trace appelation(R,I,3mm,TEX("\Lg[cm]{5.5}"));
+            label.top(TEX("R"),R);
+            label.bot(TEX("T"),T);
+            label.lrt(TEX("I"),I);
+            label.urt(TEX("O"),O);
+         \end{Geometrie}
+      \item\hfil\newline
+      \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(4.8u,4.8u)}]
+         u:=8mm;
+         pair V,T,C,O;
+         V=u*(1,1);
+         T-V=u*(4,0);
+         C=rotation(T,V,60);
+         O=mediatrice(V,T) intersectionpoint mediatrice(V,C);
+         marque_s:=0.3*marque_s;
+         drawoptions(withcolor red);
+         trace polygone(V,T,C);
+         trace cercles(O,T);
+         trace mediatrice(V,T) dashed evenly;
+         trace mediatrice(T,C) dashed evenly;
+         trace mediatrice(C,V) dashed evenly;
+         trace codeperp(O,iso(V,T),V,5);
+         trace codeperp(O,iso(T,C),T,5);
+         trace codeperp(O,iso(C,V),C,5);
+         trace Codelongueur(V,iso(V,T),iso(V,T),T,3);
+         trace Codelongueur(T,iso(T,C),iso(T,C),C,3);
+         trace Codelongueur(C,iso(C,V),iso(C,V),V,3);
+         trace cotationmil(V,C,15mm,20,btex \Lg[cm]{4} etex);
+         label.bot(btex V etex,V);
+         label.bot(btex T etex,T);
+         label.urt(btex C etex,C);
+         \end{Geometrie}
+\end{enumerate}
 \end{corrige}
