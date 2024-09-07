@@ -2,16 +2,66 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[...]
-    \begin{changemargin}{-10mm}{-10mm}
-        Trouver un binz.
-    \end{changemargin}
+\vspace*{-20mm}
+\begin{enigme}[La droite d'Euler]
+    \vspace*{-5mm}
+    \begin{changemargin}{-5mm}{-15mm}
+        Ouvrir Geogebra et choisir l'onglet \textbf{Géométrie}.
+        \partie[construction de la figure]
+        \begin{tabular}{|cp{5.5cm}|p{4.5cm}|p{5cm}|}
+            \hline
+                                  & Instructions                                                                                          & Outil GeoGebra                 & Action                                                        \\
+            \hline
+            \textcolor{B1}{\bf1)} & \multicolumn{3}{l|}{Construction du {\bf triangle} $ABC$}                                                                                                                                              \\
+                                  & Tracer un triangle $ABC$                                                                              & polygone                       & cliquer en trois points quelconques du plan                   \\
+            \hline
+            \textcolor{B1}{\bf2)} & \multicolumn{3}{l|}{Construction des trois {\bf hauteurs} et de l'orthocentre $H$}                                                                                                                     \\
+                                  & Tracer les hauteurs du triangle                                                                       & droites perpendiculaires       & sélectionner pour chaque hauteur le sommet et son côté opposé \\
+                                  & Placer l'orthocentre                                                                                  & intersection entre deux objets & sélectionner deux hauteurs parmi les trois                    \\
+                                  & Renommer l'orthocentre en $H$                                                                         & clic droit propriétés          & nom du point : $H$                                            \\
+                                  & Effacer les hauteurs                                                                                  & clic droit                     & décocher \og afficher l'objet \fg                             \\
+            \hline
+            \textcolor{B1}{\bf3)} & \multicolumn{3}{l|}{Construction des trois {\bf médiatrices} et du centre du cercle circonscrit $O$}                                                                                                   \\
+                                  & Tracer les médiatrices du triangle                                                                    & médiatrices                    & choisir pour chaque médiatrice deux sommets du triangle       \\
+                                  & Placer le centre du cercle circonscrit                                                                & \dots                          & \dots                                                         \\
+                                  & Renommer le centre en $O$                                                                             & \dots                          & \dots                                                         \\
+                                  & Tracer le cercle circonscrit                                                                          & cercle (centre-point)          & choisir le centre $O$ et le sommet $A$                        \\
+                                  & Effacer les médiatrices                                                                               & \dots                          & \dots                                                         \\
+            \hline
+            \textcolor{B1}{\bf4)} & \multicolumn{3}{p{15cm}|}{Construction des trois {\bf médianes} et du centre de gravité $G$. \newline
+                {\it La médiane d'un côté du triangle est la droite passant par le milieu du côté et le sommet opposé. \newline
+            Le point de concours des médianes s'appelle le centre de gravité.}}                                                                                                                                                            \\
+                                  & Tracer les médianes du triangle                                                                       & milieu ou centre               & pour chaque médiane, sélectionner deux sommets du triangle    \\
+                                  &                                                                                                       & droite passant par deux points & sélectionner un sommet et le milieu du côté opposé            \\
+                                  & Placer le centre de gravité                                                                           & \dots                          & \dots                                                         \\
+                                  & Renommer le centre en G                                                                               & \dots                          & \dots                                                         \\
+                                  & Effacer les médianes et les milieux                                                                   & \dots                          & \dots                                                         \\
+            \hline
+        \end{tabular}
+        \bigskip
+
+        \partie[constatations]
+        \vspace*{-5mm}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item $H$, $O$ et $G$ peuvent-ils être confondus ? Dans quels cas ? \par \medskip
+                  \pointilles \medskip
+            \item Dans le cas où aucun point n'est confondu, que peut-on conjecturer sur l'alignement des points $H$, $O$ et $G$ ? \par \medskip
+                  \pointilles \medskip
+            \item Peut-on conjecturer l'existence d'une relation de longueur entre $OH$ et $OG$ ? \par \medskip
+                  \pointilles
+        \end{enumerate}
+    \end{changemargin}    
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 % \addtocounter{exercice}{-1}
 
 \begin{corrige}
-    Correction du binz.
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item $H, O$ et $G$ sont confondus lorsque {\red le triangle $ABC$ est équilatéral}.
+        \item On peut conjecturer que {\red les points $H, O$ et $G$ sont alignés}.
+        \item On peut conjecturer que {\red $OH =3\,OG$}.
+    \end{enumerate}
 \end{corrige}
- 
