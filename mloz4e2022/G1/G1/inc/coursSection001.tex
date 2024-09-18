@@ -11,39 +11,52 @@
 \begin{exemple*1}
     Les triangles $ABC$, $IJK$, $LMN$ et $XYZ$ se superposent par glissement et ou retournement, ils sont donc isométriques.
     \begin{center}
-    \scalebox{0.55}{    
-        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-            \clip(-9,-7) rectangle (9,5.5);
-            \coordinate[label=below:$A$] (A) at (-7.74,1.07);
-            \coordinate[label=below:$B$] (B) at (-1.28,2.07);
-            \coordinate[label=above:$C$] (C) at (-4,4.51);
-            \draw [line width=2pt,color=myGreen] (A)-- (B);
-            \draw [line width=2pt,color=red] (B)-- (C);
-            \draw [line width=2pt,color=blue] (C)-- (A);
-
-            \coordinate[label=below:$I$] (I) at (0.7443407477719717,0.8432900996677757);
-            \coordinate[label=above:$J$] (J) at (4.484340747771972,4.283290099667775);
-            \coordinate[label=below:$K$] (K) at (7.204340747771972,1.8432900996677755);
-            \draw [line width=2pt,color=myGreen] (I)-- (K);
-            \draw [line width=2pt,color=red] (K)-- (J);
-            \draw [line width=2pt,color=blue] (J)-- (I);
-
-            \coordinate[label=above:$L$] (L) at (-8.642460471444396,-2.5698713621262446);
-            \coordinate[label=above:$M$] (M) at (-2.1824604714443954,-1.569871362126245);
-            \coordinate[label=below:$N$] (N) at (-5.922460471444396,-5.009871362126245);
-            \draw [line width=2pt,color=myGreen] (M)-- (L);
-            \draw [line width=2pt,color=red] (L)-- (N);
-            \draw [line width=2pt,color=blue] (N)-- (M);
-            
-            \coordinate[label=above:$X$] (X) at (1.273312430294113,-1.521587110006146);
-            \coordinate[label=above:$Y$] (Y) at (7.758729359192739,-2.340713021179218);
-            \coordinate[label=below:$Z$] (Z) at (5.107961464351075,-4.855753690368624);
-            \draw [line width=2pt,color=myGreen] (X)-- (Y);
-            \draw [line width=2pt,color=red] (Y)-- (Z);
-            \draw [line width=2pt,color=blue] (Z)-- (X);
-        \end{tikzpicture}
-    }
+        \begin{Geometrie}[Cadre="aucun"]
+            pair A,B,C,I,J,K,L,M,N,X,Y,Z;
+            A=u*(1,1);
+            B-A=u*(4,1);
+            C-A=u*(2,2);
+            I=A shifted (5u,0);
+            J=C shifted (5u,0);
+            K=B shifted (5u,0);
+            L-A=u*(-1,-2);
+            M=symetrie(A,iso(L,B));
+            N=symetrie(C,iso(L,B));
+            X=symetrie(I,iso(A,M),iso(A,M) shifted (u,0));
+            Y=symetrie(K,iso(A,M),iso(A,M) shifted (u,0));
+            Z=symetrie(J,iso(A,M),iso(A,M) shifted (u,0));
+            marque_s:=0.3*marque_s;
+            trace segment(A,C) withcolor blue withpen pencircle scaled 1bp;
+            trace segment(I,J) withcolor blue withpen pencircle scaled 1bp;
+            trace segment(M,N) withcolor blue withpen pencircle scaled 1bp;
+            trace segment(X,Z) withcolor blue withpen pencircle scaled 1bp;
+            trace Codelongueur(A,C,I,J,M,N,X,Z,1) withcolor blue;
+            trace segment(C,B) withcolor red withpen pencircle scaled 1bp;
+            trace segment(J,K) withcolor red withpen pencircle scaled 1bp;
+            trace segment(N,L) withcolor red withpen pencircle scaled 1bp;
+            trace segment(Z,Y) withcolor red withpen pencircle scaled 1bp;
+            trace Codelongueur(C,B,J,K,Y,Z,L,N,2) withcolor red;
+            trace segment(B,A) withcolor DarkGreen withpen pencircle scaled 1bp;
+            trace segment(K,I) withcolor DarkGreen withpen pencircle scaled 1bp;
+            trace segment(L,M) withcolor DarkGreen withpen pencircle scaled 1bp;
+            trace segment(Y,X) withcolor DarkGreen withpen pencircle scaled 1bp;
+            trace Codelongueur(A,B,I,K,L,M,X,Y,4) withcolor DarkGreen;
+            label.llft(TEX("$A$"),A);
+            label.lrt(TEX("$B$"),B);
+            label.top(TEX("$C$"),C);
+            label.llft(TEX("$I$"),I);
+            label.top(TEX("$J$"),J);
+            label.lrt(TEX("$K$"),K);
+            label.ulft(TEX("$L$"),L);
+            label.urt(TEX("$M$"),M);
+            label.bot(TEX("$N$"),N);
+            label.ulft(TEX("$X$"),X);
+            label.urt(TEX("$Y$"),Y);
+            label.bot(TEX("$Z$"),Z);
+        \end{Geometrie}        
     \end{center}
+    \smallskip
+        Les côtés qui ont la même couleur, le même codage, ont la même longueur, ce sont des \mbox{côtés \textbf{homologues}.}
 \end{exemple*1}
 
 % \pagebreak
