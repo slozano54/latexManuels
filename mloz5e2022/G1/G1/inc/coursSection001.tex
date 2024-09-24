@@ -175,6 +175,9 @@
                B=d2 intersectionpoint d3;
                label.ulft(btex $B$ etex, B);
                label.lrt(btex $A$ etex, A);
+               label.top(TEX("$(d)$"),0.9[z1,z2]);
+               label.top(TEX("$(d')$"),0.9[z3,z4]);
+               label.lft(TEX("$(\Delta)$"),0.35[z5,z6]);
                trace d1;trace d2;trace d3;
                fill coloreangle(B,A,C) withcolor red;
                fill coloreangle(A,B,D) withcolor red;
@@ -187,8 +190,9 @@
          Soient deux droites $(d)$ et $(d')$, coupées par une sécante $(\Delta)$.
          Deux angles sont \textbf{\red alternes-internes} si :
          \begin{itemize}
-            \item  ils sont entre les droites $(d)$ et $(d')$;
-            \item  ils sont de part et d'autre de la sécante $(\Delta)$.
+            \item ils n'ont pas le même sommet;
+            \item ils sont entre les droites $(d)$ et $(d')$;
+            \item ils sont de part et d'autre de la sécante $(\Delta)$.
          \end{itemize}         
       \end{minipage}
    \end{definition}
@@ -220,6 +224,9 @@
                B=d2 intersectionpoint d3;
                label.ulft(btex $B$ etex,B);
                label.lrt( btex $A$ etex,A);
+               label.top(TEX("$(d)$"),0.9[z1,z2]);
+               label.top(TEX("$(d')$"),0.9[z3,z4]);
+               label.lft(TEX("$(\Delta)$"),0.35[z5,z6]);
                trace d1;trace d2;trace d3;
                fill coloreangle(C,A,F) withcolor blue;
                fill coloreangle(E,B,F) withcolor blue;
@@ -232,6 +239,7 @@
          Soient deux droites $(d)$ et $(d')$, coupées par une sécante $(\Delta)$.
          Deux angles sont \textbf{\red correspondants} si :
          \begin{itemize}
+            \item ils n'ont pas le même sommet;
             \item  ils sont du même côté de la sécante $(\Delta)$;
             \item  l'un est à l'extérieur des droites $(d)$ et $(d')$;
             \item  l'autre est entre les droites $(d)$ et $(d')$.
