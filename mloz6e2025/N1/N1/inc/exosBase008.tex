@@ -1,0 +1,43 @@
+\begin{exercice}
+   Placer les points dont l'abscisse est donnée sur les droites graduées. \smallskip
+   \begin{enumerate}
+      \small
+      \item $E(121)$ \qquad $F(123)$ \qquad $G(125)$ \qquad $H(131)$ \\
+            \Reperage[AffichageNom,AffichageAbs=1,Unitex=5,ValeurUnitex=10,Pasx=10,ValeurOrigine=120,ValeurUnitex=130,ValeurMin=-1,ValeurMax=12]{-1/,12/}
+
+            \smallskip
+      \item $M(\num{3810}) \qquad N(\num{3830}) \qquad P(\num{3890}) \qquad Q(\num{3910})$ \\
+            \Reperage[AffichageNom,AffichageAbs=1,Unitex=5,ValeurUnitex=10,Pasx=10,ValeurOrigine=3800,ValeurUnitex=3900,ValeurMin=-1,ValeurMax=12]{-1/,12/}
+
+            \smallskip
+      \item V(640\,800) \qquad W(641\,300) \qquad Y(641\,600) \qquad Z(641\,800) \\
+            \begin{pspicture}(0,-0.5)(8,0.7)
+               \psset{xunit=0.45}
+               \psline{->}(0,0)(16,0)
+               \multido{\n=0+1}{16}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+               \psline(4,-0.1)(4,0.1)
+               \rput(4,-0.4){641\,000}
+               \psline(14,-0.1)(14,0.1)
+               \rput(14,-0.4){642\,000}
+            \end{pspicture}
+   \end{enumerate}
+\end{exercice}
+\begin{corrige}
+   Placer les points dont l'abscisse est donnée sur les droites graduées. \smallskip
+
+   \begin{enumerate}
+      \item \hfill\par \small\Reperage[AffichageNom,AffichageAbs=0,Unitex=5,ValeurUnitex=10,Pasx=10,ValeurOrigine=120,ValeurUnitex=130,ValeurMin=-1,ValeurMax=12]{-1/,1/E,3/F,5/G,11/H,12/}
+      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=0,Unitex=5,ValeurUnitex=10,Pasx=10,ValeurOrigine=3800,ValeurUnitex=3900,ValeurMin=-1,ValeurMax=12]{-1/,1/M,3/N,9/P,11/Q,12/}
+      \item \hfill\par
+            \begin{pspicture}(0,-0.5)(8,0.7)
+               \psset{xunit=0.45}
+               \psline{->}(0,0)(16,0)
+               \multido{\n=0+1}{16}{\psline[linecolor=gray,linewidth=0.1mm](\n,-0.1)(\n,0.1)}
+               \psline(4,-0.1)(4,0.1)
+               \rput(4,-0.4){641\,000}
+               \psline(14,-0.1)(14,0.1)
+               \rput(14,-0.4){642\,000}
+               \pstGeonode[PosAngle=90](2,0){V}(7,0){W}(10,0){Y}(12,0){Z}
+            \end{pspicture}
+   \end{enumerate}
+\end{corrige}

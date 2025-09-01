@@ -1,0 +1,77 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\vspace*{-15mm}
+\begin{enigme}[Tâche complexe : sorties au cinéma.]
+    \begin{changemargin}{-10mm}{-10mm}
+        \vspace*{-5mm}
+        Misgana a 12 ans. Elle veut organiser des sorties au cinéma avec trois de ses camarades du même âge qu'elle, pendant la première semaine des vacances scolaires de la Toussaint. Les vacances commencent le samedi 19 octobre et se terminent le dimanche 3 novembre. \\
+        Misgana demande à ses camarades quels sont les jours et les heures qui leur conviennent pour cette sortie. Elle a reçu les informations suivantes :
+        \begin{itemize}
+            \item Ciana : \og Je dois rester chez moi le lundi et le mercredi après-midi de 14h30 à 15h30 pour mes leçons de danse \fg.
+            \item Sofia : \og Je dois revenir pour 17 h car j'ai besoin de lire au moins 2 h avant le dîner \fg.
+            \item Q'Orianka : \og J'ai des compétitions de natation synchronisée les dimanches, donc les dimanches sont exclus. J'ai déjà vu Pokamin et je ne veux pas le revoir \fg.
+        \end{itemize}
+        Misgana doit choisir des films qui ne sont pas interdits aux jeunes de son âge et ses parents insistent pour qu'elle ne rentre pas à pied ; ils proposent de ramener les filles chez elles à n'importe quelle heure jusqu'à 22 h. Elle se renseigne sur les programmes de cinéma pour la première semaine de vacances. Voici les informations qu'elle a recueillies :       
+        \begin{center}
+            {\small
+            \begin{tabular}{|p{4cm}p{1.8cm}|p{4cm}p{1.8cm}|}
+                \hline
+                \multicolumn{4}{|c|}{\bf Cinéma Setièmard} \\
+                \multicolumn{4}{|c|}{Réservations au numéro : 08 00 42 30 00} \\
+                \multicolumn{4}{|c|}{Programme en vigueur à partir du mercredi 16 octobre pour deux semaines.} \\
+                \hline
+                \bf Hari Kover & & \bf Pokamin & \\
+                113 min & Interdit aux & 105 min & Accord \\
+                14h00 (lun.-ven. seulement) & moins de & 13h40 (tous les jours) & parental \\
+                21h35 (sam.-dim. seulement) & 12 ans. & 16h35 (tous les jours) & souhaitable. \\
+                \hline
+                \bf Le monstre des profondeurs & & \bf Enigma & \\
+                164 min & Interdit aux & 144 min & Interdit aux \\
+                19h55 (ven.-sam. seulement) & moins de & 15h00 (lun.-ven. seulement) & moins de \\
+                & 18 ans. & 18h00 (sam.-dim. seulement) & 12 ans. \\
+                \hline
+                \bf Carnivore & & \bf Le roi de la savane & \\
+                148 min & Interdit aux & 117 min & Pour tous. \\
+                18h30 (tous les jours) & moins de & 14h35 (lun.-ven. seulement) & \\
+                & 18 ans. & 18h50 (sam.-dim. seulement) & \\
+                \hline
+            \end{tabular}}
+        \end{center}
+
+        Quel planning Misgana va-t-elle proposer à ses amies afin de voir un maximum de films ? Pour aider à organiser les résultats, on pourra utiliser un tableau de ce type :
+        \begin{center}
+            {\small
+            \scalebox{0.9}{
+            \begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+                \hline
+                horaire & samedi & dimanche & lundi & mardi & mercredi & jeudi & vendredi \\
+                & 19 octobre & 20 octobre & 21 octobre & 22 octobre & 23 octobre & 24 octobre & 25 octobre \\
+                \hline
+                13h & & & & & & & \\ [1.5mm]
+                14h & & & & & & & \\ [1.5mm]
+                15h & & & & & & & \\ [1.5mm]
+                16h & & & & & & & \\ [1.5mm]
+                17h & & & & & & & \\ [1.5mm]
+                18h & & & & & & & \\ [1.5mm]
+                19h & & & & & & & \\ [1.5mm]
+                20h & & & & & & & \\ [1.5mm]
+                21h & & & & & & & \\ [1.5mm]
+                22h & & & & & & & \\ [1.5mm]
+                23h & & & & & & & \\ [1.5mm]
+                \hline
+            \end{tabular}}
+            }
+        \end{center}
+
+        \hfill {\footnotesize\it Source : adapté de PISA 2003 et Tâches complexes cycle 4, \url{https://pedagogie.ac-reims.fr} }
+    \end{changemargin}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+
+% \begin{corrige}
+%     Correction du binz.
+% \end{corrige}

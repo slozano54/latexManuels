@@ -1,0 +1,42 @@
+\begin{activite}[Le puzzle de Brousseau]
+    \begin{changemargin}{-10mm}{-20mm}
+    {\bf Objectifs :} mettre en \oe uvre un ou des moyens pour résoudre un problème d'agrandissement ; reproduire une figure géométrique en respectant des mesures ; rendre compte d'un travail en groupe.
+    \partie[présentation du puzzle]
+        Ci-dessous se trouve un puzzle composé de quatre pièces A, B, C et D dont les mesures dont indiquées sur la figure.
+        \begin{center}
+            \begin{Geometrie}[CoinHD={(12u,12u)}]
+                pair S[];
+                S0=u*(0.5,0.5);
+                S1-S0=u*(11,0);
+                S2-S0=u*(11,11);
+                S3-S0=u*(0,11);
+                S4-S0=u*(4,0);
+                S5-S0=u*(4,11);
+                S6-S0=u*(7,6);
+                S7-S0=u*(7,0);
+                S8-S0=u*(4,6);
+                S9-S0=u*(11,6);
+                trace polygone(S0,S1,S2,S3) withpen pencircle scaled 1.2bp;
+                trace segment(S4,S5) withpen pencircle scaled 1.2bp;
+                trace segment(S6,S7) withpen pencircle scaled 1.2bp;
+                trace segment(S8,S9) withpen pencircle scaled 1.2bp;
+                label(TEX("\textbf{A}"),iso(S3,S4));
+                label(TEX("\textbf{B}"),iso(S8,S7));
+                label(TEX("\textbf{C}"),iso(S6,S1));
+                label(TEX("\textbf{D}"),iso(S5,S9));
+                trace cotationmil(S0,S4,-3mm,15,TEX("\Lg[cm]{4}"));
+                trace cotationmil(S4,S7,-3mm,15,TEX("\Lg[cm]{2}"));
+                trace cotationmil(S7,S1,-3mm,15,TEX("\Lg[cm]{5}"));
+                trace cotationmil(S1,S9,-3mm,15,TEX("\Lg[cm]{6}"));
+                trace cotationmil(S9,S2,-3mm,15,TEX("\Lg[cm]{5}"));
+            \end{Geometrie}
+            \end{center}
+    
+    \partie[travail demandé]
+        Par groupes de trois ou quatre, vous allez devoir refaire le même puzzle mais en plus grand : il faudra s'accorder sur la procédure à adopter pour agrandir les éléments du puzzle, se répartir la construction des pièces en faisant les calculs individuellement puis assembler les morceaux pour reconstituer le puzzle agrandi. \\
+        Le compte-rendu de vos recherches sera présenté sous la forme d’une affiche par groupe. \\
+        \begin{center}
+            {\bf C'est parti\dots{} le segment de \ucm{4} devra mesurer \ucm{6} sur votre puzzle agrandi.}
+        \end{center}
+    \end{changemargin}
+ \end{activite}

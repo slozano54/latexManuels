@@ -1,0 +1,92 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% phantom{\numeroteEnigme}
+\begin{enigme}[Repérage multi-axes]
+   Pour découvrir le dessin codé, placer les points A, B, C \dots selon les indications des tableaux ci-dessous.
+   
+   Quand tous les points seroont placer, les relier en suivant les instructions données.
+
+   \begin{minipage}{0.3\linewidth}
+      \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.5cm}|}}
+         \hline
+         \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+         \hline
+         (1) & A & $4$\\
+         \hline
+         (3) & B & $0$\\
+         \hline
+         (4) & C &  $3$\\
+         \hline
+         (5) & D &  $6$\\
+         \hline
+         (7) & E &  $2$\\
+         \hline
+      \end{tabular}
+   \end{minipage}
+   \begin{minipage}{0.3\linewidth}
+      \begin{tabular}{|*{3}{>{\centering\arraybackslash}p{0.5cm}|}}
+         \hline
+         \cellcolor{lightgray}{\!\!\!\small Ligne} & \cellcolor{lightgray}{\!\!\!\small Point} & \cellcolor{lightgray}{\!\small Abs.} \\
+         \hline
+         (7) & F &  $8$\\
+         \hline
+         (8) & G &  $5$\\
+         \hline
+         (9) & H &  $8$\\
+         \hline
+         (11) & I & $5$\\
+         \hline
+      \end{tabular}
+   \end{minipage}
+   \begin{minipage}{0.3\linewidth}
+      Tracer le triangle $ABD$\\
+      Tracer le quadrilatère $CEHF$.\\
+      Tracer le triangle $EGI$
+   \end{minipage}
+
+   \begin{center}
+      \DessinGradue[Lignes=11,Debut=0,Fin=12,Pas=12,Echelle=1]{%
+      % 1er argument inutile si les "lignes" sont identiques.
+      }{%
+      % 2eme argument : on place les points. La notation 1/A/4 signifie que sur la ligne 1,
+      %on place le point A au repère numéroté 4.
+      1/A/4,
+      3/B/0,
+      4/C/3,
+      5/D/6,
+      7/E/2,7/F/8,
+      8/G/5,
+      9/H/8,
+      11/I/4%
+      }{%
+      % 3eme argument : on définit les tracés nécessaires.
+      polygone(A,B,D)§polygone(F,C,E,H)§polygone(E,I,G)%
+      }
+   \end{center}
+\end{enigme}
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+\begin{corrige}
+   \phantom{rrr}
+   
+   \begin{center}
+      \DessinGradue[Lignes=11,Debut=0,Fin=12,Pas=12,Echelle=0.6,Solution]{%
+      % 1er argument inutile si les "lignes" sont identiques.
+      }{%
+      % 2eme argument : on place les points. La notation 1/A/4 signifie que sur la ligne 1,
+      %on place le point A au repère numéroté 4.
+      1/A/4,
+      3/B/0,
+      4/C/3,
+      5/D/6,
+      7/E/2,7/F/8,
+      8/G/5,
+      9/H/8,
+      11/I/4%
+      }{%
+      % 3eme argument : on définit les tracés nécessaires.
+      polygone(A,B,D)§polygone(F,C,E,H)§polygone(E,I,G)%
+      }
+   \end{center}
+\end{corrige}

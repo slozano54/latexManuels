@@ -1,0 +1,64 @@
+\vspace*{-5mm}
+\begin{changemargin}{-10mm}{-10mm}
+%pre-001
+\input{\currentpath/inc/prerequis001.tex}
+\begin{debat}[Proportions et feuilles de papier] 
+   Les formats de papier : A0, A1, A2, A3, A4, A5\dots{} ne sont pas dûs au hasard : ils ont été instaurés de manière à ce que les proportions de la feuille soient conservées lorsqu'on la coupe en deux. Le rapport entre la longueur est la largeur est de $\sqrt2$ (racine de 2) soit environ 1,414. \\
+   C'est pourquoi une feuille de papier au format A4 a des dimensions de \ucm{21} par \ucm{29,7} car $21\times\sqrt2 \approx29,7$.
+   \begin{center}
+      \begin{Geometrie}[CoinHD={(15u,5u)}]
+         pair A[];
+         pair legendes[];
+         numeric Longueur,Largeur;
+         Longueur:=5.94;
+         Largeur:=4.2;
+         % format A0
+         A0=u*(5,0.5);
+         A1-A0=u*(Longueur,0);
+         A2-A1=u*(0,Largeur);
+         A3-A2=u*(-Longueur,0);         
+         % format A1
+         A4=iso(A2,A3);
+         A5=iso(A0,A1);         
+         % format A2
+         A6=iso(A4,A5);
+         A7=iso(A1,A2);
+         % format A3
+         A8=iso(A6,A7);
+         A9=iso(A2,A4);
+         %format A4
+         A10=iso(A7,A2);
+         A11=iso(A8,A9);
+         %formatA5
+         A12=iso(A10,A11);
+         A13=iso(A9,A2);
+         legendes[0]=iso(A0,A3);
+         label.lft(TEX("\textbf{A0}"),legendes0 shifted (-u,0));
+         drawarrow legendes0 shifted (-u,0) -- legendes0 shifted (-0.1u,0);
+         % rempli polygone
+         fill polygone(A0,A5,A4,A3) withcolor Crimson;
+         fill polygone(A5,A1,A7,A6) withcolor 0.8Crimson;
+         fill polygone(A8,A9,A4,A6) withcolor 0.6Crimson;
+         fill polygone(A8,A7,A10,A11) withcolor LightCoral;
+         fill polygone(A11,A12,A13,A9) withcolor 0.8LightCoral;
+         label(TEX("\textbf{A1}"),iso(A3,A5)) withcolor white;
+         label(TEX("\textbf{A2}"),iso(A6,A1)) withcolor white;
+         label(TEX("\textbf{A3}"),iso(A4,A8)) withcolor white;
+         label(TEX("\textbf{A4}"),iso(A11,A7)) withcolor white;
+         label(TEX("\textbf{A5}"),iso(A9,A12)) withcolor white;
+         trace polygone(A0,A1,A2,A3) withpen pencircle scaled 1.2bp;
+         draw A4--A5 withpen pencircle scaled 1.2bp;
+         draw A6--A7 withpen pencircle scaled 1.2bp;
+         draw A8--A9 withpen pencircle scaled 1.2bp;
+         draw A10--A11 withpen pencircle scaled 1.2bp;
+         draw A12--A13 withpen pencircle scaled 1.2bp;
+      \end{Geometrie}
+   \end{center}
+   \bigskip
+   \begin{cadre}[B2][F4]
+      \begin{center}
+         \hrefVideo{https://www.youtube.com/watch?v=VsvplYbMEzc}{\bf Dimensions idéales d'un terrain de foot}, chaîne {\it Micmaths} de {\it Mickaël Launay}
+      \end{center}
+   \end{cadre}   
+\end{debat}
+\end{changemargin}
