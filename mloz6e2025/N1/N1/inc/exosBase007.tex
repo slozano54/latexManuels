@@ -1,25 +1,35 @@
 \begin{exercice}
-    Écrire l'abscisse de chacun des points représentés sur la droite graduée.
-    \begin{enumerate}
-    \small
-       \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=4,ValeurUnitex=10,Pasx=10,ValeurMin=0,ValeurMax=15]{0/,3/A,8/B,11/C,13/D,15/}
-       \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=1,ValeurOrigine=1000,ValeurUnitex=2000,Pasx=2,ValeurMin=-1,ValeurMax=12]{0/,1/J,5/K,9/L,12/}
-       \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=4,ValeurOrigine=2900,ValeurUnitex=3000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
-    \end{enumerate}
- \end{exercice}
- \begin{corrige}
-    Écrire l'abscisse de chacun des points représentés sur la droite graduée.
-    
-    \begin{enumerate}
-    \small    
-      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=4,ValeurUnitex=10,Pasx=10,ValeurMin=0,ValeurMax=15]{0/,3/A,8/B,11/C,13/D,15/}
-      
-      \textcolor{red}{A($3$); B($8$); C($11$); D($13$)}
-      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=1,ValeurOrigine=1000,ValeurUnitex=2000,Pasx=2,ValeurMin=-1,ValeurMax=12]{0/,1/J,5/K,9/L,12/}
-      
-      \textcolor{red}{J($\num{1500}$); K($\num{3500}$); L($\num{5500}$)}
-      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=4,ValeurOrigine=2900,ValeurUnitex=3000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
+   Écrire l'abscisse de chacun des points représentés sur la droite graduée.
+   \begin{enumerate}
+      \small
+      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=4,ValeurUnitex=10,Pasx=10,ValeurMin=0,ValeurMax=15]{0/,3/A,8/B,11/C,13/D,15/}
+      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=1,ValeurOrigine=1000,ValeurUnitex=2000,Pasx=2,ValeurMin=-1,ValeurMax=12]{0/,1/J,5/K,9/L,12/}
+      % \item \hfill\par \Reperage[AffichageNom,AffichageAbs=3,Unitex=4,ValeurOrigine=2900,ValeurUnitex=3000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
+      \item \hfill\par
+            \mplibnumbersystem{double}
+            \Reperage[AffichageNom,AffichageAbs=3,Unitex=4,ValeurOrigine=29000,ValeurUnitex=30000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
+            \mplibnumbersystem{scaled}
+   \end{enumerate}
+\end{exercice}
+\begin{corrige}
+   Écrire l'abscisse de chacun des points représentés sur la droite graduée.
 
-      \textcolor{red}{R($\num{2890}$); S($\num{2940}$); T($\num{2970}$); U($\num{3010}$)}
-    \end{enumerate}
- \end{corrige}
+   \begin{enumerate}
+      \small
+      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=4,ValeurUnitex=10,Pasx=10,ValeurMin=0,ValeurMax=15]{0/,3/A,8/B,11/C,13/D,15/}
+
+            \textcolor{red}{A($3$); B($8$); C($11$); D($13$)}
+      \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=1,ValeurOrigine=1000,ValeurUnitex=2000,Pasx=2,ValeurMin=-1,ValeurMax=12]{0/,1/J,5/K,9/L,12/}
+
+            \textcolor{red}{J($\num{1500}$); K($\num{3500}$); L($\num{5500}$)}
+      % \item \hfill\par \Reperage[AffichageNom,AffichageAbs=4,Unitex=4,ValeurOrigine=2900,ValeurUnitex=3000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
+
+      %       \textcolor{red}{R($\num{2890}$); S($\num{2940}$); T($\num{2970}$); U($\num{3010}$)}
+      \item \hfill\par
+            \mplibnumbersystem{double}
+            \Reperage[AffichageNom,AffichageAbs=4,Unitex=4,ValeurOrigine=29000,ValeurUnitex=30000,Pasx=10,ValeurMin=-2,ValeurMax=12]{0/,-1/R,4/S,7/T,11/U,12/}
+            \mplibnumbersystem{scaled}
+
+            \textcolor{red}{R($\num{28900}$); S($\num{29400}$); T($\num{29700}$); U($\num{30100}$)}
+   \end{enumerate}
+\end{corrige}
