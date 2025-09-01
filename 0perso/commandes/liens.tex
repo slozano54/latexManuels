@@ -35,6 +35,15 @@
     \qrcode[hyperlink,height=0.4in]{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}\hspace*{2mm}\href{https://coopmaths.fr/alea/?\listOfUuid&v=#3&es=#4}{#1}
 }
 
+
+% Pour le lien vers un doc à compiler AleaTeX
+% #1 --> Texte par défaut
+% Par défaut #1 est le smiley yeux etoilés + smiley link + texte mais on peut le remplacer par la ref mathalea
+% #2 --> url
+\newcommand{\hrefAleaTeX}[2][\emoji{star-struck} \emoji{link} \myUrlColorStyle{S'entraîner avec} \aleatexLogo]{
+    \qrcode[hyperlink,height=0.4in]{#2}\hspace*{2mm}\href{#2}{#1}
+}
+
 % Pour la géométrie, voir des constructions etc ...
 % #1 --> emojis par defaut
 % Par défaut #1 est emoji equerre + emoji regle + le smiley link mais cela peut être modifié

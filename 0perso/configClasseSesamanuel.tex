@@ -96,6 +96,21 @@
   }
 }
 
+% Logo AleaTeX
+\newcommand*\StringALEATEX{Alea\TeX}
+\colorlet{aleatexLineColor}{H2}
+\definecolor{Kawasaki}{HTML}{00B51A}
+\colorlet{aleatexBkgColor}{Kawasaki}
+\colorlet{aleatexTextColor}{Blanc}
+\newcommand*\aleatexLogo{%
+  \psframebox[framesep=1pt,linewidth=\LogoLineWidth,
+              linecolor=aleatexLineColor, fillstyle=solid,
+              fillcolor=aleatexBkgColor, framearc=0.6]{%
+    \NewLogoFont
+    \textcolor{aleatexTextColor}{\StringALEATEX}%
+  }
+}
+
 % Logo mathalea
 \newcommand*\StringMATHALEA{MATHALEA}
 \colorlet{mathaleaLineColor}{J3}
