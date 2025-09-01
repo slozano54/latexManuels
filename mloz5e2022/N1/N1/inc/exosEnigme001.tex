@@ -224,15 +224,15 @@
     {\renewcommand{\arraystretch}{2}
     \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.6cm}|}}
         \hline
-        2 & $+$ & 3 & $\times$ & \textcolor{blue}{5} & $=$ & 17 \\
+        2 & $+$ & 3 & $\times$ & \textcolor{red}{5} & $=$ & 17 \\
         \hline
         $\times$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $+$ & \cellcolor{gray} & $\times$ \\
         \hline
-        \textcolor{blue}{39} & $\times$ & \textcolor{blue}{9} & $-$ & 201 & $=$ & 150 \\
+        \textcolor{red}{39} & $\times$ & \textcolor{red}{9} & $-$ & 201 & $=$ & 150 \\
         \hline
         $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ & \cellcolor{gray} & $=$ \\
         \hline
-        \textcolor{blue}{78} & $+$ & 12 & $\times$ & \textcolor{blue}{206} & $=$ & \textcolor{blue}{2\,550} \\
+        \textcolor{red}{78} & $+$ & 12 & $\times$ & \textcolor{red}{206} & $=$ & \textcolor{red}{2\,550} \\
         \hline
     \end{tabular}}
     }
@@ -247,7 +247,7 @@
     {\renewcommand{\arraystretch}{2}
         \begin{tabular}{|*{7}{>{\centering\arraybackslash}p{0.6cm}|}}
             \cline{1-1} \cline{3-5} \cline{7-7}
-            5 & & \textcolor{blue}{2} & $-$ & 6 & & 66 \\
+            5 & & \textcolor{red}{2} & $-$ & 6 & & 66 \\
             \cline{1-1} \cline{3-5} \cline{7-7}
             $+$ & & $\times$ & & $-$ && $=$ \\
             \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
@@ -255,9 +255,9 @@
             \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
             $\times$ & & $+$ & & $+$ && $-$ \\
             \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7}
-            \textcolor{blue}{3} & & 7 & & 9 & & \textcolor{blue}{4} \\
+            \textcolor{red}{3} & & 7 & & 9 & & \textcolor{red}{4} \\
             \cline{1-3} \cline{5-7}
-            $\div$ & \textcolor{blue}{1} & $+$ & & $\times$ & 8 & $\div$ \\
+            $\div$ & \textcolor{red}{1} & $+$ & & $\times$ & 8 & $\div$ \\
             \cline{1-3} \cline{5-7}
         \end{tabular}}
     }
@@ -279,17 +279,17 @@
         \psframe(3,8)(4,9)
         \psframe(2,4)(5,5)
         \psframe(3,3)(4,7)
-        \rput(0.5,0.5){\blue 1}
+        \rput(0.5,0.5){\textcolor{red}{1}}
         \rput(1.05,0.5){\psframebox*[fillcolor=white]{$+$}}
         \rput(1.5,0.5){7}
         \rput(2,0.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(2.5,0.5){\blue 8}
-        \rput(4.5,0.5){\blue 4}
+        \rput(2.5,0.5){\textcolor{red}{8}}
+        \rput(4.5,0.5){\textcolor{red}{4}}
         \rput(5,0.5){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(5.5,0.5){\blue 2}
+        \rput(5.5,0.5){\textcolor{red}{2}}
         \rput(6,0.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,0.5){\blue 8}
-        \rput(0.5,1.5){\blue 1}
+        \rput(6.5,0.5){\textcolor{red}{8}}
+        \rput(0.5,1.5){\textcolor{red}{1}}
         \rput(2.5,1.5){1}
         \rput(4.5,1.5){2}
         \rput(6.5,1.5){2}
@@ -298,26 +298,26 @@
         \rput(4.5,2){\psframebox*[fillcolor=white]{$=$}}
         \rput(6.5,2){\psframebox*[fillcolor=white]{$=$}}
         \rput(0.5,2.5){9}
-        \rput(2.5,2.5){\blue 9}
+        \rput(2.5,2.5){\textcolor{red}{9}}
         \rput(3,2.5){\psframebox*[fillcolor=white]{$-$}}
         \rput(3.5,2.5){1}
         \rput(4,2.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(4.5,2.5){\blue 8}
-        \rput(6.5,2.5){\blue 4}
+        \rput(4.5,2.5){\textcolor{red}{8}}
+        \rput(6.5,2.5){\textcolor{red}{4}}
         \rput(0.5,3.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(2.5,3.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(4.5,3){\psframebox*[fillcolor=white]{$\times$}}
         \rput(6.5,3){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(0.5,3.5){\blue 2}
+        \rput(0.5,3.5){\textcolor{red}{2}}
         \rput(1.05,3.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(1.5,3.5){\blue 7}
+        \rput(1.5,3.5){\textcolor{red}{7}}
         \rput(2,3.5){\psframebox*[fillcolor=white]{$=$}}
         \rput(2.5,3.5){9}
-        \rput(4.5,3.5){\blue 3}
+        \rput(4.5,3.5){\textcolor{red}{3}}
         \rput(5.05,3.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(5.5,3.5){\blue 4}
+        \rput(5.5,3.5){\textcolor{red}{4}}
         \rput(1.5,4){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,3.5){\blue 7}
+        \rput(6.5,3.5){\textcolor{red}{7}}
         \rput(5.5,4){\psframebox*[fillcolor=white]{$=$}}
         \rput(1.5,4.5){5}
         \rput(5.5,4.5){1}
@@ -325,44 +325,44 @@
         \rput(5.5,5){\psframebox*[fillcolor=white]{$\times$}}
         \rput(0.5,5.5){2}
         \rput(1,5.5){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(1.5,5.5){\blue 2}
+        \rput(1.5,5.5){\textcolor{red}{2}}
         \rput(2,5.5){\psframebox*[fillcolor=white]{$=$}}
         \rput(2.5,5.5){4}
         \rput(4.5,5.5){4}
         \rput(5,5.5){\psframebox*[fillcolor=white]{$-$}}
-        \rput(5.5,5.5){\blue 4}
+        \rput(5.5,5.5){\textcolor{red}{4}}
         \rput(6,3.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,5.5){\blue 0}
+        \rput(6.5,5.5){\textcolor{red}{0}}
         \rput(6,5.5){\psframebox*[fillcolor=white]{$=$}}
         \rput(0.5,6.5){1}
         \rput(2.5,6.5){1}
         \rput(4.5,6.5){1}
         \rput(0.5,7){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,6.5){\blue 1}
+        \rput(6.5,6.5){\textcolor{red}{1}}
         \rput(2.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(4.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(6.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(0.5,7.5){6}
-        \rput(2.5,7.5){\blue 7}
+        \rput(2.5,7.5){\textcolor{red}{7}}
         \rput(3,7.5){\psframebox*[fillcolor=white]{$\times$}}
         \rput(3.5,7.5){1}
         \rput(4,7.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(4.5,7.5){\blue 7}
+        \rput(4.5,7.5){\textcolor{red}{7}}
         \rput(6.5,7.5){2}
         \rput(0.5,8.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(2.5,8.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(4.5,8){\psframebox*[fillcolor=white]{$\times$}}
         \rput(6.5,8){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(0.5,8.5){\blue 6}
+        \rput(0.5,8.5){\textcolor{red}{6}}
         \rput(1.05,8.5){\psframebox*[fillcolor=white]{$+$}}
         \rput(1.5,8.5){1}
         \rput(2,8.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(2.5,8.5){\blue 7}
-        \rput(4.5,8.5){\blue 2}
+        \rput(2.5,8.5){\textcolor{red}{7}}
+        \rput(4.5,8.5){\textcolor{red}{2}}
         \rput(5.05,8.5){\psframebox*[fillcolor=white]{$+$}}
         \rput(5.5,8.5){3}
         \rput(6,8.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,8.5){\blue 5}
+        \rput(6.5,8.5){\textcolor{red}{5}}
     \end{pspicture}
 
     \begin{pspicture}(7,10)
@@ -378,18 +378,18 @@
         \psframe(3,8)(4,9)
         \psframe(2,4)(5,5)
         \psframe(3,3)(4,7)
-        \rput(0.5,0.5){\blue 5}
+        \rput(0.5,0.5){\textcolor{red}{5}}
         \rput(1,0.5){\psframebox*[fillcolor=white]{$-$}}
         \rput(1.5,0.5){2}
         \rput(2,0.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(2.5,0.5){\blue 3}
-        \rput(4.5,0.5){\blue 4}
+        \rput(2.5,0.5){\textcolor{red}{3}}
+        \rput(4.5,0.5){\textcolor{red}{4}}
         \rput(5.05,0.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(5.5,0.5){\blue 1}
+        \rput(5.5,0.5){\textcolor{red}{1}}
         \rput(6,0.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,0.5){\blue 5}
+        \rput(6.5,0.5){\textcolor{red}{5}}
         \rput(0.5,1.5){3}
-        \rput(2.5,1.5){\blue 6}
+        \rput(2.5,1.5){\textcolor{red}{6}}
         \rput(4.5,1.5){1}
         \rput(6.5,1.5){4}
         \rput(0.5,2){\psframebox*[fillcolor=white]{$=$}}
@@ -397,71 +397,71 @@
         \rput(4.5,2){\psframebox*[fillcolor=white]{$=$}}
         \rput(6.5,2){\psframebox*[fillcolor=white]{$=$}}
         \rput(0.5,2.5){7}
-        \rput(2.5,2.5){\blue 7}
+        \rput(2.5,2.5){\textcolor{red}{7}}
         \rput(3,2.5){\psframebox*[fillcolor=white]{$-$}}
         \rput(3.5,2.5){5}
         \rput(4,2.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(4.5,2.5){\blue 2}
-        \rput(6.5,2.5){\blue 9}
+        \rput(4.5,2.5){\textcolor{red}{2}}
+        \rput(6.5,2.5){\textcolor{red}{9}}
         \rput(0.5,3){\psframebox*[fillcolor=white]{$\times$}}
         \rput(2.5,3){\psframebox*[fillcolor=white]{$\times$}}
         \rput(4.5,3){\psframebox*[fillcolor=white]{$\times$}}
         \rput(6.5,3){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(0.5,3.5){\blue 5}
+        \rput(0.5,3.5){\textcolor{red}{5}}
         \rput(1.05,3.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(1.5,3.5){\blue 4}
+        \rput(1.5,3.5){\textcolor{red}{4}}
         \rput(2,3.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(2.5,3.5){\blue 9}
+        \rput(2.5,3.5){\textcolor{red}{9}}
         \rput(4.5,3.5){7}
         \rput(5,3.5){\psframebox*[fillcolor=white]{$-$}}
-        \rput(5.5,3.5){\blue 2}
+        \rput(5.5,3.5){\textcolor{red}{2}}
         \rput(6,3.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,3.5){\blue 5}
+        \rput(6.5,3.5){\textcolor{red}{5}}
         \rput(1.5,4){\psframebox*[fillcolor=white]{$=$}}
         \rput(5.5,4){\psframebox*[fillcolor=white]{$=$}}
         \rput(1.5,4.5){2}
         \rput(5.5,4.5){2}
         \rput(1.5,5){\psframebox*[fillcolor=white]{$-$}}
         \rput(5.5,5.05){\psframebox*[fillcolor=white]{$+$}}
-        \rput(0.5,5.5){\blue 0}
+        \rput(0.5,5.5){\textcolor{red}{0}}
         \rput(1.05,5.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(1.5,5.5){\blue 6}
+        \rput(1.5,5.5){\textcolor{red}{6}}
         \rput(2,5.5){\psframebox*[fillcolor=white]{$=$}}
         \rput(2.5,5.5){6}
         \rput(4.5,5.5){2}
         \rput(5.05,5.5){\psframebox*[fillcolor=white]{$+$}}
-        \rput(5.5,5.5){\blue 0}
+        \rput(5.5,5.5){\textcolor{red}{0}}
         \rput(6,5.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,5.5){\blue 2}
+        \rput(6.5,5.5){\textcolor{red}{2}}
         \rput(0.5,6.5){1}
         \rput(2.5,6.5){1}
         \rput(4.5,6.5){1}
-        \rput(6.5,6.5){\blue 1}
+        \rput(6.5,6.5){\textcolor{red}{1}}
         \rput(0.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(2.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(4.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(6.5,7){\psframebox*[fillcolor=white]{$=$}}
         \rput(0.5,7.5){3}
-        \rput(2.5,7.5){\blue 8}
+        \rput(2.5,7.5){\textcolor{red}{8}}
         \rput(3,7.5){\psframebox*[fillcolor=white]{$-$}}
         \rput(3.5,7.5){4}
         \rput(4,7.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(4.5,7.5){\blue 4}
+        \rput(4.5,7.5){\textcolor{red}{4}}
         \rput(6.5,7.5){3}
         \rput(0.5,8.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(2.5,8.05){\psframebox*[fillcolor=white]{$+$}}
         \rput(4.5,8){\psframebox*[fillcolor=white]{$\times$}}
         \rput(6.5,8){\psframebox*[fillcolor=white]{$\times$}}
-        \rput(0.5,8.5){\blue 7}
+        \rput(0.5,8.5){\textcolor{red}{7}}
         \rput(1.05,8.5){\psframebox*[fillcolor=white]{$+$}}
         \rput(1.5,8.5){1}
         \rput(2,8.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(2.5,8.5){\blue 8}
-        \rput(4.5,8.5){\blue 3}
+        \rput(2.5,8.5){\textcolor{red}{8}}
+        \rput(4.5,8.5){\textcolor{red}{3}}
         \rput(5.05,8.5){\psframebox*[fillcolor=white]{$+$}}
         \rput(5.5,8.5){1}
         \rput(6,8.5){\psframebox*[fillcolor=white]{$=$}}
-        \rput(6.5,8.5){\blue 4}
+        \rput(6.5,8.5){\textcolor{red}{4}}
     \end{pspicture}
 
 \end{corrige}
