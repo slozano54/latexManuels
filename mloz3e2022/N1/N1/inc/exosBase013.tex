@@ -7,19 +7,19 @@
 
     \begin{tabularx}{0.48\textwidth}{|C|C|}
         \hline
-        \rowcolor{gray!20}\multicolumn{2}{|>{\centering\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{LETTRE PRIORITAIRE}\tabularnewline        
+        \rowcolor{gray!20}\multicolumn{2}{|>{\centering\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{LETTRE PRIORITAIRE}\tabularnewline
         \hline
         \rowcolor{gray!20}MASSE JUSQU'À & TARIFS NETS \tabularnewline
         \hline
-        \Masse{20}&\Prix{0.8} \tabularnewline
+        \Masse{20}                      & \Prix{0.8} \tabularnewline
         \hline
-        \Masse{100}&\Prix{1.6} \tabularnewline
+        \Masse{100}                     & \Prix{1.6} \tabularnewline
         \hline
-        \Masse{250}&\Prix{3.2} \tabularnewline
+        \Masse{250}                     & \Prix{3.2} \tabularnewline
         \hline
-        \Masse{500}&\Prix{4.8} \tabularnewline
+        \Masse{500}                     & \Prix{4.8} \tabularnewline
         \hline
-        \Masse[kg]{3}&\Prix{6.4} \tabularnewline
+        \Masse[kg]{3}                   & \Prix{6.4} \tabularnewline
         \hline
     \end{tabularx}
 
@@ -28,10 +28,11 @@
         \item Masse de son paquet de $50$ enveloppes : \Masse{175}.
         \item Dimensions d'une feuille A4 : \Lg{21} de largeur et \Lg{29.7} de longueur.
         \item Grammage d'une feuille A4 : $80$ \Masse{}/\Aire[m]{}.
-    
-        \begin{myBox}{Note}
-            Le grammage est la masse par \Aire[m]{} de feuille.
-        \end{myBox} 
+              \begin{minipage}{0.8\linewidth}
+                  \begin{myBox}{Note}
+                      Le grammage est la masse par \Aire[m]{} de feuille.
+                  \end{myBox}
+              \end{minipage}
     \end{itemize}
 
     Quel tarif d'affranchissement doit-il choisir ?
@@ -39,15 +40,15 @@
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}  
-    
+
     Il doit envoyer $1$ enveloppe et $4$ pages A4.
 
     $\Masse{175}\div 50 = \Masse{3.5}$ pour l'enveloppe.
 
-    $\Lg{21}\times \Lg{29.7} = \Aire{623.7} = \Aire[m]{0.06237}$. 
+    $\Lg{21}\times \Lg{29.7} = \Aire{623.7} = \Aire[m]{0.06237}$.
 
     $\Masse{80}/\text{m}^2 \times \Aire[m]{0,06237} \simeq \Masse{5}$ et $4\times \Masse{5}=\Masse{20}$.
 
-    Au total son courrier pèse donc environ \Masse{23.5}, il faut donc affranchir avec \Prix{1.6}.    
+    Au total son courrier pèse donc environ \Masse{23.5}, il faut donc affranchir avec \Prix{1.6}.
 \end{corrige}
 
