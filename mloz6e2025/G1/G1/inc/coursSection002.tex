@@ -1,0 +1,68 @@
+\section{Points particuliers}
+
+\begin{definition}
+   Trois points sont {\bf alignés} s'ils appartiennent à une même droite.
+
+   \medskip
+   \begin{center}
+   \begin{pspicture}(-2,-0.3)(11,-0.1)
+      \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(4,0){B}(1.5,0){C}
+      \pstLineAB[nodesep=-1]{A}{B}
+      \rput(8,0){\small les points $A, B$ et $C$ sont alignés.}
+   \end{pspicture}
+   \end{center}
+   \phantom{rrr}
+\end{definition}
+
+\begin{notation}
+   le symbole $\in$ signifie \og {\bf appartient} à \fg{} et $\not\in$ signifie \og n'appartient pas à \fg.
+\end{notation}
+
+\begin{exemple*1}
+   On a par exemple $C\in(AB)$ et $B\in(AC)$ mais $A\notin[CB)$ et $B\notin[AC]$.
+\end{exemple*1}
+
+\begin{definition}
+   Le {\bf milieu} $I$ du segment $[AB]$ est le point de ce segment qui est équidistant de $A$ et de $B$.
+\end{definition}
+
+\begin{remarque}
+   la longueur d'un segment $[AB]$ se note $AB$, et pour indiquer que l'on a des mesures égales, c'est à dire $AI =IB$, on effectue un codage de la figure. \\
+   Exemples de codes que l'on peut utiliser : \textcolor{B1}{\textsf x, +, o, /\!\!/} \dots
+\end{remarque}
+
+\begin{exemple*1}
+   \begin{pspicture}(-1,1.5)(5,2) 
+      \psline[linecolor=A1]{|-|}(0,1.5)(5,1.5)
+      \psline[linecolor=B1](2.5,1.4)(2.5,1.6)
+      \rput(0,1.9){$F$}
+      \rput(2.5,1.9){$I$}
+      \rput(5,1.9){$L$}
+      \rput(1.25,1.5){\textcolor{B1}{\Large$\times$}}
+      \rput(3.75,1.5){\textcolor{B1}{\Large$\times$}}
+   \end{pspicture}
+\end{exemple*1}
+
+\medskip
+
+\begin{definition}
+   Deux droites sont {\bf sécantes} lorsqu'elles se coupent en un point appelé {\bf point d'intersection}.
+\end{definition}
+\begin{exemple*1}
+    \phantom{rrr}
+
+    \begin{minipage}{0.5\linewidth}
+        Les droites $(AC)$ et $(BC)$ sont séanctes en $C$.\\
+        $C$ est leur point d'intersection.
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \begin{pspicture}(-1,-0.25)(4,1.8)
+            \pstGeonode[PosAngle=-90,PointSymbol=+](0,0){A}(3,0){B}(2,1.25){C}
+            % \pstLineAB[nodesep=-0.5]{A}{B}
+            % \pstLineAB[nodesepB=-0.75]{A}{C}
+            % \pstLineAB{C}{B}
+            \pstLineAB[nodesep=-1]{A}{C}
+            \pstLineAB[nodesep=-1]{C}{B}
+        \end{pspicture}
+    \end{minipage}
+\end{exemple*1}

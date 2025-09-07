@@ -1,0 +1,53 @@
+\begin{activite}[Faisceaux de traits]
+    {\bf Objectifs :} employer des relations d'incidence comme l'appartenance d'un point
+    à un ou deux segments ou droites, intersection, alignement ; mise en place d'une chronologie de tracé. 
+    \partie[première construction]
+    {\psset{unit=0.65}
+    \begin{pspicture}(-5,-1)(15,11)
+        \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](2,9){Z}(3.5,3){Y}(6,3.5){C}(8,6){D}(4,1){E}(5.42,4.27){F}(11,4.5){G}
+        \pstLineAB[nodesepA=-4,nodesepB=-5]{C}{D}
+        \pstLineAB[nodesepA=-1,nodesepB=-3]{Z}{Y}
+        \pstLineAB[nodesepA=-4,nodesepB=-7]{Y}{D}
+        \pstLineAB[nodesepA=-4,nodesepB=-8]{Y}{C}
+        \pstLineAB[nodesepA=-1,nodesepB=-4]{Z}{C}
+        \pstLineAB[nodesepA=-1,nodesepB=-7]{Z}{D}
+    \end{pspicture}} \\
+    Reproduire la figure ci-dessus en s'aidant des points d'intersection déjà placés. \\
+    \begin{pspicture}(-4,0)(15,10)
+        \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](2,9){Z}(3.5,3){Y}(6,3.5){C}(8,6){D}
+    \end{pspicture}
+
+    \clearpage
+    \partie[seconde construction]
+    Reproduire la figure projetée au tableau en s'aidant des points d'intersection déjà placés. \\
+    Discuter de l'intérêt de nommer les points.\\
+    \begin{pspicture}(0.5,0)(15,19)
+        \pstGeonode[PointName=none,linewidth=1mm,PointSymbol=+](9.5,5){Z}(10,6.5){Y}(10.5,13){C}(12.5,14){D}(15.5,2.5){E}
+    \end{pspicture}
+ 
+    \clearpage
+ 
+    Figure à projeter : \\
+
+    \begin{pspicture}(0,0)(16,19) %PointName=none,
+       \pstGeonode[linewidth=1mm,PointSymbol=+,PointName=none](9.5,5){A}(10,6.5){B}(10.5,13){C}(12.5,14){D}(15.5,2.5){E}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{A}{E}{C}{D}{F}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{E}{C}{D}{G}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{A}{G}{B}{F}{H}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{D}{C}{E}{I}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{H}{D}{B}{G}{J}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{B}{C}{G}{I}{K}
+       \pstInterLL[linewidth=1mm,PointSymbol=+,PointName=none]{E}{C}{D}{H}{L}
+       \pstLineAB[nodesepA=-10,nodesepB=-2]{A}{E}
+       \pstLineAB[nodesepA=-10,nodesepB=-2]{B}{E}
+       \pstLineAB[nodesepA=-3,nodesepB=-2]{A}{D}
+       \pstLineAB[nodesepA=-12,nodesepB=-2]{C}{D}
+       \pstLineAB[nodesepA=-3,nodesepB=-2]{C}{E}
+       \pstLineAB{A}{G}
+       \pstLineAB{B}{F}
+       \pstLineAB{B}{F}
+       \pstLineAB{H}{D}
+       \pstLineAB{G}{I}
+    \end{pspicture}
+ \end{activite}
+ 

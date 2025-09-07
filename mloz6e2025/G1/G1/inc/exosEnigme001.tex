@@ -1,0 +1,172 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{enigme}[La pipopipette]
+   \partie[présentation du jeu]
+      La pipopipette ou \og jeu des petits carrés \fg{} est un jeu se pratiquant à deux joueurs en tour par tour dont l'idée serait attribuée à des élèves de l'École polytechnique à la fin du {\small XIX}\up{e} siècle : pipo désignait à l'époque cette école en argot. \\
+      {\bf But du jeu :} former des carrés. Le gagnant est celui qui a fermé le plus de carrés. \\
+      {\bf Règles du jeu :}
+         \begin{itemize}
+            \item À chaque tour, chaque joueur trace un petit segment suivant le quadrillage de la feuille.
+            \item Chaque fois qu'un joueur peut fermer un carré, il marque le carré de son signe rejoue.
+            \item Quand la grille est remplie, on compte le nombre de carrés fermés pour chaque joueur.
+         \medskip
+         \end{itemize}
+      {\bf Exemple avec un terrain de 2 $\times$ 2:}
+         \begin{center}
+         {\psset{unit=0.5}
+            \begin{tabular}{*{6}{>{\centering\arraybackslash}p{2.4cm}}}
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm}
+                  \psline[linecolor=A1](0,2)(1,2)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(1,2)
+                  \psset{linecolor=B1}
+                  \psline(1,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(1,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,1.8)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+               \end{pspicture} \\
+               \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} \\ [5mm]
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,1)(0,1)(0,2)(2,2)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psdot[dotstyle=*](0.5,0.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+               \begin{pspicture}(0,0)(2,2)
+                  \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psline(1,1)(2,1)
+                  \psdots[dotstyle=*](0.5,0.5)(1.5,0.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               &
+                \begin{pspicture}(0,0)(2,2)
+                 \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+                  \psset{linewidth=0.5mm,linecolor=A1}
+                  \psline(1,0)(1,1)(0,1)(0,2)(2,2)
+                  \psline(1,1)(2,1)(2,2)
+                  \psdots[dotstyle=*](0.5,0.5)(1.5,0.5)(1.5,1.5)
+                  \psset{linecolor=B1}
+                  \psline(0,1)(0,0)(2,0)(2,1)
+                  \psline(1,1)(1,2)
+                  \psdot[dotstyle=+](0.5,1.5)
+               \end{pspicture}
+               \\
+               \textcolor{A1}{joueur 1} & \textcolor{B1}{joueur 2} & \textcolor{B1}{joueur 2} & \textcolor{A1}{joueur 1} & \textcolor{A1}{joueur 1} & \textcolor{A1}{joueur 1} \\
+            \end{tabular}}
+         \end{center}
+      Le \textcolor{A1}{joueur 1} a pris possession de trois carrés alors que le \textcolor{B1}{joueur 2} en a un seul, c'est donc le \textcolor{A1}{joueur 1} qui gagne. \\
+
+   \partie[à vous de jouer !!!]
+      En binôme, compléter  ces grilles.
+      \begin{center}
+        {\psset{unit=0.8}
+         \begin{tabular}{>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{3.1cm}>{\centering\arraybackslash}p{4.2cm}>{\centering\arraybackslash}p{5cm}}
+            \begin{pspicture}(0,0)(2,2)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(2,2)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(3,3)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(3,3)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(4,4)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(4,4)
+            \end{pspicture}
+           &
+           \begin{pspicture}(0,0)(5,4.5)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(5,5)
+            \end{pspicture} \\ [5mm]
+         \end{tabular} \\\bigskip
+         \begin{tabular}{>{\centering\arraybackslash}p{6.2cm}>{\centering\arraybackslash}p{9cm}}
+            \begin{pspicture}(0,0)(6,3)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(6,3)
+            \end{pspicture}
+            &
+            \begin{pspicture}(0,0)(9,3.5)
+               \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(9,4)
+            \end{pspicture} \\
+         \end{tabular}
+        }
+      \end{center}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     Correction enigme de la fin de la partie cours.  
+% \end{corrige}
