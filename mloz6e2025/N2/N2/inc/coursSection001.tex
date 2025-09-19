@@ -1,0 +1,76 @@
+\section{Des fractions décimales aux nombres décimaux}
+
+\begin{definition}
+   Une {\bf fraction décimale} est une fraction dont le dénominateur est  1, 10, 100, 1\,000 \dots \\
+   Un {\bf nombre décimal} est un nombre qui peut s'écrire sous forme d'une fraction décimale.
+\end{definition}
+
+\begin{exemple*1}
+   \begin{itemize}
+      \item Les fractions décimales les plus \og simples \fg{} sont $\dfrac{1}{10} \; ; \; \dfrac{1}{100} \; ; \;\dfrac{1}{1\,000}, \; ; \;\dfrac{1}{10\,000}$ \dots{}
+      \item  Mais $\dfrac{7}{10} \; ; \; \dfrac{32}{1\,000}  \; ; \; \dfrac{99\,999}{100\,000}$ sont également des fractions décimales.
+      \item 1,8 est un nombre décimal car il peut s'écrire sous la forme $\dfrac{18}{10}$. \\ [-9mm]
+   \end{itemize}
+\end{exemple*1}
+
+\begin{remarques}
+    \begin{itemize}
+        \item tout nombre entier est un nombre décimal \og caché \fg : par exemple $\dfrac{3}{1} =3$.
+        \item Un nombre a une seule valeur numérique mais a plusieurs écritures.
+    \end{itemize}
+\end{remarques}
+   
+\begin{exemple*1}
+   Voilà plusieurs écritures du nombre 16,82 : \par\medskip
+    {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{cp{7cm}p{4cm}}
+      16,82 & $=\dfrac{1\,682}{100}$ & fraction décimale \\
+      & $=16+\dfrac{82}{100}$ & décompositions additives \\
+      & $=(1\times10)+(6\times1)+\left(8\times\dfrac{1}{10}\right)+\left(2\times\dfrac{1}{100}\right)$ & \\
+      & $= (1\times10)+(6\times1)+(8\times0,1)+(2\times0,01)$ & \\  
+   \end{tabular}}
+\end{exemple*1}
+
+%macro pour entourer les opérandes
+%\newcommand{\OPoval}[3]{\dimen1=#2\opcolumnwidth \ovalnode{#1}{\kern\dimen1 #3\kern\dimen1}}
+
+\begin{remarque}
+   Sur l'intérêt de l'écriture décimale
+
+   Une fraction décimale peut être décomposée à l'aide d'un nombre entier et d'une autre fraction décimale inférieure à 1.
+$$\dfrac{\num{92324}}{\num{1000}}=92+\dfrac{324}{\num{1000}}$$
+Mais avec cette notation, les calculs peuvent s'avérer long à écrire.
+$$9+\dfrac{2}{10}+17+\dfrac{35}{100}+7+\dfrac{127}{\num{1000}}=9+17+7+\dfrac{2}{10}+\dfrac{35}{100}+\dfrac{127}{\num{1000}}= 33+\dfrac{200}{\num{1000}}+\dfrac{350}{\num{1000}}+\dfrac{127}{\num{1000}}=33+\dfrac{677}{\num{1000}}$$
+On introduit donc l'écriture avec virgule. En France, ce fait est assez "récent".
+$$\dfrac{\num{92324}}{\num{1000}}=\underbrace{92}_{\text{Partie entière}}+\underbrace{\dfrac{324}{\num{1000}}}_{\text{Partie fractionnaire}}=\underbrace{92}_{\text{Partie entière}}+\underbrace{0,324}_{\text{Partie décimale}}$$
+\end{remarque}
+
+\pagebreak
+\begin{Huge}
+$$\pnode(0.7em,-0.1em){A}{\colorbox{green!30}{92}} \OPoval{B}{0,1}{,}324 = \pnode(1em,-0.1em){G}{\colorbox{green!30}{92}} + \pnode(1.3em,-0.3em){C}{\colorbox{red!30}{0,324}}$$\end{Huge}
+\par\vspace{0.75cm}
+\begin{minipage}{0.3\linewidth}
+\pnode(2.1,0.2em){D}{Je suis la 
+
+\colorbox{green!30}{partie entière}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+\pnode(2.5,1em){E}{Je suis le \underline{séparateur décimal}
+
+ou \underline{virgule} inventé(e)
+
+par John Napier Écosse $17^{\grave{e}me}$}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\pnode(0.5,1em){F}{Je suis la
+
+\colorbox{red!30}{partie décimale}}
+\end{minipage}
+\ncarc{->}{A}{D}
+\ncarc{->}{G}{D}
+\ncarc{->}{B}{E}
+\ncarc{->}{C}{F}
+
+

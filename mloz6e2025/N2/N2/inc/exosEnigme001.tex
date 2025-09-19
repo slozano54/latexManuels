@@ -1,0 +1,56 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice*}
+%\phantom{\numeroteEnigme}
+\begin{enigme}[L'abaque romain\dots{} bis repetita]
+    \partie[construction d'un l'abaque \og décimal \fg]
+       À la manière de l'abaque romain déjà construit, nous allons construire un abaque décimal \og moderne \fg. \\
+       Reproduire cet abaque toujours en mode paysage. Sachant qu'il y a six colonnes, déterminer la largeur d'une colonne.
+       
+       \makebox[\linewidth]{\dotfill}
+       \begin{center}
+          {\psset{unit=0.45}
+          \begin{pspicture}(0,-0.5)(30,15)
+             \multido{\i=0+5}{7}{\psline(\i,0)(\i,13)}
+             \psset{linewidth=0.6mm}
+             \psline(0,0)(0,14)(30,14)(30,0)
+             \psline(15,0)(15,14)
+             \psline(0,12)(30,12)
+             \textcolor{B1}{\texttt{
+             \rput(27.5,12.5){\large{millièmes}}
+             \rput(22.5,12.5){\large{centièmes}}
+             \rput(17.5,12.5){\large{dixièmes}}
+             \rput(22.5,13.5){partie décimale}}}
+             \textcolor{A1}{\texttt{
+             \rput(12.5,12.5){\large\texttt{unités}}
+             \rput(7.5,12.5){\large\texttt{dizaines}}
+             \rput(2.5,12.5){\large\texttt{centaines}}
+             \rput(7.5,13.5){partie entière}}}
+          \end{pspicture}}
+       \end{center}
+       
+    \partie[utilisation de l'abaque]
+       \begin{enumerate}
+          \item Rappeler les règles d'utilisation de l'abaque : qu'est-ce qui le différencie de l'abaque au recto ?
+          \item Prendre un jeton et le placer dans l'une des colonnes de l'abaque. Quel nombre est représenté ? \\ [1mm]
+             \makebox[\linewidth]{\dotfill} \medskip
+          \item Combien de nombres différents peut-on représenter avec un jeton ? Les lister en donnant la forme fractionnaire décimale et la forme décimale. \\ [2mm]
+             \makebox[\linewidth]{\dotfill} \\ [4mm]
+             \makebox[\linewidth]{\dotfill} \bigskip
+          \item Combien de nombres différents peut-on représenter avec deux jetons ? En donner cinq sous forme fractionnaire et décimale. \\ [2mm]
+             \makebox[\linewidth]{\dotfill} \bigskip
+          \item Représenter les nombres suivants :
+             \begin{colitemize}{2}
+                \item \num{1.23}
+                \item trente-six et deux dixièmes et trois millièmes
+                \item \num{0.317}
+               \item cent-vingt-quatre centièmes                    
+             \end{colitemize}
+          \item Quels sont les nombres représentés sur l'abaque au tableau ? \\ [2mm]
+             \makebox[\linewidth]{\dotfill}
+       \end{enumerate}
+    \end{enigme}
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice*}{-1}
+% \begin{corrige}
+% \end{corrige}

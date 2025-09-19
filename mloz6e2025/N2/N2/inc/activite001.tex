@@ -1,0 +1,38 @@
+\begin{activite}[La droite graduée]
+    {\bf Objectifs :} comprendre et utiliser le principe de construction d'une graduation régulière en dixièmes et en centièmes ; savoir situer des nombres décimaux sous différents écritures. \\
+    \vspace*{-10mm}
+        \partie[construction d'une droite graduée]
+            \begin{enumerate}
+                \item Au tableau, tracer une droite la plus longue possible. \\
+                \item Placer à gauche sur cette droite le repère de l'origine puis inscrire la valeur 0 en dessous. \\
+                \item Combien faut-il aligner de petites bandes de valeur \og $\dfrac1{10}$ \fg{} pour obtenir 1 ? Justifier. \\ [5mm]
+                \makebox[\linewidth]{\dotfill} \\ [5mm]
+                \makebox[\linewidth]{\dotfill}       
+                \begin{center}
+                \begin{pspicture}(0,-0.25)(5,1.75)
+                    \multido{\n=0+0.5}{11}{\psline(\n,0)(\n,0.5)}
+                    \psframe[fillstyle=solid,fillcolor=J1](0,0.5)(5,1.5)
+                    \psline(0,0)(5,0)
+                    \rput(2.5,1){\white $\dfrac1{10}$}
+                \end{pspicture}
+                \end{center}
+                \item Grâce cette petite bande de couleur, placer le nombre 1. \\
+                \item Placer ensuite les nombres 2 et 3 de la même manière, toujours en dessous de la droite. \medskip
+            \end{enumerate}
+            
+        \partie[placer des nombres décimaux sur la droite graduée]
+            \begin{enumerate}
+                \setcounter{enumi}{5}
+                \item Sur la droite graduée, placer au-dessus de la droite les nombres suivants :
+                $$\dfrac{8}{10} \hspace{2cm} \dfrac{23}{10} \hspace{2cm} 2+\dfrac{1}{10}$$
+                \item Sur la droite graduée, placer au-dessus de la droite les nombres suivants :
+                $$\text{cinq dixièmes} \hspace{2cm} \text{douze dixièmes}$$
+                \item Sur la droite graduée, placer au-dessus  de la droite les nombres suivants :
+                $$0,3 \hspace{2cm} 1,7$$
+                \item Trouver un moyen pour placer $\dfrac{143}{100}$ sur la droite graduée. \\
+                \item \, Placer les nombres suivants :
+                $$\dfrac{255}{100} \hspace{2cm} \text{cent-six centièmes} \hspace{2cm} 1+\dfrac{9}{10}+\dfrac{8}{100} \hspace{2cm} 0,23$$
+            \end{enumerate}
+
+    \vfill\hfill{\it\footnotesize Source : Apprentissages numériques et résolution de problèmes au CM2, Ermel, Hatier 2001}.
+\end{activite}
