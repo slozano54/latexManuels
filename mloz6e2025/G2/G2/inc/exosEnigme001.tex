@@ -1,0 +1,229 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\vspace*{-15mm}
+\enigme[La grenouille qui saute]
+   Prendre une feuille dont la longueur est deux fois plus longue que la largeur. \\
+   Les plis en courts pointillés sont des plis \og vallée \fg, les plis en longs pointillés sont des plis \og montagne \fg. \\
+   {\small
+   \psset{linecolor=PartieStatistique}
+   \begin{tabular}{p{3.8cm}p{3.8cm}p{3.8cm}p{3.8cm}}
+      \begin{pspicture}(0.1,-0.25)(3.9,4.5)
+         \psframe(1,0)(3,4)
+         \psline[linestyle=dotted](1,2)(3,2)
+         \rput(0.7,2){\textcolor{PartieStatistique}{A}}
+         \rput(3.3,2){\textcolor{PartieStatistique}{B}}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,4.5)
+         \psframe(1,0)(3,4)
+         \psline[linestyle=dotted](1,2)(3,2)
+         \psline[linestyle=dotted](1,2)(3,4)
+         \rput(0.7,2){\textcolor{PartieStatistique}{A}}
+         \rput(3.3,2){\textcolor{PartieStatistique}{B}}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,4.5)
+         \psframe(1,0)(3,4)
+         \psline[linestyle=dotted](1,2)(3,2)
+         \psline[linestyle=dotted](1,2)(3,4)
+         \psline[linestyle=dotted](1,4)(3,2)
+         \psline[linestyle=dotted](1,0)(3,2)
+         \psline[linestyle=dotted](1,2)(3,0)
+          \rput(0.7,2){\textcolor{PartieStatistique}{A}}
+         \rput(3.3,2){\textcolor{PartieStatistique}{B}}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,4.5)
+         \psframe(1,0)(3,4)
+         \psline[linestyle=dotted](1,2)(3,2)
+         \psline[linestyle=dotted](1,2)(3,4)
+         \psline[linestyle=dotted](1,4)(3,2)
+         \psline[linestyle=dotted](1,0)(3,2)
+         \psline[linestyle=dotted](1,2)(3,0)
+         \psline[linestyle=dashed](1,3)(3,3)
+         \psline[linestyle=dashed](1,1)(3,1)
+         \rput(0.7,3){\textcolor{PartieStatistique}{C}}
+         \rput(3.3,3){\textcolor{PartieStatistique}{D}}
+         \rput(0.7,2){\textcolor{PartieStatistique}{A}}
+         \rput(3.3,2){\textcolor{PartieStatistique}{B}}
+         \rput(0.7,1){\textcolor{PartieStatistique}{E}}
+         \rput(3.3,1){\textcolor{PartieStatistique}{F}}
+      \end{pspicture} \\
+      1) Plier la feuille en deux selon la médiane la plus courte du rectangle : (AB)
+      &
+      2) Dans le carré du haut, plier suivant la diagonale passant par A puis déplier
+      &
+      3) Plier puis déplier de la même manière les trois autres diagonales
+      &
+      4) Plier suivant les médianes (CD) et (EF) des deux carrés \\
+      \begin{pspicture}(0.1,-0.25)(3.9,3.5)
+         \psframe(1,0)(3,2)
+         \psline[linestyle=dotted](1,0)(3,2)
+         \psline[linestyle=dotted](1,2)(3,0)
+         \psline[linestyle=dashed](1,1)(3,1)
+         \rput(0.7,2){\textcolor{PartieStatistique}{\footnotesize A}}
+         \rput(3.3,2){\textcolor{PartieStatistique}{\footnotesize B}}
+         \rput(0.7,1){\textcolor{PartieStatistique}{\footnotesize E}}
+         \rput(3.3,1){\textcolor{PartieStatistique}{\footnotesize F}}      
+         \psline(3,2)(2,3)(1,2)
+         \psdot(2,2)
+         \rput(2,1.7){\textcolor{PartieStatistique}{\footnotesize C}}
+         \rput(2,2.3){\textcolor{PartieStatistique}{\footnotesize D}}    
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,3.5)
+         \pspolygon(2,1)(3,2)(2,3)(1,2)
+         \psline(1,2)(3,2)
+         \psdot(2,2)
+         \rput(1.85,1.8){\textcolor{PartieStatistique}{\footnotesize C}}
+         \rput(1.85,2.2){\textcolor{PartieStatistique}{\footnotesize D}}
+         \rput(2.15,1.8){\textcolor{PartieStatistique}{\footnotesize E}}
+         \rput(2.15,2.2){\textcolor{PartieStatistique}{\footnotesize F}}
+         \rput(0.8,2){\textcolor{PartieStatistique}{\footnotesize A}}
+         \rput(3.2,2){\textcolor{PartieStatistique}{\footnotesize B}}    
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,3.5)
+         \pspolygon(2,1)(3,2)(2,3)(1,2)
+         \psline(1,2)(3,2)
+         \psline[linestyle=dotted](2,2)(2.5,2.5)
+         \rput(0.8,2){\textcolor{PartieStatistique}{\footnotesize A}}
+         \rput(3.2,2){\textcolor{PartieStatistique}{\footnotesize B}}
+         \rput(2,3.2){\textcolor{PartieStatistique}{\footnotesize G}}
+         \psarc[linecolor=cyan]{->}(2.6,2.6){0.35}{-45}{135}
+     \end{pspicture}
+      &
+      \begin{pspicture}(0.1,-0.25)(3.9,3.5)
+         \pspolygon(2,1)(3,2)(2,3)(1,2)
+         \psline(1,2)(3,2)
+         \psline(2.5,1.5)(1.5,2.5)
+         \psline(1.5,1.5)(2.5,2.5)
+         \psline(2,1)(2,3)
+      \end{pspicture} \\
+      5) Joindre les points C et D l'un contre l'autre et les rabattre sur la droite (AB)
+      &
+      6) Faire la même chose avec les points E et F
+      &
+      7) Rabattre le coin B supérieur droit sur le sommet G
+      &
+      8) Faire de même avec les trois autres coins en A et B \\
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(2,1)(3,2)(2,3)(1,2)
+         \psline(1,2)(3,2)
+         \psline(2.5,1.5)(1.5,2.5)
+         \psline(1.5,1.5)(2.5,2.5)
+         \psline(2,1)(2,3)
+         \psline[linestyle=dotted](2,2)(2.29,2.71)
+         \psarc[linecolor=cyan]{<-}(2.35,2.75){0.2}{-40}{130}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(2,1)(3,2)(2,3)(1,2)
+         \psline(1,2)(3,2)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+     \end{pspicture}
+      &
+     \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,1)(3,2)(2,3)(1,2)
+         \psline[linestyle=dotted](2,1)(2,3)
+         \psline[linestyle=dashed](1,2)(3,2)
+         \rput(2,3.2){\textcolor{PartieStatistique}{\footnotesize G}}
+         \rput(2,0.8){\textcolor{PartieStatistique}{\footnotesize H}}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,1)(3,2)(2,3)(1,2)
+         \psline[linestyle=dotted](2,1)(2,3)
+         \psline[linestyle=dotted](1.42,1.58)(2,3)
+         \psline[linestyle=dotted](2.58,1.58)(2,3)
+         \rput(2,3.2){\textcolor{PartieStatistique}{\footnotesize G}}
+         \rput(2,0.8){\textcolor{PartieStatistique}{\footnotesize H}}
+         \rput(0.8,2){\textcolor{PartieStatistique}{\footnotesize B}}
+         \rput(3.2,2){\textcolor{PartieStatistique}{\footnotesize A}}
+         \psarc[linecolor=cyan]{<-}(2.5,2.1){0.35}{200}{-20}
+         \psarc[linecolor=cyan]{->}(1.5,2.1){0.35}{200}{-20}
+      \end{pspicture} \\
+      9) Replier le triangle supérieur droit de manière à superposer son hypoténuse à son côté inférieur
+      &
+      10) Faire la même chose avec les trois autres triangles
+      &
+      11) Retourner la feuille, plier puis déplier suivant la diagonale (GH)
+      &
+      12) Amener les points A et B sur la diagonale (GH) \\ 
+       \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,2)(2.5,2.5)(2,3)(1.5,2.5)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,1)(2.58,1.58)(2,3)(1.42,1.58)
+         \psline[linestyle=dotted](2,1)(2,1.58)
+         \psline(2,1.58)(2,3)
+         \psline(1.42,1.58)(2.58,1.58)
+         \psline(1.58,2)(2,1.58)(2.42,2)
+         \psline[linestyle=dotted](1.5,1.48)(2.5,1.48)
+         \psarc[linecolor=cyan]{<-}(1.9,1.58){0.5}{80}{-80}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,2)(2.5,2.5)(2,3)(1.5,2.5)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.5,1.5)(2.5,1.5)(2.58,1.58)(2,3)(1.42,1.58)
+         \psline(2,1.58)(2,3)
+         \psline(1.42,1.58)(2.58,1.58)
+         \psline(1.58,2)(2,1.58)(2.42,2)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.5,1.5)(2.5,1.5)(2,2)
+         \psline(1.71,1.29)(1.5,1.5)
+         \psline(2.29,1.29)(2.5,1.5)
+         \psline[linecolor=cyan]{->}(1.7,2.1)(1.95,1.7)
+         \psline[linecolor=cyan]{->}(2.3,2.1)(2.05,1.7)
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(1.29,1.29)(1.71,1.29)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2.29,1.29)(2.71,1.29)
+         \pspolygon[fillstyle=solid,fillcolor=white](2,2)(2.5,2.5)(2,3)(1.5,2.5)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.5,1.5)(2.5,1.5)(2.58,1.58)(2,3)(1.42,1.58)
+         \psline(2,1.58)(2,3)
+         \psline(1.42,1.58)(2.58,1.58)
+         \psline(1.58,2)(2,1.58)(2.42,2)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.5,1.5)(2.5,1.5)(2,2)
+         \psline(1.71,1.29)(1.5,1.5)
+         \psline(2.29,1.29)(2.5,1.5)
+        \psline[linestyle=dashed](1.58,2)(2.42,2)
+         \psline[linestyle=dotted](1.48,1.75)(2.52,1.75)
+         \psarc[linecolor=cyan]{<-}(2.9,1.7){0.15}{80}{-80}
+         \psarc[linecolor=cyan]{->}(2.7,2.1){0.15}{-100}{100}
+      \end{pspicture}
+      &
+      \begin{pspicture}(0.1,0.75)(3.9,3.5)
+         \pspolygon(2,2.05)(2.29,2.71)(2.71,2.71)
+         \pspolygon(1.29,2.71)(1.7,2.71)(2,2.05)
+         \pspolygon(1.48,2.24)(2.52,2.24)(2.42,2)(1.58,2)
+        \pspolygon(1.48,2.24)(1.41,2.08)(1.5,2)(2.5,2)(2.59,2.08)(2.52,2.24)
+         \psline(1.41,2.08)(1.54,2.08)
+         \psline(2.59,2.08)(2.46,2.08)
+         \psline(1.5,2)(1.55,2.06)
+         \psline(2.5,2)(2.45,2.06)      
+         \pspolygon[fillstyle=solid,fillcolor=white](2,2)(2.5,2.5)(2,3)(1.5,2.5)
+         \pspolygon[fillstyle=solid,fillcolor=white](1.58,2)(2,3)(2.42,2)
+         \psline(2,2)(2,3)
+         \psline(1.79,2)(1.72,1.79)(1.5,2)(1.32,1.79)(1.72,1.79)
+         \psline(2.21,2)(2.28,1.79)(2.5,2)(2.68,1.79)(2.28,1.79)  
+      \end{pspicture}
+       \\
+      13) Plier le triangle inférieur au niveau des pattes de derrière
+      &
+      14) Rentrer les coins dans les encoches du triangle plié
+      &
+      15) Faire un pli montagne au niveau du sommet du triangle inférieur puis un pli vallée entre ce pli et la base &
+      16) On obtient une jolie grenouille\dots{} ou pas ! \\
+   \end{tabular}}
+
+   % Il ne reste plus qu'à décorer la grenouille ;-)

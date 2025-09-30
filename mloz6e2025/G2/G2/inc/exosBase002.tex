@@ -1,0 +1,39 @@
+\begin{exercice*}
+    En utilisant le quadrillage, nommer les droites parallèles et les droites perpendiculaires.
+    \begin{center}
+        \small
+        \hspace*{-10mm}        
+        \begin{tikzpicture}[scale=0.5]
+            \draw[help lines, color=black!30, dashed] (0,0) grid (18,13);        
+            \coordinate (A) at (8,12);
+            \coordinate (B) at (3,9);
+            \coordinate (C) at (12,6);
+            \coordinate (D) at (10,5);
+            \coordinate (E) at (1,5);
+            \coordinate (F) at (6,1);
+            \coordinate (G) at (10,2);
+            \coordinate (H) at (7.5,7.5);
+            \tkzLabelPoints(A,B,C,D,E,F,G,H);
+            \tkzDrawPoints(A,B,C,D,E,F,G,H);
+            \coordinate (A1) at (5,0);
+            \coordinate (E1) at (18,13);
+            \coordinate (E2) at (15,0);
+            \coordinate (G1) at  (2,13);
+            \coordinate (D1) at (16,0);
+            \coordinate (F1) at (0,5.33);
+            \coordinate (B1) at (0,4);
+            \coordinate (C1) at (9,13);
+            \coordinate (H1) at (18,4);
+            \coordinate (D2) at (0,10);
+            \tkzDrawSegment (A1,E1); %(5,0)(18,13)
+            \tkzDrawSegment (E2,G1); %(15,0)(2,13)
+            \tkzDrawSegment (D1,F1); %(16,0)(0,5.33)
+            \tkzDrawSegment (B1,C1); %(0,4)(9,13)
+            \tkzDrawSegment (H1,D2); %(18,4)(0,10)
+        \end{tikzpicture}
+    \end{center}
+ \end{exercice*}
+\begin{corrige}
+Pas de corrigé.
+\end{corrige}
+ 

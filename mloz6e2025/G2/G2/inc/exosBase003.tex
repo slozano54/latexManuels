@@ -1,0 +1,35 @@
+\begin{exercice*}
+    Complète avec les signes $\perp$ ou $\sslash$.
+    \begin{multicols}{2}
+      \begin{enumerate}
+         \item (AB) \makebox[1cm]{\dotfill} (BC)
+         \item (AB) \makebox[1cm]{\dotfill} (DE)
+         \item (BC) \makebox[1cm]{\dotfill} (DE)
+         \item (BD) \makebox[1cm]{\dotfill} (DF)
+         \item (EF) \makebox[1cm]{\dotfill} (CD)
+         \item (DF) \makebox[1cm]{\dotfill} (CE)
+      \end{enumerate}
+   \end{multicols}
+    \begin{center}   
+      \small
+      \begin{tikzpicture}[scale=0.8]
+         \draw[help lines, color=black!30, dashed] (0,0) grid (8,4);        
+         \coordinate (A) at (1,1);
+         \coordinate (B) at (3,1);
+         \coordinate (C) at (3,3);
+         \coordinate (D) at (5,3);
+         \coordinate (E) at (5,1);
+         \coordinate (F) at (7,1);
+         \tkzLabelPoints(A,B,E,F);
+         \tkzLabelPoints[above](C,D);
+         \tkzDrawSegment (A,B);
+         \tkzDrawSegment (B,C); 
+         \tkzDrawSegment (C,D); 
+         \tkzDrawSegment (D,E); 
+         \tkzDrawSegment (E,F); 
+      \end{tikzpicture}
+    \end{center}
+ \end{exercice*}
+\begin{corrige}
+Pas de corrigé.
+\end{corrige}
