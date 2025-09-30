@@ -1,4 +1,4 @@
-\begin{exercice}
+\begin{exercice*}
    On se place dans un repère orthogonal d'origine $O$ et d'unité \ucm{1}. Utiliser la feuille à petits carreaux fournie.
    \begin{enumerate}
       \item Placer le point $A$ de coordonnées $(3,5\,;1,5)$.
@@ -7,18 +7,18 @@
       \item Placer le point $D$ symétrique du point $C$ par rapport à l'axe des abscisses. Quelles sont ses coordonnées ?
       \item Quelle est la nature du quadrilatère $ABCD$ ?
    \end{enumerate}
-\end{exercice}
+\end{exercice*}
 
 \begin{corrige}   
-   On obtient un {\blue rectangle}. \\
+   On obtient un {\red rectangle}. \\
    \begin{pspicture}(-3.5,-2)(4,2.2)
       \footnotesize
       \psgrid[gridlabels=0,subgriddiv=2,gridcolor=lightgray](-4,-2)(4,2)
-      \pstGeonode[PointSymbol=none,PosAngle={45,-45,-135,135},CurveType=polygon,linecolor=blue](3.5,1.5){A}(3.5,-1.5){B}(-3.5,-1.5){C}(-3.5,1.5){D}
-      \pstLineAB[linecolor=blue]{A}{B}
-      \pstLineAB[linecolor=blue]{B}{C}
-      \pstLineAB[linecolor=blue]{C}{D}
-      \pstLineAB[linecolor=blue]{D}{A}
+      \pstGeonode[PointSymbol=none,PosAngle={45,-45,-135,135},CurveType=polygon,linecolor=red](3.5,1.5){A}(3.5,-1.5){B}(-3.5,-1.5){C}(-3.5,1.5){D}
+      \pstLineAB[linecolor=red]{A}{B}
+      \pstLineAB[linecolor=red]{B}{C}
+      \pstLineAB[linecolor=red]{C}{D}
+      \pstLineAB[linecolor=red]{D}{A}
       \psaxes[labels=none,ticks=none]{->}(0,0)(-4,-2)(4,2)
       \psline(1,-0.2)(1,0.2)
       \psline(-0.2,1)(0.2,1)
@@ -26,5 +26,5 @@
       \rput(1,0.5){1}
       \rput(-0.5,1){1}
    \end{pspicture} \\
-   {\blue $B(3,5\,;-1.5)\,; C(-3,5\,;-1.5)\,;D(-3,5\,;1.5)$} \\
+   {\red $B(3,5\,;-1.5)\,; C(-3,5\,;-1.5)\,;D(-3,5\,;1.5)$} \\
 \end{corrige}
