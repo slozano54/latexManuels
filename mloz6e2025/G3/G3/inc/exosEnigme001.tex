@@ -1,0 +1,64 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \phantom{\numeroteEnigme}
+\begin{enigme}[{\LARGE La bataille navale}]    
+   \begin{minipage}{0.4\linewidth}  
+      \partie[but du jeu.] Faire couler les 5 bateaux de son adversaire.
+
+      \partie[matériel.] Deux grilles composées de 100 cases numérotées horizontalement de 1 à 10 et verticalement de A à J. L'une des grilles sert à disposer ses 5 bateaux et l’autre à marquer les tentatives de localisation des bateaux de l’adversaire. \\  
+      {\bf Bateaux à placer} sur la grille :
+      \begin{itemize}
+         \item 1 porte-avions de 5 cases ;
+         \item 1 croiseur de 4 cases ;
+         \item 1 contre-torpilleur de 3 cases ;
+         \item 1 sous-marin de 3 cases ;
+         \item 1 torpilleur de 2 cases.
+      \end{itemize}
+   
+      \partie[règles du jeu.] Les deux joueurs disposent leurs bateaux sur la grille de manière à ce que deux bateaux ne puissent pas être sur des cases adjacentes. \\
+      Tour à tour, les joueurs proposent les coordonnées d'un point de la grille en annonçant par exemple \og tir en D8 \fg. L’autre joueur regarde sa grille :
+      \begin{itemize}
+         \item si un morceau de son bateau s’y trouve, il répond \og touché \fg{} et les deux joueurs marquent cette case d'un cercle ;
+         \item si aucun morceau de bateau ne s’y trouve, il répond \og à l'eau \fg{} et les deux joueurs marquent cette case d'une croix ;
+         \item si tous les morceaux d’un bateau sont touchés, le joueur dit \og touché-coulé \fg.
+      \end{itemize}
+      Le premier joueur à couler tous les bateaux de son adversaire gagne.
+   \end{minipage}
+   \quad
+   \begin{minipage}{0.55\linewidth}
+      {\psset{unit=0.95}
+      \begin{center}
+         \begin{pspicture}(0,0)(11,11)
+            \psgrid[gridlabels=0,subgriddiv=0](1,0)(11,10)
+            \rput(0.5,0.5){J}
+            \rput(0.5,1.5){I}
+            \rput(0.5,2.5){H}
+            \rput(0.5,3.5){G}
+            \rput(0.5,4.5){F}
+            \rput(0.5,5.5){E}
+            \rput(0.5,6.5){D}
+            \rput(0.5,7.5){C}
+            \rput(0.5,8.5){B}
+            \rput(0.5,9.5){A}
+            \rput(0.5,1){\multido{\n=1+1}{10}{\rput(\n,9.5){\n}}}
+         \end{pspicture}
+      \end{center}
+      \begin{center}
+         \begin{pspicture}(0,0)(11,11)
+            \psgrid[gridlabels=0,subgriddiv=0](1,0)(11,10)
+            \rput(0.5,0.5){J}
+            \rput(0.5,1.5){I}
+            \rput(0.5,2.5){H}
+            \rput(0.5,3.5){G}
+            \rput(0.5,4.5){F}
+            \rput(0.5,5.5){E}
+            \rput(0.5,6.5){D}
+            \rput(0.5,7.5){C}
+            \rput(0.5,8.5){B}
+            \rput(0.5,9.5){A}
+            \rput(0.5,1){\multido{\n=1+1}{10}{\rput(\n,9.5){\n}}}
+         \end{pspicture}
+      \end{center}}
+   \end{minipage}
+\end{enigme}

@@ -1,0 +1,23 @@
+\begin{exercice*}
+    Placer les lettres suivantes dans la grille, puis vérifier en lisant de gauche à droite et de haut en bas. \\
+    A $\to$ g6 ; B $\to$ b8 ; C $\to$ b4 ; E $\to$ d4 et h1 ; J $\to$ a2 \\
+    O $\to$ h5 ; R $\to$ d7 ; S $\to$ b1 et f3 ; T $\to$ e1 et h3 ; U $\to$ c2 ; V $\to$ c5.
+    \psset{unit=0.5}
+    \begin{center}
+       \begin{pspicture}(0,0)(9,9)
+          \psgrid[gridlabels=0,subgriddiv=0](9,9)
+          \rput(1.5,0.5){a}
+          \rput(2.5,0.5){b}
+          \rput(3.5,0.5){c}
+          \rput(4.5,0.5){d}
+          \rput(5.5,0.5){e}
+          \rput(6.5,0.5){f}
+          \rput(7.5,0.5){g}
+          \rput(8.5,0.5){h}
+          \rput(0.5,0.5){\multido{\n=1+1}{8}{\rput(0,\n){\n}}}
+       \end{pspicture}
+    \end{center}
+ \end{exercice*}
+\begin{corrige}
+Pas de corrigé.
+\end{corrige}

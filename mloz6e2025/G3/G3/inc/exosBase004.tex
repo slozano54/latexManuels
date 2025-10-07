@@ -1,0 +1,22 @@
+\begin{exercice*}
+    Placer les formes suivantes dans la grille. \\
+    \psset{linecolor=A1,linewidth=1.5mm}
+    \hspace*{10mm} \psdot[dotstyle=*](0,0.08) \quad (d;4) \quad \psdot[dotstyle=triangle*](0,0.08) \quad (g;2) \quad \psdot[dotstyle=square*](0,0.08) \quad (a;0) \quad \psdot[dotstyle=pentagon*](0,0.08) \quad (b;6) \quad \psdot[dotstyle=diamond*](0,0.08) \quad (f;3)
+    \psset{unit=0.5}
+    \begin{center}
+       \begin{pspicture}(0,0)(7,7)
+          \psgrid[gridlabels=0,subgriddiv=0](1,1)(7,7)
+          \rput(1,0.5){a}
+          \rput(2,0.5){b}
+          \rput(3,0.5){c}
+          \rput(4,0.5){d}
+          \rput(5,0.5){e}
+          \rput(6,0.5){f}
+          \rput(7,0.5){g}
+          \rput(0.5,1){\multido{\n=0+1}{7}{\rput(0,\n){\n}}}
+       \end{pspicture}
+    \end{center} 
+ \end{exercice*}
+\begin{corrige}
+Pas de corrigé.
+\end{corrige}

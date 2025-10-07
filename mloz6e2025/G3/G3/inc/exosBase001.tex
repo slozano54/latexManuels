@@ -1,0 +1,26 @@
+\begin{exercice*}
+    Déterminer l'emplacement des formes suivantes : \\
+    \psset{unit=0.6}
+    \begin{center}
+       \begin{pspicture}(0,0)(8,7.5)
+          \psgrid[gridlabels=0,subgriddiv=0](8,8)
+          \rput(1.5,0.5){A}
+          \rput(2.5,0.5){B}
+          \rput(3.5,0.5){C}
+          \rput(4.5,0.5){D}
+          \rput(5.5,0.5){E}
+          \rput(6.5,0.5){F}
+          \rput(7.5,0.5){G}
+          \rput(0.5,0.5){\multido{\n=1+1}{7}{\rput(0,\n){\n}}}
+          \psset{linecolor=A1,linewidth=1.5mm}
+          \psdot[dotstyle=triangle*](3.5,1.5)
+          \psdot[dotstyle=pentagon*](4.5,6.5)
+          \psdot[dotstyle=square*](1.5,2.5)
+          \psdot[dotstyle=*](7.5,3.5)
+          \psdot[dotstyle=diamond*](6.5,5.5)
+       \end{pspicture}
+    \end{center}
+ \end{exercice*}
+\begin{corrige}
+Pas de corrigé.
+\end{corrige}

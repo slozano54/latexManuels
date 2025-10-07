@@ -1,0 +1,25 @@
+\section{La droite graduée}
+\begin{minipage}{0.3\linewidth}
+En partageant l'unité d'une droite graduée en dix, on obtient des dixièmes;\\
+En partageant un dixième en dix, on obtient des centièmes \dots      
+\end{minipage}
+\hfill
+\begin{minipage}{0.65\linewidth}
+\begin{center}   
+   \begin{pspicture}(-2,-3)(11,1)
+   {\psset{yunit=0.5}
+      \small
+      \rput(0,-1){\includegraphics[width=3cm]{\currentpath/images/loupe.eps}}
+      \psaxes[yAxis=false]{->}(0,0)(10.3,0)
+      \multido{\n=0.1+0.1}{9}{\psline[linewidth=0.01,linecolor=A1](\n,0.08)(\n,-0.08)}
+      \psline[linestyle=dashed,linecolor=A1]{->}(0,0)(0,-2)
+      \psline[linestyle=dashed,linecolor=A1]{->}(1,0)(10,-2)
+      \psaxes[Dx=0.1,dx=1,comma,yAxis=false,linecolor=A1]{->}(0,-2)(10.3,-2)
+      \multido{\n=0.1+0.1}{9}{\psline[linewidth=0.01,linecolor=B1](\n,-1.92)(\n,-2.08)}
+      \psline[linestyle=dashed,linecolor=B1]{->}(0,-2)(0,-4)
+      \psline[linestyle=dashed,linecolor=B1]{->}(1,-2)(10,-4)
+      \psaxes[Dx=0.01,dx=1,comma,yAxis=false,linecolor=B1]{->}(0,-4)(10.3,-4)
+      \multido{\n=0.1+0.1}{9}{\psline[linewidth=0.01](\n,-3.92)(\n,-4.08)}}
+   \end{pspicture}
+\end{center}
+\end{minipage}

@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{-5mm}
+\section{Ranger, encadrer, intercaler}
+
+Tout comme les nombres entiers, on peut ranger, encadrer, intercaler des nombres décimaux.
+
+\begin{exemple*1}
+   \begin{itemize}
+      \item $8,37<8,6<8,7$ sont rangés dans l'ordre croissant.
+      \item $8,7>8,6>8,37$ sont rangés dans l'ordre décroissant.
+      \item On peut encadrer $8,37$ par deux entiers consécutifs : $8<8,37<9$.
+      \item On peut intercaler un nombre entre 8,6 et 8,7 : par exemple 8,63. \\
+        \begin{pspicture}(0,-0.3)(11,0.7)
+           {\psset{xunit=1.3}
+           \small
+           \rput(10,-0.45){9}
+           \rput(10,0){|}
+           \psaxes[yAxis=false,Ox=8,Dx=0.1,dx=1,comma,subticks=10]{->}(0,0)(10.15,0)
+           \psline[linewidth=0.05,linecolor=violet,linestyle=dashed]{->}(0,0.5)(0,0)
+           \psline[linewidth=0.05,linecolor=violet]{->}(3.7,0.5)(3.7,0) 
+           \psline[linewidth=0.05,linecolor=violet,linestyle=dashed]{->}(10,0.5)(10,0)
+           \psline[linewidth=0.05,linecolor=teal]{->}(7,0.5)(7,0)
+           \psline[linewidth=0.05,linecolor=teal,linestyle=dashed]{->}(6.3,0.5)(6.3,0)
+           \psline[linewidth=0.05,linecolor=teal]{->}(6,0.5)(6,0)}
+        \end{pspicture}
+   \end{itemize}
+\end{exemple*1}
+
+\begin{remarque}
+   on peut intercaler autant de nombres que l'on veut entre deux nombres décimaux (on dit qu'il y en a une infinité). \\
+   Par exemple, entre 8,6 et 8,7 on a 8,63, mais aussi 8,64 ; 8,699 ; 8, 675344355\dots
+\end{remarque}

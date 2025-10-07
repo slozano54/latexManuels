@@ -1,0 +1,105 @@
+\begin{changemargin}{-10mm}{-10mm}
+   \section{Se repérer sur un plan ou une carte}
+
+   \begin{definition}
+      \begin{minipage}{0.55\linewidth}
+         Une {\bf rose des vents} est une figure qui indique les 4 points cardinaux : est, nord, ouest et sud et éventuellement les orientations intermédiaires.
+      \end{minipage}
+      \hfill
+      \begin{minipage}{0.4\linewidth}
+         \scalebox{0.8}{
+            \begin{Geometrie}[CoinBG={(-3u,-3.5u)},CoinHD={(3u,3u)}]
+               % trace feuillet;
+               pair O,A[],B[],C[];
+               O=u*(0,0);
+               A0-O=u*(2.4,0);
+               A1=rotation(A0,O,45);                        
+               A2=rotation(A1,O,45);
+               A3=rotation(A2,O,45);
+               A4=rotation(A3,O,45);
+               A5=rotation(A4,O,45);
+               A6=rotation(A5,O,45);
+               A7=rotation(A6,O,45);
+               %B
+               B0-O=u*(2,0);
+               B1=rotation(B0,O,45);                        
+               B2=rotation(B1,O,45);
+               B3=rotation(B2,O,45);
+               B4=rotation(B3,O,45);
+               B5=rotation(B4,O,45);
+               B6=rotation(B5,O,45);
+               B7=rotation(B6,O,45);
+               %C
+               C0-O=u*(0.8,0);
+               C1=rotation(C0,O,45);                        
+               C2=rotation(C1,O,45);
+               C3=rotation(C2,O,45);
+               C4=rotation(C3,O,45);
+               C5=rotation(C4,O,45);
+               C6=rotation(C5,O,45);
+               C7=rotation(C6,O,45);
+               % trace cercles(O,A0) withpen pencircle scaled 1bp;
+               trace A0--A4 withpen pencircle scaled 2bp;
+               trace A2--A6 withpen pencircle scaled 2bp;
+               trace B1--B5 withpen pencircle scaled 2bp;
+               trace B3--B7 withpen pencircle scaled 2bp;
+               % trace cercles(O,B0) withpen pencircle scaled 1bp;
+               % trace cercles(O,C0) withpen pencircle scaled 1bp;
+               trace A0--C1--A2--C3--A4--C5--A6--C7--A0 withpen pencircle scaled 2bp;
+               trace B1--C2--B3--C4--B5--C6--B7--C0--B1 withpen pencircle scaled 2bp;
+               fill B1--C0--O--C2--cycle withcolor white;
+               trace B1--C0--O--C2--cycle withpen pencircle scaled 2bp;
+               trace B1--B5 withpen pencircle scaled 2bp;
+               %
+               fill B3--C2--O--C4--cycle withcolor white;
+               trace B3--C2--O--C4--cycle withpen pencircle scaled 2bp;
+               trace B3--B7 withpen pencircle scaled 2bp;
+               %
+               fill B5--C4--O--C6--cycle withcolor white;
+               trace B5--C4--O--C6--cycle withpen pencircle scaled 2bp;
+               trace B1--B5 withpen pencircle scaled 2bp;
+               %
+               fill B7--C6--O--C0--cycle withcolor white;
+               trace B7--C6--O--C0--cycle withpen pencircle scaled 2bp;
+               trace B3--B7 withpen pencircle scaled 2bp;
+               %
+               fill A0--O--C7--cycle withcolor white;
+               fill A0--O--C1--cycle withcolor white;
+               fill A2--O--C1--cycle withcolor white;
+               fill A2--O--C3--cycle withcolor white;
+               fill A4--O--C3--cycle withcolor white;
+               fill A4--O--C5--cycle withcolor white;
+               fill A6--O--C5--cycle withcolor white;
+               fill A6--O--C7--cycle withcolor white;            
+               trace A0--O--C7--cycle withpen pencircle scaled 2bp;
+               trace A0--O--C1--cycle withpen pencircle scaled 2bp;
+               trace A2--O--C1--cycle withpen pencircle scaled 2bp;
+               trace A2--O--C3--cycle withpen pencircle scaled 2bp;
+               trace A4--O--C3--cycle withpen pencircle scaled 2bp;
+               trace A4--O--C5--cycle withpen pencircle scaled 2bp;
+               trace A6--O--C5--cycle withpen pencircle scaled 2bp;
+               trace A6--O--C7--cycle withpen pencircle scaled 2bp;
+               labeloffset:=labeloffset*1.5;
+               label.rt(btex E etex,A0);
+               label.urt(btex NE etex,A1);
+               label.top(btex N etex,A2);
+               label.ulft(btex NO etex,A3);
+               label.lft(btex O etex,A4);
+               label.llft(btex SO etex,A5);
+               label.bot(btex S etex,A6);
+               label.lrt(btex SE etex,A7);
+            \end{Geometrie}
+         }
+      \end{minipage}
+   \end{definition}
+
+   \begin{center}
+      \begin{minipage}{0.45\linewidth}
+         \includegraphics[scale=0.4]{\currentpath/images/collegeJL}
+      \end{minipage}
+      \qquad
+      \begin{minipage}{0.45\linewidth}
+         Sur une carte, on peut se repérer grâce à la rose des vents, mais sur les cartes actuelles et les GPS, bien souvent, seule la direction du nord est indiquée. Elle permet à elle seule de se repérer dans le plan.
+      \end{minipage}
+   \end{center}
+\end{changemargin}
