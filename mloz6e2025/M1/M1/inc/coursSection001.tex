@@ -1,0 +1,50 @@
+\section{Le compas comme instrument de report de mesure}
+
+\vfill
+\begin{methode}[Reporter une longueur au compas]
+   Pour reporter la mesure de la longueur d'un segment avec un compas, prendre la longueur de ce segment en plaçant chaque pointe du compas sur l'une des extrémités du segment puis la reporter sur une autre portion de droite.
+   \exercice
+      Reproduire un segment $[CD]$ de même mesure que $[AB]$. \\
+      {\psset{unit=0.6}
+      \begin{pspicture}(0,0.5)(4,1.5)
+         \psline[linecolor=violet]{|-|}(1,0.5)(2.8,1.4)
+         \rput(1,0.1){\textcolor{violet}{$A$}}
+         \rput(2.8,1){\textcolor{violet}{$B$}}
+      \end{pspicture}
+      }
+   \correction
+      {\psset{unit=0.5}
+      \begin{pspicture}(-3,0)(4.5,3.5)
+         \psline[linecolor=violet]{|-|}(1,0.5)(2.8,1.4)
+         \rput(1,0.1){\textcolor{violet}{$A$}}
+         \rput(2.8,1){\textcolor{violet}{$B$}}
+         \compas{2}{0.8}{25}{1}{18}
+         \psline[linewidth=1mm]{->}(2,3.9)(4.5,3.7)
+      \end{pspicture}
+      \begin{pspicture}(0.5,-0.5)(4,3.5)
+         \rotatebox{-27}{
+            \psline(0,0)(4,2)
+            \rput(1,0.1){\textcolor{cyan}{$C$}}
+            \rput(2.8,1){\textcolor{cyan}{$D$}}
+            \psline[linecolor=cyan]{|-|}(1,0.5)(2.8,1.4)
+            \psarc[linecolor=gray!50](2.8,1.4){2}{180}{240}
+            \compas{2}{0.8}{25}{1}{18}}
+      \end{pspicture}}
+\end{methode}
+
+\vfill
+\begin{center}
+   \begin{myBox}{\emoji{triangular-ruler} \emoji{straight-ruler} Animation en ligne - {\red\bfseries Comparer des périmètres de polygones}}
+      \begin{flushleft}        
+         Pour \textbf{comparer les périmètres de plusieurs polygones}, On peut reporteer les longeurs de leurs côtés sur une demi-droite.
+         \begin{center}
+            \includegraphics[scale=0.5]{\currentpath/images/comparerPerimetres}
+         \end{center}
+         \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_174.html}{Comparaison de deux périmètres avec le compas}
+         \end{flushleft}
+
+      \creditInstrumentPoche
+   \end{myBox}
+\end{center}
+
+\vfill

@@ -1,0 +1,85 @@
+\begin{exercice*}
+Les figures ci-dessous ne sont pas en vraie grandeur.\\
+\begin{Geometrie}
+   pair A,B,C,D;
+   A=u*(2,1);
+   B-A=u*(2,1);
+   C=rotation(A,B,-90);
+   D-C=A-B;
+   trace polygone(A,B,C,D);
+   trace codeperp(A,B,C,5);
+   trace codeperp(B,C,D,5);
+   trace codeperp(C,D,A,5);
+   trace codeperp(D,A,B,5);
+   label.llft(btex A etex,A);
+   label.rt(btex B etex,B);
+   label.urt(btex C etex,C);
+   label.ulft(btex D etex,D);
+   trace appelation(A,B,-3mm,btex \Lg{5} etex);
+   marque_s:=0.6*marque_s;
+   trace Codelongueur(A,B,2);
+   trace Codelongueur(B,C,2);
+   trace Codelongueur(C,D,2);
+   trace Codelongueur(D,A,2);
+\end{Geometrie}
+\hfill
+\begin{Geometrie}
+   pair A,B,C,D;
+   A=u*(2,1);
+   B-A=u*(2,1);
+   C=1.5[B,rotation(A,B,-90)];
+   D-C=A-B;
+   trace polygone(A,B,C,D);
+   trace codeperp(A,B,C,5);
+   trace codeperp(B,C,D,5);
+   trace codeperp(C,D,A,5);
+   trace codeperp(D,A,B,5);
+   label.llft(btex E etex,A);
+   label.rt(btex F etex,B);
+   label.urt(btex G etex,C);
+   label.ulft(btex H etex,D);
+   trace appelation(A,B,-3mm,btex \Lg{2} etex);
+   trace appelation(C,B,4mm,btex \Lg{3} etex);
+   marque_s:=0.6*marque_s;
+   trace Codelongueur(A,B,2);
+   trace Codelongueur(B,C,3);
+   trace Codelongueur(C,D,2);
+   trace Codelongueur(D,A,3);
+\end{Geometrie}
+\hfill
+\begin{Geometrie}
+   pair A,B,C;
+   A=u*(1,1);
+   B-A=u*(4,0);
+   C=cercles(A,3u) intersectionpoint cercles(B,2u);
+   trace polygone(A,B,C);
+   label.lft(btex I etex,A);
+   label.rt(btex J etex,B);
+   label.top(btex K etex,C);   
+   trace appelation(A,B,-3mm,btex \Lg{4} etex);
+   trace appelation(A,C,3mm,btex \Lg{3} etex);
+   trace appelation(C,B,3mm,btex \Lg{2} etex);
+\end{Geometrie}
+\begin{enumerate}
+   \begin{spacing}{1.5}
+      \item Calculer le périmètre du carré en cm
+      \item Calculer le périmètre du rectangle en cm
+      \item Calculer le périmètre du triangle rectangle en cm
+   \end{spacing}
+\end{enumerate}
+
+   \hrefAleaTeX{https://urls.mathslozano.fr/6m12025ex07}
+ \end{exercice*}
+
+ \begin{corrige}
+   \begin{enumerate}
+      \begin{spacing}{2}
+         \item \\
+      $\mathcal{P}_{FGHI}=4\times 5~\text{cm}=20~\text{cm}$
+         \item \\
+      $\mathcal{P}_{JKLM}=2\times 2~\text{cm} + 2\times3~\text{cm}=10~\text{cm}$
+         \item \\
+      $\mathcal{P}_{NOP}=3~\text{cm} + 5~\text{cm} + 3~\text{cm} =11~\text{cm}$
+      \end{spacing}
+   \end{enumerate}
+ \end{corrige}
