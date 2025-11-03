@@ -1,0 +1,104 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{enigme}[Addition à l'abaque romain]
+\partie[introduction]
+   Pour additionner à l'abaque romain, on inscrit les deux nombres à l'abaque l'un au-dessus de l'autre puis, pour chaque rang, on dénombre les jetons en faisant éventuellement des échanges. \\ [3mm]
+   {\bf Exemple :} calcul de $63+52$. Expliquer sous chaque tableau ce qui a été fait dans l'abaque.
+   \begin{center}
+      \begin{tabular}{>{\centering\arraybackslash}p{5cm}>{\centering\arraybackslash}p{5cm}>{\centering\arraybackslash}p{5cm}}
+         \begin{pspicture}(0,0)(3,4)
+            \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+            \rput(0.5,3.5){C}
+            \rput(1.5,3.5){X}
+            \rput(2.5,3.5){I}
+            \psdots[linecolor=A1](1.3,2.7)(1.7,2.7)(1.3,2.4)(1.7,2.4)(1.3,2.1)(1.7,2.1) %X1
+            \psdots[linecolor=A1](2.3,2.7)(2.5,2.4)(2.7,2.1) %I1
+            \psdots[linecolor=B1](1.3,1.3)(1.7,1.3)(1.5,1)(1.3,0.7)(1.7,0.7) %X2
+            \psdots[linecolor=B1](2.4,1.15)(2.6,0.85) %I2
+         \end{pspicture}
+         &
+         \begin{pspicture}(0,0)(3,4)
+            \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+            \rput(0.5,3.5){C}
+            \rput(1.5,3.5){X}
+            \rput(2.5,3.5){I}
+            \psdots(1.3,2.7)(1.7,2.7)(1.3,2.4)(1.7,2.4)(1.3,2.1)(1.7,2.1) %X1
+            \psdots(2.3,2.7)(2.5,2.4)(2.7,2.1) %I1
+            \psdots(1.3,1.8)(1.7,1.8)(1.5,1.5)(1.3,1.2)(1.7,1.2) %X2
+            \psdots(2.4,1.65)(2.6,1.35) %I2
+            \pspolygon[linecolor=J1](1.1,1)(1.1,2.9)(1.9,2.9)(1.9,1.5)(1.5,1.3)(1.5,1)
+         \end{pspicture}
+         &
+         \begin{pspicture}(0,0)(3,4)
+            \multido{\n=0+1}{4}{\psline(\n,0)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+            \rput(0.5,3.5){C}
+            \rput(1.5,3.5){X}
+           \rput(2.5,3.5){I}
+            \psdot[linecolor=J1](0.5,2.4) %C1
+            \psdot(1.5,2.4) %X1
+            \psdots(2.3,2.7)(2.3,2.1)(2.5,2.4)(2.7,2.1)(2.7,2.7) %I1
+         \end{pspicture} \\ [3mm]
+        \dotfill & \dotfill & \dotfill \\ [3mm]
+        \dotfill & \dotfill & \dotfill \\ [3mm]
+        \dotfill & \dotfill & \dotfill \\ [3mm]
+      \end{tabular}
+  \end{center}
+
+\partie[à vous de jouer]
+   Effectuer à l'abaque les additions suivantes (représenter dans les tableaux le calcul effectué).
+   \begin{center}
+      \begin{tabular}{>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{5cm}}
+         \begin{pspicture}(0,-1)(3,4)
+            \multido{\n=0+1}{4}{\psline(\n,-1)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+            \rput(0.5,3.5){C}
+            \rput(1.5,3.5){X}
+            \rput(2.5,3.5){I}
+         \end{pspicture}
+         &
+         \begin{pspicture}(0,-1)(3,4)
+            \multido{\n=0+1}{4}{\psline(\n,-1)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(3,\n)}
+            \rput(0.5,3.5){C}
+            \rput(1.5,3.5){X}
+            \rput(2.5,3.5){I}
+         \end{pspicture}
+         &
+         \begin{pspicture}(0,-1)(4,4)
+            \multido{\n=0+1}{5}{\psline(\n,-1)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(4,\n)}
+            \rput(0.5,3.5){X}
+            \rput(1.5,3.5){I}
+            \rput(2.5,3.5){$\frac{1}{10}$}
+            \rput(3.5,3.5){$\frac{1}{100}$}
+         \end{pspicture}
+         &
+         \begin{pspicture}(0,-1)(5,4)
+            \multido{\n=0+1}{6}{\psline(\n,-1)(\n,4)}
+            \multido{\n=3+1}{2}{\psline(0,\n)(5,\n)}
+            \rput(0.5,3.5){X}
+            \rput(1.5,3.5){I}
+            \rput(2.5,3.5){$\frac{1}{10}$}
+            \rput(3.5,3.5){$\frac{1}{100}$}
+            \rput(4.5,3.5){$\frac{1}{1000}$}
+         \end{pspicture} \\ [1mm]
+         $136+321$ & $89+23$ & $23,45+1,3$ & $34,891+59,129$ \\
+         = \dotfill & = \dotfill & = \dotfill & = \dotfill \\ [5mm]
+      \end{tabular}
+   \end{center}
+
+\partie[le défi de la soustraction]
+   Obélix souhaite acheter un sanglier à 234 sesterces. Il dispose d'un menhir à 1622 sesterces. Imaginer une méthode permettant de trouver le résultat sur l'abaque. \\
+   Et s'il voulait acheter un deuxième sanglier ?
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     \ldots
+% \end{corrige}
