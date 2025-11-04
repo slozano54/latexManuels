@@ -1,0 +1,59 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \phantom{\numeroteEnigme}
+\begin{enigme}[Le triangle de Sierpinski]
+     
+\partie[tracé du triangle]
+    \begin{enumerate}
+       \item Étape 1. Sur une feuille unie, tracer un triangle équilatéral de 16 cm de côté.
+       \item Étape 2. 
+       \begin{enumerate}
+          \item Placer le milieu de chacun des trois côtés du triangle.
+          \item Tracer le triangle équilatéral passant par les milieux des trois côtés à l'intérieur du grand triangle.
+      \end{enumerate}
+      \item Étape 3.
+      \begin{enumerate}
+         \item Pour les trois triangles situés aux sommets du triangle principal, placer les milieux des côtés.
+         \item Construire les trois triangles à l'intérieur.
+      \end{enumerate}
+      \item Étape 4. Reproduire l'étape 3 pour chacun des neuf triangles ainsi construits.
+      \item Décorer/colorier les triangles à votre guise.
+  \end{enumerate}
+  
+   \begin{pspicture}(0.5,0)(4.5,4)
+      \pspolygon(0,0)(4,0)(2,3.46)
+   \end{pspicture}
+   \multido{\i=1+1}{3}
+      {\begin{pspicture}(4.5,4)
+          \psSier(0,0){4cm}{\i}
+       \end{pspicture}} \\
+   \hspace*{0.9cm} Étape 1 \hspace*{3.3cm} Étape 2 \hspace*{3.3cm} Étape 3 \hspace*{3.3cm} Étape 4 \\
+   
+\partie[dénombrement]
+ \begin{enumerate}
+    \item En se référant aux dessins ci-dessus, combien y a-t-il de triangles coloriés en noir à chaque étape ? \\ [2mm]
+      Étape 1 : \dotfill Étape 2 : \dotfill Étape 3 : \dotfill Étape 4 : \dotfill \medskip
+   \item Combien y aurait-il de triangles coloriés en noir à l'étape 5 ? \dotfill À l'étape 6 ? \dotfill
+ \end{enumerate}
+ 
+   \vfill
+
+   \begin{center}
+      \fbox{
+         \begin{minipage}{13cm}
+            {\bf Wacław Franciszek Sierpiński} (1882-1969) est un mathématicien polonais. \\
+            Il s'intéresse entre autre aux fractales (une fractale est une forme géométrique qui se répète à l'identique lorsqu'on zoome ou qu'on \og dezoome\fg) dont certaines portent son nom : le triangle de Sierpiński, le tapis de Sierpiński et la courbe de Sierpiński. \\
+            \begin{pspicture}(-0.7,0)(3,3.5)
+               \psSier(0,0){3cm}{5}
+            \end{pspicture}
+            \qquad
+            \includegraphics[width=3cm]{\currentpath/images/Sierpinski_carpet}
+            \quad
+            \begin{pspicture}(-2,-1.5)(2,1.5)
+               \psSier[unit=0.1,n=4,fillstyle=solid,fillcolor=black] 
+            \end{pspicture}
+            \medskip
+         \end{minipage}}
+   \end{center}
+\end{enigme}
