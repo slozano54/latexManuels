@@ -1,0 +1,20 @@
+\begin{exercice}
+   Quelle est l'aire, en \ucmq{}, de la figure grisée sachant que \begin{pspicture}(3,2)(4,3)
+      \psframe[fillstyle=solid,fillcolor=lightgray](3,2)(4,3)
+      \psline(3,2)(4,3)
+      \psline(3,3)(4,2)
+   \end{pspicture} vaut \ucmq{1} ? Expliquer.
+   \begin{center}
+      \begin{Geometrie}[CoinHD={(5u,5u)}]
+         fill (u,0)--(4u,0)--(4u,u)--(3.5u,0.5u)--(3u,u)--(2.5u,1.5u)--(1.5u,0.5u)--(u,u)--cycle withcolor Gray;
+         fill (4u,u)--(5u,2u)--(3u,4u)--(2.5u,3.5u)--(3u,3u)--(2.5u,2.5u)--(3u,2u)--(4u,2u)--(4u,u)-- cycle withcolor Gray;
+         fill (u,u)--(0,2u)--(2u,4u)--(2.5u,3.5u)--(2u,3u)--(2.5u,2.5u)--(2u,2u)--(u,2u)--(u,u)-- cycle withcolor Gray;
+         fill (u,4u)--(4u,4u)--(3u,5u)--(2u,5u)--cycle withcolor Gray;
+         trace grille(1) withcolor LightGray;         
+         for i=-5 upto 5 :
+         draw (i*u,0)--(i*u+5u,5u) withcolor LightGray;
+         draw (i*u,5u)--(i*u+5u,0) withcolor LightGray;
+         endfor;
+      \end{Geometrie}
+   \end{center}
+\end{exercice}

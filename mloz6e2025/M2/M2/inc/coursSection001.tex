@@ -1,0 +1,67 @@
+\section{Surface et aire}
+
+\begin{definition}
+   La \textbf{surface} d'une figure est la partie située à l'intérieur de son contour. \\
+   Sa mesure s'appelle l'\textbf{aire}, qui est le nombre d'unités d'aire que la figure contient.
+\end{definition}
+
+\begin{remarque}
+   attention à ne pas confondre avec le périmètre qui est une mesure de longueur !
+\end{remarque}
+
+Pour déterminer l'aire d'une surface, on peut découper la figure en figures simples ou utiliser un pavage simple.
+
+\begin{exemple*1}
+   \par\hfill
+
+   \begin{Geometrie}[CoinHD={(7.7u,4.9u)}]
+      u:=u*0.7;
+      trace grille(0.7) withcolor LightGray;      
+      for i=0 upto 5 :
+         draw (i*u,0)--(i*u+7u,7u) withcolor LightGray;
+         draw (i*u,7u)--(i*u+7u,0) withcolor LightGray;
+      endfor;
+      for i=0 upto 6 :
+         draw (0,i*u)--(7u-i*u,7u) withcolor LightGray;
+         draw (i*u,0)--(0,i*u) withcolor LightGray;
+         draw (4u+i*u,0)--(11u,7u-i*u) withcolor LightGray;
+         draw (4u+i*u,7u)--(11u,i*u) withcolor LightGray;
+      endfor;
+      fill (2u,5u)--(3u,5u)--(3u,6u)--(2u,6u)--cycle withcolor black;
+      label(TEX("\Large $u_1$"),(1.5u,5.5u));
+      fill (6u,5u)--(6u,6u)--(5.5u,5.5u)--cycle withcolor black;
+      label(TEX("\Large $u_2$"),(4.5u,5.5u));
+      fill (8u,5u)--(9u,5u)--(8u,6u)--cycle withcolor black;
+      label(TEX("\Large $u_1$"),(7.5u,5.5u));
+      fill (u,u)--(3u,u)--(3u,4u)--(u,4u)--(u,3u)--(2u,3u)--(2u,2u)--(u,2u)--cycle withcolor Crimson;
+      draw (u,u)--(3u,u)--(3u,4u)--(u,4u)--(u,3u)--(2u,3u)--(2u,2u)--(u,2u)--cycle withcolor black withpen pencircle scaled 1.5bp;
+      label(TEX("\Large $A$"),(2.5u,2.5u));
+      fill (5u,u)--(6u,u)--(6u,3u)--(5u,3u)--(5u,4u)--(4u,4u)--(4u,2u)--cycle withcolor LightBlue;
+      draw (5u,u)--(6u,u)--(6u,3u)--(5u,3u)--(5u,4u)--(4u,4u)--(4u,2u)--cycle withcolor black withpen pencircle scaled 1.5bp;
+      label(TEX("\Large $B$"),(5u,2.5u));
+      fill (8u,u)--(8.5u,1.5u)--(9u,u)--(9u,2u)--(10u,2u)--(9.5u,2.5u)--(10u,3u)--(9u,3u)--(9u,4u)--(8.5u,3.5u)--(8u,4u)--(8u,3u)--(7u,3u)--(7.5u,2.5u)--(7u,2u)--(8u,2u)--cycle withcolor PeachPuff;
+      draw (8u,u)--(8.5u,1.5u)--(9u,u)--(9u,2u)--(10u,2u)--(9.5u,2.5u)--(10u,3u)--(9u,3u)--(9u,4u)--(8.5u,3.5u)--(8u,4u)--(8u,3u)--(7u,3u)--(7.5u,2.5u)--(7u,2u)--(8u,2u)--cycle withcolor black withpen pencircle scaled 1.5bp;
+      label(TEX("\Large $C$"),(8.5u,2.5u));
+   \end{Geometrie}
+   \correction   
+   Lorsque l'on n'a pas une unité d'aire entière $u_1$, on prend une partie de l'unité : 
+   \begin{itemize}
+      \item $u_2$ correspond à la moitié d'un carré $=\dfrac12 =0,5$ ;
+      \item $u_3$ correspond au quart d'un carré $=\dfrac14 =0,25$. \smallskip
+   \end{itemize}
+   On peut aussi \og découper \fg{} une partie de la figure afin de la déplacer ailleurs pour former une unité d'aire.
+   \smallskip
+   \begin{center}
+      \begin{cltableau}{0.9\linewidth}{4}
+         \hline
+         Unité & fig. A & fig. B & fig. C \\
+         \hline
+            $u_1$ & $5$ & $4,5$ & $4$ \\
+         \hline
+         $u_2$ & $20$ & $18$ & $16$ \\
+         \hline
+         $u_3$ & $10$ & $9$ & $8$ \\
+         \hline
+      \end{cltableau}
+   \end{center}
+\end{exemple*1}

@@ -1,0 +1,186 @@
+\section{Calculer avec des formules}
+{\renewcommand{\arraystretch}{1}
+    \begin{center}
+        \begin{longtable}{|>{\centering\arraybackslash}m{0.4\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|>{\centering\arraybackslash}m{0.25\textwidth}|}    
+            \hline
+            {\bf Figure}&{\bf Représentation}&{\bf P\'erimètre et aire}\\
+            \hline
+            \endhead
+            \multicolumn{3}{|c|}{\rule[-0.3cm]{0pt}{1cm}\LARGE\scshape Quadrilatères}\\\hline
+            \textbf{ Trapèze} \par de petite base $b$,\par  de grande base $B$\par et de hauteur $h$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(8u,6.5u)}]    
+                u:=0.5cm;
+                pair A,B,C,D,H;
+                A=u*(0.75,0.75);
+                B=u*(7.25,0.75);
+                C=3/5[B,rotation(A,B,-60)];
+                D-C=u*(-3,0);
+                H=projection(D,A,B);
+                trace A--B--C--D--cycle;
+                trace cotationmil(D,C,3mm,5,btex $b$ etex) withcolor red;
+                trace cotationmil(A,B,-2mm,5,btex $B$ etex) withcolor red;
+                trace cotationmil(D,H,4mm,5,btex $h$ etex) withcolor red;
+                trace D--H dashed evenly;
+                trace codeperp(C,D,H,5);
+                trace codeperp(D,H,B,5);
+            \end{Geometrie}
+            &
+            $\Eqalign{
+            {\mathcal P}&=\mbox{somme des côtés}\cr
+            {\mathcal A}&=\frac{(B+b)\times h}{2}\cr
+            }$\\\hline
+            \textbf{ Parallélogramme} de côté $c$ et de hauteur relative à ce côté $h$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(5u,4.5u)}]    
+                u:=0.5cm;                
+                pair A,B,C,D,H;
+                A=u*(0.75,0.75);
+                B=u*(7.25,0.75);
+                C=0.5[B,rotation(A,B,-100)];
+                D-C=A-B;
+                H=projection(D,A,B);
+                trace A--B--C--D--cycle;
+                trace cotationmil(A,B,-2mm,5,btex $c$ etex) withcolor red;
+                trace cotationmil(D,H,4mm,5,btex $h$ etex)withcolor red;
+                trace D--H dashed evenly;
+                trace codeperp(C,D,H,5);
+                trace codeperp(D,H,B,5);
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=\mbox{somme des côtés}\cr
+            {\mathcal A}&=c\times h\cr
+            }$\\\hline
+            \textbf{ Losange} de côté $c$, de grande diagonale $D$ et de petite diagonale $d$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(.5u,-.5u)},CoinHD={(10u,4.5u)}]    
+                u:=0.5cm;
+                pair A,B,C,D,H;
+                A=u*(0.75,0.75);
+                B=u*(5.25,0.75);
+                C=rotation(A,B,-140);
+                D=symetrie(B,A,C);
+                H=iso(A,C);
+                trace A--B--C--D--cycle;
+                trace cotationmil(A,C,-0.3cm,5,btex $D$ etex) withcolor red;
+                trace cotationmil(D,B,-5mm,5,btex $d$ etex) withcolor red;
+                trace A--C dashed evenly;
+                trace B--D dashed evenly;
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=4c\cr
+            {\mathcal A}&=\dfrac{d\times D}{2}\cr
+            }$\\\hline
+            \textbf{ Rectangle} de longueur $L$ et de largeur $l$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(-.5u,0)},CoinHD={(8u,6.5u)}]    
+                u:=0.5cm;
+                pair A,B,C,D;
+                A=u*(0.75,0.75);
+                B=u*(7.25,0.75);
+                C=3/5[B,rotation(A,B,-90)];
+                D-A=C-B;
+                trace A--B--C--D--cycle;
+                trace cotationmil(D,C,3mm,5,btex $L$ etex) withcolor red;
+                trace cotationmil(A,D,3mm,5,btex $l$ etex) withcolor red;
+                trace codeperp(A,B,C,5);
+                trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=2(l+L)\cr
+            {\mathcal A}&=L\times l\cr
+            }$\\\hline
+            \textbf{ Carré} de côté $c$  
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(5u,5.5u)}]
+                u:=0.5cm;
+                pair A,B,C,D;
+                A=u*(0.75,0.75);
+                B=u*(4.25,0.75);
+                C=rotation(A,B,-90);
+                D-A=C-B;
+                trace A--B--C--D--cycle;
+                trace cotationmil(D,C,3mm,5,btex $c$ etex) withcolor red;
+                trace codeperp(A,B,C,5);
+                trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+                marque_s:=marque_s/3;
+                trace codesegments(A,B,B,C,2);
+                trace codesegments(C,D,D,A,2);
+            \end{Geometrie}
+            &
+            $\Eqalign{
+            {\mathcal P}&=4c\cr
+            {\mathcal A}&=c^2\cr
+            }$\\\hline
+            \multicolumn{3}{|c|}{\rule[-0.3cm]{0pt}{1cm}\LARGE\scshape Triangles}\\\hline
+            \textbf{ Triangle} de côté $c$ et de hauteur relative à ce côté $h$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(8u,6.5u)}]
+                u:=0.5cm;
+                pair A,B,C,H;
+                A=u*(0.75,0.75);
+                B=u*(7.25,1.75);
+                C=u*(3,5);
+                H=projection(C,A,B);
+                trace A--B--C--cycle;
+                trace C--H dashed evenly;
+                trace codeperp(C,H,B,5);
+                trace cotationmil(A,B,-2mm,5,btex $c$ etex) withcolor red;
+                trace cotationmil(C,H,2mm,5,btex $h$ etex) withcolor red;
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=\mbox{somme des côtés}\cr
+            {\mathcal A}&=\dfrac{c\times h}{2}\cr
+            }$\\\hline
+            \textbf{ Triangle rectangle} de côtés de l'angle droit $l$ et $L$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}            
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(8u,6.5u)}]
+                u:=0.5cm;
+                pair A,B,C,D;
+                A=u*(0.75,0.75);
+                B=u*(7.25,0.75);
+                C=3/5[B,rotation(A,B,-90)];
+                D-A=C-B;
+                trace A--C--D--cycle;
+                trace cotationmil(D,C,3mm,5,btex $L$ etex) withcolor red;
+                trace cotationmil(A,D,3mm,5,btex $l$ etex) withcolor red;
+                % trace codeperp(A,B,C,5);
+                % trace codeperp(B,C,D,5);
+                trace codeperp(C,D,A,5);
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=\mbox{somme des côtés}\cr
+            {\mathcal A}&=\dfrac{l\times L}{2}\cr
+            }$\\\hline
+            \multicolumn{3}{|c|}{\rule[-0.3cm]{0pt}{1cm}\LARGE\scshape Disques}\\\hline
+            \textbf{ Cercle et disque} de rayon $r$
+            &
+            \rule[-0.5cm]{0pt}{3.2cm}
+            \begin{Geometrie}[CoinBG={(0,-.5u)},CoinHD={(8u,6.5u)}]
+                u:=0.5cm;
+                pair A,B;
+                A=u*(4,3);
+                path cc;
+                cc=cercles(A,u*2.5);
+                B=point(0.15*length cc) of cc;
+                trace cc;
+                marque_p:="croix";
+                MarquePoint(A);
+                trace cotationmil(A,B,0,5,btex $r$ etex) withcolor red;
+            \end{Geometrie}
+            &$\Eqalign{
+            {\mathcal P}&=2\pi r\cr
+            {\mathcal A}&=\pi r^2\cr
+            }$\\\hline
+        \end{longtable}
+    \end{center}
+}
