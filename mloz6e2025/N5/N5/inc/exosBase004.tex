@@ -1,0 +1,33 @@
+\begin{exercice*}        
+    Sur la figure suivante, on a représenté un réseau de droites parallèles et équidistantes ainsi qu'un segment de longueur $u$ à trois reprises. À l'aide du compas, tracer sur le cahier les segments de longueur suivante :
+    \smallskip
+    \begin{multicols}{3}
+        \begin{spacing}{1.8}
+            \begin{enumerate}
+                \item $\dfrac16u$
+                \item $\dfrac15u$
+                \item $\dfrac13u$
+                \item $\dfrac56u$
+                \item $\dfrac23u$
+                \item $\dfrac35u$
+            \end{enumerate}
+        \end{spacing}
+    \end{multicols}
+    \medskip
+    \psset{xunit=0.7,yunit=0.3}
+    \begin{pspicture*}(0,0)(11,8)
+       \multido{\n=-3+1,\i=1+1}{14}{\psline[linecolor=gray](\n,0)(\i,8)}
+        \psline[linewidth=0.5mm]{|-|}(0.5,3)(5.8,7.6)
+       \psline[linewidth=0.5mm]{|-|}(2,2)(8.4,4.8)
+       \psline[linewidth=0.5mm]{|-|}(3.5,1)(10.3,2.6)
+       \rput(10.6,2.6){$u$}
+       \rput(8.7,4.8){$u$}
+       \rput(6.2,7.6){$u$}
+    \end{pspicture*}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    {\red Pas de correction}
+\end{corrige}
+    
+    

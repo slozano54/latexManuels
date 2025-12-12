@@ -1,0 +1,122 @@
+\section{Axes gradués}
+
+Comme tous les autres nombres, on peut placer les fractions sur une droite graduée.
+
+\begin{exemple*1}
+   Si on partage l'unité d'une droite graduée en quatre, on peut placer des \og quarts \fg.
+
+   \smallskip
+   \begin{center}
+    \scalebox{0.7}{
+    \begin{pspicture}(0,0.2)(13,0.7)
+        \psaxes[dx=1,yAxis=false,labels=none]{->}(0,0)(13,0)
+        \rput(0,-0.3){0}
+        \rput(4,-0.3){1}
+        \rput(8,-0.3){2}
+        \rput(12,-0.3){3}
+        \uput[u](0,.1){$\frac04$}
+        \uput[u](1,.1){$\frac14$}
+        \uput[u](2,.1){$\frac24$}
+        \uput[u](3,.1){$\frac34$}
+        \uput[u](4,.1){$\frac44$}
+        \uput[u](5,.1){$\frac54$}
+        \uput[u](6,.1){$\frac64$}
+        \uput[u](7,.1){$\frac74$}
+        \uput[u](8,.1){$\frac84$}
+        \uput[u](9,.1){$\frac94$}
+        \uput[u](10,.1){$\frac{10}{4}$}
+        \uput[u](11,.1){$\frac{11}{4}$}
+        \uput[u](12,.1){$\frac{12}{4}$}
+    \end{pspicture}
+    }
+   \end{center}
+\end{exemple*1}
+
+\begin{definition}
+    On repère un point sur un axe gradué grâce à un nombre que l'on appelle son {\bfseries abscisse}.    
+    \rotatebox{-7}{
+        \scalebox{0.7}{
+            \begin{pspicture}(0,-0.5)(10,0.7)
+                \psaxes[dx=3,yAxis=false,labels=none]{->}(0,0)(10,0)
+                \rput(0,-0.3){$0$}
+                \uput[u](0,0.1){$O$}
+                \rput(3,-0.3){$1$}
+                \rput(6,-0.3){$2$}
+                \rput(7.5,-0.3){$\num{2.5}$}
+                \uput[u](7.5,0.1){$K$}
+                \rput(9,-0.3){$3$}
+            \end{pspicture}
+        }
+    }
+\end{definition}
+
+\begin{remarque}
+    L'extrémité de la flèche indique le sens positif ou sens croissant.
+\end{remarque}
+
+\begin{vocabulaire}
+    \begin{itemize}
+        \item $O$ est l'{\bfseries \underline{$O$}rigine} de cet axe gradué.
+        \item $I$ est le point repéré par le nombre $1$. On dit que $1$ est l'abscisse de $I$.
+        \item $K$ est le point d'abscisse $2,5$.
+        \item La distance entre $O$ et $I$, les points d'abscisses $0$ et $1$, est {\bfseries l'unité de longueur}
+        \item Parmi tous les axes gradués, l'axe gradué horizontal s'appelle {\bfseries axe des abscisses}.
+    \end{itemize}
+\end{vocabulaire}
+
+\begin{methode*1}[Placer un quotient sur un axe gradué]
+    \exercice
+    Placer $B$ dont l'abscisse est le quotient $\dfrac{5}{3}$ sur un axe gradué.
+    \correction
+    \begin{enumerate}
+        \item Choisir une unité de longueur qui soit un multiple du dénominateur, ici 3.\\
+        \begin{pspicture}(0,-0.7)(10,0.7)
+            \psaxes[dx=1,yAxis=false,labels=none]{->}(0,0)(10,0)
+            \rput(0,-0.3){$0$}
+            \uput[u](0,0.1){$O$}
+            \rput(1,-0.6){$\dfrac{1}{3}$}
+            \uput[u](1,0.1){$A$}
+            \rput(3,-0.3){$1$}
+            \rput(6,-0.3){$2$}
+            \rput(9,-0.3){$3$}
+        \end{pspicture}    
+        \item Reporter la fraction unitaire autant de fois qu'il le faut, ici 5 fois, c'est à dire un nombre de fois égal au numérateur.\\
+        \begin{pspicture}(0,-0.7)(10,0.7)
+            \psaxes[dx=1,yAxis=false,labels=none]{->}(0,0)(10,0)
+            \rput(0,-0.3){$0$}
+            \uput[u](0,0.1){$O$}
+            \rput(1,-0.6){$\dfrac{1}{3}$}
+            \uput[u](1,0.1){$A$}
+            \rput(3,-0.3){$1$}
+            \rput(5,-0.6){{\red $\dfrac{5}{3}$}}
+            \uput[u](5,0.1){{\red $B$}}
+            \rput(6,-0.3){$2$}
+            \rput(9,-0.3){$3$}
+        \end{pspicture} 
+    \end{enumerate}
+\end{methode*1}
+
+\begin{remarques}
+    \begin{itemize}
+        \item $5\times \dfrac13=\dfrac53$
+        \item $\dfrac53>1$, on remarque que son numérateur est plus grand que son dénominateur.
+    \end{itemize}
+\end{remarques}
+
+\begin{exemple*1}
+    En plaçant $H$, le point dont l'abscisse est le quotient $\dfrac{4}{7}$, sur un axe gradué, déterminer si $\dfrac{4}{7}$ est plus grand ou plus petit que 1.\\
+    \smallskip
+    \correction
+
+    \begin{pspicture}(0,-1)(10,0.7)
+        \psaxes[dx=1,yAxis=false,labels=none]{->}(0,0)(15,0)
+        \rput(0,-0.3){$0$}
+        \uput[u](0,0.1){$O$}
+        \rput(7,-0.3){$1$}
+        \rput(4,-0.6){{\red $\dfrac{4}{7}$}}
+        \uput[u](4,0.1){{\red $H$}}
+        \rput(14,-0.3){$2$}
+    \end{pspicture}
+
+    On en déduit que $\dfrac{4}{7}$ est plus petit que $1$.
+\end{exemple*1}

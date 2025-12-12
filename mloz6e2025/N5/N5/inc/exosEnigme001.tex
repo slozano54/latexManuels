@@ -1,0 +1,42 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{enigme}[L'atelier des potions]
+    \partie[présentation du jeu]
+    L’atelier des potions est un jeu innovant, basé sur la manipulation, qui permet un enseignement et un apprentissage ludique et concret des fractions. \\  
+Il a été conçu de façon collaborative par des chercheurs et des enseignants, dans le but d'être facilement utilisable en classe, en petits groupes ou en classe entière. \\
+    \begin{center}
+      \includegraphics[scale=1]{\currentpath/images/potions}
+    \end{center}
+
+    \partie[principes du jeu]
+    \begin{minipage}{0.7\linewidth}
+        Les élèves, apprentis sorciers, réalisent des potions en sélectionnant la bonne fraction d’ingrédient parmi ceux à leur disposition. Les cartes, ordonnées suivant un ordre croissant de difficulté, permettent de travailler les notions suivantes :
+        \begin{itemize}
+        \item représentation de fractions ;
+        \item fractions supérieures à 1 ;
+        \item équivalence de fraction ;
+        \item somme de fractions ;
+        \item décomposition de fractions, etc.
+        \end{itemize}
+    \end{minipage}
+    \hspace*{5mm}
+    \begin{minipage}{0.3\linewidth}    
+        \begin{center}
+           \includegraphics[scale=0.9]{\currentpath/images/carte}
+        \end{center}
+    \end{minipage}
+
+    \textbf{Sur le plateau de la partie A, colorier les proportions indiquées pour la potion n°27.}
+    \vfill
+    \begin{flushright}
+    \href{https://www.atelier-potions.fr}{{\small https://www.atelier-potions.fr}}
+    \end{flushright}
+\end{enigme}
+
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     \ldots
+% \end{corrige}
