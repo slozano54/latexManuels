@@ -1,51 +1,87 @@
 \begin{exercice*}
-    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
-    \hspace*{-10mm}
-    \begin{Geometrie}[CoinHD={(9u,7u)}]        
-        \enonceTroisiemeGTroisExoDouze
-    \end{Geometrie}
+    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(9u,7u)}]        
+            \enonceTroisiemeGTroisExoTreize
+        \end{Geometrie}
+    \end{center}
+    \begin{enumerate}
+        \item Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
+        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
+        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
+        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}    
-    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
-    {\red Rotation de centre à l'intersection des médiatrices de $AA_1$, $BB_1$ et $CC_1$, d'angle \ang{120}, dans le sensinverse des aiguilles d'une montre.}
+    % \phantom{rrr}
+    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
 
-    \hspace*{-10mm}
-    \begin{Geometrie}[CoinHD={(9u,7u)}]
-        \enonceTroisiemeGTroisExoDouze
+    \hspace*{-15mm}
+    \begin{Geometrie}[CoinHD={(9u,7u)}]        
+        \enonceTroisiemeGTroisExoTreize
         %%% Correction
-        pointe(O);
-        label.urt(btex $O$ etex,O);
-        marque_s:=2;
-        drawoptions(withcolor red);
-        trace mediatrice(C,CC);
-        trace segment(C,CC);
-        trace Codelongueur(C,milieu(C,CC),2);
-        trace Codelongueur(CC,milieu(C,CC),2);
-        trace codeperp(O,milieu(C,CC),CC,5);
-        drawoptions(withcolor blue);
-        trace mediatrice(B,BB);
-        trace segment(B,BB);
-        trace Codelongueur(B,milieu(B,BB),1);
-        trace Codelongueur(BB,milieu(B,BB),1);
-        trace codeperp(O,milieu(B,BB),BB,5);
+        trace cc withcolor blue;
+        pair AA,BB,CC,DD,EE;
+        AA=rotation(A,O,60);
+        BB=rotation(B,O,60);
+        CC=rotation(C,O,60);
+        DD=rotation(D,O,60);
+        EE=rotation(E,O,60);
+        pointe(AA,BB,CC,DD,EE);        
+        label.ulft(btex $A_1$ etex,AA);
+        label.llft(btex $B_1$ etex,BB);
+        label.rt(btex $C_1$ etex,CC);
+        label.urt(btex $D_1$ etex,DD);
+        label.llft(btex $E_1$ etex,EE);
+        trace droite(C,E) dashed evenly withcolor red;
+        trace droite(CC,EE) dashed evenly withcolor red;
+        path ccc;
+        ccc = cercles(O,.5*u);
         drawoptions(withcolor DarkGreen);
-        trace mediatrice(A,AA);
-        trace segment(A,AA);
-        trace Codelongueur(A,milieu(A,AA),3);
-        trace Codelongueur(AA,milieu(A,AA),3);
-        trace codeperp(O,milieu(A,AA),A,5);
-        drawoptions(dashed evenly withcolor (0.5,0,1));
-        trace segment(C,O);
-        trace segment(CC,O);
-        drawoptions(withcolor (0.5,0,1));
-        pair CCC;
-        CCC=milieu(O,milieu(O,C));
-        drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
-        label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
-        drawoptions();    
+        drawarrow pointarc(ccc,60)..pointarc(ccc,90)..pointarc(ccc,120);
+        label.top(btex $\ang{60}$ etex, pointarc(ccc,90));
+        drawoptions(dashed evenly withcolor DarkGreen);
+        trace segment(O,A);
+        trace segment(O,AA);
+        %%%
+        drawoptions(withcolor (0.9,0.6,0.1));
+        drawarrow pointarc(ccc,180)..pointarc(ccc,210)..pointarc(ccc,240);
+        label.llft(btex $\ang{60}$ etex, pointarc(ccc,210));
+        drawoptions(dashed evenly withcolor (0.9,0.6,0.1));
+        trace segment(O,B);
+        trace segment(O,BB);
+        %%%
+        drawoptions(withcolor (0,1,1));
+        drawarrow pointarc(ccc,270)..pointarc(ccc,300)..pointarc(ccc,330);
+        label.lrt(btex $\ang{60}$ etex, pointarc(ccc,300));
+        drawoptions(dashed evenly withcolor (0,1,1));
+        trace segment(O,C);
+        trace segment(O,CC);
+        %%%
+        drawoptions(withcolor (1,0,1));
+        drawarrow D..rotation(D,O,30)..DD;
+        label.urt(btex $\ang{60}$ etex, rotation(D,O,30));
+        drawoptions(dashed evenly withcolor (1,0,1));
+        trace segment(O,D);
+        trace segment(O,DD);
+        %%%
+        drawoptions(withcolor black);
+        drawarrow E..rotation(E,O,30)..EE;
+        label.urt(btex $\ang{60}$ etex, rotation(E,O,30));
+        drawoptions(dashed evenly withcolor black);
+        trace segment(O,E);
+        trace segment(O,EE);
     \end{Geometrie}
-    \vspace*{-12mm}
+
+    \begin{enumerate}
+        \item {\red Construction}%Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
+        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
+        {\red Leurs images sont sur ce même cercle.}
+        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
+        {\red Leurs images sont sur la droite $(OA_1)$, image de $(OA)$.}
+        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
+        {\red Leurs images sont également alignés.}
+    \end{enumerate}
 \end{corrige}
 

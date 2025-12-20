@@ -1,40 +1,51 @@
 \begin{exercice*}
-    \begin{enumerate}
-        \item Construire en rouge l'image du quadrilatère $ABCD$ par la rotation de centre $B$, d'angle \ang{75}, dans le sens anti-horaire.
-        \item Construire en vert l'image du quadrilatère $ABCD$ par la rotation de centre $O$, d'angle \ang{100}, dans le sens horaire.
-    \end{enumerate}
+    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
     \hspace*{-10mm}
     \begin{Geometrie}[CoinHD={(9u,7u)}]        
-        \enonceTroisiemeGTroisExoOnze
+        \enonceTroisiemeGTroisExoDouze
     \end{Geometrie}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    \begin{enumerate}
-        \item Construire en rouge l'image du quadrilatère $ABCD$ par la rotation de centre $B$, d'angle \ang{75}, dans le sens anti-horaire.
-        \item Construire en vert l'image du quadrilatère $ABCD$ par la rotation de centre $O$, d'angle \ang{100}, dans le sens horaire.
-    \end{enumerate}
+    $A_1B_1C_1$ est l'image du triangle $ABC$ par une rotation. Déterminer son centre puis son angle.
+    {\red Rotation de centre à l'intersection des médiatrices de $AA_1$, $BB_1$ et $CC_1$, d'angle \ang{120}, dans le sensinverse des aiguilles d'une montre.}
 
     \hspace*{-10mm}
-    \begin{Geometrie}[CoinHD={(9u,7u)}]        
-        \enonceTroisiemeGTroisExoOnze
-        %%% Correction 1
+    \begin{Geometrie}[CoinHD={(9u,7u)}]
+        \enonceTroisiemeGTroisExoDouze
+        %%% Correction
+        pointe(O);
+        label.urt(btex $O$ etex,O);
+        marque_s:=2;
         drawoptions(withcolor red);
-        trace rotation(quadrilatereABCD,B,75);
-        drawarrow A..rotation(A,B,37.5)..rotation(A,B,75);
-        label.top(btex $\ang{75}$ etex,rotation(A,B,37.5));
-        label.lft(btex $A_1$ etex,rotation(A,B,75));
-        %%% Correction 2
+        trace mediatrice(C,CC);
+        trace segment(C,CC);
+        trace Codelongueur(C,milieu(C,CC),2);
+        trace Codelongueur(CC,milieu(C,CC),2);
+        trace codeperp(O,milieu(C,CC),CC,5);
+        drawoptions(withcolor blue);
+        trace mediatrice(B,BB);
+        trace segment(B,BB);
+        trace Codelongueur(B,milieu(B,BB),1);
+        trace Codelongueur(BB,milieu(B,BB),1);
+        trace codeperp(O,milieu(B,BB),BB,5);
         drawoptions(withcolor DarkGreen);
-        trace rotation(quadrilatereABCD,O,-100);         
-        drawarrow A..rotation(A,O,-50)..rotation(A,O,-100);         
-        label.urt(btex $\ang{100}$ etex,rotation(A,O,-50));
-        label.bot(btex $A_2$ etex,rotation(A,O,-100));
-        drawoptions(dashed evenly withcolor DarkGreen);
-        trace segment(O,A);
-        trace segment(O,rotation(A,O,-100));
-        drawoptions(); 
+        trace mediatrice(A,AA);
+        trace segment(A,AA);
+        trace Codelongueur(A,milieu(A,AA),3);
+        trace Codelongueur(AA,milieu(A,AA),3);
+        trace codeperp(O,milieu(A,AA),A,5);
+        drawoptions(dashed evenly withcolor (0.5,0,1));
+        trace segment(C,O);
+        trace segment(CC,O);
+        drawoptions(withcolor (0.5,0,1));
+        pair CCC;
+        CCC=milieu(O,milieu(O,C));
+        drawarrow CCC..rotation(CCC,O,60)..rotation(CCC,O,120);
+        label.bot(btex $\ang{120}$ etex, rotation(CCC,O,60));
+        drawoptions();    
     \end{Geometrie}
+    \vspace*{-12mm}
 \end{corrige}
 

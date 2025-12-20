@@ -1,135 +1,133 @@
 \begin{exercice*}
-    Dans cet exercice, toutes les rotations sont de centre $A$.\\
-    \begin{minipage}{0.6\linewidth}
-        \hspace*{-15mm}
-        \scalebox{0.9}{
-            \begin{tikzpicture}
-                \coordinate (A) at (4,4);
-                \tkzLabelPoint[below,shift={(0.1,-0.2)}](A){$A$};
-                \coordinate[label=above left:$C$] (C) at (4,6);
-                \coordinate[label=above:$B$] (B) at (4,7);        
-                \tkzDrawCircle(A,B);
-                \tkzDrawCircle(A,C);
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
-                \tkzLabelPoint[above left](T){$T$};
-                \tkzLabelPoint[above,shift={(0.1,0.1)}](U){$U$};
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
-                \tkzLabelPoint[left](R){$R$};
-                \tkzLabelPoint[above,shift={(-0.1,0.1)}](S){$S$};   
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
-                \tkzLabelPoint[left](P){$P$};
-                \tkzLabelPoint[below,shift={(-0.1,0)}](Q){$Q$};
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
-                \tkzLabelPoint[below left,shift={(0.1,0.1)}](N){$N$};
-                \tkzLabelPoint[below](O){$O$};
-                %%%
-                \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
-                \tkzLabelPoint[below](L){$L$};
-                \tkzLabelPoint[below left](M){$M$};
-                \tkzLabelPoint[below](J){$J$};
-                \tkzLabelPoint[below,shift={(-0.1,-0.1)}](K){$K$};
-                \tkzLabelPoint[right](H){$H$};
-                \tkzLabelPoint[below](I){$I$};
-                \tkzLabelPoint[above,shift={(0.1,0.1)}](G){$G$};
-                \tkzLabelPoint[right](F){$F$};
-                \tkzLabelPoint[above](D){$D$};
-                \tkzLabelPoint[above,shift={(0,0.1)}](E){$E$};
-                \tkzDrawSegments(B,L T,J R,H P,F N,D);
-            \end{tikzpicture}
-        }
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        Sens horaire : {\Large $\circlearrowright$}\\
-        Sens anti-horaire : {\Large $\circlearrowleft$}
-    \end{minipage}
-
-    Compléter le tableau.
-    
-    \medskip
-    {\renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|*{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
-        \hline
-        \rowcolor{gray!20} Triangle&Angle&Sens de rotation&Image\\\hline
-        $ASU$&\ang{36}&{\Large $\circlearrowright$}&\\\hline
-        &\ang{72}&{\Large $\circlearrowleft$}&$ANL$\\\hline
-        $ATR$&&{\Large $\circlearrowleft$}&$ALJ$\\\hline
-        $AUE$&\ang{72}&&$AEI$\\\hline
-        $ASG$&\ang{180}&{\Large $\circlearrowleft$} ou {\Large $\circlearrowright$}&\\\hline
-        $APN$&&{\Large $\circlearrowleft$}&$AJH$\\\hline
-    \end{tabular}
-    }
+    Toutes les rotations sont à effectuer dans le sens anti-horaire.
+    \begin{enumerate}
+        \item Construire $C$, l'image de $B$ par la rotation de centre $A$ et d'angle \ang{90}.\\
+        \begin{tikzpicture}[scale = 0.4]
+            \draw[help lines, color=black!30] (0,0) grid (8,8);        
+            \coordinate[label=below left:$A$] (A) at (2,3);
+            \coordinate[label=below right:$B$] (B) at (5,3);
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+        \end{tikzpicture}
+        \item Construire $F$, l'image de $E$ par la rotation de centre $D$ et d'angle \ang{90}.\\
+        \begin{tikzpicture}[scale = 0.4]
+            \foreach \x in {0,1,...,8} {
+                \foreach \y in {0,1,...,8} {
+                    \fill[color=black] (\x,\y) circle (0.05);
+                }
+            }
+            \coordinate[label=above left:$E$] (E) at (3,7);
+            \coordinate[label=above right:$D$] (D) at (5,4);
+            \tkzDrawPoints[shape=cross out,size=3pt](E,D);
+        \end{tikzpicture}
+        \item Construire $K$, l'image de $H$ par la rotation de centre $G$ et d'angle \ang{60}.\\
+        \begin{tikzpicture}[scale=0.5]
+            \isometricPointGrid{7}{4}  
+            \coordinate[label=above left:$H$] (H) at (4.5,6.055);
+            \coordinate[label=above right:$G$] (G) at (6,3.46);
+            \tkzDrawPoints[shape=cross out,size=3pt](H,G);
+        \end{tikzpicture}
+        \item Construire $N$, l'image de $M$ par la rotation de centre $L$ et d'angle \ang{120}.\\
+        % \begin{tikzpicture}[scale=0.6]        
+        %     \isometricGrid{5}{3}
+        %     \coordinate[label=left:$M$] (M) at (2.5,0.865);
+        %     \coordinate[label=left:$L$] (L) at (2,3.46);
+        %     \tkzDrawPoints[shape=cross out,size=3pt](L,M);
+        % \end{tikzpicture}
+        \begin{Geometrie}[CoinHD={(3u,4u)}]
+            % Pour changer la taille de la Grid
+            coeff:=0.6;
+            uni:=true;
+            x.u:=coeff*cm;
+            y.u:=coeff*(sqrt(3)/2)*cm;
+            %%%   
+            trace papiertriangle withcolor gris;
+            pair L,M;
+            L=pptri(0,4);
+            M=pptri(2,1);
+            marque_p:="croix";
+            pointe(M,L);
+            label.lft(btex $M$ etex,M);
+            label.lft(btex $L$ etex,L);	
+        \end{Geometrie}
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    Dans cet exercice, toutes les rotations sont de centre $A$.\\    
-    \begin{minipage}{0.5\linewidth}
-        \hspace*{-10mm}
-        \scalebox{0.7}{
-            \begin{tikzpicture}
-                \coordinate (A) at (4,4);
-                \tkzLabelPoint[below,shift={(0.1,-0.2)}](A){$A$};
-                \coordinate[label=above left:$C$] (C) at (4,6);
-                \coordinate[label=above:$B$] (B) at (4,7);        
-                \tkzDrawCircle(A,B);
-                \tkzDrawCircle(A,C);
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](B,C){T,U};        
-                \tkzLabelPoint[above left](T){$T$};
-                \tkzLabelPoint[above,shift={(0.1,0.1)}](U){$U$};
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](T,U){R,S};
-                \tkzLabelPoint[left](R){$R$};
-                \tkzLabelPoint[above,shift={(-0.1,0.1)}](S){$S$};   
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](R,S){P,Q};
-                \tkzLabelPoint[left](P){$P$};
-                \tkzLabelPoint[below,shift={(-0.1,0)}](Q){$Q$};
-                %%%%
-                \tkzDefPointsBy[rotation=center A angle 36](P,Q){N,O};
-                \tkzLabelPoint[below left,shift={(0.1,0.1)}](N){$N$};
-                \tkzLabelPoint[below](O){$O$};
-                %%%
-                \tkzDefPointsBy[symmetry=center A](B,C,T,U,R,S,P,Q,N,O){L,M,J,K,H,I,F,G,D,E};
-                \tkzLabelPoint[below](L){$L$};
-                \tkzLabelPoint[below left](M){$M$};
-                \tkzLabelPoint[below](J){$J$};
-                \tkzLabelPoint[below,shift={(-0.1,-0.1)}](K){$K$};
-                \tkzLabelPoint[right](H){$H$};
-                \tkzLabelPoint[below](I){$I$};
-                \tkzLabelPoint[above,shift={(0.1,0.1)}](G){$G$};
-                \tkzLabelPoint[right](F){$F$};
-                \tkzLabelPoint[above](D){$D$};
-                \tkzLabelPoint[above,shift={(0,0.1)}](E){$E$};
-                \tkzDrawSegments(B,L T,J R,H P,F N,D);
-            \end{tikzpicture}
-        }
-    \end{minipage}
-    \begin{minipage}{0.45\linewidth}
-        Sens horaire : {\Large $\circlearrowright$}\\
-        Sens anti-horaire : {\Large $\circlearrowleft$}
-    \end{minipage}
+    Toutes les rotations sont à effectuer dans le sens anti-horaire.
 
+    \begin{enumerate}
+        \item Construire $C$, l'image de $B$ par la rotation de centre $A$ et d'angle \ang{90}.\\
+        \begin{tikzpicture}[scale = 0.4]
+            \draw[help lines, color=black!30] (0,0) grid (8,8);        
+            \coordinate[label=below left:$A$] (A) at (2,3);
+            \coordinate[label=below right:$B$] (B) at (5,3);
+            \tkzDrawPoints[shape=cross out,size=3pt](A,B);
+            %%%
+            \coordinate[label=below left:{\red $C$}] (C) at (2,6);
+            \tkzDrawPoints[shape=cross out,size=3pt,color=red](C);
+        \end{tikzpicture}
+        \item Construire $F$, l'image de $E$ par la rotation de centre $D$ et d'angle \ang{90}.\\
+        \begin{tikzpicture}[scale = 0.4]
+            \foreach \x in {0,1,...,8} {
+                \foreach \y in {0,1,...,8} {
+                    \fill[color=black] (\x,\y) circle (0.05);
+                }
+            }
+            \coordinate[label=above left:$E$] (E) at (3,7);
+            \coordinate[label=above right:$D$] (D) at (5,4);
+            \tkzDrawPoints[shape=cross out,size=3pt](E,D);
+            %%%
+            \coordinate[label=above left:{\red $F$}] (F) at (2,2);
+            \tkzDrawPoints[shape=cross out,size=3pt,color=red](F);
+        \end{tikzpicture}
+        \item Construire $K$, l'image de $H$ par la rotation de centre $G$ et d'angle \ang{60}.\\
+        \begin{tikzpicture}[scale=0.5]
+            \isometricPointGrid{7}{4}  
+            \coordinate[label=above left:$H$] (H) at (4.5,6.055);
+            \coordinate[label=above right:$G$] (G) at (6,3.46);
+            \tkzDrawPoints[shape=cross out,size=3pt](H,G);
+            %%%
+            \coordinate[label=above left:{\red $K$}] (K) at (3,3.46);
+            \tkzDrawPoints[shape=cross out,size=3pt,color=red](K);
+        \end{tikzpicture}
+    \end{enumerate}
     \Coupe
-
-    Compléter le tableau.
-    
-    \medskip
-    {\renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|*{4}{>{\centering\arraybackslash}m{0.2\linewidth}|}}
-        \hline
-        \rowcolor{gray!20} Triangle&Angle&Sens de rotation&Image\\\hline
-        $ASU$&\ang{36}&{\Large $\circlearrowright$}&{\red $AUC$}\\\hline
-        {\red $APR$}&\ang{72}&{\Large $\circlearrowleft$}&$ANL$\\\hline
-        $ATR$&{\red \ang{144}}&{\Large $\circlearrowleft$}&$ALJ$\\\hline
-        $AUE$&\ang{72}&{\red\Large $\circlearrowleft$}&$AEI$\\\hline
-        $ASG$&\ang{180}&{\Large $\circlearrowleft$} ou {\Large $\circlearrowright$}&{\red $AIQ$}\\\hline
-        $APN$&{\red \ang{108}}&{\Large $\circlearrowleft$}&$AJH$\\\hline
-    \end{tabular}
-    }
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Construire $N$, l'image de $M$ par la rotation de centre $L$ et d'angle \ang{120}.\\
+        % \begin{tikzpicture}[scale=0.6]        
+        %     \isometricGrid{5}{3}
+        %     \coordinate[label=left:$M$] (M) at (2.5,0.865);
+        %     \coordinate[label=left:$L$] (L) at (2,3.46);
+        %     \tkzDrawPoints[shape=cross out,size=3pt](L,M);
+        %     %%%
+        %     \coordinate[label=above left:{\red $N$}] (N) at (4,5.19);
+        %     \tkzDrawPoints[shape=cross out,size=3pt,color=red](N);
+        % \end{tikzpicture} 
+        \begin{Geometrie}[CoinHD={(3u,4u)}]
+            % Pour changer la taille de la Grid
+            coeff:=0.6;
+            uni:=true;
+            x.u:=coeff*cm;
+            y.u:=coeff*(sqrt(3)/2)*cm;
+            %%%            
+            trace papiertriangle withcolor gris;
+            pair L,M;
+            L=pptri(0,4);
+            M=pptri(2,1);
+            marque_p:="croix";
+            pointe(M,L);
+            label.lft(btex $M$ etex,M);
+            label.lft(btex $L$ etex,L);	
+            %%%
+            pair N;
+            N=pptri(1,6);
+            drawoptions(withcolor red);
+            pointe(N);
+            label.ulft(btex $N$ etex,N);	 
+            drawoptions();
+        \end{Geometrie}
+    \end{enumerate}
 \end{corrige}
 

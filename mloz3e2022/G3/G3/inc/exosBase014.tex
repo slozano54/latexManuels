@@ -1,145 +1,75 @@
-\begin{exercice*}[D'après DNB]
-    Grâce à une interface de codage par blocs, on a représenté ce motif.\\
-    \scalebox{0.8}{     
-        \begin{Geometrie}[CoinHD={(9u,4u)}]        
-            % trace grille(0.5) withcolor gris;
-            %labeloffset:=labeloffset*1.5;        
-            pair A,B,C,D;
-            A=u*(4,1);
-            B=u*(8,1);
-            C=rotation(A,B,-30);
-            D=rotation(B,A,150);
-            trace polygone(A,B,C,D);
-            marque_s:=2;
-            trace Codelongueur(A,B,B,C,C,D,D,A,2);
-            trace Codeangle(D,C,B,0,btex \ang{150} etex);
-            trace Codeangle(A,D,C,0,btex \ang{30} etex);
-            trace cotationmil(A,B,-3mm,3mm,btex $50$ etex);
-        \end{Geometrie}
-    }
-
-    \pagebreak
-    Pour mémoire sur l'orientation.
-
-    \smallskip
-    \begin{Scratch}[Echelle=0.7]
-        Place Boussole("90");
-    \end{Scratch}
-    
+\begin{exercice*}
+    $EFGH$ est l'image de $ABCD$ par une rotation de centre $O$.\\
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        % trace grille(0.5) withcolor gris;
+        marque_p:="croix";
+        pair O,A,B,C,D,E,F,G,H;
+        O=u*(4.5,1);
+        A=u*(0.5,1);
+        B=u*(1.5,3);
+        C=u*(3.5,0.5);
+        D=rotation(A,B,89);
+        E=rotation(C,O,-120);
+        F=rotation(A,O,-120);
+        G=rotation(B,O,-120);
+        H=rotation(D,O,-120);
+        trace polygone(A,B,D,C);
+        trace Codeangle(A,B,D,0,btex \ang{89} etex);
+        trace appelation(A,C,-3mm,btex \Lg{5.3} etex);
+        pointe(O);
+        trace rotation(polygone(A,B,D,C),O,-120);
+        label.top(btex $O$ etex,O);
+        label.llft(btex $A$ etex,A);
+        label.ulft(btex $B$ etex,B);
+        label.lrt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.ulft(btex $E$ etex,E);
+        label.top(btex $F$ etex,F);
+        label.bot(btex $G$ etex,G);
+        label.bot(btex $H$ etex,H);
+    \end{Geometrie}
     \begin{enumerate}
-        \item Compléter le programme ci-dessous en remplaçant les pointillés par les bonnes valeurs pour que le losange soit représenté tel qu'il est défini.\\
-        \begin{Scratch}[Echelle=0.7]
-            Place Drapeau;
-            Place Effacer;
-            Place Orienter("90");
-            Place Bloc("Losange");
-        \end{Scratch}
-        \hspace*{10mm}
-        \begin{Scratch}[Echelle=0.7]
-            Place NouveauBloc("Losange");
-            Place PoserStylo;
-            Place Repeter("2");
-            Place Avancer("\dots");
-            Place Tournerd("\dots");
-            Place Avancer("\dots");
-            Place Tournerd("\dots");
-            Place FinBlocRepeter;        
-        \end{Scratch}    
-        \item En utilisant le losange, on souhaite obtenir la rosace suivante.\\
-        \begin{minipage}{0.6\linewidth}
-            Déterminer la transformation géométrique partant du losange et répétée \num{12} fois qui a été utilisée pour obtenir la rosace.    
-        \end{minipage}
-        \begin{minipage}{0.4\linewidth}
-            \begin{Geometrie}[CoinHD={(4u,4u)}]        
-                \enonceTroisiemeGTroisExoQuatorze
-            \end{Geometrie}   
-        \end{minipage}        
-        \item Compléter les pointillés dans le programme ci-dessous et colorier, sur la rosace ci-dessus, le premier losange réalisé par ce programme.\\
-        \begin{Scratch}[Echelle=0.7]
-            Place Drapeau;
-            Place Effacer;
-            Place Orienter("90");
-            Place Repeter("12");
-            Place Bloc("Losange");
-            Place Tournerd("\dots");
-            Place FinBlocRepeter;
-        \end{Scratch}
-    \end{enumerate}   
+        \item Déterminer $EF$ sachant que $AC=\Lg{5.3}$. Justifier.
+        \item Déterminer $\widehat{FGH}$ sachant que $\widehat{ABD}=\ang{89}$. Justifier.
+    \end{enumerate}    
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
     % \phantom{rrr}    
-    Grâce à une interface de codage par blocs, on a représenté ce motif.
-    \scalebox{0.8}{     
-        \begin{Geometrie}[CoinHD={(9u,4u)}]        
-            % trace grille(0.5) withcolor gris;
-            %labeloffset:=labeloffset*1.5;        
-            pair A,B,C,D;
-            A=u*(4,1);
-            B=u*(8,1);
-            C=rotation(A,B,-30);
-            D=rotation(B,A,150);
-            trace polygone(A,B,C,D);
-            marque_s:=2;
-            trace Codelongueur(A,B,B,C,C,D,D,A,2);
-            trace Codeangle(D,C,B,0,btex \ang{150} etex);
-            trace Codeangle(A,D,C,0,btex \ang{30} etex);
-            trace cotationmil(A,B,-3mm,3mm,btex $50$ etex);
-        \end{Geometrie}
-    }
-
-    Pour mémoire sur l'orientation.
-
-    \smallskip
-    \begin{Scratch}[Echelle=0.7]
-        Place Boussole("90");
-    \end{Scratch}
-    
+    $EFGH$ est l'image de $ABCD$ par une rotation de centre $O$.\\
+    \begin{Geometrie}[CoinHD={(8u,5u)}]
+        % trace grille(0.5) withcolor gris;
+        marque_p:="croix";
+        pair O,A,B,C,D,E,F,G,H;
+        O=u*(4.5,1);
+        A=u*(0.5,1);
+        B=u*(1.5,3);
+        C=u*(3.5,0.5);
+        D=rotation(A,B,89);
+        E=rotation(C,O,-120);
+        F=rotation(A,O,-120);
+        G=rotation(B,O,-120);
+        H=rotation(D,O,-120);
+        trace polygone(A,B,D,C);
+        trace Codeangle(A,B,D,0,btex \ang{89} etex);
+        trace appelation(A,C,-3mm,btex \Lg{5.3} etex);
+        pointe(O);
+        trace rotation(polygone(A,B,D,C),O,-120);
+        label.top(btex $O$ etex,O);
+        label.llft(btex $A$ etex,A);
+        label.ulft(btex $B$ etex,B);
+        label.lrt(btex $C$ etex,C);
+        label.urt(btex $D$ etex,D);
+        label.ulft(btex $E$ etex,E);
+        label.top(btex $F$ etex,F);
+        label.bot(btex $G$ etex,G);
+        label.bot(btex $H$ etex,H);
+    \end{Geometrie}
     \begin{enumerate}
-        \item Compléter le programme ci-dessous en remplaçant les pointillés par les bonnes valeurs pour que le losange soit représenté tel qu'il est défini.\\
-        \begin{Scratch}[Echelle=0.7]
-            Place Drapeau;
-            Place Effacer;
-            Place Orienter("90");
-            Place Bloc("Losange");
-        \end{Scratch}
-        \hspace*{10mm}
-        \begin{Scratch}[Echelle=0.7]
-            Place NouveauBloc("Losange");
-            Place PoserStylo;
-            Place Repeter("2");
-            Place Avancer("{\red 50}");
-            Place Tournerd("{\red 30}");
-            Place Avancer("{\red 50}");
-            Place Tournerd("{\red 150}");
-            Place FinBlocRepeter;        
-        \end{Scratch}    
-        \item En utilisant le losange, on souhaite obtenir la rosace suivante.\\
-        \begin{minipage}{0.6\linewidth}
-            Déterminer la transformation géométrique partant du losange et répétée \num{12} fois qui a été utilisée pour obtenir la rosace.\\
-            {\red C'est une rotation de centre le point de départ, ou d'arrivée, du losange, de \ang{30} dans le sens horaire.}
-        \end{minipage}
-        \begin{minipage}{0.35\linewidth}
-            \begin{Geometrie}[CoinHD={(4u,4u)}]        
-                \enonceTroisiemeGTroisExoQuatorze
-                %%% Correction
-                fill A--B--C--D--cycle withcolor red;
-            \end{Geometrie}   
-        \end{minipage} 
-    \end{enumerate}
-    \Coupe
-    \begin{enumerate}
-        \setcounter{enumi}{2}
-        \item Compléter les pointillés dans le programme ci-dessous et colorier, sur la rosace ci-dessus, le premier losange réalisé par ce programme.\\
-        \begin{Scratch}[Echelle=0.7]
-            Place Drapeau;
-            Place Effacer;
-            Place Orienter("90");
-            Place Repeter("12");
-            Place Bloc("Losange");
-            Place Tournerd("{\red 30}");
-            Place FinBlocRepeter;
-        \end{Scratch}
+        \item Déterminer $EF$ sachant que $AC=\Lg{5.3}$. Justifier.\\
+        {\red $[EF]$ est l'image de $[AC]$ par une rotation de centre $O$, or la rotation conserve les longueurs, donc $EF=AC=\Lg{5.3}$.}
+        \item Déterminer $\widehat{FGH}$ sachant que $\widehat{ABD}=\ang{89}$. Justifier.\\
+        {\red $\widehat{FGH}$ est l'image de $\widehat{ABD}$ par une rotation de centre $O$, or la rotation conserve les longueurs, donc $\widehat{FGH}=\widehat{ABD}=\ang{89}$.}
     \end{enumerate}  
 \end{corrige}
 

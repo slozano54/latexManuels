@@ -1,41 +1,138 @@
 \begin{exercice*}
     $(\mathcal{C})$ est un cercle de centre $O$ passant par $A$.
     \begin{enumerate}
-        \item Construire le point $B$, image de $A$ par la rotation de centre $O$ et d'angle \ang{50} dans le sens indiqué sur la figure.
-        \item Construire le point $C$, image de $A$ par la rotation de centre $O$ et d'angle \ang{135} dans le sens indiqué sur la figure.
+        \item Construire le point $A'$ et $D'$, les images de $A$ et $D$ par la rotation de centre $O$, d'angle \ang{70} dans le sens anti-horaire.
+        \item Construire le point $B'$, $C'$ et $E'$, les images de $B$, $C$ et $E$ par la rotation de centre $O$, d'angle \ang{45} dans le sens horaire.
+        \item Décrire la rotation qui transforme $C'$ en $D'$.
+        \item Décrire la rotation qui transforme $B'$ en $A'$.
     \end{enumerate}
     \begin{center}
         \begin{Geometrie}[CoinHD={(7u,6u)}]
-            \enonceTroisiemeGTroisExoNeuf
+            \enonceTroisiemeGTroisExoDix
         \end{Geometrie}
     \end{center}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}        
+    % \phantom{rrr}    
     $(\mathcal{C})$ est un cercle de centre $O$ passant par $A$.
 
     \begin{enumerate}
-        \item Construire le point $B$, image de $A$ par la rotation de centre $O$ et d'angle \ang{50} dans le sens indiqué sur la figure.
-        \item Construire le point $C$, image de $A$ par la rotation de centre $O$ et d'angle \ang{135} dans le sens indiqué sur la figure.
+        \item Construire le point $A'$ et $D'$, les images de $A$ et $D$ par la rotation de centre $O$, d'angle \ang{70} dans le sens anti-horaire.
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction
+                trace rapporteurdouble(O,A,1);        
+                drawoptions(withcolor red);
+                drawarrow arccercle(pointarc(cc,0),pointarc(cc,70),O);
+                label.urt(btex $\ang{70}$ etex, pointarc(cc,35));    
+                pointe(AA);
+                label.urt(btex $A'$ etex, AA);    
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,A);
+                trace demidroite(O,AA);
+                drawoptions();        
+            \end{Geometrie}
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction
+                trace rapporteurdouble(O,D,1);
+                drawoptions(withcolor red);
+                drawarrow arccercle(pointarc(cc,225),pointarc(cc,300),O);
+                label.bot(btex $\ang{70}$ etex, pointarc(cc,260));    
+                pointe(DD);
+                label.llft(btex $D'$ etex, DD);    
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,D);
+                trace demidroite(O,DD);
+                drawoptions();
+            \end{Geometrie}    
+        \item Construire le point $B'$, $C'$ et $E'$, les images de $B$, $C$ et $E$ par la rotation de centre $O$, d'angle \ang{45} dans le sens horaire.
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction
+                trace rapporteurdouble(O,B,-1);
+                drawoptions(withcolor red);
+                drawarrow pointarc(cc,75)..pointarc(cc,52.5)..pointarc(cc,30);
+                label.urt(btex $\ang{45}$ etex, pointarc(cc,52.5));    
+                pointe(BB);
+                label.rt(btex $B'$ etex, BB);    
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,B);
+                trace demidroite(O,BB);
+                drawoptions();
+            \end{Geometrie}
     \end{enumerate}
-    \begin{center}
-        \begin{Geometrie}[CoinHD={(7u,6u)}]
-            \enonceTroisiemeGTroisExoNeuf
-            %%% Correction
-            pair B,C;
-            B=rotation(A,O,50);        
-            C=rotation(A,O,135);
-            drawoptions(withcolor red);
-            pointe(B);
-            pointe(C);
-            drawoptions(dashed evenly withcolor red);
-            trace demidroite(O,B);
-            trace demidroite(O,C);
-            label.top(btex $B$ etex,B);
-            label.top(btex $C$ etex,C);
-            drawoptions();
-        \end{Geometrie}
-    \end{center}
+    \Coupe 
+    \begin{enumerate}            
+        \setcounter{enumi}{2}
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction
+                trace rapporteurdouble(O,C,-1);
+                drawoptions(withcolor red);
+                drawarrow pointarc(cc,150)..pointarc(cc,127.5)..pointarc(cc,105);
+                label.ulft(btex $\ang{45}$ etex, pointarc(cc,127.5));    
+                pointe(CC);
+                label.urt(btex $C'$ etex, CC);
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,C);
+                trace demidroite(O,CC);
+                drawoptions();
+            \end{Geometrie}
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction
+                trace rapporteurdouble(O,E,-1);
+                drawoptions(withcolor red);
+                drawarrow pointarc(cc,300)..pointarc(cc,277.5)..pointarc(cc,255);
+                label.bot(btex $\ang{45}$ etex, pointarc(cc,277.5));    
+                pointe(EE);
+                label.lrt(btex $E'$ etex, EE);
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,E);
+                trace demidroite(O,EE);
+                drawoptions();
+            \end{Geometrie}
+            \item Décrire la rotation qui transforme $C'$ en $D'$.\\
+        {\red Rotation de centre $O$ d'angle \ang{170} dans le sens horaire.}\\
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction    
+                drawoptions(withcolor red);
+                drawarrow pointarc(cc,105)..pointarc(cc,20)..pointarc(cc,-65);
+                label.rt(btex $\ang{170}$ etex, pointarc(cc,20));    
+                pointe(CC,DD);
+                label.urt(btex $C'$ etex, CC);
+                label.llft(btex $D'$ etex, DD);
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,CC);
+                trace demidroite(O,DD);
+                drawoptions();
+                trace rapporteurdouble(O,CC,-1);
+            \end{Geometrie}
+    \end{enumerate}
+    \Coupe 
+    \begin{enumerate}            
+        \setcounter{enumi}{3}            
+        \item Décrire la rotation qui transforme $B'$ en $A'$.\\
+        {\red Rotation de centre $O$ d'angle \ang{40} dans le sens anti-horaire.}\\
+            \begin{Geometrie}[CoinHD={(7u,6u)}]    
+                \enonceTroisiemeGTroisExoDix
+                %%% Correction    
+                drawoptions(withcolor red);
+                drawarrow pointarc(cc,30)..pointarc(cc,50)..pointarc(cc,70);
+                label.rt(btex $\ang{40}$ etex, pointarc(cc,50));    
+                pointe(AA,BB);
+                labeloffset:=labeloffset*1.5;
+                label.urt(btex $A'$ etex, AA);
+                label.rt(btex $B'$ etex, BB);
+                drawoptions(dashed evenly withcolor red);
+                trace demidroite(O,AA);
+                trace demidroite(O,BB);
+                drawoptions();
+                trace rapporteurdouble(O,BB,1);
+            \end{Geometrie}
+    \end{enumerate}    
 \end{corrige}
 

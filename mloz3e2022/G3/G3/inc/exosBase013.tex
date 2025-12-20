@@ -1,87 +1,145 @@
-\begin{exercice*}
-    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
-    \begin{center}
-        \begin{Geometrie}[CoinHD={(9u,7u)}]        
-            \enonceTroisiemeGTroisExoTreize
+\begin{exercice*}[D'après DNB]
+    Grâce à une interface de codage par blocs, on a représenté ce motif.\\
+    \scalebox{0.8}{     
+        \begin{Geometrie}[CoinHD={(9u,4u)}]        
+            % trace grille(0.5) withcolor gris;
+            %labeloffset:=labeloffset*1.5;        
+            pair A,B,C,D;
+            A=u*(4,1);
+            B=u*(8,1);
+            C=rotation(A,B,-30);
+            D=rotation(B,A,150);
+            trace polygone(A,B,C,D);
+            marque_s:=2;
+            trace Codelongueur(A,B,B,C,C,D,D,A,2);
+            trace Codeangle(D,C,B,0,btex \ang{150} etex);
+            trace Codeangle(A,D,C,0,btex \ang{30} etex);
+            trace cotationmil(A,B,-3mm,3mm,btex $50$ etex);
         \end{Geometrie}
-    \end{center}
+    }
+
+    \pagebreak
+    Pour mémoire sur l'orientation.
+
+    \smallskip
+    \begin{Scratch}[Echelle=0.7]
+        Place Boussole("90");
+    \end{Scratch}
+    
     \begin{enumerate}
-        \item Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
-        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
-        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
-        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
-    \end{enumerate}
+        \item Compléter le programme ci-dessous en remplaçant les pointillés par les bonnes valeurs pour que le losange soit représenté tel qu'il est défini.\\
+        \begin{Scratch}[Echelle=0.7]
+            Place Drapeau;
+            Place Effacer;
+            Place Orienter("90");
+            Place Bloc("Losange");
+        \end{Scratch}
+        \hspace*{10mm}
+        \begin{Scratch}[Echelle=0.7]
+            Place NouveauBloc("Losange");
+            Place PoserStylo;
+            Place Repeter("2");
+            Place Avancer("\dots");
+            Place Tournerd("\dots");
+            Place Avancer("\dots");
+            Place Tournerd("\dots");
+            Place FinBlocRepeter;        
+        \end{Scratch}    
+        \item En utilisant le losange, on souhaite obtenir la rosace suivante.\\
+        \begin{minipage}{0.6\linewidth}
+            Déterminer la transformation géométrique partant du losange et répétée \num{12} fois qui a été utilisée pour obtenir la rosace.    
+        \end{minipage}
+        \begin{minipage}{0.4\linewidth}
+            \begin{Geometrie}[CoinHD={(4u,4u)}]        
+                \enonceTroisiemeGTroisExoQuatorze
+            \end{Geometrie}   
+        \end{minipage}        
+        \item Compléter les pointillés dans le programme ci-dessous et colorier, sur la rosace ci-dessus, le premier losange réalisé par ce programme.\\
+        \begin{Scratch}[Echelle=0.7]
+            Place Drapeau;
+            Place Effacer;
+            Place Orienter("90");
+            Place Repeter("12");
+            Place Bloc("Losange");
+            Place Tournerd("\dots");
+            Place FinBlocRepeter;
+        \end{Scratch}
+    \end{enumerate}   
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    % \phantom{rrr}
-    Soit la rotation de centre $O$, d'angle \ang{60}, dans le sens inverse des aiguilles d'une montre.
+    % \phantom{rrr}    
+    Grâce à une interface de codage par blocs, on a représenté ce motif.
+    \scalebox{0.8}{     
+        \begin{Geometrie}[CoinHD={(9u,4u)}]        
+            % trace grille(0.5) withcolor gris;
+            %labeloffset:=labeloffset*1.5;        
+            pair A,B,C,D;
+            A=u*(4,1);
+            B=u*(8,1);
+            C=rotation(A,B,-30);
+            D=rotation(B,A,150);
+            trace polygone(A,B,C,D);
+            marque_s:=2;
+            trace Codelongueur(A,B,B,C,C,D,D,A,2);
+            trace Codeangle(D,C,B,0,btex \ang{150} etex);
+            trace Codeangle(A,D,C,0,btex \ang{30} etex);
+            trace cotationmil(A,B,-3mm,3mm,btex $50$ etex);
+        \end{Geometrie}
+    }
 
-    \hspace*{-15mm}
-    \begin{Geometrie}[CoinHD={(9u,7u)}]        
-        \enonceTroisiemeGTroisExoTreize
-        %%% Correction
-        trace cc withcolor blue;
-        pair AA,BB,CC,DD,EE;
-        AA=rotation(A,O,60);
-        BB=rotation(B,O,60);
-        CC=rotation(C,O,60);
-        DD=rotation(D,O,60);
-        EE=rotation(E,O,60);
-        pointe(AA,BB,CC,DD,EE);        
-        label.ulft(btex $A_1$ etex,AA);
-        label.llft(btex $B_1$ etex,BB);
-        label.rt(btex $C_1$ etex,CC);
-        label.urt(btex $D_1$ etex,DD);
-        label.llft(btex $E_1$ etex,EE);
-        trace droite(C,E) dashed evenly withcolor red;
-        trace droite(CC,EE) dashed evenly withcolor red;
-        path ccc;
-        ccc = cercles(O,.5*u);
-        drawoptions(withcolor DarkGreen);
-        drawarrow pointarc(ccc,60)..pointarc(ccc,90)..pointarc(ccc,120);
-        label.top(btex $\ang{60}$ etex, pointarc(ccc,90));
-        drawoptions(dashed evenly withcolor DarkGreen);
-        trace segment(O,A);
-        trace segment(O,AA);
-        %%%
-        drawoptions(withcolor (0.9,0.6,0.1));
-        drawarrow pointarc(ccc,180)..pointarc(ccc,210)..pointarc(ccc,240);
-        label.llft(btex $\ang{60}$ etex, pointarc(ccc,210));
-        drawoptions(dashed evenly withcolor (0.9,0.6,0.1));
-        trace segment(O,B);
-        trace segment(O,BB);
-        %%%
-        drawoptions(withcolor (0,1,1));
-        drawarrow pointarc(ccc,270)..pointarc(ccc,300)..pointarc(ccc,330);
-        label.lrt(btex $\ang{60}$ etex, pointarc(ccc,300));
-        drawoptions(dashed evenly withcolor (0,1,1));
-        trace segment(O,C);
-        trace segment(O,CC);
-        %%%
-        drawoptions(withcolor (1,0,1));
-        drawarrow D..rotation(D,O,30)..DD;
-        label.urt(btex $\ang{60}$ etex, rotation(D,O,30));
-        drawoptions(dashed evenly withcolor (1,0,1));
-        trace segment(O,D);
-        trace segment(O,DD);
-        %%%
-        drawoptions(withcolor black);
-        drawarrow E..rotation(E,O,30)..EE;
-        label.urt(btex $\ang{60}$ etex, rotation(E,O,30));
-        drawoptions(dashed evenly withcolor black);
-        trace segment(O,E);
-        trace segment(O,EE);
-    \end{Geometrie}
+    Pour mémoire sur l'orientation.
 
+    \smallskip
+    \begin{Scratch}[Echelle=0.7]
+        Place Boussole("90");
+    \end{Scratch}
+    
     \begin{enumerate}
-        \item {\red Construction}%Construire $A_1$, $B_1$, $C_1$, $D_1$ et $E_1$, les images respectives des points $A$, $B$, $C$, $D$ et $E$ par la rotation décrite ci-dessus.
-        \item $A$ et $B$ sont sur le cercle de centre $O$ et passant par $A$. Faire une déduction sur leurs images.
-        {\red Leurs images sont sur ce même cercle.}
-        \item $C$ et $E$ appartiennent à la droite $(OA)$. Faire une déduction sur leurs images.
-        {\red Leurs images sont sur la droite $(OA_1)$, image de $(OA)$.}
-        \item $C$, $D$ et $E$ sont alignés. Faire une déduction sur leurs images.
-        {\red Leurs images sont également alignés.}
+        \item Compléter le programme ci-dessous en remplaçant les pointillés par les bonnes valeurs pour que le losange soit représenté tel qu'il est défini.\\
+        \begin{Scratch}[Echelle=0.7]
+            Place Drapeau;
+            Place Effacer;
+            Place Orienter("90");
+            Place Bloc("Losange");
+        \end{Scratch}
+        \hspace*{10mm}
+        \begin{Scratch}[Echelle=0.7]
+            Place NouveauBloc("Losange");
+            Place PoserStylo;
+            Place Repeter("2");
+            Place Avancer("{\red 50}");
+            Place Tournerd("{\red 30}");
+            Place Avancer("{\red 50}");
+            Place Tournerd("{\red 150}");
+            Place FinBlocRepeter;        
+        \end{Scratch}    
+        \item En utilisant le losange, on souhaite obtenir la rosace suivante.\\
+        \begin{minipage}{0.6\linewidth}
+            Déterminer la transformation géométrique partant du losange et répétée \num{12} fois qui a été utilisée pour obtenir la rosace.\\
+            {\red C'est une rotation de centre le point de départ, ou d'arrivée, du losange, de \ang{30} dans le sens horaire.}
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            \begin{Geometrie}[CoinHD={(4u,4u)}]        
+                \enonceTroisiemeGTroisExoQuatorze
+                %%% Correction
+                fill A--B--C--D--cycle withcolor red;
+            \end{Geometrie}   
+        \end{minipage} 
     \end{enumerate}
+    \Coupe
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Compléter les pointillés dans le programme ci-dessous et colorier, sur la rosace ci-dessus, le premier losange réalisé par ce programme.\\
+        \begin{Scratch}[Echelle=0.7]
+            Place Drapeau;
+            Place Effacer;
+            Place Orienter("90");
+            Place Repeter("12");
+            Place Bloc("Losange");
+            Place Tournerd("{\red 30}");
+            Place FinBlocRepeter;
+        \end{Scratch}
+    \end{enumerate}  
 \end{corrige}
 
