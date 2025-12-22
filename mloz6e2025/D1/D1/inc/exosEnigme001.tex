@@ -1,17 +1,125 @@
 % Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
 % si on veut mettre plusieurs enigmes
 \refstepcounter{exercice}
-\numeroteEnigme
-\begin{enigme}
-    Trouveras-tu un chemin de multiples entre les cases colorées ?
+% \numeroteEnigme
+\begin{enigme}[Quelques activités de fin de chapitre sur les probabilités]
+    \vspace*{-5mm}
+    \subsection*{Règles du jeu}
+    \vspace*{-9mm}
+    \begin{itemize}
+        \item Chaque élève reçoit cette fiche et un crayon.
+        \item Le jeu se compose de 3 défis à réaliser \textbf{en dessinant ou en cochant des cases}.
+        \item Pour chaque défi, suivez les instructions et répondez aux questions.
+        \item À la fin, comparez vos résultats avec ceux de vos camarades.
+    \end{itemize}
+    \vspace*{-5mm}
+    \subsection*{Défi 1 : Simulation de lancer de pièce}
+    \vspace*{-9mm}
+    \begin{enumerate}
+        \item \textbf{Simulez 20 lancers de pièce} en utilisant la méthode suivante :
+              \begin{itemize}
+                  \item Fermez les yeux et pointez au hasard sur le tableau ci-dessous.
+                  \item Si vous pointez sur "Pile", notez un "P" dans le tableau des résultats.
+                  \item Si vous pointez sur "Face", notez un "F".
+              \end{itemize}
 
-    Sans labytinthe pour tester !
+              \begin{center}
+                  \begin{tabular}{|c|c|}
+                      \hline
+                      \textbf{\Huge Pile} & \textbf{\Huge Face} \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+
+        \item \textbf{Tableau des résultats} :
+              \begin{center}
+                  \begin{tabular}{|*{21}{c|}}
+                      \hline
+                      \textbf{Lancer}   & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} & \textbf{13} & \textbf{14} & \textbf{15} & \textbf{16} & \textbf{17} & \textbf{18} & \textbf{19} & \textbf{20} \\
+                      \hline
+                      \textbf{Résultat} &            &            &            &            &            &            &            &            &            &             &             &             &             &             &             &             &             &             &             &             \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+              \medskip
+        \item Comptez le nombre de "P" et de "F". Que constatez-vous ?
+    \end{enumerate}
+    \vspace*{-5mm}
+    \subsection*{Défi 2 : Simulation de lancer de dé}
+    \vspace*{-9mm}
+    \begin{enumerate}
+        \item \textbf{Simulez 15 lancers de dé} en utilisant la méthode suivante :
+              \begin{itemize}
+                  \item Dessinez un dé à 6 faces sur votre feuille.
+                  \item Fermez les yeux et pointez au hasard sur une face.
+                  \item Notez le numéro pointé dans le tableau ci-dessous.
+              \end{itemize}
+
+        \item \textbf{Tableau des résultats} :
+              \begin{center}
+                  \begin{tabular}{|*{16}{c|}}
+                      \hline
+                      \textbf{Lancer}   & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+                      \hline
+                      \textbf{Résultat} &   &   &   &   &   &   &   &   &   &    &    &    &    &    &    \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+              \medskip
+        \item Quel numéro est sorti le plus souvent ? Pourquoi ?
+    \end{enumerate}
+    \vspace*{-5mm}
+    \subsection*{Défi 3 : Événements certains, impossibles ou aléatoires}
+    \vspace*{-9mm}
+    \begin{enumerate}
+        \item Pour chaque situation, indiquez si l'événement est \textbf{certain}, \textbf{impossible} ou \textbf{aléatoire} :
+              \begin{itemize}
+                  \item Obtenir un 7 en lançant un dé à 6 faces : \pointilles[20mm]
+                  \item Obtenir un nombre entre 1 et 6 en lançant un dé à 6 faces : \pointilles[20mm]
+                  \item Obtenir "Pile" en lançant une pièce : \pointilles[20mm]
+                  \item Obtenir un 3 en lançant un dé à 4 faces : \pointilles[20mm]
+              \end{itemize}
+    \end{enumerate}
+    \vspace*{-5mm}
+    \subsection*{Bilan}
+    \vspace*{-5mm}
+    Répondez aux questions suivantes :
+    \begin{itemize}
+        \item Pourquoi dit-on que ces expériences sont aléatoires ?
+        \item Avez-vous obtenu les mêmes résultats que vos camarades ? Pourquoi ?
+    \end{itemize}
 \end{enigme}
-  
+
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
 \addtocounter{exercice}{-1}
 \begin{corrige}
-    N1 - Correction enigme de la fin de la partie cours.  
+    \setcounter{subsection}{0}
+    \subsection*{Défi 1}
+    \begin{enumerate}
+        \item \textbf{Tableau des résultats} : Les résultats varient selon les élèves, mais on s’attend à obtenir environ 10 "P" et 10 "F" sur 20 lancers (car la probabilité de "Pile" ou "Face" est de 1/2).
+        \item \textbf{Question} : On constate que les résultats sont proches de 10 "P" et 10 "F", mais pas exactement égaux. Cela illustre la variabilité des expériences aléatoires.
+    \end{enumerate}
+    \Coupe
+    \subsection*{Défi 2}
+    \begin{enumerate}
+        \item \textbf{Tableau des résultats} : Les résultats varient, mais chaque face (1 à 6) devrait apparaître environ 2 ou 3 fois sur 15 lancers (car la probabilité de chaque face est de 1/6).
+        \item \textbf{Question} : Le numéro qui sort le plus souvent dépend du hasard. Sur un grand nombre de lancers, chaque face devrait sortir à peu près le même nombre de fois.
+    \end{enumerate}
 
-    Sans labytinthe pour tester !
+    \subsection*{Défi 3}
+    \begin{itemize}
+        \item Obtenir un 7 en lançant un dé à 6 faces : \textbf{impossible} (un dé à 6 faces ne peut pas donner 7).
+        \item Obtenir un nombre entre 1 et 6 en lançant un dé à 6 faces : \textbf{certain} (toutes les faces du dé sont comprises entre 1 et 6).
+        \item Obtenir "Pile" en lançant une pièce : \textbf{aléatoire} (il y a une chance sur deux d'obtenir "Pile").
+        \item Obtenir un 3 en lançant un dé à 4 faces : \textbf{aléatoire} (le dé a 4 faces, donc il y a une chance sur quatre d'obtenir 3).
+    \end{itemize}
+
+    \subsection*{Bilan}
+    \begin{itemize}
+        \item \textbf{Pourquoi dit-on que ces expériences sont aléatoires ?}
+              \\ On ne peut pas prévoir le résultat à l'avance. Chaque expérience (lancer de pièce ou de dé) a plusieurs résultats possibles, et le résultat obtenu dépend du hasard.
+
+        \item \textbf{Avez-vous obtenu les mêmes résultats que vos camarades ? Pourquoi ?}
+              \\ Non, les résultats varient d’un élève à l’autre car les expériences sont aléatoires. Cependant, si on répète un grand nombre de fois la même expérience, les résultats se rapprochent des probabilités théoriques (par exemple, environ 1/2 de "Pile" pour une pièce).
+    \end{itemize}
 \end{corrige}

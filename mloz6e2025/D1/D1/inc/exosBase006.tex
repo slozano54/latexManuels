@@ -1,7 +1,46 @@
-\begin{exercice*}[Exercice* avec correction]
-    Prouver que $2=2$
+\begin{exercice*}
+    On écrit sur les faces d’un dé équilibré à six faces, chacune des lettres du mot : NOTOUS. On lance le dé et on regarde la lettre inscrite sur la face supérieure.
+    \begin{enumerate}
+       \item Quelles sont les issues de cette expérience ?
+       \item Déterminer la probabilité des évènements suivants :
+       \begin{enumerate}
+          \item $E_1$ : \og On obtient la lettre O. \fg
+          \item $E_2$ : \og On obtient une consonne. \fg
+          \item $E_3$ : \og On obtient une lettre du mot KIWI. \fg
+          \item $E_4$ : \og On obtient une lettre du mot CAGOUS. \fg
+       \end{enumerate}
+       \item Graduer un axe et y placer les probabilités des évènements précédents.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
-    BaseSérie2 - On sait que $1=1$ avec l’exercice précédent donc $1+1=1+1$,
-    c’est-à-dire $2=2$.
-\end{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}
+    \ \\ [-5mm]
+    \begin{enumerate}
+       \item Les issues possibles sont les lettres {\red N, O, T, U, S}
+       \item
+       \begin{enumerate}
+          \item $E_1=\{\text{O}\}$ (lettre double) donc, $\red P(E_1) =\dfrac26$
+          \item  $E_2=\{\text{N, T, S}\}$ donc, $\red P(E_2) =\dfrac36$
+          \item  $E_3=\{\varnothing\}$ donc, $\red P(E_3) =\dfrac06 =0$
+          \item  $E_4=\{\text{O, U, S}\}$ donc, $\red P(E_4) =\dfrac46$
+       \end{enumerate}
+       \setcounter{enumi}{2}
+       \item Axe de graduation : \\
+       \begin{pspicture}(0.7,-0.5)(8,0.9)
+          \psline{->}(0.3,0)(7.7,0)
+          \rput(4,0){|}
+          \footnotesize
+          \rput{90}(0.1,0){impossible}
+          \rput{90}(7.9,0){certain}
+          \rput(1.2,0.3){improbable}
+          \rput(3,0.3){peu probable}
+          \rput(4.8,0.3){probable}
+          \rput(6.5,0.3){très probable}
+          \rput(3.5,-0.5){\red $E_1$}
+          \rput(4.5,-0.5){\red $E_2$}
+          \rput(0.5,-0.5){\red $E_3$}
+          \rput(5.5,-0.5){\red $E_4$}
+       \end{pspicture}
+    \end{enumerate}
+\end{corrige}    
