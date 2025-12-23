@@ -1,0 +1,52 @@
+\begin{exercice*}
+   Sur la figure suivante : \\
+   \begin{center}
+      \begin{Geometrie}[CoinBG={u*(-2,-5)},CoinHD={u*(6,0)}]
+         pair A,B,C,D,E,F,G,H,I,J;
+         path d[];
+         A=u*(0,-1);
+         H-A=u*(-1,0);
+         B-A=u*(2,0);
+         C-A=u*(5,0);
+         D-A=u*(1.7,-1.5);
+         F=1.3[A,D];
+         d1=droite(A,D);
+         d2=droite(C,F);         
+         d3=droite(B,D);
+         E=d3 intersectionpoint d2;
+         J=1.5[B,E];
+         I=1.5[C,E];
+         G=1.8[A,F];
+         trace droite(A,C);
+         trace d1;
+         trace d2;
+         trace d3;
+         marque_p:="croix";
+         u:=u/2;
+         pointe(H,I,J,G);
+         u:=u*2;
+         labeloffset:=labeloffset*1.5;
+         label.urt(TEX("$A$"),A);
+         label.ulft(TEX("$B$"),B);
+         label.top(TEX("$C$"),C);
+         label.urt(TEX("$D$"),D);
+         label.ulft(TEX("$E$"),E);
+         label.bot(TEX("$F$"),F);
+         label.urt(TEX("$G$"),G);
+         label.bot(TEX("$H$"),H);
+         label.ulft(TEX("$I$"),I);
+         label.rt(TEX("$J$"),J);
+      \end{Geometrie}
+      \begin{enumerate}
+         \item Colorier en vert l'angle $\widehat{ADB}$.
+         \item Colorier en rouge l'angle $\widehat{CFA}$.
+         \item Colorier en noir l'angle $\widehat{DEF}$.
+         \item Colorier en bleu l'angle $\widehat{BCF}$.
+         \item Donner d'autres noms à l'angle $\widehat{DFE}$.
+         \item Donner d'autres noms à l'angle $\widehat{BEC}$.
+      \end{enumerate}
+   \end{center}
+\end{exercice*}
+\begin{corrige}
+  Pas de correction
+\end{corrige}

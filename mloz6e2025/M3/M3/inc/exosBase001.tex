@@ -1,0 +1,73 @@
+\begin{exercice*}
+   Utiliser les figures ci-dessous pour compléter le tableau.
+   \begin{center}
+      \begin{Geometrie}[CoinBG={u*(-3,-4)},CoinHD={u*(6,5)}]
+         % marque_a:=marque_a/3;
+         % marque_ang:=marque_ang/2;
+         pair A,B,C,D,E,F,G,H,J,K,L;
+         A=u*(-1,0);
+         B-A=u*(2,1);
+         C-A=u*(3,0.2);
+         trace segment(A,1.2[A,B]);
+         trace segment(A,1.2[A,C]);
+         trace Codeangle(C,A,B,0,TEX("\ding{172}"));
+         D-A=u*(-1,-2);
+         E-D=u*(3,1);
+         G-D=u*(1,0);
+         F-D=u*(5,0);
+         H-F=u*(0,-1.5);
+         trace segment(D,1.2[D,E]);
+         trace segment(D,1.2[D,F]);
+         trace segment(G,1.2[G,H]);
+         trace Codeangle(F,D,E,0,TEX("\ding{173}"));
+         trace Codeangle(H,G,F,0,TEX("\ding{174}"));
+         J-E=u*(1,0);
+         K-J=u*(3,0.4);
+         L-K=u*(-1,1.5);
+         trace polygone(J,K,L);
+         marque_a:=marque_a/2;
+         trace Codeangle(K,J,L,0,TEX("\ding{175}"));
+         trace Codeangle(L,K,J,0,TEX("\ding{176}"));
+         trace Codeangle(J,L,K,0,TEX("\ding{177}"));
+         marque_p:="croix";
+          u:=u/2;
+         pointe(B,C,E,F,H);
+          u:=u*2;
+         label.llft(TEX("$A$"),A);
+         label.ulft(TEX("$B$"),B);
+         label.top(TEX("$C$"),C);
+         label.lft(TEX("$D$"),D);
+         label.top(TEX("$E$"),E);
+         label.bot(TEX("$F$"),F);
+         label.llft(TEX("$G$"),G);
+         label.bot(TEX("$H$"),H);
+         label.llft(TEX("$J$"),J);
+         label.lrt(TEX("$K$"),K);
+         label.top(TEX("$L$"),L);
+      \end{Geometrie}
+
+      \smallskip
+      {\renewcommand{\arraystretch}{1.2}
+      \begin{tabular}{|*{4}{>{\centering\arraybackslash}m{0.18\linewidth}|}}
+         \hline
+         \rowcolor{LightGray}Angle & nom & sommet & côtés \\
+         \hline
+         \ding{172} & & & \\
+         \hline
+         \ding{173} & & & \\
+         \hline
+         \ding{174} & & & \\
+         \hline
+         \ding{175} & & & \\
+         \hline
+         \ding{176} & & & \\
+         \hline
+         \ding{177} & & & \\
+         \hline
+      \end{tabular}
+      }
+   \end{center}
+\end{exercice*}
+\begin{corrige}
+  Pas de correction
+\end{corrige}
