@@ -1,0 +1,74 @@
+\begin{activite}[Tracer des cercles avec GeoGebra]
+  {\bf Objectif :} construire un point ; un cercle ; une figure complexe avec un logiciel de géométrie dynamique.
+     Ouvrir Geogebra et choisir l'onglet \textbf{Géométrie}.     
+     \partie[placer un point et le renommer]
+        Dans la barre d'outils, sélectionner le menu relatif aux points :
+        \scalebox{0.6}{
+        \begin{pspicture}(-0.5,-0.5)(0.5,0)
+           \psframe[framearc=0.2,linecolor=lightgray](-0.5,-0.5)(0.5,0.5)
+           \psdot[linecolor=blue,linewidth=0.6mm](-0.15,-0.15)   
+           \rput(0.15,0.15){\blue A}
+        \end{pspicture}
+         }
+
+        Choisir l'item \og Point \fg{} puis cliquer sur l'écran, que se passe-t-il ?
+        \par\pointilles
+
+        Déplacer le point grâce à l'outil \og Déplacer \fg :
+        \scalebox{0.6}{
+        \begin{pspicture}(-0.5,-0.1)(0.5,.5)
+           \psframe[framearc=0.2,linecolor=lightgray](-0.5,-0.5)(0.5,0.5)
+           \pspolygon(0.15,-0.35)(0.26,-0.28)(0.01,0.1)(0.2,0.12)(-0.2,0.34)(-0.2,-0.12)(-0.1,0.03)
+        \end{pspicture}
+         }
+
+        Faire un clic droit sur le point et choisir \og Propriétés \fg. Changer le nom du point en $O$.     
+     \partie[tracer un cercle]
+        Dans la barre d'outils, sélectionner le menu relatif aux cercles :
+        \scalebox{0.6}{
+        \begin{pspicture}(-0.5,-0.5)(0.5,0)
+           \psframe[framearc=0.2,linecolor=lightgray](-0.5,-0.5)(0.5,0.5)
+           \psdots[linecolor=blue](0,0)(0.3;60)
+           \pscircle(0,0){0.3}       
+        \end{pspicture}
+        }. Que contient ce menu ?
+        \par\pointilles
+        \par\pointilles
+        \par\pointilles
+        \par\pointilles
+
+        Il existe trois façons de tracer un cercle :
+        \vspace*{-5mm}
+        \begin{center}
+           % \newcolumntype{M}{>{\itshape\footnotesize}p{5cm}}
+           \hspace*{-10mm}
+           {\footnotesize
+           \begin{tabular}{|p{0.45\linewidth}|p{0.2\linewidth}|>{\itshape}p{0.45\linewidth}|}
+              \hline
+              Instructions & outil du menu & action \\
+              \hline
+              \multicolumn{3}{c}{On a le {\bf centre} et un {\bf point} du cercle} \\
+              \hline
+              Placer un point O sur l'écran & Point & placer le point sur l'écran puis changer son nom \\
+              Placer un point A sur l'écran & Point & placer le point sur l'écran puis changer son nom \\
+              Tracer le cercle de centre O passant par A & Cercle\newline(centre-point) & sélectionner O, puis A \\
+              Faire bouger A et O & Déplacer & sélectionner O ou A et les faire bouger \\
+              \hline
+              \multicolumn{3}{c}{On a le {\bf centre} et le {\bf rayon} du cercle} \\
+              \hline
+              Placer un point B sur l'écran & & \\
+              Tracer le cercle de centre B de rayon \ucm{3} & Cercle\newline(centre-rayon) & sélectionner B, puis entrer la valeur du rayon \\
+              Faire bouger B & & \\
+              \hline
+              \multicolumn{3}{c}{On a {\bf trois points} du cercle} \\
+              \hline
+              Placer trois points C, L et E & Point & \\
+              Tracer le cercle passant par C, L et E & Cercle (passant\newline par trois points) & sélectionner successivement, C, L et E \\
+              \hline
+           \end{tabular}
+           }
+        \end{center} \medskip
+    
+     \partie[défi !!!]
+        Dessiner un bonhomme de neige : il est tout à fait possible d'explorer les autres menus de GeoGebra et de faire preuve de créativité. Le menu propriétés (clic droit) permet de colorier la figure ou de la remplir de motifs. \medskip
+\end{activite}

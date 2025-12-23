@@ -1,0 +1,59 @@
+\begin{exercice*}
+   Compléter les phrases avec les mots suivants : 
+   \begin{center}
+      \fbox{cercle} - \fbox{corde} - \raisebox{0.5ex}{\fbox{rayon}} - \fbox{centre}
+      
+      \fbox{diamètre} - \fbox{milieu}
+   \end{center}
+   \begin{itemize}
+      \item Le \makebox[0.3\linewidth]{\dotfill} ($\mathcal{C}_1$) de \makebox[0.3\linewidth]{\dotfill} $E$ \\
+         passe par les points $A, B, C, D$ et $F$.
+      \item Le segment $[EF]$ est un \makebox[0.3\linewidth]{\dotfill} de ce cercle.
+      \item Le segment $[AC]$ est une \makebox[0.3\linewidth]{\dotfill} de ce cercle.
+      \item $E$ est le \makebox[0.3\linewidth]{\dotfill} du \makebox[0.3\linewidth]{\dotfill} $[AD]$.
+   \end{itemize}
+   \begin{center}
+   \psset{unit=1}
+   \begin{pspicture}(-2,-2.3)(2,2.5)
+      \pstGeonode[PointSymbol=none,PosAngle={-135,80,140,220,-60,-40}]{E}(2;80){B}(2;140){A}(2;220){C}(2;-60){F}(2;-40){D}
+      \pstCircleOA{E}{A}
+      \pstSegmentMark{E}{A}
+      \pstSegmentMark{E}{B}
+      \pstSegmentMark{E}{D}
+      \pstSegmentMark{E}{F}
+      \pstLineAB{B}{C}
+      \pstLineAB{A}{C}
+      \rput(2.5;40){($\mathcal{C}_1$)}
+   \end{pspicture}
+   \end{center}
+\end{exercice*}
+ \begin{corrige}
+   Compléter les phrases avec les mots suivants :
+   \begin{center}
+      \fbox{cercle} - \fbox{corde} - \raisebox{0.5ex}{\fbox{rayon}} - \fbox{centre}
+      
+      \fbox{diamètre} - \fbox{milieu}
+   \end{center}
+   \begin{itemize}
+      \item Le {\red \fbox{cercle}} de {\red \fbox{centre}} $E$ \\
+         passe par les points $A, B, C, D$ et $F$.
+      \item Le segment $[EF]$ est un {\red \fbox{rayon}} de ce cercle.
+      \item Le segment $[AC]$ est une {\red \fbox{corde}} de ce cercle.
+      \item $E$ est le {\red \fbox{milieu}} du {\red \fbox{diamètre}} $[AD]$.
+   \end{itemize}
+   \begin{center}
+   \psset{unit=0.75}
+   \begin{pspicture}(-2,-2.3)(2,2.5)
+      \pstGeonode[PointSymbol=none,PosAngle={-135,80,140,220,-60,-40}]{E}(2;80){B}(2;140){A}(2;220){C}(2;-60){F}(2;-40){D}
+      \pstCircleOA{E}{A}
+      \pstSegmentMark{E}{A}
+      \pstSegmentMark{E}{B}
+      \pstSegmentMark{E}{D}
+      \pstSegmentMark{E}{F}
+      \pstLineAB{B}{C}
+      \pstLineAB{A}{C}
+      \rput(2.5;40){($\mathcal{C}_1$)}
+   \end{pspicture}
+   \end{center}
+ \end{corrige}
+ 
