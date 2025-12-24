@@ -1,0 +1,40 @@
+\begin{exercice*}
+   $ABC$ est un triangle rectangle en $A$, et $H$ est le pied de la hauteur issue de $A$. Quelle est la distance en centimètres :
+   \begin{enumerate}
+      \item du point $A$ à la droite $(BC)$ ?
+      \item du point $B$ à la droite $(AC)$ ?
+      \item du point $B$ à la droite $(AH)$ ?
+      \item du point $C$ à la droite $(AB)$ ?
+      \item du point $C$ à la droite $(AH)$ ?
+   \end{enumerate}
+   \begin{center}
+      \scalebox{0.8}{
+      \begin{Geometrie}
+         pair A,B,C,H;
+         A=u*(1,1);
+         B-A=u*(0,4.5);
+         C-A=u*(6,0);
+         H=projection(A,B,C);
+         trace A--B--C--A;
+         trace A--H;
+         trace codeperp(C,A,B,8);
+         trace codeperp(A,H,C,8);
+         trace appelation(A,H,3mm,btex \Lg[cm]{3.4} etex);
+         trace appelation(A,B,3mm,btex \Lg[cm]{4.5} etex);
+         trace appelation(A,C,-3mm,btex \Lg[cm]{6} etex);
+         trace cotationmil(B,H,5mm,20,btex \Lg[cm]{2.7} etex);
+         trace cotationmil(H,C,5mm,20,btex \Lg[cm]{4.8} etex);
+         label.llft(btex A etex,A);
+         label.ulft(btex B etex,B);
+         label.lrt(btex C etex,C);
+         labeloffset:=2*labeloffset;
+         label.lft(btex H etex,H);
+      \end{Geometrie}
+      }
+   \end{center}
+\end{exercice*}
+\begin{corrige}
+  Pas de correction.
+\end{corrige}
+
+ 
