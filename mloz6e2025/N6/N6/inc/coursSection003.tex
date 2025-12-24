@@ -1,0 +1,52 @@
+\section{Calcul posé en colonnes}
+
+\begin{methode}[Multiplication posée en colonnes]
+   Pour multiplier deux nombres décimaux :
+   \begin{itemize}
+      \item on effectue la multiplication sans tenir compte des virgules ;
+      \item on place la virgule en faisant en sorte que la somme du nombre de décimales dans les deux facteurs soit égale au nombre de décimales dans le résultat.
+   \end{itemize}
+   L'ordre des facteurs n'a pas d'importance mais il est préférable de mettre celui qui a le plus de chiffres au-dessus.
+   \exercice
+      Calculer $27,89\times8,7$
+   \correction
+      {\psset{yunit=0.5}
+      \begin{pspicture}(-0.5,0)(8,6.5)
+         \rput[r](2,5.7){\blue\tiny +2\quad\;+6\quad\;+7\quad\;+7\qquad\;}
+         \rput[r](2,5.2){\red\tiny +1\quad\;+5\quad\;+6\quad\;+6\qquad\;}
+         \rput[r](2.13,4.5){2\;\;\;7\,,\,\fbox{8\;\;\,9}}
+         \rput[r](2.13,3.5){$\times$ \qquad\quad {\blue 8}\,,\fbox{\red 7}}
+         \psline(-0.5,3)(2.2,3)
+         \rput(-0.1,2.8){\tiny +1}
+         \rput[r](2,2.5){\red 1\;\;\;9\;\;\;5\;\;\;2\;\;\;3}
+         \rput[r](2,1.5){\blue 2\;\;\;2\;\;\;3\;\;\;1\;\;\;2\;\;\;0}
+         \psline(-0.5,1)(2.2,1)
+         \rput[r](2.22,0.5){2\;\;\;4\;\;\;2\,,\fbox{6\;\;\;4\;\;\;\,3}  }  
+         \psline{->}(2.3,4.5)(3,4.5)
+         \rput[l](3.2,4.5){\small 2 décimales : 27,89 c'est 2\,789 centièmes}
+         \psline{->}(2.3,3.5)(3,3.5)
+         \rput[l](3.2,3.5){\small 1 décimale : 8,7 c'est 87 dixièmes}
+         \psline{->}(4,3)(4,1)
+         \rput[l](4.2,2){\small centièmes$\times$dixièmes = millièmes}
+        \psline{->}(2.3,0.5)(3,0.5)
+         \rput[l](3.2,0.5){\small 3 décimales : 242\,643 millièmes, c'est 272,643}
+      \end{pspicture}}
+\end{methode}
+{\opset{voperator=bottom,decimalsepsymbol={,}}
+\begin{exemples*1}
+    \begin{itemize}
+        \item Poser et effectuer la multiplication $14,\colorbox{red!30}{58}\times 7,\colorbox{mygreen!30}{4}$\\
+        \begin{center}
+            \opmul[displayshiftintermediary=all,operandstyle.1.-1=\red , operandstyle.1.-2=\red , operandstyle.2.-1=\color{mygreen}]{14,58}{7,4}
+        \end{center}
+        Il y a $\colorbox{red!30}{2}+\colorbox{mygreen!30}{1}$ décimales pour les deux facteurs, donc il faut 3 décimales pour le résultat.
+
+        \vspace*{10mm}
+        \item Poser et effectuer la multiplication $0,\colorbox{red!30}{545}\times 0,\colorbox{mygreen!30}{89}$\\
+        \begin{center}
+            \opmul[displayshiftintermediary=all,operandstyle.1.-1=\red ,operandstyle.1.-2=\red ,operandstyle.1.-3=\red ,operandstyle.2.-1=\color{mygreen} ,operandstyle.2.-2=\color{mygreen}]{0,545}{0,89}
+        \end{center}
+        Il y a $\colorbox{red!30}{3}+\colorbox{mygreen!30}{2}$ décimales pour les deux facteurs, donc il faut 5 décimales pour le résultat.
+    \end{itemize}
+\end{exemples*1}
+}

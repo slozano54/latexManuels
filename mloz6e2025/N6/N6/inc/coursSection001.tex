@@ -1,0 +1,50 @@
+\section{Ordre de grandeur d'un résultat}
+\begin{definition}
+    Un \textbf{ordre de grandeur} d'un nombre est un autre nombre proche du premier mais qui permet, par exemple, d'effectuer les opérations plus simplement.
+\end{definition}
+
+\begin{remarque}
+    \titreRemarque{Un ordre de grandeur n'est pas unique}
+    
+    Par exemple, un ordre de grandeur de $872,64$ peut être :
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item $872$ à l'unité près.
+            \item $870$ à la dizaine près.
+            \item $900$ à la centaine près.
+            \item $872,6$ au dixième près.
+        \end{itemize}
+    \end{multicols}
+\end{remarque}
+
+\begin{remarque}
+    \titreRemarque{Anticipation du résultat}
+
+    Avant d'effectuer un calcul, mental, posé, ou à la machine, il est préférable de connaître un  \textbf{ordre de grandeur} du résultat à obtenir en utilisant des ordres de grandeur des nombres constituant le calcul.
+\end{remarque}
+{\opset{voperator=bottom,decimalsepsymbol={,}}
+\begin{exemples*1}
+    \begin{itemize}
+        \item Je dois calculer $\num{2 731} + \num{6 207}$
+        \begin{list}{$\gtrdot$}{}
+            \item $\num{2 731}$ est \textbf{de l'ordre de} $\num{3 000}$
+            \item $\num{6 207}$ est \textbf{de l'ordre de} $\num{6 000}$
+            \item Donc le résultat de $\num{2 731} + \num{6 207}$ est \textbf{de l'ordre de} $\num{3 000} + \num{6 000}$ c'est à dire $\num{9 000}$.
+            \item En effet, $\num{2 731} + \num{6 207} \stackrel{\mathrm{machine}}{=}\num{8 938}$, qui est bien \textbf{de l'ordre de} nos prévisions.
+        \end{list}
+        \item $127\times \num{8.5}$ est à calculer
+        \begin{list}{$\gtrdot$}{}
+            \item $127$ est \textbf{de l'ordre de} $125$
+            \item $\num{8.5}$ est \textbf{de l'ordre de} $8$
+            \item Donc le résultat de $127\times \num{8.5}$ est \textbf{de l'ordre de} $125\times 8$ c'est à dire $\num{1 000}$.
+            \item En effet,$$\opmul[displayshiftintermediary=all]{127}{8.5}$$ qui est bien "de l'ordre" prévu.
+        \end{list}
+        \item J'avais \Prix[0]{10} en poche avant d'aller à la boulangerie. J'y ai acheté une baguette à \Prix{0.85}, un croissant à \Prix{1.10} et une tratelette à \Prix{3.95}.Combien me reste t'il?
+        \begin{list}{$\gtrdot$}{}
+            \item $10-(\num{0.85}+\num{1.10}+\num{3.95})$
+            \item \textbf{de l'ordre de} $10-(1+1+4)=10-6=4$
+            \item En effet, $10-(\num{0.85}+\num{1.10}+\num{3.95})=10-(\num{1.95}+\num{3.95})=10-\num{5.90}=\num{4.10}$.
+        \end{list}
+    \end{itemize}
+\end{exemples*1}
+}

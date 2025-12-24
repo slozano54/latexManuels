@@ -1,0 +1,176 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+% \refstepcounter{exercice}
+% \numeroteEnigme
+\begin{changemargin}{-10mm}{-10mm}
+\begin{enigme}[La multiplication per Gelosia]
+    La {\bf multiplication per gelosia} est une technique opératoire venant de la civilisation indienne au {\small XII}\up{e} siècle, puis introduite en Europe par le mathématicien italien {\bf Léonard de Pise}, plus connu sous le nom de {\bf Fibonacci}. Elle est très utilisée jusqu'au {\small XV}\up{e} siècle. \\
+    Le nom fait allusion à la pièce en bois qui, en Italie, équipait certaines \og fenêtres à jalousie \fg{} chez les maris jaloux : la femme pouvait regarder ce qui se passait dans la rue sans être vue des autres hommes. \bigskip
+
+    \partie[multiplication par un nombre à un chiffre]
+       Etudier les deux exemples ci-dessous et en déduire la dernière opération.
+       \begin{center}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-1,-1)(4.5,2.7)
+             \multido{\n=0+1}{4}{\psline(\n,1)(\n,2)}
+             \multido{\n=1+1}{2}{\psline(0,\n)(3,\n)}
+             \rput(0.5,2.3){1}
+             \rput(1.5,2.3){2}
+             \rput(2.5,2.3){3}
+             \rput(3.25,1.5){3}
+             \psline(1,2)(-0.5,0.5)
+             \psline(2,2)(0.5,0.5)
+             \psline(3,2)(1.5,0.5)
+             \rput(2.3,1.7){\blue 0}
+             \rput(2.7,1.3){\red 9} 
+             \rput(1.3,1.7){\blue 0}
+             \rput(1.7,1.3){\red 6} 
+             \rput(0.3,1.7){\blue 0}
+             \rput(0.7,1.3){\red 3}
+             \rput(2.1,0.7){\bf 9} 
+             \rput(1.1,0.7){\bf 6} 
+             \rput(0.1,0.7){\bf 3} 
+             \rput(1.5,-0.2){$123\times3 =369$}
+            \end{pspicture}}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-1,-1)(4.5,2.7)
+             \multido{\n=0+1}{4}{\psline(\n,1)(\n,2)}
+             \multido{\n=1+1}{2}{\psline(0,\n)(3,\n)}
+             \rput(0.5,2.3){3}
+             \rput(1.5,2.3){4}
+             \rput(2.5,2.3){8}
+             \rput(3.25,1.5){7}
+             \psline(1,2)(-0.5,0.5)
+             \psline(2,2)(0.5,0.5)
+             \psline(3,2)(1.5,0.5)
+             \rput(2.3,1.7){\blue 5}
+             \rput(2.7,1.3){\red 6} 
+             \rput(1.3,1.7){\blue 2}
+             \rput(1.7,1.3){\red 8} 
+             \rput(0.3,1.7){\blue 2}
+             \rput(0.7,1.3){\red 1}
+             \rput(2.1,0.7){\bf 6} 
+             \rput(1.1,0.7){\bf 3} 
+             \rput(0.1,0.7){\bf 4}
+             \rput(-0.9,0.7){\bf 2}
+             \rput(1.7,2.13){\tiny{$+1$}} 
+             \rput(1.5,-0.2){$\makebox[1.5cm]{\dotfill}\times\makebox[1.5cm]{\dotfill} =2\,436$}
+            \end{pspicture}}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-1,-1)(4,2.7)
+             \multido{\n=0+1}{4}{\psline(\n,1)(\n,2)}
+             \multido{\n=1+1}{2}{\psline(0,\n)(3,\n)}
+             \rput(0.5,2.3){2}
+             \rput(1.5,2.3){5}
+             \rput(2.5,2.3){7}
+             \rput(3.25,1.5){6}
+             \psline(1,2)(-0.5,0.5)
+             \psline(2,2)(0.5,0.5)
+             \psline(3,2)(1.5,0.5)
+             \rput(1.5,-0.2){$257\times6 =\makebox[2cm]{\dotfill}$}
+            \end{pspicture}}
+       \end{center}
+       
+    \partie[multiplication par un nombre à deux chiffres]
+       Etudier l'exemple ci-dessous et en déduire les deux autres calculs.
+       \begin{center}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-1,-2)(3.5,2.7)
+             \rput(0.5,2.3){7}
+             \rput(1.5,2.3){3}
+             \rput(2.5,2.3){5}
+             \rput(3.25,1.5){4}
+             \rput(3.25,0.5){2} 
+             \multido{\n=0+1}{4}{\psline(\n,0)(\n,2)}
+             \multido{\n=0+1}{3}{\psline(0,\n)(3,\n)} 
+             \psline(1,2)(-1.5,-0.5)
+             \psline(2,2)(-0.5,-0.5)
+             \psline(3,2)(0.5,-0.5)
+             \psline(3,1)(1.5,-0.5) 
+             \rput(2.3,1.7){\blue 2}
+             \rput(2.7,1.3){\red 0} 
+             \rput(1.3,1.7){\blue 1}
+             \rput(1.7,1.3){\red 2} 
+             \rput(0.3,1.7){\blue 2}
+             \rput(0.7,1.3){\red 8}       
+             \rput(0.3,0.7){\blue 1}
+             \rput(0.7,0.3){\red 4} 
+             \rput(1.3,0.7){\blue 0}
+             \rput(1.7,0.3){\red 6} 
+             \rput(2.3,0.7){\blue 1}
+             \rput(2.7,0.3){\red 0} 
+             \rput(2.1,-0.3){\bf 0} 
+             \rput(1.1,-0.3){\bf 7} 
+             \rput(0.1,-0.3){\bf 8} 
+             \rput(-0.9,-0.3){\bf 0}
+             \rput(0.7,2.13){\tiny{$+1$}} 
+             \rput(-1.9,-0.3){\bf 3} 
+             \rput(1.5,-1.2){$735\times42 =30\,870$}
+            \end{pspicture}}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-2,-2)(3.5,2.7)
+             \multido{\n=0+1}{4}{\psline(\n,0)(\n,2)}
+             \multido{\n=0+1}{3}{\psline(0,\n)(3,\n)}
+             \rput(0.5,2.3){1}
+             \rput(1.5,2.3){2}
+             \rput(2.5,2.3){8}
+             \rput(3.25,1.5){3}
+             \rput(3.25,0.5){5}
+             \psline(1,2)(-1.5,-0.5)
+             \psline(2,2)(-0.5,-0.5)
+             \psline(3,2)(0.5,-0.5)
+             \psline(3,1)(1.5,-0.5)
+             \rput(1.5,-1.2){$128\times35 =\makebox[2cm]{\dotfill}$}
+            \end{pspicture}}
+            {\psset{unit=0.8}
+            \begin{pspicture}(-2,-2)(3,2.7)
+             \multido{\n=0+1}{4}{\psline(\n,0)(\n,2)}
+             \multido{\n=0+1}{3}{\psline(0,\n)(3,\n)}
+             \psline(1,2)(-1.5,-0.5)
+             \psline(2,2)(-0.5,-0.5)
+             \psline(3,2)(0.5,-0.5)
+             \psline(3,1)(1.5,-0.5)
+             \rput(1.5,-1.2){$934\times75 =\makebox[2cm]{\dotfill}$}
+            \end{pspicture}}
+       \end{center}
+       
+    \partie[let's go !!!]
+       \begin{center}        
+        {\psset{unit=0.8}
+          \begin{pspicture}(-3,-2)(3.5,3.7)
+             \multido{\n=0+1}{4}{\psline(\n,0)(\n,3)}
+             \multido{\n=0+1}{4}{\psline(0,\n)(3,\n)}
+             \psline(1,3)(-2.5,-0.5)
+             \psline(2,3)(-1.5,-0.5)
+             \psline(3,3)(-0.5,-0.5)
+             \psline(3,2)(0.5,-0.5)
+             \psline(3,1)(1.5,-0.5)
+             \rput(0.5,3.3){3}
+             \rput(1.5,3.3){4}
+             \rput(2.5,3.3){5}
+             \rput(3.25,2.5){4}
+             \rput(3.25,1.5){3}
+             \rput(3.25,0.5){7}
+             \rput(0.5,-1.5){$\makebox[5cm]{\dotfill}$}
+          \end{pspicture}}
+          \hspace*{20mm}
+          {\psset{unit=0.8} 
+          \begin{pspicture}(-4,-2)(4.5,3.7)
+             \multido{\n=0+1}{5}{\psline(\n,0)(\n,3)}
+             \multido{\n=0+1}{4}{\psline(0,\n)(4,\n)}
+             \psline(1,3)(-2.5,-0.5)
+             \psline(2,3)(-1.5,-0.5)
+             \psline(3,3)(-0.5,-0.5)
+             \psline(4,3)(0.5,-0.5)
+             \psline(4,2)(1.5,-0.5)
+             \psline(4,1)(2.5,-0.5)
+             \rput(1.7,-1.5){$1\,345\times824 =\makebox[3cm]{\dotfill}$}
+          \end{pspicture}}          
+       \end{center}
+\end{enigme}
+\end{changemargin}
+% Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     \ldots
+% \end{corrige}
