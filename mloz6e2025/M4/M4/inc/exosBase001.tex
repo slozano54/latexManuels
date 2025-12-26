@@ -1,0 +1,67 @@
+\begin{exercice*}
+    Calculer le périmètre des figures suivantes.
+    
+    \begin{Geometrie}
+      pair A[];
+      A0=u*(0.5,0.5);
+      A1-A0=u*(3,0);
+      A2-A0=u*(3,2);
+      A3-A0=u*(0,2);
+      trace polygone(A0,A1,A2,A3);
+      trace codeperp(A1,A0,A3,8);
+      trace appelation(A0,A1,-3mm,TEX("\Lg[m]{6}"));
+      trace appelation(A0,A3,3mm,TEX("\Lg[m]{4}"));
+      marque_s:=0.3*marque_s;
+      trace Codelongueur(A0,A1,A2,A3,4);
+      trace Codelongueur(A1,A2,A3,A0,2);
+      label(TEX("Fig. \ding{172}"),iso(A0,A1,A2,A3));
+   \end{Geometrie}
+   \hfill
+   \begin{Geometrie}
+      pair A[];
+      A0=u*(0.5,0.5);
+      A1-A0=u*(3,0);
+      A2-A0=u*(3,3);
+      A3-A0=u*(0,3);
+      trace polygone(A0,A1,A2,A3);
+      trace codeperp(A1,A0,A3,8);
+      trace appelation(A0,A1,-3mm,TEX("\Lg[cm]{27}"));
+      marque_s:=0.3*marque_s;
+      trace Codelongueur(A0,A1,A2,A3,3);
+      trace Codelongueur(A1,A2,A3,A0,3);
+      label(TEX("Fig. \ding{173}"),iso(A0,A1,A2,A3));
+   \end{Geometrie}
+
+   \begin{Geometrie}
+      pair A[];
+      A0=u*(0.5,0.5);
+      A1-A0=u*(0.5,0);
+      A2-A0=u*(3.5,0);
+      A3-A0=u*(0.5,2);
+      trace polygone(A0,A2,A3);
+      trace codeperp(A2,A1,A3,8);
+      trace segment(A1,A3);
+      trace cotationmil(A0,A2,-3mm,15,TEX("\Lg[cm]{6.6}"));      
+      trace appelation(A0,A3,3mm,TEX("\Lg[cm]{4.6}"));
+      trace appelation(A1,A3,-3mm,TEX("\Lg[cm]{4.4}"));
+      trace appelation(A3,A2,3mm,TEX("\Lg[cm]{6.9}"));
+      label(TEX("Fig. \ding{174}"),iso(A1,A2,A3));
+   \end{Geometrie}
+   \hfill
+   \begin{Geometrie}
+      pair A[];
+      A0=u*(0.5,0.5);
+      A1-A0=u*(3.5,0);
+      A2-A0=u*(0,2);
+      trace polygone(A0,A1,A2);
+      trace codeperp(A1,A0,A2,8);
+      trace appelation(A0,A1,-3mm,TEX("\Lg[mm]{83}"));      
+      trace appelation(A0,A2,3mm,TEX("\Lg[mm]{25}"));
+      trace appelation(A2,A1,3mm,TEX("\Lg[mm]{86.68}"));
+      label(TEX("Fig. \ding{175}"),iso(A0,A1,A2));
+   \end{Geometrie}
+ \end{exercice*}
+\begin{corrige}
+  Pas de correction.
+\end{corrige}
+

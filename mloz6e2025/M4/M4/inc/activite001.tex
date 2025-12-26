@@ -1,0 +1,69 @@
+\begin{activite}[À la découverte du nombre $\pi$]
+    \begin{changemargin}{-10mm}{-15mm}
+    {\bf Objectifs :} retrouver la formule donnant la longueur d’un cercle ; traiter un problème de proportionnalité ; organiser des données.
+
+    Par groupe de trois ou quatre, choisir cinq objets circulaires parmi ceux    disponibles dans la classe.
+       \begin{center}
+          \includegraphics[height=2cm]{\currentpath/images/tasse}
+          \qquad
+          \includegraphics[height=2cm]{\currentpath/images/bouchon}
+          \qquad
+          \includegraphics[height=2cm]{\currentpath/images/assiette}
+          \qquad
+          \includegraphics[height=2cm]{\currentpath/images/boite}
+          \qquad
+          \includegraphics[height=2cm]{\currentpath/images/camembert}
+       \end{center}
+       \begin{minipage}{8cm}
+          Pour chaque objet, il s'agit de mesurer le périmètre, c'est-à-dire la mesure de son contour à un endroit où l'objet est circulaire ; de mesurer son diamètre, et enfin d'effectuer le rapport de ces deux mesures.
+       \end{minipage}
+       \qquad
+       \begin{minipage}{8cm}
+          {\psset{yunit=0.4}
+          \begin{pspicture}(-1.5,-1.5)(6,6.7)       
+             \psline(4,1)(4,5)
+             \psline(0,1)(0,5)
+             \psellipse(2,5)(2,1)
+             \psellipticarc(2,1)(2,1){180}{0}
+             \psline[linewidth=1mm,linecolor=A1]{<->}(0,5)(4,5)
+             \rput(5,5){\textcolor{A1}{diamètre}}
+             \psellipticarc[linewidth=0.8mm,linecolor=B1](2,2.5)(2,1){188}{0}
+             \psellipticarc[linewidth=0.8mm,linestyle=dashed,linecolor=B1]{->}(2,2.5)(2,1){0}{178}
+             \rput(5,2.5){\textcolor{B1}{périmètre}}
+          \end{pspicture}}
+       \end{minipage}
+       Pour cela, on dispose de différents outils et instruments de mesure : quel est le nom de chacun de ces instruments ?
+       \begin{center}
+          \begin{pspicture}(0,1.7)(16,8)
+             \rput(5.5,7){\includegraphics[width=9cm]{\currentpath/images/regle}}
+             \rput(13.5,7){\makebox[4.5cm]{\dotfill}}
+             \rput(3,4.2){\includegraphics[width=3.5cm]{\currentpath/images/couturiere}}
+             \rput(2.5,1.8){\makebox[4.5cm]{\dotfill}}
+             \rput(8,4.2){\includegraphics[width=3.5cm]{\currentpath/images/pied_coulisse}}
+             \rput(8,1.8){\makebox[4.5cm]{\dotfill}}
+             \rput(13.5,4.2){\includegraphics[width=4cm]{\currentpath/images/bande}}
+             \rput(13.5,1.8){\makebox[4.5cm]{\dotfill}}
+          \end{pspicture}
+       \end{center}
+       Remplir le tableau suivant où $p\div d$ est le rapport entre le périmètre de l'objet et son diamètre.
+       \begin{center}
+          {\renewcommand{\arraystretch}{1.5}
+          \begin{tabular}{|p{1.8cm}|*{5}{>{\centering\arraybackslash}p{2.2cm}|}}
+             \hline
+             Objet & & & & & \\
+             \hline
+             Instrument & & & & & \\
+             \hline
+             Périmètre $p$ & & & & & \\
+             \hline
+             Diamètre $d$ & & & & & \\
+             \hline
+             $p\div d$ & & & & & \\
+             \hline
+          \end{tabular}}
+       \end{center}
+
+       Que constate-t-on ? \dotfill
+    \end{changemargin}
+ \end{activite}
+ 

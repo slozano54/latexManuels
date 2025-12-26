@@ -1,0 +1,32 @@
+\begin{exercice*}
+   On considère la figure suivante :
+      \begin{center}
+      \begin{Geometrie}[CoinBG={(0,0)},CoinHD={(4.5u,2.5u)}]
+         pair A[];
+         path cc[];
+         A0=u*(2,0.5);
+         A1-A0=u*(0.5,0);
+         A2-A0=u*(0.5,0.5);         
+         A3-A0=u*(0,0.5);
+         cc0=cercles(A0,1.5u);
+         cc1=cercles(A2,0.5u);
+         cc2=cercles(A3,u);
+         trace grille(0.5) withcolor LightGray;
+         trace subpath(2,4) of cc0 withpen pencircle scaled 1.2bp;
+         trace subpath(6,8) of cc1 withpen pencircle scaled 1.2bp;
+         trace subpath(0,2) of cc2 withpen pencircle scaled 1.2bp;
+         trace segment((0.5u,0.5u),A0) withpen pencircle scaled 1.2bp;
+         trace polygone(A0,A1,A2,A3) withpen pencircle scaled 1.2bp;
+         trace segment((3u,u),A2) withpen pencircle scaled 1.2bp;
+         trace segment((2u,2u),A3) withpen pencircle scaled 1.2bp;
+         trace cotation((3.5u,1.5u),(4u,1.5u),0mm,-2mm,TEX("\Lg[cm]{4}"));
+      \end{Geometrie}
+   \end{center}
+   \begin{enumerate}
+      \item De quoi est composée cette figure ?
+      \item Déterminer alors son périmètre.
+   \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+  Pas de correction.
+\end{corrige}

@@ -1,0 +1,38 @@
+\begin{exercice*} %5
+   On considère la figure suivante :
+   \begin{center}
+      \begin{Geometrie}
+         pair A[];
+         A0=u*(0.5,3.5);
+         A1-A0=u*(1.5,0);
+         A2-A0=u*(4.5,-2.25);
+         A3-A0=u*(1.05,-2.25);
+         A4-A0=u*(0,-2.25);
+         trace polygone(A0,A1,A2,A4);
+         trace segment(A1,A3) dashed evenly;
+         trace codeperp(A4,A0,A1,8);
+         trace codeperp(A2,A4,A0,8);
+         trace cotationmil(A4,A2,-4mm,15,TEX("\Lg[cm]{6}"));
+         trace appelation(A1,A2,3mm,TEX("\Lg[cm]{5}"));
+         trace appelation(A0,A1,3mm,TEX("\Lg[cm]{2}"));
+         trace appelation(A4,A0,3mm,TEX("\Lg[cm]{3}"));
+         label.ulft(TEX("$A$"),A0);
+         label.top(TEX("$B$"),A1);
+         label.rt(TEX("$C$"),A2);
+         label.bot(TEX("$M$"),A3);
+         label.llft(TEX("$D$"),A4);
+      \end{Geometrie}      
+   \end{center}
+   \begin{enumerate}
+      \item On suppose que $DM =\Lg[cm]{1}$, comparer le périmètre du quadrilatère $ABMD$ et celui du triangle $BCM$.
+      \item Même question si $DM =\Lg[cm]{5}$.
+      \item Déterminer la position du point $M$ pour que ces deux périmètres soient égaux.
+   \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+   Pas de correction.
+\end{corrige}
+
+
+
+

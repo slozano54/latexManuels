@@ -1,0 +1,51 @@
+% Les enigmes ne sont pas numérotées par défaut donc il faut ajouter manuellement la numérotation
+% si on veut mettre plusieurs enigmes
+%\refstepcounter{exercice}
+%\numeroteEnigme
+\vspace*{-10mm}
+\begin{enigme}[Quelques représentations de $\pi$]
+    \partie[un moyen mnémotechnique pour apprendre $\pi$]
+      Dans la plupart des cas, deux décimales de $\pi$ suffisent pour la majorité des calculs, c'est-à-dire 3,14. \\
+      Pour retenir quelques-unes des autres décimales, il existe des moyens mnémotechniques donnant les chiffres de $\pi$ : il s'agit de remplacer chaque mot par le nombre de lettres qui le composent. \\
+      Donner une valeur approchée de $\pi$ à partir de la phrase suivante : \og {\it May I have a large container of coffee ?} \fg \\ [2mm]
+      \dotfill \\ [2mm]
+      Même chose avec cette poésie : \og {\it Que j'aime à faire apprendre un nombre utile aux sages. Immortel Archimède, artiste, ingénieur ! Qui de ton jugement peut priser la valeur ? Pour moi, ton problème eut de pareils avantages.} \fg \\ [2mm]
+       \dotfill \\ [2mm]
+    
+    \partie[les approximations]
+       On ne pourra jamais connaître la valeur exacte de $\pi$ puisque c'est un nombre \og qui ne se termine pas \fg. Actuellement, on connait grâce à plusieurs très gros calculateurs près de 31\,000 milliards de chiffres à $\pi$ ! La course aux décimales de $\pi$ a commencé très tôt dans l'antiquité. \\
+       Compléter le tableau suivant des valeurs approchées de $\pi$, puis donner le nombre de décimales exactes.
+       \begin{center}
+          {\renewcommand{\arraystretch}{2.2} 
+          \small 
+          \begin{Ltableau}{0.9\linewidth}{5}{c}
+            \hline
+             année approximative& pays & approximation & valeur approchée & décimales exactes \\
+             \hline
+             $- 2000$ & Babylone & $3+\dfrac{1}{8}$ & & \\
+             \hline
+             $- 1650$ & Egypte  & $\left(\dfrac{16}{9}\right)^2$ & & \\
+             \hline
+             $- 250$ & Grèce & $\dfrac{223}{71} < \pi < \dfrac{22}{7}$ & & \\
+             \hline
+             $640$ & Inde & $\sqrt{10}$ & & \\
+             \hline
+             $1464$ & Allemagne & $\dfrac34(\sqrt3+\sqrt6)$ & & \\
+             \hline
+          \end{Ltableau}} \bigskip
+       \end{center}
+ 
+    \partie[les formules]
+       Avec le développement de techniques de calcul plus poussées, les mathématiciens écrivent des formules pour calculer $\pi$, voilà un florilège de quelques-unes de ces formules curieuses\dots \\
+       \begin{itemize}
+          \item Wallis en 1655 : \qquad $\pi = \displaystyle{2\prod_{n=1}^{\infty}\frac{4n^2}{4n^2-1}}$ \\ [1mm]
+          \item Leibniz en 1674 : \quad $\pi =\displaystyle{8\sum_{k=0}^{\infty}\frac{1}{(4k+1)(4k+3)}}$ \\
+          \item Euler en 1760 : \qquad $\pi =20\arctan\dfrac17+8\arctan\dfrac{3}{79}$
+       \end{itemize}
+\end{enigme}  
+% % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois
+% \addtocounter{exercice}{-1}
+% \begin{corrige}
+%     Correction enigme de la fin de la partie cours.  
+%     
+% \end{corrige}
