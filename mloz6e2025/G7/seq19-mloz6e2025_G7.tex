@@ -1,0 +1,47 @@
+% On définit le répertoire courant
+\def\currentpath{./G7}        
+
+% On définit le répertoire avec les adaptations globales persos
+\def\persopath{../../0perso}
+
+\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{svgnames}{xcolor}
+\documentclass[nocrop]{\persopath/sesamanuel}
+
+% ============================================================================================
+% ======= Configurations 
+% ============================================================================================
+% ======= Classe sesamanuel
+\input{\persopath/configClasseSesamanuel.tex}
+
+% ======= Ajout de paquets
+\input{\persopath/paquets.tex}
+
+% ======= Ajout de commandes
+\input{\persopath/commandes.tex}
+
+% ======= Configuration de certaines commandes
+\input{../config.tex}
+
+% ============================================================================================
+% ======= Début du document
+% ============================================================================================
+\begin{document}
+
+\themaG % À MODIFIER
+\setcounter{chapter}{6}% Pour numéroter le chapitre autonome à partir d'autre chose que 1
+\include{\currentpath/incChapitre.tex}
+
+% ============================================================================================
+% ======= Génère la liste des méthodes
+% ============================================================================================
+
+\AfficheListeMethodes[1]
+
+% ============================================================================================
+% ======= Génère les solutions des exercices
+% ============================================================================================
+
+\AfficheCorriges[2]
+
+\end{document}

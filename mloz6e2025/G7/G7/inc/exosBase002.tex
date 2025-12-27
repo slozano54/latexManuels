@@ -1,0 +1,55 @@
+\begin{exercice*}
+    Un programme permet à un robot de se déplacer sur les cases d'un quadrillage. Chaque case atteinte est colorée en gris. Au début d'un programme, toutes les cases sont blanches, le robot se positionne sur une case de départ indiquée par un \og {\bf d} \fg{} et la colore aussitôt en gris. \\
+    Le robot se déplace suivant un programme grâce à un langage absolu dont le vocabulaire est
+       \begin{center}
+          \og S (south) ; E (east) ; N (north) ; W (west) \fg.
+       \end{center}
+       Voici des exemples de programmes et leurs effets :
+       \begin{center}
+       \begin{tabular}{|p{1.5cm}|>{\centering\arraybackslash}p{2.5cm}|>{\centering\arraybackslash}p{2.7cm}||p{1.5cm}|>{\centering\arraybackslash}p{2.5cm}|>{\centering\arraybackslash}p{2.7cm}|}
+          \hline
+          1W
+          &
+          Le robot avance de 1 case vers l'ouest.
+          &
+          \psset{unit=0.35cm}
+          \begin{pspicture}(1,2)(3,3.5)
+             \psframe[fillstyle=solid,fillcolor=lightgray](1,1)(3,2)
+             \psgrid[gridlabels=0,subgriddiv=1,gridcolor=gray](0,0)(4,3)
+             \rput(2.5,1.5){\textbf{d}}
+          \end{pspicture}
+          &
+          2E 1W 2N
+          &
+          Le robot avance de 2 cases vers l'est, puis de 1 case vers l'ouest,
+    puis de 2 cases vers le nord.
+          &
+          \psset{unit=0.35cm}
+          \begin{pspicture}(0,-1)(5,6)
+             \pspolygon[fillstyle=solid,fillcolor=lightgray](1,1)(4,1)(4,2)(3,2)(3,4)(2,4)(2,2)(1,2)
+             \psgrid[gridlabels=0,subgriddiv=1,gridcolor=gray](5,5)
+             \rput(1.5,1.5){\textbf{d}}
+          \end{pspicture} \\
+          \hline
+       \end{tabular}
+       \end{center}
+       \begin{enumerate}
+          \item Voici un programme : {\bf 1W 2N 2E 4S 2W} \\
+          On souhaite dessiner le motif obtenu avec ce programme. Sur votre copie, réaliser ce motif en utilisant des carreaux, comme dans les exemples précédents. On marquera un \og \textbf{d} \fg{} sur la case de départ.
+          \item On fait fonctionner un programme qui dessine le motif suivant :
+          \psset{unit=0.35cm}
+          \begin{pspicture}(-2,0)(8,3.5)
+             \pspolygon[fillstyle=solid,fillcolor=lightgray](0,2)(1,2)(1,1)(2,1)(2,2)(3,2)(3,1)(4,1)(4,2)(5,2)(5,1)(6,1)(6,2)(7,2)(7,0)(0,0)
+             \psgrid[gridlabels=0,subgriddiv=1,gridcolor=gray](-1,-1)(8,3)
+             \rput(0.5,1.5){\textbf{d}}
+          \end{pspicture} \begin{enumerate}
+             \item Proposer un programme permettant de dessiner ce motif.
+             \item Comment pourrait-on faire évoluer l'écriture de ce programme afin qu'il soit plus compact ?
+          \end{enumerate}
+       \end{enumerate}
+
+        \hfill{\footnotesize\it Source : inspiré du DNB 2019, Asie.}
+\end{exercice*}
+\begin{corrige}
+    Pas de correction
+\end{corrige} 
