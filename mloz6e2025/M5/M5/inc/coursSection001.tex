@@ -1,0 +1,157 @@
+\section{Volume par dénombrement}
+\begin{definition}
+    La \textbf{mesure} de l'espace occupé par un solide, dans une unité choisie, s'appelle {\bf le volume} de ce solide.
+\end{definition}
+
+\begin{methode*1}[Connaître le volume d'un solide]
+    Pour connaître le volume d'un solide, on calcule le nombre d'{\bf unités de volume} qui sont nécessaires pour remplir exactement cet espace.
+    \exercice
+    En prenant comme unité de volume un cube : 
+    \begin{Geometrie}
+        u:=0.5*u;
+        pair A,B,C,D,E,F,G,H;
+        A=u*(1,1);
+        B=u*(2,1);
+        F=u*(2,2);
+        E=u*(1,2);
+        D=A shifted (0.5u,0.4u);
+        C=B shifted (0.5u,0.4u);
+        H=E shifted (0.5u,0.4u);
+        G=F shifted (0.5u,0.4u);
+        remplis polygone(B,C,G,F) withcolor Cornsilk;
+        remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+        remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+        trace A--B--F--E--cycle;
+        trace polygone(B,C,G,F);
+        trace chemin(G,H,E);
+    \end{Geometrie}
+
+    Déterminer le volume de cet assemblage dont voici deux représentations :
+
+    \VueCubes[%
+    Creation,%
+    Profondeur=3,%
+    Largeur=4,%
+    CouleurCube=Cornsilk]{%
+        1,2,3,%
+        0,2,1,%
+        0,2,1,%
+        1,1,1%
+    }
+    \correction
+    En éclatant le solide, on peut plus facilement compter les cubes qui le composent :
+
+    \VueCubes[%
+    Creation,%
+    Profondeur=7,%
+    Largeur=4,%
+    CouleurCube=Cornsilk]{%
+        1,0,0,2,0,0,3,%
+        0,0,0,2,0,0,1,%
+        0,0,0,2,0,0,1,%,
+        1,0,0,1,0,0,1%
+    }
+
+    On obtient alors $2+7+6=15$, cet assemblage a donc un volume de $15$
+    \begin{Geometrie}
+        u:=0.5*u;
+        pair A,B,C,D,E,F,G,H;
+        A=u*(1,1);
+        B=u*(2,1);
+        F=u*(2,2);
+        E=u*(1,2);
+        D=A shifted (0.5u,0.4u);
+        C=B shifted (0.5u,0.4u);
+        H=E shifted (0.5u,0.4u);
+        G=F shifted (0.5u,0.4u);
+        remplis polygone(B,C,G,F) withcolor Cornsilk;
+        remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+        remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+        trace A--B--F--E--cycle;
+        trace polygone(B,C,G,F);
+        trace chemin(G,H,E);
+    \end{Geometrie}  
+\end{methode*1}
+
+\begin{remarque}
+    Deux solides peuvent avoir des formes différentes mais un volume identique.
+
+    En prenant ce cube pour unité de volume :
+    \begin{Geometrie}
+        u:=0.5*u;
+        pair A,B,C,D,E,F,G,H;
+        A=u*(1,1);
+        B=u*(2,1);
+        F=u*(2,2);
+        E=u*(1,2);
+        D=A shifted (0.5u,0.4u);
+        C=B shifted (0.5u,0.4u);
+        H=E shifted (0.5u,0.4u);
+        G=F shifted (0.5u,0.4u);
+        remplis polygone(B,C,G,F) withcolor Cornsilk;
+        remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+        remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+        trace A--B--F--E--cycle;
+        trace polygone(B,C,G,F);
+        trace chemin(G,H,E);
+    \end{Geometrie}
+    
+    Les deux solides ci-dessous ont un volume de 12 unités :
+
+    \smallskip
+    \begin{center}        
+        \begin{Geometrie}
+            u:=0.5*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(4,1);
+            F=u*(4,3);
+            E=u*(1,3);
+            D=A shifted (u,0.8u);
+            C=B shifted (u,0.8u);
+            H=E shifted (u,0.8u);
+            G=F shifted (u,0.8u);
+            remplis polygone(B,C,G,F) withcolor Cornsilk;
+            remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+            trace A--B--F--E--cycle;
+            trace polygone(B,C,G,F);
+            trace chemin(G,H,E);
+            trace chemin(1/3[A,B],1/3[E,F],1/3[H,G]);
+            trace chemin(2/3[A,B],2/3[E,F],2/3[H,G]);
+            trace chemin(iso(B,C),iso(G,F),iso(E,H));
+            trace chemin(iso(A,E),iso(B,F),iso(C,G));
+        \end{Geometrie}
+        \hspace*{20mm}
+        \begin{Geometrie}
+            u:=0.5*u;
+            pair A,B,C,D,E,F,G,H,I,J,K,L;
+            A=u*(1,1);
+            B=u*(5,1);
+            C=B shifted (0.5u,0.4u);
+            D=C shifted (0.5u,0.4u);
+            E=B shifted (0,u);
+            G=C shifted (0,2u);
+            F=D shifted (0,2u);
+            H=A shifted (0,u);
+            I=H shifted (0.5u,0.4u);
+            J=I shifted (0,u);
+            K=J shifted (0.5u,0.4u);
+            L=iso(C,G);
+            remplis polygone(B,D,F,G,L,E) withcolor Cornsilk;
+            remplis polygone(F,G,J,K) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(H,E,L,I) withcolor 0.7Cornsilk+0.3black;
+            remplis polygone(J,G,L,I) withcolor 0.9Cornsilk+0.1black;
+            remplis polygone(H,E,B,A) withcolor 0.9Cornsilk+0.1black;            
+            trace polygone(B,D,F,G,L,E);
+            trace chemin(F,K,J,G);
+            trace chemin(E,H,I,L);
+            trace chemin(H,A,B);
+            trace I--J;
+            trace chemin(1/4[A,B],1/4[H,E],1/4[I,L],1/4[J,G],1/4[K,F]);
+            trace chemin(2/4[A,B],2/4[H,E],2/4[I,L],2/4[J,G],2/4[K,F]);
+            trace chemin(3/4[A,B],3/4[H,E],3/4[I,L],3/4[J,G],3/4[K,F]);
+            trace chemin(C,L,iso(D,F));
+        \end{Geometrie}
+    \end{center}
+\end{remarque}

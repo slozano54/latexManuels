@@ -1,0 +1,175 @@
+\begin{exercice*}
+   Compléter le tableau pour donner le volume de chaque solide en unités de volume. Tous les empilements sont suposés pleins, mais selon les cas plusieurs vues du solide sont proposées.
+
+   \begin{center}
+   \raisebox{-0.5\totalheight}[0.5\totalheight]{\raisebox{\depth}{    
+      \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(3u,3u)}]
+          u:=0.4*u;
+          pair A,B,C,D,E,F,G,H;
+          A=u*(1,1);
+          B=u*(2,1);
+          F=u*(2,2);
+          E=u*(1,2);
+          D=A shifted (0.5u,0.4u);
+          C=B shifted (0.5u,0.4u);
+          H=E shifted (0.5u,0.4u);
+          G=F shifted (0.5u,0.4u);
+          remplis polygone(B,C,G,F) withcolor Cornsilk;
+          remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+          remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+          trace A--B--F--E--cycle;
+          trace polygone(B,C,G,F);
+          trace chemin(G,H,E);
+          pair O;
+          O=u*(1.5,0.5);
+          label(btex {\bfseries 1 unité de volume} etex,O);
+      \end{Geometrie}
+      }}
+
+      {\renewcommand*{\arraystretch}{1.2}
+      \begin{tabular}{|>{\centering\arraybackslash}m{0.5\linewidth}|*{4}{>{\centering\arraybackslash}m{0.1\linewidth}|}}%
+          \hline
+          \rowcolor{gray!20}{\bf Solide} & {\bf n°1} & {\bf n°2}  & {\bf n°3} & {\bf n°4} \\
+          \hline
+          {Nombre de petits cubes manquant pour former le grand cube}&$0$&&&\\
+          \hline
+          {Volume en unités de volume}&&&&\\
+          \hline
+      \end{tabular}
+      }
+   \end{center}
+   \begin{enumerate}
+      \item Solide n°1
+      
+         \begin{Geometrie}[CoinHD={(5u,4u)}]
+            u:=0.4*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(2,1);
+            F=u*(2,2);
+            E=u*(1,2);
+            pair Vx,Vy,Vz;
+            Vx=u*(1,0);
+            Vy=u*(0.5,0.4);
+            Vz=u*(0,1);
+            D=A shifted Vy;
+            C=B shifted Vy;
+            H=E shifted Vy;
+            G=F shifted Vy;
+            picture cube;
+            cube = image(
+               remplis polygone(B,C,G,F) withcolor Cornsilk;
+               remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+               remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+               trace A--B--F--E--cycle;
+               trace polygone(B,C,G,F);
+               trace chemin(G,H,E);
+            );        
+            trace cube;
+            for j=0 upto 2:
+               for k=0 upto 2:
+                  for i=0 upto 2:
+                        trace cube shifted (k*Vx+(2-j)*Vy+i*Vz);
+                  endfor;
+               endfor;
+            endfor;
+         \end{Geometrie}
+      \item Solide n°2
+     
+         \VueCubes[%
+            Creation,%
+            Profondeur=3,%
+            Largeur=3,%
+            Angle=45,%
+            CouleurCube=Cornsilk]{%
+               3,3,3,%
+               1,3,3,%
+               1,2,3%
+         }
+
+         \VueCubes[%
+            Creation,%
+            Profondeur=3,%
+            Largeur=3,%
+            Angle=-20,%
+            CouleurCube=Cornsilk]{%
+                  3,3,3,%
+                  1,3,3,%
+                  1,2,3%
+         }
+      \item Solide n°3
+      
+         \VueCubes[%
+            Creation,%
+            Profondeur=3,%
+            Largeur=3,%
+            Angle=45,%
+            CouleurCube=Cornsilk]{%
+                  1,2,3,%
+                  1,1,2,%
+                  1,2,3%
+         }
+
+         \VueCubes[%
+            Creation,%
+            Profondeur=3,%
+            Largeur=3,%
+            Angle=-20,%
+            CouleurCube=Cornsilk]{%
+                  1,2,3,%
+                  1,1,2,%
+                  1,2,3%
+         }
+      \item Solide n°4 : ce solide est percé de part en part, au centre de chaque face.
+ 
+         \begin{Geometrie}
+            u:=0.4*u;
+            pair A,B,C,D,E,F,G,H;
+            A=u*(1,1);
+            B=u*(2,1);
+            F=u*(2,2);
+            E=u*(1,2);
+            pair Vx,Vy,Vz;
+            Vx=u*(1,0);
+            Vy=u*(0.5,0.4);
+            Vz=u*(0,1);
+            D=A shifted Vy;
+            C=B shifted Vy;
+            H=E shifted Vy;
+            G=F shifted Vy;
+            picture cube;
+            cube = image(
+               remplis polygone(B,C,G,F) withcolor Cornsilk;
+               remplis polygone(E,H,G,F) withcolor 0.7Cornsilk+0.3black;
+               remplis polygone(A,B,F,E) withcolor 0.9Cornsilk+0.1black;
+               trace A--B--F--E--cycle;
+               trace polygone(B,C,G,F);
+               trace chemin(G,H,E);
+            );
+            picture colonneTypeUn,colonneTypeDeux;
+            colonneTypeUn = image(
+            for k=0 upto 2:
+               trace cube shifted (k*Vz);
+            endfor;
+            );
+            colonneTypeDeux = image(
+            trace cube;
+            trace cube shifted (2*Vz);
+            );
+            % tranche Gauche
+            trace colonneTypeUn shifted (2*Vy);
+            trace colonneTypeDeux shifted (Vy);
+            trace colonneTypeUn;
+            % tranche Centre                
+            trace colonneTypeDeux shifted (Vx+2*Vy);
+            trace colonneTypeDeux shifted (Vx);
+            % tranche Droite                
+            trace colonneTypeUn shifted (2*Vx+2*Vy);
+            trace colonneTypeDeux shifted (2*Vx+Vy);                
+            trace colonneTypeUn shifted (2*Vx);                
+         \end{Geometrie}
+   \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    Pas de correction
+\end{corrige} 
