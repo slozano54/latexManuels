@@ -1,25 +1,8 @@
 \begin{exercice*}
-    Une roue de loterie est partagée en huit secteurs identiques numérotés de 1 à 8. Calculer la probabilité de chaque événement et les placer sur l'échelle.
-    \begin{center}
-       \begin{pspicture}(0.7,-0.5)(8,1)
-          \psline{->}(0.3,0)(7.7,0)
-          \rput(4,0){|}
-          \footnotesize
-          \rput{90}(0.1,-0.2){impossible}
-          \rput{90}(7.9,0){certain}
-          \rput(1.2,0.3){improbable}
-          \rput(3,0.3){peu probable}
-          \rput(4.8,0.3){probable}
-          \rput(6.5,0.3){très probable}
-       \end{pspicture}
-    \end{center}
+    Rayan tire une carte dans un jeu ordinaire de cinquante-deux cartes.
     \begin{enumerate}
-       \item \og Obtenir 2. \fg
-       \item \og Obtenir un multiple de 2. \fg
-       \item \og Obtenir un nombre supérieur à 4. \fg
-       \item \og Obtenir un nombre positif. \fg
-       \item \og Obtenir un nombre impair. \fg
-       \item \og Obtenir un multiple de 13. \fg
+       \item Donner les probabilités qu'il obtienne les événements suivants : \og Obtenir un carreau \fg ; \og Obtenir un valet \fg{} et \og Obtenir un valet de carreau \fg.
+       \item Calculer la probabilité de ne pas obtenir de carreau.
     \end{enumerate}
 \end{exercice*}
 \begin{corrige}
@@ -27,27 +10,9 @@
     %\phantom{rrr}
     \ \\ [-5mm]
     \begin{enumerate}
-       \item Obtenir 2 : $\red P =\dfrac18$
-       \item Obtenir un multiple de 2 : $\red P =\dfrac48$
-       \item Obtenir un nombre supérieur à 5 : $\red P =\dfrac38$
-       \item Obtenir un nombre positif : $\red P =\dfrac88 =1$
-       \item Obtenir un nombre impair : $\red P =\dfrac48$
-       \item Obtenir un multiple de 13 : $\red P =\dfrac08 =0$
-    \end{enumerate}
-    \begin{pspicture}(0.7,-1)(8,0.9)
-       \psline{->}(0.3,0)(7.7,0)
-       \rput(4,0){|}
-       \footnotesize
-       \rput{90}(0.1,0){impossible}
-       \rput{90}(7.9,0){certain}
-       \rput(1.2,0.3){improbable}
-       \rput(3,0.3){peu probable}
-       \rput(4.8,0.3){probable}
-       \rput(6.5,0.3){très probable}
-       \rput(3,-0.4){\red 1}
-       \rput(5,-0.4){\red 2 et 5}
-       \rput(4,-0.4){\red 3}
-       \rput(7.5,-0.4){\red 4}
-       \rput(0.5,-0.4){\red 6}
-    \end{pspicture}
+       \item Obtenir un carreau : ${\red P =\dfrac{13}{52}}$. \\
+          Obtenir un valet : ${\red P =\dfrac{4}{52}}$. \\
+          Obtenir un valet de carreau  : ${\red P =\red \dfrac{1}{52}}$. \smallskip
+       \item La probabilité de ne pas obtenir de carreau s'obtient en calculant la probabilité d'obtenir un c\oe ur, un pique ou un trèfle, ce qui fait au total $3\times13$ carte, soit 39 cartes. {\red $P =\dfrac{39}{52}$}.
+    \end{enumerate} 
 \end{corrige}    
