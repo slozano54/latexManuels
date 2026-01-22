@@ -1,0 +1,89 @@
+\section{Propriétés}
+\begin{propriete}[Conservations \admise]
+    La rotation \textbf{conserve} :
+    \begin{itemize}
+        \item les longueurs : l'image $M'$ de $M$ par la rotation de centre $O$ vérifie $OM' = OM$ ;
+        \item les angles : l'image $\widehat{A'B'C'}$ de l'angle $\widehat{ABC}$ par la rotation vérifie $\widehat{A'B'C'} = \widehat{ABC}$.
+    \end{itemize}
+\end{propriete}
+
+\begin{propriete}[Conséquence de la conservation des longueurs \admise]
+    La rotation conserve les \textbf{longueurs} donc également les grandeurs dépendant des longueurs comme les \textbf{périmètres} et les \textbf{aires}.
+\end{propriete}
+
+\begin{propriete}[Conséquence de la conservation des mesures des angles \admise]
+    La rotation conserve les \textbf{mesures des angles} donc également les grandeurs dépendant de ces mesures comme le \textbf{parallélisme} et l' \textbf{alignement des points}.
+\end{propriete}
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.5,>=triangle 45]
+        % Points
+        \coordinate (A) at (2,3);
+        \coordinate (B) at (4.5,3);
+        \tkzDefMidPoint(A,B);
+        \tkzGetPoint{I};
+        \coordinate (C) at (4,4);
+        \tkzDefMidPoint(A,C);
+        \tkzGetPoint{K};
+        \coordinate (O) at (2,0);
+        \tkzDrawPoints[shape=cross out](O);
+        \tkzLabelPoints(O);
+        % Tracés
+        \tkzDrawSegment[style=red, dim={$~r~$,-5pt,midway,font=\scriptsize,sloped}](I,B);
+        \draw (A)--(B)--(C)--(A);
+        \draw (K)--(I);
+        \tkzDrawPoints[shape=cross out](I);
+        \tkzLabelPoints[below right](B);
+        \tkzLabelPoints[below left](A,I);
+        \tkzLabelPoints[above](C,K);
+        \tkzMarkRightAngles[size=0.1](A,K,I A,C,B);
+        \tkzDrawCircle(I,A);
+        % Images
+        \tkzDefPointBy[rotation=center O angle 100](A);\tkzGetPoint{A'};
+        \tkzDefPointBy[rotation=center O angle 100](B);\tkzGetPoint{B'};
+        \tkzDefPointBy[rotation=center O angle 100](C);\tkzGetPoint{C'};
+        \tkzDefPointBy[rotation=center O angle 100](K);\tkzGetPoint{K'};
+        \tkzDefPointBy[rotation=center O angle 100](I);\tkzGetPoint{I'};
+        % Tracés
+        \tkzDrawSegment[style=red, dim={$~r~$,-5pt,midway,font=\scriptsize,sloped}](I',B');
+        \draw (A')--(B')--(C')--(A');
+        \draw (K')--(I');
+        \tkzDrawPoints[shape=cross out](I');
+        \tkzLabelPoints[above left](B');
+        \tkzLabelPoints[below right](A',I');
+        \tkzLabelPoints[above left](C');
+        \tkzLabelPoints(K');
+        \tkzMarkRightAngles[size=0.1](A',K',I' A',C',B');
+        \tkzDrawCircle(I',A');
+        % Traits de construction
+        \tkzDrawArc[dashed,color=orange,->](O,A)(A');
+        \tkzDrawArc[dashed,color=orange,->](O,C)(C');
+        \tkzDrawArc[dashed,color=orange,->](O,K)(K');
+        \tkzDrawArc[dashed,color=orange,->](O,I)(I');
+        \draw[dashed, color=orange](O)--(A);
+        \draw[dashed, color=orange](O)--(I);
+        \draw[dashed, color=orange](O)--(C);
+        \draw[dashed, color=orange](O)--(A');
+        \draw[dashed, color=orange](O)--(I');
+        \draw[dashed, color=orange](O)--(C');
+        \tkzMarkAngle[size=0.5](A,O,A');
+        \tkzLabelAngle[pos=0.8](A,O,A'){$\ang{100}$};
+        % Sens de rotation
+        \coordinate (sens) at (2,5);
+        \tkzDefPointBy[rotation= center O angle 15](sens);\tkzGetPoint{sens'};
+        \tkzDrawArc[->](O,sens)(sens');
+        \tkzLabelArc[above](O,sens,sens'){Sens positif};
+    \end{tikzpicture}
+\end{center}
+
+\begin{exemple*1}
+    Dans la figure ci-dessus, la rotation de centre $O$ et d'angle $\ang{100}$ transforme le triangle $ABC$ en le triangle $A'B'C'$. On en déduit donc que :
+    \begin{itemize}
+        \item les longueurs des côtés du triangle $ABC$ sont égales aux longueurs des côtés du triangle $A'B'C'$ ;
+        \item les angles $\widehat{AKI}$ et $\widehat{A'K'I'}$ ont la même mesure, ce sont tous les deux des angles droits ;
+        \item le segment $[IB]$ est l'image du segment $[I'B']$ donc ils ont la même longueur ;
+        \item de même, les segments $[AK]$ et $[A'K']$ ont la même longueur ;
+        \item la droite $(AB)$ est l'image de la droite $(A'B')$ donc elles sont parallèles.
+        \item puisque les points $A$, $I$ et $B$ sont alignés, leurs images $A'$, $I'$ et $B'$ le sont aussi.
+    \end{itemize}
+\end{exemple*1}
