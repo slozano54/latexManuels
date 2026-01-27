@@ -1,33 +1,69 @@
-\begin{exercice*}        
-    Sur la figure suivante, on a représenté un réseau de droites parallèles et équidistantes ainsi qu'un segment de longueur $u$ à trois reprises. À l'aide du compas, tracer sur le cahier les segments de longueur suivante :
-    \smallskip
-    \begin{multicols}{3}
-        \begin{spacing}{1.8}
-            \begin{enumerate}
-                \item $\dfrac16u$
-                \item $\dfrac15u$
-                \item $\dfrac13u$
-                \item $\dfrac56u$
-                \item $\dfrac23u$
-                \item $\dfrac35u$
-            \end{enumerate}
-        \end{spacing}
-    \end{multicols}
+% \begin{exercice*}        
+%     Sur la figure suivante, on a représenté un réseau de droites parallèles et équidistantes ainsi qu'un segment de longueur $u$ à trois reprises. À l'aide du compas, tracer sur le cahier les segments de longueur suivante :
+%     \smallskip
+%     \begin{multicols}{3}
+%         \begin{spacing}{1.8}
+%             \begin{enumerate}
+%                 \item $\dfrac16u$
+%                 \item $\dfrac15u$
+%                 \item $\dfrac13u$
+%                 \item $\dfrac56u$
+%                 \item $\dfrac23u$
+%                 \item $\dfrac35u$
+%             \end{enumerate}
+%         \end{spacing}
+%     \end{multicols}
+%     \medskip
+%     \psset{xunit=0.7,yunit=0.3}
+%     \begin{pspicture*}(0,0)(11,8)
+%        \multido{\n=-3+1,\i=1+1}{14}{\psline[linecolor=gray](\n,0)(\i,8)}
+%         \psline[linewidth=0.5mm]{|-|}(0.5,3)(5.8,7.6)
+%        \psline[linewidth=0.5mm]{|-|}(2,2)(8.4,4.8)
+%        \psline[linewidth=0.5mm]{|-|}(3.5,1)(10.3,2.6)
+%        \rput(10.6,2.6){$u$}
+%        \rput(8.7,4.8){$u$}
+%        \rput(6.2,7.6){$u$}
+%     \end{pspicture*}
+% \end{exercice*}
+\begin{exercice*}
+    Le même segment de longueur $\ell$ est représenté plusieurs fois sur trois réseaux de droites parallèles et équidistantes.
+    En choisissant le réseau approprié, à l'aide du compas, tracer sur le cahier des segments de longueur $\dfrac16\ell$, $\dfrac15\ell$, $\dfrac13\ell$, $\dfrac56\ell$, $\dfrac23\ell$ et $\dfrac35\ell$.
     \medskip
-    \psset{xunit=0.7,yunit=0.3}
-    \begin{pspicture*}(0,0)(11,8)
-       \multido{\n=-3+1,\i=1+1}{14}{\psline[linecolor=gray](\n,0)(\i,8)}
-        \psline[linewidth=0.5mm]{|-|}(0.5,3)(5.8,7.6)
-       \psline[linewidth=0.5mm]{|-|}(2,2)(8.4,4.8)
-       \psline[linewidth=0.5mm]{|-|}(3.5,1)(10.3,2.6)
-       \rput(10.6,2.6){$u$}
-       \rput(8.7,4.8){$u$}
-       \rput(6.2,7.6){$u$}
-    \end{pspicture*}
-\end{exercice*}
+    \GuideAne[NomSegment=\Large$\ell$,Graine=10]{3}
+    \smallskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=20]{5}
+    \smallskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=30]{6}
+\end{exercice*}  
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
-    {\red Pas de correction}
-\end{corrige}
-    
+    % \GuideAne[NomSegment=\Large$\ell$,Graine=30Couleur=LightGray,Marque=1,Traces={
+    %     trace compas(O,1/6[O,C],1);
+    % }]{6}
+    Pour chaque segment la méthode est la même : on choisit le réseau de droites parallèles et équidistantes qui permet d'obtenir le nombre de parties égales souhaité, puis on utilise le compas pour reporter la longueur demandée.
+    \medskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=30,Repere=1,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,1/6[O,C],1);
+    }]{6}
+    \medskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=20,Repere=1,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,1/5[O,C],1);
+    }]{5}
+    \medskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=10,Repere=1,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,1/3[O,C],1);
+    }]{3}
+    \medskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=30,Repere=5,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,5/6[O,C],1);
+    }]{6}
+    \Coupe
+    \GuideAne[NomSegment=\Large$\ell$,Graine=20,Repere=2,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,2/3[O,C],1);
+    }]{3}
+    \medskip
+    \GuideAne[NomSegment=\Large$\ell$,Graine=10,Repere=3,Couleur=LightGray,Marque=1,Traces={
+        trace compas(O,3/5[O,C],1);
+    }]{5}
+\end{corrige}  
     
