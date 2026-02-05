@@ -1,30 +1,31 @@
+
 \begin{exercice*}
-   Voici un programme de calcul :
+   Compléter les pyramides suivantes sachant que chaque nombre est la somme des nombres se trouvant dans les deux cases juste en dessous.
+
    \begin{center}
-      \myProgCalcul{$\leadsto$}{Programme de calcul}{%
-         \ProgCalcul[Enonce,ThemePerso,Largeur=5cm]{%
-            Choisir un nombre,
-            Ajouter \num{-3},
-            Retirer \num{-1.5},
-            Donner l'opposé du résultat
-         }
-      }      
-   \end{center}
-   \begin{enumerate}
-      \item Appliquer ce programme au nombre $-2,5$ puis 0.
-      \item Quel nombre faut-il choisir pour obtenir 6 ?
-      \item Soit $x$ le nombre de départ, donner l'expression finale en fonction de $x$.
-   \end{enumerate}
+    \PyramideNombre[Etages=4,Largeur=10mm]{\num{-1},~,~,~,8,~,~,\num{-4},~,\num{-7}}
+    \medskip
+    
+    \PyramideNombre[Etages=4,Largeur=10mm]{6,~,~,~,\num{-7},~,~,\num{-5},~,\num{-3}}
+    \medskip
+    
+    \PyramideNombre[Etages=4,Largeur=10mm]{\num{-1.5},~,~,~,3,~,~,\num{-5},~,\num{-5}}
+    \medskip
+
+    \PyramideNombre[Etages=4,Largeur=10mm]{\num{6.3},~,~,~,\num{7.2},~,~,~,\num{-3.1},\num{-5.2}}
+  \end{center}
 \end{exercice*}
 
 \begin{corrige}
-   \ \\ [-5mm]
-   \begin{enumerate}
-      \item $-2,5 \xrightarrow[-3]{+(-3)} -5,5 \xrightarrow[+1,5]{-(-1,5)} -4 \xrightarrow{\text{opposé}} {\red 4}$ \\ [1mm]
-         \quad\, $0 \xrightarrow[-3]{+(-3)} -3 \xrightarrow[+1,5]{-(-1,5)} -1,5 \xrightarrow{\text{opposé}} {\red 1,5}$ \\ [1mm]
-      \item On effectue les opérations \og à l'envers \fg. \\ [1mm]
-         \quad\, $6 \xrightarrow{\text{opposé}} -6 \xrightarrow[-1,5]{+(-1,5)} -7,5  \xrightarrow[+3]{-(-3)}{\red -4,5}$ \\ [1mm]
-      \item $x \xrightarrow[-3]{+(-3)} x-3 \xrightarrow[+1,5]{-(-1,5)} x-3+1,5$ \\
-         \quad\; $=x-1,5 \xrightarrow{\text{opposé}}{\red -x+1,5}$. \\ [1mm]
-   \end{enumerate}
+   \ \\ [-3mm]
+   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{-1},*9,*\num{-21},*30,8,*\num{-12},*9,\num{-4},*\num{-3},\num{-7}}   
+   \bigskip
+   
+   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{6,*\num{-13},*15,*\num{-15},\num{-7},*2,*0,\num{-5},*2,\num{-3}}
+   \bigskip
+   
+   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{-1.5},*\num{4,5},*\num{-12,5},*\num{20,5},3,*\num{-8},*8,\num{-5},*0,\num{-5}}
+  \bigskip
+  
+  \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{6.3},*\num{0,9},*\num{-12,2},*\num{16,4},\num{7.2},*\num{-9,3},*\num{6,2},*\num{-2,1},\num{-3.1},\num{-5.2}}
 \end{corrige}

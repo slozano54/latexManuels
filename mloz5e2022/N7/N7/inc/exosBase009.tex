@@ -1,31 +1,34 @@
 
-\begin{exercice*}
-   Compléter les pyramides suivantes sachant que chaque nombre est la somme des nombres se trouvant dans les deux cases juste en dessous.
-
+\begin{exercice*}[Ronde infernale]
+   Trouver les nombres manquants pour que la ronde de calculs soit vraie.
    \begin{center}
-    \PyramideNombre[Etages=4,Largeur=10mm]{\num{-1},~,~,~,8,~,~,\num{-4},~,\num{-7}}
-    \medskip
-    
-    \PyramideNombre[Etages=4,Largeur=10mm]{6,~,~,~,\num{-7},~,~,\num{-5},~,\num{-3}}
-    \medskip
-    
-    \PyramideNombre[Etages=4,Largeur=10mm]{\num{-1.5},~,~,~,3,~,~,\num{-5},~,\num{-5}}
-    \medskip
+      \RondeInfernale[%
+         Etapes=3,%
+         ListeOperations={+,-,+},%
+         ListeNombres={4,5,1},%
+         Rayon=2cm,%
+         Cle="2",%
+         Vide=true%
+      ]
 
-    \PyramideNombre[Etages=4,Largeur=10mm]{\num{6.3},~,~,~,\num{7.2},~,~,~,\num{-3.1},\num{-5.2}}
-  \end{center}
+      \RondeInfernale[%      
+         ListeOperations={-,+,-,+},%
+         ListeNombres={9,5,2,6},%
+         Rayon=2cm,%
+         Cle="2",%
+         Vide=true%
+      ]
+
+      \RondeInfernale[%
+         Etapes=5,%
+         ListeOperations={+,-,-,+,-},%
+         ListeNombres={-3,5,1,7,-2},%
+         Rayon=25mm,%
+         Cle="2",%
+         Vide=true%
+      ]
+   \end{center}
 \end{exercice*}
-
-\begin{corrige}
-   \ \\ [-3mm]
-   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{-1},*9,*\num{-21},*30,8,*\num{-12},*9,\num{-4},*\num{-3},\num{-7}}   
-   \bigskip
-   
-   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{6,*\num{-13},*15,*\num{-15},\num{-7},*2,*0,\num{-5},*2,\num{-3}}
-   \bigskip
-   
-   \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{-1.5},*\num{4,5},*\num{-12,5},*\num{20,5},3,*\num{-8},*8,\num{-5},*0,\num{-5}}
-  \bigskip
-  
-  \PyramideNombre[Etages=4,Largeur=10mm,Hauteur=10mm,Couleur=Salmon]{\num{6.3},*\num{0,9},*\num{-12,2},*\num{16,4},\num{7.2},*\num{-9,3},*\num{6,2},*\num{-2,1},\num{-3.1},\num{-5.2}}
-\end{corrige}
+% \begin{corrige}
+%    Pas de correction
+% \end{corrige}

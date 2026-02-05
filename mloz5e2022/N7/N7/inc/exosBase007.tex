@@ -1,31 +1,30 @@
 \begin{exercice*}
-   Dans un QCM de dix questions, une réponse juste rapporte 4 points, une absence de réponse 0 point et une mauvaise réponse enlève 3 points.
+   Voici un programme de calcul :
+   \begin{center}
+      \myProgCalcul{$\leadsto$}{Programme de calcul}{%
+         \ProgCalcul[Enonce,ThemePerso,Largeur=5cm]{%
+            Choisir un nombre,
+            Ajouter \num{-3},
+            Retirer \num{-1.5},
+            Donner l'opposé du résultat
+         }
+      }      
+   \end{center}
    \begin{enumerate}
-      \item Yassin a 2 bonnes réponses et 8 mauvaises. Quelle est sa note ?
-      \item Quelle est la plus mauvaise note qu'il est possible d'obtenir à ce QCM ? La meilleure note ?
-      \item Chamse-Dine a obtenu 14 points. Donner une combinaison possible pour obtenir ce résultat.
+      \item Appliquer ce programme au nombre $-2,5$ puis 0.
+      \item Quel nombre faut-il choisir pour obtenir 6 ?
+      \item Soit $x$ le nombre de départ, donner l'expression finale en fonction de $x$.
    \end{enumerate}
 \end{exercice*}
 
 \begin{corrige}
    \ \\ [-5mm]
    \begin{enumerate}
-      \item 2 bonnes réponses donnent  : \\
-         $2\times4\text{ points} =8\text{ points}$ ; \\
-         8 mauvaises réponses enlèvent : \\
-         $8\times3\text{ points} =24\text{ points}$. \\
-         Or, $+8-24 =-(24-8) =-16$ donc, la note de Mohamed-Amine est de {\red $-16$ points}.
-      \item La plus mauvaise note est obtenue lorsque l'on donne 10 mauvaises réponses, soit : \\
-         $-(10\times3\text{ points}) =\red -30\text{ points}$ ; \\
-         La meilleure note est obtenue lorsque l'on donne 10 bonnes réponses, soit  : \\
-         $+(10\times4\text{ points}) =\red +40\text{ points}$. \\
-      \item Emma peut, par exemple, avoir donné :
-         \begin{itemize}
-            \item {\red 5 bonnes réponses}, soit +20 points ;
-            \item {\red 2 mauvaises réponses}, soit $-6$ points ; 
-            \item {\red 3 questions sans réponse}, soit 0 point.
-         \end{itemize}
-      Cela donne bien : $+20-6+0 =14$.
+      \item $-2,5 \xrightarrow[-3]{+(-3)} -5,5 \xrightarrow[+1,5]{-(-1,5)} -4 \xrightarrow{\text{opposé}} {\red 4}$ \\ [1mm]
+         \quad\, $0 \xrightarrow[-3]{+(-3)} -3 \xrightarrow[+1,5]{-(-1,5)} -1,5 \xrightarrow{\text{opposé}} {\red 1,5}$ \\ [1mm]
+      \item On effectue les opérations \og à l'envers \fg. \\ [1mm]
+         \quad\, $6 \xrightarrow{\text{opposé}} -6 \xrightarrow[-1,5]{+(-1,5)} -7,5  \xrightarrow[+3]{-(-3)}{\red -4,5}$ \\ [1mm]
+      \item $x \xrightarrow[-3]{+(-3)} x-3 \xrightarrow[+1,5]{-(-1,5)} x-3+1,5$ \\
+         \quad\; $=x-1,5 \xrightarrow{\text{opposé}}{\red -x+1,5}$. \\ [1mm]
    \end{enumerate}
 \end{corrige}
-
