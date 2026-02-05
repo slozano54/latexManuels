@@ -1,7 +1,66 @@
-\begin{exercice*}
-   \dots
+\begin{exercice*} %1
+   Pour chacune des figures suivantes, dire s'il s'agit ou pas d'une symétrie (axiale ou centrale). Si oui, tracer l'axe ou le centre de symétrie.
+   \begin{center}
+      {\psset{unit=0.8}
+      \begin{pspicture}(15,6)
+         \psframe(0,0)(15,6)
+         \psline(5,0)(5,6)
+         \psline(10,0)(10,6)
+         \psline(0,3)(15,3)
+         \rput(0.5,5.5){a.}
+         \rput(1.5,4.5){\cocottea}
+         \rput(4.5,4.5){\cocottec}
+         \rput(5.5,5.5){b.}
+         \rput(7.5,4.75){\cocotteb}
+         \rput{180}(7.5,4.25){\cocottea} 
+         \rput(10.5,5.5){c.}
+         \rput(11.5,4.75){\cocottea}
+         \rput(11.5,3.25){\cocotteb}
+         \rput(0.5,2.5){d.}
+         \rput{90}(2,1){\cocotteb}
+         \rput(2,1){\cocottea} 
+         \rput(5.5,2.5){e.}
+         \rput(6.25,1.5){\cocottea}
+         \rput(9,1){\cocottec}
+         \rput(10.5,2.5){f.}
+         \rput{-30}(10.5,1){\cocottea}
+         \rput{80}(14.5,2.5){\cocottec}
+      \end{pspicture}}
+   \end{center}
 \end{exercice*}
-\begin{corrige}
-   \dots
-\end{corrige}
 
+\begin{corrige}
+   \ \\ [-5mm]
+   {\red Les figures a, b, et f sont des symétries}. \\
+   {\psset{unit=1.4}
+      \begin{center}
+         \begin{pspicture}(0,3)(5,6)
+            \psframe(0,3)(5,6)
+            \rput(0.5,5.5){a.}
+            \rput(1.5,4.5){\cocottea}
+            \rput(4.5,4.5){\cocottec}
+            \psline[linecolor=red](3,3.25)(3,5.75)
+            \rput(3.4,3.5){\red $d$}
+            \rput(1.4,3.25){\red symétrie d'axe $d$}
+         \end{pspicture} \\
+         \begin{pspicture}(5,3)(10,7)
+            \psframe(5,3)(10,6)
+            \rput(5.5,5.5){b.}
+            \rput(7.5,4.75){\cocotteb}
+            \rput{180}(7.5,4.25){\cocottea} 
+            \psdot[linecolor=red](7.5,4.5)
+            \rput(7.8,4.5){\red o}
+            \rput(9,3.6){\red symétrie de}
+            \rput(9,3.25){\red centre o}
+         \end{pspicture} \\
+         \begin{pspicture}(10,-2)(15,4)
+             \psframe(10,0)(15,3)
+             \rput(10.5,2.5){f.}
+             \rput{-30}(10.5,1){\cocottea}
+             \rput{80}(14.5,2.5){\cocottec}
+             \psline[linecolor=red](12.9,0.4)(12.3,2.8)
+             \rput(12.5,2.6){\red $\Delta$}
+             \rput(13.5,0.25){\red symétrie d'axe $\Delta$}
+         \end{pspicture}
+      \end{center}}
+\end{corrige}

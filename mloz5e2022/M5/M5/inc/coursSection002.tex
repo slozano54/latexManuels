@@ -1,2 +1,78 @@
-\section{\dots}
-\dots
+\section{Propriétés des symétries}
+  
+\begin{propriete}
+   La symétrie axiale et la symétrie centrale {\bf conservent} les longueurs, les angles, l'alignement et le parallélisme (ce sont des isométries).
+\end{propriete}
+
+\begin{exemple}[0.55]
+   On considère la figure $A'B'C'D'$ symétrique de $ABCD$ par rapport au point $O$ et la figure $A''B''C''D''$ symétrique de $ABCD$ par rapport à la droite $(d)$.
+   \begin{center}
+   {\psset{unit=0.7}
+   \small
+      \begin{pspicture}(-5,-7)(6,4.5)
+         \pstGeonode[PosAngle=-90](0.5,2){O}
+         \pstGeonode[PointName=none,PointSymbol=none](-3,-5){N}(3,1){P}
+         \pstLineAB{N}{P}
+         \pstGeonode[PosAngle={-45,-90,-135,135,45},CurveType=polygon,PointSymbol=+](0,0){A}(-2,0){I}(-4,0){B}(-4,2){C}(-2,2){D}
+         \pstSymO[PosAngle={135,90,45,-45,-135},CurveType=polygon,PointSymbol=+,linecolor=B1]{O}{A,I,B,C,D}[A',I',B',C',D']
+         \pstOrtSym[PosAngle={90,180,-135,-45,45},CurveType=polygon,PointSymbol=+,linecolor=A1]{N}{P}{A,I,B,C,D}[A'',I'',B'',C'',D'']
+         \pstRightAngle{B}{C}{D}
+         \pstRightAngle[linecolor=B1]{B'}{C'}{D'}
+         \pstRightAngle[linecolor=A1]{B''}{C''}{D''}
+         \pstLineAB[]{A}{B}
+         \pstLineAB[]{B}{C}
+         \pstLineAB[]{C}{D}
+         \pstLineAB[]{D}{A}
+         \pstLineAB[linecolor=B1]{A'}{B'}
+         \pstLineAB[linecolor=B1]{B'}{C'}
+         \pstLineAB[linecolor=B1]{C'}{D'}
+         \pstLineAB[linecolor=B1]{D'}{A'}
+         \pstLineAB[linecolor=A1]{A''}{B''}
+         \pstLineAB[linecolor=A1]{B''}{C''}
+         \pstLineAB[linecolor=A1]{C''}{D''}
+         \pstLineAB[linecolor=A1]{D''}{A''}
+         \rput(3,0.2){$(d)$}
+      \end{pspicture}}
+   \end{center}
+   \correction
+      Propriétés conservées : \\
+      \begin{itemize}
+         \item L'alignement : \\
+            $I\in[AB]$ donc : 
+            $\left\{
+            \begin{array}{rcl}
+            I'\in[A'B']\\
+            I''\in[A''B'']
+            \end{array}
+            \right.$            
+            % $\Syst{I'\in[A'B']}{I''\in[A''B'']}$ \\
+         \item le parallélisme : \\
+            $(AB)//(CD)$ donc :
+            $\left\{
+            \begin{array}{rcl}
+            (A'B')//(C'D')\\
+            (A''B'')//(C''D'')
+            \end{array}
+            \right.$             
+            % $\Syst{(A'B')//(C'D')}{(A''B'')//(C''D'')}$ \\
+         \item Les longueurs : \\
+            $A'B' = AB$ et $A''B'' = AB$ \\ [2mm]
+            $IA=IB$ donc 
+            $\left\{
+            \begin{array}{rcl}
+            I'A' = I'B'\\
+            I''A'' = I''B''
+            \end{array}
+            \right.$
+            % $\Syst{I'A'=I'B'}{I''A''=I''B''}$ \\
+         \item Les angles : \\
+            $(BC)\perp(CD)$ donc 
+            $\left\{
+            \begin{array}{rcl}
+            (B'C')\perp(C'D')\\
+            (B''C'')\perp(C''D'')
+            \end{array}
+            \right.$
+            % $\Syst{(B'C')\perp(C'D')}{(B''C'')\perp(C''D'')}$
+      \end{itemize}
+\end{exemple}

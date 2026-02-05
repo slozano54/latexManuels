@@ -1,2 +1,35 @@
-\section{\dots}
-\dots
+\section{Rappels sur les symétries}
+
+\begin{definition}
+   \begin{itemize}
+      \item $M'$ est l'image du point $M$ par la \textbf{symétrie d'axe $\Delta$} signifie que la droite $\Delta$ est la médiatrice du segment $[MM']$.
+      \item $M'$ est l'image du point $M$ par la \textbf{symétrie de centre $O$} signifie que $O$ est le milieu du segment $[MM']$.
+   \end{itemize}
+   \vspace*{-4mm}
+\end{definition}
+   
+\begin{center}
+   {\psset{unit=0.75}
+   \begin{pspicture}(-3,0)(4,3.8)
+      \pstGeonode[PointName=none, PointSymbol=none](0,-0.5){O}(0,3.5){O'}
+      \pstLineAB{O}{O'}
+      \pstTriangle[PosAngleA=115](1,1){A}(4,0){B}(2,3){C}
+      \psset{CodeFig=true,CodeFigColor=A1,linecolor=B1, RightAngleSize=0.2}
+      \pstOrtSym[SegmentSymbol=pstslash, PosAngle=50]{O}{O'}{A}
+      \pstOrtSym[SegmentSymbol=pstslashh, PosAngle=-135]{O}{O'}{B}
+      \pstOrtSym[SegmentSymbol=pstslashhh, PosAngle=90]{O}{O'}{C}
+      \pstLineAB[linecolor=B1]{A'}{B'}
+      \pstLineAB[linecolor=B1]{B'}{C'}
+      \pstLineAB[linecolor=B1]{C'}{A'}
+      \rput(0,3.8){$\Delta$}
+   \end{pspicture}
+   \quad
+   \begin{pspicture}(-5,0)(4,3)
+      \pstGeonode[PosAngle=-90](0,1.5){O}
+      \pstTriangle(1,0){A}(4,0){B}(2,2){C}
+      \pstSymO[CodeFig=true, CodeFigColor=A1, PosAngle={40,170,-90}]{O}{A, B, C}[A', B', C']
+      \pstLineAB[linecolor=B1]{A'}{B'}
+      \pstLineAB[linecolor=B1]{C'}{B'}
+      \pstLineAB[linecolor=B1]{A'}{C'}
+   \end{pspicture}}
+\end{center}

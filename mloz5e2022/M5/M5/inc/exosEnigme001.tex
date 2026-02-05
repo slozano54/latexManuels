@@ -2,8 +2,33 @@
 % si on veut mettre plusieurs enigmes
 % \refstepcounter{exercice}
 % \numeroteEnigme
-\begin{enigme}[\dots]
-   \dots
+\begin{enigme}[Entrelacs chinois]
+
+\medskip
+
+   \begin{minipage}{12cm}
+      Dans le rectangle quadrillé ci-dessous, les axes de symétrie ont été tracés en rouge, ils se coupent au point O. Le but est de reproduire l'entrelacs ci-contre, formé de trois rubans entrelacés, sachant que :
+      \begin{itemize}
+          \item l'épaisseur de ces rubans est de 1 carreau ;
+            \item les dimensions de la figure complète sont de 17 carreaux sur 19 carreaux ;
+            \item tous les segments sont portés par des lignes du quadrillages ;
+            \item les cercles ont pour centre commun le point O ;
+            \item les extrémités de leurs diamètres verticaux sont sur des lignes horizontales ;
+            \item cette figure admet un centre de symétrie mais pas d'axe de symétrie.
+         \end{itemize}
+      \end{minipage}
+      \qquad
+      \begin{minipage}{4.5cm}
+         \includegraphics[width=4cm]{\currentpath/images/entrelacs}
+      \end{minipage}
+   \begin{center}
+      {\psset{unit=0.9}
+      \begin{pspicture}(0,0.5)(17,19.3)
+         \psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(17,19)
+         \psline[linecolor=red](8.5,0)(8.5,19)
+         \psline[linecolor=red](0,9.5)(17,9.5)
+       \end{pspicture}}
+   \end{center}
 \end{enigme}
 
 % Pour le corrigé, il faut décrémenter le compteur, sinon il est incrémenté deux fois

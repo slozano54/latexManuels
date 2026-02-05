@@ -1,8 +1,58 @@
 \begin{exercice*}
-    \dots
- \end{exercice*}
- \begin{corrige}
-    \dots
- \end{corrige}
- 
- 
+   Le dessin ci-dessous n'est pas à taille réelle. Les points $D, O$ et $A$ sont alignés.
+   \begin{center}
+      \psset{unit=0.9}
+      \small
+      \begin{pspicture}(-4,-0.2)(4,3)
+         \pstGeonode[PosAngle={-90,-90,-45,45,-90},PointSymbol=+](-4,0){D}(3.5,0){A}(3.5;30){B}(3;120){C}(0,0){O}
+         \pstLineAB[nodesepB=-1]{D}{A}
+         \pstLineAB[nodesepB=-0.5]{O}{C}
+         \pstLineAB[nodesepB=-1]{O}{B}
+         \pstMarkAngle[MarkAngleRadius=0.7]{C}{O}{D}{\udeg{60}}
+         \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double,LabelSep=1.6]{A}{O}{B}{\udeg{30}}
+         \pstLabelAB{O}{B}{\ucm{6}}
+         \pstLabelAB{C}{O}{\ucm{4}}
+         \pstLabelAB[offset=-3mm]{D}{O}{\ucm{3}}
+         \pstLabelAB[offset=-3mm]{O}{A}{\ucm{5}}
+      \end{pspicture}
+   \end{center}
+   \begin{enumerate}
+      \item Reproduire en vraie grandeur ce dessin.
+      \item Construire les points $E$ et $F$, symétriques respectifs de $B$ et $C$ par rapport à $O$. Jules affirme que l'angle $\widehat{BOF}$ mesure \udeg{60} et l'angle $\widehat{COE}$ mesure \udeg{90}. \\
+         À-t-il raison ? Si oui, justifier ; sinon, corriger son affirmation.
+   \end{enumerate}
+\end{exercice*}
+
+\begin{corrige}
+   \ \\ [-5mm]
+   Figure à l'échelle 3/4. \\
+   {\psset{unit=0.75}
+   \small
+   \begin{pspicture}(-4.5,-4.5)(6,4.8)
+      \pstGeonode[PosAngle={-90,-90,-45,45,-90},PointSymbol=+](-3,0){D}(5,0){A}(6;30){B}(4;120){C}(0,0){O}(4;-60){F}(6;-150){E}
+      \pstLineAB{D}{A}
+      \pstMarkAngle[MarkAngleRadius=0.7]{C}{O}{D}{\udeg{60}}
+      \pstMarkAngle[MarkAngleRadius=1,MarkAngleType=double,LabelSep=1.6]{A}{O}{B}{\udeg{30}}
+      \pstLabelAB{O}{B}{\ucm{6}}
+      \pstLabelAB{C}{O}{\ucm{4}}
+      \pstLabelAB[offset=-3mm]{D}{O}{\ucm{3}}
+      \pstLabelAB[offset=-3mm]{O}{A}{\ucm{5}}
+      \pstSegmentMark{O}{B}
+      \pstSegmentMark[linecolor=red]{O}{E}
+      \pstSegmentMark[SegmentSymbol=pstslash]{O}{C}
+      \pstSegmentMark[SegmentSymbol=pstslash,linecolor=red,CodeFigColor=red]{O}{F}
+   \end{pspicture}}
+   \begin{itemize}
+      \item {\red Jules a tort pour l'angle $\widehat{BOF}$} : \\ \smallskip
+         on a $\widehat{BOF} =\widehat{BOA}+\widehat{AOF}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{AOF} =\widehat{DOC} =\udeg{60}$ donc, \\ \smallskip
+         $\widehat{BOF} =\udeg{30}+\udeg{60} =\udeg{90}$. \\ \smallskip
+         {\red L'angle $\widehat{BOF}$ est droit}. \smallskip
+      \item {\red Jules a raison pour l'angle $\widehat{COE}$} : \\ \smallskip
+         on a $\widehat{COE} =\widehat{COD}+\widehat{DOE}$. \\
+         Par conservation des angles par symétrie centrale, \\ \smallskip
+         on a $\widehat{DOE} =\widehat{AOB} =\udeg{30}$ donc, \\ \smallskip
+         $\widehat{COE} =\udeg{60}+\udeg{30} =\udeg{90}$. \medskip
+   \end{itemize}
+\end{corrige}
