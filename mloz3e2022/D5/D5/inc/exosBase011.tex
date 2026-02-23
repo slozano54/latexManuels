@@ -1,5 +1,56 @@
 \begin{exercice*}
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47194\&ordre=1}{https://manuel.sesamath.net/numerique/diapo.php?atome=47194\&ordre=1}
+    Pedro joue au jeu de pile ou face. Il obtient 13 fois pile et 7 fois face.
+    \begin{enumerate}
+        \item Calcule la fréquence d'apparition de l'événement pile.
+        \item Peux-tu en déduire que la pièce de Pedro est truquée ?
+    \end{enumerate}
+    Pedro appelle ses amis à l'aide. Ils effectuent chacun 20 lancers.
+    \begin{center}
+        \begin{tabular}{|>{\columncolor[gray]{0.8}}l|c|c|c|c|}
+            \hline
+            Amis & Lucien & Léonard & Louis & Sergio \\
+            \hline
+            Pile & 11     & 13      & 8     & 7      \\
+            \hline
+            Face & 9      & 7       & 12    & 13     \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item En cumulant les résultats de Pedro et de ses amis, remplis le tableau ci-dessous (fréquences arrondies à $10^{-2}$).
+        \begin{center}
+            \begin{tabular}{|>{\columncolor[gray]{0.8}}l|c|c|c|c|c|}
+                \hline
+                Au bout de ... lancers & 20 & 40 & 60 & 80 & 100 \\
+                \hline
+                Nombre de pile         & 13 & 24 &    &    &     \\
+                \hline
+                Fréquence d'apparition &    &    &    &    &     \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \smallskip
+        \item Utilise le tableau pour construire le graphique suivant.
+        \begin{center}
+            \Stat[%
+            Qualitatif,
+            Graphique,
+            Donnee={Nombre de lancers},
+            Effectif={Fréquences en \%},
+            Unitex=1,Pasx=2,PasGrillex=0.5,
+            Unitey=5,Pasy=0.5,PasGrilley=0.1,
+            Grille,LectureFine,
+            EpaisseurBatons=3,
+            BatonsVides={1,2,3,4,5},                        
+            ]{%
+            20/0.5,40/0.5,60/0.5,80/0.5,100/0.5%
+            }
+        \end{center}
+        \item Que peux-tu en déduire pour la pièce de Pedro ?
+    \end{enumerate}
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47194\&ordre=1}{Sesamath 3e 2021 ex11}
 \end{exercice*}
 \begin{corrige}
     ...

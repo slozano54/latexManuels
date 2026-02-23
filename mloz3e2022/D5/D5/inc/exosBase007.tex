@@ -1,5 +1,59 @@
-\begin{exercice*}
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47190\&ordre=1}{https://manuel.sesamath.net/numerique/diapo.php?atome=47190\&ordre=1}
+\begin{exercice*}[D'après DNB]
+    Mathilde fait tourner deux roues de loterie A et B comportant chacune quatre secteurs numérotés comme sur le schéma ci-dessous.
+    \begin{center}
+        \begin{tabular}{cc}
+            \begin{Geometrie}
+                pair O,A,B,C,D;
+                O=u*(2,2);
+                path cc;
+                cc=cercles(O,u);
+                A=pointarc(cc,0);
+                B=pointarc(cc,90);
+                C=pointarc(cc,180);
+                D=pointarc(cc,270);
+                trace cc;
+                trace segment(A,C);
+                trace segment(B,D);
+                label(TEX("\ding{173}"),iso(A,B));%2
+                label(TEX("\ding{172}"),iso(B,C));%1
+                label(TEX("\ding{175}"),iso(C,D));%4
+                label(TEX("\ding{174}"),iso(D,A));%3
+                drawarrow (pointarc(cc,45)+u*(0.3,0.3))--pointarc(cc,45) withpen pencircle scaled 1.5;
+            \end{Geometrie}
+            &
+                \begin{Geometrie}
+                    pair O,A,B,C,D;
+                    O=u*(2,2);
+                    path cc;
+                    cc=cercles(O,u);
+                    A=pointarc(cc,0);
+                    B=pointarc(cc,90);
+                    C=pointarc(cc,180);
+                    D=pointarc(cc,270);
+                    trace cc;
+                    trace segment(A,C);
+                    trace segment(B,D);
+                    label(TEX("\ding{178}"),iso(A,B));%2
+                    label(TEX("\ding{177}"),iso(B,C));%1
+                    label(TEX("\ding{180}"),iso(C,D));%4
+                    label(TEX("\ding{179}"),iso(D,A));%3
+                    drawarrow (pointarc(cc,45)+u*(0.3,0.3))--pointarc(cc,45) withpen pencircle scaled 1.5;
+                \end{Geometrie}
+            \\
+            Roue A & Roue B \\
+        \end{tabular}
+    \end{center}
+    La probabilité d'obtenir chacun des secteurs d'une roue est la même. Les flèches indiquent les deux secteurs obtenus.
+    
+    L'expérience de Mathilde est la suivante : «elle fait tourner les deux roues pour obtenir un nombre à deux chiffres. Le chiffre obtenu avec la roue A est le chiffre des dizaines et celui avec la roue B est le chiffre des unités».
+
+    Dans l'exemple ci-dessus, elle obtient le nombre 27 (roue A : 2 et roue B : 7).
+    \begin{enumerate}
+        \item Écris tous les nombres possibles issus de cette expérience.
+        \item Prouve que la probabilité d'obtenir un nombre supérieur à 40 est 0,25.
+        \item Quelle est la probabilité que Mathilde obtienne un nombre divisible par 3 ?
+    \end{enumerate}
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47190\&ordre=1}{Sesamath 3e 2021 ex7}
 \end{exercice*}
 \begin{corrige}
     ...

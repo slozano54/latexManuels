@@ -1,5 +1,74 @@
-\begin{exercice*}
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47193\&ordre=1}{https://manuel.sesamath.net/numerique/diapo.php?atome=47193\&ordre=1}
+\begin{exercice*}[D'après DNB]
+    On dispose de deux urnes :
+    \begin{itemize}
+        \item une urne bleue contenant trois boules bleues numérotées 2, 3 et 4 ;
+        \item une urne rouge contenant quatre boules rouges numérotées 2, 3, 4 et 5.
+    \end{itemize}
+    Dans chaque urne, les boules sont indiscernables au toucher et ont la même probabilité d'être tirées.
+    On s'intéresse à l'expérience aléatoire suivante : « On tire au hasard une boule bleue et on note son numéro, puis on tire au hasard une boule rouge et on note son numéro. »
+
+    Par exemple, si on tire la boule bleue numérotée 3 puis la boule rouge numérotée 4, le tirage obtenu sera noté (3 ; 4). On précise que le tirage (3 ; 4) est différent du tirage (4 ; 3).
+
+    Dans les deux questions suivantes, on définit les deux événements suivants : « On obtient deux nombres premiers. » et « La somme des nombres est égale à 12. »
+    \begin{enumerate}
+        \item Pour chacun des deux événements précédents, dis s'il est possible ou impossible lorsqu'on effectue l'expérience aléatoire.
+        \item Quel est le nombre de tirages possibles ?
+        \item Détermine la probabilité de l'événement : « On obtient deux nombres premiers. »
+        \item Détermine la probabilité de l'événement : « La somme des nombres est égale à 12. »
+        \item On obtient un « double » lorsque les deux boules tirées portent le même numéro. Justifie que la probabilité d'obtenir un « double » lors de cette expérience est $\frac{1}{4}$.
+    \end{enumerate}
+    On souhaite simuler cette expérience 1 000 fois. Pour cela, on a commencé à écrire un programme,à ce stade, encore incomplet.
+
+    Voici des copies d’écran.
+
+    Boule bleue, Boule rouge et Nombre de doubles sont des variables. Le bloc « Tirer deux boules » est à insérer dans le script principal.
+
+    \clearpage
+    \begin{center}
+        \textbf{Bloc « Tirer deux boules »}
+
+        \begin{Scratch}[Echelle=0.75]
+            Placer NouveauBloc("Tirer deux boules");
+            Placer MettreVar("Boule bleue",OpAlea("2","\textbf{B}"));
+            Placer MettreVar("Boule rouge",OpAlea("2","\textbf{C}"));
+        \end{Scratch}
+
+        \textbf{Script principal}
+
+        \begin{Scratch}[Echelle=0.75]
+            Placer Drapeau;
+            Placer Repeter("\textbf{A}");
+            Placer Si(TestOpEgal(OvalVar("Boule bleue"),OvalVar("Boule rouge")));
+            Placer AjouterVar("1","Nombres de doubles");
+            Placer FinBlocSi;
+            Placer FinBlocRepeter;
+        \end{Scratch}
+    \end{center}
+    \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item Par quels nombres faut-il remplacer les lettres A,B et C ?
+        \item Dans le script principal, indique où placer le bloc ci-dessous.
+              \begin{center}
+                  \begin{Scratch}[Echelle=0.75]
+                      Placer Bloc("Tirer deux boules");
+                  \end{Scratch}
+              \end{center}
+        \item Dans le script principal, indique où placer le bloc ci-dessous.        
+              \begin{center}
+                  \begin{Scratch}[Echelle=0.75]
+                      Placer MettreVar("Nombre de doubles","0");
+                  \end{Scratch}
+              \end{center}
+        \item On souhaite obtenir la fréquence d’apparition du nombre de « doubles » obtenus. Parmi les instructions ci-dessous, laquelle faut-il placer à la fin du script principal après la boucle « répéter » ? Entoure la bonne réponse.
+        \begin{description}
+            \item[Proposition 1 : ] {\LARGE \ScratchEnLigne*{Dire(OvalVar("Nombre de doubles"))}}
+            \bigskip
+            \item[Proposition 2 : ] {\LARGE \ScratchEnLigne*{Dire(OpDiv(OvalVar("Nombre de doubles"),"1000"))}}
+            \bigskip
+            \item[Proposition 3 : ] {\LARGE \ScratchEnLigne*{Dire(OpMul(OvalVar("Nombre de doubles"),"1000"))}}
+        \end{description}
+    \end{enumerate}
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47193\&ordre=1}{Sesamath 3e 2021 ex10}
 \end{exercice*}
 \begin{corrige}
     ...

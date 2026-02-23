@@ -1,9 +1,80 @@
 \begin{exercice*}
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=1}{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=1}
+    Dans ce problème, on lance deux dés de couleurs différentes. Les dés sont équilibrés et les faces sont numérotées de 1 à 6. On s'intéresse à la somme des valeurs obtenues par les dés.
+    
+    \textbf{Partie 1 :} On lance 14 fois les deux dés et on note les valeurs dans un tableur. Les résultats sont représentés dans le tableau ci-dessous.
 
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=2}{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=2}
+    La colonne A indique le numéro de l’expérience. Les colonnes B et C donnent les valeurs des dés. La somme des deux dés est calculée dans la colonne D.
+    \begin{center}
+        \begin{Tableur}[Bandeau=false]
+            N° & Dé 1 & Dé 2 & Somme \\
+            1  & 5    & 1    & 6     \\
+            2  & 1    & 1    & 2     \\
+            3  & 1    & 4    & 5     \\
+            4  & 1    & 6    & 7     \\
+            5  & 4    & 4    & 8     \\
+            6  & 6    & 4    & 10    \\
+            7  & 6    & 3    & 9     \\
+            8  & 5    & 6    & 11    \\
+            9  & 5    & 3    & 8     \\
+            10 & 5    & 6    & 11    \\
+            11 & 3    & 6    & 9     \\
+            12 & 2    & 5    & 7     \\
+            13 & 3    & 5    & 8     \\
+            14 & 1    & 6    & 7     \\
+        \end{Tableur}
+    \end{center}
+    \begin{enumerate}
+        \item La somme peut-elle être égale à 1 ? Justifie.
+        \item La somme 12 n'apparaît pas dans ce tableau. Est-il toutefois possible de l'obtenir ? Justifie.
+        \item Dans cette expérience, combien de fois obtient-on la somme 7 ? Déduis-en la fréquence de cette somme en pourcentage.
+    \end{enumerate}
+    \textbf{Partie 2 :} On fait une simulation de \num{1000} expériences avec un tableur. Les résultats sont représentés dans le diagramme en bâtons suivant.
+    \begin{center}
+        \Stat[%
+        Qualitatif,
+        Graphique,
+        Donnee={},
+        Effectif=Effectif des sommes obtenues,
+        Unitey=0.02,Pasy=30,
+        Grille,PasGrilley=10,LectureFine,
+        EpaisseurBatons=3]{%
+        2/30,3/50,4/64,5/100,6/136,7/170,8/150,9/118,10/92,11/60,12/30%
+        }
+    \end{center}
+    \clearpage
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Quel est, pour cette simulation, le nombre de lancers qui donne la somme 7 ? Déduis-en la fréquence en pourcentage représentée par ces lancers.
+    \end{enumerate}
+    \textbf{Partie 3 :} 
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item Complète le tableau ci-dessous et entoure les différentes possibilités d’obtenir une somme égale à 7 avec deux dés.
+    \end{enumerate}
+    \begin{center}
+        \begin{tabular}{|>{\centering\arraybackslash}p{0.08\linewidth}|c|c|c|c|c|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{\cellcolor[gray]{0.8}Somme} & \multicolumn{6}{c|}{\cellcolor[gray]{0.8}Valeur du 2\up{nd} dé} \\
+            \hhline{|*2{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*6{-}|}
+            \multicolumn{2}{|c|}{\cellcolor[gray]{0.8}des 2 dés} & \cellcolor[gray]{0.8}1 & \cellcolor[gray]{0.8}2 & \cellcolor[gray]{0.8}3 & \cellcolor[gray]{0.8}4 & \cellcolor[gray]{0.8}5 & \cellcolor[gray]{0.8}6 \\\hline
+            \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8}1 & 2 & 3 & 4 & & &  \\ \hhline{|*1{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*7{-}|}
+            \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8}2 & & & & & &  \\ \hhline{|*1{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*7{-}|}
+            \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8}3 & & & & & &  \\ \hhline{|*1{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*7{-}|}
+            \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8}4 & & & & & &  \\ \hhline{|*1{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*7{-}|}
+            \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8}5 & & & & & &  \\ \hhline{|*1{>{\arrayrulecolor[gray]{0.8}}-}>{\arrayrulecolor{black}}|*7{-}|}
+            \cellcolor[gray]{0.8}\multirow{-6}*{\rotatebox{90}{Valeur du 1\up{er} dé}} & \cellcolor[gray]{0.8}6 & & & & & & 12 \\ \hline
+        \end{tabular}
+    \end{center}
+    \begin{enumerate}
+        \setcounter{enumi}{5}
+        \item Calcule la probabilité d’obtenir cette somme.
+        \item Que peut-on dire des valeurs des fréquences obtenues aux questions c. et d. et de celle de la probabilité obtenue à la question f. ? Propose une explication.
+    \end{enumerate}
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=1}{Sesamath 3e 2021 ex13 - diapo1}
 
-    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=3}{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=3}
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=2}{Sesamath 3e 2021 ex13 - diapo2}
+
+    \hrefLien{https://manuel.sesamath.net/numerique/diapo.php?atome=47196\&ordre=3}{Sesamath 3e 2021 ex13 - diapo3}
 \end{exercice*}
 \begin{corrige}
     ...
