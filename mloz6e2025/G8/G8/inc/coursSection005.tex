@@ -1,0 +1,125 @@
+\section{Axes de symétrie des quadrilatères}
+\begin{minipage}{0.75\linewidth}
+    \begin{propriete}[\admise]
+        Un \textbf{LOSANGE} a 2 axes de symétrie : ce sont ses diagonales.
+    \end{propriete}
+    \begin{remarque}
+        \titreRemarque{Conséquence}
+
+        \textbf{Les diagonales} d'un losange se coupent perpendiculairement en leur milieu.
+    \end{remarque}
+\end{minipage}
+\begin{minipage}{0.2\linewidth}
+    %\includegraphics[scale=0.7]{courslosange.5}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(4.9u,3.5u)}]
+            u:=0.7*u;
+            pair A,B,C,D,O;
+            O=u*(3.5,2.5);
+            A=pointarc(cercles(O,3u),0);
+            C=pointarc(cercles(O,3u),180);
+            B=pointarc(cercles(O,1.5u),90);
+            D=pointarc(cercles(O,1.5u),270);
+            trace polygone(A,B,C,D);
+            trace droite(A,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace droite(B,D) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace codeperp(B,O,C,5);
+            marque_s:=marque_s/3;
+            trace Codelongueur(A,B,B,C,C,D,D,A,4);
+            trace Codelongueur(A,O,O,C,3);
+            trace Codelongueur(B,O,O,D,2);
+        \end{Geometrie}
+    \end{center}
+\end{minipage}
+
+\begin{minipage}{0.75\linewidth}
+    \begin{propriete}[\admise]
+        Un \textbf{RECTANGLE} a 2 axes de symétrie : ce sont les médiatrices des c\^{o}tés.
+    \end{propriete}
+    \begin{remarque}
+        \titreRemarque{Conséquence}
+
+        \textbf{Les diagonales} d'un rectangle se coupent en leur milieu et sont de même longueur.
+    \end{remarque}
+\end{minipage}
+\begin{minipage}{0.2\linewidth}
+    % \includegraphics[scale=0.6]{coursrectangle.4}
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5.6u,4.2u)}]
+            u:=0.7*u;
+            pair A,B,C,D,O;
+            pair I,J,K,L;
+            A=u*(1,1);
+            B=u*(1,5);
+            C=u*(7,5);
+            D=u*(7,1);
+            O=milieu(A,C);
+            I=milieu(A,B);
+            J=milieu(B,C);
+            K=milieu(C,D);
+            L=milieu(D,A);
+            trace polygone(A,B,C,D);
+            trace mediatrice(A,B) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace mediatrice(B,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            marque_s:=marque_s/3;
+            trace Codelongueur(B,J,J,C,D,L,L,A,4);
+            trace Codelongueur(A,I,I,B,C,K,K,D,5);
+            trace Codelongueur(B,O,O,A,O,D,O,C,1);
+            trace Codelongueur(I,O,O,K,3);
+            trace Codelongueur(J,O,O,L,2);
+            trace codeperp(D,L,J,5);
+            trace codeperp(I,K,C,5);
+            trace codeperp(C,J,L,5);
+            trace codeperp(B,I,K,5);
+            trace codeperp(K,O,J,5);
+            trace segment(B,D) withcolor blue;
+            trace segment(A,C) withcolor blue;
+            label.ulft(btex $O$ etex,O);
+        \end{Geometrie}
+    \end{center}
+\end{minipage}
+
+\begin{minipage}{0.75\linewidth}
+    \begin{propriete}[\admise]
+        Un \textbf{CARRÉ} a 4 axes de symétrie : ce sont les médiatrices des côtés et ses diagonales.
+    \end{propriete}
+    \begin{remarque}
+        \titreRemarque{Conséquence}
+
+        \textbf{Les diagonales} d'un carré se coupent perpendiculairement en leur milieu et sont de même longueur.
+    \end{remarque}
+\end{minipage}
+\begin{minipage}{0.2\linewidth}
+    % \includegraphics[scale=0.7]{coursrectangle.5} 
+    \begin{center}
+        \begin{Geometrie}[CoinHD={(5.6u,5.6u)}]
+            u:=0.7*u;
+            pair A,B,C,D,O;
+            pair I,J,K,L;
+            A=u*(1,4);
+            B=u*(4,7);
+            C=u*(7,4);
+            D=u*(4,1);
+            O=milieu(A,C);
+            I=milieu(A,B);
+            J=milieu(B,C);
+            K=milieu(C,D);
+            L=milieu(D,A);
+            trace polygone(A,B,C,D);
+            trace mediatrice(A,B) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace mediatrice(B,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace droite(A,C) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            trace droite(B,D) withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+            marque_s:=marque_s/3;
+            trace Codelongueur(B,J,J,C,D,L,L,A,4);
+            trace Codelongueur(A,I,I,B,C,K,K,D,4);
+            trace Codelongueur(B,O,O,A,O,D,O,C,5);
+            trace codeperp(A,I,K,5);
+            trace codeperp(L,J,C,5);
+            trace codeperp(A,L,J,5);
+            trace codeperp(D,K,I,5);
+            trace codeperp(D,O,C,5);
+            label.ulft(btex $O$ etex,O);
+        \end{Geometrie}
+    \end{center}
+\end{minipage} 

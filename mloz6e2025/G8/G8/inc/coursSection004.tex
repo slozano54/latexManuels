@@ -1,0 +1,117 @@
+\section{Axes de symétrie des triangles}
+\begin{changemargin}{0mm}{-25mm}
+\begin{minipage}{0.2\linewidth}
+    \begin{Geometrie}[CoinHD={(5u,5.5u)}]
+        pair A,B,C,M;
+        A=u*(1,1);
+        B-A=u*(3,0);
+        M=milieu(A,B);
+        path ca,d;
+        ca=cercles(A,4u);
+        d=mediatrice(A,B);
+        C=d intersectionpoint ca;
+        trace polygone(A,B,C);
+        trace d withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+        trace codeperp(B,M,C,5);
+        marque_s:=marque_s/3;
+        trace codesegments(A,M,M,B,2);
+        trace codesegments(A,C,C,B,4);
+        trace marqueangle(A,C,M,0);
+        marque_a:=1.1*marque_a;
+        trace marqueangle(A,C,M,0);
+        marque_a:=1.1*marque_a;
+        trace marqueangle(M,C,B,0);
+        marque_a:=1.1*marque_a;
+        trace marqueangle(M,C,B,0);
+        marque_a:=marque_a/1.331;
+        marque_a:=0.5*marque_a;
+        trace marqueangle(M,A,C,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M,A,C,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M,A,C,0);
+        marque_a:=marque_a/1.44;
+        trace marqueangle(C,B,M,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(C,B,M,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(C,B,M,0);
+    \end{Geometrie}
+\end{minipage}
+\begin{minipage}{0.75\linewidth}
+    \begin{propriete}[\admise]
+        Un \textbf{triangle isocèle} a \textbf{un axe de symétrie} : la médiatrice de sa base qui est aussi la bissectrice de son angle principal.
+    \end{propriete}
+    \begin{remarque}
+        \titreRemarque{Conséquence}
+
+        Les \textbf{angles à la base} d'un triangle isocèle sont égaux.
+    \end{remarque}
+\end{minipage}
+
+\begin{minipage}{0.22\linewidth}
+    \begin{Geometrie}[CoinBG={(0.5u,0.5u)},CoinHD={(5.5u,5u)}]
+        pair A,B,C,M[];
+        A=u*(1,1);
+        B-A=u*(4,0);
+        path ca,d[];
+        ca=cercles(A,4u);
+        d1=mediatrice(A,B);
+        C=d1 intersectionpoint ca;
+        trace polygone(A,B,C);
+        M1=milieu(A,B);
+        trace d1 withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+        trace codeperp(B,M1,C,5);
+        marque_s:=marque_s/3;
+        trace codesegments(A,M1,M1,B,2);        
+        marque_a:=0.5*marque_a;
+        trace marqueangle(A,C,M1,0);        
+        marque_a:=1.2*marque_a;
+        trace marqueangle(A,C,M1,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M1,C,B,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M1,C,B,0);
+        marque_a:=marque_a/1.728;
+        %
+        d2=mediatrice(B,C);
+        M2=milieu(B,C);
+        trace d2 withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+        trace codeperp(C,M2,A,5);
+        trace codesegments(B,M2,M2,C,2);        
+        trace marqueangle(B,A,M2,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(B,A,M2,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M2,A,C,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M2,A,C,0);
+        marque_a:=marque_a/1.728;
+        %
+        d3=mediatrice(C,A);
+        M3=milieu(C,A);
+        trace d3 withcolor red dashed dashpattern(on6bp off3bp on1.5bp off3bp) withpen pencircle scaled 1.2bp;
+        trace codeperp(C,M3,B,5);
+        trace codesegments(C,M3,M3,A,2);        
+        trace marqueangle(C,B,M3,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(C,B,M3,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M3,B,A,0);
+        marque_a:=1.2*marque_a;
+        trace marqueangle(M3,B,A,0);
+        marque_a:=marque_a/1.728;
+    \end{Geometrie}
+\end{minipage}
+\begin{minipage}{0.63\linewidth}
+    \begin{propriete}[\admise]
+        Un \textbf{triangle équilatéral} a \textbf{trois axes de symétrie} : les médiatrices de ses côtés qui sont aussi les bissectrices de ses angles.
+    \end{propriete}
+
+    \begin{remarque}
+        \titreRemarque{Conséquence}
+
+        \textbf{Tous les angles} d'un triangle équilatéral sont égaux à \ang{60}.
+    \end{remarque}
+\end{minipage}
+\end{changemargin}
