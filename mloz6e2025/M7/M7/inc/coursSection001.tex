@@ -1,0 +1,83 @@
+\section{Aire}
+\begin{definition}
+    L'\textbf{aire} d'une figure c'est la mesure de sa surface.
+\end{definition}
+
+\begin{remarques}
+    \emoji{light-bulb}\emoji{light-bulb}\emoji{light-bulb}
+    \begin{itemize}
+        \item Une aire s'exprime avec une \textbf{unité d'aire}.
+        \item Deux figures non superposables peuvent avoir le \textbf{même périmètre}.
+        \item Deux figures non superposables peuvent avoir la \textbf{même aire}.
+        \item Deux figures peuvent avoir la même aire mais des \textbf{périmètres différents}.
+        \item Deux figures peuvent avoir le même périmètre mais des \textbf{aires différentes}.
+    \end{itemize}
+
+    \medskip
+    \begin{minipage}{0.45\linewidth}
+        \begin{Geometrie}[CoinHD={(6u,5.5u)}]            
+            pair A[],B[],C[];
+            % Fig1            
+            A0=u*(0.5,2);
+            A1=A0 shifted (0.5u,0);
+            A2=A1 shifted (0,2.5u);
+            A3=A2 shifted (u,0);
+            A4=A3 shifted (0,0.5u);
+            A5=A4 shifted (-1.5u,0);
+            trace polygone(A0,A1,A2,A3,A4,A5) withcolor Brown withpen pencircle scaled 2bp;
+            remplis polygone(A0,A1,A2,A3,A4,A5) withcolor BurlyWood;            
+            % Fig2
+            B0=u*(2,2);
+            B1=B0 shifted (u,0);
+            B2=B1 shifted (0,2u);
+            B3=B2 shifted (-u,0);
+            trace polygone(B0,B1,B2,B3) withcolor DarkGreen withpen pencircle scaled 2bp;
+            remplis polygone(B0,B1,B2,B3) withcolor LightGreen;            
+            % Fig3
+            C0=u*(3.5,2);
+            C1=C0 shifted (2u,0);
+            C2=C1 shifted (0,0.5u);
+            C3=C2 shifted (-0.5u,0);
+            C4=C3 shifted (0,0.5u);
+            C5=C4 shifted (-0.5u,0);
+            C6=C5 shifted (0,0.5u);
+            C7=C6 shifted (-0.5u,0);
+            C8=C7 shifted (0,u);
+            C9=C8 shifted (-0.5u,0);
+            trace polygone(C0,C1,C2,C3,C4,C5,C6,C7,C8,C9) withcolor DarkBlue withpen pencircle scaled 2bp;
+            remplis polygone(C0,C1,C2,C3,C4,C5,C6,C7,C8,C9) withcolor LightBlue;            
+            % Grille
+            trace grille(0.5) withcolor DarkGrey;
+            label(btex {\color{Brown} Fig 1} etex,(1.25u,4.75u));
+            label(btex {\color{DarkGreen} Fig 2} etex,(2.5u,3.25u));
+            label(btex {\color{DarkBlue} Fig 3} etex,(4.25u,2.75u));
+            % Unités
+            % Longueur
+            trace segment((1.5u,u),(2u,u)) withcolor red withpen pencircle scaled 2bp;
+            label(btex u.l. etex,(1.75u,0.75u));
+            label(btex unité de longueur etex,(1.75u,0.25u));
+            % Aire
+            pair D[];
+            D0=u*(4.5,1);
+            D1=D0 shifted (0.5u,0);
+            D2=D1 shifted (0,0.5u);
+            D3=D2 shifted (-0.5u,0);            
+            trace polygone (D0,D1,D2,D3) withcolor Grey withpen pencircle scaled 2bp;
+            remplis polygone(D0,D1,D2,D3) withcolor LightGrey;
+            label(btex u.a. etex,(4.75u,0.75u));
+            label(btex unité d'aire etex,(4.75u,0.25u));
+        \end{Geometrie}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{itemize}
+            \item Fig1 et Fig2 ont la \textbf{même aire} mais pas le même périmètre.
+            \item Fig1 et Fig3 ont le \textbf{même périmètre} mais pas la même aire.
+        \end{itemize}
+        \begin{tabular}{|>{\centering\arraybackslash}p{0.3\linewidth}|*{3}{>{\centering\arraybackslash}p{0.2\linewidth}|}}
+            \cline{2-4}
+            \multicolumn{1}{c|}{}&\cellcolor{BurlyWood}Fig1&\cellcolor{LightGreen}Fig2&\cellcolor{LightBlue}Fig3 \\ \hline
+            Périmètre& 18 u.l. & 12 u.l. & 18 u.l. \\ \hline
+            Aire& 8 u.a.&8 u.a.&11 u.a. \\ \hline 
+        \end{tabular}
+    \end{minipage}
+\end{remarques}
