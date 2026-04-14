@@ -1,0 +1,242 @@
+\section{Différents types d'angles}
+
+\begin{changemargin}{0mm}{-20mm}
+\begin{definition}[Classement des angles selon leur mesure $\alpha=\widehat{BAC}$]
+    \begin{center}
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|*4{c|}}
+            \hline
+            \multicolumn{4}{|c|}{Angles {\bfseries saillants}}\\\hline
+            $\ang{0}<\alpha<\ang{90}$ & $\alpha=\ang{90}$ & $\ang{90}<\alpha<\ang{180}$ & $\alpha=\ang{180}$ \\\hline
+            Angle \textbf{aigu} & Angle \textbf{droit} &  Angle \textbf{obtus} & Angle \textbf{plat} \\\hline
+            \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C;
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                label.bot(btex $A$ etex, A);
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C = 0.8[A,B rotatedaround(A, 60)];
+                pointe(C);
+                label.ulft(btex $C$ etex, C);
+                trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+                marque_a:=0.6*marque_a;
+                trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C;
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                label.bot(btex $A$ etex, A);
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C = 0.8[A,B rotatedaround(A, 90)];
+                pointe(C);
+                label.lft(btex $C$ etex, C);
+                trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+                marque_a:=0.6*marque_a;
+                trace codeperp(B,A,C,8);
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2u)}]            
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C;
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                label.bot(btex $A$ etex, A);
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C = 0.8[A,B rotatedaround(A, 115)];
+                pointe(C);
+                label.llft(btex $C$ etex, C);
+                trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+                marque_a:=0.6*marque_a;
+                trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,0)},CoinHD={(2.5u,2u)}]
+                labeloffset:=labeloffset*1.5;            
+                pair A,B,C[];
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                label.bot(btex $A$ etex, A);
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C0 = 0.8[A,B rotatedaround(A, 180)];
+                pointe(C0);
+                label.ulft(btex $C$ etex, C0);
+                trace demidroite(A,C0) withpen pencircle scaled 1.25bp;
+                marque_a:=0.6*marque_a;
+                path cc;
+                cc=cercles(A,0.2[A,B]);
+                C1 = pointarc(cc,0);
+                C2 = pointarc(cc,90);
+                C3 = pointarc(cc,180);
+                draw C1..C2..C3;
+                label.top(btex $\alpha$ etex, C2);
+            \end{Geometrie}\\\hline        
+        \end{tabular}    
+        }
+
+        \smallskip
+        {\renewcommand{\arraystretch}{1.5}
+        \begin{tabular}{|*3{c|}}
+            \hline
+            $\alpha=\ang{0}$ & $\ang{180}<\alpha<\ang{360}$ & $\alpha=\ang{360}$ \\\hline
+            Angle \textbf{nul} & Angle \textbf{rentrant} & Angle \textbf{plein} \\\hline
+            \begin{Geometrie}[CoinHD={(2.5u,2u)}]            
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C;
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                label.bot(btex $A$ etex, A);
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C = 0.8[A,B rotatedaround(A,0)];
+                pointe(C);
+                label.ulft(btex $C$ etex, C);
+                % trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+                % marque_a:=0.6*marque_a;
+                % trace Codeangle(B,A,C,0,btex $\alpha$ etex);
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(2.5u,1.5u)}]
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C;
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                labeloffset:=labeloffset*2;
+                label.bot(btex $A$ etex, A);
+                labeloffset:=labeloffset/2;
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C = 0.8[A,B rotatedaround(A,30)];
+                pointe(C);
+                label.ulft(btex $C$ etex, C);
+                trace demidroite(A,C) withpen pencircle scaled 1.25bp;
+                marque_a:=0.4*marque_a;
+                trace Codeangle(C,A,B,0,btex $\alpha$ etex);
+            \end{Geometrie}
+            &
+            \begin{Geometrie}[CoinBG={(-u,-0.5u)},CoinHD={(2.5u,1.5u)}]            
+                labeloffset:=labeloffset*1.5;
+                pair A,B,C[];
+                A=u*(.5,0.5);
+                B=u*(2,0.5);
+                marque_p:="croix";
+                picture fig;
+                pointe(A,B);
+                labeloffset:=labeloffset*2;
+                label.bot(btex $A$ etex, A);
+                labeloffset:=labeloffset/2;
+                label.bot(btex $B$ etex, B);
+                trace demidroite(A,B) withpen pencircle scaled 1.25bp;
+                C0 = 0.8[A,B rotatedaround(A, 360)];
+                pointe(C0);
+                label.ulft(btex $C$ etex, C0);
+                trace demidroite(A,C0) withpen pencircle scaled 1.25bp;
+                marque_a:=0.6*marque_a;
+                path cc;
+                cc=cercles(A,0.15[A,B]);
+                trace cc;
+                C2 = pointarc(cc,160);
+                label.ulft(btex $\alpha$ etex, C2);
+            \end{Geometrie}\\\hline
+        \end{tabular}    
+        }
+    \end{center}
+\end{definition}
+
+\begin{propriete}
+    Soient $A$, $B$ et $C$ trois points distincts deux à deux :
+    \begin{itemize}
+        \item Dire que \textbf{les droites $\mathbf{(AB)}$ et $\mathbf{(AC)}$ sont perpendiculaires} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est un angle droit}.
+        \item Dire que \textbf{les points $\mathbf{A}$, $\mathbf{B}$ et $\mathbf{C}$ sont alignés} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est soit nul, soit plat}.
+    \end{itemize}
+\end{propriete}
+\end{changemargin}
+
+% \proprNumBis{}{Soient $A$, $B$ et $C$ trois points distincts deux à deux :
+% \begin{mylist}
+% \item Dire que \textbf{les droites $\mathbf{(AB)}$ et $\mathbf{(AC)}$ sont perpendiculaires} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est un angle droit}.
+% \item Dire que \textbf{les points $\mathbf{A}$, $\mathbf{B}$ et $\mathbf{C}$ sont alignés} revient à dire que \textbf{l'angle $\widehat{\mathbf{BAC}}$ est soit nul, soit plat}.
+% \end{mylist}
+% }
+
+% \definNum{
+% \begin{mylist}
+% \item Deux angles sont dits \textbf{adjacents} s'ils ont le même sommet, un côté en commun, et qu'ils sont situés de part et d'autre de ce côté commun.
+% \item Deux angles sont dits \textbf{complémentaires} si la somme de leurs mesures est égale à $90^{\circ}$.
+% \item Deux angles sont dits \textbf{supplémentaires} si la somme de leurs mesures est égale à $180^{\circ}$.
+% \end{mylist}
+
+% \begin{tabular}{c c}
+% \begin{minipage}{8.5cm}
+% \psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \scalebox{0.6}{
+% \begin{pspicture*}(-4,-1)(10,6)
+% \psplot{0}{13.97}{(-0-0*x)/8}
+% \psplot{0}{13.97}{(-0--2*x)/4}
+% \psline(0,0)(0,10.5)
+% \psarc(0,0){1.4}{0}{26.57}
+% \psarc(0,0){1.08}{26.57}{90}
+% \psdots(0,0)
+% \rput[bl](-0.9,-0.37){$A$}
+% \psdots(8,0)
+% \rput[bl](8.13,0.2){$B$}
+% \psdots(0,5)
+% \rput[bl](0.23,5){$C$}
+% \psdots(4,2)
+% \rput[bl](4.13,2.5){$D$}
+% \end{pspicture*}
+% }
+% \par
+% $\widehat{BAD}$ et $\widehat{DAC}$ sont :\par adjacents et complémentaires.
+% \end{minipage}
+% &
+% \begin{minipage}{8.5cm}
+% \psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=*,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+% \scalebox{0.6}{
+% \begin{pspicture*}(-6,-1)(10,6)
+% \psplot{0}{13.97}{(-0-0*x)/8}
+% \psplot{0}{13.97}{(-0--4.53*x)/1.97}
+% \psplot{-7.17}{0}{(-0-0*x)/-5}
+% \psarc(0,0){1.2}{0}{66.55}
+% \psarc(0,0){0.9}{66.55}{180}
+% \psdots(0,0)
+% \rput[bl](-0.6,-0.87){$A$}
+% \psdots(8,0)
+% \rput[bl](8.13,0.2){$B$}
+% \psdots(-5,0)
+% \rput[bl](-4.87,0.2){$C$}
+% \psdots(1.97,4.53)
+% \rput[bl](2.3,4.73){$D$}
+% \end{pspicture*}
+% }
+% \par 
+% $\widehat{BAD}$ et $\widehat{DAC}$ sont :\par adjacents et supplémentaires.
+% \end{minipage}
+% \end{tabular}
+% }
+
