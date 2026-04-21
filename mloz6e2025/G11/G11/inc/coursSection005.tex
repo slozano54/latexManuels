@@ -1,0 +1,93 @@
+\section{Utilisation d'un quadrillage}    
+    % utilisation d'un quadrillage
+    \begin{methode*1}[Image d'un point à l'aide d'un quadrillage]
+      Tracer le symétrique du point $A$ par rapport à un axe à l'aide du quadrillage.
+       \exercice
+         {\bf Dans un quadrillage :} si l'axe est horizontal ou vertical, il suffit de reporter le nombre de carreaux séparant le point de l'axe de l'autre côté de cet axe. Si le quadrillage est en diagonale : 
+         
+         \medskip
+         \begin{tabular}{>{\centering\arraybackslash}p{50mm}>{\centering\arraybackslash}p{50mm}>{\centering\arraybackslash}p{50mm}}   
+         \begin{Geometrie}[CoinHD={(4.21u,3.51u)}]                        
+            trace grille(0.7);
+            pair axe[],A;
+            axe0=u*(0.7,0);
+            axe1=u*(4.2,3.5);
+            A=u*(0.7,2.8);
+            marque_p:="croix";
+            pointe(A);
+            trace segment(axe0,axe1) withcolor red withpen pencircle scaled 1bp;
+            label.llft(TEX("$A$"),A);
+            label.ulft(TEX("$(d)$"),(3.5u,2.8u)) withcolor red;
+         \end{Geometrie}
+            &
+         \begin{Geometrie}[CoinHD={(4.21u,3.51u)}]                        
+            trace grille(0.7) dashed withdots;
+            pair axe[],A,H;
+            axe0=u*(0.7,0);
+            axe1=u*(4.2,3.5);
+            A=u*(0.7,2.8);
+            H=projection(A,axe0,axe1);
+            marque_p:="croix";
+            pointe(A);
+            trace segment(axe0,axe1) withcolor red withpen pencircle scaled 1bp;
+            label.llft(TEX("$A$"),A);
+            label.ulft(TEX("$(d)$"),(3.5u,2.8u)) withcolor red;
+            trace segment(A,H) withcolor blue;
+            path cc[];
+            pair I[];
+            I0=iso(A,iso(A,H));
+            I1=iso(H,iso(A,H));
+            cc0=cercles(I0,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc0,135)..pointarc(cc0,45)..pointarc(cc0,-45) withcolor blue;
+            cc1=cercles(I1,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc1,135)..pointarc(cc1,45)..pointarc(cc1,-45) withcolor blue;
+            label.urt(TEX("\num{1}"),I0) withcolor blue;
+            label.urt(TEX("\num{2}"),I1) withcolor blue;
+         \end{Geometrie}
+            &
+         \begin{Geometrie}[CoinHD={(4.21u,3.51u)}]                        
+            trace grille(0.7) dashed withdots;
+            pair axe[],A,H;
+            axe0=u*(0.7,0);
+            axe1=u*(4.2,3.5);
+            A=u*(0.7,2.8);
+            H=projection(A,axe0,axe1);
+            marque_p:="croix";
+            pointe(A);
+            trace segment(axe0,axe1) withcolor red withpen pencircle scaled 1bp;
+            label.llft(TEX("$A$"),A);
+            label.ulft(TEX("$(d)$"),(3.5u,2.8u)) withcolor red;
+            trace segment(A,H) withcolor blue;
+            path cc[];
+            pair I[];
+            I0=iso(A,iso(A,H));
+            I1=iso(H,iso(A,H));
+            cc0=cercles(I0,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc0,135)..pointarc(cc0,45)..pointarc(cc0,-45) withcolor blue;
+            cc1=cercles(I1,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc1,135)..pointarc(cc1,45)..pointarc(cc1,-45) withcolor blue;
+            label.urt(TEX("\num{1}"),I0) withcolor blue;
+            label.urt(TEX("\num{2}"),I1) withcolor blue;
+            I2=symetrie(I1,axe0,axe1);
+            I3=symetrie(I0,axe0,axe1);
+            pair A';
+            A'=symetrie(A,axe0,axe1);
+            pointe(A');
+            label.urt(TEX("$A'$"),A');
+            trace segment(H,A') withcolor DarkGreen;
+            cc2=cercles(I2,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc2,135)..pointarc(cc2,45)..pointarc(cc2,-45) withcolor DarkGreen;
+            cc3=cercles(I3,u*0.35*sqrt(2));            
+            drawarrow pointarc(cc3,135)..pointarc(cc3,45)..pointarc(cc3,-45) withcolor DarkGreen;
+            label.urt(TEX("\num{1}"),I2) withcolor DarkGreen;
+            label.urt(TEX("\num{2}"),I3) withcolor DarkGreen;
+         \end{Geometrie}
+         \\
+            symétrique du point $A$ par rapport à $(d)$ :
+            &
+            compter le nombre de diagonales entre le point et la droite,
+            &
+            reporter ce nombre de l'autre côté en diagonal. \\
+         \end{tabular}
+         \vspace*{-5mm}
+   \end{methode*1}

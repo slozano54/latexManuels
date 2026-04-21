@@ -1,0 +1,97 @@
+\section{Construction du symétrique d'un point}
+\begin{methode*1}[Image d'un point par rapport à une droite à la règle et l'équerre]    
+    \exercice
+    Construire l'image d'un point $M$ par rapport à une droite $(d)$,
+    
+    $M$ n'appartenant pas à la droite.
+    \correction
+    \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \begin{Geometrie}
+                pair M[],I,axe[];
+                axe0=u*(3,0);
+                axe1-axe0=u*(-0.5,2.5);                
+                trace axe0--axe1 dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                M0-axe0=u*(-1.5,0.6);
+                M1=symetrie(M0,axe0,axe1);
+                I= segment(M0,M1) intersectionpoint segment(axe0,axe1);
+                trace segment(M0,M1);                
+                trace codeperp(axe1,I,M0,5);
+                label.top(TEX("axe (d)"),axe1);
+                marque_s:=0.3*marque_s;
+                trace marquesegment(M0,M1);
+                label.ulft(TEX("$M$"),M0);
+                label.urt(TEX("$M'$"),M1);
+                label.urt(TEX("$I$"),I);
+                trace Codelongueur(M0,I,I,M1,3);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.65\linewidth}
+        \begin{enumerate}
+            \item Tracer la perpendiculaire à l'axe (d) passant par M.
+            \item Elle coupe (d) en $I$, placer le point $I$.
+            \item Reporter la distance $MI$ de l'autre côté de l'axe (d).
+            \item Placer le point $M'$, symétrique de $M$
+        \end{enumerate}
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \begin{minipage}{\linewidth}
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_113.html}{Avec la règle et de l'équerre}
+        
+            \creditInstrumentPoche
+        \end{minipage}
+    \end{myBox}
+\end{methode*1}
+
+\begin{methode*1}[Image d'un point par rapport à une droite à la règle et au compas]    
+    \exercice
+    Construire l'image d'un point $M$ par rapport à une droite $(d)$,
+    
+    $M$ n'appartenant pas à la droite.
+    \correction
+    \begin{minipage}{0.35\linewidth}
+        \begin{center}
+            \begin{Geometrie}
+                pair I,J,M[],axe[];
+                path cI,cJ;
+                axe0=u*(2,0);
+                axe1-axe0=u*(1,5);                
+                trace axe0--axe1 dashed dashpattern(on6bp off3bp on1.5bp off3bp) withcolor red;
+                J=0.2[axe0,axe1];
+                I=0.8[axe0,axe1];
+                M0-J=u*(1.5,0.3);
+                M1=symetrie(M0,I,J);
+                marque_p:="croix";
+                u:=u/2;
+                pointe(I,J,M0,M1);
+                u:=u*2;
+                cI=cercles(I,M0);
+                cJ=cercles(J,M0);
+                trace subpath(4.8,6.8) of cI dashed evenly;
+                trace subpath(0,3.6) of cJ dashed evenly;
+                label.ulft(TEX("axe (d)"),axe0);
+                label.lrt(TEX("$M$"),M0);
+                label.lft(TEX("$M_1$"),M1);
+                label.ulft(TEX("$I$"),I);
+                label.lrt(TEX("$J$"),J);
+            \end{Geometrie}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.65\linewidth}
+        \begin{enumerate}
+            \item Placer deux points, $I$ et $J$, distincts sur l’axe (d), pas trop proches.
+            \item Tracer deux arcs de cercle de centres $I$ et $J$, passant par $M$.
+            \item Placer le point $M_1$, symétrique de $M$, à l’intersection de ces deux arcs.
+        \end{enumerate}
+    \end{minipage}
+    \begin{myBox}{\infoComplementsNumeriques{singulier}}
+        \begin{minipage}{\linewidth}
+            \hrefConstruction{http://lozano.maths.free.fr/iep_local/figures_html/scr_iep_111.html}{Avec le compas}
+
+            \creditInstrumentPoche
+        \end{minipage}
+    \end{myBox}
+\end{methode*1}
+
+ 
