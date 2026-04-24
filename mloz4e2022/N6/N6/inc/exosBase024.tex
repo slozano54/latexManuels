@@ -1,5 +1,19 @@
 \begin{exercice*}
-    \hrefLienSesamath{47107}{1}
+    Voici un programme.
+
+    \begin{Scratch}[Echelle=0.9]
+        drapeau
+        demander("Choisis un nombre")
+        mettrevariable("Résultat", add(mul(3,réponse),7))
+        mettrevariable("Résultat", mul(variable(Résultat), réponse))
+        mettrevariable("Résultat", sous(variable(Résultat), réponse))
+        dire(variable(Résultat))
+    \end{Scratch}
+    \begin{enumerate}
+        \item Détermine le résultat obtenu pour le nombre de ton choix.
+        \item Exprime le résultat obtenu par le programme pour un nombre $x$.
+        \item Charles remarque qu'en choisissant un nombre entier, le programme donne toujours un multiple de 3. Justifie cette remarque.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés

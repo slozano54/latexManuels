@@ -1,5 +1,60 @@
 \begin{exercice*}
-    \hrefLienSesamath{47102}{1}
+    Montre que les deux solides ci-dessous ont le même volume.
+    \begin{center}
+        \Solide[%
+            Nom=pave,
+            Phi=110,
+            Largeur=1.3,
+            Hauteur=0.975,
+            Profondeur=1.95,
+            Sommets=false,
+            Traces={
+                    trace appelation(Projette(C),Projette(D),-3mm,TEX("$2x$"));
+                    trace appelation(Projette(B),Projette(C),-3mm,TEX("$2x+4$"));
+                    trace appelation(Projette(D),Projette(E),-3mm,TEX("\rotatebox{90}{$x$}"));
+                    Label(TEX("$\mathbf{\mathcal{V}_1}$"),iso(E,F,G,H));
+                }
+        ]
+
+        \begin{Geometrie}[Cadre="aucun",TypeTrace="Espace"]
+            Initialisation(5,45,20,57);
+            color A,B,C,D,E,F;
+            B=(0,0,0);
+            A-B=(0,0,1);
+            C-B=(4/5,0,0);
+            E-B=(0,9/5,0);
+            D-E=A-B;
+            F-E=C-B;
+            NbS:=6;
+            Sommet1:=A;
+            Sommet2:=B;
+            Sommet3:=C;
+            Sommet4:=D;
+            Sommet5:=E;
+            Sommet6:=F;
+            NF:=5;
+            Fc[100]:=3;Fc[101]:=1;Fc[102]:=2;Fc[103]:=3;
+            Fc[200]:=3;Fc[201]:=6;Fc[202]:=5;Fc[203]:=4;
+            Fc[300]:=4;Fc[301]:=4;Fc[302]:=5;Fc[303]:=2;Fc[304]:=1;
+            Fc[400]:=4;Fc[401]:=5;Fc[402]:=6;Fc[403]:=3;Fc[404]:=2;
+            Fc[500]:=4;Fc[501]:=1;Fc[502]:=3;Fc[503]:=6;Fc[504]:=4;
+            DessineObjet;
+            trace codeperp(A,B,C,8);
+            trace codeperp(A,B,E,8);
+            trace codeperp(D,E,F,8);
+            label.rt(TEX("$4x$"),Projette(iso(D,E)));
+            trace appelation(A,D,2mm,TEX("$x+2$"));
+            trace appelation(F,E,-3mm,TEX("$2x$"));
+            label(TEX("$\mathbf{\mathcal{V}_2}$"),Projette(iso(A,B,E,D)));
+            %   label.top(btex A etex,Projette(A));
+            %   label.top(btex D etex,Projette(D));
+            %   label.rt(btex E etex,Projette(E));
+            %   label.lrt(btex F etex,Projette(F));
+            %   label.llft(btex C etex,Projette(C));
+            %   label.bot(btex B etex,Projette(B));
+        \end{Geometrie}
+    \end{center}
+
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés

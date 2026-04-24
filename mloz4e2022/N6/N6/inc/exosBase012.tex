@@ -1,5 +1,57 @@
 \begin{exercice*}
-    \hrefLienSesamath{47094}{1}
+    On a demandé d'exprimer l'aire de la figure en fonction de $a$.
+    \begin{enumerate}
+        \item Pour chaque proposition, dessine le découpage utilisé.
+              \begin{center}
+                  \begin{tabular}{|>{\centering\arraybackslash}m{0.55\linewidth}|>{\centering\arraybackslash}m{0.35\linewidth}|}
+                      \hline
+                      \begin{Geometrie}[Cadre="aucun"]
+                          pair A,B,C,D,E,F,G,H;
+                          A=u*(0,0);
+                          B-A=u*(4,0);
+                          C-A=u*(4,0.5);
+                          D-A=u*(3.5,0.5);
+                          E-A=u*(3.5,2);
+                          F-A=u*(2,2);
+                          G-A=u*(2,1.5);
+                          H-A=u*(0,1.5);
+                          draw A--B--C--D--E--F--G--H--cycle;
+                          trace appelation(H,G,3mm,btex $a$etex);
+                          trace appelation(D,C,3mm,btex $1$etex);
+                          marque_s:=marque_s*0.5;
+                          trace Codelongueur(B,C,C,D,F,G,2);
+                          trace Codelongueur(H,A,D,E,E,F,G,H,1);
+                      \end{Geometrie}
+                       &
+                      {\small $a^2+a(a+1)+1$}    \\
+                      \hline
+                      \begin{Geometrie}[Cadre="aucun"]
+                          pair A,B,C,D,E,F,G,H;
+                          A=u*(0,0);
+                          B-A=u*(4,0);
+                          C-A=u*(4,0.5);
+                          D-A=u*(3.5,0.5);
+                          E-A=u*(3.5,2);
+                          F-A=u*(2,2);
+                          G-A=u*(2,1.5);
+                          H-A=u*(0,1.5);
+                          draw A--B--C--D--E--F--G--H--cycle;
+                          trace appelation(H,G,3mm,btex $a$etex);
+                          trace appelation(D,C,3mm,btex $1$etex);
+                          marque_s:=marque_s*0.5;
+                          trace Codelongueur(B,C,C,D,F,G,2);
+                          trace Codelongueur(H,A,D,E,E,F,G,H,1);
+                      \end{Geometrie}
+                       &
+                      {\small$(2a^2+3a+1)-a-a$} \\
+                      \hline
+                  \end{tabular}
+              \end{center}
+
+              \medskip
+        \item Propose une autre expression.
+        \item Montre que les différentes expressions peuvent s'écrire $2a^2 + a + 1$.
+    \end{enumerate}
 \end{exercice*}
 \begin{corrige}
     %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
