@@ -1,0 +1,97 @@
+\begin{exercice*}
+    On considère l'urne suivante.
+    \begin{center}
+        \mplibforcehmode
+        \begin{mplibcode}
+            % Macros pour dessiner les boules
+            vardef filled_circle(expr center, radius, col) =
+                fill fullcircle scaled (2*radius) shifted center withcolor col;
+                draw fullcircle scaled (2*radius) shifted center withpen pencircle scaled 1.2 withcolor black;
+            enddef;
+            vardef white_circle(expr center, radius) =
+                fill fullcircle scaled (radius*1.0) shifted center withcolor white;
+            enddef;
+            vardef ball_label(expr center, lbl, col) =
+                label(lbl, center) withcolor col;
+            enddef;
+            u := 12pt; % rayon des boules
+            % Couleurs
+            color rouge, bleu, vert, noir_c;
+            rouge   := (0.85, 0.15, 0.15);
+            bleu    := (0.15, 0.35, 0.85);
+            vert    := (0.15, 0.70, 0.25);
+            % --- Urne ---
+            path cadre[];
+            cadre[1] := (-0.8u,5u) -- (-0.8u,4.6u) -- (-3.75u,4.6u) -- (-3.75u,-1.65u) -- (4.85u,-1.65u) -- (4.85u,4.6u) -- (2.05u, 4.6u) -- (2.05u,5u);
+            cadre[0] := cadre[1] -- cycle;
+            fill cadre[0] withcolor 0.9white;
+            draw cadre[1] withpen pencircle scaled 2 withcolor 0.8white;
+            %
+            pair Boules[];
+            Boules[1] = (-2.5u, -0.5u);
+            Boules[2] - Boules[1]= (2.05u,0);
+            Boules[3] - Boules[2]= (2.05u,0);
+            Boules[4] - Boules[3]= (2.05u,0);
+            Boules[5] - Boules[1]= (1.025u,1.77u);
+            Boules[6] - Boules[5]= (2.05u,0);
+            Boules[7] - Boules[6]= (2.05u,0);
+            Boules[8] - Boules[5]= (1.025u,1.77u);
+            % ---- Rangée du bas (4 boules) ----
+            % 1 - rouge
+            filled_circle(Boules[1], u, rouge);
+            white_circle(Boules[1], u*0.55);
+            label(btex {\bf\small 1} etex, Boules[1]);
+            % 2 - bleu (bas gauche centre)
+            filled_circle(Boules[2], u, bleu);
+            white_circle(Boules[2], u*0.55);
+            label(btex {\bf\small 2} etex, Boules[2]);
+            % 4 - rouge
+            filled_circle(Boules[3], u, rouge);
+            white_circle(Boules[3], u*0.55);
+            label(btex {\bf\small 4} etex, Boules[3]);
+            % 3 - rouge
+            filled_circle(Boules[4], u, rouge);
+            white_circle(Boules[4], u*0.55);
+            label(btex {\bf\small 3} etex, Boules[4]);
+            % ---- Rangée du milieu (3 boules) ----
+            % 2 - bleu (milieu gauche)
+            filled_circle((Boules[5]), u, bleu);
+            white_circle((Boules[5]), u*0.55);
+            label(btex {\bf\small 2} etex, (Boules[5]));
+            % 8 - rouge (mileu)
+            filled_circle(Boules[6], u, rouge);
+            white_circle(Boules[6], u*0.55);
+            label(btex {\bf\small 8} etex, Boules[6]);
+            % 6 - vert (milieu droite)
+            filled_circle(Boules[7], u, vert);
+            white_circle(Boules[7], u*0.55);
+            label(btex {\bf\small 6} etex, Boules[7]);
+            % ---- Rangée du haut (2 boules) ----
+            % 5 - vert
+            filled_circle(Boules[8], u, vert);
+            white_circle(Boules[8], u*0.55);
+            label(btex {\bf\small 5} etex, Boules[8]);
+        \end{mplibcode}
+    \end{center}
+    \begin{enumerate}
+        \item Si on s'intéresse à la couleur de la boule, quelles sont les issues possibles ?
+        \item Si on s'intéresse au numéro écrit sur la boule, quelles sont les issues possibles ?
+        \item Cite un événement impossible.
+        \item Quelle est la probabilité de l'événement « Obtenir une boule rouge » ?
+        \item Écris à l'aide d'une phrase non négative, l'événement contraire de l'événement « Obtenir une boule rouge ».
+        \item Déduis-en la probabilité de cet événement.
+    \end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}    
+    \begin{enumerate}
+        \item Les issues possibles sont : rouge, bleu ou vert.
+        \item Les issues possibles sont : 1, 2, 3, 4, 5, 6 ou 8.
+        \item Un événement impossible est : « Obtenir une boule jaune. »
+        \item La probabilité de l'événement « Obtenir une boule rouge » est de $\dfrac{4}{8}$, car il y a 4 boules rouges sur les 8 boules au total.
+        \item L'événement contraire de « Obtenir une boule rouge » est : « Obtenir une boule qui n'est pas rouge. »
+        \item La probabilité de cet événement est de $\dfrac{4}{8}$, car il y a 4 boules qui ne sont pas rouges (2 bleues et 2 vertes) sur les 8 boules au total.
+    \end{enumerate}
+\end{corrige}
+

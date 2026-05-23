@@ -1,0 +1,61 @@
+\begin{exercice*}
+    \begin{enumerate}
+    \item Une cible de fléchettes est composée de trois secteurs circulaires de différentes couleurs. On suppose que, pour chaque lancer, la fléchette atteint l'une des trois zones représentées ci-dessous. Les trois cercles ont le même centre. Le cercle vert a un rayon égal à 2 cm.
+\begin{center}
+    \mplibforcehmode
+    \begin{mplibcode}
+        % Rayon du cercle vert (centre)
+        numeric r_vert, r_noir, r_rouge;
+        r_vert := 0.75cm;
+
+        % Le cercle noir a un rayon de r_vert + 0.75cm
+        r_noir := r_vert + 0.75cm;
+
+        % Le cercle rouge a un rayon de r_noir + 1.125cm
+        r_rouge := r_noir + 1.125cm;
+
+        pair centre;
+        centre := (0, 0);
+
+        % Cercle rouge (extérieur)
+        fill fullcircle scaled (2 * r_rouge) withcolor (0.9, 0.2, 0.1);
+
+        % Cercle noir (milieu)
+        fill fullcircle scaled (2 * r_noir) withcolor black;
+
+        % Cercle vert (centre)
+        fill fullcircle scaled (2 * r_vert) withcolor (0.6, 0.8, 0.5);
+
+        % Annotation : flèche et cote "2 cm" (du vert au noir)
+        pair A, B, C, D;
+        A := (r_vert, -0cm);
+        B := (r_noir, -0cm);
+
+        drawarrow A -- B withcolor white;
+        drawarrow B -- A withcolor white;
+        label.top(btex 2 cm etex, 0.5[A,B]) withcolor white;
+
+        % Annotation : flèche et cote "3 cm" (du noir au rouge)
+        A := (r_noir, -0cm);
+        B := (r_rouge, -0cm);
+
+        drawarrow A -- B withcolor white;
+        drawarrow B -- A withcolor white;
+        label.top(btex 3 cm etex, 0.5[A,B]) withcolor white;
+    \end{mplibcode}
+\end{center}
+    \begin{enumerate}
+        \item Calcule la probabilité d'atteindre la zone verte.
+        \item Calcule la probabilité d'atteindre la zone rouge.
+    \end{enumerate}
+\end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}    
+    \begin{enumerate}
+        \item La probabilité d'atteindre la zone verte est de $\dfrac{\pi\times (2)^2}{\pi\times (2 + 2 + 3)^2} = \dfrac{4}{(7)^2} = \dfrac{4}{49} \approx \num{0,082}$.
+        \item La probabilité d'atteindre la zone rouge est de $\dfrac{\pi\times 7^2 - \pi\times (2 + 2)^2}{\pi\times 7^2} = \dfrac{33\pi}{(49\pi)} = \dfrac{33}{49} \approx \num{0,673}$.
+    \end{enumerate}
+\end{corrige}
+

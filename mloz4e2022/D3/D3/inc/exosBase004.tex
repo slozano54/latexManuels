@@ -1,0 +1,88 @@
+\begin{exercice*}
+On considère la roue de loterie suivante.
+\begin{center}
+\mplibforcehmode
+\begin{mplibcode}
+% Roue de jeu - 8 secteurs de 45°
+u := 60pt;
+% Couleurs RGB
+color col[];
+col[0] := (0.90, 0.52, 0.15); % orange
+col[1] := (0.92, 0.82, 0.15); % jaune 
+col[2] := (0.78, 0.58, 0.72); % rose  
+col[3] := (0.90, 0.52, 0.15); % orange
+col[4] := (0.18, 0.42, 0.78); % bleu  
+col[5] := (0.85, 0.18, 0.18); % rouge 
+col[6] := (0.78, 0.58, 0.72); % rose  
+col[7] := (0.85, 0.18, 0.18); % rouge 
+% Les lables 
+string lbl[];
+lbl[0] := "\small\bfseries 100";
+lbl[1] := "\small\bfseries 10";
+lbl[2] := "\small\bfseries 5";
+lbl[3] := "\small\bfseries 100";
+lbl[4] := "\small\bfseries 5 000";
+lbl[5] := "\small\bfseries 0";
+lbl[6] := "\small\bfseries 5";
+lbl[7] := "\small\bfseries 0";
+ 
+vardef drawSector(expr cx, cy, r, angA, angB, cols) =
+  save p, k, da, N;
+  path p;
+  numeric k, da, N;
+  N  := 36;
+  da := (angB - angA) / N;
+  p  := (cx, cy) -- (cx + r*cosd(angA), cy + r*sind(angA));
+  for k = 1 upto N:
+    p := p -- (cx + r*cosd(angA + k*da), cy + r*sind(angA + k*da));
+  endfor;
+  p := p -- cycle;
+  fill p withcolor cols;
+  draw p withpen pencircle scaled 1.2 withcolor white;
+enddef;
+% Secteurs et labels 
+numeric angA, angB, amid;
+pair lpos; 
+for i = 0 upto 7:
+  angA := 90 - (i+1)*45;
+  angB := 90 - i*45;
+  drawSector(0, 0, u, angA, angB, col[i]);
+  amid := (angA + angB) / 2;
+  lpos := (0.72*u*cosd(amid), 0.72*u*sind(amid));
+  picture pic;
+  pic := thelabel(lbl[i], origin);
+  draw pic rotated (amid - 90) shifted lpos withcolor white;
+endfor;
+% Bordure 
+draw fullcircle scaled (2u) withpen pencircle scaled 2;
+% Cercle central 
+fill fullcircle scaled 14pt;
+draw fullcircle scaled 14pt withpen pencircle scaled 1.2 withcolor white;
+\end{mplibcode}
+
+\end{center}
+
+\begin{enumerate}
+    \item Si on s'intéresse aux couleurs de chaque secteur de la roue, cite les issues possibles.
+    \item Si on s'intéresse aux nombres de chaque secteur, cite les issues possibles.
+    \item Cite un événement certain de se réaliser.
+    \item Cite un événement impossible.
+    \item Quelle est la probabilité d'obtenir un nombre supérieur ou égal à 100 ?
+    \item Écris à l'aide d'une phrase non négative l'événement contraire de l'événement « Obtenir un nombre supérieur ou égal à 100. »
+    \item Déduis-en la probabilité de cet événement.
+\end{enumerate}
+\end{exercice*}
+\begin{corrige}
+    %\setcounter{partie}{0} % Pour s'assurer que le compteur de \partie est à zéro dans les corrigés
+    %\phantom{rrr}    
+    \begin{enumerate}
+      \item Les issues possibles sont : orange, jaune, rose, bleu ou rouge.
+      \item Les issues possibles sont : 0, 5, 10, 100 ou 5 000.
+      \item Un événement certain de se réaliser est : « Obtenir une couleur. »
+      \item Un événement impossible est : « Obtenir un nombre négatif. »
+      \item La probabilité d'obtenir un nombre supérieur ou égal à 100 est de $\dfrac{3}{8}$, car il y a 3 secteurs avec un nombre supérieur ou égal à 100 (deux secteurs avec 100 et un secteur avec 5 000) sur les 8 secteurs au total.
+      \item L'événement contraire de « Obtenir un nombre supérieur ou égal à 100 » est : « Obtenir un nombre inférieur à 100. »
+      \item La probabilité de cet événement est de $\dfrac{5}{8}$, car il y a 5 secteurs avec un nombre inférieur à 100 (deux secteurs avec 0, un secteur avec 5 et deux secteurs avec 10) sur les 8 secteurs au total.
+    \end{enumerate}
+\end{corrige}
+
